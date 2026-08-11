@@ -1,4 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#2563eb"/>
-  <text x="16" y="22" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">T</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+  </defs>
+  <!-- Fill entire square container with brand blue -->
+  <rect width="512" height="512" rx="96" fill="url(#bgGrad)"/>
+  <!-- Stylized F Logo Word/Cube Emblem in crisp White -->
+  <g transform="translate(116, 100)">
+    <!-- Top Bar & Spine of F -->
+    <path d="M 20 20 H 250 C 263.8 20 275 31.2 275 45 V 95 C 275 108.8 263.8 120 250 120 H 105 V 310 C 105 323.8 93.8 335 80 335 H 45 C 31.2 335 20 323.8 20 310 V 20 Z" fill="url(#iconGrad)"/>
+    <!-- Middle Bar of F -->
+    <path d="M 105 170 H 215 C 228.8 170 240 181.2 240 195 V 240 C 240 253.8 228.8 265 215 265 H 105 Z" fill="url(#iconGrad)"/>
+  </g>
 </svg>
