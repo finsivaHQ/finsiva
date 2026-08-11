@@ -156,6 +156,44 @@ const mergedContent = {
   overview: content?.overview || defaultContent.overview,
 };
 
+// Pre-render structured data as static JSON objects for SEO compliance
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: Object.entries(mergedContent.faqSchema).map(([name, text]) => ({
+    "@type": "Question",
+    name,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text
+    }
+  }))
+};
+
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": `${calculator.name} - ${country.name}`,
+  "description": `How to use the ${calculator.name} to estimate your tax liability in ${country.name}.`,
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Enter your income",
+      "text": "Enter your annual income or relevant amount in the calculator inputs."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Select options",
+      "text": "Choose your filing status, tax year, and any other required options."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Calculate",
+      "text": "Click the Calculate button to see your estimated tax results."
+    }
+  ]
+};
+
 ---
 
 <CountryLayout
