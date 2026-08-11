@@ -22,18 +22,13 @@ const { country, popularCalculators, salaryCalculators } = Astro.props;
 // Find primary salary/income tax calculator
 const mainSalaryCalc = salaryCalculators.length > 0 
   ? salaryCalculators[0] 
-  : popularCalculators.find(c => c.category === "salaries-tax" || c.category === "income-tax");
+  : popularCalculators.find(c => c.category === "salaries-tax" || c.category === "income-tax") || popularCalculators[0];
 
 const primaryHref = mainSalaryCalc
   ? `/countries/${country.slug}/${mainSalaryCalc.category}/${mainSalaryCalc.slug}`
-  : popularCalculators.length > 0
-    ? `/countries/${country.slug}/${popularCalculators[0].category}/${popularCalculators[0].slug}`
-    : `/countries/${country.slug}`;
+  : `/countries/${country.slug}/salaries-tax`;
 
-const secondaryCalc = popularCalculators.find(c => c.slug !== mainSalaryCalc?.slug) || popularCalculators[0];
-const secondaryHref = secondaryCalc
-  ? `/countries/${country.slug}/${secondaryCalc.category}/${secondaryCalc.slug}`
-  : `/countries/${country.slug}`;
+const secondaryHref = `#tax-calculators`;
 ---
 
 <section class="country-section compact-hero" aria-labelledby={`${country.slug}-hero`}>
@@ -82,12 +77,12 @@ const secondaryHref = secondaryCalc
       <span>{country.officialTaxAuthority}</span>
     </span>
   </div>
-  <div class="hero-ctas mt-4">
+  <div class="hero-ctas mt-4 flex flex-wrap gap-3">
     <a href={primaryHref} class="inline-flex items-center justify-center rounded-pill bg-white px-5 py-2.5 text-sm font-semibold text-primary shadow-sm transition hover:-translate-y-0.5 hover:shadow-md active:translate-y-0">
-      Calculate Salaries Tax
+      Calculate {country.slug === 'hong-kong' ? 'Salaries Tax' : 'Income Tax'} &rarr;
     </a>
     <a href={secondaryHref} class="inline-flex items-center justify-center rounded-pill border border-white/40 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white/10 active:bg-white/20">
-      Popular Calculator →
+      Browse All Calculators
     </a>
   </div>
 </section>

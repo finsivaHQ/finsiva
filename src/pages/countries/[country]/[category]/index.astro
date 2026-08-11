@@ -31,9 +31,24 @@ if (!country || !category) {
     { label: category.name }
   ]}
 >
-  <div class="mb-8">
+  <div class="mb-6">
     <h1 class="text-4xl font-bold text-ink dark:text-on-primary"><span data-i18n="category.name">{category.name}</span></h1>
     <p class="mt-2 text-lg text-body dark:text-muted"><span data-i18n="category.description">{category.description}</span></p>
+  </div>
+
+  <!-- CATEGORY QUICK SWITCHER -->
+  <div class="mb-8 p-4 rounded-xl border border-hairline bg-canvas-soft dark:border-overlay-lighter dark:bg-surface/50">
+    <div class="flex flex-wrap items-center gap-2">
+      <span class="text-xs font-semibold uppercase tracking-wider text-muted dark:text-muted mr-1">{country.name} Tax Categories:</span>
+      {country.taxCategories.map(cat => (
+        <a 
+          href={`/countries/${country.slug}/${cat.slug}`}
+          class={`px-3 py-1.5 rounded-full text-xs font-semibold transition ${cat.slug === category.slug ? 'bg-primary text-on-primary shadow-sm dark:bg-on-primary dark:text-primary' : 'bg-canvas border border-hairline text-ink hover:border-primary dark:bg-surface dark:text-on-primary dark:border-overlay-lighter'}`}
+        >
+          {cat.name}
+        </a>
+      ))}
+    </div>
   </div>
 
   <div class="max-w-none mb-12">
