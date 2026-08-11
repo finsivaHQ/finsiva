@@ -7,7 +7,7 @@ const taxCategories: TaxCategory[] = [
     description: "Direct tax on individual and corporate income in India.",
     overview: "India has a progressive income tax system with rates from 0% to 30% depending on income slab and residency status.",
     calculators: [
-      { slug: "income-tax-calculator", name: "Income Tax Calculator", description: "Calculate your Indian income tax liability." }
+      { slug: "income-tax-calculator", name: "Income Tax Calculator", description: "Calculate your Indian income tax liability.", isPopular: true }
     ],
     guides: [
       { slug: "itr-guide", title: "ITR Filing Guide", description: "How to choose and file the correct ITR form." }
@@ -23,7 +23,7 @@ const taxCategories: TaxCategory[] = [
     description: "Goods and Services Tax - India's unified indirect tax.",
     overview: "GST is a multi-stage, destination-based tax levied on every value addition.",
     calculators: [
-      { slug: "gst-calculator", name: "GST Calculator", description: "Calculate GST inclusive or exclusive amounts." }
+      { slug: "gst-calculator", name: "GST Calculator", description: "Calculate GST inclusive or exclusive amounts.", isPopular: true }
     ],
     guides: [
       { slug: "gst-guide", title: "GST Complete Guide", description: "Understanding GST slabs, registration, and filing." }

@@ -7,6 +7,7 @@ export interface TaxCategory {
     slug: string;
     name: string;
     description: string;
+    isPopular?: boolean;
   }>;
   guides: Array<{
       slug: string;

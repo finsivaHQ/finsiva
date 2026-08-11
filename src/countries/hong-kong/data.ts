@@ -7,9 +7,9 @@ const taxCategories: TaxCategory[] = [
     description: "Tax on employment income earned in Hong Kong.",
     overview: "Salaries tax is levied on income from employment. Standard rate is 15% or progressive rates from 2% to 17%, whichever is lower.",
     calculators: [
-      { slug: "salaries-tax-calculator", name: "Salaries Tax Calculator", description: "Estimate your Hong Kong salaries tax under progressive and standard rates." },
+      { slug: "salaries-tax-calculator", name: "Salaries Tax Calculator", description: "Estimate your Hong Kong salaries tax under progressive and standard rates.", isPopular: true },
       { slug: "salary-tax-computation", name: "Salary Tax Computation", description: "Detailed breakdown of your Hong Kong salary tax calculation." },
-      { slug: "hk-net-salary-calculator", name: "HK Net Salary Calculator", description: "Calculate your take-home pay after tax and MPF in Hong Kong." },
+      { slug: "hk-net-salary-calculator", name: "HK Net Salary Calculator", description: "Calculate your take-home pay after tax and MPF in Hong Kong.", isPopular: true },
       { slug: "hong-kong-tax-calculator-for-expats", name: "Hong Kong Tax Calculator for Expats", description: "Estimate your Hong Kong tax as a foreign employee or expat." },
       { slug: "hong-kong-income-tax-for-foreigners-calculator", name: "Hong Kong Income Tax for Foreigners Calculator", description: "Calculate income tax for foreigners working in Hong Kong." }
     ],
@@ -40,7 +40,7 @@ const taxCategories: TaxCategory[] = [
     description: "Tax on business profits sourced in Hong Kong.",
     overview: "Only profits arising from Hong Kong are taxable. Two-tiered rates: 8.25% first HK$2M for corporations, 16.5% remainder. 7.5%/15% for unincorporated businesses.",
     calculators: [
-      { slug: "profits-tax-calculator", name: "Profits Tax Calculator", description: "Estimate your Hong Kong profits tax under the two-tiered rates." },
+      { slug: "profits-tax-calculator", name: "Profits Tax Calculator", description: "Estimate your Hong Kong profits tax under the two-tiered rates.", isPopular: true },
       { slug: "hk-corporate-tax-calculator", name: "HK Corporate Tax Calculator", description: "Calculate corporate tax for Hong Kong limited companies." },
       { slug: "profit-tax-computation", name: "Profit Tax Computation", description: "Detailed breakdown of your Hong Kong profit tax calculation." }
     ],
@@ -63,7 +63,7 @@ const taxCategories: TaxCategory[] = [
     description: "Tax on property transactions and certain legal documents in Hong Kong.",
     overview: "Stamp duty is payable on property transactions and certain documents. Scale 2 rates apply: flat HK$100 for properties up to HK$4M, then progressive rates up to 4.25%.",
     calculators: [
-      { slug: "hk-property-stamp-duty-calculator", name: "HK Property Stamp Duty Calculator", description: "Calculate Hong Kong property stamp duty including AVD and BSD." },
+      { slug: "hk-property-stamp-duty-calculator", name: "HK Property Stamp Duty Calculator", description: "Calculate Hong Kong property stamp duty including AVD and BSD.", isPopular: true },
       { slug: "stamp-duty-calculator", name: "Stamp Duty Calculator", description: "Estimate stamp duty for Hong Kong property purchases." },
       { slug: "rental-stamp-duty-calculator", name: "Rental Stamp Duty Calculator", description: "Calculate stamp duty on rental agreements and leases in Hong Kong." },
       { slug: "first-registration-tax-calculator", name: "First Registration Tax Calculator", description: "Calculate first registration tax for Hong Kong vehicles." }

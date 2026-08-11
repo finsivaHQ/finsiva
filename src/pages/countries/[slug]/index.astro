@@ -178,35 +178,99 @@ const webPageSchema = {
       ))}
     </div>
 
-    <!-- Direct Calculator Links Grid -->
+    <!-- Direct Calculator Links Grid with Category Filter Tabs -->
     <div class="rounded-2xl border border-hairline bg-canvas p-6 sm:p-8 dark:border-overlay-lighter dark:bg-surface shadow-sm">
-      <div class="flex items-center justify-between mb-6 pb-4 border-b border-hairline dark:border-overlay-lighter">
-        <h3 class="text-xl font-bold text-ink dark:text-on-primary flex items-center gap-2">
-          <span>⚡</span>
-          <span>All {country.name} Calculators</span>
-        </h3>
-        <span class="text-xs font-medium text-muted">Click any tool to launch calculation</span>
+      <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 pb-4 border-b border-hairline dark:border-overlay-lighter gap-4">
+        <div>
+          <h3 class="text-xl font-bold text-ink dark:text-on-primary flex items-center gap-2">
+            <span>⚡</span>
+            <span>All {country.name} Tax Calculators</span>
+          </h3>
+          <p class="text-xs text-muted mt-0.5">Filter by category or launch any tool directly</p>
+        </div>
+
+        <!-- Interactive Category Filter Pills -->
+        <div class="flex flex-wrap items-center gap-2" id="calc-filter-tabs">
+          <button 
+            data-cat-filter="all"
+            class="calc-tab-btn active px-3.5 py-1.5 rounded-full text-xs font-semibold bg-primary text-on-primary shadow-sm dark:bg-on-primary dark:text-primary transition cursor-pointer"
+          >
+            All Tools
+          </button>
+          {country.taxCategories.map(cat => (
+            <button 
+              data-cat-filter={cat.slug}
+              class="calc-tab-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-canvas-soft border border-hairline text-ink hover:border-primary dark:bg-surface dark:text-on-primary dark:border-overlay-lighter transition cursor-pointer"
+            >
+              {cat.name}
+            </button>
+          ))}
+        </div>
       </div>
       
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {country.taxCategories.flatMap(cat => cat.calculators.map(calc => ({ ...calc, categorySlug: cat.slug, categoryName: cat.name }))).map(calc => (
-          <a 
-            href={`/countries/${country.slug}/${calc.categorySlug}/${calc.slug}`}
-            class="flex items-center justify-between p-4 rounded-xl border border-hairline bg-canvas-soft hover:border-primary hover:bg-canvas transition-all dark:border-overlay-lighter dark:bg-canvas dark:hover:bg-surface group"
-          >
-            <div class="pr-3">
-              <span class="text-[11px] font-semibold uppercase tracking-wider text-muted dark:text-muted block">{calc.categoryName}</span>
-              <h4 class="text-base font-semibold text-ink dark:text-on-primary group-hover:text-primary transition mt-0.5">{calc.name}</h4>
-            </div>
-            <div class="h-8 w-8 shrink-0 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-on-primary flex items-center justify-center transition dark:bg-on-primary/10 dark:text-on-primary dark:group-hover:bg-on-primary dark:group-hover:text-primary">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            </div>
-          </a>
-        ))}
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="calc-cards-grid">
+        {country.taxCategories.flatMap(cat => cat.calculators.map(calc => ({ ...calc, categorySlug: cat.slug, categoryName: cat.name }))).map(calc => {
+          const isPop = calc.isPopular || popularCalcs.some(p => p.slug === calc.slug);
+          return (
+            <a 
+              href={`/countries/${country.slug}/${calc.categorySlug}/${calc.slug}`}
+              data-category={calc.categorySlug}
+              class="calc-item flex flex-col justify-between p-4 rounded-xl border border-hairline bg-canvas-soft hover:border-primary hover:bg-canvas transition-all duration-200 dark:border-overlay-lighter dark:bg-canvas dark:hover:bg-surface group"
+            >
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-2">
+                  <span class="text-[11px] font-semibold uppercase tracking-wider text-muted dark:text-muted">{calc.categoryName}</span>
+                  {isPop && (
+                    <span class="inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-600 dark:bg-amber-400/20 dark:text-amber-300 border border-amber-500/30 shrink-0">
+                      🔥 Most Searched
+                    </span>
+                  )}
+                </div>
+                <h4 class="text-base font-semibold text-ink dark:text-on-primary group-hover:text-primary transition">{calc.name}</h4>
+                <p class="text-xs text-body dark:text-muted mt-1 leading-relaxed line-clamp-2">{calc.description}</p>
+              </div>
+              <div class="mt-4 flex items-center justify-between text-xs font-semibold text-link group-hover:underline dark:text-link-soft">
+                <span>Launch Calculator</span>
+                <div class="h-6 w-6 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-on-primary flex items-center justify-center transition dark:bg-on-primary/10 dark:text-on-primary dark:group-hover:bg-on-primary dark:group-hover:text-primary">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </div>
+              </div>
+            </a>
+          );
+        })}
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterBtns = document.querySelectorAll('.calc-tab-btn');
+    const calcItems = document.querySelectorAll('.calc-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const cat = btn.getAttribute('data-cat-filter');
+        
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm', 'dark:bg-on-primary', 'dark:text-primary');
+          b.classList.add('bg-canvas-soft', 'border', 'border-hairline', 'text-ink', 'dark:bg-surface', 'dark:text-on-primary', 'dark:border-overlay-lighter');
+        });
+
+        btn.classList.remove('bg-canvas-soft', 'border', 'border-hairline', 'text-ink', 'dark:bg-surface', 'dark:border-overlay-lighter');
+        btn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm', 'dark:bg-on-primary', 'dark:text-primary');
+
+        calcItems.forEach(item => {
+          if (cat === 'all' || item.getAttribute('data-category') === cat) {
+            (item as HTMLElement).style.display = 'flex';
+          } else {
+            (item as HTMLElement).style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+</script>
 
 <!-- SECTION 2: OVERVIEW -->
 <CountryOverview country={country} />
