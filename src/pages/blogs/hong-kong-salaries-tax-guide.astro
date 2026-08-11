@@ -1,101 +1,491 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
 
-const title = "Hong Kong Salaries Tax Guide 2024/25: Rates, Allowances & Calculator";
-const description = "Complete Hong Kong salaries tax guide for 2024/25. Learn progressive rates, standard rate, personal allowances, MPF deductions, and how to use our Hong Kong tax calculator.";
+const title = "Hong Kong Salaries Tax Guide 2026/27: Calculation, Rates, Allowances & Calculator";
+const description = "Comprehensive Hong Kong salaries tax guide for assessment year 2026/27. Calculate your HK tax liability, progressive rates (2%-17%), standard rate (15%), MPF deductions, and net take-home pay with IRD rules.";
 const image = "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=1200&q=80";
+const canonical = "https://finsiva.com/blogs/hong-kong-salaries-tax-guide";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the salaries tax rate in Hong Kong for assessment year 2026/27?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hong Kong salaries tax uses progressive rates ranging from 2% to 17% on net chargeable income, or a flat standard rate of 15% on net income before personal allowances, whichever produces a lower tax amount."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is Hong Kong salaries tax calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Salaries tax is calculated by taking total employment income, subtracting allowable deductions (like MPF mandatory contributions up to HK$18,000) and personal allowances (Basic Allowance of HK$132,000), then applying either the progressive tax brackets (2%, 6%, 10%, 14%, 17%) or the 15% standard rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the MPF contribution deduction limit for 2026/27?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mandatory Provident Fund (MPF) contributions made by employees are deductible from assessable income up to a maximum cap of HK$18,000 per year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Basic Allowance for Hong Kong taxpayers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All individual Hong Kong taxpayers receive a Basic Allowance of HK$132,000 per year. Married couples filing jointly receive a Married Person's Allowance of HK$264,000."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the 60-day rule for foreign employees in Hong Kong?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under IRD rules, non-residents who perform services in Hong Kong for 60 days or less during a year of assessment are exempt from salaries tax on employment income sourced outside Hong Kong."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does provisional salaries tax work in Hong Kong?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Provisional tax is an advance tax estimated based on the previous year's assessable income. It is paid in two annual installments (typically in April and July) alongside your final tax assessment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is foreign or overseas income taxable under Hong Kong salaries tax?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hong Kong operates a strict territorial tax system. Only income sourced in or derived from employment performed in Hong Kong is taxable. Pure foreign-sourced income is generally exempt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which is better: Progressive Tax Rates or the Standard Rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Inland Revenue Department (IRD) automatically calculates your tax using both progressive rates and the standard rate, issuing your demand note based on whichever yields the lower tax bill."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When is the Hong Kong salaries tax filing deadline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paper tax returns (Form BIR60) are typically due within 1 month of issue (usually June 1), while eTAX online filing receives an automatic 1-month extension (usually July 1)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I calculate my net take-home salary after HK salaries tax?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Subtract your annual MPF employee contribution (5% up to HK$18,000) and your estimated annual salaries tax from your gross salary. Use our free Hong Kong Net Salary Calculator to get a instant monthly breakdown."
+      }
+    }
+  ]
+};
 ---
 
-<BlogLayout title={title} description={description} image={image} author="Jessica Liu" authorBio="Jessica Liu is a tax advisor specializing in individual income tax and employment taxation in Hong Kong. She helps professionals and expats optimize their salaries tax liability." lastUpdated="July 2026" readTime="11 min read">
+<BlogLayout 
+  title={title} 
+  description={description} 
+  image={image} 
+  canonical={canonical}
+  author="Jessica Liu, CPA" 
+  authorBio="Jessica Liu is a Certified Public Accountant and senior tax consultant in Hong Kong specializing in individual salaries tax, cross-border expat taxation, and MPF planning." 
+  lastUpdated="August 2026" 
+  readTime="14 min read"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <div class="min-h-screen bg-canvas dark:bg-canvas">
     <main class="min-h-screen">
-      <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
+        <!-- Breadcrumb Navigation -->
         <nav aria-label="Breadcrumb" class="mb-6 text-sm">
           <ol class="flex flex-wrap items-center gap-2">
             <li class="flex items-center gap-2"><a href="/" class="text-link hover:underline dark:text-link">Home</a></li>
-            <li class="flex items-center gap-2"><span class="text-muted">/</span><a href="/blogs" class="text-link hover:underline dark:text-link">Blogs</a></li>
-            <li class="flex items-center gap-2"><span class="text-muted">/</span><span class="font-medium text-ink dark:text-on-primary" aria-current="page">Hong Kong Salaries Tax Guide</span></li>
+            <li class="flex items-center gap-2"><span class="text-muted">/</span><a href="/blogs" class="text-link hover:underline dark:text-link">Guides</a></li>
+            <li class="flex items-center gap-2"><span class="text-muted">/</span><a href="/countries/hong-kong" class="text-link hover:underline dark:text-link">Hong Kong Tax</a></li>
+            <li class="flex items-center gap-2"><span class="text-muted">/</span><span class="font-medium text-ink dark:text-on-primary" aria-current="page">Salaries Tax Guide</span></li>
           </ol>
         </nav>
 
         <article class="prose max-w-none">
-          <h1 class="text-4xl font-bold text-ink mb-4 dark:text-on-primary">Hong Kong Salaries Tax Guide 2024/25: Rates, Allowances & Calculator</h1>
-          <p class="text-lg text-body dark:text-muted">Last updated: July 2026 | 11 min read</p>
-
-          <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=80" alt="Finance office with tax documents and calculator" class="mb-6 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
-
-          <div class="mt-8 space-y-6 text-body dark:text-muted">
-            <p>Hong Kong salaries tax is one of the lowest-income tax regimes in the world, making it a major draw for professionals and expatriates. For the 2024/25 year of assessment, salaries tax applies to income from employment at rates that start at 2% and rise to a maximum of 17%. This guide covers the 2024/25 salaries tax structure, personal allowances, MPF deductions, filing requirements, and common pitfalls taxpayers face.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Overview of Hong Kong Salaries Tax</h2>
-            <p>Salaries tax is levied on individuals who derive income from employment in Hong Kong. The Inland Revenue Department (IRD) administers salaries tax under the Inland Revenue Ordinance. Key features include a territorial basis of assessment, generous personal allowances, and the option to choose between the progressive rate system and the standard rate to minimize tax liability. The 2024/25 year of assessment covers income earned from April 1, 2024, to March 31, 2025.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Progressive Rates System</h2>
-            <p>Under the progressive rates system, salaries tax is calculated using a series of net chargeable income brackets. Tax is applied at rates starting from 2% and increasing to 17% on higher brackets. The net chargeable income is computed by deducting approved charitable donations and allowable deductions from the total assessable income. The progressive system is designed to be progressive, meaning lower-income taxpayers pay a smaller percentage of their income in tax.</p>
-            <ul class="list-disc pl-6 space-y-2">
-              <li>The first HK$50,000 of net chargeable income is taxed at 2%</li>
-              <li>The next HK$50,000 is taxed at 6%</li>
-              <li>The next HK$40,000 is taxed at 10%</li>
-              <li>The next HK$40,000 is taxed at 14%</li>
-              <li>Remaining net chargeable income is taxed at 17%</li>
-            </ul>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Standard Rate System</h2>
-            <p>The standard rate is an alternative method of charging salaries tax. It is calculated by applying a flat rate to your total assessable income after deducting allowable outgoings and MPF contributions, but before deducting personal allowances. Many taxpayers find the standard rate produces a lower tax bill, especially those with high incomes relative to their allowances. You cannot claim personal allowances under the standard rate, so it is essential to compare both methods when filing your tax return.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Personal Allowances for 2024/25</h2>
-            <p>The IRD provides several personal allowances to reduce your net chargeable income. For the 2024/25 year of assessment, the basic allowance is HK$132,000 per person. Married persons may claim a married person allowance of HK$264,000 if they file jointly or if one spouse elects to be assessed separately. Additional allowances include child allowances, dependent parent allowances, and dependent grandparent allowances, which provide further relief for families with dependents. These allowances are automatically applied if you have no income, but if you earn income, you can only claim them against the first year they arise or when your spouse's income falls below a certain threshold.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">MPF Deductions and Tax Benefits</h2>
-            <p>Mandatory Provident Fund (MPF) contributions are deductible from your assessable income for salaries tax purposes. Both employee and employer mandatory contributions are deductible, subject to a maximum of HK$18,000 per year for each of the top-up and mandatory portions. Voluntary contributions up to certain limits may also qualify for tax deductions. MPF deductions are particularly valuable because they reduce your assessable income directly, potentially lowering your tax under both the progressive rate and standard rate calculations. Use our <a href="/countries/hong-kong/salaries-tax/salaries-tax-calculator" class="text-link hover:underline dark:text-link">Hong Kong salaries tax calculator</a> to model different contribution scenarios and see how they impact your tax bill.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Who Needs to File Salaries Tax</h2>
-            <p>You are liable for salaries tax if you derive income from employment sourced in Hong Kong, regardless of where you reside. The source of employment is determined by the place where the employment contract was negotiated, signed, and performed. Employment income is sourced in Hong Kong if your employment contract is entered into in Hong Kong and your employer is a Hong Kong resident, even if you work outside Hong Kong under that contract. The IRD provides detailed guidance on source rules, and cross-border employees may have dual-source or foreign-source income that requires careful assessment.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">How to File Your Salaries Tax Return</h2>
-            <p>The IRD issues individual tax returns around May each year for the preceding year. You must complete and return the form within one month of the issue date. If you receive more than one tax form, you should complete the one that applies to your circumstances. For taxpayers with straightforward returns, self-assessment is available. You can also file online through the eTAX system, which provides faster processing and the ability to view your assessment and pay tax electronically. Our <a href="/blogs/hong-kong-etax-guide" class="text-link hover:underline dark:text-link">eTAX guide</a> covers the online filing process step by step.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Common Mistakes to Avoid</h2>
-            <ul class="list-disc pl-6 space-y-2">
-              <li>Failing to declare foreign-source employment income when you have a Hong Kong employment contract</li>
-              <li>Overlooking MPF contributions and allowable deductions that reduce tax</li>
-              <li>Missing the tax return filing deadline and incurring late-filing penalties</li>
-              <li>Not claiming the correct personal allowances, such as the married person allowance when eligible</li>
-              <li>Confusing salaries tax with property tax or profits tax on business income</li>
-            </ul>
-            <p>By understanding these common errors and using our <a href="/countries/hong-kong/salaries-tax/salaries-tax-calculator" class="text-link hover:underline dark:text-link">Hong Kong salaries tax calculator</a>, you can ensure accurate filings and minimize your tax liability. For further details on allowable deductions, read our <a href="/blogs/hong-kong-tax-allowances-deductions" class="text-link hover:underline dark:text-link">Hong Kong tax allowances and deductions guide</a>.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Frequently Asked Questions</h2>
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">What is the salaries tax rate in Hong Kong for 2024/25?</h3>
-            <p>The progressive salaries tax rate ranges from 2% to 17% for 2024/25. The exact rate depends on your net chargeable income after allowances and deductions. You can compare it against the standard rate to determine which method produces a lower tax.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Can I claim MPF deductions for salaries tax?</h3>
-            <p>Yes, mandatory MPF contributions are deductible from assessable income. Both employee and employer mandatory contributions are deductible up to the annual maximum of HK$18,000 each.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Who is considered a Hong Kong tax resident?</h3>
-            <p>A Hong Kong tax resident is typically someone who ordinarily resides in Hong Kong or who stays in Hong Kong for more than 180 days in the year of assessment. Tax residents are taxed on Hong Kong-sourced employment income. For a detailed analysis, see our <a href="/blogs/hong-kong-tax-residency" class="text-link hover:underline dark:text-link">Hong Kong tax residency guide</a>.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">What happens if I file my salaries tax return late?</h3>
-            <p>Late filing may result in a penalty of up to HK$10,000. The IRD may also issue a surcharge of up to 5% of the tax due if payment is also late. To avoid penalties, file within the one-month deadline and pay provisional tax on time.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Do I need to pay provisional salaries tax?</h3>
-            <p>Yes, if your total tax payable exceeds a certain threshold, the IRD will require you to pay provisional tax in two installments for the following year. For more information, see our <a href="/blogs/hong-kong-provisional-tax-guide" class="text-link hover:underline dark:text-link">Hong Kong provisional tax guide</a>.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">How do I find my tax records online?</h3>
-            <p>You can use the eTAX system to view your assessment notices, pay tax, and apply for a holdover. See our <a href="/blogs/hong-kong-etax-guide" class="text-link hover:underline dark:text-link">Hong Kong eTAX guide</a> for instructions.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Is overseas income taxable in Hong Kong?</h3>
-            <p>Overseas income is generally not taxable unless it is derived from a Hong Kong business or employment. However, if your employment contract is executed in Hong Kong, employment income from working outside Hong Kong may still be taxable on a Hong Kong source basis. The IRD's 60-day rule applies to certain short-term employment.</p>
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-ink mb-4 dark:text-on-primary leading-tight">
+            Hong Kong Salaries Tax Guide 2026/27: Rates, Computation, Allowances & Calculator
+          </h1>
+          
+          <div class="flex items-center gap-4 text-sm text-body dark:text-muted mb-8 pb-4 border-b border-hairline dark:border-overlay-lighter">
+            <span>By <strong class="text-ink dark:text-on-primary">Jessica Liu, CPA</strong></span>
+            <span>•</span>
+            <span>Updated for 2026/27 Assessment Year</span>
+            <span>•</span>
+            <span>14 min read</span>
           </div>
 
-          <div class="mt-12">
-            <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Related Calculators</h2>
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              <a href="/countries/hong-kong/salaries-tax/salaries-tax-calculator" class="block rounded border p-4 hover:border-primary transition">HK Salaries Tax Calculator</a>
-              <a href="/countries/hong-kong/profits-tax/profits-tax-calculator" class="block rounded border p-4 hover:border-primary transition">HK Profits Tax Calculator</a>
-              <a href="/countries/hong-kong" class="block rounded border p-4 hover:border-primary transition">More Hong Kong Calculators</a>
+          <img 
+            src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=1200&q=80" 
+            alt="Hong Kong skyline and financial district - Salaries Tax Calculation Guide" 
+            class="mb-8 w-full rounded-2xl object-cover max-h-80 sm:max-h-96 shadow-sm" 
+            loading="lazy" 
+          />
+
+          <!-- Quick Jump CTA Callout -->
+          <div class="my-8 rounded-2xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-lighter dark:bg-surface/60 shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <h3 class="text-lg font-bold text-ink dark:text-on-primary">Need an Instant Tax Estimate?</h3>
+                <p class="text-sm text-body dark:text-muted mt-1">Use our free Hong Kong Salaries Tax Calculator for progressive & standard rate breakdown.</p>
+              </div>
+              <a 
+                href="/countries/hong-kong/salaries-tax/salaries-tax-calculator" 
+                class="inline-flex items-center justify-center rounded-pill bg-primary px-5 py-2.5 text-sm font-semibold text-on-primary transition hover:opacity-90 dark:bg-on-primary dark:text-primary shrink-0"
+              >
+                Launch HK Tax Calculator &rarr;
+              </a>
             </div>
           </div>
+
+          <!-- Table of Contents -->
+          <div class="my-8 rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+            <h2 class="text-xl font-bold text-ink mb-4 dark:text-on-primary">Table of Contents</h2>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-link dark:text-link-soft">
+              <li><a href="#overview" class="hover:underline">1. Overview of HK Salaries Tax</a></li>
+              <li><a href="#tax-brackets" class="hover:underline">2. Progressive Rates vs Standard Rate</a></li>
+              <li><a href="#allowances" class="hover:underline">3. Personal Allowances Table 2026/27</a></li>
+              <li><a href="#mpf-deductions" class="hover:underline">4. MPF & Tax Deductions</a></li>
+              <li><a href="#computation-formula" class="hover:underline">5. Salaries Tax Computation Formula</a></li>
+              <li><a href="#case-studies" class="hover:underline">6. Real-World Case Studies</a></li>
+              <li><a href="#expat-rules" class="hover:underline">7. Expat & Foreigner 60-Day Rule</a></li>
+              <li><a href="#etax-filing" class="hover:underline">8. eTAX Online Filing & Deadlines</a></li>
+              <li><a href="#common-mistakes" class="hover:underline">9. Common Tax Filing Mistakes</a></li>
+              <li><a href="#faqs" class="hover:underline">10. Frequently Asked Questions</a></li>
+            </ul>
+          </div>
+
+          <div class="space-y-8 text-body dark:text-muted leading-relaxed">
+            <!-- Section 1 -->
+            <section id="overview">
+              <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">1. Overview of Hong Kong Salaries Tax (2026/27)</h2>
+              <p>
+                Hong Kong maintains one of the most attractive, competitive, and straightforward tax systems in the world. Governed by the <strong>Inland Revenue Department (IRD)</strong> under the <em>Inland Revenue Ordinance (Cap. 112)</em>, <strong>Salaries Tax</strong> is levied on income arising in or derived from Hong Kong from any office, employment, or pension.
+              </p>
+              <p class="mt-3">
+                Key highlights of the Hong Kong tax system include:
+              </p>
+              <ul class="list-disc pl-6 space-y-2 mt-2">
+                <li><strong>Territorial Tax Basis:</strong> Only income sourced in Hong Kong is taxable. Foreign-sourced employment income is generally exempt.</li>
+                <li><strong>No Capital Gains Tax:</strong> Profits from investments, stock options capital growth, or property sales are non-taxable.</li>
+                <li><strong>No VAT or GST:</strong> Hong Kong imposes zero consumption tax or value-added tax.</li>
+                <li><strong>Dual Tax System:</strong> Taxpayers are assessed under both <strong>Progressive Rates (2% to 17%)</strong> and a flat <strong>Standard Rate (15%)</strong>, automatically paying whichever amount is lower.</li>
+              </ul>
+            </section>
+
+            <!-- Section 2 -->
+            <section id="tax-brackets">
+              <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">2. Progressive Rates vs Standard Rate System</h2>
+              <p>
+                The IRD calculates your tax bill under two distinct methods and issues your official demand note for the lower amount.
+              </p>
+
+              <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6 mb-3">Progressive Tax Rates (2026/27)</h3>
+              <p>
+                Progressive tax rates apply to your <strong>Net Chargeable Income</strong> (Gross Income minus Allowable Deductions minus Personal Allowances).
+              </p>
+
+              <!-- Tax Brackets Table -->
+              <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+                <table class="w-full text-left text-sm">
+                  <thead class="bg-canvas-soft border-b border-hairline dark:bg-surface/80 dark:border-overlay-lighter text-ink dark:text-on-primary">
+                    <tr>
+                      <th class="p-3.5 font-bold">Net Chargeable Income Bracket</th>
+                      <th class="p-3.5 font-bold">Tax Rate</th>
+                      <th class="p-3.5 font-bold">Tax Payable on Bracket</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+                    <tr>
+                      <td class="p-3.5">First HK$50,000</td>
+                      <td class="p-3.5 font-semibold text-primary dark:text-on-primary">2%</td>
+                      <td class="p-3.5">HK$1,000</td>
+                    </tr>
+                    <tr>
+                      <td class="p-3.5">Next HK$50,000 (HK$50,001 – HK$100,000)</td>
+                      <td class="p-3.5 font-semibold text-primary dark:text-on-primary">6%</td>
+                      <td class="p-3.5">HK$3,000</td>
+                    </tr>
+                    <tr>
+                      <td class="p-3.5">Next HK$50,000 (HK$100,001 – HK$150,000)</td>
+                      <td class="p-3.5 font-semibold text-primary dark:text-on-primary">10%</td>
+                      <td class="p-3.5">HK$5,000</td>
+                    </tr>
+                    <tr>
+                      <td class="p-3.5">Next HK$50,000 (HK$150,001 – HK$200,000)</td>
+                      <td class="p-3.5 font-semibold text-primary dark:text-on-primary">14%</td>
+                      <td class="p-3.5">HK$7,000</td>
+                    </tr>
+                    <tr class="bg-canvas-soft/50 dark:bg-surface/50 font-medium">
+                      <td class="p-3.5">Remainder (Above HK$200,000)</td>
+                      <td class="p-3.5 font-semibold text-primary dark:text-on-primary">17%</td>
+                      <td class="p-3.5">17% on excess</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6 mb-3">Standard Rate (15% Flat Rate)</h3>
+              <p>
+                The standard rate applies a flat <strong>15%</strong> (or two-tiered 15%/16% for net incomes above HK$5,000,000) directly to your <strong>Net Income</strong> (Gross Income minus Deductions, <em>without claiming personal allowances</em>). High earners naturally benefit from the standard rate cap when their personal allowances represent a small fraction of overall earnings.
+              </p>
+            </section>
+
+            <!-- Section 3 -->
+            <section id="allowances">
+              <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">3. Personal Allowances & Reliefs Table (2026/27)</h2>
+              <p>
+                Taxpayers can claim statutory personal allowances to significantly reduce assessable income before applying progressive rates.
+              </p>
+
+              <!-- Allowances Table -->
+              <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+                <table class="w-full text-left text-sm">
+                  <thead class="bg-canvas-soft border-b border-hairline dark:bg-surface/80 dark:border-overlay-lighter text-ink dark:text-on-primary">
+                    <tr>
+                      <th class="p-3.5 font-bold">Allowance Category</th>
+                      <th class="p-3.5 font-bold">2026/27 Amount (HKD)</th>
+                      <th class="p-3.5 font-bold">Eligibility & Notes</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+                    <tr>
+                      <td class="p-3.5 font-semibold">Basic Allowance</td>
+                      <td class="p-3.5 font-bold text-primary dark:text-on-primary">HK$132,000</td>
+                      <td class="p-3.5">Granted automatically to all single taxpayers.</td>
+                    </tr>
+                    <tr>
+                      <td class="p-3.5 font-semibold">Married Person's Allowance</td>
+                      <td class="p-3.5 font-bold text-primary dark:text-on-primary">HK$264,000</td>
+                      <td class="p-3.5">Claimable if spouse has no income or elects joint assessment.</td>
+                    </tr>
+                    <tr>
+                      <td class="p-3.5 font-semibold">Child Allowance (Per Child)</td>
+                      <td class="p-3.5 font-bold text-primary dark:text-on-primary">HK$120,000</td>
+                      <td class="p-3.5">For unmarried dependent children under 18 (or full-time students). Additional HK$120,000 in year of birth.</td>
+                    </tr>
+                    <tr>
+                      <td class="p-3.5 font-semibold">Single Parent Allowance</td>
+                      <td class="p-3.5 font-bold text-primary dark:text-on-primary">HK$132,000</td>
+                      <td class="p-3.5">For single parents who have sole or primary care of a child.</td>
+                    </tr>
+                    <tr>
+                      <td class="p-3.5 font-semibold">Dependent Parent / Grandparent</td>
+                      <td class="p-3.5 font-bold text-primary dark:text-on-primary">HK$50,000</td>
+                      <td class="p-3.5">Aged 60+ (or HK$25,000 for aged 55-59). Double if residing together.</td>
+                    </tr>
+                    <tr>
+                      <td class="p-3.5 font-semibold">Disabled Dependent Allowance</td>
+                      <td class="p-3.5 font-bold text-primary dark:text-on-primary">HK$75,000</td>
+                      <td class="p-3.5">Claimable per eligible disabled dependent.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <!-- Section 4 -->
+            <section id="mpf-deductions">
+              <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">4. MPF Contributions & Allowable Tax Deductions</h2>
+              <p>
+                In addition to personal allowances, taxpayers can deduct specific expenses directly from total income:
+              </p>
+              <ul class="list-disc pl-6 space-y-2 mt-3">
+                <li><strong>Mandatory Provident Fund (MPF):</strong> Mandatory employee contributions (5% of income) are tax-deductible up to a annual maximum of <strong>HK$18,000</strong>.</li>
+                <li><strong>Tax-Deductible Voluntary Contributions (TVC):</strong> Additional voluntary MPF contributions qualify for extra tax relief up to HK$60,000 per year.</li>
+                <li><strong>Self-Education Expenses:</strong> Expenses for courses attended at recognized training institutions up to <strong>HK$100,000</strong>.</li>
+                <li><strong>Home Loan Interest:</strong> Deductible up to <strong>HK$100,000</strong> per year for up to 20 years of assessment.</li>
+                <li><strong>Approved Charitable Donations:</strong> Tax-deductible up to 35% of assessable income.</li>
+                <li><strong>Voluntary Health Insurance Scheme (VHIS):</strong> Premiums paid for self or dependents up to <strong>HK$8,000</strong> per insured person.</li>
+              </ul>
+            </section>
+
+            <!-- Section 5 -->
+            <section id="computation-formula">
+              <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">5. Hong Kong Salaries Tax Computation Formula</h2>
+              <p>
+                The exact IRD formula for calculating your tax liability is as follows:
+              </p>
+              <div class="my-6 p-6 rounded-2xl border border-hairline bg-canvas-soft dark:border-overlay-lighter dark:bg-surface">
+                <p class="font-mono text-sm sm:text-base font-bold text-primary dark:text-on-primary leading-relaxed">
+                  Assessable Income = Gross Salary + Bonuses + Share Options + Housing Allowance<br/>
+                  Net Income = Assessable Income − Outgoings & Expenses − MPF Contributions (Max HK$18k)<br/>
+                  Net Chargeable Income = Net Income − Personal Allowances<br/><br/>
+                  Tax Payable = MIN( Progressive_Tax(Net Chargeable Income), 15% × Net Income )
+                </p>
+              </div>
+            </section>
+
+            <!-- Section 6 -->
+            <section id="case-studies">
+              <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">6. Real-World Computation Case Studies</h2>
+
+              <!-- Case 1 -->
+              <div class="my-6 p-6 rounded-2xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface shadow-sm">
+                <h3 class="text-lg font-bold text-ink dark:text-on-primary mb-2">Case Study A: Single Professional earning HK$360,000/year (HK$30,000/month)</h3>
+                <ul class="text-sm space-y-1 text-body dark:text-muted">
+                  <li>• Gross Income: HK$360,000</li>
+                  <li>• MPF Employee Deduction (5% capped): -HK$18,000</li>
+                  <li>• Net Income: HK$342,000</li>
+                  <li>• Basic Allowance: -HK$132,000</li>
+                  <li>• <strong>Net Chargeable Income:</strong> HK$210,000</li>
+                </ul>
+                <div class="mt-4 pt-3 border-t border-hairline dark:border-overlay-lighter text-sm font-semibold text-ink dark:text-on-primary">
+                  Progressive Tax Breakdown:<br/>
+                  • First HK$50k @ 2% = HK$1,000<br/>
+                  • Next HK$50k @ 6% = HK$3,000<br/>
+                  • Next HK$50k @ 10% = HK$5,000<br/>
+                  • Next HK$50k @ 14% = HK$7,000<br/>
+                  • Remaining HK$10k @ 17% = HK$1,700<br/>
+                  <span class="text-primary dark:text-on-primary font-bold text-base mt-1 block">Total Annual Tax: HK$17,700 (Effective Rate: 4.92%)</span>
+                </div>
+              </div>
+
+              <!-- Case 2 -->
+              <div class="my-6 p-6 rounded-2xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface shadow-sm">
+                <h3 class="text-lg font-bold text-ink dark:text-on-primary mb-2">Case Study B: Married Senior Manager with 1 Child earning HK$900,000/year</h3>
+                <ul class="text-sm space-y-1 text-body dark:text-muted">
+                  <li>• Gross Income: HK$900,000</li>
+                  <li>• MPF Deduction: -HK$18,000</li>
+                  <li>• Net Income: HK$882,000</li>
+                  <li>• Married Allowance + Child Allowance: -(HK$264,000 + HK$120,000) = -HK$384,000</li>
+                  <li>• <strong>Net Chargeable Income:</strong> HK$498,000</li>
+                </ul>
+                <div class="mt-4 pt-3 border-t border-hairline dark:border-overlay-lighter text-sm font-semibold text-ink dark:text-on-primary">
+                  Progressive Tax: HK$66,660 | Standard Rate Tax (15% of HK$882k): HK$132,300<br/>
+                  <span class="text-primary dark:text-on-primary font-bold text-base mt-1 block">IRD Assesses Progressive Rate: HK$66,660 (Effective Rate: 7.41%)</span>
+                </div>
+              </div>
+            </section>
+
+            <!-- Section 7 -->
+            <section id="expat-rules">
+              <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">7. Expat & Foreigner Tax Rules (The 60-Day Rule)</h2>
+              <p>
+                Foreign employees working in Hong Kong benefit from specialized IRD rules:
+              </p>
+              <ul class="list-disc pl-6 space-y-2 mt-3">
+                <li><strong>The 60-Day Exemption Rule:</strong> Non-resident employees visiting Hong Kong who render services in Hong Kong for <strong>60 days or less</strong> in a tax year are fully exempt from Hong Kong Salaries Tax on non-HK employment.</li>
+                <li><strong>Housing Allowance Optimization:</strong> If an employer provides rent-free accommodation or refunds rent paid by the employee, the taxable rental value is capped at <strong>10% of assessable income</strong>, saving thousands in tax compared to a cash salary allowance.</li>
+              </ul>
+              <p class="mt-4">
+                Calculate your exact expat tax liability with our <a href="/countries/hong-kong/salaries-tax/hong-kong-tax-calculator-for-expats" class="text-link hover:underline dark:text-link">Hong Kong Tax Calculator for Expats</a>.
+              </p>
+            </section>
+
+            <!-- Section 8 -->
+            <section id="etax-filing">
+              <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">8. eTAX Online Filing & Important Deadlines</h2>
+              <p>
+                The Hong Kong tax year runs from <strong>April 1 to March 31</strong>.
+              </p>
+              <ul class="list-disc pl-6 space-y-2 mt-3">
+                <li><strong>May 2:</strong> IRD issues Tax Returns for Individuals (Form BIR60).</li>
+                <li><strong>June 1:</strong> Deadline for paper tax return submission (1 month from issue).</li>
+                <li><strong>July 1:</strong> Deadline for electronic filing via <a href="/blogs/hong-kong-etax-guide" class="text-link hover:underline dark:text-link">IRD eTAX Portal</a> (automatic 1-month extension).</li>
+                <li><strong>January & April:</strong> Payment deadlines for final tax and 1st/2nd provisional tax installments.</li>
+              </ul>
+            </section>
+
+            <!-- Section 9 -->
+            <section id="common-mistakes">
+              <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">9. Common Tax Filing Mistakes to Avoid</h2>
+              <ol class="list-decimal pl-6 space-y-2">
+                <li><strong>Forgetting to Claim MPF Deductions:</strong> Always deduct mandatory MPF employee contributions (up to HK$18,000).</li>
+                <li><strong>Not Claiming Dependent Allowances:</strong> Ensure parents aged 55+ or full-time student children are properly declared.</li>
+                <li><strong>Conflating Cash Allowance with Housing Reimbursement:</strong> Ensure rental reimbursement contracts meet IRD guidelines for 10% rental value treatment.</li>
+                <li><strong>Missing Provisional Tax Installment Deadlines:</strong> Late payments trigger an automatic 5% penalty from the IRD.</li>
+              </ol>
+            </section>
+
+            <!-- Section 10: FAQs -->
+            <section id="faqs">
+              <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-6">10. Frequently Asked Questions</h2>
+              <div class="space-y-4">
+                {faqSchema.mainEntity.map(faq => (
+                  <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+                    <h3 class="text-base font-bold text-ink dark:text-on-primary">{faq.name}</h3>
+                    <p class="text-sm text-body dark:text-muted mt-2 leading-relaxed">{faq.acceptedAnswer.text}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          </div>
+
+          <!-- Interactive Calculator Launch Banner -->
+          <div class="my-12 rounded-2xl border border-hairline bg-canvas-soft p-8 dark:border-overlay-lighter dark:bg-surface text-center shadow-sm">
+            <h3 class="text-2xl font-bold text-ink dark:text-on-primary mb-2">Ready to Calculate Your Hong Kong Salaries Tax?</h3>
+            <p class="text-body dark:text-muted max-w-2xl mx-auto mb-6">
+              Get an instant, accurate breakdown of your progressive tax, standard rate tax, MPF deductions, and net monthly take-home salary.
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-4">
+              <a 
+                href="/countries/hong-kong/salaries-tax/salaries-tax-calculator" 
+                class="inline-flex items-center justify-center rounded-pill bg-primary px-6 py-3 text-base font-semibold text-on-primary transition hover:opacity-90 dark:bg-on-primary dark:text-primary"
+              >
+                Salaries Tax Calculator &rarr;
+              </a>
+              <a 
+                href="/countries/hong-kong/salaries-tax/hk-net-salary-calculator" 
+                class="inline-flex items-center justify-center rounded-pill border border-hairline bg-canvas px-6 py-3 text-base font-semibold text-ink hover:border-primary transition dark:bg-surface dark:text-on-primary dark:border-overlay-lighter"
+              >
+                Net Take-Home Salary Tool
+              </a>
+            </div>
+          </div>
+
+          <!-- Contextual Internal Linking Block -->
+          <div class="mt-12 pt-8 border-t border-hairline dark:border-overlay-lighter">
+            <h3 class="text-xl font-bold text-ink dark:text-on-primary mb-4">Related Hong Kong Tax Resources</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <a href="/countries/hong-kong/salaries-tax/salaries-tax-calculator" class="card p-4 hover:border-primary transition border border-hairline rounded-xl bg-canvas dark:border-overlay-lighter dark:bg-surface">
+                <h4 class="font-semibold text-ink dark:text-on-primary text-sm">HK Salaries Tax Calculator</h4>
+                <p class="text-xs text-muted mt-1">Official IRD tax estimator for 2026/27.</p>
+              </a>
+              <a href="/countries/hong-kong/salaries-tax/salary-tax-computation" class="card p-4 hover:border-primary transition border border-hairline rounded-xl bg-canvas dark:border-overlay-lighter dark:bg-surface">
+                <h4 class="font-semibold text-ink dark:text-on-primary text-sm">Salary Tax Computation Tool</h4>
+                <p class="text-xs text-muted mt-1">Detailed breakdown of progressive vs standard rate.</p>
+              </a>
+              <a href="/countries/hong-kong/salaries-tax/hk-net-salary-calculator" class="card p-4 hover:border-primary transition border border-hairline rounded-xl bg-canvas dark:border-overlay-lighter dark:bg-surface">
+                <h4 class="font-semibold text-ink dark:text-on-primary text-sm">HK Net Salary Calculator</h4>
+                <p class="text-xs text-muted mt-1">Calculate monthly take-home pay after MPF.</p>
+              </a>
+              <a href="/blogs/hong-kong-tax-allowances-deductions" class="card p-4 hover:border-primary transition border border-hairline rounded-xl bg-canvas dark:border-overlay-lighter dark:bg-surface">
+                <h4 class="font-semibold text-ink dark:text-on-primary text-sm">Tax Allowances & Deductions Guide</h4>
+                <p class="text-xs text-muted mt-1">Maximize child, spouse, & dependent allowances.</p>
+              </a>
+              <a href="/blogs/hong-kong-tax-calculator-expats-guide" class="card p-4 hover:border-primary transition border border-hairline rounded-xl bg-canvas dark:border-overlay-lighter dark:bg-surface">
+                <h4 class="font-semibold text-ink dark:text-on-primary text-sm">Expats Tax Guide & 60-Day Rule</h4>
+                <p class="text-xs text-muted mt-1">Tax rules for foreign workers & expats in HK.</p>
+              </a>
+              <a href="/blogs/hong-kong-provisional-tax-guide" class="card p-4 hover:border-primary transition border border-hairline rounded-xl bg-canvas dark:border-overlay-lighter dark:bg-surface">
+                <h4 class="font-semibold text-ink dark:text-on-primary text-sm">Provisional Tax Guide</h4>
+                <p class="text-xs text-muted mt-1">How advance provisional tax works in HK.</p>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+  </div>
+</BlogLayout>
 
           <div class="mt-12">
             <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Related Articles</h2>
