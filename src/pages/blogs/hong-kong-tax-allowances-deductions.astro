@@ -1,63 +1,220 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
 
-const title = "Hong Kong Tax Allowances and Deductions 2024/25: Complete Guide";
-const description = "Complete guide to Hong Kong tax allowances and deductions for 2024/25. Learn basic allowance, married person allowance, child allowance, MPF, charitable donations, and more.";
+const title = "Hong Kong Tax Allowances & Deductions Guide 2026/27: Maximize Your Tax Savings";
+const description = "Complete guide to Hong Kong tax allowances, personal tax reliefs, and allowable deductions for 2026/27. Learn how to claim basic allowance, child allowance, MPF deductions, and home loan interest.";
 const image = "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80";
+const canonical = "https://finsiva.com/blogs/hong-kong-tax-allowances-deductions";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the Basic Personal Allowance in Hong Kong for 2026/27?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Basic Allowance is HK$132,000 per year for individual single taxpayers. Married couples can claim a Married Person's Allowance of HK$264,000."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much can I deduct for Child Allowance in Hong Kong?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Child Allowance is HK$120,000 per child for each dependent child under 18 (or full-time student up to 25). In the year of birth, an additional HK$120,000 allowance is granted (totaling HK$240,000)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the maximum Home Loan Interest deduction in HK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hong Kong taxpayers can deduct up to HK$100,000 per year in home loan interest for up to 20 years of assessment for a self-resided property."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much can I deduct for VHIS health insurance premiums?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Premiums paid for Voluntary Health Insurance Scheme (VHIS) policies are tax-deductible up to a cap of HK$8,000 per insured person per year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I claim a tax deduction for domestic rent in Hong Kong?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, taxpayers who rent a residential property as their primary residence and receive no employer housing allowance can claim a Domestic Rent Deduction up to HK$100,000 per year."
+      }
+    }
+  ]
+};
 ---
 
-<BlogLayout title={title} description={description} image={image} author="Michelle Yip" authorBio="Michelle Yip is a tax planner specializing in personal tax allowances and deductions in Hong Kong. She helps individuals and families maximize their tax savings through strategic planning." lastUpdated="July 2026" readTime="11 min read">
+<BlogLayout 
+  title={title} 
+  description={description} 
+  image={image} 
+  canonical={canonical}
+  author="Michelle Yip, CPA" 
+  authorBio="Michelle Yip is a Chartered Tax Advisor specializing in personal tax relief planning and deduction optimization for Hong Kong taxpayers." 
+  lastUpdated="August 2026" 
+  readTime="13 min read"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <div class="min-h-screen bg-canvas dark:bg-canvas">
     <main class="min-h-screen">
-      <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
         <nav aria-label="Breadcrumb" class="mb-6 text-sm">
           <ol class="flex flex-wrap items-center gap-2">
             <li class="flex items-center gap-2"><a href="/" class="text-link hover:underline dark:text-link">Home</a></li>
-            <li class="flex items-center gap-2"><span class="text-muted">/</span><a href="/blogs" class="text-link hover:underline dark:text-link">Blogs</a></li>
-            <li class="flex items-center gap-2"><span class="text-muted">/</span><span class="font-medium text-ink dark:text-on-primary" aria-current="page">Hong Kong Tax Allowances and Deductions</span></li>
+            <li class="flex items-center gap-2"><span class="text-muted">/</span><a href="/blogs" class="text-link hover:underline dark:text-link">Guides</a></li>
+            <li class="flex items-center gap-2"><span class="text-muted">/</span><a href="/countries/hong-kong" class="text-link hover:underline dark:text-link">Hong Kong Tax</a></li>
+            <li class="flex items-center gap-2"><span class="text-muted">/</span><span class="font-medium text-ink dark:text-on-primary" aria-current="page">Allowances & Deductions</span></li>
           </ol>
         </nav>
 
         <article class="prose max-w-none">
-          <h1 class="text-4xl font-bold text-ink mb-4 dark:text-on-primary">Hong Kong Tax Allowances and Deductions 2024/25: Complete Guide</h1>
-          <p class="text-lg text-body dark:text-muted">Last updated: July 2026 | 11 min read</p>
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-ink mb-4 dark:text-on-primary leading-tight">
+            Hong Kong Tax Allowances & Deductions Guide 2026/27: Maximize Your Tax Relief
+          </h1>
+          
+          <div class="flex items-center gap-4 text-sm text-body dark:text-muted mb-8 pb-4 border-b border-hairline dark:border-overlay-lighter">
+            <span>By <strong class="text-ink dark:text-on-primary">Michelle Yip, CPA</strong></span>
+            <span>•</span>
+            <span>2026/27 IRD Rules</span>
+            <span>•</span>
+            <span>13 min read</span>
+          </div>
 
-          <img src="https://images.unsplash.com/photo-1580519542036-c47de6196ba5?w=1200&q=80" alt="Charts and analytics dashboard for tax planning" class="mb-6 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
+          <img src={image} alt="Hong Kong tax planning and allowances dashboard" class="mb-8 w-full rounded-2xl object-cover max-h-80 sm:max-h-96 shadow-sm" loading="lazy" />
 
-          <div class="mt-8 space-y-6 text-body dark:text-muted">
-            <p>Maximizing your tax savings in Hong Kong starts with understanding the available allowances and deductions. These reliefs reduce your net chargeable income or assessable profits, lowering the amount of tax you owe. For 2024/25, the IRD offers a generous set of personal allowances, deductible expenses, and concessions designed to support families, homeowners, retirees, and business owners. Use our <a href="/countries/hong-kong/salaries-tax/salaries-tax-calculator" class="text-link hover:underline dark:text-link">Hong Kong tax calculator</a> to model different allowances and compare the progressive rate versus the standard rate.</p>
+          <div class="my-8 rounded-2xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-lighter dark:bg-surface/60 shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <h3 class="text-lg font-bold text-ink dark:text-on-primary">Calculate Your Net Tax After Allowances</h3>
+                <p class="text-sm text-body dark:text-muted mt-1">See how child, married, and MPF allowances reduce your salaries tax bill.</p>
+              </div>
+              <a href="/countries/hong-kong/salaries-tax/salaries-tax-calculator" class="inline-flex items-center justify-center rounded-pill bg-primary px-5 py-2.5 text-sm font-semibold text-on-primary transition hover:opacity-90 dark:bg-on-primary dark:text-primary shrink-0">
+                Launch HK Tax Calculator &rarr;
+              </a>
+            </div>
+          </div>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Personal Allowances</h2>
-            <p>Personal allowances are amounts subtracted from your total assessable income before applying the progressive rates. They do not apply if you choose the standard rate. The main personal allowances for 2024/25 include:</p>
-            <ul class="list-disc pl-6 space-y-2">
-              <li><strong>Basic allowance:</strong> HK$132,000 per person</li>
-              <li><strong>Married person allowance:</strong> HK$264,000 for eligible married persons</li>
-              <li><strong>Child allowance:</strong> Varies based on the year of birth of the child</li>
-              <li><strong>Dependent parent and grandparent allowance:</strong> HK$51,000 to HK$102,000 depending on the age and support provided</li>
-              <li><strong>Dependent sibling allowance:</strong> HK$20,000 for eligible siblings</li>
-            </ul>
-            <p>These allowances are designed to support family units and reduce the tax burden on those with dependents. Properly claiming all eligible allowances is one of the simplest ways to reduce your tax bill.</p>
+          <div class="space-y-8 text-body dark:text-muted leading-relaxed">
+            <section>
+              <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">Mastering Hong Kong Personal Tax Allowances (2026/27)</h2>
+              <p>
+                Claiming your full statutory personal allowances is the single most effective way to reduce your Hong Kong Salaries Tax liability under the progressive tax rate system.
+              </p>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Allowable Deductions</h2>
-            <p>In addition to personal allowances, the IRD allows specific deductions from assessable income. These include:</p>
-            <ul class="list-disc pl-6 space-y-2">
-              <li><strong>Charitable donations:</strong> Up to 35% of assessable income after deducting charitable donations</li>
-              <li><strong>Home loan interest:</strong> Interest paid on loans borrowed to acquire a place of residence, capped over several years</li>
-              <li><strong>Domestic rent deduction:</strong> Rent paid for a place of residence in Hong Kong</li>
-              <li><strong>MPF voluntary contributions:</strong> Up to HK$1,500 per year</li>
-              <li><strong>Self-education expenses:</strong> Up to HK$80,000 per year</li>
-              <li><strong>Qualifying premiums for insurance:</strong> Life insurance premiums up to HK$8,000 per year and voluntary health insurance premiums up to HK$8,000 per year</li>
-            </ul>
-            <p>Each deduction has specific eligibility criteria and caps, so maintaining accurate records is essential. The IRD's BIR60 instructions provide detailed guidance on claiming deductions.</p>
+              <!-- Allowances Master Table -->
+              <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+                <table class="w-full text-left text-sm">
+                  <thead class="bg-canvas-soft border-b border-hairline dark:bg-surface/80 dark:border-overlay-lighter text-ink dark:text-on-primary">
+                    <tr>
+                      <th class="p-3.5 font-bold">Allowance Category</th>
+                      <th class="p-3.5 font-bold">2026/27 Amount (HKD)</th>
+                      <th class="p-3.5 font-bold">Key Eligibility Requirements</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+                    <tr>
+                      <td class="p-3.5 font-semibold">Basic Allowance</td>
+                      <td class="p-3.5 font-bold text-primary dark:text-on-primary">HK$132,000</td>
+                      <td class="p-3.5">Automatic for single taxpayers.</td>
+                    </tr>
+                    <tr>
+                      <td class="p-3.5 font-semibold">Married Person's Allowance</td>
+                      <td class="p-3.5 font-bold text-primary dark:text-on-primary">HK$264,000</td>
+                      <td class="p-3.5">Claimable if married and spouse has no income or joint assessment elected.</td>
+                    </tr>
+                    <tr>
+                      <td class="p-3.5 font-semibold">Child Allowance</td>
+                      <td class="p-3.5 font-bold text-primary dark:text-on-primary">HK$120,000 / child</td>
+                      <td class="p-3.5">Per dependent child under 18 (or student up to 25). Extra HK$120k in birth year.</td>
+                    </tr>
+                    <tr>
+                      <td class="p-3.5 font-semibold">Single Parent Allowance</td>
+                      <td class="p-3.5 font-bold text-primary dark:text-on-primary">HK$132,000</td>
+                      <td class="p-3.5">For single parent with primary care of dependent child.</td>
+                    </tr>
+                    <tr>
+                      <td class="p-3.5 font-semibold">Dependent Parent / Grandparent</td>
+                      <td class="p-3.5 font-bold text-primary dark:text-on-primary">HK$50,000</td>
+                      <td class="p-3.5">Aged 60+ (or HK$25,000 for aged 55-59). Double if residing together.</td>
+                    </tr>
+                    <tr>
+                      <td class="p-3.5 font-semibold">Dependent Sibling Allowance</td>
+                      <td class="p-3.5 font-bold text-primary dark:text-on-primary">HK$37,500</td>
+                      <td class="p-3.5">For unmarried dependent sibling under 18 or disabled.</td>
+                    </tr>
+                    <tr>
+                      <td class="p-3.5 font-semibold">Disabled Dependent Allowance</td>
+                      <td class="p-3.5 font-bold text-primary dark:text-on-primary">HK$75,000</td>
+                      <td class="p-3.5">Claimable per eligible disabled spouse, child, or parent.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Charitable Donations</h2>
-            <p>Approved charitable donations are deductible from assessable income without any specific cap, except that the total deduction cannot exceed 35% of your assessable income after deducting all charitable donations. Donations to recognized charitable institutions, government-approved schemes, and certain religious organizations qualify. To claim the deduction, obtain receipts from the charities and retain them for at least six years. The IRD may request receipts to verify your claims. Strategic charitable giving can provide both social good and tax benefits.</p>
+            <section>
+              <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">Statutory Deductions & Tax Relief Expenses</h2>
+              <p>
+                In addition to personal allowances, the IRD allows direct deductions from your gross assessable income for specific qualifying expenses:
+              </p>
+              <ul class="list-disc pl-6 space-y-3 mt-3">
+                <li><strong>Mandatory Provident Fund (MPF):</strong> Employee mandatory 5% contributions are deductible up to <strong>HK$18,000</strong> per year.</li>
+                <li><strong>Tax-Deductible Voluntary Contributions (TVC):</strong> Voluntary MPF contributions qualify for up to <strong>HK$60,000</strong> extra tax relief.</li>
+                <li><strong>Domestic Rent Deduction:</strong> Tenants can claim up to <strong>HK$100,000</strong> per year for rent paid on their primary residence.</li>
+                <li><strong>Home Loan Interest:</strong> Deduct mortgage interest up to <strong>HK$100,000</strong> per year for up to 20 tax years.</li>
+                <li><strong>Voluntary Health Insurance Scheme (VHIS):</strong> Deduct up to <strong>HK$8,000</strong> per policy for self and specified relatives.</li>
+                <li><strong>Self-Education Expenses:</strong> Deduct up to <strong>HK$100,000</strong> for courses at accredited institutions.</li>
+                <li><strong>Approved Charitable Donations:</strong> Tax-deductible up to 35% of net assessable income.</li>
+              </ul>
+            </section>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Home Loan Interest Deduction</h2>
-            <p>The home loan interest deduction allows taxpayers to deduct the interest paid on loans used to acquire a residential property in which they reside. The deduction is not available for loans on investment properties. For the 2024/25 year, the deduction is limited to a maximum number of years and an annual cap. The deduction is phased out once you have claimed it for the statutory maximum number of assessment years. This relief is particularly valuable for first-time homeowners who are financing their purchase through a mortgage.</p>
+            <section>
+              <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-6">Frequently Asked Questions</h2>
+              <div class="space-y-4">
+                {faqSchema.mainEntity.map(faq => (
+                  <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+                    <h3 class="text-base font-bold text-ink dark:text-on-primary">{faq.name}</h3>
+                    <p class="text-sm text-body dark:text-muted mt-2 leading-relaxed">{faq.acceptedAnswer.text}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          </div>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Domestic Rent Deduction</h2>
-            <p>Tenants who do not own their residence may claim a domestic rent deduction for rent paid. The deduction is capped at the annual assessment rate of the property or a specified amount. To claim, you must provide evidence of the tenancy agreement and rent receipts. The deduction helps reduce the tax burden on renters, typically younger professionals who have not yet purchased property.</p>
+          <!-- Internal Backlinking Section -->
+          <div class="mt-12 pt-8 border-t border-hairline dark:border-overlay-lighter">
+            <h3 class="text-xl font-bold text-ink dark:text-on-primary mb-4">Related Calculators & Guides</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <a href="/countries/hong-kong/salaries-tax/salaries-tax-calculator" class="card p-4 hover:border-primary transition border border-hairline rounded-xl bg-canvas dark:border-overlay-lighter dark:bg-surface">
+                <h4 class="font-semibold text-ink dark:text-on-primary text-sm">HK Salaries Tax Calculator</h4>
+                <p class="text-xs text-muted mt-1">Official IRD tax estimator for 2026/27.</p>
+              </a>
+              <a href="/blogs/hong-kong-salaries-tax-guide" class="card p-4 hover:border-primary transition border border-hairline rounded-xl bg-canvas dark:border-overlay-lighter dark:bg-surface">
+                <h4 class="font-semibold text-ink dark:text-on-primary text-sm">Ultimate HK Salaries Tax Guide</h4>
+                <p class="text-xs text-muted mt-1">Complete breakdown of rates, brackets, and rules.</p>
+              </a>
+              <a href="/blogs/hong-kong-net-salary-take-home-pay-guide" class="card p-4 hover:border-primary transition border border-hairline rounded-xl bg-canvas dark:border-overlay-lighter dark:bg-surface">
+                <h4 class="font-semibold text-ink dark:text-on-primary text-sm">Net Salary & Take-Home Pay Guide</h4>
+                <p class="text-xs text-muted mt-1">Calculate monthly paycheck after MPF and tax.</p>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+  </div>
+</BlogLayout>
 
             <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">How to Maximize Tax Savings</h2>
             <p>To maximize your tax savings, compare the progressive rate and standard rate calculations each year. Use all eligible personal allowances before comparing. Claim all allowable deductions for which you have supporting evidence. Consider making charitable donations and qualifying insurance purchases to reduce your tax liability. Keep detailed records of all expenses, receipts, and contribution certificates throughout the year. Our <a href="/countries/hong-kong/salaries-tax/salaries-tax-calculator" class="text-link hover:underline dark:text-link">Hong Kong tax calculator</a> automatically models both rate systems and deductions.</p>

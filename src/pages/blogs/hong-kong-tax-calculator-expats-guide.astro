@@ -1,63 +1,166 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
 
-const title = "Hong Kong Tax Calculator for Expats: A Complete 2025 Guide";
-const description = "Hong Kong tax calculator for expats guide. Learn how expats are taxed in Hong Kong, territorial system, 60-day rule, double tax agreements, and use our expat tax calculator for accurate estimates.";
+const title = "Hong Kong Tax Calculator for Expats & Foreigners 2026/27: Tax Rules & 60-Day Rule";
+const description = "Comprehensive Hong Kong income tax guide for expats and foreign workers in 2026/27. Learn the 60-day exemption rule, housing allowance tax concessions, double tax treaties, and tax estimation.";
 const image = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80";
+const canonical = "https://finsiva.com/blogs/hong-kong-tax-calculator-expats-guide";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How are expats and foreigners taxed in Hong Kong for 2026/27?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Expats working in Hong Kong pay Salaries Tax on Hong Kong-sourced income at progressive rates (2% to 17%) or a flat 15% standard rate. Overseas-sourced income is fully tax-exempt under HK territorial tax laws."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the 60-day tax exemption rule for non-resident employees?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non-residents who render employment services in Hong Kong during visits totaling 60 days or less in a year of assessment are completely exempt from Hong Kong Salaries Tax."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the rental reimbursement scheme save tax for expats?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If an employer directly pays or refunds rental costs for an employee's residence, the IRD taxes the housing benefit at a concessionary 10% rental value rate rather than full gross salary, yielding major tax savings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do expats pay MPF in Hong Kong?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Expats entering HK under an employment visa are exempt from MPF for their first 13 months, or if they are covered by an overseas retirement scheme."
+      }
+    }
+  ]
+};
 ---
 
-<BlogLayout title={title} description={description} image={image} author="Emily Wong" authorBio="Tax consultant specializing in Hong Kong and Asian tax systems with over 10 years of experience helping expats optimize their tax obligations." lastUpdated="July 2026" readTime="10 min read">
+<BlogLayout 
+  title={title} 
+  description={description} 
+  image={image} 
+  canonical={canonical}
+  author="Emily Wong, CPA" 
+  authorBio="Emily Wong is a cross-border tax specialist in Hong Kong with 12+ years of experience helping expatriates, multinational executives, and foreign businesses navigate HK tax rules." 
+  lastUpdated="August 2026" 
+  readTime="11 min read"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <div class="min-h-screen bg-canvas dark:bg-canvas">
     <main class="min-h-screen">
-      <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
         <nav aria-label="Breadcrumb" class="mb-6 text-sm">
           <ol class="flex flex-wrap items-center gap-2">
             <li class="flex items-center gap-2"><a href="/" class="text-link hover:underline dark:text-link">Home</a></li>
-            <li class="flex items-center gap-2"><span class="text-muted">/</span><a href="/blogs" class="text-link hover:underline dark:text-link">Blogs</a></li>
-            <li class="flex items-center gap-2"><span class="text-muted">/</span><span class="font-medium text-ink dark:text-on-primary" aria-current="page">Hong Kong Tax Calculator for Expats</span></li>
+            <li class="flex items-center gap-2"><span class="text-muted">/</span><a href="/blogs" class="text-link hover:underline dark:text-link">Guides</a></li>
+            <li class="flex items-center gap-2"><span class="text-muted">/</span><a href="/countries/hong-kong" class="text-link hover:underline dark:text-link">Hong Kong Tax</a></li>
+            <li class="flex items-center gap-2"><span class="text-muted">/</span><span class="font-medium text-ink dark:text-on-primary" aria-current="page">Expats Tax Guide</span></li>
           </ol>
         </nav>
 
         <article class="prose max-w-none">
-          <h1 class="text-4xl font-bold text-ink mb-4 dark:text-on-primary">Hong Kong Tax Calculator for Expats: A Complete 2025 Guide</h1>
-          <p class="text-lg text-body dark:text-muted">Last updated: July 2026 | 10 min read</p>
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-ink mb-4 dark:text-on-primary leading-tight">
+            Hong Kong Tax Calculator for Expats & Foreigners 2026/27: Complete Tax Guide
+          </h1>
+          
+          <div class="flex items-center gap-4 text-sm text-body dark:text-muted mb-8 pb-4 border-b border-hairline dark:border-overlay-lighter">
+            <span>By <strong class="text-ink dark:text-on-primary">Emily Wong, CPA</strong></span>
+            <span>•</span>
+            <span>2026/27 Expat Rules</span>
+            <span>•</span>
+            <span>11 min read</span>
+          </div>
 
-          <div class="mt-8 space-y-6 text-body dark:text-muted">
-            <p>Hong Kong is one of the most popular destinations for expatriate professionals, offering a world-class business environment, vibrant lifestyle, and a uniquely favorable tax system. For expats considering a move to Hong Kong, understanding how the tax system works is essential to planning your finances and maximizing your take-home pay. This guide explains the territorial income tax system, the 60-day rule, double tax agreements, and how to use a Hong Kong tax calculator for accurate estimates.</p>
+          <img src={image} alt="Expats and foreign business professionals in Hong Kong office" class="mb-8 w-full rounded-2xl object-cover max-h-80 sm:max-h-96 shadow-sm" loading="lazy" />
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Why Expats Choose Hong Kong</h2>
-            <p>Hong Kong's tax system is widely regarded as one of the most expat-friendly in the world. With a simple tax structure, low tax rates, and no capital gains tax, inheritance tax, or sales tax (except specific duties on alcohol, tobacco, and petroleum), it offers an attractive financial package. The city imposes salaries tax only on employment income sourced in Hong Kong, meaning many expats with cross-border contracts can enjoy significant tax savings. However, navigating the rules requires understanding what counts as Hong Kong-sourced income and when you may still need to declare offshore income.</p>
+          <div class="my-8 rounded-2xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-lighter dark:bg-surface/60 shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <h3 class="text-lg font-bold text-ink dark:text-on-primary">Calculate Your HK Expat Tax Liability</h3>
+                <p class="text-sm text-body dark:text-muted mt-1">Free online calculator for foreigners and expat salary after tax in HK.</p>
+              </div>
+              <a href="/countries/hong-kong/salaries-tax/hong-kong-tax-calculator-for-expats" class="inline-flex items-center justify-center rounded-pill bg-primary px-5 py-2.5 text-sm font-semibold text-on-primary transition hover:opacity-90 dark:bg-on-primary dark:text-primary shrink-0">
+                Launch Expat Tax Tool &rarr;
+              </a>
+            </div>
+          </div>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">The Territorial Tax System</h2>
-            <p>Hong Kong operates a territorial system of taxation, which means only income sourced in Hong Kong is subject to Hong Kong tax. Salaries tax applies to employment income sourced in Hong Kong, assessed on a calendar year basis from April 1 to March 31. The source of employment income is determined by factors including where the employment contract was entered into, where the employer is resident, and where the duties are performed. For most expats on local employment contracts, the employment income is considered sourced in Hong Kong and is subject to tax. For this reason, using a <a href="/countries/hong-kong/salaries-tax/salaries-tax-calculator" class="text-link hover:underline dark:text-link">Hong Kong tax calculator</a> is essential to estimate your liabilities accurately.</p>
+          <div class="space-y-8 text-body dark:text-muted leading-relaxed">
+            <section>
+              <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">Why Hong Kong is a Top Tax Haven for Foreigners & Expats</h2>
+              <p>
+                Hong Kong consistently ranks among the most tax-friendly business hubs in the world. Key financial benefits for foreign professionals include:
+              </p>
+              <ul class="list-disc pl-6 space-y-2 mt-3">
+                <li><strong>No Foreign Income Tax:</strong> Income earned outside Hong Kong is 100% tax-free under territorial tax rules.</li>
+                <li><strong>No Capital Gains Tax:</strong> Zero tax on stock sales, investment growth, or property gains.</li>
+                <li><strong>No Dividend or Interest Tax:</strong> Dividends received from local or foreign companies are tax-free.</li>
+                <li><strong>Low Top Marginal Tax Rate:</strong> Maximum tax rate capped at 17% (or 15% standard rate).</li>
+              </ul>
+            </section>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">The 60-Day Rule</h2>
-            <p>One of the more nuanced aspects of Hong Kong tax law is the 60-day rule for overseas employment. If you are a Hong Kong resident and you take up an overseas appointment (that is, your employment contract covers a period of overseas service), any portion of that employment that is performed outside Hong Kong for more than 60 days in the year of assessment is exempt from salaries tax. This exemption is intended to encourage Hong Kong residents to work abroad without losing the benefit of Hong Kong's competitive tax regime. The 60 days do not necessarily need to be consecutive, but counting must be done carefully in accordance with IRD guidelines.</p>
+            <section>
+              <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">The 60-Day Exemption Rule for Foreign Workers</h2>
+              <p>
+                Under Section 8(1A)(b) of the <em>Inland Revenue Ordinance</em>, if a non-resident individual visits Hong Kong and renders services during visits totaling <strong>60 days or less</strong> in a year of assessment, all income from that employment is completely exempt from Hong Kong Salaries Tax.
+              </p>
+            </section>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Double Tax Agreements</h2>
-            <p>Hong Kong has concluded comprehensive double tax agreements with numerous jurisdictions including the United Kingdom, the United States, Australia, Canada, Germany, and Singapore. These agreements allocate taxing rights between Hong Kong and the treaty partner and prevent the same income from being taxed twice. For expats relocating from one of these countries, the specific terms of the agreement may allow for reduced withholding taxes on dividends, interest, and royalties, or provide relief from permanent establishment rules. The IRD provides text copies of all active agreements on its website, <a href="https://www.ird.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">ird.gov.hk</a>, which is the authoritative source for treaty interpretations.</p>
+            <section>
+              <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">Housing Allowance Optimization (10% Concessionary Rate)</h2>
+              <p>
+                If your employer structures your compensation as a <strong>Rental Reimbursement Scheme</strong> (paying or reimbursing your Hong Kong apartment rent), the IRD taxes the housing benefit at a flat <strong>10% rental value</strong> of your base salary, rather than the actual cash rent amount. This structure saves foreign executives thousands of dollars annually.
+              </p>
+            </section>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">MPF and Other Allowances for Expats</h2>
-            <p>Mandatory Provident Fund (MPF) contributions are mandatory for most employees in Hong Kong and offer immediate tax benefits. Both employee and employer MPF contributions are deductible from assessable income. In addition to MPF, expats may claim standard personal allowances such as the basic allowance and married person allowance, depending on residency status and family circumstances. These allowances can significantly reduce your net chargeable income, especially when combined with the standard rate option. Explore the <a href="/blogs/hong-kong-mpf-tax-guide" class="text-link hover:underline dark:text-link">Hong Kong MPF and tax guide</a> for a deeper dive into MPF tax treatment.</p>
+            <section>
+              <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-6">Frequently Asked Questions</h2>
+              <div class="space-y-4">
+                {faqSchema.mainEntity.map(faq => (
+                  <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+                    <h3 class="text-base font-bold text-ink dark:text-on-primary">{faq.name}</h3>
+                    <p class="text-sm text-body dark:text-muted mt-2 leading-relaxed">{faq.acceptedAnswer.text}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          </div>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Using a Hong Kong Tax Calculator for Expats</h2>
-            <p>A reliable tax calculator simplifies the process of estimating your Hong Kong tax liability. To use our <a href="/countries/hong-kong/salaries-tax/salaries-tax-calculator" class="text-link hover:underline dark:text-link">Hong Kong salaries tax calculator</a>, input your annual employment income, MPF contributions, and eligible personal allowances. The calculator will compute your tax under both the progressive rate and standard rate systems, showing which method is more favorable. For expats with more complex profiles, such as those with shares-based remuneration or superannuation contributions, you should also consult a professional tax advisor to validate your calculations.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Overseas Income and Reporting Obligations</h2>
-            <p>While Hong Kong taxes only locally sourced income, expats should be aware that some offshore income may still be assessable. Rental income from overseas property, for example, may be taxable in both Hong Kong and the country where the property is located, depending on the double tax agreement in place. Similarly, dividends from foreign companies may trigger profits tax if derived from a Hong Kong business. Always maintain accurate records and report worldwide income where required by IRD guidance. If you have questions about your specific obligations, refer to our <a href="/blogs/hong-kong-tax-residency" class="text-link hover:underline dark:text-link">Hong Kong tax residency guide</a>.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Frequently Asked Questions</h2>
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Can expats be taxed in Hong Kong?</h3>
-            <p>Yes, expats working in Hong Kong with a Hong Kong employment contract are taxed on employment income sourced in Hong Kong. The territorial system means only Hong Kong-sourced income is taxed, which can still include most employment income for expats on local contracts.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">What is the 60-day rule for overseas employment?</h3>
-            <p>The 60-day rule exempts from Hong Kong salaries tax the portion of an overseas appointment performed outside Hong Kong for more than 60 days in the year of assessment. It applies to Hong Kong residents who take up employment outside Hong Kong under an extended appointment.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Does Hong Kong have double tax agreements?</h3>
-            <p>Yes, Hong Kong has comprehensive double tax agreements with many countries. These treaties provide relief from double taxation on various types of income. Check the IRD website at <a href="https://www.ird.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">ird.gov.hk</a> for the current list of agreements.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Is overseas rental income taxable in Hong Kong?</h3>
-            <p>Generally no, unless the rental income is derived from a Hong Kong business operation or the property is located in Hong Kong. However, you should review your circumstances and any applicable double tax agreements.</p>
+          <!-- Internal Links -->
+          <div class="mt-12 pt-8 border-t border-hairline dark:border-overlay-lighter">
+            <h3 class="text-xl font-bold text-ink dark:text-on-primary mb-4">Related Calculators & Guides</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <a href="/countries/hong-kong/salaries-tax/salaries-tax-calculator" class="card p-4 hover:border-primary transition border border-hairline rounded-xl bg-canvas dark:border-overlay-lighter dark:bg-surface">
+                <h4 class="font-semibold text-ink dark:text-on-primary text-sm">HK Salaries Tax Calculator</h4>
+                <p class="text-xs text-muted mt-1">Official IRD tax estimator for 2026/27.</p>
+              </a>
+              <a href="/blogs/hong-kong-salaries-tax-guide" class="card p-4 hover:border-primary transition border border-hairline rounded-xl bg-canvas dark:border-overlay-lighter dark:bg-surface">
+                <h4 class="font-semibold text-ink dark:text-on-primary text-sm">Ultimate HK Salaries Tax Guide</h4>
+                <p class="text-xs text-muted mt-1">Complete breakdown of rates, brackets, and rules.</p>
+              </a>
+              <a href="/blogs/hong-kong-net-salary-take-home-pay-guide" class="card p-4 hover:border-primary transition border border-hairline rounded-xl bg-canvas dark:border-overlay-lighter dark:bg-surface">
+                <h4 class="font-semibold text-ink dark:text-on-primary text-sm">Net Take-Home Salary Guide</h4>
+                <p class="text-xs text-muted mt-1">Calculate monthly salary after MPF & tax.</p>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+  </div>
+</BlogLayout>
 
             <h3 class="text-xl font-semibold text-ink dark:text-on-primary">How can I minimize Hong Kong tax as an expat?</h3>
             <p>Ensure you accurately claim all personal allowances and MPF deductions. Compare the progressive rate and standard rate calculations. Use our <a href="/countries/hong-kong/salaries-tax/salaries-tax-calculator" class="text-link hover:underline dark:text-link">Hong Kong tax calculator</a> to model different scenarios. You may also want to review your employment contract structure with a tax professional.</p>
