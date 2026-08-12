@@ -83,6 +83,7 @@ const is404 = currentPath === "/404";
             </div>
           </div>
           <a href="/blogs" class={`nav-link rounded-pill px-3 py-2 text-sm font-medium transition ${isBlog ? "nav-link-active" : "text-ink dark:text-on-primary"}`} aria-current={isBlog ? "page" : undefined}><span data-i18n="common.guides">Guides</span></a>
+          <a href="/compare" class="nav-link rounded-pill px-3 py-2 text-sm font-medium transition text-ink dark:text-on-primary"><span>Compare Tax</span></a>
           <a href="/knowledge" class={`nav-link rounded-pill px-3 py-2 text-sm font-medium transition ${isKnowledge ? "nav-link-active" : "text-ink dark:text-on-primary"}`} aria-current={isKnowledge ? "page" : undefined}><span data-i18n="common.knowledge_center">Knowledge Center</span></a>
           <a href="/about" class={`nav-link rounded-pill px-3 py-2 text-sm font-medium transition ${isAbout ? "nav-link-active" : "text-ink dark:text-on-primary"}`} aria-current={isAbout ? "page" : undefined}><span data-i18n="common.about_us">About Us</span></a>
         </nav>

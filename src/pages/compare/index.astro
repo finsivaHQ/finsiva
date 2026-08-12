@@ -1,0 +1,96 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const title = "Expat Tax Comparison Hub | Side-by-Side Country Tax Comparisons - Finsiva";
+const description = "Compare personal income tax, capital gains, corporate rates, and expat tax rules side-by-side across Hong Kong, Singapore, United States, United Kingdom, and India.";
+
+const comparisonPages = [
+  {
+    slug: "hong-kong-vs-singapore",
+    title: "Hong Kong vs Singapore Tax Comparison 2026",
+    countryA: "Hong Kong 🇭🇰",
+    countryB: "Singapore 🇸🇬",
+    highlights: ["Max Rate: HK 17% vs SG 24%", "Capital Gains: Both 0%", "Territorial Basis vs Remittance Rules"],
+    category: "Asian Financial Hubs"
+  },
+  {
+    slug: "united-states-vs-united-kingdom",
+    title: "United States vs United Kingdom Expat Tax Comparison",
+    countryA: "United States 🇺🇸",
+    countryB: "United Kingdom 🇬🇧",
+    highlights: ["Worldwide IRS Taxing vs Statutory Residency", "FEIE / FTC Credits vs UK Remittance Basis", "State Taxes vs UK National Insurance"],
+    category: "Western Hubs"
+  },
+  {
+    slug: "india-vs-singapore-nri-tax",
+    title: "India vs Singapore NRI Tax Comparison Guide",
+    countryA: "India 🇮🇳",
+    countryB: "Singapore 🇸🇬",
+    highlights: ["NRI Tax Slabs vs SG Non-Resident 15%", "DTAA Tax Credit Rules", "Capital Gains & Foreign Remittance"],
+    category: "NRI & Emerging Markets"
+  }
+];
+---
+
+<Layout title={title} description={description}>
+  <div class="min-h-screen bg-canvas dark:bg-canvas">
+    <main class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <!-- Breadcrumbs -->
+      <nav aria-label="Breadcrumb" class="mb-6 text-sm">
+        <ol class="flex items-center gap-2">
+          <li><a href="/" class="text-link hover:underline dark:text-link">Home</a></li>
+          <li><span class="text-muted">/</span></li>
+          <li class="font-medium text-ink dark:text-on-primary" aria-current="page">Tax Comparisons</li>
+        </ol>
+      </nav>
+
+      <!-- Header -->
+      <div class="mb-12 text-center sm:text-left">
+        <h1 class="text-3xl font-extrabold tracking-tight text-ink sm:text-5xl dark:text-on-primary">
+          Expat Tax Comparison Hub
+        </h1>
+        <p class="mt-4 max-w-3xl text-lg text-body dark:text-muted">
+          Compare income tax brackets, capital gains, corporate rates, and expat allowances side-by-side between top global jurisdictions.
+        </p>
+      </div>
+
+      <!-- Comparison Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {comparisonPages.map(page => (
+          <a href={`/compare/${page.slug}`} class="group rounded-2xl border border-hairline bg-canvas p-6 shadow-sm transition-all hover:border-primary hover:shadow-lg dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-semibold uppercase tracking-wider text-primary">{page.category}</span>
+                <span class="text-xs text-muted dark:text-muted">2026/27 Edition</span>
+              </div>
+              
+              <h2 class="text-xl font-bold text-ink dark:text-on-primary group-hover:text-primary transition-colors mb-4">
+                {page.title}
+              </h2>
+
+              <div class="flex items-center justify-between rounded-xl bg-canvas-soft p-3 mb-4 dark:bg-canvas/60 text-sm font-semibold text-ink dark:text-on-primary">
+                <span>{page.countryA}</span>
+                <span class="text-xs text-muted font-normal">VS</span>
+                <span>{page.countryB}</span>
+              </div>
+
+              <ul class="space-y-2 text-xs text-body dark:text-muted">
+                {page.highlights.map(h => (
+                  <li class="flex items-center gap-2">
+                    <span class="text-primary font-bold">•</span>
+                    <span>{h}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-hairline dark:border-overlay-lighter flex items-center justify-between text-sm font-semibold text-primary">
+              <span>View Side-by-Side Comparison</span>
+              <svg class="h-4 w-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </div>
+          </a>
+        ))}
+      </div>
+    </main>
+  </div>
+</Layout>

@@ -1,0 +1,168 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+export function getStaticPaths() {
+  return [
+    { params: { comparison: "hong-kong-vs-singapore" } },
+    { params: { comparison: "united-states-vs-united-kingdom" } },
+    { params: { comparison: "india-vs-singapore-nri-tax" } }
+  ];
+}
+
+const { comparison } = Astro.params;
+
+const dataMap: Record<string, any> = {
+  "hong-kong-vs-singapore": {
+    title: "Hong Kong vs Singapore Tax Comparison 2026/27: Rates, Capital Gains & Expat Rules",
+    description: "Detailed side-by-side tax comparison between Hong Kong and Singapore for expats and remote workers. Compare income tax rates (17% vs 24%), 0% capital gains, territorial tax rules, and MPF vs CPF.",
+    countryA: { name: "Hong Kong", flag: "🇭🇰", currency: "HK$" },
+    countryB: { name: "Singapore", flag: "🇸🇬", currency: "S$" },
+    summary: "Both Hong Kong and Singapore are tier-1 low-tax Asian financial hubs. Hong Kong caps personal salaries tax at 17% progressive or 15% standard rate, while Singapore progressive rates range from 0% to 24%. Neither levies capital gains tax.",
+    matrix: [
+      { feature: "Top Income Tax Rate", countryA: "17% (or 15% Standard Rate)", countryB: "24% (on income > S$1M)" },
+      { feature: "Capital Gains Tax", countryA: "0% (Completely Exempt)", countryB: "0% (Completely Exempt)" },
+      { feature: "Corporate Tax Rate", countryA: "8.25% / 16.5%", countryB: "17% (Partial Exemption)" },
+      { feature: "Tax System Basis", countryA: "Strict Territorial Basis", countryB: "Territorial + Remittance Rules" },
+      { feature: "Mandatory Pension Contribution", countryA: "MPF (5%, max HK$1,500/mo)", countryB: "CPF (up to 20% for Citizens/PRs)" },
+      { feature: "Dividend / Interest Tax", countryA: "0%", countryB: "0%" }
+    ],
+    calculatorsA: [
+      { name: "HK Salaries Tax Calculator", url: "/countries/hong-kong/salaries-tax/salaries-tax-calculator" },
+      { name: "HK Net Salary Calculator", url: "/countries/hong-kong/salaries-tax/hk-net-salary-calculator" }
+    ],
+    calculatorsB: [
+      { name: "Singapore Income Tax Calculator", url: "/countries/singapore/income-tax/income-tax-calculator" },
+      { name: "Singapore GST Calculator", url: "/countries/singapore/gst/gst-calculator" }
+    ]
+  },
+  "united-states-vs-united-kingdom": {
+    title: "US vs UK Tax Comparison for Expats & Dual Citizens 2026/27",
+    description: "Compare US federal and state taxes vs UK Income Tax & National Insurance. Learn about IRS FEIE, foreign tax credits, UK Statutory Residence, and pensions.",
+    countryA: { name: "United States", flag: "🇺🇸", currency: "USD" },
+    countryB: { name: "United Kingdom", flag: "🇬🇧", currency: "GBP" },
+    summary: "The US taxes citizens on worldwide income regardless of residency (mitigated by FEIE and FTC), whereas the UK taxes based on residency under the Statutory Residence Test (SRT).",
+    matrix: [
+      { feature: "Taxing Authority Principle", countryA: "Citizenship-based Worldwide Tax", countryB: "Residency-based Tax System" },
+      { feature: "Top Federal/Personal Tax Rate", countryA: "37% (+ state taxes 0-13.3%)", countryB: "45% Additional Rate" },
+      { feature: "Social / Pension Tax", countryA: "FICA (6.2% SS + 1.45% Medicare)", countryB: "National Insurance (8% + 2%)" },
+      { feature: "Expat Tax Relief", countryA: "FEIE ($126,500) + Foreign Tax Credit", countryB: "Double Taxation Relief (DTA)" },
+      { feature: "Capital Gains Tax Rate", countryA: "0% / 15% / 20% (Long-term)", countryB: "10% / 20% (Residential 18%/24%)" }
+    ],
+    calculatorsA: [
+      { name: "US Effective Tax Rate Calculator", url: "/countries/united-states/income-tax/effective-tax-rate" },
+      { name: "US Payroll Tax Calculator", url: "/countries/united-states/payroll-tax/payroll-tax-calculator" }
+    ],
+    calculatorsB: [
+      { name: "UK Income Tax Guide", url: "/countries/united-kingdom/income-tax/tax-residency-guide" },
+      { name: "UK VAT Calculator", url: "/countries/united-kingdom/vat/vat-guide" }
+    ]
+  },
+  "india-vs-singapore-nri-tax": {
+    title: "India vs Singapore Tax Comparison for NRIs 2026/27",
+    description: "Compare Indian NRI taxation rules (New vs Old Tax Regime) against Singapore tax residency benefits. Learn DTAA tax credits, remittance, and capital gains.",
+    countryA: { name: "India", flag: "🇮🇳", currency: "₹" },
+    countryB: { name: "Singapore", flag: "🇸🇬", currency: "S$" },
+    summary: "NRIs working in Singapore enjoy Singapore's low tax rates (0-24%) on local income, while Indian-sourced income remains taxable in India under the New or Old regime.",
+    matrix: [
+      { feature: "Tax Slabs (Top Bracket)", countryA: "30% (+ 4% Health & Edu Cess)", countryB: "24% (Progressive)" },
+      { feature: "NRI Status Threshold", countryA: "182 days outside India", countryB: "183+ days in Singapore = Tax Resident" },
+      { feature: "Capital Gains on Stocks", countryA: "STCG 20% / LTCG 12.5%", countryB: "0% Capital Gains" },
+      { feature: "GST / Sales Tax", countryA: "GST 5%, 12%, 18%, 28%", countryB: "GST 9%" }
+    ],
+    calculatorsA: [
+      { name: "India Income Tax Calculator", url: "/countries/india/income-tax/income-tax-calculator" },
+      { name: "India GST Calculator", url: "/countries/india/gst/gst-calculator" }
+    ],
+    calculatorsB: [
+      { name: "Singapore Income Tax Calculator", url: "/countries/singapore/income-tax/income-tax-calculator" }
+    ]
+  }
+};
+
+const data = dataMap[comparison || "hong-kong-vs-singapore"];
+---
+
+<Layout title={data.title} description={data.description}>
+  <div class="min-h-screen bg-canvas dark:bg-canvas">
+    <main class="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+      <!-- Breadcrumbs -->
+      <nav aria-label="Breadcrumb" class="mb-6 text-sm">
+        <ol class="flex items-center gap-2">
+          <li><a href="/" class="text-link hover:underline dark:text-link">Home</a></li>
+          <li><span class="text-muted">/</span></li>
+          <li><a href="/compare" class="text-link hover:underline dark:text-link">Tax Comparisons</a></li>
+          <li><span class="text-muted">/</span></li>
+          <li class="font-medium text-ink dark:text-on-primary" aria-current="page">{data.countryA.name} vs {data.countryB.name}</li>
+        </ol>
+      </nav>
+
+      <!-- Header -->
+      <div class="mb-10 text-center sm:text-left">
+        <h1 class="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl dark:text-on-primary leading-tight">
+          {data.title}
+        </h1>
+        <p class="mt-4 text-base text-body dark:text-muted leading-relaxed">
+          {data.summary}
+        </p>
+      </div>
+
+      <!-- Comparison Matrix Table -->
+      <div class="my-8 overflow-hidden rounded-2xl border border-hairline bg-canvas shadow-sm dark:border-overlay-lighter dark:bg-surface">
+        <div class="bg-canvas-soft px-6 py-4 dark:bg-canvas/60 border-b border-hairline dark:border-overlay-lighter flex items-center justify-between">
+          <h2 class="text-lg font-bold text-ink dark:text-on-primary">Side-by-Side Comparison Table</h2>
+          <span class="text-xs text-muted">2026/27 Tax Rules</span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm">
+            <thead class="bg-canvas-soft/40 text-xs font-semibold uppercase tracking-wider text-muted dark:bg-canvas/40 border-b border-hairline dark:border-overlay-lighter">
+              <tr>
+                <th class="px-6 py-4">Tax Feature</th>
+                <th class="px-6 py-4 text-primary">{data.countryA.flag} {data.countryA.name}</th>
+                <th class="px-6 py-4 text-emerald-600 dark:text-emerald-400">{data.countryB.flag} {data.countryB.name}</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+              {data.matrix.map((row: any) => (
+                <tr class="hover:bg-canvas-soft/30 dark:hover:bg-overlay-light/30 transition-colors">
+                  <td class="px-6 py-4 font-semibold text-ink dark:text-on-primary">{row.feature}</td>
+                  <td class="px-6 py-4 text-body dark:text-muted font-medium">{row.countryA}</td>
+                  <td class="px-6 py-4 text-body dark:text-muted font-medium">{row.countryB}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Interactive Calculators Links -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-12">
+        <div class="rounded-2xl border border-primary/30 bg-primary/5 p-6 dark:border-primary/30 dark:bg-primary/5">
+          <h3 class="text-lg font-bold text-ink dark:text-on-primary mb-3 flex items-center gap-2">
+            <span>{data.countryA.flag}</span> Calculate {data.countryA.name} Taxes
+          </h3>
+          <div class="space-y-2">
+            {data.calculatorsA.map((calc: any) => (
+              <a href={calc.url} class="block rounded-lg bg-canvas p-3 text-sm font-semibold text-primary hover:underline shadow-sm dark:bg-surface">
+                {calc.name} →
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-6 dark:border-emerald-500/30 dark:bg-surface">
+          <h3 class="text-lg font-bold text-ink dark:text-on-primary mb-3 flex items-center gap-2">
+            <span>{data.countryB.flag}</span> Calculate {data.countryB.name} Taxes
+          </h3>
+          <div class="space-y-2">
+            {data.calculatorsB.map((calc: any) => (
+              <a href={calc.url} class="block rounded-lg bg-canvas p-3 text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:underline shadow-sm dark:bg-surface">
+                {calc.name} →
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</Layout>

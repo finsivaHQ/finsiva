@@ -153,6 +153,11 @@ const webPageSchema = {
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <link rel="canonical" href={canonical || `${Astro.site}${Astro.url.pathname}`} />
+    <link rel="alternate" hreflang="en" href={canonical || `${Astro.site}${Astro.url.pathname}`} />
+    <link rel="alternate" hreflang="zh-HK" href={canonical || `${Astro.site}${Astro.url.pathname}`} />
+    <link rel="alternate" hreflang="zh-CN" href={canonical || `${Astro.site}${Astro.url.pathname}`} />
+    <link rel="alternate" hreflang="ms" href={canonical || `${Astro.site}${Astro.url.pathname}`} />
+    <link rel="alternate" hreflang="x-default" href={canonical || `${Astro.site}${Astro.url.pathname}`} />
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="//fonts.googleapis.com" />
