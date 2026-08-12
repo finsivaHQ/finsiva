@@ -1,0 +1,89 @@
+---
+interface Props {
+  countrySlug?: string;
+  currency?: string;
+}
+
+const { countrySlug = "hong-kong", currency = "HK$" } = Astro.props;
+---
+
+<div id="tax-savings-widget" class="mt-6 rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-5 shadow-sm dark:border-emerald-500/30 dark:bg-surface">
+  <div class="flex items-center justify-between border-b border-emerald-500/20 pb-3 mb-4">
+    <div class="flex items-center gap-2">
+      <span class="text-xl">💡</span>
+      <div>
+        <h3 class="text-base font-bold text-ink dark:text-on-primary">Smart Tax Savings Opportunities</h3>
+        <p class="text-xs text-muted dark:text-muted">Select eligible tax reliefs to calculate your instant tax reduction.</p>
+      </div>
+    </div>
+    <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+      Tax Optimizer
+    </span>
+  </div>
+
+  <div class="space-y-3 text-xs sm:text-sm">
+    <label class="flex items-start gap-3 p-2.5 rounded-xl bg-canvas dark:bg-canvas/60 border border-hairline dark:border-overlay-lighter cursor-pointer hover:border-emerald-500 transition">
+      <input type="checkbox" class="savings-check mt-1 h-4 w-4 text-emerald-600 rounded border-hairline focus:ring-emerald-500" data-amount="60000" data-rate="0.17" />
+      <div class="flex-1">
+        <div class="flex items-center justify-between font-semibold text-ink dark:text-on-primary">
+          <span>Tax-Deductible Voluntary MPF (TVC) / Annuity</span>
+          <span class="text-emerald-600 dark:text-emerald-400 font-bold">+ {currency} 10,200 Savings</span>
+        </div>
+        <p class="text-xs text-muted mt-0.5">Deduct up to {currency} 60,000 per year for deferred annuity or voluntary MPF.</p>
+      </div>
+    </label>
+
+    <label class="flex items-start gap-3 p-2.5 rounded-xl bg-canvas dark:bg-canvas/60 border border-hairline dark:border-overlay-lighter cursor-pointer hover:border-emerald-500 transition">
+      <input type="checkbox" class="savings-check mt-1 h-4 w-4 text-emerald-600 rounded border-hairline focus:ring-emerald-500" data-amount="8000" data-rate="0.17" />
+      <div class="flex-1">
+        <div class="flex items-center justify-between font-semibold text-ink dark:text-on-primary">
+          <span>Voluntary Health Insurance Scheme (VHIS)</span>
+          <span class="text-emerald-600 dark:text-emerald-400 font-bold">+ {currency} 1,360 Savings</span>
+        </div>
+        <p class="text-xs text-muted mt-0.5">Deduct up to {currency} 8,000 per insured person for certified VHIS policies.</p>
+      </div>
+    </label>
+
+    <label class="flex items-start gap-3 p-2.5 rounded-xl bg-canvas dark:bg-canvas/60 border border-hairline dark:border-overlay-lighter cursor-pointer hover:border-emerald-500 transition">
+      <input type="checkbox" class="savings-check mt-1 h-4 w-4 text-emerald-600 rounded border-hairline focus:ring-emerald-500" data-amount="100000" data-rate="0.17" />
+      <div class="flex-1">
+        <div class="flex items-center justify-between font-semibold text-ink dark:text-on-primary">
+          <span>Home Loan Interest Claim</span>
+          <span class="text-emerald-600 dark:text-emerald-400 font-bold">+ {currency} 17,000 Savings</span>
+        </div>
+        <p class="text-xs text-muted mt-0.5">Claim up to {currency} 100,000 per year for mortgage interest paid on your residence.</p>
+      </div>
+    </label>
+  </div>
+
+  <div id="savings-total-box" class="mt-4 pt-3 border-t border-emerald-500/20 flex items-center justify-between text-xs sm:text-sm">
+    <span class="font-semibold text-body dark:text-muted">Total Potential Tax Savings:</span>
+    <span id="savings-total-amount" class="text-base font-extrabold text-emerald-600 dark:text-emerald-400">{currency} 0</span>
+  </div>
+</div>
+
+<script is:inline>
+  (function() {
+    const checks = document.querySelectorAll('.savings-check');
+    const totalEl = document.getElementById('savings-total-amount');
+
+    function updateSavings() {
+      let totalSavings = 0;
+      checks.forEach(chk => {
+        if (chk.checked) {
+          const amt = parseFloat(chk.getAttribute('data-amount') || '0');
+          const rate = parseFloat(chk.getAttribute('data-rate') || '0.17');
+          totalSavings += amt * rate;
+        }
+      });
+
+      if (totalEl) {
+        totalEl.textContent = 'HK$ ' + Math.round(totalSavings).toLocaleString();
+      }
+    }
+
+    checks.forEach(chk => {
+      chk.addEventListener('change', updateSavings);
+    });
+  })();
+</script>

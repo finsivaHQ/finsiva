@@ -122,6 +122,19 @@ const webPageSchema = {
     "applicationCategory": "FinanceApplication"
   }
 };
+
+const financialProductSchema = {
+  "@context": "https://schema.org",
+  "@type": "FinancialProduct",
+  "name": "Finsiva Universal Tax Estimation Engine",
+  "description": "Free tax estimation engine for Salaries Tax, Income Tax, GST, VAT, and Capital Gains across 10+ countries.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Finsiva",
+    "url": "https://finsiva.com"
+  },
+  "feesAndCommissionsSpecification": "Free tool, 0% service charge"
+};
 ---
 
 <!doctype html>
@@ -197,6 +210,7 @@ const webPageSchema = {
     <script type="application/ld+json" set:html={JSON.stringify(webSiteSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(webApplicationSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(financialProductSchema)} />
       {schema && JSON.stringify(schema) !== '{}' && (
         <script type="application/ld+json" set:html={JSON.stringify(schema)} />
       )}

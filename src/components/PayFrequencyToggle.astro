@@ -1,0 +1,62 @@
+---
+---
+
+<div class="my-4 flex items-center justify-end">
+  <div class="inline-flex rounded-xl border border-hairline bg-canvas-soft p-1 dark:border-overlay-lighter dark:bg-surface shadow-sm">
+    <button
+      type="button"
+      id="pay-toggle-annual"
+      class="pay-freq-btn rounded-lg px-3 py-1.5 text-xs font-bold transition bg-primary text-on-primary shadow-sm"
+      data-freq="annual"
+    >
+      📅 Annual View
+    </button>
+    <button
+      type="button"
+      id="pay-toggle-monthly"
+      class="pay-freq-btn rounded-lg px-3 py-1.5 text-xs font-semibold text-muted hover:text-ink dark:hover:text-on-primary transition"
+      data-freq="monthly"
+    >
+      🗓️ Monthly Breakdown
+    </button>
+  </div>
+</div>
+
+<script is:inline>
+  (function() {
+    const annualBtn = document.getElementById('pay-toggle-annual');
+    const monthlyBtn = document.getElementById('pay-toggle-monthly');
+
+    let currentFreq = 'annual';
+
+    function setFrequency(freq) {
+      if (currentFreq === freq) return;
+      currentFreq = freq;
+
+      if (freq === 'annual') {
+        annualBtn.className = 'pay-freq-btn rounded-lg px-3 py-1.5 text-xs font-bold transition bg-primary text-on-primary shadow-sm';
+        monthlyBtn.className = 'pay-freq-btn rounded-lg px-3 py-1.5 text-xs font-semibold text-muted hover:text-ink dark:hover:text-on-primary transition';
+      } else {
+        monthlyBtn.className = 'pay-freq-btn rounded-lg px-3 py-1.5 text-xs font-bold transition bg-primary text-on-primary shadow-sm';
+        annualBtn.className = 'pay-freq-btn rounded-lg px-3 py-1.5 text-xs font-semibold text-muted hover:text-ink dark:hover:text-on-primary transition';
+      }
+
+      // Divide or multiply values on screen
+      const resultElements = document.querySelectorAll('[id^="result-"]');
+      resultElements.forEach(el => {
+        const text = el.textContent || '';
+        if (text.includes('$') || text.includes('₹') || text.includes('£') || text.includes('Rp') || text.includes('RM') || text.includes('Rs') || text.includes('₱')) {
+          const num = parseFloat(text.replace(/[^0-9.]/g, ''));
+          if (!isNaN(num) && num > 0) {
+            const sym = text.replace(/[0-9.,]/g, '').trim();
+            const newNum = freq === 'monthly' ? num / 12 : num * 12;
+            el.textContent = sym + ' ' + Math.round(newNum).toLocaleString();
+          }
+        }
+      });
+    }
+
+    if (annualBtn) annualBtn.addEventListener('click', () => setFrequency('annual'));
+    if (monthlyBtn) monthlyBtn.addEventListener('click', () => setFrequency('monthly'));
+  })();
+</script>

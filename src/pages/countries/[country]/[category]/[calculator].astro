@@ -7,6 +7,8 @@ import { calculatorContent } from "../../../../config/calculatorContent";
 import type { TaxRule } from "../../../../config/taxRules";
 import TaxReportExport from "../../../../components/TaxReportExport.astro";
 import TaxComparisonModal from "../../../../components/TaxComparisonModal.astro";
+import PayFrequencyToggle from "../../../../components/PayFrequencyToggle.astro";
+import TaxSavingsWidget from "../../../../components/TaxSavingsWidget.astro";
 
 export function getStaticPaths() {
   const paths: { params: { country: string; category: string; calculator: string } }[] = [];
@@ -282,6 +284,9 @@ const mergedContent = {
               </button>
             </div>
           </div>
+          
+          <PayFrequencyToggle />
+
           <div class="card dark:border-overlay-lighter dark:bg-surface">
              {rule ? (
                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -314,6 +319,8 @@ const mergedContent = {
               
               <TaxReportExport calculatorTitle={calculator.name} currency={country.currency} />
             </div>
+
+           <TaxSavingsWidget countrySlug={country.slug} currency={country.currency} />
 
            <TaxComparisonModal currency={country.currency} />
            
