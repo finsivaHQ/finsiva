@@ -9,6 +9,9 @@ import TaxReportExport from "../../../../components/TaxReportExport.astro";
 import TaxComparisonModal from "../../../../components/TaxComparisonModal.astro";
 import PayFrequencyToggle from "../../../../components/PayFrequencyToggle.astro";
 import TaxSavingsWidget from "../../../../components/TaxSavingsWidget.astro";
+import TaxBracketVisualizer from "../../../../components/TaxBracketVisualizer.astro";
+import TaxCalendarWidget from "../../../../components/TaxCalendarWidget.astro";
+import TaxPrintHeader from "../../../../components/TaxPrintHeader.astro";
 
 export function getStaticPaths() {
   const paths: { params: { country: string; category: string; calculator: string } }[] = [];
@@ -321,6 +324,10 @@ const mergedContent = {
             </div>
 
            <TaxSavingsWidget countrySlug={country.slug} currency={country.currency} />
+
+           <TaxBracketVisualizer currency={country.currency} />
+
+           <TaxCalendarWidget countrySlug={country.slug} />
 
            <TaxComparisonModal currency={country.currency} />
            

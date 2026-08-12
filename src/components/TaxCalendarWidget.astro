@@ -1,0 +1,56 @@
+---
+interface Props {
+  countrySlug?: string;
+}
+
+const { countrySlug = "hong-kong" } = Astro.props;
+
+const deadlineMap: Record<string, { title: string; date: string; note: string }> = {
+  "hong-kong": {
+    title: "Hong Kong IRD BIR60 Individual Tax Return",
+    date: "2026-06-02",
+    note: "1 month from issue date (or July 2 via eTAX online filing)."
+  },
+  "united-states": {
+    title: "IRS Federal Individual Income Tax Filing Deadline",
+    date: "2026-04-15",
+    note: "June 15 extension automatically applies to US expats living abroad."
+  },
+  "india": {
+    title: "Income Tax Return (ITR) Filing Deadline AY 2026/27",
+    date: "2026-07-31",
+    note: "Mandatory for non-audit individual taxpayers under Section 139(1)."
+  },
+  "singapore": {
+    title: "IRAS Individual Tax Return Deadline",
+    date: "2026-04-18",
+    note: "Paper returns due April 15; e-Filing extended to April 18."
+  }
+};
+
+const info = deadlineMap[countrySlug || "hong-kong"] || {
+  title: "Official Tax Filing Season Deadline",
+  date: "2026-06-30",
+  note: "Check local tax authority guidelines for extension filing options."
+};
+---
+
+<div class="mt-6 rounded-2xl border border-amber-500/30 bg-amber-500/5 p-4 shadow-sm dark:border-amber-500/30 dark:bg-surface flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+  <div class="flex items-center gap-3">
+    <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-500/20 text-amber-600 dark:text-amber-400 font-bold">
+      📅
+    </div>
+    <div>
+      <div class="flex items-center gap-2">
+        <h4 class="text-sm font-bold text-ink dark:text-on-primary">{info.title}</h4>
+        <span class="text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-amber-500/20 text-amber-700 dark:text-amber-300">Upcoming</span>
+      </div>
+      <p class="text-xs text-muted dark:text-muted mt-0.5">{info.note}</p>
+    </div>
+  </div>
+
+  <div class="shrink-0 text-right">
+    <div class="text-xs text-muted dark:text-muted font-medium">Filing Due Date</div>
+    <div class="text-sm sm:text-base font-extrabold text-amber-600 dark:text-amber-400">{info.date}</div>
+  </div>
+</div>

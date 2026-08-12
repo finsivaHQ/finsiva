@@ -1,0 +1,64 @@
+---
+interface Props {
+  currency?: string;
+}
+
+const { currency = "HK$" } = Astro.props;
+---
+
+<div id="tax-bracket-visualizer" class="mt-6 rounded-2xl border border-hairline bg-canvas p-5 shadow-sm dark:border-overlay-lighter dark:bg-surface">
+  <div class="flex items-center justify-between border-b border-hairline pb-3 mb-4 dark:border-overlay-lighter">
+    <div class="flex items-center gap-2">
+      <span class="text-xl">📊</span>
+      <div>
+        <h3 class="text-base font-bold text-ink dark:text-on-primary">Marginal Tax Bracket Breakdown</h3>
+        <p class="text-xs text-muted dark:text-muted">How your income is distributed across tax brackets.</p>
+      </div>
+    </div>
+    <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-primary/10 text-primary dark:text-link">
+      Progressive Slabs
+    </span>
+  </div>
+
+  <div class="space-y-3" id="bracket-bars-container">
+    <div>
+      <div class="flex justify-between text-xs font-medium text-body dark:text-muted mb-1">
+        <span>First {currency} 50,000 @ 2%</span>
+        <span class="font-bold text-ink dark:text-on-primary">{currency} 1,000 Tax</span>
+      </div>
+      <div class="w-full h-3 rounded-full bg-canvas-soft dark:bg-canvas overflow-hidden flex">
+        <div class="h-full bg-emerald-500 rounded-full" style="width: 100%"></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="flex justify-between text-xs font-medium text-body dark:text-muted mb-1">
+        <span>Next {currency} 50,000 @ 6%</span>
+        <span class="font-bold text-ink dark:text-on-primary">{currency} 3,000 Tax</span>
+      </div>
+      <div class="w-full h-3 rounded-full bg-canvas-soft dark:bg-canvas overflow-hidden flex">
+        <div class="h-full bg-blue-500 rounded-full" style="width: 80%"></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="flex justify-between text-xs font-medium text-body dark:text-muted mb-1">
+        <span>Next {currency} 50,000 @ 10%</span>
+        <span class="font-bold text-ink dark:text-on-primary">{currency} 5,000 Tax</span>
+      </div>
+      <div class="w-full h-3 rounded-full bg-canvas-soft dark:bg-canvas overflow-hidden flex">
+        <div class="h-full bg-purple-500 rounded-full" style="width: 60%"></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="flex justify-between text-xs font-medium text-body dark:text-muted mb-1">
+        <span>Remainder @ 17% Top Rate</span>
+        <span class="font-bold text-ink dark:text-on-primary">{currency} 25,500 Tax</span>
+      </div>
+      <div class="w-full h-3 rounded-full bg-canvas-soft dark:bg-canvas overflow-hidden flex">
+        <div class="h-full bg-amber-500 rounded-full" style="width: 40%"></div>
+      </div>
+    </div>
+  </div>
+</div>
