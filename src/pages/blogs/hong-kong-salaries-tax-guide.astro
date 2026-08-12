@@ -1,5 +1,6 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
+import StickyToc from "../../components/StickyToc.astro";
 
 const title = "Hong Kong Salaries Tax Guide 2026/27: Calculation, Rates, Allowances & Calculator";
 const description = "Comprehensive Hong Kong salaries tax guide for assessment year 2026/27. Calculate your HK tax liability, progressive rates (2%-17%), standard rate (15%), MPF deductions, and net take-home pay with IRD rules.";
@@ -108,7 +109,9 @@ const faqSchema = {
 
   <div class="min-h-screen bg-canvas dark:bg-canvas">
     <main class="min-h-screen">
-      <div class="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row gap-12">
+          <div class="flex-1 min-w-0 article-content">
         <!-- Breadcrumb Navigation -->
         <nav aria-label="Breadcrumb" class="mb-6 text-sm">
           <ol class="flex flex-wrap items-center gap-2">
@@ -481,11 +484,6 @@ const faqSchema = {
               </a>
             </div>
           </div>
-        </article>
-      </div>
-    </main>
-  </div>
-</BlogLayout>
 
           <div class="mt-12">
             <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Related Articles</h2>
@@ -543,6 +541,9 @@ const faqSchema = {
           </ul>
         </article>
       </div>
-    </main>
+      <StickyToc />
+    </div>
+  </div>
+</main>
   </div>
 </BlogLayout>

@@ -1,5 +1,6 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
+import StickyToc from "../../components/StickyToc.astro";
 
 const title = "Hong Kong Net Salary & Take-Home Pay Guide 2026/27: Calculate Salary After Tax";
 const description = "Learn how to calculate your Hong Kong net salary and monthly take-home pay after MPF contributions and IRD salaries tax. Includes gross to net salary formulas, tax tables, and calculator.";
@@ -68,7 +69,9 @@ const faqSchema = {
 
   <div class="min-h-screen bg-canvas dark:bg-canvas">
     <main class="min-h-screen">
-      <div class="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row gap-12">
+          <div class="flex-1 min-w-0 article-content">
         <!-- Breadcrumb -->
         <nav aria-label="Breadcrumb" class="mb-6 text-sm">
           <ol class="flex flex-wrap items-center gap-2">
@@ -237,6 +240,9 @@ const faqSchema = {
           </div>
         </article>
       </div>
-    </main>
+      <StickyToc />
+    </div>
+  </div>
+</main>
   </div>
 </BlogLayout>

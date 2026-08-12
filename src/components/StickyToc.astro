@@ -1,0 +1,78 @@
+---
+interface Props {
+  items?: Array<{ id: string; text: string }>;
+}
+
+const { items } = Astro.props;
+---
+
+<nav aria-label="Table of Contents" class="sticky top-24 hidden lg:block w-64 shrink-0 self-start p-4 rounded-xl border border-hairline bg-canvas-soft/90 backdrop-blur-md dark:border-overlay-lighter dark:bg-surface/90 shadow-sm">
+  <h3 class="text-xs font-bold uppercase tracking-wider text-muted dark:text-muted mb-3 flex items-center gap-2">
+    <svg class="h-4 w-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+    </svg>
+    On This Page
+  </h3>
+  <ul id="toc-list" class="space-y-1.5 text-xs sm:text-sm">
+    {items && items.map(item => (
+      <li>
+        <a href={`#${item.id}`} class="toc-link block py-1.5 px-3 rounded-md text-body hover:bg-hairline hover:text-ink transition-colors dark:text-muted dark:hover:bg-overlay-light dark:hover:text-on-primary">
+          {item.text}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<script is:inline>
+  (function() {
+    function initToc() {
+      const tocList = document.getElementById('toc-list');
+      const container = document.querySelector('.article-content') || document.querySelector('article') || document.querySelector('main');
+      if (!container) return;
+
+      const headings = Array.from(container.querySelectorAll('h2'));
+      if (headings.length === 0) return;
+
+      if (tocList && tocList.children.length === 0) {
+        headings.forEach((h, index) => {
+          if (!h.id) {
+            h.id = 'heading-' + index;
+          }
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = '#' + h.id;
+          a.textContent = h.textContent.trim();
+          a.className = 'toc-link block py-1.5 px-3 rounded-md text-body hover:bg-hairline hover:text-ink transition-colors dark:text-muted dark:hover:bg-overlay-light dark:hover:text-on-primary';
+          li.appendChild(a);
+          tocList.appendChild(li);
+        });
+      }
+
+      const allTocLinks = document.querySelectorAll('.toc-link');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            allTocLinks.forEach(link => {
+              if (link.getAttribute('href') === '#' + id) {
+                link.classList.add('bg-primary/10', 'text-primary', 'font-semibold', 'dark:bg-primary/20', 'dark:text-primary');
+              } else {
+                link.classList.remove('bg-primary/10', 'text-primary', 'font-semibold', 'dark:bg-primary/20', 'dark:text-primary');
+              }
+            });
+          }
+        });
+      }, { rootMargin: '-100px 0px -60% 0px' });
+
+      headings.forEach(h => observer.observe(h));
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initToc);
+    } else {
+      initToc();
+    }
+  })();
+</script>
