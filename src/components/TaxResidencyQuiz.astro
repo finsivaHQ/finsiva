@@ -1,0 +1,76 @@
+---
+interface Props {
+  countryName?: string;
+}
+
+const { countryName = "Hong Kong" } = Astro.props;
+---
+
+<div id="residency-quiz-widget" class="mt-6 rounded-2xl border border-purple-500/30 bg-purple-500/5 p-5 shadow-sm dark:border-purple-500/30 dark:bg-surface">
+  <div class="flex items-center justify-between border-b border-purple-500/20 pb-3 mb-4">
+    <div class="flex items-center gap-2">
+      <span class="text-xl">🏛️</span>
+      <div>
+        <h3 class="text-base font-bold text-ink dark:text-on-primary">Am I a Tax Resident in {countryName}?</h3>
+        <p class="text-xs text-muted dark:text-muted">Take this 3-second check to confirm your tax residency status.</p>
+      </div>
+    </div>
+    <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-500/20 text-purple-700 dark:text-purple-300">
+      Residency Assessment
+    </span>
+  </div>
+
+  <div class="space-y-4 text-xs sm:text-sm">
+    <div>
+      <label class="block font-semibold text-body dark:text-muted mb-1">1. Days spent in {countryName} during current tax year:</label>
+      <select id="quiz-days" class="w-full rounded-xl border border-hairline bg-canvas px-3.5 py-2.5 text-ink dark:border-overlay-light dark:bg-surface dark:text-on-primary font-medium text-xs sm:text-sm">
+        <option value="180+">More than 180 days (or 300+ days over 2 consecutive years)</option>
+        <option value="90-179">Between 90 and 179 days</option>
+        <option value="under-90">Less than 90 days</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="block font-semibold text-body dark:text-muted mb-1">2. Primary place of permanent residence / employment:</label>
+      <select id="quiz-home" class="w-full rounded-xl border border-hairline bg-canvas px-3.5 py-2.5 text-ink dark:border-overlay-light dark:bg-surface dark:text-on-primary font-medium text-xs sm:text-sm">
+        <option value="yes">{countryName} is my main home / work base</option>
+        <option value="no">My main home is in another country</option>
+      </select>
+    </div>
+
+    <button type="button" id="evaluate-residency-btn" class="w-full py-2.5 px-4 rounded-xl bg-purple-600 text-white font-bold text-xs sm:text-sm shadow-sm hover:bg-purple-700 transition">
+      Evaluate Tax Residency Status
+    </button>
+
+    <div id="residency-result-box" class="hidden rounded-xl border border-purple-500/30 bg-canvas p-4 text-center dark:bg-canvas/60">
+      <span class="text-xs font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400">Assessment Result</span>
+      <div id="residency-result-text" class="text-base font-extrabold text-purple-700 dark:text-purple-300 mt-1">
+        Evaluating...
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  (function() {
+    const btn = document.getElementById('evaluate-residency-btn');
+    const resultBox = document.getElementById('residency-result-box');
+    const resultText = document.getElementById('residency-result-text');
+
+    if (btn && resultBox && resultText) {
+      btn.addEventListener('click', function() {
+        const days = document.getElementById('quiz-days')?.value;
+        const home = document.getElementById('quiz-home')?.value;
+
+        resultBox.classList.remove('hidden');
+        if (days === '180+' || (days === '90-179' && home === 'yes')) {
+          resultText.className = 'text-base font-extrabold text-emerald-600 dark:text-emerald-400 mt-1';
+          resultText.textContent = '✅ You qualify as a Tax Resident! Entitled to full personal allowances and tax reliefs.';
+        } else {
+          resultText.className = 'text-base font-extrabold text-purple-700 dark:text-purple-300 mt-1';
+          resultText.textContent = 'ℹ️ Non-Resident status likely applies. Taxes are limited strictly to locally sourced income.';
+        }
+      });
+    }
+  })();
+</script>

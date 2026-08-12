@@ -13,6 +13,8 @@ import TaxBracketVisualizer from "../../../../components/TaxBracketVisualizer.as
 import TaxCalendarWidget from "../../../../components/TaxCalendarWidget.astro";
 import TaxPrintHeader from "../../../../components/TaxPrintHeader.astro";
 import TaxRefundEstimator from "../../../../components/TaxRefundEstimator.astro";
+import TaxResidencyQuiz from "../../../../components/TaxResidencyQuiz.astro";
+import GlobalPurchasingPower from "../../../../components/GlobalPurchasingPower.astro";
 
 export function getStaticPaths() {
   const paths: { params: { country: string; category: string; calculator: string } }[] = [];
@@ -331,6 +333,10 @@ const mergedContent = {
            <TaxCalendarWidget countrySlug={country.slug} />
 
            <TaxRefundEstimator currency={country.currency} />
+
+           <TaxResidencyQuiz countryName={country.name} />
+
+           <GlobalPurchasingPower currency={country.currency} />
 
            <TaxComparisonModal currency={country.currency} />
            

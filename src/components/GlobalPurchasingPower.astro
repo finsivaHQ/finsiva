@@ -1,0 +1,48 @@
+---
+interface Props {
+  currency?: string;
+}
+
+const { currency = "HK$" } = Astro.props;
+---
+
+<div id="purchasing-power-widget" class="mt-6 rounded-2xl border border-hairline bg-canvas p-5 shadow-sm dark:border-overlay-lighter dark:bg-surface">
+  <div class="flex items-center justify-between border-b border-hairline pb-3 mb-4 dark:border-overlay-lighter">
+    <div class="flex items-center gap-2">
+      <span class="text-xl">🌐</span>
+      <div>
+        <h3 class="text-base font-bold text-ink dark:text-on-primary">Global Purchasing Power & Salary Parity</h3>
+        <p class="text-xs text-muted dark:text-muted">Compare your real net take-home salary across top expat destinations.</p>
+      </div>
+    </div>
+    <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-primary/10 text-primary dark:text-link">
+      Expat Parity
+    </span>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm">
+    <div class="rounded-xl border border-hairline bg-canvas-soft/60 p-3 dark:border-overlay-light dark:bg-canvas/60">
+      <div class="flex items-center justify-between font-bold text-ink dark:text-on-primary mb-1">
+        <span>🇭🇰 Hong Kong</span>
+        <span class="text-xs text-emerald-600 dark:text-emerald-400 font-extrabold">Net ~85%</span>
+      </div>
+      <p class="text-xs text-muted">Low 15% standard tax, 0% VAT/sales tax, high rental costs.</p>
+    </div>
+
+    <div class="rounded-xl border border-hairline bg-canvas-soft/60 p-3 dark:border-overlay-light dark:bg-canvas/60">
+      <div class="flex items-center justify-between font-bold text-ink dark:text-on-primary mb-1">
+        <span>🇸🇬 Singapore</span>
+        <span class="text-xs text-emerald-600 dark:text-emerald-400 font-extrabold">Net ~82%</span>
+      </div>
+      <p class="text-xs text-muted">Low 0-24% progressive tax, 9% GST, balanced cost of living.</p>
+    </div>
+
+    <div class="rounded-xl border border-hairline bg-canvas-soft/60 p-3 dark:border-overlay-light dark:bg-canvas/60">
+      <div class="flex items-center justify-between font-bold text-ink dark:text-on-primary mb-1">
+        <span>🇬🇧 United Kingdom</span>
+        <span class="text-xs text-amber-600 dark:text-amber-400 font-extrabold">Net ~68%</span>
+      </div>
+      <p class="text-xs text-muted">Up to 45% income tax + 10% National Insurance, NHS healthcare included.</p>
+    </div>
+  </div>
+</div>
