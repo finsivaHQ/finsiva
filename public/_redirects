@@ -1,1 +1,35 @@
-/405  405  /405/index.html
+# 405 error handling
+/405  /404.html  405
+
+# Country Shortcuts
+/malaysia          /countries/malaysia          301
+/singapore         /countries/singapore         301
+/hong-kong         /countries/hong-kong         301
+/india             /countries/india             301
+/united-states     /countries/united-states     301
+/united-kingdom    /countries/united-kingdom    301
+/pakistan          /countries/pakistan          301
+/philippines       /countries/philippines       301
+/indonesia         /countries/indonesia         301
+/new-zealand        /countries/new-zealand        301
+
+# Legacy & Alias Routes
+/blog              /blogs                       301
+/blog/*            /blogs/:splat                301
+/guide             /blogs                       301
+/guides            /blogs                       301
+/calculator        /countries                   301
+/calculators       /countries                   301
+/tax-calculator    /countries                   301
+/search            /countries                   301
+/knowledge-center  /knowledge                   301
+/faq               /knowledge                   301
+/faqs              /knowledge                   301
+/about-us          /about                       301
+/contact-us        /contact                     301
+
+# Old legacy calculator paths
+/countries/hong-kong/property/* /countries/hong-kong/property-tax/:splat 301
+/countries/pakistan/property/*  /countries/pakistan/property-tax/:splat  301
+/countries/pakistan/vehicle/*   /countries/pakistan/vehicle-tax/:splat   301
+/countries/pakistan/business/*  /countries/pakistan/income-tax/:splat    301
