@@ -15,7 +15,6 @@ const categories = [
    { name: "GST / VAT", slug: "gst-vat", count: guides.filter(g => g.data.category === "GST / VAT").length, description: "Understand goods and services tax and value-added tax systems." },
    { name: "Tax Residency", slug: "tax-residency", count: guides.filter(g => g.data.category === "Tax Residency").length, description: "Understand tax residency rules that determine which country taxes your income." },
    { name: "Tax Planning", slug: "tax-planning", count: guides.filter(g => g.data.category === "Tax Planning").length, description: "Strategies and principles for lawful tax optimization and financial planning." },
-   { name: "Hong Kong Income Tax", slug: "hong-kong-income-tax", count: 1, description: "Complete guide to Hong Kong income tax for individuals, businesses, and expatriates." },
 ];
 
 const featuredGuides = guides.filter(g => g.data.featured).slice(0, 3);
