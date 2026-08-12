@@ -13,6 +13,7 @@ import HowToUse from "../../../components/country/HowToUse.astro";
 import TaxFAQ from "../../../components/country/TaxFAQ.astro";
 import RelatedContent from "../../../components/country/RelatedContent.astro";
 import TrustSection from "../../../components/country/TrustSection.astro";
+import TaxCheatsheetCard from "../../../components/TaxCheatsheetCard.astro";
 
 export function getStaticPaths() {
   return countries.map(country => ({
@@ -141,6 +142,10 @@ const webPageSchema = {
   popularCalculators={popularCalcs}
   salaryCalculators={country.salaryCalculators || []}
 />
+
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  <TaxCheatsheetCard countryName={country.name} countryFlag={country.flag} currency={country.currency} />
+</div>
 
 <!-- PROMINENT TAX CATEGORIES & CALCULATORS GRID -->
 <section id="tax-calculators" class="py-10 border-b border-hairline bg-canvas-soft dark:border-overlay-light dark:bg-canvas">

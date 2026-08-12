@@ -1,0 +1,78 @@
+---
+interface Props {
+  currency?: string;
+}
+
+const { currency = "HK$" } = Astro.props;
+---
+
+<div id="refund-estimator-widget" class="mt-6 rounded-2xl border border-blue-500/30 bg-blue-500/5 p-5 shadow-sm dark:border-blue-500/30 dark:bg-surface">
+  <div class="flex items-center justify-between border-b border-blue-500/20 pb-3 mb-4">
+    <div class="flex items-center gap-2">
+      <span class="text-xl">💰</span>
+      <div>
+        <h3 class="text-base font-bold text-ink dark:text-on-primary">Tax Refund & Overpayment Estimator</h3>
+        <p class="text-xs text-muted dark:text-muted">Did your employer withhold too much tax during the year?</p>
+      </div>
+    </div>
+    <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-500/20 text-blue-700 dark:text-blue-300">
+      Refund Calculator
+    </span>
+  </div>
+
+  <div class="space-y-4 text-xs sm:text-sm">
+    <div>
+      <label class="block font-semibold text-body dark:text-muted mb-1">Total Tax Already Withheld / Prepaid ({currency}):</label>
+      <input
+        type="number"
+        id="prepaid-tax-input"
+        placeholder="e.g. 45000"
+        class="w-full rounded-xl border border-hairline bg-canvas px-3.5 py-2.5 text-ink dark:border-overlay-light dark:bg-surface dark:text-on-primary font-bold text-sm"
+      />
+    </div>
+
+    <div id="refund-result-box" class="hidden rounded-xl border border-blue-500/30 bg-canvas p-4 text-center dark:bg-canvas/60">
+      <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">Estimated Refund Status</span>
+      <div id="refund-result-text" class="text-lg font-extrabold text-blue-600 dark:text-blue-400 mt-1">
+        Calculating...
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  (function() {
+    const prepaidInput = document.getElementById('prepaid-tax-input');
+    const resultBox = document.getElementById('refund-result-box');
+    const resultText = document.getElementById('refund-result-text');
+
+    function checkRefund() {
+      const prepaid = parseFloat(prepaidInput?.value || '0');
+      const taxEl = document.querySelector('[id="result-incomeTax"], [id="result-totalTax"], [id="result-salariesTax"]');
+      const text = taxEl ? taxEl.textContent || '' : '';
+      const estimatedTax = parseFloat(text.replace(/[^0-9.]/g, '')) || 0;
+
+      if (prepaid > 0 && resultBox && resultText) {
+        resultBox.classList.remove('hidden');
+        const diff = prepaid - estimatedTax;
+        if (diff > 0) {
+          resultText.className = 'text-lg font-extrabold text-emerald-600 dark:text-emerald-400 mt-1';
+          resultText.textContent = `🎉 You have an estimated Tax Refund of HK$ ${Math.round(diff).toLocaleString()}!`;
+        } else if (diff < 0) {
+          const balance = Math.abs(diff);
+          resultText.className = 'text-lg font-extrabold text-amber-600 dark:text-amber-400 mt-1';
+          resultText.textContent = `Remaining Balance Due: HK$ ${Math.round(balance).toLocaleString()}`;
+        } else {
+          resultText.className = 'text-lg font-extrabold text-blue-600 dark:text-blue-400 mt-1';
+          resultText.textContent = `Exact amount paid! Zero tax balance remaining.`;
+        }
+      } else if (resultBox) {
+        resultBox.classList.add('hidden');
+      }
+    }
+
+    if (prepaidInput) {
+      prepaidInput.addEventListener('input', checkRefund);
+    }
+  })();
+</script>
