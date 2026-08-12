@@ -1,0 +1,104 @@
+---
+interface Props {
+  calculatorTitle?: string;
+  currency?: string;
+}
+
+const { calculatorTitle = "Tax Calculation", currency = "HK$" } = Astro.props;
+---
+
+<div class="mt-6 pt-6 border-t border-hairline dark:border-overlay-lighter flex flex-wrap items-center justify-between gap-3">
+  <div class="text-xs text-muted dark:text-muted flex items-center gap-1.5">
+    <svg class="h-4 w-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+    </svg>
+    <span>100% Private — Calculations stay on your device</span>
+  </div>
+
+  <div class="flex items-center gap-2">
+    <button
+      type="button"
+      id="export-csv-btn"
+      class="inline-flex items-center gap-1.5 rounded-lg border border-hairline bg-canvas px-3 py-1.5 text-xs font-semibold text-ink shadow-sm transition hover:bg-canvas-soft dark:border-overlay-light dark:bg-surface dark:text-on-primary dark:hover:bg-overlay-light"
+      title="Download calculation summary as a CSV spreadsheet"
+    >
+      <svg class="h-4 w-4 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      </svg>
+      <span>Export CSV</span>
+    </button>
+
+    <button
+      type="button"
+      id="print-pdf-btn"
+      class="inline-flex items-center gap-1.5 rounded-lg border border-hairline bg-canvas px-3 py-1.5 text-xs font-semibold text-ink shadow-sm transition hover:bg-canvas-soft dark:border-overlay-light dark:bg-surface dark:text-on-primary dark:hover:bg-overlay-light"
+      title="Print or save calculation summary as PDF"
+    >
+      <svg class="h-4 w-4 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+      </svg>
+      <span>Print / Save PDF</span>
+    </button>
+  </div>
+</div>
+
+<script is:inline>
+  (function() {
+    function getCalculationSummary() {
+      const title = document.querySelector('h1')?.textContent?.trim() || 'Finsiva Tax Report';
+      const resultsContainer = document.querySelector('.result-box') || document.querySelector('[data-result]') || document.querySelector('.space-y-4');
+      
+      const rows = [];
+      rows.push(['Finsiva Tax Summary Report', new Date().toLocaleDateString()]);
+      rows.push(['Report Type', title]);
+      rows.push(['Domain', 'https://finsiva.com']);
+      rows.push([]);
+
+      // Extract result key-values
+      if (resultsContainer) {
+        const textElements = resultsContainer.querySelectorAll('div, p, span, h3, h4');
+        textElements.forEach(el => {
+          const label = el.querySelector('.text-muted, .text-sm, span')?.textContent?.trim();
+          const value = el.querySelector('.font-bold, .text-xl, .text-2xl, strong')?.textContent?.trim();
+          if (label && value && label.length < 50 && value.length < 40) {
+            rows.push([label, value]);
+          }
+        });
+      }
+
+      if (rows.length <= 4) {
+        rows.push(['Calculation Status', 'Completed']);
+        rows.push(['Disclaimer', 'Estimate based on official tax rules']);
+      }
+
+      return rows;
+    }
+
+    const csvBtn = document.getElementById('export-csv-btn');
+    if (csvBtn) {
+      csvBtn.addEventListener('click', function() {
+        const summaryData = getCalculationSummary();
+        let csvContent = 'data:text/csv;charset=utf-8,';
+
+        summaryData.forEach(row => {
+          csvContent += row.map(cell => `"${String(cell || '').replace(/"/g, '""')}"`).join(',') + '\n';
+        });
+
+        const encodedUri = encodeURI(csvContent);
+        const link = document.createElement('a');
+        link.setAttribute('href', encodedUri);
+        link.setAttribute('download', 'finsiva-tax-summary.csv');
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      });
+    }
+
+    const printBtn = document.getElementById('print-pdf-btn');
+    if (printBtn) {
+      printBtn.addEventListener('click', function() {
+        window.print();
+      });
+    }
+  })();
+</script>

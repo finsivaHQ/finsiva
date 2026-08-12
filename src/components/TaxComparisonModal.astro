@@ -1,0 +1,188 @@
+---
+interface Props {
+  currency?: string;
+}
+
+const { currency = "HK$" } = Astro.props;
+---
+
+<div class="mt-4">
+  <button
+    type="button"
+    id="compare-modal-trigger"
+    class="w-full flex items-center justify-center gap-2 rounded-xl border border-primary/30 bg-primary/5 py-2.5 px-4 text-xs sm:text-sm font-semibold text-primary transition hover:bg-primary/10 dark:border-primary/40 dark:bg-primary/10 dark:text-primary dark:hover:bg-primary/20 shadow-sm"
+  >
+    <svg class="h-4 w-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+    </svg>
+    <span>Compare Tax Scenarios (Side-by-Side)</span>
+  </button>
+
+  <!-- Comparison Modal -->
+  <div id="compare-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 overflow-y-auto">
+    <div class="relative w-full max-w-4xl rounded-2xl border border-hairline bg-canvas p-6 shadow-2xl dark:border-overlay-lighter dark:bg-surface my-8">
+      <div class="flex items-center justify-between border-b border-hairline pb-4 dark:border-overlay-lighter">
+        <div>
+          <h3 class="text-lg font-bold text-ink dark:text-on-primary flex items-center gap-2">
+            <span>⚖️</span> Side-by-Side Tax Comparison Mode
+          </h3>
+          <p class="text-xs text-muted dark:text-muted mt-0.5">Compare two income or deduction scenarios to see exact tax savings.</p>
+        </div>
+        <button type="button" id="close-compare-modal" class="rounded-lg p-1.5 text-muted hover:bg-canvas-soft hover:text-ink dark:hover:bg-overlay-light dark:hover:text-on-primary">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+        <!-- Scenario A -->
+        <div class="rounded-xl border border-hairline bg-canvas-soft/60 p-4 dark:border-overlay-light dark:bg-canvas/60">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold uppercase tracking-wider text-primary">Scenario A (Baseline)</span>
+            <span class="text-[11px] px-2 py-0.5 rounded bg-primary/10 text-primary font-medium">Primary</span>
+          </div>
+
+          <div class="space-y-3 text-xs sm:text-sm">
+            <div>
+              <label class="block font-medium text-body dark:text-muted mb-1">Annual Gross Income ({currency}):</label>
+              <input type="number" id="scen-a-income" value="600000" class="w-full rounded-lg border border-hairline bg-canvas px-3 py-2 text-ink dark:border-overlay-light dark:bg-surface dark:text-on-primary font-semibold" />
+            </div>
+            <div>
+              <label class="block font-medium text-body dark:text-muted mb-1">Total Deductions ({currency}):</label>
+              <input type="number" id="scen-a-deductions" value="150000" class="w-full rounded-lg border border-hairline bg-canvas px-3 py-2 text-ink dark:border-overlay-light dark:bg-surface dark:text-on-primary font-semibold" />
+            </div>
+
+            <div class="pt-3 border-t border-hairline dark:border-overlay-light space-y-1">
+              <div class="flex justify-between text-muted"><span>Taxable Base:</span> <strong id="scen-a-base" class="text-ink dark:text-on-primary">{currency} 450,000</strong></div>
+              <div class="flex justify-between text-muted"><span>Est. Annual Tax:</span> <strong id="scen-a-tax" class="text-primary font-bold">{currency} 35,000</strong></div>
+              <div class="flex justify-between text-muted"><span>Monthly Take-Home:</span> <strong id="scen-a-pay" class="text-ink dark:text-on-primary">{currency} 47,083</strong></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scenario B -->
+        <div class="rounded-xl border border-primary/30 bg-primary/5 p-4 dark:border-primary/40 dark:bg-surface">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Scenario B (Alternative)</span>
+            <span class="text-[11px] px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-medium">Comparison</span>
+          </div>
+
+          <div class="space-y-3 text-xs sm:text-sm">
+            <div>
+              <label class="block font-medium text-body dark:text-muted mb-1">Annual Gross Income ({currency}):</label>
+              <input type="number" id="scen-b-income" value="600000" class="w-full rounded-lg border border-hairline bg-canvas px-3 py-2 text-ink dark:border-overlay-light dark:bg-surface dark:text-on-primary font-semibold" />
+            </div>
+            <div>
+              <label class="block font-medium text-body dark:text-muted mb-1">Total Deductions ({currency}):</label>
+              <input type="number" id="scen-b-deductions" value="230000" class="w-full rounded-lg border border-hairline bg-canvas px-3 py-2 text-ink dark:border-overlay-light dark:bg-surface dark:text-on-primary font-semibold" />
+            </div>
+
+            <div class="pt-3 border-t border-hairline dark:border-overlay-light space-y-1">
+              <div class="flex justify-between text-muted"><span>Taxable Base:</span> <strong id="scen-b-base" class="text-ink dark:text-on-primary">{currency} 370,000</strong></div>
+              <div class="flex justify-between text-muted"><span>Est. Annual Tax:</span> <strong id="scen-b-tax" class="text-emerald-600 dark:text-emerald-400 font-bold">{currency} 23,000</strong></div>
+              <div class="flex justify-between text-muted"><span>Monthly Take-Home:</span> <strong id="scen-b-pay" class="text-ink dark:text-on-primary">{currency} 48,083</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Delta Highlight -->
+      <div id="scen-delta-box" class="mt-6 rounded-xl border border-emerald-500/30 bg-emerald-500/10 p-4 text-center">
+        <span class="text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-300">Comparison Result</span>
+        <div class="text-lg sm:text-xl font-extrabold text-emerald-700 dark:text-emerald-300 mt-1" id="scen-delta-text">
+          Scenario B saves {currency} 12,000 in tax (34.2% lower liability)! 🎉
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  (function() {
+    const trigger = document.getElementById('compare-modal-trigger');
+    const modal = document.getElementById('compare-modal');
+    const closeBtn = document.getElementById('close-compare-modal');
+
+    const scenAInc = document.getElementById('scen-a-income');
+    const scenADed = document.getElementById('scen-a-deductions');
+    const scenABase = document.getElementById('scen-a-base');
+    const scenATax = document.getElementById('scen-a-tax');
+    const scenAPay = document.getElementById('scen-a-pay');
+
+    const scenBInc = document.getElementById('scen-b-income');
+    const scenBDed = document.getElementById('scen-b-deductions');
+    const scenBBase = document.getElementById('scen-b-base');
+    const scenBTax = document.getElementById('scen-b-tax');
+    const scenBPay = document.getElementById('scen-b-pay');
+
+    const deltaBox = document.getElementById('scen-delta-box');
+    const deltaText = document.getElementById('scen-delta-text');
+
+    function calculateApproxTax(taxableBase) {
+      if (taxableBase <= 0) return 0;
+      if (taxableBase <= 100000) return taxableBase * 0.05;
+      if (taxableBase <= 300000) return 5000 + (taxableBase - 100000) * 0.10;
+      return 25000 + (taxableBase - 300000) * 0.17;
+    }
+
+    function updateComparison() {
+      const incA = parseFloat(scenAInc?.value || 0);
+      const dedA = parseFloat(scenADed?.value || 0);
+      const baseA = Math.max(0, incA - dedA);
+      const taxA = calculateApproxTax(baseA);
+      const payA = Math.max(0, (incA - taxA) / 12);
+
+      const incB = parseFloat(scenBInc?.value || 0);
+      const dedB = parseFloat(scenBDed?.value || 0);
+      const baseB = Math.max(0, incB - dedB);
+      const taxB = calculateApproxTax(baseB);
+      const payB = Math.max(0, (incB - taxB) / 12);
+
+      if (scenABase) scenABase.textContent = 'HK$ ' + Math.round(baseA).toLocaleString();
+      if (scenATax) scenATax.textContent = 'HK$ ' + Math.round(taxA).toLocaleString();
+      if (scenAPay) scenAPay.textContent = 'HK$ ' + Math.round(payA).toLocaleString();
+
+      if (scenBBase) scenBBase.textContent = 'HK$ ' + Math.round(baseB).toLocaleString();
+      if (scenBTax) scenBTax.textContent = 'HK$ ' + Math.round(taxB).toLocaleString();
+      if (scenBPay) scenBPay.textContent = 'HK$ ' + Math.round(payB).toLocaleString();
+
+      const diff = taxA - taxB;
+      if (deltaText) {
+        if (diff > 0) {
+          const pct = ((diff / (taxA || 1)) * 100).toFixed(1);
+          deltaText.textContent = `Scenario B saves HK$ ${Math.round(diff).toLocaleString()} in tax (${pct}% lower liability)! 🎉`;
+          if (deltaBox) deltaBox.className = 'mt-6 rounded-xl border border-emerald-500/30 bg-emerald-500/10 p-4 text-center';
+        } else if (diff < 0) {
+          const extra = Math.abs(diff);
+          deltaText.textContent = `Scenario B results in HK$ ${Math.round(extra).toLocaleString()} higher tax liability.`;
+          if (deltaBox) deltaBox.className = 'mt-6 rounded-xl border border-amber-500/30 bg-amber-500/10 p-4 text-center';
+        } else {
+          deltaText.textContent = 'Both scenarios produce identical tax liability.';
+          if (deltaBox) deltaBox.className = 'mt-6 rounded-xl border border-hairline bg-canvas-soft p-4 text-center';
+        }
+      }
+    }
+
+    if (trigger && modal) {
+      trigger.addEventListener('click', function() {
+        modal.classList.remove('hidden');
+        updateComparison();
+      });
+    }
+
+    if (closeBtn && modal) {
+      closeBtn.addEventListener('click', function() {
+        modal.classList.add('hidden');
+      });
+    }
+
+    if (modal) {
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) modal.classList.add('hidden');
+      });
+    }
+
+    [scenAInc, scenADed, scenBInc, scenBDed].forEach(input => {
+      if (input) input.addEventListener('input', updateComparison);
+    });
+  })();
+</script>
