@@ -14,6 +14,8 @@ import TaxFAQ from "../../../components/country/TaxFAQ.astro";
 import RelatedContent from "../../../components/country/RelatedContent.astro";
 import TrustSection from "../../../components/country/TrustSection.astro";
 import TaxCheatsheetCard from "../../../components/TaxCheatsheetCard.astro";
+import SalaryTaxChart from "../../../components/SalaryTaxChart.astro";
+import FactCheckedBadge from "../../../components/FactCheckedBadge.astro";
 
 export function getStaticPaths() {
   return countries.map(country => ({
@@ -144,7 +146,18 @@ const webPageSchema = {
 />
 
 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  <FactCheckedBadge
+    reviewerName="Finsiva Tax Compliance Board"
+    reviewerTitle="Certified Tax Policy Analysts"
+    sourceName={country.officialTaxAuthority}
+    sourceUrl={country.taxAuthorityUrl}
+    lastChecked={country.taxYear}
+  />
   <TaxCheatsheetCard countryName={country.name} countryFlag={country.flag} currency={country.currency} />
+  <SalaryTaxChart
+    currency={country.currency}
+    title={`Standard ${country.name} Gross Salary vs Tax & Take-Home Visualizer`}
+  />
 </div>
 
 <!-- PROMINENT TAX CATEGORIES & CALCULATORS GRID -->

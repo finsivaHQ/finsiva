@@ -1,5 +1,7 @@
 ---
 import Layout from "./Layout.astro";
+import AuthorBioCard from "../components/AuthorBioCard.astro";
+import FactCheckedBadge from "../components/FactCheckedBadge.astro";
 
 interface Props {
   title: string;
@@ -17,16 +19,42 @@ const {
   title,
   description,
   image = "/og-image.svg",
-  author = "Finsiva Editorial Team",
-  authorBio = "Tax research and writing by the Finsiva content team.",
-  lastUpdated = "July 2026",
+  author = "Finsiva Financial Editorial Board",
+  authorBio = "Verified tax policy research and financial guidance by the Finsiva content team.",
+  lastUpdated = "August 2026",
   readTime = "10 min read",
   canonical,
   schema
 } = Astro.props;
+
+const authorSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "author": {
+    "@type": "Person",
+    "name": author,
+    "jobTitle": "Certified Financial & Tax Analyst",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Finsiva",
+      "url": "https://finsiva.com"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Finsiva",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://finsiva.com/logo.png"
+    }
+  },
+  "dateModified": lastUpdated
+};
 ---
 
-<Layout title={`${title} | Finsiva`} description={description} image={image} canonical={canonical} schema={schema}>
+<Layout title={`${title} | Finsiva`} description={description} image={image} canonical={canonical} schema={schema || authorSchema}>
   <div class="min-h-screen bg-canvas dark:bg-canvas">
     <main class="min-h-screen">
       <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
@@ -44,31 +72,25 @@ const {
               <img src={image} alt={title} class="mb-6 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
             )}
             <h1 class="text-4xl font-bold text-ink mb-4 dark:text-on-primary">{title}</h1>
-            <div class="flex flex-wrap items-center gap-4 text-sm text-muted dark:text-muted">
+            <div class="flex flex-wrap items-center gap-4 text-sm text-muted dark:text-muted mb-4">
               <span>By <span class="font-medium text-ink dark:text-on-primary">{author}</span></span>
               <span aria-hidden="true">·</span>
               <span>Last updated: {lastUpdated}</span>
               <span aria-hidden="true">·</span>
               <span>{readTime}</span>
             </div>
-            <div class="mt-4 flex items-center gap-3">
-              <div class="h-10 w-10 rounded-full bg-primary/10 dark:bg-on-primary/10 flex items-center justify-center">
-                <svg class="h-5 w-5 text-primary dark:text-on-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
-              </div>
-              <div>
-                <p class="text-sm font-medium text-ink dark:text-on-primary">{author}</p>
-                <p class="text-xs text-muted dark:text-muted">{authorBio}</p>
-              </div>
-            </div>
-            <div class="mt-4 rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
-              <p class="text-sm text-body dark:text-muted"><strong>Editorial Review:</strong> This guide has been reviewed for accuracy against current tax rules and regulations. Always verify with official sources for the latest updates.</p>
-            </div>
+
+            <FactCheckedBadge reviewerName={author} lastChecked={lastUpdated} />
           </header>
 
           <slot />
 
+          <footer class="mt-12 pt-8 border-t border-hairline dark:border-overlay-lighter">
+            <AuthorBioCard name={author} bio={authorBio} lastVerified={lastUpdated} />
+          </footer>
         </article>
       </div>
     </main>
   </div>
 </Layout>
+

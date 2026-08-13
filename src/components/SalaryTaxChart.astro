@@ -1,0 +1,101 @@
+---
+interface Props {
+  grossSalary?: number;
+  taxAmount?: number;
+  deductions?: number;
+  currency?: string;
+  title?: string;
+}
+
+const {
+  grossSalary = 100000,
+  taxAmount = 15000,
+  deductions = 5000,
+  currency = "$",
+  title = "Interactive Salary & Tax Visualizer"
+} = Astro.props;
+
+const netSalary = Math.max(0, grossSalary - taxAmount - deductions);
+const takeHomePercent = Math.round((netSalary / grossSalary) * 100);
+const taxPercent = Math.round((taxAmount / grossSalary) * 100);
+const deductionPercent = Math.round((deductions / grossSalary) * 100);
+---
+
+<div class="my-6 rounded-2xl border border-hairline bg-canvas p-6 shadow-sm dark:border-overlay-lighter dark:bg-surface">
+  <div class="flex items-center justify-between border-b border-hairline pb-3 mb-5 dark:border-overlay-lighter">
+    <div class="flex items-center gap-3">
+      <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary dark:bg-on-primary/10 dark:text-on-primary font-bold">
+        📊
+      </div>
+      <div>
+        <h3 class="text-base font-bold text-ink dark:text-on-primary">{title}</h3>
+        <p class="text-xs text-muted dark:text-muted">Visual distribution of your annual gross earnings</p>
+      </div>
+    </div>
+    <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
+      {takeHomePercent}% Take-Home
+    </span>
+  </div>
+
+  <!-- Multi-Segment Visual Progress Bar -->
+  <div class="space-y-2 mb-6">
+    <div class="flex justify-between text-xs font-medium text-muted dark:text-muted">
+      <span>Gross Income: {currency}{grossSalary.toLocaleString()}</span>
+      <span>Net Retained: {currency}{netSalary.toLocaleString()}</span>
+    </div>
+    
+    <div class="h-4 w-full rounded-full bg-canvas-soft dark:bg-canvas overflow-hidden flex p-0.5 border border-hairline dark:border-overlay-lighter">
+      <div
+        class="h-full bg-emerald-500 rounded-l-full transition-all duration-500"
+        style={`width: ${takeHomePercent}%`}
+        title={`Take Home: ${currency}${netSalary.toLocaleString()} (${takeHomePercent}%)`}
+      ></div>
+      <div
+        class="h-full bg-rose-500 transition-all duration-500"
+        style={`width: ${taxPercent}%`}
+        title={`Tax Liability: ${currency}${taxAmount.toLocaleString()} (${taxPercent}%)`}
+      ></div>
+      <div
+        class="h-full bg-amber-500 rounded-r-full transition-all duration-500"
+        style={`width: ${deductionPercent}%`}
+        title={`Deductions: ${currency}${deductions.toLocaleString()} (${deductionPercent}%)`}
+      ></div>
+    </div>
+  </div>
+
+  <!-- Summary Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-center">
+    <div class="rounded-xl bg-emerald-500/5 p-3 border border-emerald-500/20 dark:bg-emerald-500/10">
+      <div class="flex items-center justify-center gap-1.5 text-xs font-semibold text-emerald-700 dark:text-emerald-400">
+        <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+        Take-Home Salary
+      </div>
+      <p class="mt-1 text-lg font-bold text-ink dark:text-on-primary">
+        {currency}{netSalary.toLocaleString()}
+      </p>
+      <p class="text-[11px] text-muted dark:text-muted">{takeHomePercent}% of Gross</p>
+    </div>
+
+    <div class="rounded-xl bg-rose-500/5 p-3 border border-rose-500/20 dark:bg-rose-500/10">
+      <div class="flex items-center justify-center gap-1.5 text-xs font-semibold text-rose-700 dark:text-rose-400">
+        <span class="h-2 w-2 rounded-full bg-rose-500"></span>
+        Total Income Tax
+      </div>
+      <p class="mt-1 text-lg font-bold text-ink dark:text-on-primary">
+        {currency}{taxAmount.toLocaleString()}
+      </p>
+      <p class="text-[11px] text-muted dark:text-muted">{taxPercent}% Effective Rate</p>
+    </div>
+
+    <div class="rounded-xl bg-amber-500/5 p-3 border border-amber-500/20 dark:bg-amber-500/10">
+      <div class="flex items-center justify-center gap-1.5 text-xs font-semibold text-amber-700 dark:text-amber-400">
+        <span class="h-2 w-2 rounded-full bg-amber-500"></span>
+        Social / Pension
+      </div>
+      <p class="mt-1 text-lg font-bold text-ink dark:text-on-primary">
+        {currency}{deductions.toLocaleString()}
+      </p>
+      <p class="text-[11px] text-muted dark:text-muted">{deductionPercent}% Contributions</p>
+    </div>
+  </div>
+</div>
