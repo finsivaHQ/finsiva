@@ -387,7 +387,7 @@ const searchItems = buildSearchItems(
         li.addEventListener('mouseenter', function() {
           var index = Array.from(resultsList.children).indexOf(li);
           selectedIndex = index;
-          updateSelection();
+          updateSelection(false);
         });
         a.addEventListener('click', function(e) {
           e.preventDefault();
@@ -399,15 +399,24 @@ const searchItems = buildSearchItems(
       }
     }
 
-    function updateSelection() {
+    function updateSelection(shouldScroll) {
       var items = resultsList.querySelectorAll('.search-result-item');
+      var container = document.getElementById('search-results');
       for (var i = 0; i < items.length; i++) {
         var item = items[i];
         if (i === selectedIndex) {
           item.classList.add('bg-canvas-soft', 'dark:bg-overlay-light');
           item.classList.remove('hover:bg-canvas-soft', 'dark:hover:bg-overlay-light');
           item.setAttribute('aria-selected', 'true');
-          item.scrollIntoView({ block: 'nearest' });
+          if (shouldScroll && container && item) {
+            var containerRect = container.getBoundingClientRect();
+            var itemRect = item.getBoundingClientRect();
+            if (itemRect.bottom > containerRect.bottom) {
+              container.scrollTop += (itemRect.bottom - containerRect.bottom + 8);
+            } else if (itemRect.top < containerRect.top) {
+              container.scrollTop -= (containerRect.top - itemRect.top + 8);
+            }
+          }
         } else {
           item.classList.remove('bg-canvas-soft', 'dark:bg-overlay-light');
           item.classList.add('hover:bg-canvas-soft', 'dark:hover:bg-overlay-light');
@@ -462,7 +471,7 @@ const searchItems = buildSearchItems(
         e.preventDefault();
         if (currentResults.length > 0) {
           selectedIndex = (selectedIndex + 1) % currentResults.length;
-          updateSelection();
+          updateSelection(true);
         }
         return;
       }
@@ -470,7 +479,7 @@ const searchItems = buildSearchItems(
         e.preventDefault();
         if (currentResults.length > 0) {
           selectedIndex = (selectedIndex - 1 + currentResults.length) % currentResults.length;
-          updateSelection();
+          updateSelection(true);
         }
         return;
       }

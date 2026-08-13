@@ -294,7 +294,8 @@ const is404 = currentPath === "/404";
     }
 
     if (searchTrigger) {
-      searchTrigger.addEventListener('click', function() {
+      searchTrigger.addEventListener('click', function(e) {
+        if (e) e.preventDefault();
         var modal = document.getElementById('search-modal');
         if (modal && modal.classList.contains('hidden')) {
           window.openSearchModal && window.openSearchModal();
