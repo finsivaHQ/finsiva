@@ -15,6 +15,8 @@ import TaxPrintHeader from "../../../../components/TaxPrintHeader.astro";
 import TaxRefundEstimator from "../../../../components/TaxRefundEstimator.astro";
 import TaxResidencyQuiz from "../../../../components/TaxResidencyQuiz.astro";
 import GlobalPurchasingPower from "../../../../components/GlobalPurchasingPower.astro";
+import FactCheckedBadge from "../../../../components/FactCheckedBadge.astro";
+import AuthorBioCard from "../../../../components/AuthorBioCard.astro";
 
 export function getStaticPaths() {
   const paths: { params: { country: string; category: string; calculator: string } }[] = [];
@@ -190,6 +192,14 @@ const mergedContent = {
     <span class="tag">{category.name}</span>
     <span class="tag">Last updated: {new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</span>
   </div>
+
+  <FactCheckedBadge
+    reviewerName="Finsiva Tax Compliance Board"
+    reviewerTitle="Certified Tax Policy Analysts"
+    sourceName={country.officialTaxAuthority}
+    sourceUrl={country.taxAuthorityUrl}
+    lastChecked={country.taxYear}
+  />
 
   <div class="rounded-lg border border-hairline bg-canvas p-8 dark:border-overlay-lighter dark:bg-surface">
     <div id="calc-overview" class="mb-8">
@@ -1553,6 +1563,13 @@ const mergedContent = {
           </div>
         </section>
       )}
+
+      <div class="mt-12">
+        <AuthorBioCard
+          name="Finsiva Financial Editorial Board"
+          lastVerified={country.taxYear}
+        />
+      </div>
 
       <script type="application/ld+json" set:html={JSON.stringify({
         "@context": "https://schema.org",

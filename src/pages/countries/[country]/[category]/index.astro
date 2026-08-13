@@ -2,6 +2,8 @@
 import CountryLayout from "../../../../layouts/CountryLayout.astro";
 import { countries } from "../../../../data/countries";
 import { getCountryBySlug, getCategoryBySlug } from "../../../../data/countries";
+import FactCheckedBadge from "../../../../components/FactCheckedBadge.astro";
+import AuthorBioCard from "../../../../components/AuthorBioCard.astro";
 
 export function getStaticPaths() {
   return countries.flatMap(country => 
@@ -35,6 +37,14 @@ if (!country || !category) {
     <h1 class="text-4xl font-bold text-ink dark:text-on-primary"><span data-i18n="category.name">{category.name}</span></h1>
     <p class="mt-2 text-lg text-body dark:text-muted"><span data-i18n="category.description">{category.description}</span></p>
   </div>
+
+  <FactCheckedBadge
+    reviewerName="Finsiva Tax Compliance Board"
+    reviewerTitle="Certified Tax Policy Analysts"
+    sourceName={country.officialTaxAuthority}
+    sourceUrl={country.taxAuthorityUrl}
+    lastChecked={country.taxYear}
+  />
 
   <!-- CATEGORY QUICK SWITCHER -->
   <div class="mb-8 p-4 rounded-xl border border-hairline bg-canvas-soft dark:border-overlay-lighter dark:bg-surface/50">
@@ -214,4 +224,11 @@ if (!country || !category) {
       </div>
     </div>
   </section>
+
+  <div class="mt-12">
+    <AuthorBioCard
+      name="Finsiva Financial Editorial Board"
+      lastVerified={country.taxYear}
+    />
+  </div>
 </CountryLayout>

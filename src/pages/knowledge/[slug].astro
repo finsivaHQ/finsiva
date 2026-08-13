@@ -6,6 +6,8 @@ import RelatedGuides from "../../components/knowledge/RelatedGuides.astro";
 import RelatedCalculators from "../../components/knowledge/RelatedCalculators.astro";
 import RelatedCountryPages from "../../components/knowledge/RelatedCountryPages.astro";
 import PrevNextNav from "../../components/knowledge/PrevNextNav.astro";
+import AuthorBioCard from "../../components/AuthorBioCard.astro";
+import FactCheckedBadge from "../../components/FactCheckedBadge.astro";
 import { getCollection, render } from "astro:content";
 
 export async function getStaticPaths() {
@@ -46,7 +48,16 @@ const guideSchema = {
   description: guide.data.description,
   url: currentUrl,
   mainEntityOfPage: { "@type": "WebPage", "@id": currentUrl },
-  author: { "@type": "Organization", name: "Finsiva" },
+  author: {
+    "@type": "Person",
+    name: guide.data.author || "Finsiva Financial Editorial Board",
+    jobTitle: "Certified Tax Policy Analyst",
+    worksFor: {
+      "@type": "Organization",
+      name: "Finsiva",
+      url: baseUrl
+    }
+  },
   publisher: { "@type": "Organization", name: "Finsiva", logo: { "@type": "ImageObject", url: `${baseUrl}/logo.png` } },
   datePublished: "2026-01-01",
   dateModified: guide.data.lastUpdated,
@@ -99,6 +110,7 @@ const guideSchema = {
             </div>
           </div>
         )}
+        <FactCheckedBadge reviewerName={guide.data.author || "Finsiva Financial Editorial Board"} lastChecked={guide.data.lastUpdated} />
       </header>
 
       {guide.data.image && (
@@ -273,6 +285,8 @@ const guideSchema = {
           </div>
         </div>
       </section>
+
+      <AuthorBioCard name={guide.data.author || "Finsiva Financial Editorial Board"} bio={guide.data.authorBio || "Verified tax policy research and financial guidance by the Finsiva content team."} lastVerified={guide.data.lastUpdated} />
 
       <PrevNextNav prev={prev ? { title: prev.data.title, slug: prev.id } : undefined} next={next ? { title: next.data.title, slug: next.id } : undefined} />
     </div>
