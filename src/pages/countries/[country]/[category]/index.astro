@@ -25,8 +25,8 @@ if (!country || !category) {
 ---
 
 <CountryLayout
-  title={`${category.name}`}
-  description={category.description}
+  title={`${country.name} ${category.name} ${country.taxYear}`}
+  description={`Comprehensive guide to ${country.name} ${category.name} for ${country.taxYear}. ${category.description}`}
   breadcrumbs={[
     { label: "Countries", href: "/countries" },
     { label: country.name, href: `/countries/${country.slug}` },

@@ -171,8 +171,8 @@ const mergedContent = {
 ---
 
 <CountryLayout
-  title={`${calculator.name}`}
-  description={calculator.description}
+  title={`${country.name} ${calculator.name} ${country.taxYear}`}
+  description={`Calculate your ${country.name} ${calculator.name.toLowerCase()} for the ${country.taxYear} tax year. ${calculator.description}`}
   breadcrumbs={[
     { label: "Countries", href: "/countries" },
     { label: country.name, href: `/countries/${country.slug}` },
