@@ -16,23 +16,29 @@ const {
   basicAllowance = "HK$ 132,000",
   capitalGains = "0% (Exempt)"
 } = Astro.props;
+
+const isImagePath = countryFlag && (countryFlag.includes('.') || countryFlag.startsWith('/') || countryFlag.startsWith('http'));
 ---
 
-<div class="my-8 rounded-2xl border border-hairline bg-canvas p-6 shadow-sm dark:border-overlay-lighter dark:bg-surface">
-  <div class="flex items-center justify-between border-b border-hairline pb-4 mb-4 dark:border-overlay-lighter">
-    <div class="flex items-center gap-3">
-      <span class="text-3xl">{countryFlag}</span>
-      <div>
-        <h3 class="text-xl font-bold text-ink dark:text-on-primary">{countryName} Tax Cheatsheet 2026/27</h3>
-        <p class="text-xs text-muted dark:text-muted">Key tax metrics at a glance for residents and expats.</p>
+<div class="my-8 rounded-2xl border border-hairline bg-canvas p-4 sm:p-6 shadow-sm dark:border-overlay-lighter dark:bg-surface">
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-hairline pb-4 mb-4 dark:border-overlay-lighter">
+    <div class="flex items-center gap-3 min-w-0">
+      {isImagePath ? (
+        <img src={countryFlag} alt={countryName} class="h-9 w-auto max-w-[40px] object-contain shrink-0" loading="lazy" />
+      ) : (
+        <span class="text-2xl sm:text-3xl shrink-0">{countryFlag}</span>
+      )}
+      <div class="min-w-0 flex-1">
+        <h3 class="text-lg sm:text-xl font-bold text-ink dark:text-on-primary leading-tight">{countryName} Tax Cheatsheet 2026/27</h3>
+        <p class="text-xs text-muted dark:text-muted mt-0.5">Key tax metrics at a glance for residents and expats.</p>
       </div>
     </div>
-    <span class="text-xs font-semibold px-3 py-1 rounded-full bg-primary/10 text-primary dark:text-link">
+    <span class="inline-flex self-start sm:self-auto text-xs font-semibold px-3 py-1 rounded-full bg-primary/10 text-primary dark:text-link shrink-0">
       Quick Summary
     </span>
   </div>
 
-  <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 text-center">
     <div class="rounded-xl bg-canvas-soft p-3 dark:bg-canvas/60 border border-hairline dark:border-overlay-lighter">
       <span class="text-xs text-muted font-medium block">Top Income Tax Rate</span>
       <strong class="text-base sm:text-lg font-extrabold text-primary dark:text-on-primary mt-1 block">{topRate}</strong>

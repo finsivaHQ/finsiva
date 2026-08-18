@@ -153,7 +153,14 @@ const webPageSchema = {
     sourceUrl={country.taxAuthorityUrl}
     lastChecked={country.taxYear}
   />
-  <TaxCheatsheetCard countryName={country.name} countryFlag={country.flag} currency={country.currency} />
+  <TaxCheatsheetCard
+    countryName={country.name}
+    countryFlag={country.flag}
+    currency={country.currency}
+    topRate={country.slug === 'hong-kong' ? '17% / 15%' : country.slug === 'singapore' ? '24%' : country.slug === 'united-states' ? '37%' : country.slug === 'united-kingdom' ? '45%' : country.slug === 'india' ? '30%' : country.slug === 'pakistan' ? '35%' : 'Standard'}
+    basicAllowance={country.slug === 'hong-kong' ? 'HK$ 132,000' : country.slug === 'singapore' ? 'S$ 20,000' : country.slug === 'united-states' ? '$ 14,600' : country.slug === 'united-kingdom' ? '£ 12,570' : country.slug === 'india' ? '₹ 75,000' : country.slug === 'pakistan' ? 'Rs 600,000' : 'Standard'}
+    capitalGains={country.taxSystemOverview?.capitalGainsTax || '0% (Exempt)'}
+  />
   <SalaryTaxChart
     currency={country.currency}
     title={`Standard ${country.name} Gross Salary vs Tax & Take-Home Visualizer`}
