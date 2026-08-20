@@ -1,0 +1,84 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+
+const title = "Indonesia Tax Residency Guide: 183-Day Rule, KITAS & Non-Resident PPh 26";
+const description = "Comprehensive guide to Indonesian tax residency rules. Learn the 183-day rule, KITAS/KITAP holder tax status, non-resident 20% PPh 26 tax, and Job Creation Law territorial rules.";
+const baseUrl = "https://finsiva.com";
+const currentUrl = `${baseUrl}/knowledge/indonesia-tax-residency`;
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How is Indonesian tax residency determined for foreigners?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Foreigners physically present in Indonesia for more than 183 days within a 12-month period or residing with intent to stay (e.g. KITAS/KITAP holders) are treated as Indonesian tax residents."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is PPh 26 withholding tax for non-residents in Indonesia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Non-residents earning income from Indonesian sources are subject to a flat 20% withholding tax (PPh 26) on gross payment."
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonical={currentUrl}
+  robots="index,follow"
+  schema={faqSchema}
+  image="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=80"
+  imageAlt="Indonesian passport and visa documents"
+>
+  <article id="main-content" class="min-h-screen bg-canvas dark:bg-canvas">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <Breadcrumbs items={[
+        { label: "Home", href: "/" },
+        { label: "Knowledge Center", href: "/knowledge" },
+        { label: "Indonesia Tax Residency" }
+      ]} />
+
+      <header class="pt-8 pb-12">
+        <h1 class="text-4xl font-extrabold tracking-tight text-ink dark:text-on-primary sm:text-5xl">Indonesia Tax Residency Guide</h1>
+        <p class="mt-4 text-xl text-body dark:text-muted">Master the 183-day quantitative test, KITAS/KITAP tax obligations, non-resident 20% PPh 26 tax, and Job Creation Law territorial provisions.</p>
+      </header>
+
+      <div class="prose max-w-none prose-headings:mt-10 prose-headings:mb-4 prose-h2:text-2xl prose-h2:font-semibold prose-h2:text-ink dark:prose-h2:text-on-primary prose-p:text-body prose-p:leading-relaxed prose-a:text-link prose-a:underline">
+        <h2>Understanding Tax Residency in Indonesia</h2>
+        <p>Your tax residency status in Indonesia dictates whether you are taxed on worldwide income or only on Indonesian-sourced income. Governed by the <a href="https://www.pajak.go.id" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">Direktorat Jenderal Pajak (DJP)</a>, residency is established through quantitative presence tests and legal stay permits.</p>
+
+        <h2>Qualifying as an Indonesian Tax Resident</h2>
+        <p>An individual is classified as an Indonesian tax resident if they meet any of the following statutory criteria:</p>
+        <ul>
+          <li><strong>Indonesian Citizens:</strong> Residing in Indonesia (except those working abroad for 183+ days under specific DTA conditions); or</li>
+          <li><strong>183-Day Physical Presence Test:</strong> Foreigners physically present in Indonesia for <strong>more than 183 days</strong> within any 12-month period; or</li>
+          <li><strong>Intent to Stay / KITAS Holders:</strong> Foreigners residing in Indonesia during a tax year with clear intent to stay (e.g. holding a Limited Stay Permit - KITAS or Permanent Stay Permit - KITAP).</li>
+        </ul>
+
+        <h2>Job Creation Law (UU Cipta Kerja) Expat Territorial Rule</h2>
+        <p>Under the Job Creation Law, foreign citizens who become Indonesian tax residents and possess specific high-skill expertise are taxed <strong>only on Indonesian-sourced income</strong> for their first 4 years of tax residency, provided they do not claim foreign tax treaty benefits.</p>
+
+        <h2>Non-Resident Tax Treatment (PPh 26)</h2>
+        <p>Foreigners who spend 182 days or fewer in Indonesia and do not hold a permanent residence intent are treated as non-residents. Non-residents pay a flat <strong>20% final withholding tax (PPh 26)</strong> on gross Indonesian-sourced dividends, interest, royalties, rent, and employment fees, without eligibility for PTKP allowances.</p>
+
+        <h2>Related Expat & Foreigner Tax Articles</h2>
+        <ul>
+          <li><a href="/blogs/indonesia-tax-for-expats-foreigners-bali-guide" class="text-link hover:underline">Indonesia & Bali Expat Tax Guide</a></li>
+          <li><a href="/blogs/indonesia-income-tax-rates-brackets-2026" class="text-link hover:underline">Indonesia Personal Income Tax Rates & Brackets 2026</a></li>
+          <li><a href="/countries/indonesia/income-tax/income-tax-calculator" class="text-link hover:underline">Indonesia Income Tax Calculator</a></li>
+          <li><a href="/knowledge/indonesia-income-tax" class="text-link hover:underline">Indonesia Income Tax Hub Page</a></li>
+        </ul>
+      </div>
+    </div>
+  </article>
+</Layout>

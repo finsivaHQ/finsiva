@@ -1,0 +1,231 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+
+const title = "Indonesia Income Tax Guide 2026: Rates, Brackets, PTKP & Corporate Tax";
+const description = "Comprehensive guide to Indonesia income tax for individuals, expats, and businesses. Learn 2026 progressive tax brackets (5%-35%), PTKP thresholds, 22% corporate tax, and PPh 21 rules.";
+const baseUrl = "https://finsiva.com";
+const currentUrl = `${baseUrl}/knowledge/indonesia-income-tax`;
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What are the individual income tax rates in Indonesia for 2026?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Individual income tax in Indonesia is progressive across 5 brackets: 5% (up to IDR 60M), 15% (IDR 60M-250M), 25% (IDR 250M-500M), 30% (IDR 500M-5B), and 35% (above IDR 5B)."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is PTKP in Indonesian income tax?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "PTKP (Penghasilan Tidak Kena Pajak) is non-taxable income deducted before computing tax. The basic single PTKP is IDR 54,000,000 per year, plus IDR 4,500,000 for married status and IDR 4,500,000 per dependent (max 3)."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How much tax do foreign expats in Bali pay?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Foreigners residing in Bali or Indonesia for 183+ days in a 12-month period are tax residents. They are taxed at progressive rates (5%-35%) after PTKP. Non-residents pay a flat 20% withholding tax (PPh 26)."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is the corporate tax rate in Indonesia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The headline corporate income tax rate is 22%. Small businesses with annual revenue under IDR 50 billion receive a 50% rate reduction on revenue up to IDR 4.8 billion under Article 31E."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Does Indonesia levy capital gains or inheritance tax?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Capital gains are included in general income and taxed at progressive personal or corporate rates. Indonesia does not have a separate inheritance tax."
+      }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Indonesia Income Tax Guide 2026: Rates, Brackets, PTKP & Corporate Tax",
+  description: "Comprehensive guide to Indonesia income tax for individuals, expats, and businesses. Learn 2026 progressive tax brackets (5%-35%), PTKP thresholds, 22% corporate tax, and PPh 21 rules.",
+  url: currentUrl,
+  author: { "@type": "Organization", name: "Finsiva" },
+  dateModified: "2026-08-20"
+};
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonical={currentUrl}
+  robots="index,follow"
+  schema={articleSchema}
+  image="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=80"
+  imageAlt="Bali landscape representing Indonesia income tax guide"
+>
+  <article id="main-content" class="min-h-screen bg-canvas dark:bg-canvas">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <Breadcrumbs items={[
+        { label: "Home", href: "/" },
+        { label: "Knowledge Center", href: "/knowledge" },
+        { label: "Indonesia Income Tax" }
+      ]} />
+
+      <header class="pt-8 pb-12">
+        <h1 class="text-4xl font-extrabold tracking-tight text-ink dark:text-on-primary sm:text-5xl">Indonesia Income Tax Guide 2026</h1>
+        <p class="mt-4 text-xl text-body dark:text-muted">Master Indonesia's personal income tax brackets (5%–35%), PTKP non-taxable allowances, 22% corporate tax, Bali expat rules, and DJP e-Filing.</p>
+        <div class="mt-4 flex flex-wrap items-center gap-4 text-sm text-muted dark:text-muted">
+          <time datetime="2026-08-20">Last updated: August 2026</time>
+          <span aria-hidden="true">·</span>
+          <span>22 min read</span>
+          <span aria-hidden="true">·</span>
+          <span>Knowledge Center Pillar</span>
+        </div>
+      </header>
+
+      <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=80" alt="Bali Indonesia landscape" class="mb-8 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
+
+      <nav aria-label="Table of contents" class="mb-8 border-b border-hairline pb-6 dark:border-overlay-light">
+        <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">Table of Contents</h2>
+        <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+          <li><a href="#overview" class="text-link hover:underline dark:text-link">Overview of Indonesian Tax System</a></li>
+          <li><a href="#personal-brackets" class="text-link hover:underline dark:text-link">Personal Tax Brackets 2026 (PPh 21)</a></li>
+          <li><a href="#ptkp-thresholds" class="text-link hover:underline dark:text-link">PTKP Non-Taxable Allowances</a></li>
+          <li><a href="#expats-bali" class="text-link hover:underline dark:text-link">Expats, Foreigners & Bali Tax Rules</a></li>
+          <li><a href="#corporate-tax" class="text-link hover:underline dark:text-link">22% Corporate Tax & SME Incentives</a></li>
+          <li><a href="#capital-gains-dividends" class="text-link hover:underline dark:text-link">Capital Gains, Dividends & Inheritance</a></li>
+          <li><a href="#filing-deadlines" class="text-link hover:underline dark:text-link">DJP Online e-Filing & Deadlines</a></li>
+          <li><a href="#calculators" class="text-link hover:underline dark:text-link">Indonesia Interactive Calculators</a></li>
+          <li><a href="#faqs" class="text-link hover:underline dark:text-link">Frequently Asked Questions</a></li>
+        </ul>
+      </nav>
+
+      <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+      <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+
+      <div class="prose max-w-none prose-headings:mt-10 prose-headings:mb-4 prose-h2:text-2xl prose-h2:font-semibold prose-h2:text-ink dark:prose-h2:text-on-primary prose-h3:text-xl prose-h3:font-semibold prose-h3:text-ink dark:prose-h3:text-on-primary prose-p:text-body prose-p:leading-relaxed prose-a:text-link prose-a:underline prose-a:decoration-dashed prose-a:underline-offset-4 prose-a:hover:text-primary prose-ul:list-disc prose-ul:pl-6 prose-ol:list-decimal prose-ol:pl-6 prose-li:mt-2">
+        <h2 id="overview">Overview of the Indonesian Income Tax System</h2>
+        <p>The <strong>Indonesian income tax system</strong> (<em>Pajak Penghasilan - PPh</em>) is governed by the <a href="https://www.pajak.go.id" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">Direktorat Jenderal Pajak (DJP)</a> under the Ministry of Finance. Indonesia operates a self-assessment tax regime where taxpayers register for a Tax Identification Number (NPWP, now integrated with NIK National ID numbers), calculate their own tax obligations, and e-file annual returns (SPT Tahunan).</p>
+
+        <p>Key highlights of taxation in Indonesia include:</p>
+        <ul>
+          <li><strong>Progressive Personal Rates (5%–35%):</strong> Five personal income tax brackets for tax residents, with a top rate of 35% for taxable income above IDR 5 billion.</li>
+          <li><strong>PTKP Deductions:</strong> Generous non-taxable income allowances starting at IDR 54,000,000 for single taxpayers.</li>
+          <li><strong>Flat Corporate Tax Rate (22%):</strong> Headline corporate tax rate of 22%, with a 50% rate discount for small and medium enterprises under Article 31E.</li>
+          <li><strong>11% Value Added Tax (PPN):</strong> Standard consumption tax on goods, services, and digital imports.</li>
+          <li><strong>Non-Resident Withholding Tax (PPh 26):</strong> Flat 20% tax on Indonesian-sourced income paid to foreign individuals or corporations without tax residency.</li>
+        </ul>
+
+        <h2 id="personal-brackets">Indonesian Personal Income Tax Brackets 2026 (PPh 21)</h2>
+        <p>Personal income tax on salaries and employment (PPh 21) is calculated on <em>Net Taxable Income</em> after deducting occupational costs (Biaya Jabatan 5%, max IDR 6M/yr) and applicable PTKP non-taxable allowances.</p>
+
+        <div class="my-6 overflow-x-auto">
+          <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+            <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+              <tr>
+                <th class="border p-3">Taxable Income Tier (IDR)</th>
+                <th class="border p-3">Marginal Tax Rate</th>
+                <th class="border p-3">Tax Payable on Tier</th>
+                <th class="border p-3">Cumulative Maximum Tax</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+              <tr><td class="p-3 font-medium">Up to IDR 60,000,000</td><td class="p-3 font-bold text-emerald-600">5%</td><td class="p-3">IDR 3,000,000</td><td class="p-3">IDR 3,000,000</td></tr>
+              <tr><td class="p-3 font-medium">IDR 60,000,001 – IDR 250,000,000</td><td class="p-3 font-bold text-emerald-600">15%</td><td class="p-3">IDR 28,500,000</td><td class="p-3">IDR 31,500,000</td></tr>
+              <tr><td class="p-3 font-medium">IDR 250,000,001 – IDR 500,000,000</td><td class="p-3 font-bold text-emerald-600">25%</td><td class="p-3">IDR 62,500,000</td><td class="p-3">IDR 94,000,000</td></tr>
+              <tr><td class="p-3 font-medium">IDR 500,000,001 – IDR 5,000,000,000</td><td class="p-3 font-bold text-emerald-600">30%</td><td class="p-3">IDR 1,350,000,000</td><td class="p-3">IDR 1,444,000,000</td></tr>
+              <tr><td class="p-3 font-medium">Above IDR 5,000,000,000</td><td class="p-3 font-bold text-emerald-600">35%</td><td class="p-3">35% on excess</td><td class="p-3">Variable</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Estimate your personal tax liability instantly using our <a href="/countries/indonesia/income-tax/income-tax-calculator" class="text-link hover:underline">Indonesia Income Tax Calculator (PPh 21)</a>.</p>
+
+        <h2 id="ptkp-thresholds">PTKP Non-Taxable Income Allowances</h2>
+        <p>Before applying tax brackets, taxpayers subtract their <strong>PTKP (Penghasilan Tidak Kena Pajak)</strong> allowance based on family status:</p>
+        <ul>
+          <li><strong>Single Taxpayer (TK/0):</strong> IDR 54,000,000 per year</li>
+          <li><strong>Married Taxpayer (K/0):</strong> IDR 58,500,000 per year (IDR 54M + IDR 4.5M marriage allowance)</li>
+          <li><strong>Married with 1 Child (K/1):</strong> IDR 63,000,000 per year</li>
+          <li><strong>Married with 2 Children (K/2):</strong> IDR 67,500,000 per year</li>
+          <li><strong>Married with 3 Children (K/3):</strong> IDR 72,000,000 per year (maximum dependent cap)</li>
+        </ul>
+
+        <h2 id="expats-bali">Expats, Foreigners & Bali Tax Rules</h2>
+        <p>Thousands of foreign professionals, business owners, and digital nomads live in Bali and Jakarta. Under DJP tax rules:</p>
+        <ul>
+          <li><strong>183-Day Residency Rule:</strong> Any foreign national physically present in Indonesia for more than 183 days within a 12-month period is a tax resident.</li>
+          <li><strong>Territorial Exemption under Job Creation Law (UU Cipta Kerja):</strong> Foreign residents with specific skill sets pay tax only on Indonesian-sourced income for their first 4 years of residence.</li>
+          <li><strong>Non-Resident Tax Rate (PPh 26):</strong> Non-residents earning Indonesian income pay a flat 20% withholding tax without PTKP deductions.</li>
+        </ul>
+
+        <p>For a complete breakdown of expat tax planning, read our <a href="/blogs/indonesia-tax-for-expats-foreigners-bali-guide" class="text-link hover:underline">Indonesia & Bali Expat Tax Guide</a> and check our <a href="/knowledge/indonesia-tax-residency" class="text-link hover:underline">Indonesia Tax Residency Guide</a>.</p>
+
+        <h2 id="corporate-tax">22% Corporate Income Tax & SME Incentives</h2>
+        <p>Indonesian corporate entities (PT and PT PMA companies) are subject to a headline corporate tax rate of <strong>22%</strong>. However, small and medium enterprises (SMEs) enjoy substantial incentives:</p>
+        <ul>
+          <li><strong>Article 31E Incentive:</strong> Companies with annual gross turnover under IDR 50 billion receive a <strong>50% tax rate reduction (11% effective rate)</strong> on taxable income derived from turnover up to IDR 4.8 billion.</li>
+          <li><strong>0.5% Final Turnover Tax (PP 55/2022):</strong> Small businesses with annual turnover under IDR 4.8 billion can elect to pay a flat 0.5% final tax on gross monthly turnover.</li>
+        </ul>
+
+        <p>Read our full <a href="/blogs/indonesia-corporate-tax-guide-2026" class="text-link hover:underline">Indonesia Corporate Tax Guide 2026</a> to learn more about corporate SPT Tahunan 1771 filing.</p>
+
+        <h2 id="capital-gains-dividends">Capital Gains, Dividends & Inheritance Tax</h2>
+        <p>In Indonesia, capital gains derived from asset sales are generally included in gross income and taxed at general progressive personal or corporate rates. Real estate property sales trigger a final income tax of 2.5% on gross transaction value.</p>
+
+        <p>Dividends received by Indonesian resident individuals from domestic companies are subject to a 10% final withholding tax, but are <strong>100% tax-exempt if reinvested in Indonesia</strong> within statutory timelines. Indonesia does not levy a separate inheritance tax. For further details, read our guide on <a href="/blogs/indonesia-capital-gains-dividends-inheritance-tax-guide" class="text-link hover:underline">Indonesia Capital Gains, Dividends & Inheritance Tax</a>.</p>
+
+        <h2 id="filing-deadlines">DJP Online e-Filing & Deadlines</h2>
+        <p>Taxpayers submit annual tax returns electronically via <strong>DJP Online</strong> (djponline.pajak.go.id):</p>
+        <ul>
+          <li><strong>March 31:</strong> Annual SPT Tahunan deadline for individual taxpayers (Form 1770 / 1770 S / 1770 SS).</li>
+          <li><strong>April 30:</strong> Annual SPT Tahunan deadline for corporate entities (Form 1771).</li>
+        </ul>
+
+        <h2 id="calculators">Indonesia Interactive Financial Calculators</h2>
+        <p>Finsiva provides free, easy-to-use calculation tools for Indonesia:</p>
+        <div class="my-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <a href="/countries/indonesia/income-tax/income-tax-calculator" class="block rounded-lg border border-hairline p-5 transition hover:border-primary dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="font-semibold text-ink dark:text-on-primary">Indonesia Personal Income Tax Calculator (PPh 21)</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">Calculate progressive brackets (5%–35%), PTKP allowances, and net take-home salary.</p>
+          </a>
+          <a href="/countries/indonesia/vat/vat-calculator" class="block rounded-lg border border-hairline p-5 transition hover:border-primary dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="font-semibold text-ink dark:text-on-primary">Indonesia VAT Calculator (11% PPN)</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">Calculate 11% Value Added Tax inclusive and exclusive amounts for goods and services.</p>
+          </a>
+        </div>
+
+        <h2 id="faqs">Frequently Asked Questions</h2>
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">What are the individual income tax rates in Indonesia for 2026?</h3>
+            <p>Progressive personal rates range from 5% (up to IDR 60M) to 35% (above IDR 5B) across 5 brackets.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">What is PTKP in Indonesian income tax?</h3>
+            <p>PTKP is non-taxable income deducted before applying tax brackets. Single PTKP starts at IDR 54,000,000 per year.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">How much tax do foreign expats in Bali pay?</h3>
+            <p>Expats staying 183+ days are tax residents taxed at progressive rates (5%–35%) after PTKP. Non-residents pay a flat 20% PPh 26 withholding tax.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">What is the corporate tax rate in Indonesia?</h3>
+            <p>The headline corporate tax rate is 22%, with 50% rate discounts available for qualifying small and medium enterprises.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

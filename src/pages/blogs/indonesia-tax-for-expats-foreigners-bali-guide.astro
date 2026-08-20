@@ -1,0 +1,149 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Indonesia & Bali Income Tax Guide for Expats & Foreigners 2026";
+const description = "Essential guide to income tax in Indonesia and Bali for expats, foreigners, KITAS/KITAP holders, and digital nomads. Covers 183-day residency rule, non-resident 20% PPh 26 tax, and Job Creation Law.";
+const image = "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=80";
+const author = "Dewi Lestari, International Expat Tax Advisory Lead";
+const authorBio = "Senior International Tax Specialist advising expatriates, digital nomads in Bali, KITAS holders, and foreign investors on DJP tax compliance and double taxation agreements.";
+const canonical = "https://finsiva.com/blogs/indonesia-tax-for-expats-foreigners-bali-guide";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Do digital nomads in Bali pay income tax in Indonesia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Foreigners residing in Bali for more than 183 days within a 12-month period are considered tax residents. Under Job Creation Law rules, qualifying foreign residents pay tax only on Indonesian-sourced income for their first 4 years."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How much tax do non-resident foreigners pay in Indonesia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Non-resident foreigners (staying 182 days or less) pay a flat 20% withholding tax (PPh 26) on gross income sourced in Indonesia without PTKP deductions."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Do KITAS visa holders need an NPWP tax number in Indonesia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Foreigners holding a work or stay permit (KITAS/KITAP) who earn income in Indonesia must register for an NPWP (Tax Identification Number) with the DJP."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="22 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <p class="text-lg leading-relaxed">
+      Indonesia—and Bali in particular—has emerged as one of the world's most sought-after locations for foreign expatriates, remote workers, founders, and digital nomads. However, understanding <strong>Indonesia and Bali income tax rules for foreigners, KITAS holders, non-residents, and expats</strong> requires mastering the 183-day residency rule, non-resident 20% PPh 26 tax, territorial exemptions under the Job Creation Law (UU Cipta Kerja), and double tax treaties.
+    </p>
+
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Table of Contents</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#residency-rules" class="text-link hover:underline">1. 183-Day Tax Residency & Intent Test</a></li>
+        <li><a href="#job-creation-law" class="text-link hover:underline">2. Job Creation Law Expat Territorial Exemption</a></li>
+        <li><a href="#resident-vs-nonresident" class="text-link hover:underline">3. Tax Rates: Resident (5%-35%) vs Non-Resident (20%)</a></li>
+        <li><a href="#bali-nomads" class="text-link hover:underline">4. Bali Income Tax Rules for Remote Workers & Nomads</a></li>
+        <li><a href="#kitas-npwp" class="text-link hover:underline">5. KITAS / KITAP Visa & NPWP Registration</a></li>
+        <li><a href="#dta-treaties" class="text-link hover:underline">6. Double Taxation Agreements (DTAs)</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">7. Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <h2 id="residency-rules" class="text-2xl font-semibold text-ink dark:text-on-primary">1. 183-Day Tax Residency & Intent Test</h2>
+    <p>Under regulations administered by the <a href="https://www.pajak.go.id" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">Direktorat Jenderal Pajak (DJP)</a>, a foreign individual is classified as an Indonesian tax resident if:</p>
+    <ul>
+      <li>They are physically present in Indonesia for <strong>more than 183 days</strong> within any 12-month period; or</li>
+      <li>They reside in Indonesia during a tax year with the intent to stay (demonstrated by holding a KITAS/KITAP visa, leasing property, or bringing family).</li>
+    </ul>
+
+    <p>For more background on continuous stay rules, see our <a href="/knowledge/indonesia-tax-residency" class="text-link hover:underline">Indonesia Tax Residency Guide</a>.</p>
+
+    <h2 id="job-creation-law" class="text-2xl font-semibold text-ink dark:text-on-primary">2. Job Creation Law Expat Territorial Exemption</h2>
+    <p>Prior to tax law reform, Indonesian tax residents were taxed on their worldwide income. However, under the <em>Job Creation Law (Law No. 11/2020 & Law No. 7/2021)</em>, foreign citizens who become Indonesian tax residents and possess specialized skills are taxed <strong>strictly on Indonesian-sourced income</strong> for their first 4 years of residence.</p>
+
+    <h2 id="resident-vs-nonresident" class="text-2xl font-semibold text-ink dark:text-on-primary">3. Tax Rates: Resident (5%-35%) vs Non-Resident (20%)</h2>
+    <div class="overflow-x-auto">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Tax Status</th>
+            <th class="border p-3">Presence Test</th>
+            <th class="border p-3">Tax System & Rates</th>
+            <th class="border p-3">PTKP Allowance</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 font-medium">Tax Resident</td>
+            <td class="p-3">183+ Days or KITAS Holder</td>
+            <td class="p-3">Progressive rates (5% to 35%)</td>
+            <td class="p-3 font-medium text-emerald-600">Eligible (IDR 54M+)</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Non-Resident</td>
+            <td class="p-3">182 Days or Less</td>
+            <td class="p-3">Flat 20% withholding tax (PPh 26)</td>
+            <td class="p-3 font-medium text-rose-600">Ineligible</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Check your tax rates with our interactive <a href="/countries/indonesia/income-tax/income-tax-calculator" class="text-link hover:underline">Indonesia Income Tax Calculator (PPh 21)</a>.</p>
+
+    <h2 id="bali-nomads" class="text-2xl font-semibold text-ink dark:text-on-primary">4. Bali Income Tax Rules for Remote Workers & Nomads</h2>
+    <p>Foreign remote workers residing in Bali on tourist visas or social visas who stay under 183 days without earning local Indonesian income generally have no local tax liability. However, those staying over 183 days or working for an Indonesian employer must register for an NPWP and file annual returns.</p>
+
+    <h2 id="kitas-npwp" class="text-2xl font-semibold text-ink dark:text-on-primary">5. KITAS / KITAP Visa & NPWP Registration</h2>
+    <p>Foreigners holding an Employment KITAS (E23/C312) or Investor KITAS (E28A/C313/C314) are required to register for an NPWP with DJP and file an annual SPT Tahunan 1770 / 1770 S before March 31.</p>
+
+    <h2 id="dta-treaties" class="text-2xl font-semibold text-ink dark:text-on-primary">6. Double Taxation Agreements (DTAs)</h2>
+    <p>Indonesia maintains over 70 Double Taxation Avoidance Agreements (DTAs). DTA tax treaties prevent double taxation for foreign nationals and allow credits for tax paid in home jurisdictions.</p>
+
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">7. Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Do digital nomads in Bali pay income tax in Indonesia?</h3>
+        <p>Foreigners staying 183+ days become tax residents. Qualifying expats with specialized skills pay tax only on Indonesian-sourced income for their first 4 years under the Job Creation Law.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">How much tax do non-resident foreigners pay?</h3>
+        <p>Non-residents pay a flat 20% withholding tax (PPh 26) on gross Indonesian-sourced income without PTKP deductions.</p>
+      </div>
+    </div>
+
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Related Indonesia & Expat Tax Links</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/knowledge/indonesia-tax-residency" class="text-link hover:underline font-medium">Indonesia Tax Residency Guide</a>
+        <a href="/blogs/indonesia-income-tax-rates-brackets-2026" class="text-link hover:underline font-medium">Personal Tax Rates 2026</a>
+        <a href="/countries/indonesia/income-tax/income-tax-calculator" class="text-link hover:underline font-medium">Personal Tax Calculator</a>
+        <a href="/knowledge/indonesia-income-tax" class="text-link hover:underline font-medium">Indonesia Tax Knowledge Hub</a>
+        <a href="/blogs/indonesia-corporate-tax-guide-2026" class="text-link hover:underline font-medium">Corporate Tax Guide 2026</a>
+        <a href="/countries/indonesia" class="text-link hover:underline font-medium">Finsiva Indonesia Portal</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>

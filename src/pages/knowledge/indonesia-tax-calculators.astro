@@ -1,0 +1,102 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+
+const title = "Indonesia Tax Calculators Guide: PPh 21 Personal Tax & 11% PPN VAT";
+const description = "Complete guide to Indonesia financial and tax calculators. Learn how to estimate your PPh 21 personal income tax, PTKP deductions, net salary after tax, and 11% VAT PPN.";
+const baseUrl = "https://finsiva.com";
+const currentUrl = `${baseUrl}/knowledge/indonesia-tax-calculators`;
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How do I calculate PPh 21 personal income tax in Indonesia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Determine gross annual salary, subtract 5% occupational cost (Biaya Jabatan max IDR 6M/yr) and applicable PTKP allowance, then apply 2026 progressive rates from 5% to 35%."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How does the Indonesia VAT (PPN) calculator work?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The VAT calculator computes 11% PPN inclusive and exclusive amounts for invoice pricing, commercial sales, and digital service imports."
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonical={currentUrl}
+  robots="index,follow"
+  schema={faqSchema}
+  image="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&q=80"
+  imageAlt="Calculator and tax documents"
+>
+  <article id="main-content" class="min-h-screen bg-canvas dark:bg-canvas">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <Breadcrumbs items={[
+        { label: "Home", href: "/" },
+        { label: "Knowledge Center", href: "/knowledge" },
+        { label: "Indonesia Tax Calculators" }
+      ]} />
+
+      <header class="pt-8 pb-12">
+        <h1 class="text-4xl font-extrabold tracking-tight text-ink dark:text-on-primary sm:text-5xl">Indonesia Tax Calculators Guide</h1>
+        <p class="mt-4 text-xl text-body dark:text-muted">Learn how to accurately compute personal income tax (PPh 21), PTKP deductions, net take-home salary, and 11% PPN VAT with Finsiva tools.</p>
+      </header>
+
+      <div class="prose max-w-none prose-headings:mt-10 prose-headings:mb-4 prose-h2:text-2xl prose-h2:font-semibold prose-h2:text-ink dark:prose-h2:text-on-primary prose-p:text-body prose-p:leading-relaxed prose-a:text-link prose-a:underline">
+        <h2>Indonesian Financial & Tax Calculation Suite</h2>
+        <p>Calculating income tax and VAT in Indonesia requires factoring in specific DJP statutory allowances such as PTKP non-taxable income limits and progressive tax tiers. Finsiva provides instant, up-to-date calculation tools tailored to Indonesian tax regulations.</p>
+
+        <h2>Available Indonesia Tax Calculators</h2>
+        <div class="my-6 grid grid-cols-1 gap-6 md:grid-cols-2">
+          <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="text-lg font-semibold text-ink dark:text-on-primary">1. Personal Income Tax Calculator (PPh 21)</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">Computes 2026 progressive rates (5% to 35%), subtracts occupational cost and PTKP allowances, and calculates net monthly take-home salary.</p>
+            <a href="/countries/indonesia/income-tax/income-tax-calculator" class="mt-4 inline-block text-sm font-medium text-link hover:underline">Launch PPh 21 Tax Calculator →</a>
+          </div>
+
+          <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="text-lg font-semibold text-ink dark:text-on-primary">2. VAT Calculator (11% PPN)</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">Instantly calculates 11% PPN inclusive and exclusive amounts for business invoicing, transactions, and e-Faktur compliance.</p>
+            <a href="/countries/indonesia/vat/vat-calculator" class="mt-4 inline-block text-sm font-medium text-link hover:underline">Launch VAT Calculator →</a>
+          </div>
+        </div>
+
+        <h2>Worked PPh 21 Calculation Example</h2>
+        <p>Consider a married taxpayer with 1 child (K/1 status) earning a gross annual salary of <strong>IDR 180,000,000</strong>:</p>
+        <ul>
+          <li>Gross Income: IDR 180,000,000</li>
+          <li>Occupational Cost (5%, max 6M): IDR 6,000,000</li>
+          <li>Net Income before PTKP: IDR 174,000,000</li>
+          <li>PTKP Allowance (K/1): IDR 63,000,000</li>
+          <li><strong>Net Taxable Income:</strong> IDR 174,000,000 – IDR 63,000,000 = <strong>IDR 111,000,000</strong></li>
+        </ul>
+
+        <p><strong>Applying 2026 Brackets:</strong></p>
+        <ul>
+          <li>Tax on First IDR 60,000,000 @ 5% = IDR 3,000,000</li>
+          <li>Tax on Remaining IDR 51,000,000 @ 15% = IDR 7,650,000</li>
+          <li><strong>Total Annual PPh 21 Payable:</strong> IDR 10,650,000 (Effective Tax Rate: ~5.92%)</li>
+        </ul>
+
+        <h2>Related Guides & Resources</h2>
+        <ul>
+          <li><a href="/knowledge/indonesia-income-tax" class="text-link hover:underline">Indonesia Income Tax Knowledge Hub</a></li>
+          <li><a href="/blogs/indonesia-income-tax-rates-brackets-2026" class="text-link hover:underline">Indonesia Income Tax Rates & Brackets 2026</a></li>
+          <li><a href="/blogs/indonesia-tax-for-expats-foreigners-bali-guide" class="text-link hover:underline">Expat & Bali Tax Guide</a></li>
+          <li><a href="/countries/indonesia" class="text-link hover:underline">Finsiva Indonesia Country Tax Portal</a></li>
+        </ul>
+      </div>
+    </div>
+  </article>
+</Layout>

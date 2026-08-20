@@ -1,0 +1,193 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Indonesia Income Tax Rates & Brackets 2026: PPh 21 & PTKP Guide";
+const description = "Complete guide to Indonesia personal income tax rates for 2026. Learn progressive tax brackets (5%-35%), PTKP non-taxable allowances, salary tax PPh 21, and DJP e-Filing.";
+const image = "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&q=80";
+const author = "Bambang Santoso, Certified Indonesian Tax Consultant";
+const authorBio = "Certified Indonesian Tax Consultant (Konsultan Pajak) specializing in PPh 21 payroll tax, PTKP optimization, DJP e-Filing compliance, and individual tax planning.";
+const canonical = "https://finsiva.com/blogs/indonesia-income-tax-rates-brackets-2026";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is non-taxable income (PTKP) in Indonesia for 2026?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The basic PTKP for an individual single taxpayer (TK/0) is IDR 54,000,000 per year. Additional allowances of IDR 4,500,000 are granted for marriage and for each dependent child (up to 3 children)."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What are the individual income tax brackets in Indonesia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Progressive tax rates range across 5 brackets: 5% (up to IDR 60M), 15% (IDR 60M-250M), 25% (IDR 250M-500M), 30% (IDR 500M-5B), and 35% (above IDR 5B)."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is the deadline for individual SPT Tahunan tax filing?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The annual tax return filing deadline for individual taxpayers is March 31 of the following year via DJP Online."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How is occupational cost (Biaya Jabatan) calculated for employees?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Occupational cost is calculated at 5% of gross annual salary, capped at IDR 500,000 per month (IDR 6,000,000 per year)."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="20 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <p class="text-lg leading-relaxed">
+      Understanding <strong>Indonesia income tax rates, progressive brackets, and PTKP allowances for 2026</strong> is essential for salaried employees, foreign expats, and business owners operating in Indonesia. Administered by the <a href="https://www.pajak.go.id" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">Direktorat Jenderal Pajak (DJP)</a> under the Ministry of Finance, personal income tax (<em>Pajak Penghasilan Pasal 21 - PPh 21</em>) is calculated on a progressive scale.
+    </p>
+
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Table of Contents</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#rates-table" class="text-link hover:underline">1. Official 2026 Tax Brackets Table</a></li>
+        <li><a href="#ptkp-allowances" class="text-link hover:underline">2. PTKP Non-Taxable Income Thresholds</a></li>
+        <li><a href="#how-tax-is-calculated" class="text-link hover:underline">3. Step-by-Step PPh 21 Computation</a></li>
+        <li><a href="#salary-after-tax" class="text-link hover:underline">4. Salary After Tax & PPh 21 Withholding</a></li>
+        <li><a href="#npwp-nik-integration" class="text-link hover:underline">5. NIK as Tax Identification Number (NPWP)</a></li>
+        <li><a href="#worked-examples" class="text-link hover:underline">6. Worked Numerical Calculation Examples</a></li>
+        <li><a href="#djp-efiling" class="text-link hover:underline">7. DJP Online e-Filing & Deadlines</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">8. Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <h2 id="rates-table" class="text-2xl font-semibold text-ink dark:text-on-primary">1. Official 2026 Tax Brackets Table</h2>
+    <p>Indonesia's personal income tax rates are progressive across five income tiers under Law No. 7/2021 on the Harmonization of Tax Regulations (UU HPP):</p>
+
+    <div class="overflow-x-auto">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Net Taxable Income Tier (IDR)</th>
+            <th class="border p-3">Marginal Tax Rate</th>
+            <th class="border p-3">Tax Payable on Tier</th>
+            <th class="border p-3">Cumulative Maximum Tax</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr><td class="p-3 font-medium">Up to IDR 60,000,000</td><td class="p-3 font-bold text-emerald-600">5.0%</td><td class="p-3">IDR 3,000,000</td><td class="p-3">IDR 3,000,000</td></tr>
+          <tr><td class="p-3 font-medium">IDR 60,000,001 – IDR 250,000,000</td><td class="p-3 font-bold text-emerald-600">15.0%</td><td class="p-3">IDR 28,500,000</td><td class="p-3">IDR 31,500,000</td></tr>
+          <tr><td class="p-3 font-medium">IDR 250,000,001 – IDR 500,000,000</td><td class="p-3 font-bold text-emerald-600">25.0%</td><td class="p-3">IDR 62,500,000</td><td class="p-3">IDR 94,000,000</td></tr>
+          <tr><td class="p-3 font-medium">IDR 500,000,001 – IDR 5,000,000,000</td><td class="p-3 font-bold text-emerald-600">30.0%</td><td class="p-3">IDR 1,350,000,000</td><td class="p-3">IDR 1,444,000,000</td></tr>
+          <tr><td class="p-3 font-medium">Above IDR 5,000,000,000</td><td class="p-3 font-bold text-emerald-600">35.0%</td><td class="p-3">35% on excess</td><td class="p-3">Variable</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>To compute your personal tax position, launch our interactive <a href="/countries/indonesia/income-tax/income-tax-calculator" class="text-link hover:underline">Indonesia Income Tax Calculator (PPh 21)</a>.</p>
+
+    <h2 id="ptkp-allowances" class="text-2xl font-semibold text-ink dark:text-on-primary">2. PTKP Non-Taxable Income Thresholds</h2>
+    <p>Taxable income is calculated after deducting <strong>Non-Taxable Income (Penghasilan Tidak Kena Pajak - PTKP)</strong>. PTKP varies depending on your marital status and number of dependent children:</p>
+
+    <div class="overflow-x-auto">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">PTKP Code</th>
+            <th class="border p-3">Marital & Dependent Status</th>
+            <th class="border p-3">Annual PTKP Amount (IDR)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr><td class="p-3 font-medium">TK/0</td><td class="p-3">Single, 0 Dependents</td><td class="p-3 font-semibold text-emerald-600">IDR 54,000,000</td></tr>
+          <tr><td class="p-3 font-medium">TK/1</td><td class="p-3">Single, 1 Dependent</td><td class="p-3 font-semibold text-emerald-600">IDR 58,500,000</td></tr>
+          <tr><td class="p-3 font-medium">K/0</td><td class="p-3">Married, 0 Dependents</td><td class="p-3 font-semibold text-emerald-600">IDR 58,500,000</td></tr>
+          <tr><td class="p-3 font-medium">K/1</td><td class="p-3">Married, 1 Dependent</td><td class="p-3 font-semibold text-emerald-600">IDR 63,000,000</td></tr>
+          <tr><td class="p-3 font-medium">K/2</td><td class="p-3">Married, 2 Dependents</td><td class="p-3 font-semibold text-emerald-600">IDR 67,500,000</td></tr>
+          <tr><td class="p-3 font-medium">K/3</td><td class="p-3">Married, 3 Dependents (Max Cap)</td><td class="p-3 font-semibold text-emerald-600">IDR 72,000,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="how-tax-is-calculated" class="text-2xl font-semibold text-ink dark:text-on-primary">3. Step-by-Step PPh 21 Computation</h2>
+    <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+      <p class="font-mono text-sm"><strong>Step 1: Gross Annual Income</strong> = Annual Base Salary + Bonuses + Allowances + Overtime Pay</p>
+      <p class="font-mono text-sm mt-2"><strong>Step 2: Occupational Cost Deduction</strong> = 5% of Gross Salary (Capped at IDR 6,000,000 / year)</p>
+      <p class="font-mono text-sm mt-2"><strong>Step 3: Net Income</strong> = Gross Annual Income – Occupational Cost – Pension Contributions</p>
+      <p class="font-mono text-sm mt-2"><strong>Step 4: Net Taxable Income</strong> = Net Income – Applicable PTKP Allowance</p>
+      <p class="font-mono text-sm mt-2"><strong>Step 5: PPh 21 Tax Payable</strong> = Apply 2026 Progressive Rates (5% to 35%)</p>
+    </div>
+
+    <h2 id="salary-after-tax" class="text-2xl font-semibold text-ink dark:text-on-primary">4. Salary After Tax & PPh 21 Withholding</h2>
+    <p>Indonesian employers deduct PPh 21 income tax monthly at source from employee paychecks under the Average Effective Rate (TER) mechanism. Employers issue Form 1721-A1 annually to employees for filing their SPT Tahunan tax return.</p>
+
+    <p>For foreign nationals working in Jakarta or Bali, review our <a href="/blogs/indonesia-tax-for-expats-foreigners-bali-guide" class="text-link hover:underline">Indonesia & Bali Expat Tax Guide</a> and explore our <a href="/knowledge/indonesia-tax-residency" class="text-link hover:underline">Indonesia Tax Residency Guide</a>.</p>
+
+    <h2 id="npwp-nik-integration" class="text-2xl font-semibold text-ink dark:text-on-primary">5. NIK as Tax Identification Number (NPWP)</h2>
+    <p>Under DJP regulations, Indonesian residents integrate their 16-digit NIK (National ID number) as their primary Tax Identification Number (NPWP). Foreigners holding a KITAS/KITAP receive a 16-digit NPWP issued by DJP.</p>
+
+    <h2 id="worked-examples" class="text-2xl font-semibold text-ink dark:text-on-primary">6. Worked Numerical Calculation Examples</h2>
+
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Example 1: Single Professional (IDR 150,000,000 Annual Salary, TK/0)</h3>
+    <ul class="list-disc pl-6 space-y-1">
+      <li>Gross Annual Salary: IDR 150,000,000</li>
+      <li>Occupational Cost (5%, max 6M): IDR 6,000,000</li>
+      <li>Net Income: IDR 144,000,000</li>
+      <li>PTKP Allowance (TK/0): IDR 54,000,000</li>
+      <li>Net Taxable Income: IDR 144,000,000 – IDR 54,000,000 = <strong>IDR 90,000,000</strong></li>
+      <li>Tax on First IDR 60,000,000 @ 5% = IDR 3,000,000</li>
+      <li>Tax on Remaining IDR 30,000,000 @ 15% = IDR 4,500,000</li>
+      <li><strong>Total Annual PPh 21 Tax Payable:</strong> IDR 7,500,000 (Effective Tax Rate: ~5.0%)</li>
+    </ul>
+
+    <h2 id="djp-efiling" class="text-2xl font-semibold text-ink dark:text-on-primary">7. DJP Online e-Filing & Deadlines</h2>
+    <p>Individual taxpayers must e-file their annual tax return (SPT Tahunan 1770 S / 1770 SS) online via <a href="https://djponline.pajak.go.id" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">DJP Online</a> before <strong>March 31</strong>. Late filing results in an administrative penalty of IDR 100,000.</p>
+
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">8. Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is non-taxable income (PTKP) in Indonesia for 2026?</h3>
+        <p>Basic PTKP for single taxpayers is IDR 54,000,000 per year, plus IDR 4,500,000 for spouse and IDR 4,500,000 per child (max 3).</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What are the individual tax brackets in Indonesia?</h3>
+        <p>Progressive rates are 5% (up to 60M), 15% (60M-250M), 25% (250M-500M), 30% (500M-5B), and 35% (above 5B).</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is the deadline for individual SPT Tahunan tax filing?</h3>
+        <p>The annual deadline for individual taxpayers is March 31 via DJP Online.</p>
+      </div>
+    </div>
+
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Related Indonesia Tax Resources</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/knowledge/indonesia-income-tax" class="text-link hover:underline font-medium">Indonesia Tax Knowledge Hub</a>
+        <a href="/countries/indonesia/income-tax/income-tax-calculator" class="text-link hover:underline font-medium">PPh 21 Personal Tax Calculator</a>
+        <a href="/blogs/indonesia-tax-for-expats-foreigners-bali-guide" class="text-link hover:underline font-medium">Expat & Bali Tax Guide</a>
+        <a href="/blogs/indonesia-corporate-tax-guide-2026" class="text-link hover:underline font-medium">Indonesia Corporate Tax Guide</a>
+        <a href="/blogs/indonesia-capital-gains-dividends-inheritance-tax-guide" class="text-link hover:underline font-medium">Capital Gains & Dividend Tax</a>
+        <a href="/countries/indonesia" class="text-link hover:underline font-medium">Finsiva Indonesia Portal</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>
