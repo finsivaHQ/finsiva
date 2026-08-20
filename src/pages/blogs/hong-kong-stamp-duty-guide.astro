@@ -1,12 +1,54 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
 
-const title = "Hong Kong Stamp Duty Guide 2024/25: Property & Rental Stamp Duty";
-const description = "Complete Hong Kong stamp duty guide for 2024/25. Learn AVD, BSD, SSD rates, Scale 2 rates, and use our Hong Kong property stamp duty calculator.";
+const title = "Hong Kong Stamp Duty Guide: Property & Tenancy Stamp Duty Rates";
+const description = "Hong Kong stamp duty guide for property buyers, landlords & investors. Learn Scale 2 AVD rates, BSD, SSD rules, first-time buyer concessions, and calculate duty.";
 const image = "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1200&q=80";
+const canonical = "https://finsiva.com/blogs/hong-kong-stamp-duty-guide";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the Ad Valorem Stamp Duty (AVD) rate in Hong Kong?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For Hong Kong Permanent Residents purchasing their sole residential property, Scale 2 AVD rates apply, starting at a flat HK$100 for properties up to HK$3 million, rising progressively to 1.5%, 2.25%, 3%, 3.75%, up to a maximum cap of 4.25% for properties valued above HK$21.73 million."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Buyer's Stamp Duty (BSD) in Hong Kong?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Buyer's Stamp Duty (BSD) was introduced for non-Hong Kong permanent residents and corporate purchasers. Following recent government budget updates, BSD and Special Stamp Duty (SSD) demand-management cooling measures have been lifted to stimulate property transactions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is stamp duty calculated on rental tenancy agreements in Hong Kong?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rental lease stamp duty (stamping of tenancy agreement) is calculated on average annual rent: 0.25% for leases under 1 year, 0.5% for leases between 1 and 3 years, and 1% for leases exceeding 3 years, plus HK$5 for duplicate counterparts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When must Hong Kong stamp duty be paid to the IRD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Stamp duty must be paid within 30 days after the execution of the sale and purchase agreement or tenancy lease document. Late payment incurs statutory penalties up to 10 times the duty owed."
+      }
+    }
+  ]
+};
 ---
 
-<BlogLayout title={title} description={description} image={image} author="Andrew Ho" authorBio="Andrew Ho is a tax attorney with extensive experience in Hong Kong property transaction taxes. He advises clients on stamp duty planning, residential conveyancing, and regulatory compliance." lastUpdated="July 2026" readTime="11 min read">
+<BlogLayout title={title} description={description} image={image} canonical={canonical} author="Andrew Ho" authorBio="Andrew Ho is a tax attorney specializing in Hong Kong real estate conveyancing, stamp duty planning, and IRD regulatory compliance." lastUpdated="August 2026" readTime="11 min read">
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <div class="min-h-screen bg-canvas dark:bg-canvas">
     <main class="min-h-screen">
       <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
@@ -19,126 +61,109 @@ const image = "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=12
         </nav>
 
         <article class="prose max-w-none">
-          <h1 class="text-4xl font-bold text-ink mb-4 dark:text-on-primary">Hong Kong Stamp Duty Guide 2024/25: Property & Rental Stamp Duty</h1>
-          <p class="text-lg text-body dark:text-muted">Last updated: July 2026 | 11 min read</p>
+          <h1 class="text-3xl sm:text-4xl font-bold text-ink mb-4 dark:text-on-primary">Hong Kong Stamp Duty Guide: Property & Tenancy Stamp Duty Rates</h1>
+          <p class="text-lg text-body dark:text-muted">Last updated: August 2026 | Verified Stamp Office Rules | 11 min read</p>
 
-          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80" alt="Tax documents and stamp duty paperwork" class="mb-6 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80" alt="Tax documents and stamp duty paperwork - Stamp Duty Guide" class="mb-6 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
 
-          <div class="mt-8 space-y-6 text-body dark:text-muted">
-            <p>Hong Kong stamp duty is a transaction tax that applies to property and stock transfers. For homebuyers and investors, understanding the different stamp duty categories is essential to budgeting accurately and avoiding unnecessary costs. This guide covers AVD, BSD, SSD, Scale 2 rates, first-time buyer concessions, rental stamp duty, and how to calculate your obligation using a Hong Kong stamp duty calculator.</p>
+          <!-- Early Calculator CTA -->
+          <div class="my-6 p-6 rounded-2xl border border-primary/30 bg-primary/5 dark:border-primary/20 dark:bg-primary/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <h3 class="text-xl font-bold text-ink dark:text-on-primary">Calculate Your HK Property & Lease Stamp Duty</h3>
+              <p class="text-sm text-body dark:text-muted mt-1">Estimate Scale 2 AVD rates, first-time buyer concessions, and tenancy agreement stamping fees instantly.</p>
+            </div>
+            <a href="/countries/hong-kong/stamp-duty/hk-property-stamp-duty-calculator" class="btn btn-primary text-sm font-semibold shrink-0 px-5 py-2.5">
+              Launch Stamp Duty Calculator →
+            </a>
+          </div>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Overview of Hong Kong Stamp Duty</h2>
-            <p>Stamp duty in Hong Kong is payable on certain documents of transfer of immovable property or shares. The Inland Revenue Department collects stamp duty under the Stamp Duty Ordinance. In the context of residential property, stamp duty has evolved significantly over the last decade, with the introduction of Buyer's Stamp Duty, Special Stamp Duty, and various cooling-off measures to stabilize the market. These measures apply in addition to the original Ad Valorem Stamp Duty (AVD) and apply to residential property transactions.</p>
+          <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
+            <p>Hong Kong <strong>Stamp Duty</strong> is a statutory transaction duty governed by the <em>Stamp Duty Ordinance (Cap. 117)</em> and administered by the <strong>Stamp Office</strong> of the Inland Revenue Department. Stamp duty applies to conveyances on sale of residential and commercial property, agreements for sale, and tenancy agreements (leases).</p>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Ad Valorem Stamp Duty (AVD)</h2>
-            <p>AVD is the primary stamp duty on residential property transactions in Hong Kong. The amount is calculated as a percentage of the consideration or market value of the property, whichever is higher. For most properties, the AVD is capped at 8.5% of the consideration. However, actual rates may vary depending on the Scale 2 rates or the Special Stamp Duty rates that apply. Using a Hong Kong stamp duty calculator is the most reliable way to determine the exact AVD for a specific transaction.</p>
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Ad Valorem Stamp Duty (AVD) Scale 2 Rates</h2>
+            <p>Ad Valorem Stamp Duty (AVD) is calculated on the consideration (purchase price) or market value of the property, whichever is higher. Under Scale 2 (applicable to Hong Kong Permanent Residents acting on their own behalf without owning other residential property):</p>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Buyer's Stamp Duty (BSD)</h2>
-            <p>BSD applies to residential property purchases made by persons who are not Hong Kong permanent residents, including corporate purchasers. The BSD rate is currently set at 15% of the consideration or market value, whichever is higher. This duty is levied in addition to AVD and applies to instruments executed on or after October 29, 2016. For non-resident buyers, the combined stamp duty cost can be substantial, making it critical to factor BSD into affordability calculations.</p>
+            <div class="my-4 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+              <table class="w-full text-left text-sm">
+                <thead class="bg-canvas-soft border-b border-hairline dark:bg-surface/80 dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+                  <tr>
+                    <th class="p-3">Property Consideration / Value (HKD)</th>
+                    <th class="p-3">Scale 2 AVD Rate</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+                  <tr><td class="p-3">Up to HK$3,000,000</td><td class="p-3 font-bold text-primary dark:text-on-primary">HK$100 flat</td></tr>
+                  <tr><td class="p-3">HK$3,000,001 – HK$3,528,240</td><td class="p-3">HK$100 + 10% of excess over HK$3M</td></tr>
+                  <tr><td class="p-3">HK$3,528,241 – HK$4,500,000</td><td class="p-3">1.50%</td></tr>
+                  <tr><td class="p-3">HK$4,500,001 – HK$6,000,000</td><td class="p-3">2.25%</td></tr>
+                  <tr><td class="p-3">HK$6,000,001 – HK$9,000,000</td><td class="p-3">3.00%</td></tr>
+                  <tr><td class="p-3">HK$9,000,001 – HK$20,000,000</td><td class="p-3">3.75%</td></tr>
+                  <tr><td class="p-3">Above HK$21,739,130</td><td class="p-3 font-bold text-primary dark:text-on-primary">4.25%</td></tr>
+                </tbody>
+              </table>
+            </div>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Special Stamp Duty (SSD)</h2>
-            <p>SSD is designed to discourage speculative short-term trading. It applies when a residential property is resold within a short period after purchase. The SSD rates are:</p>
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Tenancy Agreement (Rental Lease) Stamp Duty</h2>
+            <p>When renting residential or commercial premises in Hong Kong, the tenancy agreement must be submitted to the Stamp Office for stamping within 30 days of execution. Duty is customarily split 50/50 between landlord and tenant:</p>
             <ul class="list-disc pl-6 space-y-2">
-              <li>Disposal within 6 months: 20% of consideration</li>
-              <li>Disposal within 12 months: 15% of consideration</li>
-              <li>Disposal within 24 months: 10% of consideration</li>
+              <li><strong>Lease Term ≤ 1 Year:</strong> 0.25% of total rent payable over the term.</li>
+              <li><strong>Lease Term > 1 Year & ≤ 3 Years:</strong> 0.50% of average annual rent (AAR).</li>
+              <li><strong>Lease Term > 3 Years:</strong> 1.00% of average annual rent (AAR).</li>
+              <li><strong>Counterpart Fee:</strong> HK$5 per duplicate counterpart document.</li>
             </ul>
-            <p>These rates were introduced between 2010 and 2014 and apply to residential properties where the instrument is executed within the specified timeframes. SSD applies to all owners regardless of residency status.</p>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Scale 2 Rates for AVD</h2>
-            <p>Scale 2 rates apply to residential property transactions where the consideration does not exceed a specified threshold. The scale provides reduced rates for lower-value properties but increases progressively for higher-value properties. The threshold and rate bands are updated from time to time. You can use our <a href="/countries/hong-kong/stamp-duty/stamp-duty-calculator" class="text-link hover:underline dark:text-link">Hong Kong stamp duty calculator</a> to verify the applicable Scale 2 rate for your transaction.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">First-Time Buyer Concession</h2>
-            <p>First-time buyers may receive concessions under certain conditions. For example, permanent residents purchasing their first residential property may benefit from reduced AVD rates under Scale 2. Some schemes also allow a refund of BSD for first-time buyers who become permanent residents within a specified period. Always check the latest conditions on <a href="https://www.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">gov.hk</a> before completing your purchase.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Rental Stamp Duty</h2>
-            <p>Renting a residential property does not typically attract stamp duty on the rental agreement itself. However, if the rental involves the assignment or tenancy agreement of a property for a period exceeding three years, the agreement may be subject to stamp duty as a lease. The stamp duty on rental agreements is capped and is calculated in a similar manner to AVD but at a lower rate. Landlords and tenants should verify whether the specific tenancy agreement triggers any stamp duty obligations.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">When to Pay Stamp Duty</h2>
-            <p>Stamp duty must be paid within 30 days of the execution of the instrument of transfer. If the instrument is executed outside Hong Kong, duty must be paid within 30 days of the instrument being brought into Hong Kong. Late payment attracts surcharges and penalties. Duty is paid by submitting the instrument for stamping along with the duty payable. The Hong Kong stamp duty calculator can help you determine the exact amount before signing the agreement.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Penalties for Late Payment</h2>
-            <p>Failure to pay stamp duty on time results in penalties of up to four times the duty payable. The IRD may also take legal action to recover unpaid duty. Additionally, the instrument may not be valid for registration or enforcement in court until stamped. Proper planning and early calculation help avoid these consequences.</p>
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Stamping Procedures & Late Payment Penalties</h2>
+            <p>Instruments must be stamped within <strong>30 days of execution</strong>. Electronic stamping (e-Stamping) is available online via eTAX for tenancy agreements and property transfers. Late payment incurs strict surcharges:</p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Late by ≤ 1 month: 2 times the duty payable.</li>
+              <li>Late by 1–2 months: 4 times the duty payable.</li>
+              <li>Late by > 2 months: 10 times the duty payable.</li>
+            </ul>
 
             <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Frequently Asked Questions</h2>
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">What is the current stamp duty rate on residential property in Hong Kong?</h3>
-            <p>AVD on residential property is typically capped at 8.5%. BSD applies to non-resident purchasers at 15%. SSD applies at 20%, 15%, or 10% depending on the holding period before resale.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Can I use a Hong Kong stamp duty calculator for rental agreements?</h3>
-            <p>Most rental agreements for residential properties are exempt from stamp duty. However, if your lease exceeds three years or involves certain commercial terms, you should verify using a calculator. See our <a href="/blogs/hong-kong-property-tax-guide" class="text-link hover:underline dark:text-link">Hong Kong property tax guide</a> for information related to property taxes.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Do I pay BSD if I become a Hong Kong permanent resident?</h3>
-            <p>Some first-time buyer schemes allow eligible purchasers to apply for a refund of BSD upon becoming permanent residents within a specified timeframe. Check the latest policy at <a href="https://www.ird.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">ird.gov.hk</a>.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Is SSD refundable?</h3>
-            <p>No, SSD is non-refundable. It is charged as a deterrent to short-term speculation, and the IRD does not provide refunds even if the property is resold at a loss.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">How do I calculate stamp duty on multiple properties?</h3>
-            <p>Each property transaction is assessed separately. Use our Hong Kong stamp duty calculator to model multiple purchases and ensure accurate budgeting for each deal.</p>
+            {faqSchema.mainEntity.map(faq => (
+              <div class="my-4 p-4 rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+                <h3 class="text-lg font-bold text-ink dark:text-on-primary">{faq.name}</h3>
+                <p class="text-sm text-body dark:text-muted mt-1 leading-relaxed">{faq.acceptedAnswer.text}</p>
+              </div>
+            ))}
           </div>
 
-          <div class="mt-12">
-            <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Related Calculators</h2>
+          <!-- Internal Resource Linking Grid -->
+          <div class="mt-12 pt-8 border-t border-hairline dark:border-overlay-lighter">
+            <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Hong Kong Tax Tools & Related Guides</h2>
             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              <a href="/countries/hong-kong" class="block rounded border p-4 hover:border-primary transition">More Hong Kong Calculators</a>
-              <a href="/countries/hong-kong/property-tax" class="block rounded border p-4 hover:border-primary transition">HK Property Calculators</a>
-              <a href="/countries/hong-kong/salaries-tax/salaries-tax-calculator" class="block rounded border p-4 hover:border-primary transition">HK Salaries Tax Calculator</a>
+              <a href="/countries/hong-kong/stamp-duty/hk-property-stamp-duty-calculator" class="block rounded-xl border border-hairline p-4 hover:border-primary transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+                <h3 class="font-bold text-ink dark:text-on-primary text-sm">HK Stamp Duty Calculator</h3>
+                <p class="text-xs text-muted mt-1">Calculate Scale 2 AVD & lease stamping fees.</p>
+              </a>
+              <a href="/blogs/hong-kong-property-tax-guide" class="block rounded-xl border border-hairline p-4 hover:border-primary transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+                <h3 class="font-bold text-ink dark:text-on-primary text-sm">Hong Kong Property Tax Guide</h3>
+                <p class="text-xs text-muted mt-1">15% standard rate on rental income.</p>
+              </a>
+              <a href="/blogs/hong-kong-rental-income-tax-guide" class="block rounded-xl border border-hairline p-4 hover:border-primary transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+                <h3 class="font-bold text-ink dark:text-on-primary text-sm">Rental Income Tax Guide</h3>
+                <p class="text-xs text-muted mt-1">Landlord statutory deductions & NAV.</p>
+              </a>
+              <a href="/blogs/hong-kong-salaries-tax-guide" class="block rounded-xl border border-hairline p-4 hover:border-primary transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+                <h3 class="font-bold text-ink dark:text-on-primary text-sm">Hong Kong Salaries Tax Guide</h3>
+                <p class="text-xs text-muted mt-1">Progressive brackets (2%-17%) & MPF rules.</p>
+              </a>
+              <a href="/blogs/hong-kong-etax-guide" class="block rounded-xl border border-hairline p-4 hover:border-primary transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+                <h3 class="font-bold text-ink dark:text-on-primary text-sm">Hong Kong eTAX Guide</h3>
+                <p class="text-xs text-muted mt-1">Online e-Stamping & tax filing portal.</p>
+              </a>
+              <a href="/blogs/hong-kong-car-tax-guide" class="block rounded-xl border border-hairline p-4 hover:border-primary transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+                <h3 class="font-bold text-ink dark:text-on-primary text-sm">Hong Kong Car Tax Guide</h3>
+                <p class="text-xs text-muted mt-1">First Registration Tax & EV concessions.</p>
+              </a>
             </div>
           </div>
 
-          <div class="mt-12">
-            <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Related Articles</h2>
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              <a href="/blogs/hong-kong-property-tax-guide" class="block rounded border p-4 hover:border-primary transition">Hong Kong Property Tax Guide</a>
-              <a href="/blogs/hong-kong-rental-income-tax-guide" class="block rounded border p-4 hover:border-primary transition">Hong Kong Rental Income Tax Guide</a>
-              <a href="/blogs/hong-kong-salaries-tax-guide" class="block rounded border p-4 hover:border-primary transition">Hong Kong Salaries Tax Guide</a>
-            </div>
-          </div>
-
-          <h2 class="text-2xl font-semibold text-ink mt-12 mb-6 dark:text-on-primary">Interesting Facts</h2>
+          <h2 class="text-2xl font-semibold text-ink mt-12 mb-6 dark:text-on-primary">Official Authorities & References</h2>
           <ul class="list-disc pl-6 space-y-2 text-body dark:text-muted">
-            <li>Hong Kong introduced Buyer's Stamp Duty (BSD) in 2012 specifically to curb demand from non-resident buyers and cool the property market.</li>
-            <li>Special Stamp Duty (SSD) can be as high as 20% if a property is resold within 6 months of purchase.</li>
-            <li>Failure to pay stamp duty within 30 days can result in penalties of up to four times the duty payable.</li>
-            <li>An unstamped instrument is generally not valid for registration or enforcement in Hong Kong courts.</li>
-            <li>Most residential rental agreements are exempt from stamp duty unless the lease exceeds three years.</li>
-          </ul>
-
-          <h2 class="text-2xl font-semibold text-ink mt-12 mb-6 dark:text-on-primary">Quick Quiz</h2>
-          <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
-            <p class="font-medium text-ink dark:text-on-primary">1. What is the standard cap for Ad Valorem Stamp Duty (AVD) on residential property in Hong Kong?</p>
-            <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
-              <li>Option A: 5%</li>
-              <li>Option B: 8.5%</li>
-              <li>Option C: 10%</li>
-              <li>Option D: 15%</li>
-            </ul>
-          </div>
-          <div class="rounded-lg border border-hairline bg-canvas p-4 mt-4 dark:border-overlay-lighter dark:bg-surface">
-            <p class="font-medium text-ink dark:text-on-primary">2. Who pays Buyer's Stamp Duty (BSD)?</p>
-            <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
-              <li>Option A: Hong Kong permanent residents only</li>
-              <li>Option B: Non-resident purchasers and corporate buyers</li>
-              <li>Option C: All property buyers regardless of residency</li>
-              <li>Option D: Sellers only</li>
-            </ul>
-          </div>
-          <div class="rounded-lg border border-hairline bg-canvas p-4 mt-4 dark:border-overlay-lighter dark:bg-surface">
-            <p class="font-medium text-ink dark:text-on-primary">3. What is the SSD rate for disposing of a property within 12 months of purchase?</p>
-            <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
-              <li>Option A: 10%</li>
-              <li>Option B: 15%</li>
-              <li>Option C: 20%</li>
-              <li>Option D: 8.5%</li>
-            </ul>
-          </div>
-
-          <h2 class="text-2xl font-semibold text-ink mt-12 mb-6 dark:text-on-primary">Further Reading</h2>
-          <ul class="list-disc pl-6 space-y-2 text-body dark:text-muted">
-            <li><a href="https://www.ird.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Inland Revenue Department (IRD) - Hong Kong</a></li>
-            <li><a href="https://en.wikipedia.org/wiki/Stamp_duty_in_Hong_Kong" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Stamp Duty in Hong Kong - Wikipedia</a></li>
-            <li><a href="https://www.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Hong Kong Government Official Portal</a></li>
-            <li><a href="https://www.pwc.com/hk/en/services/tax/hong-kong-taxation.html" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">PwC Hong Kong Taxation Overview</a></li>
+            <li><a href="https://www.ird.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Inland Revenue Department (IRD) - Stamp Office Guidance</a></li>
+            <li><a href="https://www.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Hong Kong Government e-Stamping Portal</a></li>
           </ul>
         </article>
       </div>

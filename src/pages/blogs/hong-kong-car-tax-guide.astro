@@ -1,12 +1,54 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
 
-const title = "Hong Kong Car Tax Guide: First Registration Tax and Motor Vehicle Tax";
-const description = "Hong Kong car tax guide. Learn about first registration tax, motor vehicle tax, and how to calculate car tax in Hong Kong. Use our HK car tax calculator for estimates.";
+const title = "Hong Kong Car Tax Guide: First Registration Tax (FRT) & Licensing";
+const description = "Complete guide to Hong Kong car tax, First Registration Tax (FRT) tier rates, annual motor vehicle licensing fees, electric vehicle (EV) tax concessions, and calculation.";
 const image = "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1200&q=80";
+const canonical = "https://finsiva.com/blogs/hong-kong-car-tax-guide";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is First Registration Tax (FRT) calculated in Hong Kong?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "First Registration Tax (FRT) for private cars is calculated on a progressive tier system based on the taxable value of the vehicle: 46% on the first HK$150,000, 72% on the next HK$150,000, 100% on the next HK$200,000, and 115% on the remainder over HK$500,000."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are electric vehicles (EVs) exempt from First Registration Tax in Hong Kong?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under the EV concession scheme, private electric cars enjoy an FRT tax concession capped at HK$58,500. Under the 'One-for-One Replacement' Scheme (scrapping an eligible old private car), eligible buyers receive an increased FRT concession cap of up to HK$172,500."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the annual motor vehicle license fee in Hong Kong?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Annual vehicle licensing fees (Motor Vehicle Tax) for petrol private cars are determined by engine capacity (CC): HK$5,074 for ≤1,500cc, HK$7,019 for 1,501–2,500cc, HK$8,964 for 2,501–3,500cc, HK$10,910 for 3,501–4,500cc, and HK$12,855 for >4,500cc."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I pay First Registration Tax on imported used cars?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Imported used cars must undergo valuation by the Transport Department to establish their taxable value in Hong Kong before FRT is levied at standard tier rates."
+      }
+    }
+  ]
+};
 ---
 
-<BlogLayout title={title} description={description} image={image} author="David Chan" authorBio="David Chan is a tax consultant specializing in Hong Kong transport duties and vehicle registration tax." lastUpdated="July 2026" readTime="10 min read">
+<BlogLayout title={title} description={description} image={image} canonical={canonical} author="David Chan" authorBio="David Chan is a transport duty specialist covering Hong Kong First Registration Tax, vehicle licensing, and Transport Department regulations." lastUpdated="August 2026" readTime="10 min read">
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <div class="min-h-screen bg-canvas dark:bg-canvas">
     <main class="min-h-screen">
       <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
@@ -19,113 +61,111 @@ const image = "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1200&
         </nav>
 
         <article class="prose max-w-none">
-          <h1 class="text-4xl font-bold text-ink mb-4 dark:text-on-primary">Hong Kong Car Tax Guide: First Registration Tax and Motor Vehicle Tax</h1>
-          <p class="text-lg text-body dark:text-muted">Last updated: July 2026 | 10 min read</p>
+          <h1 class="text-3xl sm:text-4xl font-bold text-ink mb-4 dark:text-on-primary">Hong Kong Car Tax Guide: First Registration Tax & Motor Vehicle Licensing</h1>
+          <p class="text-lg text-body dark:text-muted">Last updated: August 2026 | Verified Transport Department Rules | 10 min read</p>
 
-          <div class="mt-8 space-y-6 text-body dark:text-muted">
-            <p>Hong Kong's car tax regime is designed to manage traffic congestion and environmental impact, resulting in some of the highest vehicle ownership costs in the world. The primary taxes are First Registration Tax and Motor Vehicle Tax, along with related registration fees and road charges. This guide covers first registration tax rates, motor vehicle tax, how taxes are calculated, exemptions, electric vehicle benefits, and how to use a Hong Kong car tax calculator for estimates.</p>
+          <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1200&q=80" alt="Hong Kong vehicle traffic and city skyline - Car Tax Guide" class="mb-6 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">First Registration Tax (FRT)</h2>
-            <p>First Registration Tax is levied on motor vehicles when they are first registered in Hong Kong. The FRT applies to passenger cars, commercial vehicles, motorcycles, and motor tricycles. The tax is calculated based on the vehicle's market value, with rates that increase in tiered bands. The objective of FRT is to discourage vehicle purchases and reduce traffic congestion. For most passenger cars, FRT can represent a substantial portion of the overall cost of ownership. The Commissioner of Transport is responsible for administering FRT and publishes detailed tables for calculation.</p>
+          <!-- Early Calculator CTA -->
+          <div class="my-6 p-6 rounded-2xl border border-primary/30 bg-primary/5 dark:border-primary/20 dark:bg-primary/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <h3 class="text-xl font-bold text-ink dark:text-on-primary">Calculate Your HK First Registration Tax (FRT)</h3>
+              <p class="text-sm text-body dark:text-muted mt-1">Estimate FRT progressive tiers, EV concessions, and total vehicle registration costs instantly.</p>
+            </div>
+            <a href="/countries/hong-kong/stamp-duty/first-registration-tax-calculator" class="btn btn-primary text-sm font-semibold shrink-0 px-5 py-2.5">
+              Launch FRT Car Tax Calculator →
+            </a>
+          </div>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Motor Vehicle Tax (MVT)</h2>
-            <p>Motor Vehicle Tax is an annual tax payable by the registered owner of a motor vehicle. The MVT is calculated based on the engine capacity of the vehicle. Smaller engine vehicles are taxed at lower rates, incentivizing fuel efficiency and lower emissions. The MVT is payable each year when the vehicle license is renewed. Late payment results in penalties and surcharges. Combined with other operating costs such as fuel, parking, and insurance, the vehicle ownership cost in Hong Kong is substantial.</p>
+          <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
+            <p>Vehicle ownership in Hong Kong involves substantial upfront duties and ongoing licensing fees designed to manage road traffic density. The primary car taxes administered by the <strong>Transport Department</strong> under the <em>Motor Vehicles (First Registration Tax) Ordinance (Cap. 330)</em> are <strong>First Registration Tax (FRT)</strong> and annual <strong>Vehicle License Fees</strong>.</p>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">How to Calculate Car Tax in Hong Kong</h2>
-            <p>To calculate the total tax on a new car in Hong Kong, you need to consider FRT, MVT, registration fees, and potentially other duties. The FRT is determined by the vehicle's carbon content classification, with higher rates for vehicles with greater carbon footprints. The MVT is determined by engine capacity. The total cost also includes the vehicle purchase price, insurance, and financing costs. Using a Hong Kong car tax calculator simplifies this process by allowing you to input the vehicle value and engine capacity to get an accurate tax estimate. Always verify the latest rates with the Transport Department or <a href="https://www.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">gov.hk</a>.</p>
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">First Registration Tax (FRT) Progressive Rates</h2>
+            <p>First Registration Tax is a one-off tax levied on private cars when first registered in Hong Kong. The tax is calculated progressively on the taxable value (published retail price or assessed import value):</p>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-keyword">Exemptions</h2>
-            <p>Certain vehicles are exempt from First Registration Tax and Motor Vehicle Tax. For example, vehicles with specific commercial classifications, emergency vehicles, and certain government-owned vehicles are exempt. Additionally, vehicles imported by visiting forces or for private use by certain diplomats may qualify for relief. The Transport Department maintains a list of exempt categories on its website. If you believe your vehicle qualifies for an exemption, you must apply for confirmation before registration.</p>
+            <div class="my-4 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+              <table class="w-full text-left text-sm">
+                <thead class="bg-canvas-soft border-b border-hairline dark:bg-surface/80 dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+                  <tr>
+                    <th class="p-3">Taxable Value Bracket (HKD)</th>
+                    <th class="p-3">FRT Rate</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+                  <tr><td class="p-3">First HK$150,000</td><td class="p-3 font-bold text-primary dark:text-on-primary">46%</td></tr>
+                  <tr><td class="p-3">Next HK$150,000 (HK$150,001 – HK$300,000)</td><td class="p-3 font-bold text-primary dark:text-on-primary">72%</td></tr>
+                  <tr><td class="p-3">Next HK$200,000 (HK$300,001 – HK$500,000)</td><td class="p-3 font-bold text-primary dark:text-on-primary">100%</td></tr>
+                  <tr><td class="p-3">Remainder (Above HK$500,000)</td><td class="p-3 font-bold text-primary dark:text-on-primary">115%</td></tr>
+                </tbody>
+              </table>
+            </div>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Electric Vehicle Benefits</h2>
-            <p>Hong Kong actively promotes electric vehicles (EVs) through various incentives. For EVs, the First Registration Tax concession is the most significant benefit. Until April 1, 2027, all newly registered purely electric private passenger cars enjoy a full waiver of the First Registration Tax, subject to a maximum value cap for each vehicle. This concession makes EVs much more affordable compared to conventional vehicles. In addition, EVs pay reduced Motor Vehicle Tax rates or are exempt in some cases. The government has repeatedly extended EV concessions as part of its Hong Kong Roadmap on Popularisation of Electric Vehicles. Check <a href="https://www.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">gov.hk</a> for the latest cap and expiry date before purchasing.</p>
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Electric Vehicle (EV) Concessions & One-for-One Scheme</h2>
+            <p>To promote clean transportation, the Hong Kong Government provides First Registration Tax concessions for Electric Vehicles (EVs):</p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>Standard EV Concession:</strong> Private electric cars receive an FRT tax concession cap of up to <strong>HK$58,500</strong>.</li>
+              <li><strong>"One-for-One Replacement" Scheme:</strong> Owners who scrap and deregister an eligible old private car to replace it with a new electric car receive an enhanced FRT concession cap of up to <strong>HK$172,500</strong>.</li>
+            </ul>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">When to Pay and Penalties</h2>
-            <p>First Registration Tax is paid at the time of vehicle registration. Motor Vehicle Tax is payable annually when renewing your vehicle license. Late payment of MVT incurs a penalty of 20% of the tax due, and failure to pay may result in the vehicle being deregistered. To avoid penalties, pay your MVT before the expiry date shown on your vehicle license. You can renew your license and pay MVT through designated payment channels or at a vehicle licensing office.</p>
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Annual Motor Vehicle Licensing Fees (MVT)</h2>
+            <p>Annual vehicle license renewal fees for petrol private passenger cars are determined by engine cylinder capacity (CC):</p>
+            <ul class="list-disc pl-6 space-y-2 font-mono text-sm">
+              <li>Engine Capacity ≤ 1,500cc: HK$5,074 / year</li>
+              <li>1,501cc – 2,500cc: HK$7,019 / year</li>
+              <li>2,501cc – 3,500cc: HK$8,964 / year</li>
+              <li>3,501cc – 4,500cc: HK$10,910 / year</li>
+              <li>Above 4,500cc: HK$12,855 / year</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Transport Department Registration Procedures</h2>
+            <p>Vehicle buyers must submit registration documents, proof of third-party insurance, vehicle inspection certificates (for vehicles aged 6+ years), and payment of FRT and license fees to the Transport Department licensing office.</p>
 
             <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Frequently Asked Questions</h2>
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">How is First Registration Tax calculated?</h3>
-            <p>FRT is calculated based on the vehicle's carbon content classification and market value. Higher carbon intensity and higher value result in higher tax. Use our car tax calculator for an estimate based on your vehicle's details.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Is there a First Registration Tax exemption for electric vehicles?</h3>
-            <p>Yes, all newly registered purely electric private passenger cars enjoy full FRT concession, subject to a maximum value cap. Check the latest announcement on <a href="https://www.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">gov.hk</a> for the updated cap.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">What is the motor vehicle tax rate in Hong Kong?</h3>
-            <p>MVT is based on engine capacity. Smaller vehicles pay less than larger vehicles. The exact rates are published by the Transport Department and vary from year to year.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Do I pay both First Registration Tax and Motor Vehicle Tax?</h3>
-            <p>Yes, when you first register a vehicle you pay FRT as a one-time tax. Each year when renewing the vehicle license, you pay MVT.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Can I defer motor vehicle tax payments?</h3>
-            <p>No. MVT must be paid before the vehicle license expires. Failure to pay results in penalties and possible deregistration of the vehicle.</p>
+            {faqSchema.mainEntity.map(faq => (
+              <div class="my-4 p-4 rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+                <h3 class="text-lg font-bold text-ink dark:text-on-primary">{faq.name}</h3>
+                <p class="text-sm text-body dark:text-muted mt-1 leading-relaxed">{faq.acceptedAnswer.text}</p>
+              </div>
+            ))}
           </div>
 
-          <div class="mt-12">
-            <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Related Calculators</h2>
+          <!-- Internal Resource Linking Grid -->
+          <div class="mt-12 pt-8 border-t border-hairline dark:border-overlay-lighter">
+            <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Hong Kong Tax Tools & Related Guides</h2>
             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              <a href="/countries/hong-kong" class="block rounded border p-4 hover:border-primary transition">More Hong Kong Calculators</a>
-              <a href="/countries/hong-kong/salaries-tax/salaries-tax-calculator" class="block rounded border p-4 hover:border-primary transition">HK Salaries Tax Calculator</a>
-              <a href="/countries/hong-kong/property-tax" class="block rounded border p-4 hover:border-primary transition">HK Property Calculators</a>
+              <a href="/countries/hong-kong/stamp-duty/first-registration-tax-calculator" class="block rounded-xl border border-hairline p-4 hover:border-primary transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+                <h3 class="font-bold text-ink dark:text-on-primary text-sm">HK FRT Car Tax Calculator</h3>
+                <p class="text-xs text-muted mt-1">Calculate FRT progressive tiers & EV concessions.</p>
+              </a>
+              <a href="/blogs/hong-kong-stamp-duty-guide" class="block rounded-xl border border-hairline p-4 hover:border-primary transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+                <h3 class="font-bold text-ink dark:text-on-primary text-sm">Hong Kong Stamp Duty Guide</h3>
+                <p class="text-xs text-muted mt-1">Property conveyancing & lease stamping.</p>
+              </a>
+              <a href="/blogs/hong-kong-property-tax-guide" class="block rounded-xl border border-hairline p-4 hover:border-primary transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+                <h3 class="font-bold text-ink dark:text-on-primary text-sm">Hong Kong Property Tax Guide</h3>
+                <p class="text-xs text-muted mt-1">15% standard rate on rental income.</p>
+              </a>
+              <a href="/blogs/hong-kong-salaries-tax-guide" class="block rounded-xl border border-hairline p-4 hover:border-primary transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+                <h3 class="font-bold text-ink dark:text-on-primary text-sm">Hong Kong Salaries Tax Guide</h3>
+                <p class="text-xs text-muted mt-1">Income tax brackets (2%-17%) & MPF rules.</p>
+              </a>
+              <a href="/blogs/hong-kong-etax-guide" class="block rounded-xl border border-hairline p-4 hover:border-primary transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+                <h3 class="font-bold text-ink dark:text-on-primary text-sm">Hong Kong eTAX Guide</h3>
+                <p class="text-xs text-muted mt-1">File tax returns online via IRD portal.</p>
+              </a>
+              <a href="/blogs/hong-kong-tax-allowances-deductions" class="block rounded-xl border border-hairline p-4 hover:border-primary transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+                <h3 class="font-bold text-ink dark:text-on-primary text-sm">Tax Allowances & Deductions</h3>
+                <p class="text-xs text-muted mt-1">Personal allowances & MPF deductions.</p>
+              </a>
             </div>
           </div>
 
-          <div class="mt-12">
-            <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Related Articles</h2>
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              <a href="/blogs/hong-kong-stamp-duty-guide" class="block rounded border p-4 hover:border-primary transition">Hong Kong Stamp Duty Guide</a>
-              <a href="/blogs/hong-kong-property-tax-guide" class="block rounded border p-4 hover:border-primary transition">Hong Kong Property Tax Guide</a>
-              <a href="/blogs/hong-kong-tax-deadline-calendar" class="block rounded border p-4 hover:border-primary transition">Hong Kong Tax Deadline Calendar</a>
-            </div>
-          </div>
-
-          <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1200&q=80" alt="Hong Kong skyline and urban traffic" class="mb-6 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
-
-          <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Interesting Facts</h2>
+          <h2 class="text-2xl font-semibold text-ink mt-12 mb-6 dark:text-on-primary">Official Authorities & References</h2>
           <ul class="list-disc pl-6 space-y-2 text-body dark:text-muted">
-            <li>Hong Kong's First Registration Tax can exceed 100% of a vehicle's value for high-emission luxury cars.</li>
-            <li>The territory has one of the lowest car ownership rates in the world, with only about 7-8% of households owning a private car.</li>
-            <li>Electric vehicles registered before April 2027 enjoy a full waiver of First Registration Tax, subject to a cap.</li>
-            <li>Motor Vehicle Tax is calculated based on engine capacity, with smaller engines paying significantly less.</li>
-          </ul>
-
-          <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Quick Quiz</h2>
-          <div class="space-y-4">
-            <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
-              <p class="font-medium text-ink dark:text-on-primary">1. What is the primary purpose of Hong Kong's First Registration Tax?</p>
-              <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
-                <li>To raise general government revenue</li>
-                <li>To discourage vehicle purchases and reduce traffic congestion</li>
-                <li>To fund road maintenance</li>
-                <li>To subsidize public transport</li>
-              </ul>
-            </div>
-            <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
-              <p class="font-medium text-ink dark:text-on-primary">2. Which vehicles currently enjoy a full waiver of First Registration Tax in Hong Kong?</p>
-              <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
-                <li>All hybrid vehicles</li>
-                <li>All purely electric private passenger cars (subject to a cap)</li>
-                <li>All commercial vehicles</li>
-                <li>All vehicles under 1.5L engine</li>
-              </ul>
-            </div>
-            <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
-              <p class="font-medium text-ink dark:text-on-primary">3. How is Motor Vehicle Tax (MVT) calculated in Hong Kong?</p>
-              <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
-                <li>Based on vehicle weight</li>
-                <li>Based on engine capacity</li>
-                <li>Based on vehicle value</li>
-                <li>Based on fuel type</li>
-              </ul>
-            </div>
-          </div>
-
-          <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Further Reading</h2>
-          <ul class="list-disc pl-6 space-y-2 text-body dark:text-muted">
+            <li><a href="https://www.td.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Transport Department - First Registration Tax & Licensing</a></li>
+            <li><a href="https://www.epd.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Environmental Protection Department - EV Concession Scheme</a></li>
             <li><a href="https://www.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Hong Kong Government Official Portal</a></li>
-            <li><a href="https://www.td.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Transport Department – Official Site</a></li>
-            <li><a href="https://www.eaa.org.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Electric Automobile Association of Hong Kong</a></li>
           </ul>
-
         </article>
       </div>
     </main>

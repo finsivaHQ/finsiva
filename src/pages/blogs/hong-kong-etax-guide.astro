@@ -1,12 +1,54 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
 
-const title = "Hong Kong eTAX Guide: How to File Taxes Online in 2025";
-const description = "Hong Kong eTAX guide for filing taxes online. Learn how to register for eTAX, file your salaries tax return, check your assessment, and pay tax online.";
+const title = "Hong Kong eTAX Guide: How to File & Pay Taxes Online";
+const description = "Complete Hong Kong eTAX guide. Learn how to open an eTAX account, file individual tax returns (BIR60), view assessments, request holdover, and pay online.";
 const image = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80";
+const canonical = "https://finsiva.com/blogs/hong-kong-etax-guide";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the Inland Revenue Department eTAX portal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "eTAX is the IRD's online portal for electronic tax filing, viewing tax notices of assessment, calculating tax obligations, filing holdover applications, and managing electronic payments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What extension do I get for filing my tax return on eTAX?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Taxpayers who file their Tax Return for Individuals (Form BIR60) electronically through eTAX automatically receive a 1-month filing extension beyond the standard 1-month paper return deadline."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I apply for a holdover of provisional tax on eTAX?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can submit an online holdover application on eTAX at least 28 days before the payment due date if your assessable income has dropped by more than 10% compared to the previous year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What payment methods are supported by IRD eTAX?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "eTAX supports electronic tax payments via PPS, FPS (Faster Payment System), internet banking, credit cards, and automated teller machines (ATMs)."
+      }
+    }
+  ]
+};
 ---
 
-<BlogLayout title={title} description={description} image={image} author="Michael Tang" authorBio="Michael Tang is a tax technology specialist covering IRD e-services and digital tax filing." lastUpdated="July 2026" readTime="10 min read">
+<BlogLayout title={title} description={description} image={image} canonical={canonical} author="Michael Tang" authorBio="Michael Tang is a tax technology analyst specializing in IRD electronic tax services, digital return filing, and eTAX procedures." lastUpdated="August 2026" readTime="10 min read">
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <div class="min-h-screen bg-canvas dark:bg-canvas">
     <main class="min-h-screen">
       <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
@@ -19,119 +61,100 @@ const image = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=12
         </nav>
 
         <article class="prose max-w-none">
-          <h1 class="text-4xl font-bold text-ink mb-4 dark:text-on-primary">Hong Kong eTAX Guide: How to File Taxes Online in 2025</h1>
-          <p class="text-lg text-body dark:text-muted">Last updated: July 2026 | 10 min read</p>
+          <h1 class="text-3xl sm:text-4xl font-bold text-ink mb-4 dark:text-on-primary">Hong Kong eTAX Guide: Online Tax Filing, Assessments & Payment</h1>
+          <p class="text-lg text-body dark:text-muted">Last updated: August 2026 | Verified IRD e-Services Guide | 10 min read</p>
 
-          <div class="mt-8 space-y-6 text-body dark:text-muted">
-            <p>The Inland Revenue Department's eTAX system is the fastest and most convenient way to manage your Hong Kong taxes online. From filing individual returns to viewing assessments, paying tax, and applying for holdover of provisional tax, eTAX streamlines every step of the tax process. This guide explains how to register for eTAX, file your salaries tax return, check your assessment, pay taxes, and resolve common eTAX issues. For a complete picture of filing requirements, read our <a href="/blogs/hong-kong-tax-deadline-calendar" class="text-link hover:underline dark:text-link">Hong Kong tax deadline calendar</a>.</p>
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80" alt="Online tax filing on laptop computer - HK eTAX Guide" class="mb-6 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">How to Register for eTAX</h2>
-            <p>Registering for eTAX requires your personal details and identification. You can register online using your Hong Kong identity card number and other identifying information, or you may request an invitation code from the IRD by calling their customer service hotline. Once registered, you will receive a user account credentials email with instructions to activate your account. The IRD recommends using a strong, unique password and enabling two-factor authentication where available. After activation, you can log in using your eTAX account number and password to access all IRD services.</p>
+          <!-- Early Calculator CTA -->
+          <div class="my-6 p-6 rounded-2xl border border-primary/30 bg-primary/5 dark:border-primary/20 dark:bg-primary/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <h3 class="text-xl font-bold text-ink dark:text-on-primary">Estimate Your Tax Before Filing on eTAX</h3>
+              <p class="text-sm text-body dark:text-muted mt-1">Check progressive vs standard rate calculations and allowable MPF deductions instantly.</p>
+            </div>
+            <a href="/countries/hong-kong/salaries-tax/salaries-tax-calculator" class="btn btn-primary text-sm font-semibold shrink-0 px-5 py-2.5">
+              Launch HK Tax Calculator →
+            </a>
+          </div>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Filing Individual Tax Returns</h2>
-            <p>Filing your individual tax return on eTAX is straightforward. After logging in, select the tax year and the type of return you wish to file. For most individuals, this is the Salaries Tax Return (BIR60). You can enter your employment income, MPF contributions, personal allowances, and allowable deductions directly in the eTAX interface. The system will automatically calculate your tax under both the progressive rate and standard rate, showing which is more favorable. You can save a draft return and return to it later before submission. Once submitted, you will receive an electronic confirmation.</p>
+          <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
+            <p>The Inland Revenue Department's <strong>eTAX system</strong> is the official digital portal for managing individual and corporate tax obligations in Hong Kong. Using eTAX allows taxpayers to file returns electronically, receive automatic filing extensions, view notices of assessment, pay taxes online, and submit holdover applications seamlessly.</p>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Viewing Your Assessment</h2>
-            <p>After submitting your tax return, you can view your assessment notice online through eTAX. The assessment notice shows your total assessable income, deductions, taxable income, tax payable under both rate systems, and any provisional tax due. Review the assessment carefully to ensure all allowances and deductions were correctly applied. If you notice an error, you can notify the IRD through eTAX or in writing. For complex corrections, you may need to provide additional supporting documents. Our <a href="/blogs/hong-kong-tax-allowances-deductions" class="text-link hover:underline dark:text-link">Hong Kong tax allowances and deductions guide</a> can help you verify your assessment calculations.</p>
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">How to Register & Log In to eTAX</h2>
+            <p>To register for an eTAX account, visit the official IRD website (<a href="https://www.ird.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">ird.gov.hk</a>) or use <strong>iAM Smart</strong> digital identity authentication:</p>
+            <ol class="list-decimal pl-6 space-y-2">
+              <li><strong>Via iAM Smart+:</strong> Log in instantly using your mobile iAM Smart app with digital signing functionality.</li>
+              <li><strong>Via TIN & Password:</strong> Request an Access Code online using your HKID number and Taxpayer Identification Number (TIN). The IRD will send an authentication password by post or SMS.</li>
+            </ol>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Paying Tax Online</h2>
-            <p>eTAX supports multiple electronic payment options. You can pay using a credit card, PPS, or bank transfer through the IRD's secure payment portal. Payments made through eTAX are instantly reflected in your tax account. You can also authorize automatic payments or set up recurring payments for provisional tax installments. Always keep a record of your payment confirmation for future reference. If you are unsure about the amount due, check your assessment notice or use our <a href="/countries/hong-kong/salaries-tax/salaries-tax-calculator" class="text-link hover:underline dark:text-link">Hong Kong tax calculator</a> to estimate your liability before paying.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Holdover Applications</h2>
-            <p>If you anticipate that your income will decrease in the coming year, you can apply for a holdover of provisional tax through eTAX. The application requires you to provide an estimate of your expected income for the next year and supporting evidence, such as a contract of employment or financial projection. The IRD will review your application and notify you of the outcome. A successful holdover reduces your immediate financial burden and aligns your payments with your actual tax liability. See our <a href="/blogs/hong-kong-provisional-tax-guide" class="text-link hover:underline dark:text-link">Hong Kong provisional tax guide</a> for more on when to apply.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Common eTAX Issues</h2>
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Filing Individual Tax Returns (Form BIR60)</h2>
+            <p>The IRD issues individual tax returns (BIR60) in early May each year. Key benefits of filing Form BIR60 via eTAX include:</p>
             <ul class="list-disc pl-6 space-y-2">
-              <li><strong>Account access problems:</strong> If you have forgotten your password, use the account recovery option. Contact the IRD if you encounter persistent login issues.</li>
-              <li><strong>Failed submissions:</strong> Ensure all required fields are completed and all supporting documents are attached before submitting. Save drafts to avoid losing work.</li>
-              <li><strong>Incorrect assessment:</strong> If eTAX displays an assessment you believe is wrong, submit an objection through the system or in writing within one month of the notice date.</li>
-              <li><strong>Payment not reflected:</strong> Payments may take up to three business days to appear. If the delay persists, check your bank statement and contact the IRD with your payment reference number.</li>
+              <li><strong>Automatic 1-Month Filing Extension:</strong> eTAX users receive an extended deadline (typically July 1 instead of June 1).</li>
+              <li><strong>Pre-filled Information:</strong> Salary data reported by your employer (Form BIR56B) and previous year allowance claims are automatically pre-populated.</li>
+              <li><strong>Built-in Tax Estimator:</strong> eTAX automatically compares progressive rates (2% to 17%) against the 15% standard rate cap to determine your optimal calculation.</li>
             </ul>
-            <p>For immediate assistance, visit <a href="https://www.ird.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">ird.gov.hk</a> or use the online enquiry form.</p>
+
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Viewing Assessment Notices & Electronic Demand Notes</h2>
+            <p>After filing, notices of assessment and tax demand notes are issued electronically to your eTAX Message Box between October and January. The notice details your final tax assessment for the current year and the provisional tax estimate for the upcoming year.</p>
+
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Electronic Tax Payment Methods</h2>
+            <p>Taxpayers can pay HK tax demand notes directly through several digital channels:</p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>Faster Payment System (FPS):</strong> Scan the QR code on your eTAX demand note using your banking app.</li>
+              <li><strong>PPS (Pay by Phone Service):</strong> Enter merchant code `10` and your 11-digit payment reference number.</li>
+              <li><strong>Credit Card & E-Banking:</strong> Pay via online banking or credit card portals.</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Applying for Holdover of Provisional Tax Online</h2>
+            <p>If your employment income drops by more than 10%, or if you become eligible for new personal allowances (e.g., birth of a child, marriage), you can submit an online <strong>Holdover of Provisional Tax Application</strong> via eTAX at least 28 days before the payment due date.</p>
 
             <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Frequently Asked Questions</h2>
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">What is eTAX?</h3>
-            <p>eTAX is the Inland Revenue Department's electronic filing and tax management system. It allows taxpayers to file returns, view assessments, pay tax, and apply for holdover online.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">How do I log in to eTAX?</h3>
-            <p>Log in using your eTAX account number and password. If you have not yet registered, visit <a href="https://www.ird.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">ird.gov.hk</a> and click the eTAX registration link to create an account.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Can I file my profits tax return online?</h3>
-            <p>Yes, authorized signatories and tax representatives can file corporation profits tax returns through eTAX. See our <a href="/blogs/hong-kong-profits-tax-guide" class="text-link hover:underline dark:text-link">Hong Kong profits tax guide</a> for filing requirements.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">How long does it take for eTAX to process my payment?</h3>
-            <p>Most online payments are reflected within three business days. Credit card and PPS payments are typically instant. If there is a delay, contact the IRD with your payment reference number.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Can I download my tax record from eTAX?</h3>
-            <p>Yes, you can view and download your assessment notices, payment records, and return filings from the eTAX dashboard. Save or print these records for your personal files.</p>
+            {faqSchema.mainEntity.map(faq => (
+              <div class="my-4 p-4 rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+                <h3 class="text-lg font-bold text-ink dark:text-on-primary">{faq.name}</h3>
+                <p class="text-sm text-body dark:text-muted mt-1 leading-relaxed">{faq.acceptedAnswer.text}</p>
+              </div>
+            ))}
           </div>
 
-          <div class="mt-12">
-            <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Related Calculators</h2>
+          <!-- Internal Resource Linking Grid -->
+          <div class="mt-12 pt-8 border-t border-hairline dark:border-overlay-lighter">
+            <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Hong Kong Tax Tools & Related Guides</h2>
             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              <a href="/countries/hong-kong/salaries-tax/salaries-tax-calculator" class="block rounded border p-4 hover:border-primary transition">HK Salaries Tax Calculator</a>
-              <a href="/countries/hong-kong/profits-tax/profits-tax-calculator" class="block rounded border p-4 hover:border-primary transition">HK Profits Tax Calculator</a>
-              <a href="/countries/hong-kong" class="block rounded border p-4 hover:border-primary transition">More Hong Kong Calculators</a>
+              <a href="/countries/hong-kong/salaries-tax/salaries-tax-calculator" class="block rounded-xl border border-hairline p-4 hover:border-primary transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+                <h3 class="font-bold text-ink dark:text-on-primary text-sm">HK Salaries Tax Calculator</h3>
+                <p class="text-xs text-muted mt-1">Estimate tax bill before eTAX filing.</p>
+              </a>
+              <a href="/blogs/hong-kong-salaries-tax-guide" class="block rounded-xl border border-hairline p-4 hover:border-primary transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+                <h3 class="font-bold text-ink dark:text-on-primary text-sm">Hong Kong Salaries Tax Guide</h3>
+                <p class="text-xs text-muted mt-1">Progressive brackets (2%-17%) & MPF rules.</p>
+              </a>
+              <a href="/blogs/hong-kong-tax-allowances-deductions" class="block rounded-xl border border-hairline p-4 hover:border-primary transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+                <h3 class="font-bold text-ink dark:text-on-primary text-sm">Tax Allowances & Deductions</h3>
+                <p class="text-xs text-muted mt-1">Personal allowances & MPF deductions.</p>
+              </a>
+              <a href="/blogs/hong-kong-property-tax-guide" class="block rounded-xl border border-hairline p-4 hover:border-primary transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+                <h3 class="font-bold text-ink dark:text-on-primary text-sm">Hong Kong Property Tax Guide</h3>
+                <p class="text-xs text-muted mt-1">File property tax returns on eTAX.</p>
+              </a>
+              <a href="/blogs/hong-kong-stamp-duty-guide" class="block rounded-xl border border-hairline p-4 hover:border-primary transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+                <h3 class="font-bold text-ink dark:text-on-primary text-sm">Hong Kong Stamp Duty Guide</h3>
+                <p class="text-xs text-muted mt-1">Online e-Stamping for leases & sales.</p>
+              </a>
+              <a href="/blogs/hong-kong-car-tax-guide" class="block rounded-xl border border-hairline p-4 hover:border-primary transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+                <h3 class="font-bold text-ink dark:text-on-primary text-sm">Hong Kong Car Tax Guide</h3>
+                <p class="text-xs text-muted mt-1">First Registration Tax & licensing.</p>
+              </a>
             </div>
           </div>
 
-          <div class="mt-12">
-            <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Related Articles</h2>
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              <a href="/blogs/hong-kong-tax-deadline-calendar" class="block rounded border p-4 hover:border-primary transition">Hong Kong Tax Deadline Calendar</a>
-              <a href="/blogs/hong-kong-salaries-tax-guide" class="block rounded border p-4 hover:border-primary transition">Hong Kong Salaries Tax Guide</a>
-              <a href="/blogs/hong-kong-provisional-tax-guide" class="block rounded border p-4 hover:border-primary transition">Hong Kong Provisional Tax Guide</a>
-            </div>
-          </div>
-
-          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&q=80" alt="Computer screen showing online tax filing" class="mb-6 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
-
-          <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Interesting Facts</h2>
+          <h2 class="text-2xl font-semibold text-ink mt-12 mb-6 dark:text-on-primary">Official Authorities & References</h2>
           <ul class="list-disc pl-6 space-y-2 text-body dark:text-muted">
-            <li>eTAX processes millions of tax transactions annually, making it one of the most used government e-services in Hong Kong.</li>
-            <li>The eTAX system automatically calculates tax under both the progressive rate and standard rate, helping taxpayers identify the more favorable option.</li>
-            <li>You can apply for a holdover of provisional tax entirely online through eTAX without visiting an IRD office.</li>
-            <li>Payment confirmations through eTAX are instant, and most online payments are reflected within three business days.</li>
+            <li><a href="https://www.ird.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Inland Revenue Department (IRD) - eTAX Official Portal</a></li>
+            <li><a href="https://www.iam-smart.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">iAM Smart Digital Identity Portal</a></li>
+            <li><a href="https://www.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Hong Kong Government Official Portal</a></li>
           </ul>
-
-          <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Quick Quiz</h2>
-          <div class="space-y-4">
-            <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
-              <p class="font-medium text-ink dark:text-on-primary">1. What is the primary benefit of using eTAX for filing individual tax returns in Hong Kong?</p>
-              <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
-                <li>Higher tax refunds</li>
-                <li>Faster processing and instant confirmation</li>
-                <li>Exemption from provisional tax</li>
-                <li>Automatic audit protection</li>
-              </ul>
-            </div>
-            <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
-              <p class="font-medium text-ink dark:text-on-primary">2. Which type of return do most individuals file on eTAX?</p>
-              <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
-                <li>BIR52</li>
-                <li>BIR60</li>
-                <li>BIR56B</li>
-                <li>BIR57</li>
-              </ul>
-            </div>
-            <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
-              <p class="font-medium text-ink dark:text-on-primary">3. How long does it typically take for an online payment to be reflected in your eTAX account?</p>
-              <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
-                <li>Instantly</li>
-                <li>Up to 3 business days</li>
-                <li>7 business days</li>
-                <li>14 business days</li>
-              </ul>
-            </div>
-          </div>
-
-          <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Further Reading</h2>
-          <ul class="list-disc pl-6 space-y-2 text-body dark:text-muted">
-            <li><a href="https://www.ird.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Inland Revenue Department – Official Site</a></li>
-            <li><a href="https://www.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Hong Kong Government Digital Services</a></li>
-            <li><a href="https://www.cyberport.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Cyberport – Digital Government Initiatives</a></li>
-          </ul>
-
         </article>
       </div>
     </main>
