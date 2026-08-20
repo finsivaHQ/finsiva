@@ -526,11 +526,11 @@ export const calculatorContent: Record<string, RichCalculatorContent> = {
 
     "overview": {
       "title": "Overview",
-      "html": "<p>This calculator helps you estimate your tax liability. Enter your details below for an estimate based on current tax rules.</p>"
+      "html": "<p>This Pakistan Sales Tax Calculator estimates 18% federal GST on taxable goods, input tax credits, and gross amounts per FBR Sales Tax Act 1990 rules. Use it to calculate inclusive/exclusive sales tax amounts before filing monthly FBR Iris returns by the 18th.</p>"
     },
     "workedExample": {
       "title": "Example Calculation",
-      "html": "<p>Example: with an annual income of $50,000, the estimated tax would be calculated using the applicable rates. Use the calculator above for your specific situation.</p>"
+      "html": "<p>For a net transaction value of PKR 100,000 at the standard 18% FBR sales tax rate:<br>• Net Sales Value: PKR 100,000<br>• Output Sales Tax (18%): PKR 18,000<br>• Gross Invoice Amount: PKR 118,000.</p>"
     },
     "benefits": {
       "title": "Benefits of Using This Calculator",
@@ -3288,101 +3288,97 @@ export const calculatorContent: Record<string, RichCalculatorContent> = {
     }
   },
   "pakistan-vehicle-tax-vehicle-tax-calculator": {
-    "howToUse": { "title": "How to Use", "html": "<p>Calculate vehicle token tax in Pakistan by province.</p>" },
-    "understandingResults": { "title": "Understanding Results", "html": "<p><strong>Vehicle Tax:</strong> Based on engine capacity and province.</p>" },
-    "formula": { "title": "Formula", "html": "<p>Token tax = flat fee based on cc and province.</p>" },
-    "taxSlabs": { "title": "Tax Slabs", "html": "<p>&lt;800cc: $50. 800-1300cc: $100. 1300-1500cc: $150. 1500-1800cc: $200. 1800-2000cc: $300. 2000-2500cc: $400. &gt;2500cc: $500.</p>" },
-    "commonMistakes": { "title": "Common Mistakes", "html": "<ul class='list-disc pl-6 space-y-2'><li>Wrong province rates.</li></ul>" },
-    "relatedCalculators": { "title": "Related Calculators", "html": "<a href='/countries/pakistan/vehicle-tax/sindh-vehicle-tax-calculator'>Sindh Vehicle Tax</a>" },
-    "suggestedArticles": { "title": "Suggested Articles", "html": "<a href='/countries/pakistan/vehicle-tax'>Vehicle Tax Guide</a>" },
-    "officialResources": { "title": "Official Resources", "html": "<a href='https://www.fbr.gov.pk'>FBR Pakistan</a>" },
-    "faqSchema": { "How much is token tax in Pakistan?":"PKR 50-$500 depending on engine capacity and province." },
+    "howToUse": { "title": "How to Use", "html": "<p>Select your province (Punjab, Sindh, KPK, ICT), enter your vehicle engine capacity (CC), vehicle type, and select FBR Active Taxpayer List (ATL) filer status to estimate annual vehicle token tax and advance withholding tax.</p>" },
+    "understandingResults": { "title": "Understanding Results", "html": "<p><strong>Base Token Tax:</strong> Provincial excise fee for legal road authorization.<br><strong>FBR Withholding Tax:</strong> Advance tax collected by FBR (reduced by 50% for active filers).<br><strong>Total Payable:</strong> Combined annual token tax bill due by 31 August for early-payment rebate.</p>" },
+    "formula": { "title": "Formula", "html": "<p>Total Token Tax = Provincial Base Rate (by CC & Age) + FBR Section 234 Advance Tax (Filer vs Non-Filer rate).</p>" },
+    "taxSlabs": { "title": "Token Tax CC Slabs", "html": "<p><strong>Up to 850cc:</strong> PKR 1,000–2,000 base.<br><strong>851cc–1000cc:</strong> PKR 2,500 base + PKR 10,000 lifetime option.<br><strong>1001cc–1300cc:</strong> PKR 3,000–5,000.<br><strong>1301cc–1500cc:</strong> PKR 6,000–10,000 (Filer: PKR 2,500 WHT vs Non-Filer: PKR 5,000 WHT).<br><strong>1501cc–2000cc:</strong> PKR 12,000–18,000 (Filer: PKR 6,000 WHT vs Non-Filer: PKR 12,000 WHT).<br><strong>Above 2000cc:</strong> Progressive tiers up to PKR 30,000+.</p>" },
+    "commonMistakes": { "title": "Common Mistakes", "html": "<ul class='list-disc pl-6 space-y-2'><li>Assuming non-filer withholding rates apply after maintaining active ATL status.</li><li>Missing the 31 August 10% early-payment rebate deadline in Punjab and Sindh.</li><li>Confusing annual token tax with one-time vehicle registration or transfer fees.</li></ul>" },
+    "relatedCalculators": { "title": "Related Calculators", "html": "<a href='/countries/pakistan/vehicle-tax/sindh-vehicle-tax-calculator'>Sindh Vehicle Tax Calculator</a> | <a href='/countries/pakistan/property-tax/token-tax-calculator'>Token Tax Calculator</a>" },
+    "suggestedArticles": { "title": "Suggested Articles", "html": "<a href='/blogs/pakistan-vehicle-tax-guide'>Pakistan Vehicle Tax Guide</a> | <a href='/blogs/pakistan-token-tax-guide'>Pakistan Token Tax Guide</a>" },
+    "officialResources": { "title": "Official Resources", "html": "<a href='https://www.fbr.gov.pk' target='_blank' rel='noopener noreferrer'>FBR Official Portal</a> | <a href='https://epay.punjab.gov.pk' target='_blank' rel='noopener noreferrer'>ePay Punjab</a>" },
+    "faqSchema": { "How much is vehicle token tax in Pakistan?": "Token tax varies by engine CC and province, ranging from PKR 1,000 for small cars up to PKR 25,000+ for large SUVs, with 50% withholding discounts for FBR filers." },
 
     "overview": {
       "title": "Overview",
-      "html": "<p>This calculator helps you estimate your tax liability. Enter your details below for an estimate based on current tax rules.</p>"
+      "html": "<p>This Pakistan Vehicle Tax Calculator estimates annual token tax, advance withholding tax under Section 234 of the Income Tax Ordinance, and provincial excise charges across Punjab, Sindh, KPK, and Islamabad (ICT). FBR Active Taxpayer List (ATL) filers receive a 50% discount on withholding tax components.</p>"
     },
     "workedExample": {
       "title": "Example Calculation",
-      "html": "<p>Example: with an annual income of $50,000, the estimated tax would be calculated using the applicable rates. Use the calculator above for your specific situation.</p>"
+      "html": "<p>For a 1300cc car in Punjab owned by an FBR Active Filer:<br>• Base Provincial Token Tax: PKR 2,500<br>• Section 234 FBR Advance WHT: PKR 2,500<br>• Estimated Total Payable: PKR 5,000 (versus PKR 7,500 for a non-filer).</p>"
     },
     "benefits": {
-      "title": "Benefits of Using This Calculator",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Instant tax estimates</li><li>Up-to-date rates</li><li>Easy to use</li><li>Helps with financial planning</li></ul>"
+      "title": "Key Features",
+      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Provincial CC slab calculations for Punjab, Sindh, KPK, and ICT</li><li>FBR active filer vs non-filer withholding tax breakdown</li><li>Updated for current fiscal year schedules</li><li>Instant estimate for budget planning</li></ul>"
     },
     "limitations": {
-      "title": "Limitations",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>This is an estimate only</li><li>Does not cover all deductions or credits</li><li>Tax laws change frequently</li><li>Consult a professional for complex situations</li></ul>"
+      "title": "Notice",
+      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Estimates do not include late payment surcharge penalties accrued past August 31.</li><li>Commercial and luxury vehicle surcharges are computed per provincial excise notices.</li><li>Always verify final PSID generated through ePay Punjab or e-Payment GOS.</li></ul>"
     },
     "faq": [
       {
-        "question": "What is the standard tax rate?",
-        "answer": "Rates vary by income level and jurisdiction."
+        "question": "Do FBR filers pay lower vehicle token tax in Pakistan?",
+        "answer": "Yes. Active FBR filers pay 50% lower withholding tax under Section 234 compared to non-filers across all engine capacities."
       },
       {
-        "question": "How accurate is this calculator?",
-        "answer": "This calculator provides estimates based on current tax rules. For precise calculations, consult a tax professional."
+        "question": "What is the early payment token tax rebate?",
+        "answer": "Punjab and Sindh grant a 10% discount on base token tax if paid on or before 31 August."
       }
     ],
     "relatedCountry": {
       "title": "Related Country",
-      "html": "<p>Explore tax calculators for other countries.</p>"
+      "html": "<p>Explore tax tools for <a href='/countries/pakistan'>Pakistan Tax Overview</a> and <a href='/countries/india'>India Tax Guide</a>.</p>"
     },
     "educationalDisclaimer": {
       "title": "Educational Disclaimer",
-      "text": "This calculator is for informational and educational purposes only. It does not constitute legal or tax advice. Always consult a qualified professional."
+      "text": "This calculator provides estimates for informational and tax planning purposes based on published provincial excise schedules and FBR withholding tax rules."
     }
   },
   "pakistan-vehicle-tax-sindh-vehicle-tax-calculator": {
-    "howToUse": { "title": "How to Use", "html": "<p>Calculate Sindh vehicle token tax and transfer fees.</p>" },
-    "understandingResults": { "title": "Understanding Results", "html": "<p><strong>Vehicle Tax:</strong> Token tax. <strong>Transfer Fee:</strong> Ownership change fee.</p>" },
-    "formula": { "title": "Formula", "html": "<p>Token tax based on engine capacity. Transfer fee based on value.</p>" },
-    "taxSlabs": { "title": "Tax Slabs", "html": "<p>Engine capacity based tiers.</p>" },
-    "commonMistakes": { "title": "Common Mistakes", "html": "<ul class='list-disc pl-6 space-y-2'><li>Confusing token tax with road tax.</li></ul>" },
+    "howToUse": { "title": "How to Use", "html": "<p>Enter engine capacity (CC), vehicle age, and ownership status to calculate annual Sindh Excise vehicle token tax and ownership transfer fees.</p>" },
+    "understandingResults": { "title": "Understanding Results", "html": "<p><strong>Sindh Token Tax:</strong> Annual excise fee payable via e-Payment GOS.<br><strong>Lifetime Option:</strong> One-time PKR 20,000 fee for new cars up to 1000cc.<br><strong>Transfer Fee:</strong> Provincial fee for ownership transfer based on vehicle class.</p>" },
+    "formula": { "title": "Formula", "html": "<p>Total Sindh Charge = Annual Excise Token Tax + Smart Card Fee (PKR 750) + Ownership Transfer Fee.</p>" },
+    "taxSlabs": { "title": "Sindh Excise Slabs", "html": "<p><strong>Up to 1000cc:</strong> PKR 20,000 lifetime or PKR 1,000–2,000 annual.<br><strong>1001cc–1300cc:</strong> PKR 3,000–4,500 annual.<br><strong>1301cc–1500cc:</strong> PKR 6,000 annual.<br><strong>Above 1500cc:</strong> PKR 9,000+ progressive rates.</p>" },
+    "commonMistakes": { "title": "Common Mistakes", "html": "<ul class='list-disc pl-6 space-y-2'><li>Entering unverified PSID numbers on the e-Payment GOS app.</li><li>Forgetting to transfer smart card ownership within 30 days of purchase.</li></ul>" },
     "relatedCalculators": { "title": "Related Calculators", "html": "<a href='/countries/pakistan/vehicle-tax/vehicle-tax-calculator'>Vehicle Tax Calculator</a>" },
-    "suggestedArticles": { "title": "Suggested Articles", "html": "<a href='/countries/pakistan/vehicle-tax'>Vehicle Tax Guide</a>" },
-    "officialResources": { "title": "Official Resources", "html": "<a href='https://www.fbr.gov.pk'>FBR Pakistan</a>" },
-    "faqSchema": { "What is Sindh vehicle token tax?":"Provincial token tax based on engine capacity." },
+    "suggestedArticles": { "title": "Suggested Articles", "html": "<a href='/blogs/pakistan-vehicle-tax-guide'>Pakistan Vehicle Tax Guide</a> | <a href='/blogs/pakistan-token-tax-guide'>Token Tax Guide</a>" },
+    "officialResources": { "title": "Official Resources", "html": "<a href='https://excise.gos.pk' target='_blank' rel='noopener noreferrer'>Sindh Excise Portal</a>" },
+    "faqSchema": { "How much is Sindh vehicle token tax?": "Annual token tax ranges from PKR 1,000 for small cars up to PKR 15,000+ for large engines, with a lifetime option of PKR 20,000 for cars up to 1000cc." },
 
     "overview": {
       "title": "Overview",
-      "html": "<p>This calculator helps you estimate your tax liability. Enter your details below for an estimate based on current tax rules.</p>"
+      "html": "<p>Calculate annual Sindh Excise vehicle token tax, lifetime token tax options, and vehicle ownership transfer fees according to the Sindh Excise, Taxation and Narcotics Control Department schedule.</p>"
     },
     "workedExample": {
       "title": "Example Calculation",
-      "html": "<p>Example: with an annual income of $50,000, the estimated tax would be calculated using the applicable rates. Use the calculator above for your specific situation.</p>"
+      "html": "<p>For a 1200cc car in Karachi, Sindh (2 years old):<br>• Annual Token Tax: PKR 3,500<br>• Ownership Transfer Fee: PKR 2,000<br>• Total Payable: PKR 5,500.</p>"
     },
     "benefits": {
-      "title": "Benefits of Using This Calculator",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Instant tax estimates</li><li>Up-to-date rates</li><li>Easy to use</li><li>Helps with financial planning</li></ul>"
+      "title": "Key Benefits",
+      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Specific to Sindh Excise and e-Payment GOS rules</li><li>Includes lifetime token tax thresholds</li><li>Calculates ownership transfer charges</li></ul>"
     },
     "limitations": {
-      "title": "Limitations",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>This is an estimate only</li><li>Does not cover all deductions or credits</li><li>Tax laws change frequently</li><li>Consult a professional for complex situations</li></ul>"
+      "title": "Notice",
+      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Valid for vehicles registered with Sindh Excise.</li><li>Verify final PSID on e-Payment GOS before payment.</li></ul>"
     },
     "faq": [
       {
-        "question": "What is the standard tax rate?",
-        "answer": "Rates vary by income level and jurisdiction."
-      },
-      {
-        "question": "How accurate is this calculator?",
-        "answer": "This calculator provides estimates based on current tax rules. For precise calculations, consult a tax professional."
+        "question": "What is the lifetime token tax rate in Sindh?",
+        "answer": "Sindh offers a one-time lifetime token tax of PKR 20,000 for new vehicles up to 1000cc."
       }
     ],
     "relatedCountry": {
       "title": "Related Country",
-      "html": "<p>Explore tax calculators for other countries.</p>"
+      "html": "<p>Explore <a href='/countries/pakistan'>Pakistan Tax Overview</a>.</p>"
     },
     "educationalDisclaimer": {
       "title": "Educational Disclaimer",
-      "text": "This calculator is for informational and educational purposes only. It does not constitute legal or tax advice. Always consult a qualified professional."
+      "text": "This calculator is an estimation tool based on Sindh Excise schedules."
     }
   },
   "pakistan-vehicle-tax-islamabad-vehicle-tax-calculator": {
-    "howToUse": { "title": "How to Use", "html": "<p>Calculate Islamabad vehicle token tax.</p>" },
-    "understandingResults": { "title": "Understanding Results", "html": "<p><strong>Vehicle Tax:</strong> Token tax amount.</p>" },
-    "formula": { "title": "Formula", "html": "<p>Based on engine capacity and vehicle type.</p>" },
+    "howToUse": { "title": "How to Use", "html": "<p>Enter engine capacity (CC) and vehicle type to compute Islamabad Excise (ICT) token tax and MTMIS charges.</p>" },
+    "understandingResults": { "title": "Understanding Results", "html": "<p><strong>Islamabad Token Tax:</strong> Annual excise fee + FBR advance withholding tax collected via MTMIS Islamabad.</p>" },
+    "formula": { "title": "Formula", "html": "<p>ICT Token Tax = Base ICT Rate + FBR Section 234 WHT (Filer / Non-Filer).</p>" },
     "taxSlabs": { "title": "Tax Slabs", "html": "<p>Capacity based tiers.</p>" },
     "commonMistakes": { "title": "Common Mistakes", "html": "<ul class='list-disc pl-6 space-y-2'><li>Using wrong province rates.</li></ul>" },
     "relatedCalculators": { "title": "Related Calculators", "html": "<a href='/countries/pakistan/vehicle-tax/vehicle-tax-calculator'>Vehicle Tax Calculator</a>" },

@@ -1,12 +1,50 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
 
-const title = "Pakistan Vehicle Tax Guide: Token Tax, Transfer Fees, and Calculator";
-const description = "Pakistan vehicle tax guide. Learn vehicle token tax rates for Sindh, Islamabad, Punjab, and KPK, vehicle transfer fees, and use our vehicle tax calculator Pakistan for accurate estimates.";
+const title = "Pakistan Vehicle Tax Guide: Registration, Transfer Fees & Calculator";
+const description = "Complete Pakistan vehicle tax guide. Learn vehicle token tax rates across Punjab, Sindh, KPK, Islamabad, transfer fees, smart card charges, and calculate rates.";
 const image = "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80";
+const canonical = "https://finsiva.com/blogs/pakistan-vehicle-tax-guide";
+const author = "Fatima Ali";
+const authorBio = "Automotive taxation specialist focusing on provincial vehicle tax laws and online payment systems in Pakistan.";
+const lastUpdated = "August 2026";
+const readTime = "9 min read";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is vehicle token tax calculated in Pakistan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vehicle token tax is calculated based on engine displacement (CC), vehicle age, province, and FBR active taxpayer status (filers receive a 50% discount on withholding tax)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are vehicle transfer fees in Pakistan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Transfer fees range from PKR 200 to PKR 4,000 depending on vehicle class and province, plus smart card charges (~PKR 1,300) and registration fees (1% to 5% of vehicle value)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to pay vehicle tax online in Sindh and Punjab?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the ePay Punjab app or e-Payment GOS (Sindh) to generate a 17-digit PSID and pay via mobile banking, ATM, or digital wallets."
+      }
+    }
+  ]
+};
 ---
 
-<BlogLayout title={title} description={description} image={image} author="Fatima Ali" authorBio="Automotive taxation specialist focusing on provincial vehicle tax laws and online payment systems in Pakistan." lastUpdated="July 2026" readTime="9 min read">
+<BlogLayout title={title} description={description} image={image} canonical={canonical} author={author} authorBio={authorBio} lastUpdated={lastUpdated} readTime={readTime}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <div class="min-h-screen bg-canvas dark:bg-canvas">
     <main class="min-h-screen">
       <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
@@ -19,8 +57,19 @@ const image = "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&
         </nav>
 
         <article class="prose max-w-none">
-          <h1 class="text-4xl font-bold text-ink mb-4 dark:text-on-primary">Pakistan Vehicle Tax Guide: Token Tax, Transfer Fees, and Calculator</h1>
-          <p class="text-lg text-body dark:text-muted">Last updated: July 2026 | 9 min read</p>
+          <h1 class="text-3xl sm:text-4xl font-bold text-ink mb-4 dark:text-on-primary">Pakistan Vehicle Tax Guide: Registration, Transfer Fees & Calculator</h1>
+          <p class="text-lg text-body dark:text-muted">Last updated: August 2026 | Verified Provincial Excise Rates | 9 min read</p>
+
+          <!-- Early Calculator CTA -->
+          <div class="my-6 p-6 rounded-2xl border border-primary/30 bg-primary/5 dark:border-primary/20 dark:bg-primary/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <h3 class="text-xl font-bold text-ink dark:text-on-primary">Calculate Pakistan Vehicle Tax & Token Charges</h3>
+              <p class="text-sm text-body dark:text-muted mt-1">Estimate token tax by engine CC, province (Punjab, Sindh, ICT, KPK), and FBR filer status.</p>
+            </div>
+            <a href="/countries/pakistan/vehicle-tax/vehicle-tax-calculator" class="btn btn-primary text-sm font-semibold shrink-0 px-5 py-2.5">
+              Launch Vehicle Tax Calculator →
+            </a>
+          </div>
 
           <div class="mt-8 space-y-6 text-body dark:text-muted">
             <p>Owning a vehicle in Pakistan means navigating provincial token tax rates, withholding taxes, registration fees, and transfer charges. Each province — Sindh, Punjab, KPK, and Islamabad — administers its own vehicle tax through its Excise and Taxation Department. Rates depend on engine capacity, vehicle age, vehicle type, and whether you are an FBR tax filer or non-filer.</p>

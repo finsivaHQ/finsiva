@@ -4,88 +4,83 @@ const taxCategories: TaxCategory[] = [
   {
     slug: "income-tax",
     name: "Income Tax",
-    description: "Individual and corporate income tax in Pakistan.",
-    overview: "Progressive tax rates for individuals from 0% to 35%. Corporate tax rate is 29% for most companies. Tax year runs July 1 to June 30.",
+    description: "Individual and corporate income tax in Pakistan based on FBR active taxpayer schedules.",
+    overview: "Progressive tax rates for salaried individuals from 0% to 35%. Corporate tax rate is 29% for most companies. Tax year runs July 1 to June 30.",
     calculators: [
-      { slug: "income-tax-calculator", name: "Income Tax Calculator", description: "Calculate your Pakistan income tax under FBR slabs." },
-      { slug: "salary-tax-calculator", name: "Salary Tax Calculator", description: "Calculate tax on salary in Pakistan for salaried individuals." },
-      { slug: "business-income-tax-calculator", name: "Business Income Tax Calculator", description: "Calculate income tax for business and freelancers in Pakistan." },
-      { slug: "capital-gain-tax-calculator", name: "Capital Gain Tax Calculator", description: "Calculate capital gains tax on property and shares in Pakistan." }
+      { slug: "income-tax-calculator", name: "Income Tax Calculator", description: "Calculate your Pakistan income tax under current FBR progressive slabs." },
+      { slug: "salary-tax-calculator", name: "Salary Tax Calculator", description: "Calculate monthly tax on salary in Pakistan for salaried employees." },
+      { slug: "business-income-tax-calculator", name: "Business Income Tax Calculator", description: "Calculate income tax for sole proprietors, businesses, and freelancers in Pakistan." },
+      { slug: "capital-gain-tax-calculator", name: "Capital Gain Tax Calculator", description: "Calculate capital gains tax on property and securities in Pakistan." }
     ],
     guides: [
-      { slug: "tax-residency-guide", title: "Tax Residency Guide", description: "Understanding Pakistani tax residency rules and obligations." },
-      { slug: "fbr-tax-slabs-guide", title: "FBR Tax Slabs Guide", description: "Complete guide to FBR tax slabs for salaried individuals and businesses." },
-      { slug: "salary-tax-guide", title: "Salary Tax Guide", description: "How tax on salary is calculated in Pakistan with examples." },
-      { slug: "freelancer-tax-guide", title: "Freelancer Tax Guide", description: "Tax obligations for freelancers and sole proprietors in Pakistan." }
+      { slug: "tax-residency-guide", title: "Tax Residency Guide", description: "Understanding Pakistani tax residency rules and 183-day physical presence test." },
+      { slug: "fbr-tax-slabs-guide", title: "FBR Tax Slabs Guide", description: "Complete guide to FBR progressive tax slabs for salaried individuals and businesses." },
+      { slug: "salary-tax-guide", title: "Salary Tax Guide", description: "How Section 149 tax on salary is calculated in Pakistan with payroll examples." },
+      { slug: "freelancer-tax-guide", title: "Freelancer Tax Guide", description: "Tax obligations, IT export concessions, and filing rules for freelancers in Pakistan." }
     ],
     faqs: [
-      { question: "What is the tax-free limit for salary in Pakistan?", answer: "The tax-free limit for salaried individuals in Pakistan is PKR 600,000 per year for the 2024/25 tax year." },
-      { question: "What are the FBR tax slabs for salaried individuals?", answer: "FBR tax slabs range from 0% to 35% on annual taxable income. The exact slab depends on your total income after deductions." },
-      { question: "How is monthly salary tax calculated in Pakistan?", answer: "Monthly tax is calculated by dividing annual taxable income by 12 and applying the applicable FBR tax slab. Employers deduct tax at source under Section 159." },
-      { question: "Are medical and house rent allowances taxable?", answer: "Medical allowance and house rent allowance are generally taxable as part of salary income, though certain exemptions may apply." },
-      { question: "What is the penalty for non-filing tax in Pakistan?", answer: "FBR may impose penalties up to PKR 100,000 or more for non-filing. Non-filers also face higher withholding tax rates on banking, property, and vehicle transactions." },
-      { question: "Who qualifies as a Salaried Individual for FBR?", answer: "Any person receiving income from employment, pension, or annuity qualifies as a salaried individual for FBR purposes." }
+      { question: "What is the tax-free limit for salary in Pakistan?", answer: "The tax-free threshold for salaried individuals in Pakistan is PKR 600,000 annually. Any taxable salary income up to PKR 600,000 is taxed at 0%." },
+      { question: "What are the FBR tax slabs for salaried individuals?", answer: "FBR tax slabs range from 0% to 35% on annual taxable income. Marginal rates apply only to income exceeding each threshold." },
+      { question: "How is monthly salary tax calculated in Pakistan?", answer: "Monthly tax is calculated by estimating annual taxable salary after exempt allowances (such as medical allowance up to 10% of basic pay), applying FBR slabs, and dividing by 12 under Section 149." },
+      { question: "What is the benefit of being an active FBR filer?", answer: "Being on the FBR Active Taxpayer List (ATL) cuts advance withholding tax on banking transactions, property sales, and vehicle token payments by 50% or more." }
     ]
   },
   {
     slug: "sales-tax",
     name: "Sales Tax",
-    description: "Sales tax on goods and services in Pakistan.",
-    overview: "Standard sales tax rate is 18% on most goods and services. FBR administers sales tax registration, filing, and collection.",
+    description: "Federal 18% sales tax on goods and provincial service tax in Pakistan.",
+    overview: "Standard sales tax rate is 18% on most taxable goods under the Sales Tax Act 1990. FBR administers sales tax registration (STRN), monthly return filing, and input tax credits.",
     calculators: [
-      { slug: "sales-tax-calculator", name: "Sales Tax Calculator", description: "Calculate sales tax on goods and services in Pakistan." },
-      { slug: "gst-calculator", name: "GST Calculator", description: "Calculate GST on transactions in Pakistan." }
+      { slug: "sales-tax-calculator", name: "Sales Tax Calculator", description: "Calculate federal 18% sales tax on goods, input tax credits, and gross amounts in Pakistan." },
+      { slug: "gst-calculator", name: "GST Calculator", description: "Calculate 18% GST inclusive and exclusive prices for transactions in Pakistan." }
     ],
     guides: [
-      { slug: "sales-tax-guide", title: "Sales Tax Guide", description: "Understanding sales tax registration, filing, and rates in Pakistan." },
-      { slug: "gst-guide", title: "GST Guide", description: "How GST works in Pakistan, who must register, and how to file returns." }
+      { slug: "sales-tax-guide", title: "Sales Tax Guide", description: "Understanding sales tax registration (STRN), monthly Iris filing by the 18th, and rates in Pakistan." }
     ],
     faqs: [
-      { question: "What is the sales tax rate in Pakistan?", answer: "The standard sales tax rate in Pakistan is 18% on most goods and services. Some essential items are exempt or taxed at reduced rates." },
-      { question: "Who must register for sales tax in Pakistan?", answer: "Businesses with annual taxable turnover exceeding the threshold prescribed by FBR must register for sales tax." },
-      { question: "How to file sales tax returns in Pakistan?", answer: "Sales tax returns are filed monthly through the FBR Iris portal. Use our sales tax calculator to estimate your liability before filing." }
+      { question: "What is the sales tax rate in Pakistan?", answer: "The standard federal sales tax rate in Pakistan is 18% on most taxable goods. Certain essential items are exempt or zero-rated under the Sixth Schedule." },
+      { question: "Who must register for sales tax (STRN) with FBR?", answer: "Mandatory registration applies to all importers, Tier-1 retailers, wholesalers, distributors, and manufacturers with annual turnover exceeding PKR 10 million." },
+      { question: "When is the monthly sales tax return due in Pakistan?", answer: "Monthly sales tax returns must be e-filed through the FBR IRIS portal by the 18th of each month for the preceding tax period." }
     ]
   },
   {
     slug: "property-tax",
     name: "Property Tax",
-    description: "Property tax, capital gains tax, and token tax on property transactions in Pakistan.",
-    overview: "Property tax varies by province. Capital gains tax applies on property sales. Token tax and transfer fees are provincial charges for property registration.",
+    description: "Provincial property tax, capital gains tax (CGT), and token charges on property in Pakistan.",
+    overview: "Urban Immovable Property Tax (UIPT) is a provincial levy charged on Annual Rental Value. Capital gains tax applies on property sales under federal FBR rules (15% for filers).",
     calculators: [
-      { slug: "property-tax-calculator", name: "Property Tax Calculator", description: "Calculate property tax in Pakistan by province." },
-      { slug: "capital-gain-tax-calculator", name: "Capital Gain Tax Calculator", description: "Calculate capital gains tax on property sales in Pakistan." },
-      { slug: "token-tax-calculator", name: "Token Tax Calculator", description: "Calculate token tax for property and vehicle registration." },
+      { slug: "property-tax-calculator", name: "Property Tax Calculator", description: "Calculate provincial property tax and capital gains tax on property sales in Pakistan." },
+      { slug: "capital-gain-tax-calculator", name: "Capital Gain Tax Calculator", description: "Calculate capital gains tax (CGT) on property sales by holding period and filer status." },
+      { slug: "token-tax-calculator", name: "Token Tax Calculator", description: "Calculate vehicle and property token tax charges by engine capacity and province." },
       { slug: "rental-income-tax-calculator", name: "Rental Income Tax Calculator", description: "Calculate tax on rental income from property in Pakistan." }
     ],
     guides: [
-      { slug: "property-tax-guide", title: "Property Tax Guide", description: "Understanding property tax, capital gains tax, and token tax in Pakistan." },
-      { slug: "capital-gain-tax-guide", title: "Capital Gain Tax Guide", description: "How capital gains tax is calculated on property and shares in Pakistan." },
-      { slug: "token-tax-guide", title: "Token Tax Guide", description: "Provincial token tax rates and how to calculate token tax for vehicles and property." }
+      { slug: "property-tax-guide", title: "Property Tax Guide", description: "Understanding provincial property tax (UIPT), CGT, and buyer/seller withholding tax in Pakistan." },
+      { slug: "capital-gain-tax-guide", title: "Capital Gain Tax Guide", description: "How capital gains tax is calculated on property and securities in Pakistan." },
+      { slug: "token-tax-guide", title: "Token Tax Guide", description: "Provincial token tax schedules and ePay online payment systems in Pakistan." }
     ],
     faqs: [
-      { question: "What is property tax in Pakistan?", answer: "Property tax in Pakistan is a provincial tax on the value of real estate. Rates vary by province and property type. Use our property tax calculator for estimates." },
-      { question: "How is capital gains tax calculated on property in Pakistan?", answer: "Capital gains tax on property in Pakistan is calculated on the gain arising from the sale of immovable property. Rates depend on holding period and taxpayer status." },
-      { question: "What is token tax in Pakistan?", answer: "Token tax is a provincial tax levied on the registration of vehicles and property. Rates vary by province, vehicle type, and engine capacity." }
+      { question: "What is property tax (UIPT) in Pakistan?", answer: "Property tax in Pakistan is a provincial tax levied on the Annual Rental Value (ARV) or gross rental value of urban real estate. Rates vary by province." },
+      { question: "How is capital gains tax calculated on property sales?", answer: "For properties acquired on or after July 1, 2024, active FBR filers pay a flat 15% CGT. For older purchases, CGT reduces with holding period length down to 0% after 6 years." }
     ]
   },
   {
     slug: "vehicle-tax",
     name: "Vehicle Tax",
-    description: "Token tax, vehicle tax, and transfer fees for vehicles in Pakistan.",
-    overview: "Vehicle tax and token tax are provincial taxes on motor vehicles. Rates vary by province, vehicle type, engine capacity, and seating capacity.",
+    description: "Provincial token tax, vehicle registration fees, and transfer charges in Pakistan.",
+    overview: "Vehicle token tax and transfer fees are provincial levies. Rates depend on engine capacity (CC), vehicle age, province (Punjab, Sindh, KPK, ICT), and FBR filer status.",
     calculators: [
-      { slug: "vehicle-tax-calculator", name: "Vehicle Tax Calculator", description: "Calculate vehicle token tax in Pakistan by province." },
-      { slug: "sindh-vehicle-tax-calculator", name: "Sindh Vehicle Tax Calculator", description: "Calculate Sindh vehicle token tax and transfer fees." },
-      { slug: "islamabad-vehicle-tax-calculator", name: "Islamabad Vehicle Tax Calculator", description: "Calculate Islamabad vehicle token tax." }
+      { slug: "vehicle-tax-calculator", name: "Vehicle Tax Calculator", description: "Calculate vehicle token tax in Pakistan across Punjab, Sindh, KPK, and Islamabad." },
+      { slug: "sindh-vehicle-tax-calculator", name: "Sindh Vehicle Tax Calculator", description: "Calculate Sindh vehicle token tax, lifetime tax, and transfer fees." },
+      { slug: "islamabad-vehicle-tax-calculator", name: "Islamabad Vehicle Tax Calculator", description: "Calculate Islamabad vehicle token tax and withholding charges." }
     ],
     guides: [
-      { slug: "vehicle-tax-guide", title: "Vehicle Tax Guide", description: "Understanding vehicle token tax and transfer fees in Pakistan." },
-      { slug: "sindh-vehicle-tax-guide", title: "Sindh Vehicle Tax Guide", description: "Sindh vehicle token tax rates and how to calculate them." }
+      { slug: "vehicle-tax-guide", title: "Vehicle Tax Guide", description: "Understanding vehicle token tax, registration fees, and transfer procedures in Pakistan." },
+      { slug: "token-tax-guide", title: "Token Tax Guide", description: "Complete guide to vehicle token tax rates, PSID generation, and ePay Punjab online payments." }
     ],
     faqs: [
-      { question: "How is vehicle token tax calculated in Pakistan?", answer: "Vehicle token tax in Pakistan is calculated based on engine capacity, vehicle type, and province. Use our vehicle tax calculator for accurate estimates." },
-      { question: "What is the vehicle transfer fee in Sindh?", answer: "Vehicle transfer fee in Sindh is a provincial charge for transferring vehicle ownership. The fee depends on vehicle value and type." },
-      { question: "How to pay token tax online in Pakistan?", answer: "Token tax can be paid online through provincial excise and taxation department websites or through designated bank branches." }
+      { question: "How is vehicle token tax calculated in Pakistan?", answer: "Vehicle token tax is calculated based on engine displacement (CC), vehicle age, province, and FBR active taxpayer status (filers pay 50% lower withholding tax)." },
+      { question: "How to pay vehicle token tax online in Punjab and Sindh?", answer: "Generate a 17-digit PSID on ePay Punjab or e-Payment GOS (Sindh) and pay through mobile banking, ATM, or digital wallets." }
     ]
   }
 ];
