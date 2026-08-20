@@ -1,12 +1,50 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
 
-const title = "Hong Kong vs Singapore Tax: Which is Better for Expats and Businesses?";
-const description = "Hong Kong vs Singapore tax comparison for expats and businesses. Compare salaries tax, corporate tax, stamp duty, and overall tax burden in both jurisdictions.";
+const title = "Hong Kong vs Singapore Tax Comparison: Expats & Corporate Rates";
+const description = "Complete Hong Kong vs Singapore tax comparison for expats and businesses. Compare salaries tax (17% vs 24%), corporate tax (16.5% vs 17%), SRS reliefs, BSD/ABSD stamp duty, and territorial rules.";
 const image = "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80";
+const canonical = "https://finsiva.com/blogs/hong-kong-vs-singapore-tax-guide";
+const author = "Michael Tang";
+const authorBio = "International tax consultant comparing Asian tax jurisdictions for expats and multinational businesses.";
+const lastUpdated = "August 2026";
+const readTime = "11 min read";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is income tax lower in Hong Kong or Singapore?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For high-earning expats, Hong Kong generally offers lower personal tax due to its 17% top marginal progressive cap (or 15% standard rate), compared to Singapore's 24% top marginal rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the corporate tax rate in Hong Kong vs Singapore?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hong Kong's corporate tax rate is 16.5% (with an 8.25% two-tiered rate on the first HKD 2 million). Singapore's corporate tax rate is 17%, with startup exemptions and partial tax exemptions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do both Hong Kong and Singapore tax foreign income?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both jurisdictions operate territorial tax systems, generally taxing only locally sourced income. Foreign income not remitted into the country is typically tax-exempt."
+      }
+    }
+  ]
+};
 ---
 
-<BlogLayout title={title} description={description} image={image} author="Michael Tang" authorBio="International tax consultant comparing Asian tax jurisdictions for expats and multinational businesses." lastUpdated="July 2026" readTime="11 min read">
+<BlogLayout title={title} description={description} image={image} canonical={canonical} author={author} authorBio={authorBio} lastUpdated={lastUpdated} readTime={readTime}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <div class="min-h-screen bg-canvas dark:bg-canvas">
     <main class="min-h-screen">
       <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
@@ -19,8 +57,24 @@ const image = "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&
         </nav>
 
         <article class="prose max-w-none">
-          <h1 class="text-4xl font-bold text-ink mb-4 dark:text-on-primary">Hong Kong vs Singapore Tax: Which is Better for Expats and Businesses?</h1>
-          <p class="text-lg text-body dark:text-muted">Last updated: July 2026 | 11 min read</p>
+          <h1 class="text-3xl sm:text-4xl font-bold text-ink mb-4 dark:text-on-primary">Hong Kong vs Singapore Tax Comparison: Expats & Corporate Rates</h1>
+          <p class="text-lg text-body dark:text-muted">Last updated: August 2026 | Comprehensive Asian Tax Hub Analysis | 11 min read</p>
+
+          <!-- Interactive Comparison CTAs -->
+          <div class="my-6 p-6 rounded-2xl border border-primary/30 bg-primary/5 dark:border-primary/20 dark:bg-primary/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <h3 class="text-xl font-bold text-ink dark:text-on-primary">Compare Your Tax Burden Side-by-Side</h3>
+              <p class="text-sm text-body dark:text-muted mt-1">Calculate your net take-home salary in Hong Kong (HKD) vs Singapore (SGD).</p>
+            </div>
+            <div class="flex flex-wrap gap-2 shrink-0">
+              <a href="/countries/hong-kong/salaries-tax/salaries-tax-calculator" class="btn btn-primary text-xs font-semibold px-4 py-2">
+                HK Tax Calculator →
+              </a>
+              <a href="/countries/singapore/income-tax/income-tax-calculator" class="btn btn-secondary text-xs font-semibold px-4 py-2">
+                SG Tax Calculator →
+              </a>
+            </div>
+          </div>
 
           <div class="mt-8 space-y-6 text-body dark:text-muted">
             <p>Hong Kong and Singapore are two of Asia's most popular destinations for expats and international businesses, offering low taxes, strategic locations, and strong legal systems. Choosing between them often comes down to which tax regime offers better savings for your personal and business circumstances. This guide compares salaries tax, corporate tax, property tax, stamp duty, and residency rules in Hong Kong and Singapore to help you decide which jurisdiction is better for your needs.</p>
@@ -67,11 +121,12 @@ const image = "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&
           </div>
 
           <div class="mt-12">
-            <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Related Calculators</h2>
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Related Tax Calculators</h2>
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
               <a href="/countries/hong-kong/salaries-tax/salaries-tax-calculator" class="block rounded border p-4 hover:border-primary transition">HK Salaries Tax Calculator</a>
+              <a href="/countries/singapore/income-tax/income-tax-calculator" class="block rounded border p-4 hover:border-primary transition">Singapore Income Tax Calculator</a>
               <a href="/countries/hong-kong/profits-tax/profits-tax-calculator" class="block rounded border p-4 hover:border-primary transition">HK Profits Tax Calculator</a>
-              <a href="/countries/hong-kong" class="block rounded border p-4 hover:border-primary transition">More Hong Kong Calculators</a>
+              <a href="/countries/singapore/gst/gst-calculator" class="block rounded border p-4 hover:border-primary transition">Singapore GST Calculator</a>
             </div>
           </div>
 

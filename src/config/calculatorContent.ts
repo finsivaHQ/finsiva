@@ -1708,159 +1708,154 @@ export const calculatorContent: Record<string, RichCalculatorContent> = {
     },
     "educationalDisclaimer": {
       "title": "Educational Disclaimer",
-      "text": "This calculator is for informational and educational purposes only. It does not constitute legal or tax advice. Always consult a qualified professional."
+      "text": "This calculator is for informational and educational purposes only. It does not constitute legal or tax advice."
     }
   },
 
   "singapore-income-tax-income-tax-calculator": {
     "howToUse": {
-        "title": "How to Use",
-        "html": "<p>Use this Singapore Income Tax calculator to estimate your tax liability. Enter the required details and click Calculate.</p>"
+        "title": "How to Use the Singapore Income Tax Calculator",
+        "html": "<p>Enter your annual assessable employment income in Singapore Dollars (SGD), select your tax residency status, and enter eligible personal reliefs (such as Earned Income Relief, CPF contributions, SRS top-ups, and child reliefs) to estimate your IRAS income tax liability, effective tax rate, and net take-home salary.</p>"
     },
     "understandingResults": {
-        "title": "Understanding Results",
-        "html": "<p><strong>Taxable Income:</strong> Income subject to tax. <strong>Tax Amount:</strong> Total tax liability. <strong>Effective Rate:</strong> Tax as percentage of income. <strong>Take-Home Pay:</strong> Income after tax.</p>"
+        "title": "Understanding Your Singapore Tax Results",
+        "html": "<p><strong>Assessable Income:</strong> Total employment salary, bonuses, and director fees.<br><strong>Chargeable Income:</strong> Assessable income minus allowable IRAS personal reliefs.<br><strong>Income Tax Payable:</strong> Tax calculated under IRAS progressive rates (0% to 24%).<br><strong>Effective Tax Rate:</strong> Your total tax payable as a percentage of gross income.<br><strong>Net Take-Home Salary:</strong> Income remaining after personal tax and employee CPF contributions.</p>"
     },
     "formula": {
-        "title": "Formula",
-        "html": "<p>Tax is computed using applicable rates and rules for Singapore. Review the detailed methodology above for assumptions and calculations.</p>"
+        "title": "Singapore Individual Income Tax Formula",
+        "html": "<p><strong>Chargeable Income = Assessable Income - Approved Personal Reliefs (capped at S$80,000)</strong><br>Tax Payable is calculated by applying IRAS progressive tax rates (0% for the first S$20,000 up to 24% for income above S$500,000) minus applicable statutory tax rebates.</p>"
     },
     "taxSlabs": {
-        "title": "Tax Slabs",
-        "html": "<p>Singapore Income Tax slabs vary based on income level and taxpayer profile. Use this calculator to determine your exact liability under current rules.</p>"
+        "title": "IRAS Progressive Tax Rates (YA 2025/2026)",
+        "html": "<p>Resident individuals pay 0% on the first S$20,000, 2% on the next S$10,000, 3.5% on the next S$10,000, progressing up to 24% for chargeable income exceeding S$500,000. Non-residents are taxed at a flat rate of 15% on employment income (or resident progressive rates if higher) and 24% on director fees.</p>"
     },
     "commonMistakes": {
-        "title": "Common Mistakes",
-        "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Not updating inputs for the correct tax year.</li><li>Using incorrect residency or employment status.</li><li>Forgetting to account for all income sources.</li><li>Not considering eligible deductions and reliefs.</li></ul>"
+        "title": "Common Mistakes to Avoid",
+        "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Exceeding the overall S$80,000 personal tax relief cap set by IRAS.</li><li>Forgetting to contribute to the Supplementary Retirement Scheme (SRS) before December 31 for dollar-for-dollar tax deduction (up to S$15,300 for citizens/PRs and S$35,700 for foreigners).</li><li>Missing the April 18 e-filing deadline on the IRAS myTax Portal.</li></ul>"
     },
     "relatedCalculators": {
-        "title": "Related Calculators",
-        "html": "<div class=\"grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3\">\n    <a href=\"/countries/singapore\" class=\"block rounded border p-4 hover:border-primary transition\">More Singapore Calculators</a>\n    <a href=\"/countries\" class=\"block rounded border p-4 hover:border-primary transition\">All Countries</a>\n    <a href=\"/\" class=\"block rounded border p-4 hover:border-primary transition\">Home</a>\n  </div>"
-    },
-    "suggestedArticles": {
-        "title": "Suggested Articles on Hong Kong Business Tax",
-        "html": "<div class=\"grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3\">\n    <a href=\"/blogs/hong-kong-profits-tax-guide\" class=\"block rounded border p-4 hover:border-primary transition\">Hong Kong Profits Tax Guide</a>\n    <a href=\"/blogs/hong-kong-corporate-tax-rate\" class=\"block rounded border p-4 hover:border-primary transition\">Hong Kong Corporate Tax Rate Explained</a>\n    <a href=\"/blogs/hong-kong-tax-residency\" class=\"block rounded border p-4 hover:border-primary transition\">Hong Kong Tax Residency Rules</a>\n  </div>"
-    },
-    "officialResources": {
-        "title": "Official Resources",
-        "html": "<ul class=\"space-y-2\"><li><a href=\"https://www.iras.gov.sg\" target=\"_blank\" rel=\"noopener noreferrer\">IRAS</a></li></ul>"
-    },
-    "faqSchema": {
-        "What is the standard deduction for Income Tax in Singapore?": "Standard deductions vary by country. Check the latest official guidelines for your jurisdiction.",
-        "How to calculate Income Tax on salary in Singapore?": "Enter your annual income, select your tax year, and use the calculator to get an estimate.",
-        "What are the Income Tax slabs in Singapore?": "Slabs vary by income level and tax year. The calculator shows the applicable rates."
-    },
-
-    "overview": {
-      "title": "Overview",
-      "html": "<p>This calculator helps you estimate your tax liability. Enter your details below for an estimate based on current tax rules.</p>"
-    },
-    "workedExample": {
-      "title": "Example Calculation",
-      "html": "<p>Example: with an annual income of $50,000, the estimated tax would be calculated using the applicable rates. Use the calculator above for your specific situation.</p>"
-    },
-    "benefits": {
-      "title": "Benefits of Using This Calculator",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Instant tax estimates</li><li>Up-to-date rates</li><li>Easy to use</li><li>Helps with financial planning</li></ul>"
-    },
-    "limitations": {
-      "title": "Limitations",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>This is an estimate only</li><li>Does not cover all deductions or credits</li><li>Tax laws change frequently</li><li>Consult a professional for complex situations</li></ul>"
-    },
-    "faq": [
-      {
-        "question": "What is the standard tax rate?",
-        "answer": "Rates vary by income level and jurisdiction."
-      },
-      {
-        "question": "How accurate is this calculator?",
-        "answer": "This calculator provides estimates based on current tax rules. For precise calculations, consult a tax professional."
-      }
-    ],
-    "relatedCountry": {
-      "title": "Related Country",
-      "html": "<p>Explore tax calculators for other countries.</p>"
-    },
-    "educationalDisclaimer": {
-      "title": "Educational Disclaimer",
-      "text": "This calculator is for informational and educational purposes only. It does not constitute legal or tax advice. Always consult a qualified professional."
-    }
-},
-
-  "singapore-gst-gst-calculator": {
-    "howToUse": {
-        "title": "How to Use",
-        "html": "<p>Use this Singapore GST calculator to estimate your tax liability. Enter the required details and click Calculate.</p>"
-    },
-    "understandingResults": {
-        "title": "Understanding Results",
-        "html": "<p><strong>Taxable Income:</strong> Income subject to tax. <strong>Tax Amount:</strong> Total tax liability. <strong>Effective Rate:</strong> Tax as percentage of income. <strong>Take-Home Pay:</strong> Income after tax.</p>"
-    },
-    "formula": {
-        "title": "Formula",
-        "html": "<p>Tax is computed using applicable rates and rules for Singapore. Review the detailed methodology above for assumptions and calculations.</p>"
-    },
-    "taxSlabs": {
-        "title": "Tax Slabs",
-        "html": "<p>Singapore GST slabs vary based on income level and taxpayer profile. Use this calculator to determine your exact liability under current rules.</p>"
-    },
-    "commonMistakes": {
-        "title": "Common Mistakes",
-        "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Not updating inputs for the correct tax year.</li><li>Using incorrect residency or employment status.</li><li>Forgetting to account for all income sources.</li><li>Not considering eligible deductions and reliefs.</li></ul>"
-    },
-    "relatedCalculators": {
-        "title": "Related Calculators",
-        "html": "<div class=\"grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3\">\n    <a href=\"/countries/singapore\" class=\"block rounded border p-4 hover:border-primary transition\">More Singapore Calculators</a>\n    <a href=\"/countries\" class=\"block rounded border p-4 hover:border-primary transition\">All Countries</a>\n    <a href=\"/\" class=\"block rounded border p-4 hover:border-primary transition\">Home</a>\n  </div>"
+        "title": "Related Singapore Tax Calculators",
+        "html": "<div class=\"grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3\">\n    <a href=\"/countries/singapore/gst/gst-calculator\" class=\"block rounded border p-4 hover:border-primary transition\">Singapore GST Calculator (9%)</a>\n    <a href=\"/countries/singapore/stamp-duty/stamp-duty-calculator\" class=\"block rounded border p-4 hover:border-primary transition\">Stamp Duty Calculator (BSD/ABSD)</a>\n    <a href=\"/countries/hong-kong/salaries-tax/salaries-tax-calculator\" class=\"block rounded border p-4 hover:border-primary transition\">HK Salaries Tax Calculator</a>\n  </div>"
     },
     "suggestedArticles": {
         "title": "Suggested Articles",
-        "html": "<div class=\"grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3\">\n    <a href=\"/countries/singapore/gst\" class=\"block rounded border p-4 hover:border-primary transition\">GST Guide</a>\n    <a href=\"/countries/singapore\" class=\"block rounded border p-4 hover:border-primary transition\">Singapore Tax Overview</a>\n    <a href=\"/\" class=\"block rounded border p-4 hover:border-primary transition\">All Calculators</a>\n  </div>"
+        "html": "<div class=\"grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3\">\n    <a href=\"/blogs/hong-kong-vs-singapore-tax-guide\" class=\"block rounded border p-4 hover:border-primary transition\">Hong Kong vs Singapore Tax Guide</a>\n    <a href=\"/blogs/singapore-tax-reliefs-deductions-rebates-guide\" class=\"block rounded border p-4 hover:border-primary transition\">IRAS Tax Reliefs & SRS Guide</a>\n    <a href=\"/blogs/singapore-corporate-tax-guide-2026\" class=\"block rounded border p-4 hover:border-primary transition\">Singapore Corporate Income Tax Guide</a>\n  </div>"
     },
     "officialResources": {
-        "title": "Official Resources",
-        "html": "<ul class=\"space-y-2\"><li><a href=\"https://www.iras.gov.sg\" target=\"_blank\" rel=\"noopener noreferrer\">IRAS</a></li></ul>"
+        "title": "Official IRAS Resources",
+        "html": "<ul class=\"space-y-2\"><li><a href=\"https://www.iras.gov.sg\" target=\"_blank\" rel=\"noopener noreferrer\">Inland Revenue Authority of Singapore (IRAS)</a></li><li><a href=\"https://mytax.iras.gov.sg\" target=\"_blank\" rel=\"noopener noreferrer\">IRAS myTax Portal</a></li></ul>"
     },
     "faqSchema": {
-        "What is the standard Gst rate in Singapore?": "Standard rates vary by country and type of goods/services.",
-        "How to calculate Gst from total amount?": "Enter the total amount and select reverse calculation to extract the tax component.",
-        "What are the different Gst rates in Singapore?": "Rates may include standard, reduced, zero-rated, and exempt categories."
+        "What is the tax-free limit in Singapore?": "The first S$20,000 of annual chargeable income for resident individuals is taxed at 0%.",
+        "How does SRS tax relief work in Singapore?": "Contributions to the Supplementary Retirement Scheme (SRS) qualify for dollar-for-dollar tax deductions up to S$15,300 for Singapore Citizens/PRs and S$35,700 for foreigners.",
+        "What is the tax rate for foreign non-residents in Singapore?": "Non-residents are taxed at a flat 15% rate on employment income (or resident progressive rates if higher) without personal tax reliefs."
     },
 
     "overview": {
       "title": "Overview",
-      "html": "<p>This calculator helps you estimate your tax liability. Enter your details below for an estimate based on current tax rules.</p>"
+      "html": "<p>This Singapore Income Tax Calculator estimates progressive personal income tax under IRAS YA 2025/2026 rules (0% to 24%), accounts for statutory Earned Income and SRS reliefs, and calculates your effective tax rate and take-home salary.</p>"
     },
     "workedExample": {
       "title": "Example Calculation",
-      "html": "<p>Example: with an annual income of $50,000, the estimated tax would be calculated using the applicable rates. Use the calculator above for your specific situation.</p>"
+      "html": "<p>For a Singapore tax resident earning an annual salary of S$100,000:<br>• Assessable Income: S$100,000<br>• Earned Income Relief: S$1,000<br>• CPF Relief (15%): S$15,000<br>• Chargeable Income: S$84,000<br>• Tax on first S$80,000: S$3,350<br>• Tax on next S$4,000 at 11.5%: S$460<br>• Total Tax Payable: S$3,810 (Effective Tax Rate ~3.81%).</p>"
     },
     "benefits": {
-      "title": "Benefits of Using This Calculator",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Instant tax estimates</li><li>Up-to-date rates</li><li>Easy to use</li><li>Helps with financial planning</li></ul>"
+      "title": "Key Features",
+      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Calculates IRAS progressive tax brackets up to 24%</li><li>Supports SRS contribution tax saving estimates</li><li>Includes non-resident 15%/24% tax rate checks</li><li>Updated for current Year of Assessment rules</li></ul>"
     },
     "limitations": {
-      "title": "Limitations",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>This is an estimate only</li><li>Does not cover all deductions or credits</li><li>Tax laws change frequently</li><li>Consult a professional for complex situations</li></ul>"
+      "title": "Notice",
+      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Total personal tax reliefs are capped at S$80,000 per Year of Assessment.</li><li>Tax estimates exclude foreign income not remitted to Singapore.</li><li>Official filing is completed online at mytax.iras.gov.sg by April 18.</li></ul>"
     },
     "faq": [
       {
-        "question": "What is the standard tax rate?",
-        "answer": "Rates vary by income level and jurisdiction."
+        "question": "When is the tax filing deadline in Singapore?",
+        "answer": "Annual e-filing via the IRAS myTax Portal must be completed by April 18 (or April 15 for paper returns)."
       },
       {
-        "question": "How accurate is this calculator?",
-        "answer": "This calculator provides estimates based on current tax rules. For precise calculations, consult a tax professional."
+        "question": "Are dividends and capital gains taxed in Singapore?",
+        "answer": "Singapore does not tax capital gains. Dividends paid by Singapore tax resident companies under the single-tier corporate system are tax-exempt."
       }
     ],
     "relatedCountry": {
       "title": "Related Country",
-      "html": "<p>Explore tax calculators for other countries.</p>"
+      "html": "<p>Compare with <a href='/countries/hong-kong'>Hong Kong Tax Overview</a> and <a href='/countries/malaysia'>Malaysia Tax Calculator</a>.</p>"
     },
     "educationalDisclaimer": {
       "title": "Educational Disclaimer",
-      "text": "This calculator is for informational and educational purposes only. It does not constitute legal or tax advice. Always consult a qualified professional."
+      "text": "This calculator provides estimates for informational and tax planning purposes based on published IRAS tax rates."
     }
-},
+  },
+
+  "singapore-gst-gst-calculator": {
+    "howToUse": {
+        "title": "How to Use the Singapore GST Calculator (9%)",
+        "html": "<p>Enter the net amount or gross price in Singapore Dollars (SGD) and select whether to add 9% GST or extract 9% GST from the total amount under IRAS Goods and Services Tax guidelines.</p>"
+    },
+    "understandingResults": {
+        "title": "Understanding Your GST Calculation Results",
+        "html": "<p><strong>Net Amount:</strong> Pre-tax value of goods or services.<br><strong>GST Amount (9%):</strong> Output tax payable to IRAS or input tax claimable.<br><strong>Gross Amount:</strong> Total final price inclusive of 9% GST.</p>"
+    },
+    "formula": {
+        "title": "Singapore GST Calculation Formula",
+        "html": "<p><strong>Add GST: Gross = Net × 1.09 | GST = Net × 0.09</strong><br><strong>Extract GST: Net = Gross / 1.09 | GST = Gross × (9 / 109)</strong></p>"
+    },
+    "taxSlabs": {
+        "title": "Singapore GST Standard & Exempt Rates",
+        "html": "<p>The standard GST rate is 9%. Zero-rated supplies (0%) apply to exported goods and international services. Exempt supplies include financial services, sale and lease of residential properties, and digital payment tokens.</p>"
+    },
+    "commonMistakes": {
+        "title": "Common Mistakes to Avoid",
+        "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Applying out-of-date GST rates (6% or 7% or 8%) instead of the prevailing 9% rate.</li><li>Failing to register for GST when annual taxable turnover exceeds S$1,000,000.</li><li>Filing quarterly F5 returns late with IRAS.</li></ul>"
+    },
+    "relatedCalculators": {
+        "title": "Related Singapore Tax Tools",
+        "html": "<div class=\"grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3\">\n    <a href=\"/countries/singapore/income-tax/income-tax-calculator\" class=\"block rounded border p-4 hover:border-primary transition\">Singapore Income Tax Calculator</a>\n    <a href=\"/countries/singapore/stamp-duty/stamp-duty-calculator\" class=\"block rounded border p-4 hover:border-primary transition\">Singapore Stamp Duty Calculator</a>\n    <a href=\"/countries/hong-kong/salaries-tax/salaries-tax-calculator\" class=\"block rounded border p-4 hover:border-primary transition\">HK Salaries Tax Calculator</a>\n  </div>"
+    },
+    "suggestedArticles": {
+        "title": "Suggested Articles",
+        "html": "<div class=\"grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3\">\n    <a href=\"/blogs/singapore-corporate-tax-guide-2026\" class=\"block rounded border p-4 hover:border-primary transition\">Singapore Corporate Tax Guide</a>\n    <a href=\"/blogs/hong-kong-vs-singapore-tax-guide\" class=\"block rounded border p-4 hover:border-primary transition\">Hong Kong vs Singapore Tax Guide</a>\n    <a href=\"/blogs/singapore-tax-reliefs-deductions-rebates-guide\" class=\"block rounded border p-4 hover:border-primary transition\">IRAS Tax Reliefs Guide</a>\n  </div>"
+    },
+    "officialResources": {
+        "title": "Official IRAS GST Resources",
+        "html": "<ul class=\"space-y-2\"><li><a href=\"https://www.iras.gov.sg\" target=\"_blank\" rel=\"noopener noreferrer\">IRAS GST Guidelines</a></li></ul>"
+    },
+    "faqSchema": {
+        "What is the current GST rate in Singapore?": "The prevailing GST rate in Singapore is 9%.",
+        "When is GST registration compulsory in Singapore?": "Registration is mandatory when your taxable turnover exceeds S$1,000,000 at the end of any calendar year."
+    },
+
+    "overview": {
+      "title": "Overview",
+      "html": "<p>This Singapore GST Calculator computes 9% Goods and Services Tax for inclusive and exclusive transactions under IRAS regulations.</p>"
+    },
+    "workedExample": {
+      "title": "Example Calculation",
+      "html": "<p>For an invoice with a net price of S$1,000:<br>• Net Amount: S$1,000<br>• GST (9%): S$90<br>• Total Inclusive Amount: S$1,090.</p>"
+    },
+    "benefits": {
+      "title": "Key Features",
+      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Calculates 9% GST inclusive and exclusive amounts</li><li>Extracts exact tax component for IRAS F5 return filing</li><li>Outlines S$1M registration thresholds</li></ul>"
+    },
+    "limitations": {
+      "title": "Notice",
+      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Zero-rated exports and exempt supplies do not incur 9% GST.</li><li>Filing must be completed via myTax Portal.</li></ul>"
+    },
+    "faq": [
+      {
+        "question": "What is the GST rate in Singapore?",
+        "answer": "The prevailing GST rate in Singapore is 9%."
+      }
+    ],
+    "relatedCountry": {
+      "title": "Related Country",
+      "html": "<p>Explore <a href='/countries/singapore'>Singapore Tax Overview</a> and <a href='/countries/hong-kong'>Hong Kong Tax Guide</a>.</p>"
+    },
+    "educationalDisclaimer": {
+      "title": "Educational Disclaimer",
+      "text": "This calculator provides estimations based on IRAS Goods and Services Tax (GST) rules."
+    }
+  },
 
   "singapore-stamp-duty-stamp-duty-calculator": {
     "howToUse": {
@@ -1932,84 +1927,84 @@ export const calculatorContent: Record<string, RichCalculatorContent> = {
     },
     "educationalDisclaimer": {
       "title": "Educational Disclaimer",
-      "text": "This calculator is for informational and educational purposes only. It does not constitute legal or tax advice. Always consult a qualified professional."
+      "text": "This calculator provides estimations based on official tax guidelines."
     }
-},
+  },
 
   "indonesia-income-tax-income-tax-calculator": {
     "howToUse": {
-        "title": "How to Use",
-        "html": "<p>Use this Indonesia Income Tax calculator to estimate your tax liability. Enter the required details and click Calculate.</p>"
+        "title": "How to Use the Indonesia Income Tax Calculator (PPh 21)",
+        "html": "<p>Enter your gross annual employment income in Indonesian Rupiah (IDR), select your PTKP marital and dependent status (TK/0, K/0, K/1, K/2, K/3), and specify occupational expenses to estimate your annual PPh 21 tax liability, net monthly salary, and TER withholding status under Direktorat Jenderal Pajak (DJP) rules.</p>"
     },
     "understandingResults": {
-        "title": "Understanding Results",
-        "html": "<p><strong>Taxable Income:</strong> Income subject to tax. <strong>Tax Amount:</strong> Total tax liability. <strong>Effective Rate:</strong> Tax as percentage of income. <strong>Take-Home Pay:</strong> Income after tax.</p>"
+        "title": "Understanding Your Indonesian Tax Results",
+        "html": "<p><strong>Gross Income:</strong> Total annual salary, allowances, and bonuses before deductions.<br><strong>Occupational Cost (Biaya Jabatan):</strong> 5% standard deduction, capped at IDR 6,000,000 per year (IDR 500,000/month).<br><strong>PTKP Non-Taxable Threshold:</strong> Non-taxable income allowance based on marital and dependent status.<br><strong>Net Taxable Income (PhKP):</strong> Gross income minus occupational cost and PTKP.<br><strong>PPh 21 Tax Payable:</strong> Tax computed across DJP 5-tier progressive brackets (5% to 35%).</p>"
     },
     "formula": {
-        "title": "Formula",
-        "html": "<p>Tax is computed using applicable rates and rules for Indonesia. Review the detailed methodology above for assumptions and calculations.</p>"
+        "title": "Indonesian Personal Income Tax Formula (PPh 21)",
+        "html": "<p><strong>Net Taxable Income (PhKP) = Gross Income - Biaya Jabatan (5%, max IDR 6M) - PTKP Allowance</strong><br>Tax Payable = (Up to IDR 60M × 5%) + (Next IDR 190M × 15%) + (Next IDR 250M × 25%) + (Next IDR 4.5B × 30%) + (Above IDR 5B × 35%).</p>"
     },
     "taxSlabs": {
-        "title": "Tax Slabs",
-        "html": "<p>Indonesia Income Tax slabs vary based on income level and taxpayer profile. Use this calculator to determine your exact liability under current rules.</p>"
+        "title": "DJP Progressive Tax Brackets (PPh 21 - Tax Year 2026)",
+        "html": "<p>• Tier 1: Up to IDR 60,000,000 → 5%<br>• Tier 2: IDR 60,000,001 – IDR 250,000,000 → 15%<br>• Tier 3: IDR 250,000,001 – IDR 500,000,000 → 25%<br>• Tier 4: IDR 500,000,001 – IDR 5,000,000,000 → 30%<br>• Tier 5: Above IDR 5,000,000,000 → 35%.</p>"
     },
     "commonMistakes": {
-        "title": "Common Mistakes",
-        "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Not updating inputs for the correct tax year.</li><li>Using incorrect residency or employment status.</li><li>Forgetting to account for all income sources.</li><li>Not considering eligible deductions and reliefs.</li></ul>"
+        "title": "Common Mistakes to Avoid",
+        "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Selecting the wrong PTKP code (e.g., claiming TK/0 instead of K/2 for a married taxpayer with 2 children).</li><li>Forgetting that NIK (National ID) is integrated with NPWP for DJP e-Filing.</li><li>Failing to submit annual SPT Tahunan before March 31, incurring an IDR 100,000 administrative penalty.</li></ul>"
     },
     "relatedCalculators": {
-        "title": "Related Calculators",
-        "html": "<div class=\"grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3\">\n    <a href=\"/countries/indonesia\" class=\"block rounded border p-4 hover:border-primary transition\">More Indonesia Calculators</a>\n    <a href=\"/countries\" class=\"block rounded border p-4 hover:border-primary transition\">All Countries</a>\n    <a href=\"/\" class=\"block rounded border p-4 hover:border-primary transition\">Home</a>\n  </div>"
+        "title": "Related Indonesia Tax Tools",
+        "html": "<div class=\"grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3\">\n    <a href=\"/countries/indonesia/vat/vat-calculator\" class=\"block rounded border p-4 hover:border-primary transition\">Indonesia VAT Calculator (PPN 11%)</a>\n    <a href=\"/countries/singapore/income-tax/income-tax-calculator\" class=\"block rounded border p-4 hover:border-primary transition\">Singapore Income Tax Calculator</a>\n    <a href=\"/countries/malaysia/income-tax/income-tax-calculator\" class=\"block rounded border p-4 hover:border-primary transition\">Malaysia Income Tax Calculator</a>\n  </div>"
     },
     "suggestedArticles": {
         "title": "Suggested Articles",
-        "html": "<div class=\"grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3\">\n    <a href=\"/countries/indonesia/income-tax\" class=\"block rounded border p-4 hover:border-primary transition\">Income Tax Guide</a>\n    <a href=\"/countries/indonesia\" class=\"block rounded border p-4 hover:border-primary transition\">Indonesia Tax Overview</a>\n    <a href=\"/\" class=\"block rounded border p-4 hover:border-primary transition\">All Calculators</a>\n  </div>"
+        "html": "<div class=\"grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3\">\n    <a href=\"/blogs/indonesia-income-tax-rates-brackets-2026\" class=\"block rounded border p-4 hover:border-primary transition\">Indonesia PPh 21 Rates & Brackets Guide</a>\n    <a href=\"/blogs/indonesia-tax-for-expats-foreigners-bali-guide\" class=\"block rounded border p-4 hover:border-primary transition\">Bali Expat & Foreigner Tax Guide</a>\n    <a href=\"/blogs/indonesia-corporate-tax-guide-2026\" class=\"block rounded border p-4 hover:border-primary transition\">Indonesia Corporate Tax Guide</a>\n  </div>"
     },
     "officialResources": {
-        "title": "Official Resources",
-        "html": "<ul class=\"space-y-2\"><li><a href=\"https://www.pajak.go.id\" target=\"_blank\" rel=\"noopener noreferrer\">DJP Indonesia</a></li></ul>"
+        "title": "Official DJP Resources",
+        "html": "<ul class=\"space-y-2\"><li><a href=\"https://www.pajak.go.id\" target=\"_blank\" rel=\"noopener noreferrer\">Direktorat Jenderal Pajak (DJP)</a></li><li><a href=\"https://djponline.pajak.go.id\" target=\"_blank\" rel=\"noopener noreferrer\">DJP Online e-Filing Portal</a></li></ul>"
     },
     "faqSchema": {
-        "What is the standard deduction for Income Tax in Indonesia?": "Standard deductions vary by country. Check the latest official guidelines for your jurisdiction.",
-        "How to calculate Income Tax on salary in Indonesia?": "Enter your annual income, select your tax year, and use the calculator to get an estimate.",
-        "What are the Income Tax slabs in Indonesia?": "Slabs vary by income level and tax year. The calculator shows the applicable rates."
+        "What is the basic PTKP non-taxable limit in Indonesia?": "The basic PTKP for a single individual taxpayer (TK/0) is IDR 54,000,000 per year.",
+        "When is the SPT Tahunan tax filing deadline in Indonesia?": "Annual SPT Tahunan returns for individual taxpayers must be filed online by March 31.",
+        "How are foreign expats in Bali taxed?": "Foreigners staying in Indonesia for 183+ days within 12 months are tax residents. Under the Job Creation Law, skilled expats pay tax on foreign income only after 4 years of residency."
     },
 
     "overview": {
       "title": "Overview",
-      "html": "<p>This calculator helps you estimate your tax liability. Enter your details below for an estimate based on current tax rules.</p>"
+      "html": "<p>This Indonesia Income Tax Calculator computes progressive PPh 21 personal tax (5% to 35%) under DJP Tax Year 2026 rules, incorporates PTKP status deductions (IDR 54M to IDR 72M), subtracts Biaya Jabatan occupational cost, and estimates your net salary.</p>"
     },
     "workedExample": {
       "title": "Example Calculation",
-      "html": "<p>Example: with an annual income of $50,000, the estimated tax would be calculated using the applicable rates. Use the calculator above for your specific situation.</p>"
+      "html": "<p>For a single taxpayer (TK/0) in Jakarta earning gross annual salary of IDR 180,000,000:<br>• Gross Income: IDR 180,000,000<br>• Biaya Jabatan (5% max): IDR 6,000,000<br>• Net Income: IDR 174,000,000<br>• Basic PTKP (TK/0): IDR 54,000,000<br>• Taxable Income (PhKP): IDR 120,000,000<br>• Tax Bracket 1 (5% on first IDR 60M): IDR 3,000,000<br>• Tax Bracket 2 (15% on remaining IDR 60M): IDR 9,000,000<br>• Total Annual PPh 21: IDR 12,000,000 (Monthly tax: IDR 1,000,000).</p>"
     },
     "benefits": {
-      "title": "Benefits of Using This Calculator",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Instant tax estimates</li><li>Up-to-date rates</li><li>Easy to use</li><li>Helps with financial planning</li></ul>"
+      "title": "Key Features",
+      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Calculates DJP 5-tier PPh 21 progressive brackets (5% to 35%)</li><li>Includes PTKP non-taxable allowances for single and married taxpayers with up to 3 dependents</li><li>Applies automatic 5% Biaya Jabatan occupational expense cap</li><li>Updated for current DJP Tax Year 2026 regulations</li></ul>"
     },
     "limitations": {
-      "title": "Limitations",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>This is an estimate only</li><li>Does not cover all deductions or credits</li><li>Tax laws change frequently</li><li>Consult a professional for complex situations</li></ul>"
+      "title": "Notice",
+      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Calculations assume tax resident status (183+ days in Indonesia).</li><li>Non-residents pay a flat 20% withholding tax (PPh 26) without PTKP deductions.</li><li>SPT Tahunan returns must be submitted via DJP Online by March 31.</li></ul>"
     },
     "faq": [
       {
-        "question": "What is the standard tax rate?",
-        "answer": "Rates vary by income level and jurisdiction."
+        "question": "What happens if I file my SPT Tahunan late?",
+        "answer": "Late filing of individual annual tax returns incurs a statutory administrative fine of IDR 100,000."
       },
       {
-        "question": "How accurate is this calculator?",
-        "answer": "This calculator provides estimates based on current tax rules. For precise calculations, consult a tax professional."
+        "question": "Does Indonesia tax worldwide income?",
+        "answer": "Indonesian tax residents are subject to worldwide income tax, subject to double taxation relief under applicable treaties (DTA)."
       }
     ],
     "relatedCountry": {
       "title": "Related Country",
-      "html": "<p>Explore tax calculators for other countries.</p>"
+      "html": "<p>Explore <a href='/countries/indonesia'>Indonesia Tax Overview</a> and <a href='/countries/singapore'>Singapore Tax Calculator</a>.</p>"
     },
     "educationalDisclaimer": {
       "title": "Educational Disclaimer",
-      "text": "This calculator is for informational and educational purposes only. It does not constitute legal or tax advice. Always consult a qualified professional."
+      "text": "This calculator provides estimations based on Direktorat Jenderal Pajak (DJP) PPh 21 income tax regulations."
     }
-},
+  },
 
   "indonesia-vat-vat-calculator": {
     "howToUse": {
@@ -2045,47 +2040,41 @@ export const calculatorContent: Record<string, RichCalculatorContent> = {
         "html": "<ul class=\"space-y-2\"><li><a href=\"https://www.pajak.go.id\" target=\"_blank\" rel=\"noopener noreferrer\">DJP Indonesia</a></li></ul>"
     },
     "faqSchema": {
-        "What is the standard Vat rate in Indonesia?": "Standard rates vary by country and type of goods/services.",
-        "How to calculate Vat from total amount?": "Enter the total amount and select reverse calculation to extract the tax component.",
-        "What are the different Vat rates in Indonesia?": "Rates may include standard, reduced, zero-rated, and exempt categories."
+        "What is the standard VAT rate in Indonesia?": "The standard VAT (PPN) rate in Indonesia is 11%.",
+        "What is the VAT registration threshold in Indonesia?": "Businesses with annual gross turnover exceeding IDR 4.8 billion must register as Taxable Entrepreneurs (PKP)."
     },
-
     "overview": {
       "title": "Overview",
-      "html": "<p>This calculator helps you estimate your tax liability. Enter your details below for an estimate based on current tax rules.</p>"
+      "html": "<p>This Indonesia VAT Calculator estimates 11% Pajak Pertambahan Nilai (PPN) on commercial transactions, calculates gross inclusive and net exclusive prices, and outlines PKP registration rules.</p>"
     },
     "workedExample": {
       "title": "Example Calculation",
-      "html": "<p>Example: with an annual income of $50,000, the estimated tax would be calculated using the applicable rates. Use the calculator above for your specific situation.</p>"
+      "html": "<p>For a transaction with a net price of IDR 10,000,000:<br>• Net Price: IDR 10,000,000<br>• PPN (11%): IDR 1,100,000<br>• Total Gross Amount: IDR 11,100,000.</p>"
     },
     "benefits": {
-      "title": "Benefits of Using This Calculator",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Instant tax estimates</li><li>Up-to-date rates</li><li>Easy to use</li><li>Helps with financial planning</li></ul>"
+      "title": "Key Features",
+      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Computes 11% PPN inclusive and exclusive amounts</li><li>Extracts VAT component from gross totals</li><li>Outlines IDR 4.8B PKP registration threshold</li></ul>"
     },
     "limitations": {
-      "title": "Limitations",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>This is an estimate only</li><li>Does not cover all deductions or credits</li><li>Tax laws change frequently</li><li>Consult a professional for complex situations</li></ul>"
+      "title": "Notice",
+      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Exempt goods and services (e.g., basic food items, medical services) do not carry PPN.</li><li>Registered PKPs must issue official e-Faktur electronic invoices.</li></ul>"
     },
     "faq": [
       {
-        "question": "What is the standard tax rate?",
-        "answer": "Rates vary by income level and jurisdiction."
-      },
-      {
-        "question": "How accurate is this calculator?",
-        "answer": "This calculator provides estimates based on current tax rules. For precise calculations, consult a tax professional."
+        "question": "What is the current VAT rate in Indonesia?",
+        "answer": "The standard VAT (PPN) rate in Indonesia is 11%."
       }
     ],
     "relatedCountry": {
       "title": "Related Country",
-      "html": "<p>Explore tax calculators for other countries.</p>"
+      "html": "<p>Explore <a href='/countries/indonesia'>Indonesia Tax Overview</a> and <a href='/countries/singapore'>Singapore GST Calculator</a>.</p>"
     },
     "educationalDisclaimer": {
       "title": "Educational Disclaimer",
-      "text": "This calculator is for informational and educational purposes only. It does not constitute legal or tax advice. Always consult a qualified professional."
+      "text": "This calculator provides estimations based on Direktorat Jenderal Pajak (DJP) PPN regulations."
     }
-}
-,
+  },
+
   "hong-kong-salaries-tax-salary-tax-computation": {
     "howToUse": { "title": "How to Use", "html": "<p>Use this Hong Kong Salary Tax Computation tool to get a detailed breakdown of your salaries tax.</p>" },
     "understandingResults": { "title": "Understanding Results", "html": "<p><strong>Total Income:</strong> Gross employment income. <strong>Salaries Tax:</strong> Tax computed under progressive or standard rate, whichever is lower.</p>" },

@@ -147,8 +147,43 @@ const myGuideMap: Record<string, Array<{ title: string; slug: string }>> = {
   ],
   "foreign-income": [
     { title: "Foreign-Sourced Income Guide", slug: "/countries/malaysia/foreign-income" },
-    { title: "Malaysia Income Tax Guide", slug: "/countries/malaysia/income-tax" },
     { title: "Tax Residency Guide", slug: "/countries/malaysia/income-tax" }
+  ]
+};
+
+const idGuideMap: Record<string, Array<{ title: string; slug: string }>> = {
+  "income-tax": [
+    { title: "Indonesia PPh 21 Rates & Brackets Guide", slug: "/blogs/indonesia-income-tax-rates-brackets-2026" },
+    { title: "Bali Expat & Foreigner Tax Guide", slug: "/blogs/indonesia-tax-for-expats-foreigners-bali-guide" },
+    { title: "Indonesia Corporate Tax Guide", slug: "/blogs/indonesia-corporate-tax-guide-2026" }
+  ],
+  "vat": [
+    { title: "Indonesia VAT (PPN 11%) Guide", slug: "/countries/indonesia/vat" },
+    { title: "Indonesia PPh 21 Rates & Brackets Guide", slug: "/blogs/indonesia-income-tax-rates-brackets-2026" },
+    { title: "Indonesia Tax Overview", slug: "/countries/indonesia" }
+  ]
+};
+
+const sgGuideMap: Record<string, Array<{ title: string; slug: string }>> = {
+  "income-tax": [
+    { title: "Singapore Income Tax Rates & Brackets Guide", slug: "/blogs/singapore-income-tax-rates-brackets-2026" },
+    { title: "Hong Kong vs Singapore Tax Comparison Guide", slug: "/blogs/hong-kong-vs-singapore-tax-guide" },
+    { title: "IRAS Tax Reliefs & SRS Guide", slug: "/blogs/singapore-tax-reliefs-deductions-rebates-guide" }
+  ],
+  "corporate-tax": [
+    { title: "Singapore Corporate Income Tax Guide", slug: "/blogs/singapore-corporate-tax-guide-2026" },
+    { title: "Hong Kong vs Singapore Tax Comparison Guide", slug: "/blogs/hong-kong-vs-singapore-tax-guide" },
+    { title: "Singapore Foreign Income Guide", slug: "/blogs/singapore-foreign-income-dividends-capital-gains-tax" }
+  ],
+  "gst": [
+    { title: "Singapore GST Registration & Filing Guide", slug: "/countries/singapore/gst" },
+    { title: "Singapore Income Tax Guide", slug: "/blogs/singapore-income-tax-rates-brackets-2026" },
+    { title: "Singapore Corporate Income Tax Guide", slug: "/blogs/singapore-corporate-tax-guide-2026" }
+  ],
+  "stamp-duty": [
+    { title: "Singapore Property Stamp Duty Guide", slug: "/blogs/singapore-rental-property-income-tax-guide" },
+    { title: "Hong Kong vs Singapore Tax Comparison Guide", slug: "/blogs/hong-kong-vs-singapore-tax-guide" },
+    { title: "Singapore Income Tax Guide", slug: "/blogs/singapore-income-tax-rates-brackets-2026" }
   ]
 };
 
@@ -158,6 +193,10 @@ const suggestedArticles = country.slug === 'hong-kong' && hkGuideMap[category.sl
   ? pkGuideMap[category.slug]
   : country.slug === 'malaysia' && myGuideMap[category.slug]
   ? myGuideMap[category.slug]
+  : country.slug === 'indonesia' && idGuideMap[category.slug]
+  ? idGuideMap[category.slug]
+  : country.slug === 'singapore' && sgGuideMap[category.slug]
+  ? sgGuideMap[category.slug]
   : country.taxCategories
       .filter(cat => cat.slug !== category.slug)
       .slice(0, 3)

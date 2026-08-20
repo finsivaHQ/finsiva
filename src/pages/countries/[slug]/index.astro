@@ -437,7 +437,65 @@ const govOrgSchema = {
         </div>
       )}
 
-      {!['hong-kong', 'pakistan', 'malaysia'].includes(country.slug) && (
+      {country.slug === 'indonesia' && (
+        <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <a href="/countries/indonesia/income-tax/income-tax-calculator" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary text-base">Indonesia Income Tax Calculator (PPh 21)</h4>
+            <p class="text-xs text-muted mt-1 dark:text-muted">Calculate progressive personal tax (5%-35%), PTKP non-taxable allowances, and DJP e-Filing.</p>
+          </a>
+          <a href="/blogs/indonesia-income-tax-rates-brackets-2026" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary text-base">PPh 21 Rates & Brackets Guide</h4>
+            <p class="text-xs text-muted mt-1 dark:text-muted">Complete guide to DJP income tax brackets, TER withholding rates, and SPT Tahunan filing.</p>
+          </a>
+          <a href="/blogs/indonesia-tax-for-expats-foreigners-bali-guide" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary text-base">Bali Expat & Foreigner Tax Guide</h4>
+            <p class="text-xs text-muted mt-1 dark:text-muted">183-day residency rules, KITAS/KITAP rules, 20% PPh 26 non-resident tax, and Job Creation Law.</p>
+          </a>
+          <a href="/blogs/indonesia-corporate-tax-guide-2026" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary text-base">Corporate Tax & SME Guide</h4>
+            <p class="text-xs text-muted mt-1 dark:text-muted">22% flat corporate tax, Article 31E 50% discount, and 0.5% final turnover tax for small businesses.</p>
+          </a>
+          <a href="/countries/indonesia/vat/vat-calculator" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary text-base">Indonesia VAT (PPN 11%) Calculator</h4>
+            <p class="text-xs text-muted mt-1 dark:text-muted">Calculate 11% PPN consumption tax inclusive and exclusive amounts and e-Faktur invoicing.</p>
+          </a>
+          <a href="/blogs/indonesia-capital-gains-dividends-inheritance-tax-guide" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary text-base">Capital Gains & Dividend Tax Guide</h4>
+            <p class="text-xs text-muted mt-1 dark:text-muted">Taxation of real estate gains, stock sales, dividend withholding, and inheritance rules.</p>
+          </a>
+        </div>
+      )}
+
+      {country.slug === 'singapore' && (
+        <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <a href="/countries/singapore/income-tax/income-tax-calculator" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary text-base">Singapore Income Tax Calculator</h4>
+            <p class="text-xs text-muted mt-1 dark:text-muted">Calculate progressive personal tax (0%-24%), S$20k tax-free limit, and myTax Portal returns.</p>
+          </a>
+          <a href="/blogs/hong-kong-vs-singapore-tax-guide" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary text-base">Hong Kong vs Singapore Tax Guide</h4>
+            <p class="text-xs text-muted mt-1 dark:text-muted">In-depth comparison of salaries tax, corporate tax, SRS reliefs, and territorial rules.</p>
+          </a>
+          <a href="/blogs/singapore-tax-reliefs-deductions-rebates-guide" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary text-base">IRAS Tax Reliefs & SRS Guide</h4>
+            <p class="text-xs text-muted mt-1 dark:text-muted">Earned Income Relief, SRS contributions (S$15.3k limit), CPF relief, and S$80k cap.</p>
+          </a>
+          <a href="/blogs/singapore-corporate-tax-guide-2026" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary text-base">Singapore Corporate Tax Guide</h4>
+            <p class="text-xs text-muted mt-1 dark:text-muted">Single-tier 17% corporate tax, 75% startup tax exemption, CIT rebates, and ECI filing.</p>
+          </a>
+          <a href="/countries/singapore/gst/gst-calculator" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary text-base">Singapore GST (9%) Calculator</h4>
+            <p class="text-xs text-muted mt-1 dark:text-muted">Calculate prevailing 9% Goods and Services Tax inclusive/exclusive amounts and S$1M registration.</p>
+          </a>
+          <a href="/blogs/singapore-tax-for-foreigners-expats-guide" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary text-base">Expat & Foreigner Tax Guide</h4>
+            <p class="text-xs text-muted mt-1 dark:text-muted">183-day residency rules, 60-day short-term employment exemption, and non-resident 15%/24% tax.</p>
+          </a>
+        </div>
+      )}
+
+      {!['hong-kong', 'pakistan', 'malaysia', 'indonesia', 'singapore'].includes(country.slug) && (
         <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <a href={`/countries/${country.slug}`} class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
             <h4 class="font-semibold text-ink dark:text-on-primary">{country.name} Calculators</h4>
