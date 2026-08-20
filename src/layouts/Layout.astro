@@ -143,15 +143,42 @@ const financialProductSchema = {
   <head>
     <script is:inline>
       (function() {
-        try {
-          var stored = localStorage.getItem('theme');
-          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-          if (stored === 'dark' || (stored === null && prefersDark)) {
-            document.documentElement.classList.add('dark');
-          } else {
-            document.documentElement.classList.remove('dark');
+        function getStoredTheme() {
+          try {
+            var stored = localStorage.getItem('theme');
+            if (stored === 'dark' || stored === 'light') return stored;
+            var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            return prefersDark ? 'dark' : 'light';
+          } catch (e) {
+            return 'light';
           }
-        } catch (e) {}
+        }
+
+        function applyTheme(targetDoc) {
+          var doc = targetDoc || document.documentElement;
+          var theme = getStoredTheme();
+          if (theme === 'dark') {
+            doc.classList.add('dark');
+          } else {
+            doc.classList.remove('dark');
+          }
+        }
+
+        applyTheme(document.documentElement);
+
+        document.addEventListener('astro:before-swap', function(e) {
+          if (e && e.newDocument) {
+            applyTheme(e.newDocument.documentElement);
+          }
+        });
+
+        document.addEventListener('astro:after-swap', function() {
+          applyTheme(document.documentElement);
+        });
+
+        document.addEventListener('astro:page-load', function() {
+          applyTheme(document.documentElement);
+        });
       })();
     </script>
     <ClientRouter />
