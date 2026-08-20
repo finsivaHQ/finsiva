@@ -55,7 +55,42 @@ const taxCategories: TaxCategory[] = [
       { slug: "ev-tax-calculator", name: "EV Tax Calculator", description: "Calculate UK EV Vehicle Excise Duty (VED) road tax, BiK company car tax, and luxury car surcharge." }
     ],
     guides: [
-      { slug: "ev-tax-guide", title: "UK EV Tax Guide", description: "Complete guide to UK electric vehicle road tax, BiK rates, and luxury car surcharge rules." }
+      {
+        slug: "ev-tax-guide",
+        title: "UK Electric Vehicle Tax Guide",
+        description: "Complete guide to UK electric vehicle road tax (VED), BiK rates, £40k luxury car surcharge, and tax relief rules.",
+        image: "https://images.unsplash.com/photo-1563720223185-11003d516935?w=1200&q=80",
+        sections: [
+          {
+            title: "1 April 2025 Road Tax Changes",
+            content: "From 1 April 2025, zero-emission electric vehicles pay a £10 first-year VED rate upon registration and £190/year standard VED from Year 2 onwards. Existing EVs registered between 2017 and March 2025 transition to £190/year."
+          },
+          {
+            title: "Expensive Car Supplement (£40k Surcharge)",
+            content: "Electric cars with a P11D list price over £40,000 registered on or after 1 April 2025 incur an additional £410/year Expensive Car Supplement for 5 years (Years 2 to 6 of registration), bringing total road tax to £600/year."
+          },
+          {
+            title: "Company Car Tax & BiK Rates 2025–2028",
+            content: "Benefit-in-Kind (BiK) rates for electric company cars remain low: 2% in 2024/25, 3% in 2025/26, 4% in 2026/27, and 5% in 2027/28. Employees pay tax on taxable benefit (P11D × BiK%) at their marginal tax rate."
+          },
+          {
+            title: "100% First-Year Capital Allowances for Businesses",
+            content: "Limited companies purchasing brand-new zero-emission electric cars can claim 100% First-Year Capital Allowances, deducting full vehicle purchase costs against Corporation Tax in Year 1."
+          }
+        ],
+        steps: [
+          { step: 1, title: "Determine P11D List Price", description: "Calculate full manufacturer list price including VAT and options, excluding first-year registration fees." },
+          { step: 2, title: "Check Registration Date", description: "Identify if the vehicle was registered pre-April 2025 or post-April 2025 to determine VED rates." },
+          { step: 3, title: "Calculate Road Tax (VED)", description: "Apply standard VED rate (£190) plus £410 Expensive Car Supplement if list price > £40,000." },
+          { step: 4, title: "Calculate BiK Company Car Tax", description: "Multiply P11D by 3% (2025/26 BiK rate) and apply your personal income tax band (20%, 40%, or 45%)." }
+        ],
+        tips: [
+          "Check P11D list price carefully; discounts do not lower the £40,000 luxury surcharge threshold.",
+          "Use salary sacrifice to pay for an electric lease car out of pre-tax gross income and save up to 40% in tax.",
+          "Claim workplace charging grants (up to £350 per socket) and home chargepoint installation grants if eligible.",
+          "Businesses purchasing new EVs should claim 100% First-Year Capital Allowances to lower Corporation Tax."
+        ]
+      }
     ],
     faqs: [
       { question: "Do electric cars pay road tax (VED) in the UK?", answer: "Starting 1 April 2025, electric vehicles in the UK are subject to standard VED road tax (£190/year) and the expensive car supplement if the list price exceeds £40,000." },
