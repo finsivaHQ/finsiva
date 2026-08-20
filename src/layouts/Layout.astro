@@ -141,6 +141,19 @@ const financialProductSchema = {
 <!doctype html>
 <html lang={initialLang} dir={initialDir} class="dark:bg-surface" color-scheme="light dark">
   <head>
+    <script is:inline>
+      (function() {
+        try {
+          var stored = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (stored === 'dark' || (stored === null && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
     <ClientRouter />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KGQ9X41EPQ"></script>
