@@ -523,10 +523,10 @@ const mergedContent = {
         }
 
         var grossText = getVal('grossIncome') || getVal('totalIncome') || getVal('annualIncome') || '';
-        var taxText = getVal('incomeTax') || getVal('totalTax') || getVal('federalTax') || getVal('profitsTax') || getVal('capitalGainsTax') || getVal('salariesTax') || getVal('propertyTax') || getVal('stampDuty') || getVal('totalFICA') || getVal('niContributions') || getVal('estateTax') || getVal('vehicleTax') || getVal('tokenTax') || getVal('transferFee') || getVal('tdsAmount') || getVal('taxAmount') || getVal('gstAmount') || getVal('vatAmount') || getVal('firstRegistrationTax') || getVal('corporateTax') || getVal('seTax') || '';
+        var taxText = getVal('incomeTax') || getVal('totalTax') || getVal('federalTax') || getVal('profitsTax') || getVal('capitalGainsTax') || getVal('salariesTax') || getVal('propertyTax') || getVal('stampDuty') || getVal('totalFICA') || getVal('niContributions') || getVal('estateTax') || getVal('vehicleTax') || getVal('tokenTax') || getVal('transferFee') || getVal('tdsAmount') || getVal('taxAmount') || getVal('gstAmount') || getVal('vatAmount') || getVal('firstRegistrationTax') || getVal('corporateTax') || getVal('seTax') || getVal('annualBiKTax') || getVal('totalAnnualVED') || '';
         var netText = getVal('takeHomePay') || getVal('afterTaxIncome') || getVal('afterTaxGain') || getVal('netAmount') || '';
         var effectiveText = getVal('effectiveRate') || '';
-        var taxableText = getVal('taxableIncome') || getVal('netChargeableIncome') || getVal('netAssessableValue') || '';
+        var taxableText = getVal('taxableIncome') || getVal('netChargeableIncome') || getVal('netAssessableValue') || getVal('bikTaxableValue') || '';
 
         var gross = parseNum(grossText);
         var tax = parseNum(taxText);
@@ -538,7 +538,7 @@ const mergedContent = {
         var daily = net > 0 ? (net / 365) : 0;
 
         var additionalCards = '';
-        var highlightIds = ['incomeTax', 'totalTax', 'federalTax', 'capitalGainsTax', 'takeHomePay', 'afterTaxIncome', 'afterTaxGain', 'cess', 'totalDeductions', 'stampDuty', 'propertyTax', 'salariesTax', 'profitsTax', 'totalFICA', 'socialSecurity', 'medicare', 'grossIncome', 'totalIncome', 'taxableIncome', 'netChargeableIncome', 'grossRentalIncome', 'standardDeduction', 'allowances', 'niContributions', 'corporateTax', 'estateTax', 'seTax', 'deductiblePortion', 'tdsRate', 'tdsAmount', 'taxAmount', 'totalAmount', 'netAmount', 'vatAmount', 'gstAmount', 'firstRegistrationTax', 'stampDuty', 'propertyTax', 'vehicleTax', 'tokenTax', 'transferFee', 'additionalMedicare', 'employerMatch', 'itemizedAmount'];
+        var highlightIds = ['incomeTax', 'totalTax', 'federalTax', 'capitalGainsTax', 'takeHomePay', 'afterTaxIncome', 'afterTaxGain', 'cess', 'totalDeductions', 'stampDuty', 'propertyTax', 'salariesTax', 'profitsTax', 'totalFICA', 'socialSecurity', 'medicare', 'grossIncome', 'totalIncome', 'taxableIncome', 'netChargeableIncome', 'grossRentalIncome', 'standardDeduction', 'allowances', 'niContributions', 'corporateTax', 'estateTax', 'seTax', 'deductiblePortion', 'tdsRate', 'tdsAmount', 'taxAmount', 'totalAmount', 'netAmount', 'vatAmount', 'gstAmount', 'firstRegistrationTax', 'stampDuty', 'propertyTax', 'vehicleTax', 'tokenTax', 'transferFee', 'additionalMedicare', 'employerMatch', 'itemizedAmount', 'vedFirstYear', 'vedStandardYear', 'luxuryCarSupplement', 'totalAnnualVED', 'bikRate', 'bikTaxableValue', 'annualBiKTax', 'employerNI'];
         var outputLabels = {
           'grossIncome': 'Gross Total Income', 'totalDeductions': 'Total Deductions', 'taxableIncome': 'Taxable Income',
           'incomeTax': 'Income Tax', 'cess': 'Health & Education Cess', 'totalTax': 'Total Tax Liability',
@@ -554,7 +554,10 @@ const mergedContent = {
           'seTax': 'Self-Employment Tax', 'deductiblePortion': 'Deductible Portion', 'tdsRate': 'TDS Rate',
           'tdsAmount': 'TDS Deducted', 'netAmount': 'Net Amount', 'taxAmount': 'Tax Amount', 'totalAmount': 'Total Amount',
           'vatAmount': 'VAT Amount', 'gstAmount': 'GST Amount', 'firstRegistrationTax': 'First Registration Tax',
-          'vehicleTax': 'Vehicle Tax', 'tokenTax': 'Token Tax', 'transferFee': 'Transfer Fee'
+          'vehicleTax': 'Vehicle Tax', 'tokenTax': 'Token Tax', 'transferFee': 'Transfer Fee',
+          'vedFirstYear': 'First-Year VED', 'vedStandardYear': 'Standard Annual VED', 'luxuryCarSupplement': 'Expensive Car Supplement',
+          'totalAnnualVED': 'Total Annual VED', 'bikRate': 'BiK Rate', 'bikTaxableValue': 'BiK Taxable Value',
+          'annualBiKTax': 'Employee Annual BiK Tax', 'employerNI': 'Employer Class 1A NI'
         };
 
         if (form) {
@@ -1461,6 +1464,61 @@ const mergedContent = {
         setOutput('vehicleTax', tax, 'currency');
       }
 
+      function calcUKEVTax() {
+        var price = getInput('vehiclePrice') || 0;
+        var vtype = getInput('vehicleType') || 'bev';
+        var regYear = getInput('registrationYear') || 'post_2025';
+        var ownership = getInput('ownershipType') || 'company_car';
+        var taxBand = getInput('taxBand') || 'higher';
+
+        var vedFirstYear = 0;
+        var vedStandardYear = 0;
+        var luxurySupplement = 0;
+
+        if (vtype === 'bev') {
+          vedFirstYear = regYear === 'post_2025' ? 10 : 0;
+          vedStandardYear = 190;
+          if (price > 40000 && regYear === 'post_2025') {
+            luxurySupplement = 410;
+          }
+        } else if (vtype === 'phev') {
+          vedFirstYear = 30;
+          vedStandardYear = 190;
+          if (price > 40000) luxurySupplement = 410;
+        } else {
+          vedFirstYear = 270;
+          vedStandardYear = 190;
+          if (price > 40000) luxurySupplement = 410;
+        }
+
+        var totalAnnualVED = vedStandardYear + luxurySupplement;
+
+        var bikRate = 0;
+        if (ownership === 'company_car') {
+          if (vtype === 'bev') bikRate = 3.0;
+          else if (vtype === 'phev') bikRate = 8.0;
+          else bikRate = 28.0;
+        }
+
+        var bikTaxableValue = ownership === 'company_car' ? price * (bikRate / 100) : 0;
+
+        var taxRatePct = 0.20;
+        if (taxBand === 'higher') taxRatePct = 0.40;
+        else if (taxBand === 'additional') taxRatePct = 0.45;
+
+        var annualBiKTax = bikTaxableValue * taxRatePct;
+        var employerNI = bikTaxableValue * 0.15;
+
+        setOutput('vedFirstYear', vedFirstYear, 'currency');
+        setOutput('vedStandardYear', vedStandardYear, 'currency');
+        setOutput('luxuryCarSupplement', luxurySupplement, 'currency');
+        setOutput('totalAnnualVED', totalAnnualVED, 'currency');
+        setOutput('bikRate', bikRate, 'percentage');
+        setOutput('bikTaxableValue', bikTaxableValue, 'currency');
+        setOutput('annualBiKTax', annualBiKTax, 'currency');
+        setOutput('employerNI', employerNI, 'currency');
+      }
+
       function calculate() {
         if (!form) return;
 
@@ -1499,6 +1557,7 @@ const mergedContent = {
           else if (ruleId === 'united-kingdom-income-tax-income-tax-calculator') calcUKIncomeTax();
           else if (ruleId === 'united-kingdom-vat-vat-calculator') calcGenericVATorGST(getInput('vatRate') || '20', getInput('calculationType') || 'exclusive');
           else if (ruleId === 'united-kingdom-national-insurance-ni-calculator') calcNIContributions();
+          else if (ruleId === 'united-kingdom-vehicle-tax-ev-tax-calculator') calcUKEVTax();
           else if (ruleId === 'hong-kong-salaries-tax-salaries-tax-calculator') calcHKSalariesTax();
           else if (ruleId === 'singapore-income-tax-income-tax-calculator') calcSGIncomeTax();
           else if (ruleId === 'singapore-gst-gst-calculator') calcGenericVATorGST(0.09, getInput('calculationType') || 'exclusive');

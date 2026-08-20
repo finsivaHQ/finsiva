@@ -1090,6 +1090,94 @@ export const taxRules: TaxRule[] = [
       },
     ],
   },
+  // United Kingdom - EV Tax Calculator
+  {
+    id: "united-kingdom-vehicle-tax-ev-tax-calculator",
+    countrySlug: "united-kingdom",
+    categorySlug: "vehicle-tax",
+    calculatorSlug: "ev-tax-calculator",
+    name: "EV Tax Calculator",
+    description: "Calculate UK Vehicle Excise Duty (VED) road tax, luxury car surcharge, and Benefit-in-Kind (BiK) company car tax for electric vehicles.",
+    inputs: [
+      {
+        id: "vehiclePrice",
+        label: "Vehicle List Price / P11D Value (£)",
+        type: "number",
+        required: true,
+        placeholder: "Enter vehicle list price (e.g. 45000)",
+        defaultValue: 45000,
+        validation: { min: 0, step: 500 },
+      },
+      {
+        id: "vehicleType",
+        label: "Powertrain / Vehicle Type",
+        type: "select",
+        required: true,
+        defaultValue: "bev",
+        options: [
+          { value: "bev", label: "Pure Electric (BEV - Zero Emissions)" },
+          { value: "phev", label: "Plug-in Hybrid (PHEV - 1-50g/km CO2)" },
+          { value: "petrol_diesel", label: "Petrol / Diesel (Internal Combustion)" },
+        ],
+      },
+      {
+        id: "registrationYear",
+        label: "Registration Status",
+        type: "select",
+        required: true,
+        defaultValue: "post_2025",
+        options: [
+          { value: "post_2025", label: "Registered on/after 1 April 2025" },
+          { value: "pre_2025", label: "Registered 1 April 2017 to 31 March 2025" },
+        ],
+      },
+      {
+        id: "ownershipType",
+        label: "Ownership Type",
+        type: "select",
+        required: true,
+        defaultValue: "company_car",
+        options: [
+          { value: "company_car", label: "Company Car (Employer Provided)" },
+          { value: "private", label: "Private Ownership" },
+        ],
+      },
+      {
+        id: "taxBand",
+        label: "Employee Income Tax Band",
+        type: "select",
+        required: true,
+        defaultValue: "higher",
+        options: [
+          { value: "basic", label: "Basic Rate (20%)" },
+          { value: "higher", label: "Higher Rate (40%)" },
+          { value: "additional", label: "Additional Rate (45%)" },
+        ],
+      },
+    ],
+    outputs: [
+      { id: "vedFirstYear", label: "First-Year VED Road Tax", format: "currency", description: "First year VED upon registration" },
+      { id: "vedStandardYear", label: "Standard Annual VED", format: "currency", description: "Base annual VED road tax (Year 2+)" },
+      { id: "luxuryCarSupplement", label: "Expensive Car Supplement", format: "currency", description: "Surcharge for vehicles over £40,000 (Years 2-6)" },
+      { id: "totalAnnualVED", label: "Total Annual VED (Year 2+)", format: "currency", description: "Standard VED + Expensive Car Supplement" },
+      { id: "bikRate", label: "BiK Tax Rate", format: "percentage", description: "Company car Benefit-in-Kind rate (2025/26)" },
+      { id: "bikTaxableValue", label: "BiK Taxable Value", format: "currency", description: "Annual taxable benefit (P11D × BiK %)" },
+      { id: "annualBiKTax", label: "Employee Annual BiK Tax", format: "currency", description: "Tax payable by employee" },
+      { id: "employerNI", label: "Employer Class 1A NI", format: "currency", description: "Employer National Insurance liability" },
+    ],
+    formulas: [
+      { id: "ved_rules", name: "VED Road Tax Rules", formula: "From April 2025: BEV First Year £10, Standard £190/yr. Expensive Car Supplement £410/yr if list price > £40,000.", description: "UK Vehicle Excise Duty regulations for zero-emission and low-emission cars" },
+      { id: "bik_rules", name: "Company Car BiK Tax", formula: "BiK Tax = P11D Value × BiK% × Employee Tax Band. BEV BiK rate: 3% (2025/26).", description: "HMRC Benefit-in-Kind taxation for company cars" },
+    ],
+    examples: [
+      {
+        title: "£45,000 Electric Car (BEV), Company Car, 40% Taxpayer (2025/26)",
+        inputs: { vehiclePrice: 45000, vehicleType: "bev", registrationYear: "post_2025", ownershipType: "company_car", taxBand: "higher" },
+        outputs: { vedFirstYear: 10, vedStandardYear: 190, luxuryCarSupplement: 410, totalAnnualVED: 600, bikRate: 3.0, bikTaxableValue: 1350, annualBiKTax: 540, employerNI: 202.50 },
+        explanation: "First year VED is £10. Year 2+ VED is £190 + £410 luxury surcharge = £600/yr. BiK taxable value is £45,000 x 3% = £1,350. At 40% tax rate, annual BiK tax is £540."
+      },
+    ],
+  },
   // United States - State Income Tax
   {
     id: "united-states-income-tax-state-income-tax",

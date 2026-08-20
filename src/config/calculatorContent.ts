@@ -934,6 +934,80 @@ export const calculatorContent: Record<string, RichCalculatorContent> = {
     }
 },
 
+  "united-kingdom-vehicle-tax-ev-tax-calculator": {
+    "howToUse": {
+      "title": "How to Use",
+      "html": "<p>Use this UK EV Tax Calculator to estimate Vehicle Excise Duty (VED road tax), the Expensive Car Supplement (luxury car surcharge), and Benefit-in-Kind (BiK) company car tax:</p><ol class=\"list-decimal pl-6 space-y-2\"><li>Enter the <strong>Vehicle List Price / P11D Value</strong> in GBP (£).</li><li>Select the <strong>Powertrain / Vehicle Type</strong> (Pure Electric BEV, Plug-in Hybrid PHEV, or Petrol/Diesel).</li><li>Choose the <strong>Registration Status</strong> (Registered on/after 1 April 2025 vs between 2017 and March 2025).</li><li>Select <strong>Ownership Type</strong> (Company Car vs Private Ownership) and your <strong>Income Tax Band</strong>.</li><li>Click <strong>Calculate</strong> to see your full tax breakdown.</li></ol>"
+    },
+    "understandingResults": {
+      "title": "Understanding Results",
+      "html": "<p><strong>First-Year VED:</strong> One-off road tax paid upon registering a new vehicle (£10 for post-2025 EVs).<br><strong>Standard Annual VED:</strong> Annual road tax from Year 2 onwards (£190/yr).<br><strong>Expensive Car Supplement:</strong> Surcharge of £410/yr (Years 2-6) for vehicles with list price > £40,000.<br><strong>BiK Taxable Value:</strong> P11D List Price × BiK Rate % (e.g., 3% for 2025/26).<br><strong>Employee BiK Tax:</strong> Annual tax payable by employee based on personal tax band (20%, 40%, or 45%).</p>"
+    },
+    "formula": {
+      "title": "Formula",
+      "html": "<p><strong>Road Tax (VED):</strong> Total VED = Standard VED (£190) + Luxury Supplement (£410 if P11D > £40k & registered on/after 1 April 2025).<br><strong>BiK Company Car Tax:</strong> BiK Taxable Benefit = P11D Price × BiK Rate %. Annual Employee Tax = BiK Taxable Benefit × Income Tax Rate (20%, 40%, 45%).</p>"
+    },
+    "taxSlabs": {
+      "title": "UK EV Tax Rules & BiK Rates",
+      "html": "<p>BiK rates for zero-emission electric vehicles: 2% (2024/25), 3% (2025/26), 4% (2026/27), 5% (2027/28). From 1 April 2025, zero-emission EVs lose the £0 VED exemption and pay standard VED (£190/yr) plus £410/yr expensive car surcharge if list price > £40,000.</p>"
+    },
+    "commonMistakes": {
+      "title": "Common Mistakes",
+      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Assuming zero-emission electric vehicles remain £0 VED road tax-exempt after 1 April 2025.</li><li>Forgetting the £410/year Expensive Car Supplement on electric cars costing over £40,000.</li><li>Using incorrect P11D values (must include option extras and VAT, but exclude first registration fee and road tax).</li><li>Confusing company car Benefit-in-Kind tax with private car ownership tax rules.</li></ul>"
+    },
+    "relatedCalculators": {
+      "title": "Related Calculators",
+      "html": "<div class=\"grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3\">\n    <a href=\"/countries/united-kingdom/income-tax/income-tax-calculator\" class=\"block rounded border p-4 hover:border-primary transition\">Income Tax Calculator</a>\n    <a href=\"/countries/united-kingdom/national-insurance/ni-calculator\" class=\"block rounded border p-4 hover:border-primary transition\">National Insurance Calculator</a>\n    <a href=\"/countries/united-kingdom\" class=\"block rounded border p-4 hover:border-primary transition\">UK Tax Overview</a>\n  </div>"
+    },
+    "suggestedArticles": {
+      "title": "Suggested Articles",
+      "html": "<div class=\"grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3\">\n    <a href=\"/countries/united-kingdom/vehicle-tax\" class=\"block rounded border p-4 hover:border-primary transition\">UK Vehicle Tax Guide</a>\n    <a href=\"/countries/united-kingdom/income-tax\" class=\"block rounded border p-4 hover:border-primary transition\">UK Income Tax Guide</a>\n    <a href=\"/countries/united-kingdom\" class=\"block rounded border p-4 hover:border-primary transition\">United Kingdom Overview</a>\n  </div>"
+    },
+    "officialResources": {
+      "title": "Official Resources",
+      "html": "<ul class=\"space-y-2\"><li><a href=\"https://www.gov.uk/vehicle-tax-rate-tables\" target=\"_blank\" rel=\"noopener noreferrer\">HMRC Vehicle Tax Rate Tables</a></li><li><a href=\"https://www.gov.uk/calculate-tax-on-company-cars\" target=\"_blank\" rel=\"noopener noreferrer\">GOV.UK Company Car Tax Calculator</a></li></ul>"
+    },
+    "faqSchema": {
+      "Do electric cars pay road tax (VED) in the UK?": "From 1 April 2025, electric cars pay £10 first-year VED, £190/yr standard VED, plus £410/yr surcharge if over £40,000.",
+      "What is the company car BiK tax on electric vehicles in 2025/26?": "The BiK rate for zero-emission electric vehicles is 3% in 2025/26.",
+      "Does the expensive car supplement apply to electric vehicles?": "Yes, from 1 April 2025, new and existing electric cars registered on or after 1 April 2025 with a list price above £40,000 pay the £410 annual surcharge in Years 2 to 6."
+    },
+    "overview": {
+      "title": "Overview",
+      "html": "<p>This UK EV Tax Calculator helps drivers, company car users, and business owners calculate road tax (Vehicle Excise Duty) and Benefit-in-Kind (BiK) tax for electric vehicles in the UK. Updated for the latest HMRC 2024/25 and 2025/26 tax year changes.</p>"
+    },
+    "workedExample": {
+      "title": "Example Calculation",
+      "html": "<p>For a <strong>£45,000 electric vehicle (BEV)</strong> registered post-April 2025 provided as a company car to a 40% higher rate taxpayer:</p><ul class=\"list-disc pl-6 space-y-1\"><li><strong>First-Year VED:</strong> £10</li><li><strong>Standard Annual VED (Year 2+):</strong> £190</li><li><strong>Expensive Car Supplement:</strong> £410 (as list price > £40,000)</li><li><strong>Total Annual VED:</strong> £600/year</li><li><strong>BiK Rate (2025/26):</strong> 3%</li><li><strong>BiK Taxable Benefit:</strong> £45,000 × 3% = £1,350</li><li><strong>Employee Annual BiK Tax:</strong> £1,350 × 40% = £540/year (£45/month)</li><li><strong>Employer Class 1A NI:</strong> £1,350 × 15% = £202.50/year</li></ul>"
+    },
+    "benefits": {
+      "title": "Benefits of Using This Calculator",
+      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Accurate 2024/25 and 2025/26 VED road tax and BiK tax rates.</li><li>Accounts for the £40,000 Expensive Car Supplement threshold.</li><li>Calculates both employee BiK tax and employer Class 1A NI contributions.</li><li>Helps evaluate salary sacrifice and EV company car tax benefits vs petrol/diesel vehicles.</li></ul>"
+    },
+    "limitations": {
+      "title": "Limitations",
+      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>This tool provides estimations for informational purposes only.</li><li>Does not include non-standard regional grants or specific local congestion charge waivers.</li><li>P11D value should be verified with your fleet manager or manufacturer price list.</li></ul>"
+    },
+    "faq": [
+      {
+        "question": "Do electric cars pay road tax in the UK?",
+        "answer": "Starting 1 April 2025, zero-emission electric vehicles are no longer exempt from VED. They pay £10 for the first year and £190 per year standard rate thereafter, plus £410/year expensive car supplement if list price exceeds £40,000."
+      },
+      {
+        "question": "What is the BiK rate for electric company cars?",
+        "answer": "The Benefit-in-Kind (BiK) rate for electric company cars is 2% in 2024/25, 3% in 2025/26, 4% in 2026/27, and 5% in 2027/28."
+      }
+    ],
+    "relatedCountry": {
+      "title": "Related Country",
+      "html": "<p>Explore tax calculators for other countries.</p>"
+    },
+    "educationalDisclaimer": {
+      "title": "Educational Disclaimer",
+      "text": "This calculator is for informational and educational purposes only. It does not constitute formal legal or tax advice. Always verify with official HMRC guidance."
+    }
+  },
+
   "united-states-income-tax-state-income-tax": {
     "howToUse": {
         "title": "How to Use",

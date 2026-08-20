@@ -45,6 +45,22 @@ const taxCategories: TaxCategory[] = [
     faqs: [
       { question: "What are National Insurance rates?", answer: "Class 1 NI is 8% on earnings between £242 and £967 per week, then 2% above." }
     ]
+  },
+  {
+    slug: "vehicle-tax",
+    name: "Vehicle & EV Tax",
+    description: "Vehicle Excise Duty (Road Tax) and EV Benefit-in-Kind (BiK) company car tax in the UK.",
+    overview: "UK Vehicle Excise Duty (VED) and Benefit-in-Kind (BiK) company car tax for electric vehicles (EVs), hybrids, and petrol/diesel cars. From 1 April 2025, zero-emission electric vehicles are subject to standard VED (£190/yr) and the Expensive Car Supplement (£410/yr) if list price exceeds £40,000.",
+    calculators: [
+      { slug: "ev-tax-calculator", name: "EV Tax Calculator", description: "Calculate UK EV Vehicle Excise Duty (VED) road tax, BiK company car tax, and luxury car surcharge." }
+    ],
+    guides: [
+      { slug: "ev-tax-guide", title: "UK EV Tax Guide", description: "Complete guide to UK electric vehicle road tax, BiK rates, and luxury car surcharge rules." }
+    ],
+    faqs: [
+      { question: "Do electric cars pay road tax (VED) in the UK?", answer: "Starting 1 April 2025, electric vehicles in the UK are subject to standard VED road tax (£190/year) and the expensive car supplement if the list price exceeds £40,000." },
+      { question: "What is the Benefit-in-Kind (BiK) rate for electric company cars?", answer: "The BiK tax rate for zero-emission electric cars is 2% for 2024/25, 3% for 2025/26, 4% for 2026/27, and 5% for 2027/28." }
+    ]
   }
 ];
 
@@ -145,6 +161,7 @@ export const unitedKingdom: Country = {
   taxCategories,
   popularCalculators: [
     { slug: "income-tax-calculator", name: "Income Tax Calculator", category: "income-tax" },
+    { slug: "ev-tax-calculator", name: "EV Tax Calculator", category: "vehicle-tax" },
     { slug: "vat-calculator", name: "VAT Calculator", category: "vat" },
     { slug: "ni-calculator", name: "National Insurance Calculator", category: "national-insurance" }
   ],
