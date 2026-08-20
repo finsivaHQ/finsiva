@@ -347,22 +347,83 @@ const govOrgSchema = {
     </div>
 
     <div class="mt-8 rounded-xl border border-hairline bg-canvas p-8 dark:border-overlay-lighter dark:bg-surface">
-      <h3 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">Further Reading</h3>
-      <p class="text-body leading-relaxed dark:text-muted">To deepen your understanding of {country.name} taxation, explore our curated collection of guides and tools. Whether you are preparing your annual return, planning investments, or comparing jurisdictions, these resources provide clear explanations and instant estimates.</p>
-      <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <a href={`/countries/${country.slug}`} class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface">
-          <h4 class="font-semibold text-ink dark:text-on-primary">{country.name} Calculators</h4>
-          <p class="text-sm text-muted mt-2 dark:text-muted">All interactive tax estimators for {country.name} in one place.</p>
-        </a>
-        <a href="/knowledge" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface">
-          <h4 class="font-semibold text-ink dark:text-on-primary">Tax Knowledge Center</h4>
-          <p class="text-sm text-muted mt-2 dark:text-muted">Learn core tax concepts with expert-written guides and a searchable glossary.</p>
-        </a>
-        <a href="/blogs" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface">
-          <h4 class="font-semibold text-ink dark:text-on-primary">Tax Blog</h4>
-          <p class="text-sm text-muted mt-2 dark:text-muted">Latest tips, updates, and country-specific tax strategies.</p>
-        </a>
-      </div>
+      <h3 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">Essential {country.name} Tax Guides & Resources</h3>
+      <p class="text-body leading-relaxed dark:text-muted">To deepen your understanding of {country.name} taxation, explore our curated collection of guides and tools. Whether you are preparing your annual return, planning investments, or comparing tax rules, these resources provide clear explanations and instant estimates.</p>
+      
+      {country.slug === 'hong-kong' && (
+        <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <a href="/blogs/hong-kong-salaries-tax-guide" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary text-base">Hong Kong Salaries Tax Guide</h4>
+            <p class="text-xs text-muted mt-1 dark:text-muted">Complete breakdown of progressive rates (2%-17%), standard rate (15%), and MPF rules.</p>
+          </a>
+          <a href="/blogs/hong-kong-property-tax-guide" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary text-base">Hong Kong Property Tax Guide</h4>
+            <p class="text-xs text-muted mt-1 dark:text-muted">Understand 15% standard rate on Net Assessable Value & statutory repair allowance.</p>
+          </a>
+          <a href="/blogs/hong-kong-rental-income-tax-guide" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary text-base">Rental Income Tax Guide</h4>
+            <p class="text-xs text-muted mt-1 dark:text-muted">Landlord tax rules, 20% repair allowance, and NAV calculations.</p>
+          </a>
+          <a href="/blogs/hong-kong-stamp-duty-guide" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary text-base">Hong Kong Stamp Duty Guide</h4>
+            <p class="text-xs text-muted mt-1 dark:text-muted">Scale 2 AVD rates, BSD, SSD, and tenancy agreement lease stamping.</p>
+          </a>
+          <a href="/blogs/hong-kong-car-tax-guide" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary text-base">Hong Kong Car Tax Guide</h4>
+            <p class="text-xs text-muted mt-1 dark:text-muted">First Registration Tax (FRT) tier rates and EV concession schemes.</p>
+          </a>
+          <a href="/blogs/hong-kong-etax-guide" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary text-base">Hong Kong eTAX Guide</h4>
+            <p class="text-xs text-muted mt-1 dark:text-muted">Online tax filing for Form BIR60, electronic assessments, and payment options.</p>
+          </a>
+        </div>
+      )}
+
+      {country.slug === 'pakistan' && (
+        <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <a href="/blogs/pakistan-income-tax-guide" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary text-base">Pakistan Income Tax Guide</h4>
+            <p class="text-xs text-muted mt-1 dark:text-muted">Complete guide to FBR income tax slabs for individuals and businesses.</p>
+          </a>
+          <a href="/blogs/pakistan-salary-tax-guide" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary text-base">Pakistan Salary Tax Guide</h4>
+            <p class="text-xs text-muted mt-1 dark:text-muted">How monthly salary tax is calculated under FBR active taxpayer rules.</p>
+          </a>
+          <a href="/blogs/pakistan-sales-tax-guide" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary text-base">Pakistan Sales Tax & GST Guide</h4>
+            <p class="text-xs text-muted mt-1 dark:text-muted">Standard 18% sales tax rates, FBR Iris filing, and exemptions.</p>
+          </a>
+          <a href="/blogs/pakistan-vehicle-tax-guide" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary text-base">Pakistan Vehicle Tax Guide</h4>
+            <p class="text-xs text-muted mt-1 dark:text-muted">Token tax rates across Punjab, Sindh, KPK, Islamabad & transfer fees.</p>
+          </a>
+          <a href="/blogs/pakistan-property-tax-guide" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary text-base">Pakistan Property Tax Guide</h4>
+            <p class="text-xs text-muted mt-1 dark:text-muted">Provincial property tax rates, capital gains tax, and token charges.</p>
+          </a>
+          <a href="/blogs/pakistan-token-tax-guide" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary text-base">Pakistan Token Tax Guide</h4>
+            <p class="text-xs text-muted mt-1 dark:text-muted">Detailed token tax rates by engine capacity and filer status.</p>
+          </a>
+        </div>
+      )}
+
+      {!['hong-kong', 'pakistan'].includes(country.slug) && (
+        <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <a href={`/countries/${country.slug}`} class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary">{country.name} Calculators</h4>
+            <p class="text-sm text-muted mt-2 dark:text-muted">All interactive tax estimators for {country.name} in one place.</p>
+          </a>
+          <a href="/knowledge" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary">Tax Knowledge Center</h4>
+            <p class="text-sm text-muted mt-2 dark:text-muted">Learn core tax concepts with expert-written guides and a searchable glossary.</p>
+          </a>
+          <a href="/blogs" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary">Tax Blog</h4>
+            <p class="text-sm text-muted mt-2 dark:text-muted">Latest tips, updates, and country-specific tax strategies.</p>
+          </a>
+        </div>
+      )}
     </div>
   </div>
 </div>

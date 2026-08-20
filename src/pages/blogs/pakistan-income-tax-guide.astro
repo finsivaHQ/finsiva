@@ -1,16 +1,50 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
 
-const title = "Pakistan Income Tax Guide 2024/25: FBR Tax Slabs, Rates & Calculator";
-const description = "Complete Pakistan income tax guide for 2024/25. Learn FBR tax slabs for salaried individuals, tax-free limit, how to calculate income tax in Pakistan, and use our Pakistan tax calculator for accurate estimates.";
+const title = "Pakistan Income Tax Guide: FBR Tax Slabs, Rates & Calculator";
+const description = "Complete Pakistan income tax guide. Learn FBR tax slabs for salaried individuals, tax-free limit, allowable deductions, and calculate your income tax in Pakistan.";
 const image = "https://images.unsplash.com/photo-1562564055-71e051d33c19?w=1200&q=80";
+const canonical = "https://finsiva.com/blogs/pakistan-income-tax-guide";
 const author = "Ayesha Malik";
 const authorBio = "Chartered accountant specializing in Pakistani income tax compliance and financial planning.";
-const lastUpdated = "July 2026";
+const lastUpdated = "August 2026";
 const readTime = "10 min read";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the tax-free limit for salaried individuals in Pakistan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The tax-free limit for salaried individuals in Pakistan is PKR 600,000 annually. Any income below this threshold is taxed at 0%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is income tax calculated on salary in Pakistan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Income tax is calculated by taking gross annual salary, subtracting exempt allowances (such as medical allowance up to 10% of basic salary) and allowable deductions, then applying progressive FBR slab rates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the penalty for non-filing tax returns in Pakistan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non-filers face significantly higher withholding tax rates on banking transactions, vehicle purchases, property transfers, and cash withdrawals under FBR Active Taxpayer List (ATL) rules."
+      }
+    }
+  ]
+};
 ---
 
-<BlogLayout title={title} description={description} image={image} author={author} authorBio={authorBio} lastUpdated={lastUpdated} readTime={readTime}>
+<BlogLayout title={title} description={description} image={image} canonical={canonical} author={author} authorBio={authorBio} lastUpdated={lastUpdated} readTime={readTime}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <div class="min-h-screen bg-canvas dark:bg-canvas">
     <main class="min-h-screen">
       <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
@@ -23,150 +57,90 @@ const readTime = "10 min read";
         </nav>
 
         <article class="prose max-w-none">
-          <h1 class="text-4xl font-bold text-ink mb-4 dark:text-on-primary">Pakistan Income Tax Guide 2024/25: FBR Tax Slabs, Rates & Calculator</h1>
-          <p class="text-lg text-body dark:text-muted">Last updated: July 2026 | 10 min read</p>
+          <h1 class="text-3xl sm:text-4xl font-bold text-ink mb-4 dark:text-on-primary">Pakistan Income Tax Guide: FBR Tax Slabs, Rates & Calculator</h1>
+          <p class="text-lg text-body dark:text-muted">Last updated: August 2026 | Verified FBR Guidelines | 10 min read</p>
 
-            <img src="https://images.unsplash.com/photo-1562564055-71e051d33c19?w=1200&q=80" alt="Tax documents, calculator, and filing folders on desk" class="mb-6 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1562564055-71e051d33c19?w=1200&q=80" alt="Pakistan income tax guide and FBR filing documents" class="mb-6 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
 
-            <div class="mt-8 space-y-6 text-body dark:text-muted">
-            <p>Pakistan's income tax system is administered by the Federal Board of Revenue (FBR) and governed by the Income Tax Ordinance 2001. Each year, the Finance Act updates tax slabs, exemptions, and deduction limits for the upcoming tax year. For Tax Year 2024/25, Pakistan income tax slabs have been revised, offering a tax-free threshold of PKR 600,000 for salaried individuals while increasing rates across higher income brackets.</p>
+          <!-- Early Calculator CTA -->
+          <div class="my-6 p-6 rounded-2xl border border-primary/30 bg-primary/5 dark:border-primary/20 dark:bg-primary/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <h3 class="text-xl font-bold text-ink dark:text-on-primary">Calculate Your Pakistan Income Tax</h3>
+              <p class="text-sm text-body dark:text-muted mt-1">Estimate FBR progressive tax slabs, monthly salary deductions, and take-home pay instantly.</p>
+            </div>
+            <a href="/countries/pakistan/income-tax/income-tax-calculator" class="btn btn-primary text-sm font-semibold shrink-0 px-5 py-2.5">
+              Launch Pakistan Tax Calculator →
+            </a>
+          </div>
 
-            <p>Whether you are a salaried employee, business owner, or freelancer, understanding how income tax is calculated in Pakistan is essential for compliance and financial planning. This guide covers FBR tax slabs, allowable deductions, filing requirements, and how to use a Pakistan tax calculator for accurate estimates.</p>
+          <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
+            <p>Pakistan's income tax system is administered by the <strong>Federal Board of Revenue (FBR)</strong> under the <em>Income Tax Ordinance, 2001</em>. Income tax applies to salaried individuals, sole proprietors, business entities, and freelancers across defined progressive tax slabs.</p>
 
             <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Understanding the Pakistan Tax Year</h2>
-            <p>Pakistan follows a July-June tax year, running from <strong>1 July to 30 June</strong> of the following calendar year. Tax Year 2024/25 covers income earned from July 1, 2024, to June 30, 2025. Salaried individuals must file their returns by <strong>September 30</strong> of the following year, though FBR occasionally extends this deadline through official notifications on <a href="https://www.fbr.gov.pk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">fbr.gov.pk</a>.</p>
+            <p>Pakistan follows a July-June tax year running from <strong>1 July to 30 June</strong>. Returns for salaried individuals must be filed by <strong>September 30</strong> via the <a href="https://iris.fbr.gov.pk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">FBR IRIS Portal</a>.</p>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">FBR Tax Slabs for Salaried Individuals (2024/25)</h2>
-            <p>The FBR uses a progressive (marginal) tax system for salaried individuals. Income is divided into bands, and each band is taxed at its own rate. You only pay the higher rate on the portion above each threshold, not on your entire income. The tax-free limit remains at <strong>PKR 600,000</strong> for salaried individuals in FY 2024/25.</p>
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">FBR Tax Slabs for Salaried Individuals</h2>
+            <p>The FBR applies progressive tax rate bands to salaried individuals. The tax-free threshold is set at <strong>PKR 600,000</strong> annually:</p>
 
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Salaried Individual Tax Slabs (FY 2024/25)</h3>
-            <ul class="list-disc pl-6 space-y-2">
-              <li><strong>Up to PKR 600,000:</strong> 0% (tax-free)</li>
-              <li><strong>PKR 600,001 – 1,200,000:</strong> 5% on excess over PKR 600,000</li>
-              <li><strong>PKR 1,200,001 – 2,200,000:</strong> PKR 30,000 + 15% on excess over PKR 1,200,000</li>
-              <li><strong>PKR 2,200,001 – 3,200,000:</strong> PKR 180,000 + 25% on excess over PKR 2,200,000</li>
-              <li><strong>PKR 3,200,001 – 4,100,000:</strong> PKR 430,000 + 30% on excess over PKR 3,200,000</li>
-              <li><strong>Above PKR 4,100,000:</strong> PKR 700,000 + 35% on excess over PKR 4,100,000</li>
-            </ul>
-            <p>An additional surcharge of up to 9% applies on high-income earners above certain thresholds. Use our <a href="/countries/pakistan/income-tax/income-tax-calculator">Pakistan income tax calculator</a> to compute your exact tax liability based on your salary and deductions.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">How to Calculate Income Tax on Salary in Pakistan</h2>
-            <p>Calculating income tax on salary in Pakistan involves applying the progressive slab rates to your annual taxable income after deductions. Here is how the process works:</p>
-            <ul class="list-disc pl-6 space-y-2">
-              <li><strong>Determine gross annual salary:</strong> Include basic salary, allowances, bonuses, and other benefits.</li>
-              <li><strong>Subtract exempt allowances:</strong> Medical, conveyance, and certain other allowances are partially or fully exempt.</li>
-              <li><strong>Apply deductions:</strong> Deduct retirement benefits, charitable donations, and other allowable expenses.</li>
-              <li><strong>Apply slab rates:</strong> Calculate tax on the resulting taxable income using the marginal slab system.</li>
-              <li><strong>Subtract tax credits:</strong> Reduce liability by available tax rebates and credits.</li>
-            </ul>
-            <p>Employers are required to deduct tax monthly under Section 149 of the Income Tax Ordinance. The annual tax is estimated at the start of the year, divided by 12, and adjusted if your salary changes during the year.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Common Deductions and Tax Rebates</h2>
-            <p>The FBR allows several deductions that reduce your taxable income. Claiming these deductions is one of the most effective ways to lower your Pakistan income tax liability. Common deductions include:</p>
-            <ul class="list-disc pl-6 space-y-2">
-              <li><strong>Retirement benefits:</strong> Contributions to recognized pension funds and voluntary pension schemes under Section 64 and Section 64B.</li>
-              <li><strong>Charitable donations:</strong> Donations to FBR-approved charitable institutions under Section 61.</li>
-              <li><strong>Zakat:</strong> Zakat paid by Muslim taxpayers under Section 60.</li>
-              <li><strong>Investment rebates:</strong> Investments in shares and life insurance under Section 62.</li>
-              <li><strong>EOBI and Social Security:</strong> Contributions to the Employees Old-Age Benefits Institution and provincial social security schemes.</li>
-            </ul>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Who Must File an Income Tax Return</h2>
-            <p>Filing an income tax return is mandatory for salaried individuals whose annual income exceeds PKR 600,000. However, even if your income is below the taxable threshold, filing is strongly recommended. Being on the FBR's Active Taxpayer List (ATL) qualifies you as a "filer" rather than a "non-filer," which cuts your withholding tax on banking, property, and vehicle transactions by half or more.</p>
-            <p>To verify whether your name appears on the Active Taxpayer List, visit the <a href="https://www.fbr.gov.pk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">FBR official website</a> or check through the <a href="https://iris.fbr.gov.pk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">IRIS portal</a>.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Tax Filing Requirements for Salaried Individuals</h2>
-            <p>The FBR requires salaried individuals to file their annual income tax returns through the e-portal. The simplified Form 114(I) is designed specifically for salaried individuals and covers salary income, other income sources, deductions, tax credits, and wealth statement details. You will need the following documents before filing:</p>
-            <ul class="list-disc pl-6 space-y-2">
-              <li>Computerized National Identity Card (CNIC)</li>
-              <li>National Tax Number (NTN)</li>
-              <li>Salary certificate from your employer showing gross salary and tax deducted</li>
-              <li>Bank statements for all accounts during the tax year</li>
-              <li>Proof of deductions, charitable donations, and tax credits</li>
-              <li>Details of property, vehicles, and investments for wealth statement</li>
-            </ul>
-            <p>If you need help estimating your tax liability before filing, use our <a href="/countries/pakistan/income-tax/income-tax-calculator">Pakistan income tax calculator</a> to get an instant estimate based on the latest FBR slabs.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Conclusion</h2>
-            <p>Understanding Pakistan income tax slabs, deductions, and filing requirements is the foundation of good financial planning. The Progressive tax system ensures fair contribution based on your ability to pay, while ATL filer status offers significant savings on major transactions. Use our <a href="/countries/pakistan/income-tax/income-tax-calculator">Pakistan income tax calculator</a> to estimate your liability, and explore our <a href="/countries/pakistan">Pakistan tax calculators</a> for all your tax planning needs. For more detailed guides, read our <a href="/blogs/pakistan-tax-filing-guide">Pakistan tax filing guide</a> and <a href="/blogs/pakistan-salary-tax-guide">Pakistan salary tax guide</a>.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Frequently Asked Questions</h2>
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">What is the tax-free limit for salaried individuals in Pakistan for 2024/25?</h3>
-            <p>The tax-free limit for salaried individuals in Pakistan for Tax Year 2024/25 is PKR 600,000 annually. Any income below this threshold is taxed at 0%. This limit applies to net taxable income after allowable deductions.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">How do I calculate income tax on my salary in Pakistan?</h3>
-            <p>Calculate your annual gross salary, subtract exempt allowances and allowable deductions, then apply the progressive FBR tax slabs to the net taxable income. The highest marginal rate applies only to the portion above each threshold. You can also use an online Pakistan tax calculator for instant results.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">What is the tax year in Pakistan?</h3>
-            <p>Pakistan's tax year runs from July 1 to June 30 of the following calendar year. Tax Year 2024/25 covers income earned from July 1, 2024, to June 30, 2025. Tax returns for this year are generally due by September 30, 2025.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">What deductions can I claim to reduce my taxable income?</h3>
-            <p>Common deductions include retirement contributions (pension funds, EOBI), charitable donations to FBR-approved institutions, Zakat payments, investment rebates under Section 62, and certain business expenses. Proper documentation is essential to substantiate your claims.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">What is the difference between a filer and a non-filer in Pakistan?</h3>
-            <p>A filer is someone who files an annual income tax return and appears on the FBR Active Taxpayer List (ATL). Non-filers do not file returns. Filers pay significantly lower withholding taxes on banking transactions, property purchases, vehicle registration, and utility bills. For example, filers pay 0.6% on bank cash withdrawals while non-filers pay 1.5%.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Do I need to file a tax return if my employer already deducts tax?</h3>
-            <p>Yes. Employer-side tax deduction (withholding at source) satisfies your tax payment obligation but not your filing obligation. You must still file the return annually to remain on the Active Taxpayer List and claim any refunds for excess tax deducted.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">How can I check my FBR tax slabs and ATL status?</h3>
-            <p>You can check the latest FBR tax slabs on the <a href="https://www.fbr.gov.pk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">FBR official website</a>. To verify your ATL status, log in to the <a href="https://iris.fbr.gov.pk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">IRIS portal</a> or use the FBR helpline at 051-111-772-772.</p>
-          </div>
-
-          <div class="mt-12">
-            <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Related Calculators</h2>
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              <a href="/countries/pakistan/income-tax/income-tax-calculator" class="block rounded border p-4 hover:border-primary transition">Pakistan Income Tax Calculator</a>
-              <a href="/countries/pakistan/income-tax/salary-tax-calculator" class="block rounded border p-4 hover:border-primary transition">Pakistan Salary Tax Calculator</a>
-              <a href="/countries/pakistan" class="block rounded border p-4 hover:border-primary transition">More Pakistan Calculators</a>
+            <div class="my-4 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+              <table class="w-full text-left text-sm">
+                <thead class="bg-canvas-soft border-b border-hairline dark:bg-surface/80 dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+                  <tr>
+                    <th class="p-3">Annual Taxable Income (PKR)</th>
+                    <th class="p-3">FBR Tax Rate</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+                  <tr><td class="p-3">Up to PKR 600,000</td><td class="p-3 font-bold text-primary dark:text-on-primary">0% (Tax-Free)</td></tr>
+                  <tr><td class="p-3">PKR 600,001 – 1,200,000</td><td class="p-3">5% on excess over PKR 600,000</td></tr>
+                  <tr><td class="p-3">PKR 1,200,001 – 2,200,000</td><td class="p-3">PKR 30,000 + 15% on excess over PKR 1.2M</td></tr>
+                  <tr><td class="p-3">PKR 2,200,001 – 3,200,000</td><td class="p-3">PKR 180,000 + 25% on excess over PKR 2.2M</td></tr>
+                  <tr><td class="p-3">PKR 3,200,001 – 4,100,000</td><td class="p-3">PKR 430,000 + 30% on excess over PKR 3.2M</td></tr>
+                  <tr><td class="p-3">Above PKR 4,100,000</td><td class="p-3 font-bold text-primary dark:text-on-primary">PKR 700,000 + 35% on excess over PKR 4.1M</td></tr>
+                </tbody>
+              </table>
             </div>
+
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Active Taxpayer List (ATL) Filer Advantage</h2>
+            <p>Appearing on the FBR Active Taxpayer List (ATL) grants "filer status," which substantially lowers withholding tax rates on banking transactions, property sales, vehicle registrations, and dividend payouts compared to non-filers. Check our <a href="/blogs/pakistan-tax-filing-guide" class="text-link hover:underline dark:text-link">Pakistan Tax Filing Guide</a> for step-by-step return filing instructions.</p>
+
+            {faqSchema.mainEntity.map(faq => (
+              <div class="my-4 p-4 rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+                <h3 class="text-lg font-bold text-ink dark:text-on-primary">{faq.name}</h3>
+                <p class="text-sm text-body dark:text-muted mt-1 leading-relaxed">{faq.acceptedAnswer.text}</p>
+              </div>
+            ))}
           </div>
 
-          <div class="mt-12">
-            <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Related Articles</h2>
+          <!-- Internal Resource Linking Grid -->
+          <div class="mt-12 pt-8 border-t border-hairline dark:border-overlay-lighter">
+            <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Pakistan Tax Tools & Related Guides</h2>
             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              <a href="/blogs/pakistan-fbr-tax-slabs" class="block rounded border p-4 hover:border-primary transition">FBR Tax Slabs 2024/25</a>
-              <a href="/blogs/pakistan-salary-tax-guide" class="block rounded border p-4 hover:border-primary transition">Pakistan Salary Tax Guide</a>
-              <a href="/blogs/pakistan-tax-filing-guide" class="block rounded border p-4 hover:border-primary transition">Pakistan Tax Filing Guide</a>
+              <a href="/countries/pakistan/income-tax/income-tax-calculator" class="block rounded-xl border border-hairline p-4 hover:border-primary transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+                <h3 class="font-bold text-ink dark:text-on-primary text-sm">Pakistan Income Tax Calculator</h3>
+                <p class="text-xs text-muted mt-1">Estimate FBR salary tax & monthly deductions.</p>
+              </a>
+              <a href="/blogs/pakistan-salary-tax-guide" class="block rounded-xl border border-hairline p-4 hover:border-primary transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+                <h3 class="font-bold text-ink dark:text-on-primary text-sm">Pakistan Salary Tax Guide</h3>
+                <p class="text-xs text-muted mt-1">Detailed guide to monthly salary tax deductions.</p>
+              </a>
+              <a href="/blogs/pakistan-fbr-tax-slabs" class="block rounded-xl border border-hairline p-4 hover:border-primary transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+                <h3 class="font-bold text-ink dark:text-on-primary text-sm">FBR Tax Slabs Guide</h3>
+                <p class="text-xs text-muted mt-1">Complete breakdown of FBR tax brackets.</p>
+              </a>
+              <a href="/blogs/pakistan-vehicle-tax-guide" class="block rounded-xl border border-hairline p-4 hover:border-primary transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+                <h3 class="font-bold text-ink dark:text-on-primary text-sm">Pakistan Vehicle Tax Guide</h3>
+                <p class="text-xs text-muted mt-1">Token tax rates across Punjab, Sindh, KPK & Islamabad.</p>
+              </a>
+              <a href="/blogs/pakistan-property-tax-guide" class="block rounded-xl border border-hairline p-4 hover:border-primary transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+                <h3 class="font-bold text-ink dark:text-on-primary text-sm">Pakistan Property Tax Guide</h3>
+                <p class="text-xs text-muted mt-1">Capital gains tax & provincial property charges.</p>
+              </a>
+              <a href="/blogs/pakistan-sales-tax-guide" class="block rounded-xl border border-hairline p-4 hover:border-primary transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+                <h3 class="font-bold text-ink dark:text-on-primary text-sm">Pakistan Sales Tax Guide</h3>
+                <p class="text-xs text-muted mt-1">Standard 18% sales tax & FBR Iris returns.</p>
+              </a>
             </div>
-          </div>
-
-          <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Interesting Facts</h2>
-          <ul class="list-disc pl-6 space-y-2 text-body dark:text-muted">
-            <li>Pakistan follows a progressive (marginal) tax system where each income band is taxed at a different rate, ensuring higher earners pay a larger share.</li>
-            <li>The tax year in Pakistan runs from July 1 to June 30, with salaried individuals required to file returns by September 30 of the following year.</li>
-            <li>The annual tax-free income threshold for salaried individuals is PKR 600,000 for FY 2024/25.</li>
-            <li>Being on the FBR Active Taxpayer List (ATL) can halve or more the withholding taxes applied to banking, property, and vehicle transactions.</li>
-            <li>A surcharge of up to 9% may apply on high-income earners above certain income thresholds, increasing the effective tax rate beyond the slab rate.</li>
-          </ul>
-
-          <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Quick Quiz</h2>
-          <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
-            <p class="font-medium text-ink dark:text-on-primary">1. What is the duration of Pakistan's tax year?</p>
-            <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
-              <li>A) January 1 to December 31</li>
-              <li>B) April 1 to March 31</li>
-              <li>C) July 1 to June 30</li>
-              <li>D) October 1 to September 30</li>
-            </ul>
-          </div>
-          <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
-            <p class="font-medium text-ink dark:text-on-primary">2. What is the tax-free annual income threshold for salaried individuals in FY 2024/25?</p>
-            <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
-              <li>A) PKR 500,000</li>
-              <li>B) PKR 550,000</li>
-              <li>C) PKR 600,000</li>
-              <li>D) PKR 650,000</li>
-            </ul>
-          </div>
-          <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
-            <p class="font-medium text-ink dark:text-on-primary">3. By what date must salaried individuals file their income tax returns?</p>
-            <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
-              <li>A) August 31</li>
-              <li>B) September 15</li>
-              <li>C) September 30</li>
-              <li>D) October 31</li>
-            </ul>
           </div>
 
           <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Further Reading</h2>

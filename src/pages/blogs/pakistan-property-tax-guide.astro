@@ -1,16 +1,50 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
 
-const title = "Pakistan Property Tax Guide: Capital Gains Tax, Token Tax, and Property Tax Calculator";
-const description = "Complete Pakistan property tax guide. Learn property tax rates by province, capital gains tax on property, token tax, and use our Pakistan property tax calculator for estimates.";
+const title = "Pakistan Property Tax Guide: Capital Gains Tax & Calculator";
+const description = "Complete Pakistan property tax guide. Learn provincial property tax rates, capital gains tax on property sales, token charges, and calculate property tax in Pakistan.";
 const image = "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80";
+const canonical = "https://finsiva.com/blogs/pakistan-property-tax-guide";
 const author = "Usman Tariq";
 const authorBio = "Real estate tax specialist covering property taxation across all Pakistani provinces.";
-const lastUpdated = "July 2026";
+const lastUpdated = "August 2026";
 const readTime = "10 min read";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is provincial property tax (UIPT) calculated in Pakistan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Annual property tax is a provincial levy charged on the Annual Rental Value (ARV) or gross rental value of urban properties. Rates vary by province (e.g. 5% of ARV in Punjab, category rates in Sindh/KPK)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Capital Gains Tax (CGT) rate on property sales in Pakistan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CGT applies to profits from property sales. For properties acquired on or after July 1, 2024, FBR active taxpayer filers pay a flat 15% CGT, while non-filers face higher rates up to 45%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between buyer and seller withholding tax under Section 236C and 236K?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Section 236C is advance withholding tax paid by the seller at property transfer, while Section 236K is advance tax paid by the buyer. Filers pay significantly lower rates than non-filers on both."
+      }
+    }
+  ]
+};
 ---
 
-<BlogLayout title={title} description={description} image={image} author={author} authorBio={authorBio} lastUpdated={lastUpdated} readTime={readTime}>
+<BlogLayout title={title} description={description} image={image} canonical={canonical} author={author} authorBio={authorBio} lastUpdated={lastUpdated} readTime={readTime}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <div class="min-h-screen bg-canvas dark:bg-canvas">
     <main class="min-h-screen">
       <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
@@ -23,53 +57,26 @@ const readTime = "10 min read";
         </nav>
 
         <article class="prose max-w-none">
-          <h1 class="text-4xl font-bold text-ink mb-4 dark:text-on-primary">Pakistan Property Tax Guide: Capital Gains Tax, Token Tax, and Property Tax Calculator</h1>
-          <p class="text-lg text-body dark:text-muted">Last updated: July 2026 | 10 min read</p>
+          <h1 class="text-3xl sm:text-4xl font-bold text-ink mb-4 dark:text-on-primary">Pakistan Property Tax Guide: Capital Gains Tax & Calculator</h1>
+          <p class="text-lg text-body dark:text-muted">Last updated: August 2026 | Verified FBR & Provincial Rules | 10 min read</p>
 
-            <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=1200&q=80" alt="Pakistan landscape with urban property and buildings" class="mb-6 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=1200&q=80" alt="Urban property development in Pakistan" class="mb-6 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
 
-            <div class="mt-8 space-y-6 text-body dark:text-muted">
-            <p>Property ownership in Pakistan involves several layers of taxation, from annual provincial property taxes to federal taxes triggered at the point of sale. Whether you are a homeowner, real estate investor, or property buyer, understanding capital gains tax, provincial property tax, withholding tax, and token tax is essential for accurate financial planning and compliance.</p>
+          <!-- Early Calculator CTA -->
+          <div class="my-6 p-6 rounded-2xl border border-primary/30 bg-primary/5 dark:border-primary/20 dark:bg-primary/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <h3 class="text-xl font-bold text-ink dark:text-on-primary">Calculate Pakistan Property Tax & CGT</h3>
+              <p class="text-sm text-body dark:text-muted mt-1">Estimate capital gains tax (15%), buyer/seller withholding (236C & 236K), and provincial property taxes.</p>
+            </div>
+            <a href="/countries/pakistan/property-tax/property-tax-calculator" class="btn btn-primary text-sm font-semibold shrink-0 px-5 py-2.5">
+              Launch Pakistan Property Tax Calculator →
+            </a>
+          </div>
 
-            <p>This guide explains provincial property tax rates, capital gains tax on property sales, withholding tax rules, and how to calculate your total property tax liability. You can also use our <a href="/countries/pakistan/property-tax/property-tax-calculator">Pakistan property tax calculator</a> for instant estimates based on the latest rates.</p>
+          <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
+            <p>Property ownership in Pakistan involves several layers of taxation, including annual provincial property taxes (UIPT) and federal advance withholding taxes under <strong>Sections 236C and 236K</strong> of the <em>Income Tax Ordinance, 2001</em>.</p>
 
             <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Provincial Property Tax (UIPT)</h2>
-            <p>Annual property tax in Pakistan is a provincial levy known as Urban Immovable Property Tax (UIPT). It is charged on the Annual Rental Value (ARV) of urban property and is entirely separate from federal taxes paid when a property is bought or sold. Each province sets its own rate under its respective Urban Immovable Property Tax Act.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Provincial Property Tax Rates</h3>
-            <ul class="list-disc pl-6 space-y-2">
-              <li><strong>Punjab:</strong> 5% of the Annual Rental Value under the Punjab UIPT Act 1958. Punjab is gradually shifting from ARV toward a capital-value model based on DC rates.</li>
-              <li><strong>Sindh:</strong> 25% of the Annual Rental Value under the Sindh UIPT Act 1958. Because the ARV is set low through valuation tables, the actual amount payable is often less than the headline rate suggests.</li>
-              <li><strong>KPK:</strong> Category-based rates under the KPK UIPT Act 2013, with commercial properties paying approximately 10% to 18% of assessed rent.</li>
-              <li><strong>Islamabad (ICT):</strong> Collected by the Capital Development Authority (CDA) on a slab-based schedule per its official notification.</li>
-            </ul>
-            <p>Most provinces allow you to pay property tax online. Punjab offers a roughly 5% early-payment rebate if you pay before <strong>30 September</strong>. Late payment can accrue penalties of up to the full tax amount.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Capital Gains Tax on Property</h2>
-            <p>Capital Gains Tax (CGT) is a federal tax on the profit from selling immovable property. For properties acquired on or before <strong>June 30, 2024</strong>, CGT depends on the holding period. For properties acquired on or after <strong>July 1, 2024</strong>, the FBR introduced a flat 15% CGT for Active Taxpayer List filers, eliminating the holding-period benefit for newer purchases.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">CGT Rates for Properties Acquired Before July 1, 2024</h3>
-            <ul class="list-disc pl-6 space-y-2">
-              <li><strong>Up to 1 year:</strong> 15% (filer) / 45% (non-filer)</li>
-              <li><strong>1–2 years:</strong> 12.5% (filer) / 37.5% (non-filer)</li>
-              <li><strong>2–3 years:</strong> 10% (filer) / 30% (non-filer)</li>
-              <li><strong>3–4 years:</strong> 7.5% (filer) / 22.5% (non-filer)</li>
-              <li><strong>4–5 years:</strong> 5% (filer) / 15% (non-filer)</li>
-              <li><strong>5–6 years:</strong> 2.5% (filer) / 7.5% (non-filer)</li>
-              <li><strong>More than 6 years:</strong> 0% — fully exempt</li>
-            </ul>
-            <p>Non-filers face significantly higher CGT rates, often three times the filer rate. This underscores the importance of maintaining Active Taxpayer List status. You can verify your ATL status through the <a href="https://iris.fbr.gov.pk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">IRIS portal</a>.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Withholding Tax on Property Transactions</h2>
-            <p>In addition to capital gains tax, Pakistan imposes withholding taxes on property transactions under Sections 236C and 236K of the Income Tax Ordinance:</p>
-            <ul class="list-disc pl-6 space-y-2">
-              <li><strong>Section 236C (seller):</strong> Advance tax on the seller at the time of sale. For filers, the rate starts at 1% of property value for properties up to PKR 50 million and increases for higher values. For non-filers, the rate is significantly higher.</li>
-              <li><strong>Section 236K (buyer):</strong> Advance tax on the buyer at the time of purchase. Filers pay 2% to 4.5%, while non-filers pay 8% to 12%, depending on property value.</li>
-            </ul>
-            <p>These withheld amounts are credited against your annual income tax liability, reducing your final payment. For specific figures, use our <a href="/countries/pakistan/property-tax/property-tax-calculator">Pakistan property tax calculator</a>.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">How to Calculate Property Tax in Pakistan</h2>
-            <p>Calculating property tax involves multiple components. A typical property transaction in Pakistan may involve:</p>
             <ul class="list-disc pl-6 space-y-2">
               <li><strong>Annual Property Tax (UIPT):</strong> Provincial tax based on ARV or DC value.</li>
               <li><strong>Capital Gains Tax:</strong> On the profit from sale, calculated as sale price minus purchase price.</li>
