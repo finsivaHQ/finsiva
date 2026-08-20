@@ -2,7 +2,6 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import SearchModal from "../components/SearchModal.astro";
-import { ClientRouter } from 'astro:transitions';
 import { loadLocales, setLang, getLang, getDict, detectLanguage } from "../i18n";
 import en from "../i18n/translations/en.json";
 import hi from "../i18n/translations/hi.json";
@@ -143,45 +142,17 @@ const financialProductSchema = {
   <head>
     <script is:inline>
       (function() {
-        function getStoredTheme() {
-          try {
-            var stored = localStorage.getItem('theme');
-            if (stored === 'dark' || stored === 'light') return stored;
-            var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            return prefersDark ? 'dark' : 'light';
-          } catch (e) {
-            return 'light';
-          }
-        }
-
-        function applyTheme(targetDoc) {
-          var doc = targetDoc || document.documentElement;
-          var theme = getStoredTheme();
-          if (theme === 'dark') {
-            doc.classList.add('dark');
+        try {
+          var s = localStorage.getItem('theme');
+          var p = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (s === 'dark' || (!s && p)) {
+            document.documentElement.classList.add('dark');
           } else {
-            doc.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
           }
-        }
-
-        applyTheme(document.documentElement);
-
-        document.addEventListener('astro:before-swap', function(e) {
-          if (e && e.newDocument) {
-            applyTheme(e.newDocument.documentElement);
-          }
-        });
-
-        document.addEventListener('astro:after-swap', function() {
-          applyTheme(document.documentElement);
-        });
-
-        document.addEventListener('astro:page-load', function() {
-          applyTheme(document.documentElement);
-        });
+        } catch (e) {}
       })();
     </script>
-    <ClientRouter />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KGQ9X41EPQ"></script>
     <script>

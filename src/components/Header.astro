@@ -426,7 +426,5 @@ const is404 = currentPath === "/404";
     }
 
     initHeaderScripts();
-    document.addEventListener('astro:page-load', initHeaderScripts);
-    document.addEventListener('astro:after-swap', initHeaderScripts);
   })();
 </script>
