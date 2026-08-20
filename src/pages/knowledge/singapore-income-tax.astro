@@ -1,0 +1,261 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+
+const title = "Singapore Income Tax Guide 2026: Personal Rates, Corporate Tax & Reliefs";
+const description = "Comprehensive guide to Singapore income tax for individuals, foreigners, and companies. Learn YA 2026 progressive tax rates (0%-24%), 17% corporate tax, tax reliefs, and filing rules.";
+const baseUrl = "https://finsiva.com";
+const currentUrl = `${baseUrl}/knowledge/singapore-income-tax`;
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is the Singapore personal income tax rate for 2026?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Singapore personal income tax for tax residents is progressive, starting at 0% for the first S$20,000 of chargeable income and capping at 24% for income above S$1,000,000."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How are non-residents taxed on income in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Non-residents working in Singapore are taxed at a flat rate of 15% on employment income or the progressive resident rate, whichever results in a higher tax amount. Non-residents do not qualify for personal tax reliefs."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is the corporate income tax rate in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Singapore corporate income tax is a flat 17%. Qualifying new startups benefit from partial tax exemptions (75% exemption on the first S$100,000 and 50% on the next S$100,000)."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Does Singapore tax capital gains or stock dividends?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. Singapore has 0% capital gains tax and operates a single-tier corporate tax framework where foreign and local stock dividends paid to individuals are tax-free."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is the maximum personal income tax relief cap in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The total personal income tax relief an individual can claim is capped at S$80,000 per Year of Assessment."
+      }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Singapore Income Tax Guide 2026: Personal Rates, Corporate Tax & Reliefs",
+  description: "Comprehensive guide to Singapore income tax for individuals, foreigners, and companies. Learn YA 2026 progressive tax rates (0%-24%), 17% corporate tax, tax reliefs, and filing rules.",
+  url: currentUrl,
+  author: { "@type": "Organization", name: "Finsiva" },
+  dateModified: "2026-08-20"
+};
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonical={currentUrl}
+  robots="index,follow"
+  schema={articleSchema}
+  image="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=1200&q=80"
+  imageAlt="Singapore skyline downtown financial district"
+>
+  <article id="main-content" class="min-h-screen bg-canvas dark:bg-canvas">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <Breadcrumbs items={[
+        { label: "Home", href: "/" },
+        { label: "Knowledge Center", href: "/knowledge" },
+        { label: "Singapore Income Tax" }
+      ]} />
+
+      <header class="pt-8 pb-12">
+        <h1 class="text-4xl font-extrabold tracking-tight text-ink dark:text-on-primary sm:text-5xl">Singapore Income Tax Guide 2026</h1>
+        <p class="mt-4 text-xl text-body dark:text-muted">Master Singapore's personal income tax brackets, corporate tax rules, 183-day expat tax residency, GST, and personal relief schemes.</p>
+        <div class="mt-4 flex flex-wrap items-center gap-4 text-sm text-muted dark:text-muted">
+          <time datetime="2026-08-20">Last updated: August 2026</time>
+          <span aria-hidden="true">·</span>
+          <span>20 min read</span>
+          <span aria-hidden="true">·</span>
+          <span>Knowledge Center Pillar</span>
+        </div>
+      </header>
+
+      <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=1200&q=80" alt="Singapore skyline financial district" class="mb-8 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
+
+      <nav aria-label="Table of contents" class="mb-8 border-b border-hairline pb-6 dark:border-overlay-light">
+        <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">Table of Contents</h2>
+        <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+          <li><a href="#overview" class="text-link hover:underline dark:text-link">Overview of Singapore Tax System</a></li>
+          <li><a href="#personal-tax-brackets" class="text-link hover:underline dark:text-link">Personal Income Tax Brackets 2026</a></li>
+          <li><a href="#tax-residency" class="text-link hover:underline dark:text-link">183-Day Tax Residency & Foreigners</a></li>
+          <li><a href="#corporate-tax" class="text-link hover:underline dark:text-link">17% Corporate Tax & Startups</a></li>
+          <li><a href="#capital-gains-dividends" class="text-link hover:underline dark:text-link">Capital Gains & Dividend Rules</a></li>
+          <li><a href="#tax-reliefs" class="text-link hover:underline dark:text-link">Personal Reliefs & S$80k Cap</a></li>
+          <li><a href="#filing-deadlines" class="text-link hover:underline dark:text-link">IRAS e-Filing & myTax Portal</a></li>
+          <li><a href="#calculators" class="text-link hover:underline dark:text-link">Singapore Interactive Calculators</a></li>
+          <li><a href="#faqs" class="text-link hover:underline dark:text-link">Frequently Asked Questions</a></li>
+        </ul>
+      </nav>
+
+      <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+      <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+
+      <div class="prose max-w-none prose-headings:mt-10 prose-headings:mb-4 prose-h2:text-2xl prose-h2:font-semibold prose-h2:text-ink dark:prose-h2:text-on-primary prose-h3:text-xl prose-h3:font-semibold prose-h3:text-ink dark:prose-h3:text-on-primary prose-p:text-body prose-p:leading-relaxed prose-a:text-link prose-a:underline prose-a:decoration-dashed prose-a:underline-offset-4 prose-a:hover:text-primary prose-ul:list-disc prose-ul:pl-6 prose-ol:list-decimal prose-ol:pl-6 prose-li:mt-2">
+        <h2 id="overview">Overview of the Singapore Income Tax System</h2>
+        <p>The <strong>Singapore income tax system</strong> is renowned globally for its fairness, administrative simplicity, low headline tax rates, and attractive investment incentives. Administered by the <a href="https://www.iras.gov.sg" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">Inland Revenue Authority of Singapore (IRAS)</a>, Singapore operates on a strict <strong>territorial tax principle</strong>. Under this framework, individuals and corporate entities are generally taxed only on income generated within Singapore or remitted into Singapore under specific statutory conditions.</p>
+
+        <p>Key highlights of taxation in Singapore include:</p>
+        <ul>
+          <li><strong>Progressive Personal Rates:</strong> Resident personal income tax rates range from 0% for the first S$20,000 up to 24% for income above S$1,000,000 for Year of Assessment (YA) 2026.</li>
+          <li><strong>Flat Corporate Tax Rate:</strong> A headline corporate income tax rate of 17%, supported by generous partial tax exemptions for qualifying new startups and SMEs.</li>
+          <li><strong>Zero Capital Gains Tax:</strong> No tax on capital gains derived from stock investments, property sales, or cryptocurrency appreciation.</li>
+          <li><strong>Single-Tier Corporate Dividend System:</strong> Corporate income is taxed at the company level. Subsequent dividend distributions to shareholders are completely exempt from taxation.</li>
+          <li><strong>No Inheritance or Net Wealth Tax:</strong> Estate duty was abolished in 2008, ensuring wealth preservation across generations.</li>
+        </ul>
+
+        <h2 id="personal-tax-brackets">Singapore Personal Income Tax Brackets 2026</h2>
+        <p>Personal income tax in Singapore is levied on a progressive schedule. Taxable income (known as <em>Chargeable Income</em>) is calculated by deducting allowable business/employment expenses and eligible personal tax reliefs from gross income.</p>
+
+        <div class="my-6 overflow-x-auto">
+          <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+            <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+              <tr>
+                <th class="border p-3">Chargeable Income Bracket (SGD)</th>
+                <th class="border p-3">Marginal Tax Rate</th>
+                <th class="border p-3">Tax Payable on Bracket</th>
+                <th class="border p-3">Cumulative Tax Payable</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+              <tr><td class="p-3">First S$20,000</td><td class="p-3 font-medium">0%</td><td class="p-3">S$0</td><td class="p-3">S$0</td></tr>
+              <tr><td class="p-3">Next S$10,000 (S$20,001 – S$30,000)</td><td class="p-3 font-medium">2%</td><td class="p-3">S$200</td><td class="p-3">S$200</td></tr>
+              <tr><td class="p-3">Next S$10,000 (S$30,001 – S$40,000)</td><td class="p-3 font-medium">3.5%</td><td class="p-3">S$350</td><td class="p-3">S$550</td></tr>
+              <tr><td class="p-3">Next S$40,000 (S$40,001 – S$80,000)</td><td class="p-3 font-medium">7%</td><td class="p-3">S$2,800</td><td class="p-3">S$3,350</td></tr>
+              <tr><td class="p-3">Next S$40,000 (S$80,001 – S$120,000)</td><td class="p-3 font-medium">11.5%</td><td class="p-3">S$4,600</td><td class="p-3">S$7,950</td></tr>
+              <tr><td class="p-3">Next S$40,000 (S$120,001 – S$160,000)</td><td class="p-3 font-medium">15%</td><td class="p-3">S$6,000</td><td class="p-3">S$13,950</td></tr>
+              <tr><td class="p-3">Next S$40,000 (S$160,001 – S$200,000)</td><td class="p-3 font-medium">18%</td><td class="p-3">S$7,200</td><td class="p-3">S$21,150</td></tr>
+              <tr><td class="p-3">Next S$40,000 (S$200,001 – S$240,000)</td><td class="p-3 font-medium">19%</td><td class="p-3">S$7,600</td><td class="p-3">S$28,750</td></tr>
+              <tr><td class="p-3">Next S$40,000 (S$240,001 – S$280,000)</td><td class="p-3 font-medium">19.5%</td><td class="p-3">S$7,800</td><td class="p-3">S$36,550</td></tr>
+              <tr><td class="p-3">Next S$40,000 (S$280,001 – S$320,000)</td><td class="p-3 font-medium">20%</td><td class="p-3">S$8,000</td><td class="p-3">S$44,550</td></tr>
+              <tr><td class="p-3">Next S$180,000 (S$320,001 – S$500,000)</td><td class="p-3 font-medium">22%</td><td class="p-3">S$39,600</td><td class="p-3">S$84,150</td></tr>
+              <tr><td class="p-3">Next S$500,000 (S$500,001 – S$1,000,000)</td><td class="p-3 font-medium">23%</td><td class="p-3">S$115,000</td><td class="p-3">S$199,150</td></tr>
+              <tr><td class="p-3">Above S$1,000,000</td><td class="p-3 font-medium">24%</td><td class="p-3">24% on excess</td><td class="p-3">Variable</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>To accurately calculate your take-home income and personal tax bill, try our interactive <a href="/countries/singapore/income-tax/income-tax-calculator" class="text-link hover:underline">Singapore Income Tax Calculator</a>.</p>
+
+        <h2 id="tax-residency">183-Day Tax Residency & Taxation for Foreigners</h2>
+        <p>Understanding your tax residency status is crucial when living or working in Singapore. Under IRAS regulations, you are deemed a <strong>tax resident</strong> if you are:</p>
+        <ol>
+          <li>A Singapore Citizen or Permanent Resident (PR) who normally resides in Singapore; or</li>
+          <li>A foreigner who has physically stayed or worked in Singapore for <strong>183 days or more</strong> within a calendar year.</li>
+        </ol>
+
+        <p>Tax residents enjoy progressive tax rates (0% to 24%) and are eligible to claim personal tax reliefs. In contrast, <strong>non-residents</strong> are taxed differently:</p>
+        <ul>
+          <li><strong>Employment Income:</strong> Taxed at a flat rate of 15% or the resident progressive rate, whichever results in a higher tax liability.</li>
+          <li><strong>Director Fees & Consultancy Income:</strong> Taxed at a flat non-resident rate of 24%.</li>
+          <li><strong>No Relief Eligibility:</strong> Non-residents cannot claim personal reliefs, Central Provident Fund (CPF) deductions, or SRS tax deductions.</li>
+        </ul>
+
+        <p>For an in-depth breakdown of work passes, Form IR21 tax clearance, and short-term 60-day exemptions, read our <a href="/blogs/singapore-tax-for-foreigners-expats-guide" class="text-link hover:underline">Singapore Tax Guide for Foreigners & Expats</a> and explore our <a href="/knowledge/singapore-tax-residency" class="text-link hover:underline">Singapore Tax Residency Guide</a>.</p>
+
+        <h2 id="corporate-tax">17% Corporate Tax Rate & Startup Exemptions</h2>
+        <p>Singapore maintains a flat corporate income tax rate of <strong>17%</strong>. Under the <em>Startup Tax Exemption (SOTE)</em> scheme, newly incorporated qualifying Singapore companies enjoy significant tax savings during their first three consecutive Years of Assessment (YA):</p>
+        <ul>
+          <li><strong>75% exemption</strong> on the first S$100,000 of normal chargeable income; and</li>
+          <li><strong>50% exemption</strong> on the next S$100,000 of normal chargeable income.</li>
+        </ul>
+
+        <p>For all other active companies, the standard <em>Partial Tax Exemption (PTE)</em> provides a 75% exemption on the first S$10,000 and a 50% exemption on the next S$190,000 of chargeable income. Read our detailed <a href="/blogs/singapore-corporate-tax-guide-2026" class="text-link hover:underline">Singapore Corporate Tax Guide 2026</a> to learn more about Estimated Chargeable Income (ECI) filing and corporate tax rebates.</p>
+
+        <h2 id="capital-gains-dividends">Capital Gains, Foreign Income & Dividend Rules</h2>
+        <p>One of Singapore's key competitive advantages is the absence of capital gains taxation. Gains realized from selling shares, property, unit trusts, or foreign currencies are non-taxable, provided the taxpayer is not deemed to be trading in assets as a business.</p>
+
+        <p>Furthermore, under Singapore's single-tier corporate tax framework, dividends paid by Singapore-resident companies are tax-exempt in the hands of shareholders. Foreign-sourced income remitted into Singapore by resident individuals is also exempt under Section 13(6) of the Income Tax Act. For full regulatory details, check our guide on <a href="/blogs/singapore-foreign-income-dividends-capital-gains-tax" class="text-link hover:underline">Singapore Foreign Income, Dividends & Capital Gains Tax</a>.</p>
+
+        <h2 id="tax-reliefs">Personal Tax Reliefs & The S$80,000 Cap</h2>
+        <p>Singapore taxpayers can lower their effective tax burden by taking advantage of statutory personal income tax reliefs. However, IRAS enforces an overall aggregate personal tax relief cap of <strong>S$80,000</strong> per Year of Assessment.</p>
+
+        <p>Major tax reliefs include:</p>
+        <ul>
+          <li><strong>Earned Income Relief:</strong> Automatic relief up to S$1,000 (under 55 yrs), S$6,000 (55–59 yrs), and S$8,000 (60+ yrs).</li>
+          <li><strong>CPF Cash Top-Up Relief:</strong> Up to S$8,000 for top-ups to your own Special/Retirement Account and up to S$8,000 for family members.</li>
+          <li><strong>Supplementary Retirement Scheme (SRS):</strong> Contributions up to S$15,300 for Citizens/PRs and S$35,700 for foreigners are 100% tax-deductible.</li>
+          <li><strong>Parent & Spouse Relief:</strong> Up to S$9,000 per dependent parent residing with you.</li>
+          <li><strong>Course Fees Relief:</strong> Deduct up to S$5,600 annually for self-education and professional certifications.</li>
+        </ul>
+
+        <p>Learn how to maximize your tax savings legally with our comprehensive <a href="/blogs/singapore-tax-reliefs-deductions-rebates-guide" class="text-link hover:underline">Singapore Tax Reliefs & Deductions Guide</a>.</p>
+
+        <h2 id="filing-deadlines">IRAS e-Filing & myTax Portal Deadlines</h2>
+        <p>The Singapore tax year runs on a calendar year basis (January 1 to December 31). Key tax deadlines to remember:</p>
+        <ul>
+          <li><strong>March 1:</strong> IRAS myTax Portal opens for e-filing.</li>
+          <li><strong>April 15:</strong> Paper tax return filing deadline.</li>
+          <li><strong>April 18:</strong> Online e-filing deadline via myTax Portal (Singpass login required).</li>
+          <li><strong>May to September:</strong> IRAS issues Notice of Assessment (NOA) bills. Taxpayers must pay tax due within 30 days of the NOA date or arrange monthly GIRO installments.</li>
+        </ul>
+
+        <p>For step-by-step guidance on e-filing, AIS Form IR8A, GIRO setup, and credit card payment options, read our guide on <a href="/blogs/singapore-how-to-pay-file-income-tax-iras" class="text-link hover:underline">How to File & Pay Income Tax with IRAS</a>.</p>
+
+        <h2 id="calculators">Singapore Interactive Financial Calculators</h2>
+        <p>Finsiva offers specialized, easy-to-use tax tools to help you plan your finances in Singapore:</p>
+        <div class="my-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <a href="/countries/singapore/income-tax/income-tax-calculator" class="block rounded-lg border border-hairline p-5 transition hover:border-primary dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="font-semibold text-ink dark:text-on-primary">Income Tax Calculator</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">Calculate progressive tax rates, personal reliefs, and net take-home salary.</p>
+          </a>
+          <a href="/countries/singapore/gst/gst-calculator" class="block rounded-lg border border-hairline p-5 transition hover:border-primary dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="font-semibold text-ink dark:text-on-primary">GST Calculator (9%)</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">Calculate GST inclusive and exclusive pricing at Singapore's standard 9% rate.</p>
+          </a>
+          <a href="/countries/singapore/stamp-duty/stamp-duty-calculator" class="block rounded-lg border border-hairline p-5 transition hover:border-primary dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="font-semibold text-ink dark:text-on-primary">Stamp Duty Calculator</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">Calculate Buyer's Stamp Duty (BSD) and ABSD for private property purchases.</p>
+          </a>
+        </div>
+
+        <h2 id="faqs">Frequently Asked Questions</h2>
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">What is the Singapore personal income tax rate for 2026?</h3>
+            <p>Singapore personal income tax for residents is progressive, starting at 0% for the first S$20,000 of chargeable income and topping out at 24% for income above S$1,000,000.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">How are non-residents taxed on income in Singapore?</h3>
+            <p>Non-residents are taxed at a flat rate of 15% on employment income or the progressive resident rate, whichever results in a higher tax bill. Non-residents cannot claim personal reliefs.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">What is the corporate tax rate in Singapore?</h3>
+            <p>Singapore corporate tax is a flat headline rate of 17%. New qualifying startups receive partial tax exemptions on their first S$200,000 of chargeable income.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Does Singapore tax capital gains or stock dividends?</h3>
+            <p>No. Singapore has 0% capital gains tax and operates a single-tier corporate tax framework where corporate dividends paid to shareholders are tax-exempt.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">What is the maximum personal tax relief cap in Singapore?</h3>
+            <p>The total personal income tax relief an individual taxpayer can claim is capped at S$80,000 per Year of Assessment.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

@@ -1,0 +1,170 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Singapore Corporate Tax Guide 2026: 17% Rate, Startup Exemptions & ECI";
+const description = "Complete guide to Singapore corporate income tax. Learn the flat 17% corporate tax rate, Startup Tax Exemption (SOTE), Corporate Income Tax (CIT) rebates, ECI filing, and Form C-S rules.";
+const image = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80";
+const author = "Michael Tang, Senior Tax & Corporate Advisory Lead";
+const authorBio = "Corporate tax advisor specializing in Singapore company formation, corporate income tax compliance, tax incentives, and regional expansion.";
+const canonical = "https://finsiva.com/blogs/singapore-corporate-tax-guide-2026";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is the corporate tax rate in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Singapore levies a flat corporate income tax rate of 17% on normal chargeable income. Partial tax exemptions and startup schemes significantly reduce the effective tax rate for SMEs."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How does the Startup Tax Exemption (SOTE) work in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Qualifying new Singapore startup companies enjoy a 75% tax exemption on the first S$100,000 of normal chargeable income and a 50% exemption on the next S$100,000 for their first 3 consecutive Years of Assessment."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "When is Estimated Chargeable Income (ECI) due in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Companies must file Estimated Chargeable Income (ECI) with IRAS within 3 months from the end of their financial year."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Are corporate dividends taxable to shareholders in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. Singapore operates a single-tier corporate tax framework where tax paid on corporate profits is final. Dividends distributed to shareholders are completely tax-exempt."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="18 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <p class="text-lg leading-relaxed">
+      Singapore's headline corporate tax rate of <strong>17%</strong>, single-tier territorial framework, generous startup exemptions, and extensive international network of tax treaties make it a preferred headquarters location for multinational corporations and high-growth startups alike.
+    </p>
+
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Table of Contents</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#corporate-rate" class="text-link hover:underline">1. Singapore Corporate Tax Overview</a></li>
+        <li><a href="#startup-exemption" class="text-link hover:underline">2. Startup Tax Exemption (SOTE) Scheme</a></li>
+        <li><a href="#partial-exemption" class="text-link hover:underline">3. Partial Tax Exemption (PTE) for All Companies</a></li>
+        <li><a href="#cit-rebates" class="text-link hover:underline">4. Corporate Income Tax (CIT) Rebates</a></li>
+        <li><a href="#eci-filing" class="text-link hover:underline">5. ECI & Form C-S / Form C Filing Deadlines</a></li>
+        <li><a href="#single-tier-dividends" class="text-link hover:underline">6. Single-Tier Corporate Dividend System</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">7. Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <h2 id="corporate-rate" class="text-2xl font-semibold text-ink dark:text-on-primary">1. Singapore Corporate Tax Overview</h2>
+    <p>Administered by the <a href="https://www.iras.gov.sg" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">IRAS</a>, corporate income tax applies to all income accruing in or derived from Singapore, or foreign income remitted into Singapore. However, due to partial tax exemptions, effective corporate tax rates for companies with taxable profits up to S$200,000 often fall below 8% to 10%.</p>
+
+    <h2 id="startup-exemption" class="text-2xl font-semibold text-ink dark:text-on-primary">2. Startup Tax Exemption (SOTE) Scheme</h2>
+    <p>To support entrepreneurship, qualifying new Singapore private limited companies enjoy the <em>Startup Tax Exemption Scheme</em> during their first three consecutive Years of Assessment (YA):</p>
+
+    <div class="overflow-x-auto">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Chargeable Income Tier (SGD)</th>
+            <th class="border p-3">Exemption Rate</th>
+            <th class="border p-3">Exempt Amount</th>
+            <th class="border p-3">Taxable Amount</th>
+            <th class="border p-3">Tax Payable @ 17%</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 font-medium">First S$100,000</td>
+            <td class="p-3">75%</td>
+            <td class="p-3 font-medium text-emerald-600">S$75,000</td>
+            <td class="p-3">S$25,000</td>
+            <td class="p-3 font-medium">S$4,250</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Next S$100,000</td>
+            <td class="p-3">50%</td>
+            <td class="p-3 font-medium text-emerald-600">S$50,000</td>
+            <td class="p-3">S$50,000</td>
+            <td class="p-3 font-medium">S$8,500</td>
+          </tr>
+          <tr class="bg-canvas-soft font-semibold dark:bg-surface">
+            <td class="p-3">Total S$200,000 Income</td>
+            <td class="p-3">—</td>
+            <td class="p-3 text-emerald-600">S$125,000 Exempt</td>
+            <td class="p-3">S$75,000 Taxable</td>
+            <td class="p-3 text-primary">S$12,750 (Effective ~6.38%)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="partial-exemption" class="text-2xl font-semibold text-ink dark:text-on-primary">3. Partial Tax Exemption (PTE) for All Companies</h2>
+    <p>From their 4th Year of Assessment onward (and for companies that do not qualify for SOTE), all Singapore companies enjoy the standard <em>Partial Tax Exemption (PTE)</em>:</p>
+    <ul>
+      <li><strong>75% exemption</strong> on the first S$10,000 of chargeable income; and</li>
+      <li><strong>50% exemption</strong> on the next S$190,000 of chargeable income.</li>
+    </ul>
+    <p>This results in a total tax exemption of S$102,500 on the first S$200,000 of chargeable income, giving an effective tax rate of just 8.29%.</p>
+
+    <h2 id="cit-rebates" class="text-2xl font-semibold text-ink dark:text-on-primary">4. Corporate Income Tax (CIT) Rebates</h2>
+    <p>The Singapore Budget regularly introduces Corporate Income Tax (CIT) Rebates (e.g., a 50% rebate capped at S$40,000 with cash components for qualifying companies with local employees).</p>
+
+    <h2 id="eci-filing" class="text-2xl font-semibold text-ink dark:text-on-primary">5. ECI & Form C-S / Form C Filing Deadlines</h2>
+    <p>Singapore companies must comply with two annual corporate tax filing requirements:</p>
+    <ol class="list-decimal pl-6 space-y-2">
+      <li><strong>Estimated Chargeable Income (ECI):</strong> Must be e-filed within 3 months of the financial year end. Companies with annual revenue under S$5 million and nil ECI are exempt.</li>
+      <li><strong>Form C-S / Form C-S (Lite) / Form C:</strong> Annual corporate tax return due by <strong>November 30</strong>. Small companies with annual revenue up to S$5 million file the simplified Form C-S.</li>
+    </ol>
+
+    <h2 id="single-tier-dividends" class="text-2xl font-semibold text-ink dark:text-on-primary">6. Single-Tier Corporate Dividend System</h2>
+    <p>Under Singapore's single-tier corporate tax framework, tax paid by a company on its profits is final. Dividends distributed to corporate or individual shareholders are completely exempt from taxation. For full foreign income tax treatment, see our guide on <a href="/blogs/singapore-foreign-income-dividends-capital-gains-tax" class="text-link hover:underline">Foreign Income & Capital Gains Tax in Singapore</a>.</p>
+
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">7. Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is the corporate tax rate in Singapore?</h3>
+        <p>The flat corporate tax rate is 17%. Partial tax exemptions lower the effective rate significantly for profits up to S$200,000.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">How does the Startup Tax Exemption (SOTE) work?</h3>
+        <p>New startups get 75% exemption on the first S$100,000 and 50% on the next S$100,000 of chargeable income for their first 3 Assessment Years.</p>
+      </div>
+    </div>
+
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Related Corporate & Singapore Tax Links</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/knowledge/singapore-income-tax" class="text-link hover:underline font-medium">Singapore Tax Knowledge Hub</a>
+        <a href="/blogs/singapore-income-tax-rates-brackets-2026" class="text-link hover:underline font-medium">Personal Tax Brackets 2026</a>
+        <a href="/blogs/singapore-foreign-income-dividends-capital-gains-tax" class="text-link hover:underline font-medium">Foreign Income & Capital Gains Tax</a>
+        <a href="/countries/singapore/income-tax/income-tax-calculator" class="text-link hover:underline font-medium">Singapore Tax Calculator</a>
+        <a href="/blogs/singapore-how-to-pay-file-income-tax-iras" class="text-link hover:underline font-medium">IRAS Filing & myTax Portal</a>
+        <a href="/countries/singapore" class="text-link hover:underline font-medium">Finsiva Singapore Portal</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>

@@ -1,0 +1,117 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+
+const title = "Singapore Tax Calculators Guide: Personal Tax, GST & Property Stamp Duty";
+const description = "Complete guide to Singapore financial and tax calculators. Learn how to estimate your personal income tax, GST 9% breakdown, net take-home salary, and property stamp duty.";
+const baseUrl = "https://finsiva.com";
+const currentUrl = `${baseUrl}/knowledge/singapore-tax-calculators`;
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How do I calculate my Singapore income tax?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Determine your gross annual income, subtract eligible personal tax reliefs (capped at S$80,000), and apply the YA 2026 progressive tax rates from 0% to 24%."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How does the Singapore GST calculator work?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The GST calculator computes tax amounts at the prevailing 9% standard rate. It allows users to convert net prices to gross inclusive amounts and calculate input/output GST."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What calculators are available for Singapore property buyers?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Finsiva provides Buyer's Stamp Duty (BSD) and Additional Buyer's Stamp Duty (ABSD) calculators for residential and commercial property purchases."
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonical={currentUrl}
+  robots="index,follow"
+  schema={faqSchema}
+  image="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&q=80"
+  imageAlt="Calculator on tax documents"
+>
+  <article id="main-content" class="min-h-screen bg-canvas dark:bg-canvas">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <Breadcrumbs items={[
+        { label: "Home", href: "/" },
+        { label: "Knowledge Center", href: "/knowledge" },
+        { label: "Singapore Tax Calculators" }
+      ]} />
+
+      <header class="pt-8 pb-12">
+        <h1 class="text-4xl font-extrabold tracking-tight text-ink dark:text-on-primary sm:text-5xl">Singapore Tax Calculators Guide</h1>
+        <p class="mt-4 text-xl text-body dark:text-muted">Learn how to accurately compute personal income tax, 9% GST, net take-home salary, and property stamp duty with Finsiva tools.</p>
+      </header>
+
+      <div class="prose max-w-none prose-headings:mt-10 prose-headings:mb-4 prose-h2:text-2xl prose-h2:font-semibold prose-h2:text-ink dark:prose-h2:text-on-primary prose-p:text-body prose-p:leading-relaxed prose-a:text-link prose-a:underline">
+        <h2>Singapore Financial & Tax Calculation Suite</h2>
+        <p>Planning your personal or business finances in Singapore requires precise calculations. Whether you are estimating your yearly tax payable to IRAS, calculating company GST obligations, or determining buyer's stamp duty on a property purchase, Finsiva offers powerful, instant financial calculators tailored to Singapore tax laws.</p>
+
+        <h2>Available Singapore Tax Calculators</h2>
+        <div class="my-6 grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="text-lg font-semibold text-ink dark:text-on-primary">1. Personal Income Tax Calculator</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">Applies YA 2026 progressive tax rates (0%–24%), accounts for Earned Income, SRS, and CPF reliefs, and calculates net monthly take-home pay.</p>
+            <a href="/countries/singapore/income-tax/income-tax-calculator" class="mt-4 inline-block text-sm font-medium text-link hover:underline">Launch Income Tax Calculator →</a>
+          </div>
+
+          <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="text-lg font-semibold text-ink dark:text-on-primary">2. GST Calculator (9%)</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">Instantly calculates GST inclusive, GST exclusive, and net tax payable for business invoicing and retail purchases at the 9% rate.</p>
+            <a href="/countries/singapore/gst/gst-calculator" class="mt-4 inline-block text-sm font-medium text-link hover:underline">Launch GST Calculator →</a>
+          </div>
+
+          <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="text-lg font-semibold text-ink dark:text-on-primary">3. Property Stamp Duty Calculator</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">Calculates Buyer's Stamp Duty (BSD) and Additional Buyer's Stamp Duty (ABSD) tiers based on buyer residency status and property profile.</p>
+            <a href="/countries/singapore/stamp-duty/stamp-duty-calculator" class="mt-4 inline-block text-sm font-medium text-link hover:underline">Launch Stamp Duty Calculator →</a>
+          </div>
+        </div>
+
+        <h2>Step-by-Step Income Tax Calculation Example</h2>
+        <p>Consider a Singapore Citizen earning a gross annual salary of <strong>S$120,000</strong> with the following claimed tax reliefs:</p>
+        <ul>
+          <li>Earned Income Relief: S$1,000</li>
+          <li>CPF Employee Contributions: S$19,200</li>
+          <li>SRS Cash Top-up: S$10,000</li>
+        </ul>
+        <p><strong>Total Tax Reliefs:</strong> S$30,200</p>
+        <p><strong>Chargeable Income:</strong> S$120,000 – S$30,200 = <strong>S$89,800</strong></p>
+
+        <p><strong>Applying YA 2026 Brackets:</strong></p>
+        <ul>
+          <li>Tax on First S$80,000 = S$3,350</li>
+          <li>Tax on Remaining S$9,800 @ 11.5% = S$1,127</li>
+          <li><strong>Total Tax Payable:</strong> S$4,477 (Effective Tax Rate: ~3.73%)</li>
+        </ul>
+
+        <h2>Related Guides & Resources</h2>
+        <p>To dive deeper into Singapore tax rules, explore our key guides:</p>
+        <ul>
+          <li><a href="/knowledge/singapore-income-tax" class="text-link hover:underline">Singapore Income Tax Knowledge Center Hub</a></li>
+          <li><a href="/blogs/singapore-income-tax-rates-brackets-2026" class="text-link hover:underline">Singapore Income Tax Rates & Brackets 2026</a></li>
+          <li><a href="/blogs/singapore-tax-reliefs-deductions-rebates-guide" class="text-link hover:underline">Singapore Tax Reliefs & Savings Guide</a></li>
+          <li><a href="/countries/singapore" class="text-link hover:underline">Finsiva Singapore Country Tax Portal</a></li>
+        </ul>
+      </div>
+    </div>
+  </article>
+</Layout>

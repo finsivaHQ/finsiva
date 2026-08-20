@@ -1,0 +1,116 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Singapore Rental Property Income Tax Guide 2026";
+const description = "Complete guide to tax on rental income in Singapore. Learn residential and room rental tax rates, the 15% deemed expense deduction rule, actual expense claims, and property tax distinctions.";
+const image = "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&q=80";
+const author = "Michael Tang, Senior Tax & Property Advisory Lead";
+const authorBio = "Property tax advisory specialist guiding real estate investors, landlords, and homeowners on IRAS rental income tax, Buyer's Stamp Duty, and 15% deemed expense claims.";
+const canonical = "https://finsiva.com/blogs/singapore-rental-property-income-tax-guide";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Is rental income taxable in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Net rental income earned from renting out real estate properties or individual rooms in Singapore is subject to personal income tax (for individuals) or corporate tax (for companies)."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is the 15% deemed expense option for rental income in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "IRAS allows individual landlords of residential properties to claim a simplified flat 15% deemed expense deduction of gross rental income (plus deductible interest on housing loans) instead of tracking actual rental expenses."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Is room rental income taxable in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Rent received from leasing out bedrooms in HDB flats or private residential properties is taxable income."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="16 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <p class="text-lg leading-relaxed">
+      Renting out real estate properties or individual rooms in Singapore produces taxable income. Whether you own HDB flats, private condominiums, landed properties, or commercial real estate, understanding how the <a href="https://www.iras.gov.sg" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">IRAS</a> taxes <strong>rental income, allowable rental expenses, and the 15% deemed expense option</strong> is vital for landlords.
+    </p>
+
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Table of Contents</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#how-rental-income-taxed" class="text-link hover:underline">1. How Rental Income is Taxed in Singapore</a></li>
+        <li><a href="#deemed-expense-rule" class="text-link hover:underline">2. The 15% Deemed Expense Deduction Scheme</a></li>
+        <li><a href="#actual-expenses" class="text-link hover:underline">3. Claiming Actual Rental Expenses</a></li>
+        <li><a href="#room-rentals" class="text-link hover:underline">4. Room Rental Income Rules (HDB & Private)</a></li>
+        <li><a href="#rental-vs-property-tax" class="text-link hover:underline">5. Rental Income Tax vs Property Tax</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">6. Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <h2 id="how-rental-income-taxed" class="text-2xl font-semibold text-ink dark:text-on-primary">1. How Rental Income is Taxed in Singapore</h2>
+    <p>Gross rental income includes basic rent, maintenance fee charges paid by tenants, and furniture/fittings rental fees. Net rental income is added to your other personal income and taxed at progressive resident rates (0% to 24%).</p>
+
+    <h2 id="deemed-expense-rule" class="text-2xl font-semibold text-ink dark:text-on-primary">2. The 15% Deemed Expense Deduction Scheme</h2>
+    <p>To simplify tax filing for residential landlords, IRAS permits individuals to claim a flat <strong>15% deemed expense deduction</strong> based on gross rental income, plus actual interest paid on housing loans secured for the property:</p>
+
+    <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface font-mono text-sm">
+      Net Taxable Rental Income = Gross Rent – (15% x Gross Rent) – Housing Loan Interest
+    </div>
+
+    <h2 id="actual-expenses" class="text-2xl font-semibold text-ink dark:text-on-primary">3. Claiming Actual Rental Expenses</h2>
+    <p>If actual maintenance expenses exceed 15%, landlords can opt to claim actual allowable expenses instead of the 15% flat deduction. Allowable expenses include property tax paid, fire insurance premiums, agent commission fees for tenant renewal, and repair expenses incurred during tenancy.</p>
+
+    <h2 id="room-rentals" class="text-2xl font-semibold text-ink dark:text-on-primary">4. Room Rental Income Rules (HDB & Private)</h2>
+    <p>Renting out spare bedrooms in HDB flats or private apartments generates taxable income. Landlords must declare room rental receipts on their annual personal income tax return.</p>
+
+    <h2 id="rental-vs-property-tax" class="text-2xl font-semibold text-ink dark:text-on-primary">5. Rental Income Tax vs Property Tax</h2>
+    <p>It is important to distinguish between <strong>Income Tax on Rental Income</strong> (tax on net profit derived from renting) and <strong>Property Tax</strong> (an annual wealth tax levied on property ownership based on Annual Value). Property buyers can compute acquisition stamp duty using our <a href="/countries/singapore/stamp-duty/stamp-duty-calculator" class="text-link hover:underline">Singapore Stamp Duty Calculator</a>.</p>
+
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">6. Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Is rental income taxable in Singapore?</h3>
+        <p>Yes. Net rental income earned from leasing properties or rooms is taxable under personal income tax.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is the 15% deemed expense option?</h3>
+        <p>It allows residential landlords to deduct a flat 15% of gross rent plus housing loan interest without keeping individual receipts.</p>
+      </div>
+    </div>
+
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Related Singapore Property & Tax Links</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/countries/singapore/stamp-duty/stamp-duty-calculator" class="text-link hover:underline font-medium">Stamp Duty Calculator</a>
+        <a href="/knowledge/singapore-income-tax" class="text-link hover:underline font-medium">Singapore Tax Knowledge Hub</a>
+        <a href="/blogs/singapore-income-tax-rates-brackets-2026" class="text-link hover:underline font-medium">Personal Tax Brackets 2026</a>
+        <a href="/blogs/singapore-tax-reliefs-deductions-rebates-guide" class="text-link hover:underline font-medium">Tax Reliefs & Deductions Guide</a>
+        <a href="/countries/singapore/income-tax/income-tax-calculator" class="text-link hover:underline font-medium">Singapore Tax Calculator</a>
+        <a href="/countries/singapore" class="text-link hover:underline font-medium">Finsiva Singapore Portal</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>

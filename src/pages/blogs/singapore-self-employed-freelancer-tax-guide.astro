@@ -1,0 +1,151 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Singapore Tax Guide for Self-Employed, Freelancers & Sole Proprietors 2026";
+const description = "Complete guide to income tax for self-employed individuals, sole proprietors, food delivery riders, and taxi drivers in Singapore. Learn Net Trade Income, Form B filing, and simplified expense claims.";
+const image = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80";
+const author = "Tan Wei Ming, Accredited Tax Practitioner";
+const authorBio = "Accredited Tax Practitioner specializing in small business accounting, sole proprietorship taxation, gig economy tax compliance, and IRAS Form B filing.";
+const canonical = "https://finsiva.com/blogs/singapore-self-employed-freelancer-tax-guide";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Do freelancers pay income tax in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Freelancers, sole proprietors, private hire drivers, and gig workers are considered self-employed persons by IRAS and must declare their Net Trade Income if gross revenue exceeds S$6,000."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How is Net Trade Income calculated for self-employed persons?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Net Trade Income equals Gross Business Revenue minus allowable business expenses and allowable capital allowances."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is the simplified expense deduction scheme for food delivery drivers and taxi drivers?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "IRAS allows qualifying private hire drivers, taxi drivers, and commission agents to claim a fixed percentage of gross income (e.g., 60% deemed expense for drivers) as business expenses without keeping receipt proof."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="18 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <p class="text-lg leading-relaxed">
+      If you operate as a freelancer, sole proprietor, partner, private-hire car driver, food delivery rider, or independent contractor in Singapore, IRAS classifies you as a <strong>Self-Employed Person (SEP)</strong>. You are taxed on your <strong>Net Trade Income</strong> at the same progressive personal tax rates (0% to 24%) that apply to salaried employees.
+    </p>
+
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Table of Contents</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#who-is-self-employed" class="text-link hover:underline">1. Who is Classified as Self-Employed by IRAS?</a></li>
+        <li><a href="#net-trade-income" class="text-link hover:underline">2. Calculating Net Trade Income</a></li>
+        <li><a href="#simplified-expenses" class="text-link hover:underline">3. Fixed Deemed Expense Ratios (Delivery Drivers & Drivers)</a></li>
+        <li><a href="#form-b-filing" class="text-link hover:underline">4. Form B & Form B1 e-Filing Process</a></li>
+        <li><a href="#medisave-obligations" class="text-link hover:underline">5. Mandatory Self-Employed MediSave Contributions</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">6. Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <h2 id="who-is-self-employed" class="text-2xl font-semibold text-ink dark:text-on-primary">1. Who is Classified as Self-Employed by IRAS?</h2>
+    <p>IRAS considers you self-employed if you earn income from a trade, business, profession, or vocation in Singapore. Common categories include:</p>
+    <ul>
+      <li>Sole proprietors and business partners registered with ACRA</li>
+      <li>Freelance designers, software developers, and consultants</li>
+      <li>Ride-hailing drivers (Grab, Gojek, Tada) and taxi drivers</li>
+      <li>Food delivery riders (Foodpanda, GrabFood, Deliveroo)</li>
+      <li>Commission agents (real estate agents, financial advisors)</li>
+      <li>Tuition teachers and sports coaches</li>
+    </ul>
+
+    <h2 id="net-trade-income" class="text-2xl font-semibold text-ink dark:text-on-primary">2. Calculating Net Trade Income</h2>
+    <p>Self-employed persons pay tax on Net Trade Income (NTI), computed as:</p>
+    <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface font-mono text-sm">
+      Net Trade Income = Gross Business Revenue – Allowable Business Expenses – Capital Allowances
+    </div>
+
+    <p>Allowable expenses include office rent, marketing costs, accounting software subscriptions, business broadband, and transport costs incurred strictly for trade purposes.</p>
+
+    <h2 id="simplified-expenses" class="text-2xl font-semibold text-ink dark:text-on-primary">3. Fixed Deemed Expense Ratios</h2>
+    <p>To reduce record-keeping burdens, IRAS offers prescribed fixed expense rates for specific self-employed groups:</p>
+
+    <div class="overflow-x-auto my-4">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Self-Employed Vocation</th>
+            <th class="border p-3">Prescribed Deemed Expense Rate</th>
+            <th class="border p-3">Taxable Net Trade Income Ratio</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 font-medium">Taxi & Private Hire Car Drivers</td>
+            <td class="p-3 font-semibold text-emerald-600">60% of Gross Driving Fares</td>
+            <td class="p-3">40% of Gross Income</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Commission Agents (Real estate, insurance)</td>
+            <td class="p-3 font-semibold text-emerald-600">25% of Gross Commission</td>
+            <td class="p-3">75% of Gross Income</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="form-b-filing" class="text-2xl font-semibold text-ink dark:text-on-primary">4. Form B & Form B1 e-Filing Process</h2>
+    <p>Self-employed individuals must file tax returns annually by <strong>April 18</strong> using <strong>Form B / Form B1</strong> via myTax Portal. If your net trade income is under S$20,000, no income tax is payable, but filing remains mandatory if IRAS issues a tax return notification.</p>
+
+    <h2 id="medisave-obligations" class="text-2xl font-semibold text-ink dark:text-on-primary">5. Mandatory Self-Employed MediSave Contributions</h2>
+    <p>Self-employed Citizens and PRs who earn an annual Net Trade Income exceeding S$6,000 are legally required to make mandatory Central Provident Fund (CPF) <strong>MediSave contributions</strong>. IRAS issues MediSave Notices of Computation alongside income tax bills.</p>
+
+    <p>Calculate your personal tax rates with our <a href="/countries/singapore/income-tax/income-tax-calculator" class="text-link hover:underline">Singapore Personal Tax Calculator</a>.</p>
+
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">6. Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Do freelancers pay income tax in Singapore?</h3>
+        <p>Yes. Freelancers and sole proprietors are taxed on Net Trade Income at progressive rates (0%–24%).</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is the simplified expense deduction for drivers?</h3>
+        <p>Private hire and taxi drivers can deduct 60% of gross driving fares as deemed business expenses without keeping detailed receipts.</p>
+      </div>
+    </div>
+
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Related Singapore Tax Links</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/knowledge/singapore-income-tax" class="text-link hover:underline font-medium">Singapore Tax Knowledge Hub</a>
+        <a href="/blogs/singapore-income-tax-rates-brackets-2026" class="text-link hover:underline font-medium">Personal Tax Brackets 2026</a>
+        <a href="/blogs/singapore-tax-reliefs-deductions-rebates-guide" class="text-link hover:underline font-medium">Tax Reliefs & Deductions Guide</a>
+        <a href="/countries/singapore/income-tax/income-tax-calculator" class="text-link hover:underline font-medium">Singapore Tax Calculator</a>
+        <a href="/blogs/singapore-how-to-pay-file-income-tax-iras" class="text-link hover:underline font-medium">IRAS Filing & myTax Portal</a>
+        <a href="/countries/singapore" class="text-link hover:underline font-medium">Finsiva Singapore Portal</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>

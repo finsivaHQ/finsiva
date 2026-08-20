@@ -1,0 +1,101 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+
+const title = "Singapore Tax Residency Guide: 183-Day Rule, Form IR21 & Non-Resident Tax Rates";
+const description = "Comprehensive guide to Singapore tax residency. Learn the 183-day rule, 60-day short-term employment exemption, non-resident tax rates (15%/24%), and Form IR21 tax clearance.";
+const baseUrl = "https://finsiva.com";
+const currentUrl = `${baseUrl}/knowledge/singapore-tax-residency`;
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How is Singapore tax residency determined for foreigners?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Foreigners who stay or work in Singapore for 183 days or more in a calendar year qualify as tax residents for that Year of Assessment."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is the 60-day rule for working in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Foreigners who exercise employment in Singapore for 60 days or less in a calendar year are exempt from tax on their employment income (excluding directors and entertainers)."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is Form IR21 tax clearance in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Form IR21 is a mandatory IRAS tax clearance notification that employers must submit when a foreign employee terminates employment or leaves Singapore."
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonical={currentUrl}
+  robots="index,follow"
+  schema={faqSchema}
+  image="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1200&q=80"
+  imageAlt="Singapore passport and travel documents"
+>
+  <article id="main-content" class="min-h-screen bg-canvas dark:bg-canvas">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <Breadcrumbs items={[
+        { label: "Home", href: "/" },
+        { label: "Knowledge Center", href: "/knowledge" },
+        { label: "Singapore Tax Residency" }
+      ]} />
+
+      <header class="pt-8 pb-12">
+        <h1 class="text-4xl font-extrabold tracking-tight text-ink dark:text-on-primary sm:text-5xl">Singapore Tax Residency Guide</h1>
+        <p class="mt-4 text-xl text-body dark:text-muted">Master the 183-day rule, 60-day exemption, Form IR21 clearance, and tax rules for Employment Pass and S Pass holders.</p>
+      </header>
+
+      <div class="prose max-w-none prose-headings:mt-10 prose-headings:mb-4 prose-h2:text-2xl prose-h2:font-semibold prose-h2:text-ink dark:prose-h2:text-on-primary prose-p:text-body prose-p:leading-relaxed prose-a:text-link prose-a:underline">
+        <h2>Understanding Tax Residency in Singapore</h2>
+        <p>Tax residency status determines how your personal income is taxed in Singapore and whether you are eligible to claim statutory tax reliefs. The Inland Revenue Authority of Singapore (IRAS) applies clear quantitative and qualitative tests to classify taxpayers as either <strong>tax residents</strong> or <strong>non-residents</strong>.</p>
+
+        <h2>Qualifying as a Singapore Tax Resident</h2>
+        <p>An individual is treated as a tax resident for a specific Year of Assessment (YA) if they meet any of the following criteria:</p>
+        <ul>
+          <li><strong>Singapore Citizens & PRs:</strong> Normally reside in Singapore, except for temporary absences; or</li>
+          <li><strong>Foreign Professionals:</strong> Physical presence or employment in Singapore for at least <strong>183 days</strong> in the calendar year preceding the Year of Assessment; or</li>
+          <li><strong>Continuous 2-Year Rule:</strong> Continuous employment/stay in Singapore spanning two calendar years for at least 183 days total; or</li>
+          <li><strong>3-Year Administrative Rule:</strong> Continuous employment in Singapore spanning three consecutive calendar years.</li>
+        </ul>
+
+        <h2>The 183-Day Quantitative Rule</h2>
+        <p>Physical presence in Singapore is strictly counted by IRAS. The 183 days include physical presence during weekends, public holidays, annual leave spent in Singapore, and short overseas business trips related to Singapore employment.</p>
+
+        <h2>Non-Resident Tax Rates & 60-Day Exemption</h2>
+        <p>Foreigners who do not meet the 183-day test are taxed as non-residents:</p>
+        <ul>
+          <li><strong>183 Days or More:</strong> Taxed at resident progressive rates (0%–24%) with full personal relief eligibility.</li>
+          <li><strong>61 to 182 Days:</strong> Taxed at a flat rate of 15% on employment income or resident progressive rates without reliefs (whichever yields a higher tax).</li>
+          <li><strong>60 Days or Fewer:</strong> Exempt from tax on employment income under the 60-day short-term employment exemption. (Note: Does not apply to company directors, public entertainers, or foreign professionals exercising a profession).</li>
+        </ul>
+
+        <h2>Form IR21 Employer Tax Clearance</h2>
+        <p>When a foreign employee holding an Employment Pass (EP), S Pass, or Work Permit resigns, terminates employment, or prepares to leave Singapore for more than 3 months, the employer is legally obligated to submit <strong>Form IR21</strong> to IRAS at least one month before departure. The employer must withhold all monies due to the employee until tax clearance is granted.</p>
+
+        <h2>Related Expat & Foreigner Tax Articles</h2>
+        <ul>
+          <li><a href="/blogs/singapore-tax-for-foreigners-expats-guide" class="text-link hover:underline">Singapore Income Tax for Foreigners & Expats Guide</a></li>
+          <li><a href="/blogs/singapore-income-tax-rates-brackets-2026" class="text-link hover:underline">Singapore Personal Tax Brackets 2026</a></li>
+          <li><a href="/countries/singapore/income-tax/income-tax-calculator" class="text-link hover:underline">Singapore Personal Tax Calculator</a></li>
+          <li><a href="/knowledge/singapore-income-tax" class="text-link hover:underline">Singapore Income Tax Hub Page</a></li>
+        </ul>
+      </div>
+    </div>
+  </article>
+</Layout>

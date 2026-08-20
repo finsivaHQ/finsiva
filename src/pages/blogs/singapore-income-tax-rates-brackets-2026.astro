@@ -1,0 +1,212 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Singapore Income Tax Rates & Brackets 2026: Complete Personal Tax Guide";
+const description = "Complete guide to Singapore personal income tax rates for Year of Assessment 2026. Compare tax brackets (0%-24%), net salary after tax, tax computation rules, and Budget 2026 updates.";
+const image = "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&q=80";
+const author = "Tan Wei Ming, Accredited Tax Practitioner";
+const authorBio = "Accredited Tax Practitioner (Singapore) and personal tax advisory lead specializing in IRAS compliance, personal tax reliefs, and expat tax planning.";
+const canonical = "https://finsiva.com/blogs/singapore-income-tax-rates-brackets-2026";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is the minimum income to pay tax in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The minimum annual chargeable income to pay tax in Singapore is S$20,000. Chargeable income up to S$20,000 is taxed at 0%."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What are the Singapore personal income tax brackets for YA 2026?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "For YA 2026, resident progressive tax rates range from 0% for the first S$20,000 up to 24% for chargeable income exceeding S$1,000,000 across 13 tax tiers."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How is net salary after tax calculated in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Gross annual employment income minus allowable employment expenses and total personal tax reliefs gives Chargeable Income. Progressive tax rates are applied, and any statutory tax rebate is subtracted."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is the highest tax bracket in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The highest marginal personal tax rate in Singapore is 24%, which applies to chargeable income in excess of S$1,000,000."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Does Singapore tax bonuses and employer allowances?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Annual wage supplements (AWS), performance bonuses, housing allowances, and transport allowances are taxable as employment income in Singapore."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="18 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <p class="text-lg leading-relaxed">
+      Understanding <strong>Singapore income tax rates and tax brackets for Year of Assessment (YA) 2026</strong> is essential for every salaried employee, foreign professional, and self-employed individual earning income in Singapore. Administered by the <a href="https://www.iras.gov.sg" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">Inland Revenue Authority of Singapore (IRAS)</a>, Singapore operates one of the most competitive, low-rate progressive personal income tax systems in the world.
+    </p>
+
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Table of Contents</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#rates-table" class="text-link hover:underline">1. Official YA 2026 Tax Brackets Table</a></li>
+        <li><a href="#how-tax-is-calculated" class="text-link hover:underline">2. How Personal Income Tax is Calculated</a></li>
+        <li><a href="#salary-after-tax" class="text-link hover:underline">3. Salary After Tax & Take-Home Pay</a></li>
+        <li><a href="#resident-vs-nonresident" class="text-link hover:underline">4. Resident vs Non-Resident Tax Rates</a></li>
+        <li><a href="#tax-rebates" class="text-link hover:underline">5. Statutory Tax Rebates & Budget 2026 Updates</a></li>
+        <li><a href="#worked-examples" class="text-link hover:underline">6. Worked Tax Calculation Examples</a></li>
+        <li><a href="#common-mistakes" class="text-link hover:underline">7. Common Filing Mistakes to Avoid</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">8. Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <h2 id="rates-table" class="text-2xl font-semibold text-ink dark:text-on-primary">1. Official YA 2026 Tax Brackets Table</h2>
+    <p>Singapore's personal income tax rates for tax residents are progressive. You pay higher tax rates only on the portion of your income that falls into higher tiers. The first S$20,000 of chargeable income is entirely tax-free (0%).</p>
+
+    <div class="overflow-x-auto">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Chargeable Income Tier (SGD)</th>
+            <th class="border p-3">Marginal Rate</th>
+            <th class="border p-3">Tax Payable on Tier</th>
+            <th class="border p-3">Total Tax on Top of Tier</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr><td class="p-3">First S$20,000</td><td class="p-3 font-medium">0%</td><td class="p-3">S$0</td><td class="p-3">S$0</td></tr>
+          <tr><td class="p-3">Next S$10,000 (S$20,001 – S$30,000)</td><td class="p-3 font-medium">2.0%</td><td class="p-3">S$200</td><td class="p-3">S$200</td></tr>
+          <tr><td class="p-3">Next S$10,000 (S$30,001 – S$40,000)</td><td class="p-3 font-medium">3.5%</td><td class="p-3">S$350</td><td class="p-3">S$550</td></tr>
+          <tr><td class="p-3">Next S$40,000 (S$40,001 – S$80,000)</td><td class="p-3 font-medium">7.0%</td><td class="p-3">S$2,800</td><td class="p-3">S$3,350</td></tr>
+          <tr><td class="p-3">Next S$40,000 (S$80,001 – S$120,000)</td><td class="p-3 font-medium">11.5%</td><td class="p-3">S$4,600</td><td class="p-3">S$7,950</td></tr>
+          <tr><td class="p-3">Next S$40,000 (S$120,001 – S$160,000)</td><td class="p-3 font-medium">15.0%</td><td class="p-3">S$6,000</td><td class="p-3">S$13,950</td></tr>
+          <tr><td class="p-3">Next S$40,000 (S$160,001 – S$200,000)</td><td class="p-3 font-medium">18.0%</td><td class="p-3">S$7,200</td><td class="p-3">S$21,150</td></tr>
+          <tr><td class="p-3">Next S$40,000 (S$200,001 – S$240,000)</td><td class="p-3 font-medium">19.0%</td><td class="p-3">S$7,600</td><td class="p-3">S$28,750</td></tr>
+          <tr><td class="p-3">Next S$40,000 (S$240,001 – S$280,000)</td><td class="p-3 font-medium">19.5%</td><td class="p-3">S$7,800</td><td class="p-3">S$36,550</td></tr>
+          <tr><td class="p-3">Next S$40,000 (S$280,001 – S$320,000)</td><td class="p-3 font-medium">20.0%</td><td class="p-3">S$8,000</td><td class="p-3">S$44,550</td></tr>
+          <tr><td class="p-3">Next S$180,000 (S$320,001 – S$500,000)</td><td class="p-3 font-medium">22.0%</td><td class="p-3">S$39,600</td><td class="p-3">S$84,150</td></tr>
+          <tr><td class="p-3">Next S$500,000 (S$500,001 – S$1,000,000)</td><td class="p-3 font-medium">23.0%</td><td class="p-3">S$115,000</td><td class="p-3">S$199,150</td></tr>
+          <tr><td class="p-3">Above S$1,000,000</td><td class="p-3 font-medium">24.0%</td><td class="p-3">24% on balance</td><td class="p-3">Variable</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>To run your exact numbers instantly, launch our interactive <a href="/countries/singapore/income-tax/income-tax-calculator" class="text-link hover:underline">Singapore Income Tax Calculator</a>.</p>
+
+    <h2 id="how-tax-is-calculated" class="text-2xl font-semibold text-ink dark:text-on-primary">2. How Personal Income Tax is Calculated</h2>
+    <p>Personal income tax in Singapore is computed using a step-by-step statutory formula:</p>
+
+    <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+      <p class="font-mono text-sm"><strong>Step 1: Gross Assessable Income</strong> = Basic Salary + Bonuses + Director Fees + Allowances + Net Rental Income</p>
+      <p class="font-mono text-sm mt-2"><strong>Step 2: Chargeable Income</strong> = Gross Assessable Income – Allowable Expenses – Total Personal Reliefs (capped at S$80,000)</p>
+      <p class="font-mono text-sm mt-2"><strong>Step 3: Gross Tax Payable</strong> = Progressive Brackets Applied to Chargeable Income</p>
+      <p class="font-mono text-sm mt-2"><strong>Step 4: Net Tax Payable</strong> = Gross Tax Payable – Personal Tax Rebates</p>
+    </div>
+
+    <h2 id="salary-after-tax" class="text-2xl font-semibold text-ink dark:text-on-primary">3. Salary After Tax & Take-Home Pay</h2>
+    <p>Because Singapore does not operate payroll tax withholding for resident citizens and Permanent Residents (apart from mandatory Central Provident Fund contributions), employees receive their full gross salary monthly and pay their tax bill annually upon receiving their IRAS Notice of Assessment (NOA).</p>
+
+    <p>For foreign Employment Pass (EP) holders, CPF contributions do not apply, meaning monthly take-home salary is 100% of gross pay until the annual tax assessment is paid. Learn more about expat tax rules in our <a href="/blogs/singapore-tax-for-foreigners-expats-guide" class="text-link hover:underline">Singapore Income Tax for Foreigners & Expats Guide</a> and check residency rules in our <a href="/knowledge/singapore-tax-residency" class="text-link hover:underline">Singapore Tax Residency Guide</a>.</p>
+
+    <h2 id="resident-vs-nonresident" class="text-2xl font-semibold text-ink dark:text-on-primary">4. Resident vs Non-Resident Tax Rates</h2>
+    <p>Tax residency determines whether you benefit from progressive tax rates and personal tax reliefs:</p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li><strong>Tax Resident (183+ days in Singapore):</strong> Taxed on progressive rates from 0% to 24%. Eligible to claim personal reliefs (Earned Income, CPF, SRS, Parent/Child relief).</li>
+      <li><strong>Non-Resident Employment Income (61 to 182 days):</strong> Taxed at a flat 15% rate or resident progressive rates without reliefs, whichever produces a higher tax bill.</li>
+      <li><strong>Non-Resident Other Income (Director fees, consulting):</strong> Taxed at a flat rate of 24%.</li>
+      <li><strong>Short-Term Employment (60 days or less):</strong> Exempt from tax under the 60-day rule (excluding company directors and public entertainers).</li>
+    </ul>
+
+    <h2 id="tax-rebates" class="text-2xl font-semibold text-ink dark:text-on-primary">5. Statutory Tax Rebates & Budget 2026 Updates</h2>
+    <p>The Singapore Government frequently announces personal income tax rebates during annual Budget speeches to offset living costs. For example, a 50% Personal Income Tax Rebate capped at S$200 is automatically granted to all resident taxpayers for qualifying assessment years.</p>
+
+    <h2 id="worked-examples" class="text-2xl font-semibold text-ink dark:text-on-primary">6. Worked Tax Calculation Examples</h2>
+
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Example 1: Mid-Career Manager (S$95,000 Annual Salary)</h3>
+    <ul class="list-disc pl-6 space-y-1">
+      <li>Gross Salary: S$95,000</li>
+      <li>Claimed Reliefs: S$1,000 (Earned Income) + S$15,200 (CPF Employee Contribution) + S$5,000 (SRS Top-up) = S$21,200</li>
+      <li>Chargeable Income: S$95,000 – S$21,200 = <strong>S$73,800</strong></li>
+      <li>Tax on First S$40,000 = S$550</li>
+      <li>Tax on Next S$33,800 @ 7% = S$2,366</li>
+      <li><strong>Net Tax Payable:</strong> S$2,916 (Effective Tax Rate: ~3.07%)</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Example 2: Senior Director (S$250,000 Annual Salary)</h3>
+    <ul class="list-disc pl-6 space-y-1">
+      <li>Gross Salary: S$250,000</li>
+      <li>Claimed Reliefs: S$1,000 (Earned Income) + S$17,000 (CPF Max) + S$15,300 (SRS Max) = S$33,300</li>
+      <li>Chargeable Income: S$250,000 – S$33,300 = <strong>S$216,700</strong></li>
+      <li>Tax on First S$200,000 = S$21,150</li>
+      <li>Tax on Remaining S$16,700 @ 19% = S$3,173</li>
+      <li><strong>Net Tax Payable:</strong> S$24,323 (Effective Tax Rate: ~9.73%)</li>
+    </ul>
+
+    <h2 id="common-mistakes" class="text-2xl font-semibold text-ink dark:text-on-primary">7. Common Filing Mistakes to Avoid</h2>
+    <ol class="list-decimal pl-6 space-y-2">
+      <li><strong>Exceeding the S$80,000 Relief Cap:</strong> Claiming personal reliefs beyond S$80,000 yields no additional tax reduction.</li>
+      <li><strong>Omitting Foreign Employment Duties:</strong> Income earned from duties performed in Singapore for an overseas employer remains taxable in Singapore.</li>
+      <li><strong>Missing myTax Portal Deadlines:</strong> E-filing must be submitted by April 18 to avoid late filing penalties starting at S$150 per month.</li>
+    </ol>
+
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">8. Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is the minimum income to pay tax in Singapore?</h3>
+        <p>Annual chargeable income up to S$20,000 is taxed at 0%. Tax becomes payable only when chargeable income exceeds S$20,000.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What are the Singapore personal income tax brackets for YA 2026?</h3>
+        <p>Resident progressive tax rates range from 0% for the first S$20,000 up to 24% for chargeable income exceeding S$1,000,000.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">How is net salary after tax calculated in Singapore?</h3>
+        <p>Gross income minus allowable expenses and personal tax reliefs gives Chargeable Income. Progressive tax rates apply, minus any statutory tax rebate.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is the highest tax bracket in Singapore?</h3>
+        <p>The top marginal tax rate is 24%, which applies to chargeable income in excess of S$1,000,000.</p>
+      </div>
+    </div>
+
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Explore More Singapore Tax Resources</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/knowledge/singapore-income-tax" class="text-link hover:underline font-medium">Singapore Tax Knowledge Hub</a>
+        <a href="/countries/singapore/income-tax/income-tax-calculator" class="text-link hover:underline font-medium">Personal Tax Calculator</a>
+        <a href="/blogs/singapore-tax-reliefs-deductions-rebates-guide" class="text-link hover:underline font-medium">Tax Reliefs & Deductions Guide</a>
+        <a href="/blogs/singapore-corporate-tax-guide-2026" class="text-link hover:underline font-medium">Singapore Corporate Tax Guide</a>
+        <a href="/blogs/singapore-how-to-pay-file-income-tax-iras" class="text-link hover:underline font-medium">IRAS e-Filing & myTax Guide</a>
+        <a href="/countries/singapore" class="text-link hover:underline font-medium">Finsiva Singapore Portal</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>

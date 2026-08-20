@@ -1,0 +1,140 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "How to File & Pay Income Tax in Singapore 2026: myTax Portal & GIRO";
+const description = "Step-by-step guide to filing personal income tax with IRAS in Singapore. Learn e-filing deadlines, myTax Portal login, AIS Form IR8A/IR8E, GIRO installment payments, and credit card tax options.";
+const image = "https://images.unsplash.com/photo-1554224154-22dec7ec8818?w=1200&q=80";
+const author = "Tan Wei Ming, Accredited Tax Practitioner";
+const authorBio = "Accredited Tax Practitioner specializing in IRAS electronic tax filing, myTax Portal navigation, GIRO payment plans, and tax clearance procedures.";
+const canonical = "https://finsiva.com/blogs/singapore-how-to-pay-file-income-tax-iras";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is the deadline for filing income tax in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The e-filing deadline via myTax Portal is April 18. Paper tax returns must be submitted by April 15."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Can I pay Singapore income tax using a credit card?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Taxpayers can pay IRAS income tax using credit cards via authorized tax payment facilities (such as CardUp or Citi PayAll) or via AXS online platforms."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is GIRO 12-month interest-free tax payment in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "IRAS provides an interest-free GIRO installment plan allowing taxpayers to settle their annual tax bill across 12 monthly automatic bank deductions."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="16 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <p class="text-lg leading-relaxed">
+      Filing your personal income tax in Singapore is fast and convenient through the official <a href="https://mytax.iras.gov.sg" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">IRAS myTax Portal</a>. Whether you receive a No-Filing Service (NFS) notification or need to submit a full tax return, understanding the filing steps, deadlines, and payment channels ensures hassle-free compliance.
+    </p>
+
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Table of Contents</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#important-deadlines" class="text-link hover:underline">1. Key IRAS Tax Deadlines</a></li>
+        <li><a href="#nfs-vs-efiling" class="text-link hover:underline">2. No-Filing Service (NFS) vs Manual Filing</a></li>
+        <li><a href="#step-by-step-efiling" class="text-link hover:underline">3. Step-by-Step e-Filing via myTax Portal</a></li>
+        <li><a href="#notice-of-assessment" class="text-link hover:underline">4. Reviewing Your Notice of Assessment (NOA)</a></li>
+        <li><a href="#payment-methods" class="text-link hover:underline">5. GIRO, PayNow & Credit Card Payment Options</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">6. Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <h2 id="important-deadlines" class="text-2xl font-semibold text-ink dark:text-on-primary">1. Key IRAS Tax Deadlines</h2>
+    <div class="overflow-x-auto my-4">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Date</th>
+            <th class="border p-3">Filing Event / Requirement</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr><td class="p-3 font-medium">March 1</td><td class="p-3">myTax Portal opens for e-filing for Year of Assessment.</td></tr>
+          <tr><td class="p-3 font-medium text-rose-600">April 15</td><td class="p-3 font-semibold">Paper filing deadline.</td></tr>
+          <tr><td class="p-3 font-medium text-rose-600">April 18</td><td class="p-3 font-semibold text-emerald-600">Online e-filing deadline via myTax Portal.</td></tr>
+          <tr><td class="p-3 font-medium">May to September</td><td class="p-3">IRAS issues Notice of Assessment (NOA) tax bills.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="nfs-vs-efiling" class="text-2xl font-semibold text-ink dark:text-on-primary">2. No-Filing Service (NFS) vs Manual Filing</h2>
+    <p>If your employer participates in the <strong>Auto-Inclusion Scheme (AIS)</strong>, your employment income details are transmitted directly to IRAS. Taxpayers who receive an SMS or letter confirming <strong>No-Filing Service (NFS)</strong> status do not need to file a return, unless they need to update personal reliefs or non-employment income.</p>
+
+    <h2 id="step-by-step-efiling" class="text-2xl font-semibold text-ink dark:text-on-primary">3. Step-by-Step e-Filing via myTax Portal</h2>
+    <ol class="list-decimal pl-6 space-y-2">
+      <li><strong>Log in to myTax Portal:</strong> Use Singpass authentication at <a href="https://mytax.iras.gov.sg" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">mytax.iras.gov.sg</a>.</li>
+      <li><strong>Verify Pre-filled Employment Income:</strong> Review salary, bonuses, and director fees reported under AIS (Form IR8A).</li>
+      <li><strong>Declare Additional Income:</strong> Input net rental income, trade income, or royalties earned during the year.</li>
+      <li><strong>Claim Tax Reliefs:</strong> Ensure all eligible personal reliefs (Earned Income, SRS, Parent/Child relief) are claimed.</li>
+      <li><strong>Submit & Retain Acknowledgment:</strong> Save your digital filing receipt.</li>
+    </ol>
+
+    <h2 id="notice-of-assessment" class="text-2xl font-semibold text-ink dark:text-on-primary">4. Reviewing Your Notice of Assessment (NOA)</h2>
+    <p>IRAS issues your tax bill (Notice of Assessment) between May and September. Taxpayers have 30 days from the NOA date to pay tax or file an objection if there are errors.</p>
+
+    <h2 id="payment-methods" class="text-2xl font-semibold text-ink dark:text-on-primary">5. GIRO, PayNow & Credit Card Payment Options</h2>
+    <p>IRAS provides flexible payment channels:</p>
+    <ul>
+      <li><strong>12-Month GIRO Installments:</strong> Interest-free monthly automatic bank deductions.</li>
+      <li><strong>PayNow QR / Internet Banking:</strong> Instant payment via Singpass or bank mobile apps.</li>
+      <li><strong>Credit Card Tax Payment:</strong> Pay tax via credit card to earn rewards points through specialized payment portals.</li>
+    </ul>
+
+    <p>Estimate your upcoming tax bill with our <a href="/countries/singapore/income-tax/income-tax-calculator" class="text-link hover:underline">Singapore Personal Tax Calculator</a>.</p>
+
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">6. Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is the deadline for filing income tax in Singapore?</h3>
+        <p>The e-filing deadline via myTax Portal is April 18. Paper tax returns must be submitted by April 15.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Can I pay Singapore income tax using a credit card?</h3>
+        <p>Yes. You can pay tax using credit cards via AXS or authorized payment facilities like CardUp.</p>
+      </div>
+    </div>
+
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Related Singapore Tax Links</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/knowledge/singapore-income-tax" class="text-link hover:underline font-medium">Singapore Tax Knowledge Hub</a>
+        <a href="/blogs/singapore-income-tax-rates-brackets-2026" class="text-link hover:underline font-medium">Personal Tax Brackets 2026</a>
+        <a href="/blogs/singapore-tax-reliefs-deductions-rebates-guide" class="text-link hover:underline font-medium">Tax Reliefs & Deductions Guide</a>
+        <a href="/countries/singapore/income-tax/income-tax-calculator" class="text-link hover:underline font-medium">Singapore Tax Calculator</a>
+        <a href="/blogs/singapore-self-employed-freelancer-tax-guide" class="text-link hover:underline font-medium">Self-Employed Tax Guide</a>
+        <a href="/countries/singapore" class="text-link hover:underline font-medium">Finsiva Singapore Portal</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>

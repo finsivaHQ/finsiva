@@ -1,0 +1,159 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Singapore Tax Reliefs, Deductions & Rebates Guide 2026";
+const description = "Complete guide to reducing personal income tax legally in Singapore. Learn Earned Income Relief, CPF top-ups, SRS deductions, Parent/Spouse relief, and the S$80,000 overall relief cap.";
+const image = "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&q=80";
+const author = "Tan Wei Ming, Accredited Tax Practitioner";
+const authorBio = "Accredited Tax Practitioner (Singapore) specializing in personal wealth structuring, SRS retirement planning, and IRAS tax deduction optimization.";
+const canonical = "https://finsiva.com/blogs/singapore-tax-reliefs-deductions-rebates-guide";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is the maximum tax relief cap in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The total aggregate personal income tax relief an individual can claim is capped at S$80,000 per Year of Assessment."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How does Supplementary Retirement Scheme (SRS) reduce tax in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Contributions to an SRS account provide a 100% dollar-for-dollar tax deduction, up to S$15,300 per year for Singapore Citizens/PRs and S$35,700 for foreign Employment Pass holders."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Can foreign Employment Pass holders claim CPF relief?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. Foreigners do not contribute to mandatory CPF and cannot claim CPF tax relief. However, foreigners can claim SRS contribution relief up to S$35,700 annually."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="20 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <p class="text-lg leading-relaxed">
+      Lowering your personal income tax liability in Singapore is straightforward when you take full advantage of statutory personal tax reliefs, deductions, and government tax rebates administered by the <a href="https://www.iras.gov.sg" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">Inland Revenue Authority of Singapore (IRAS)</a>.
+    </p>
+
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Table of Contents</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#overall-cap" class="text-link hover:underline">1. The Overall S$80,000 Personal Relief Cap</a></li>
+        <li><a href="#earned-income" class="text-link hover:underline">2. Earned Income Relief</a></li>
+        <li><a href="#srs-scheme" class="text-link hover:underline">3. Supplementary Retirement Scheme (SRS) Tax Relief</a></li>
+        <li><a href="#cpf-topups" class="text-link hover:underline">4. CPF Cash Top-Up & Relief Schemes</a></li>
+        <li><a href="#family-reliefs" class="text-link hover:underline">5. Parent, Spouse & Child Reliefs</a></li>
+        <li><a href="#education-nsman" class="text-link hover:underline">6. Course Fees & NSman Reliefs</a></li>
+        <li><a href="#tax-rebates" class="text-link hover:underline">7. Annual Government Personal Tax Rebates</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">8. Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <h2 id="overall-cap" class="text-2xl font-semibold text-ink dark:text-on-primary">1. The Overall S$80,000 Personal Relief Cap</h2>
+    <p>IRAS enforces an aggregate personal income tax relief cap of <strong>S$80,000</strong> per Year of Assessment (YA). Regardless of how many qualifying reliefs you are eligible for, the combined deduction claimed across all categories cannot exceed S$80,000.</p>
+
+    <h2 id="earned-income" class="text-2xl font-semibold text-ink dark:text-on-primary">2. Earned Income Relief</h2>
+    <p>Granted automatically to individuals earning employment or trade income in Singapore:</p>
+    <ul>
+      <li><strong>Below 55 Years:</strong> S$1,000</li>
+      <li><strong>55 to 59 Years:</strong> S$6,000</li>
+      <li><strong>60 Years and Above:</strong> S$8,000</li>
+    </ul>
+
+    <h2 id="srs-scheme" class="text-2xl font-semibold text-ink dark:text-on-primary">3. Supplementary Retirement Scheme (SRS) Tax Relief</h2>
+    <p>The Supplementary Retirement Scheme (SRS) is one of the most effective tax-saving vehicles in Singapore. Voluntary cash contributions to your SRS account provide a 100% dollar-for-dollar tax deduction:</p>
+
+    <div class="overflow-x-auto my-4">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Taxpayer Classification</th>
+            <th class="border p-3">Annual SRS Contribution Cap</th>
+            <th class="border p-3">Maximum Tax Savings @ 24% Marginal Rate</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 font-medium">Singapore Citizens & Permanent Residents</td>
+            <td class="p-3 font-bold text-emerald-600">S$15,300</td>
+            <td class="p-3 font-semibold">S$3,672</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Foreign Employment Pass (EP) / S Pass Holders</td>
+            <td class="p-3 font-bold text-emerald-600">S$35,700</td>
+            <td class="p-3 font-semibold">S$8,568</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="cpf-topups" class="text-2xl font-semibold text-ink dark:text-on-primary">4. CPF Cash Top-Up & Relief Schemes</h2>
+    <p>Singapore Citizens and PRs can claim tax relief for cash top-ups made under the CPF Retirement Sum Topping-Up (RSTU) scheme:</p>
+    <ul>
+      <li>Up to <strong>S$8,000</strong> per year for cash top-ups to your own Special Account (SA) or Retirement Account (RA).</li>
+      <li>An additional <strong>S$8,000</strong> per year for cash top-ups to loved ones (parents, parents-in-law, grandparents, spouse, or siblings).</li>
+    </ul>
+
+    <h2 id="family-reliefs" class="text-2xl font-semibold text-ink dark:text-on-primary">5. Parent, Spouse & Child Reliefs</h2>
+    <ul class="list-disc pl-6 space-y-2">
+      <li><strong>Parent Relief:</strong> Claim S$9,000 (if parent resides with you) or S$5,500 (if parent resides separately) per dependent parent earning under S$4,000 annually.</li>
+      <li><strong>Qualifying Child Relief (QCR):</strong> Claim S$4,000 per qualifying child.</li>
+      <li><strong>Working Mother's Child Relief (WMCR):</strong> Percentage of mother's earned income claimed per child (15% for 1st child, 20% for 2nd child, 25% for 3rd and subsequent children).</li>
+    </ul>
+
+    <h2 id="education-nsman" class="text-2xl font-semibold text-ink dark:text-on-primary">6. Course Fees & NSman Reliefs</h2>
+    <p>Taxpayers can claim up to <strong>S$5,600</strong> per year under Course Fees Relief for tertiary education, seminars, or professional certifications relevant to their employment or business. Active Operationally Ready National Servicemen (NSmen) receive automated reliefs ranging from S$750 to S$5,000.</p>
+
+    <h2 id="tax-rebates" class="text-2xl font-semibold text-ink dark:text-on-primary">7. Annual Government Personal Tax Rebates</h2>
+    <p>Annual personal income tax rebates declared in the Singapore Budget (e.g., 50% tax rebate capped at S$200) are automatically deducted by IRAS from gross tax payable on your Notice of Assessment (NOA).</p>
+
+    <p>Calculate your total tax savings using our <a href="/countries/singapore/income-tax/income-tax-calculator" class="text-link hover:underline">Singapore Income Tax Calculator</a>.</p>
+
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">8. Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is the maximum tax relief cap in Singapore?</h3>
+        <p>The total personal income tax relief an individual taxpayer can claim is capped at S$80,000 per Year of Assessment.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">How does Supplementary Retirement Scheme (SRS) reduce tax?</h3>
+        <p>SRS contributions offer a 100% dollar-for-dollar tax deduction up to S$15,300 for Citizens/PRs and S$35,700 for foreigners.</p>
+      </div>
+    </div>
+
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Related Singapore Tax Links</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/knowledge/singapore-income-tax" class="text-link hover:underline font-medium">Singapore Tax Knowledge Hub</a>
+        <a href="/blogs/singapore-income-tax-rates-brackets-2026" class="text-link hover:underline font-medium">Personal Tax Brackets 2026</a>
+        <a href="/blogs/singapore-tax-for-foreigners-expats-guide" class="text-link hover:underline font-medium">Expat & Foreigner Tax Guide</a>
+        <a href="/countries/singapore/income-tax/income-tax-calculator" class="text-link hover:underline font-medium">Singapore Tax Calculator</a>
+        <a href="/blogs/singapore-how-to-pay-file-income-tax-iras" class="text-link hover:underline font-medium">IRAS Filing & myTax Portal</a>
+        <a href="/countries/singapore" class="text-link hover:underline font-medium">Finsiva Singapore Portal</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>

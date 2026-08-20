@@ -1,0 +1,129 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Singapore Capital Gains, Dividends & Foreign Income Tax Guide 2026";
+const description = "Complete guide to Singapore 0% capital gains tax, single-tier dividend tax exemption, foreign-sourced income remitted to Singapore (Section 13(6)), and interest income taxation.";
+const image = "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1200&q=80";
+const author = "Rachel Lim, Senior International Tax Consultant";
+const authorBio = "Senior International Tax Specialist advising high-net-worth investors, multinational corporations, and holding structures on Singapore territorial tax rules.";
+const canonical = "https://finsiva.com/blogs/singapore-foreign-income-dividends-capital-gains-tax";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Is there capital gains tax in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. Singapore does not levy capital gains tax on profits derived from the sale of stocks, cryptocurrencies, bonds, or real estate (provided the owner is not deemed to be trading as a business)."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Are foreign dividends taxable when received in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Foreign-sourced dividends remitted into Singapore by resident individuals are generally exempt from income tax. For corporate entities, Section 13(6) provides tax exemption if tax rate and headline conditions are met."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Is fixed deposit interest taxable in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Interest derived by individuals from deposits with approved banks and finance companies in Singapore is exempt from personal income tax."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="18 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <p class="text-lg leading-relaxed">
+      Singapore's <strong>territorial tax system</strong> makes it one of the world's most attractive destinations for investors, asset managers, and global holding companies. Key features include <strong>0% capital gains tax</strong>, a single-tier corporate dividend exemption framework, and broad foreign-sourced income exemptions.
+    </p>
+
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Table of Contents</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#capital-gains" class="text-link hover:underline">1. Zero Capital Gains Tax in Singapore</a></li>
+        <li><a href="#dividend-tax" class="text-link hover:underline">2. Dividend Income Tax Rules (1-Tier System)</a></li>
+        <li><a href="#foreign-income" class="text-link hover:underline">3. Foreign-Sourced Income & Section 13(6) Exemptions</a></li>
+        <li><a href="#interest-investment" class="text-link hover:underline">4. Interest & Investment Income Taxation</a></li>
+        <li><a href="#holding-companies" class="text-link hover:underline">5. Singapore Holding Company Advantages</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">6. Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <h2 id="capital-gains" class="text-2xl font-semibold text-ink dark:text-on-primary">1. Zero Capital Gains Tax in Singapore</h2>
+    <p>Singapore does not impose capital gains tax. Gains derived from the disposal of capital assets—including listed shares, private equity investments, real estate properties, mutual funds, and digital currencies (cryptocurrency)—are completely non-taxable.</p>
+
+    <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+      <h3 class="font-semibold text-ink dark:text-on-primary">Capital Gain vs Trade Profit</h3>
+      <p class="mt-2 text-sm">IRAS examines badging factors (frequency of transactions, holding period, motive, and financing) to distinguish capital gains from trading profits. If an individual or company regularly buys and sells assets for short-term speculative gain, IRAS may classify profits as taxable trade income.</p>
+    </div>
+
+    <h2 id="dividend-tax" class="text-2xl font-semibold text-ink dark:text-on-primary">2. Dividend Income Tax Rules (1-Tier System)</h2>
+    <p>Since 2008, Singapore has operated a <strong>single-tier corporate tax framework</strong>. Under this system:</p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li>Corporate tax paid by a company on its profits is the final tax.</li>
+      <li>Dividends paid by Singapore-resident companies are <strong>100% tax-exempt</strong> in the hands of shareholders.</li>
+      <li>There is zero withholding tax on dividend distributions paid to foreign or resident shareholders.</li>
+    </ul>
+
+    <h2 id="foreign-income" class="text-2xl font-semibold text-ink dark:text-on-primary">3. Foreign-Sourced Income & Section 13(6) Exemptions</h2>
+    <p>Foreign-sourced income (foreign dividends, foreign branch profits, foreign service income) remitted into Singapore by <strong>resident individuals</strong> is exempt from personal income tax under Section 13(7A) of the Income Tax Act.</p>
+
+    <p>For <strong>corporate entities</strong>, foreign-sourced dividends, branch profits, and service income remitted into Singapore are exempt under Section 13(6) if three qualifying conditions are satisfied:</p>
+    <ol class="list-decimal pl-6 space-y-2">
+      <li><strong>Headline Tax Rate Condition:</strong> The highest corporate tax rate in the foreign country from which income is received is at least 15%.</li>
+      <li><strong>Subject to Tax Condition:</strong> The foreign income was subjected to tax in the foreign jurisdiction.</li>
+      <li><strong>Beneficial Exemption Condition:</strong> IRAS is satisfied that the exemption is beneficial to the Singapore-resident company.</li>
+    </ol>
+
+    <h2 id="interest-investment" class="text-2xl font-semibold text-ink dark:text-on-primary">4. Interest & Investment Income Taxation</h2>
+    <p>Interest derived by individuals from bank deposits in Singapore (e.g., fixed deposits, savings accounts) with licensed financial institutions is exempt from personal income tax. Corporate entities, however, treat bank interest as taxable income unless specific statutory incentive exemptions apply.</p>
+
+    <h2 id="holding-companies" class="text-2xl font-semibold text-ink dark:text-on-primary">5. Singapore Holding Company Advantages</h2>
+    <p>With 0% capital gains tax, single-tier tax-free dividend distribution, over 90 double tax treaties, and no withholding tax on dividends, Singapore is widely regarded as one of the best holding company jurisdictions worldwide. Read our <a href="/blogs/singapore-corporate-tax-guide-2026" class="text-link hover:underline">Singapore Corporate Tax Guide 2026</a> to learn more about corporate structuring.</p>
+
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">6. Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Is there capital gains tax in Singapore?</h3>
+        <p>No. Singapore does not levy capital gains tax on investments, stock sales, or real estate flips.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Are foreign dividends taxable when received in Singapore?</h3>
+        <p>Foreign dividends received by resident individuals are exempt. Corporations qualify for tax exemption under Section 13(6) conditions.</p>
+      </div>
+    </div>
+
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Related Singapore Tax Resources</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/knowledge/singapore-income-tax" class="text-link hover:underline font-medium">Singapore Tax Knowledge Hub</a>
+        <a href="/blogs/singapore-corporate-tax-guide-2026" class="text-link hover:underline font-medium">Singapore Corporate Tax Guide</a>
+        <a href="/blogs/singapore-tax-for-foreigners-expats-guide" class="text-link hover:underline font-medium">Expat & Foreigner Tax Guide</a>
+        <a href="/countries/singapore/income-tax/income-tax-calculator" class="text-link hover:underline font-medium">Singapore Tax Calculator</a>
+        <a href="/blogs/singapore-income-tax-rates-brackets-2026" class="text-link hover:underline font-medium">Personal Tax Brackets 2026</a>
+        <a href="/countries/singapore" class="text-link hover:underline font-medium">Finsiva Singapore Portal</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>

@@ -1,0 +1,193 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Singapore Income Tax for Foreigners & Expats Guide 2026";
+const description = "Essential guide to Singapore income tax for expats, Employment Pass (EP), S Pass holders, non-residents, and Malaysians working in Singapore. Covers 183-day rule, 15% non-resident tax, and Form IR21.";
+const image = "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1200&q=80";
+const author = "Rachel Lim, Senior International Tax Consultant";
+const authorBio = "Senior Tax Consultant specializing in Singapore expat tax planning, cross-border employee mobility, Form IR21 tax clearance, and DTA tax optimization.";
+const canonical = "https://finsiva.com/blogs/singapore-tax-for-foreigners-expats-guide";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How much tax do foreigners pay in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Foreigners who are tax residents (183+ days) pay progressive rates from 0% to 24% with personal reliefs. Non-residents (61-182 days) pay a flat 15% on employment income or progressive resident rates without reliefs, whichever is higher."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Do Malaysians working in Singapore pay income tax?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Malaysians who earn employment income in Singapore are subject to Singapore income tax. If they qualify as tax residents (183+ days), they are taxed at progressive resident rates."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is Form IR21 tax clearance for foreigners?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Form IR21 is a mandatory notification submitted by employers to IRAS when a foreign employee terminates employment or prepares to leave Singapore. The employer withholds payments until tax clearance is issued."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is the 60-day rule for foreigners working in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Foreigners who exercise employment in Singapore for 60 days or less in a calendar year are exempt from tax on their employment income (excluding directors and entertainers)."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="20 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <p class="text-lg leading-relaxed">
+      Singapore is a top international hub for foreign professionals, digital nomads, and expatriates. However, navigating <strong>Singapore income tax for foreigners, expats, Employment Pass (EP), S Pass, and Work Permit holders</strong> requires understanding specific IRAS tax residency rules, non-resident tax rates, tax clearance procedures, and double taxation agreements.
+    </p>
+
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Table of Contents</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#residency-rules" class="text-link hover:underline">1. Determining Tax Residency (183-Day Rule)</a></li>
+        <li><a href="#resident-vs-nonresident-rates" class="text-link hover:underline">2. Resident vs Non-Resident Tax Rates</a></li>
+        <li><a href="#work-pass-holders" class="text-link hover:underline">3. Tax Rules for EP, S Pass & Work Permit Holders</a></li>
+        <li><a href="#malaysians-in-sg" class="text-link hover:underline">4. Income Tax for Malaysians Working in Singapore</a></li>
+        <li><a href="#tax-clearance-ir21" class="text-link hover:underline">5. Form IR21 Tax Clearance Process</a></li>
+        <li><a href="#dta-treaties" class="text-link hover:underline">6. Double Taxation Agreements (DTAs)</a></li>
+        <li><a href="#reliefs-for-expats" class="text-link hover:underline">7. Tax Reliefs Available to Foreigners</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">8. Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <h2 id="residency-rules" class="text-2xl font-semibold text-ink dark:text-on-primary">1. Determining Tax Residency (183-Day Rule)</h2>
+    <p>Under regulations set by the <a href="https://www.iras.gov.sg" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">Inland Revenue Authority of Singapore (IRAS)</a>, your tax liability depends on whether you are classified as a <strong>tax resident</strong> or a <strong>non-resident</strong>.</p>
+
+    <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+      <h3 class="font-semibold text-ink dark:text-on-primary">Quantitative 183-Day Rule</h3>
+      <p class="mt-2">A foreign national is considered a Singapore tax resident for a Year of Assessment (YA) if they physically stay or work in Singapore for <strong>183 days or more</strong> within a calendar year.</p>
+      <p class="mt-2 text-sm">Physical presence includes weekends, public holidays, annual leave spent in Singapore, and short overseas business trips related to Singapore employment.</p>
+    </div>
+
+    <p>For more technical details on continuous stay spanning multiple years, read our <a href="/knowledge/singapore-tax-residency" class="text-link hover:underline">Singapore Tax Residency Guide</a>.</p>
+
+    <h2 id="resident-vs-nonresident-rates" class="text-2xl font-semibold text-ink dark:text-on-primary">2. Resident vs Non-Resident Tax Rates</h2>
+    <p>The tax treatment for foreign workers varies dramatically based on days of employment in Singapore:</p>
+
+    <div class="overflow-x-auto">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Duration of Stay / Work</th>
+            <th class="border p-3">Tax Residency Status</th>
+            <th class="border p-3">Tax Treatment & Rates</th>
+            <th class="border p-3">Relief Eligibility</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 font-medium">183 Days or More</td>
+            <td class="p-3">Tax Resident</td>
+            <td class="p-3">Progressive resident rates (0% to 24%)</td>
+            <td class="p-3 text-emerald-600 font-medium">Eligible for personal reliefs & SRS</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">61 to 182 Days</td>
+            <td class="p-3">Non-Resident</td>
+            <td class="p-3">Flat 15% on employment income (or resident rates if higher)</td>
+            <td class="p-3 text-rose-600 font-medium">No personal reliefs</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">60 Days or Less</td>
+            <td class="p-3">Non-Resident</td>
+            <td class="p-3 font-semibold text-emerald-600">Exempt from employment income tax</td>
+            <td class="p-3 text-rose-600 font-medium">No personal reliefs</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Check your personal tax rates using our interactive <a href="/countries/singapore/income-tax/income-tax-calculator" class="text-link hover:underline">Singapore Income Tax Calculator</a>.</p>
+
+    <h2 id="work-pass-holders" class="text-2xl font-semibold text-ink dark:text-on-primary">3. Tax Rules for EP, S Pass & Work Permit Holders</h2>
+    <p>Foreign professionals holding an Employment Pass (EP), S Pass, or Work Permit are subject to income tax on all remuneration earned from Singapore employment, including salary, performance bonuses, director fees, housing allowances, and stock options.</p>
+
+    <h2 id="malaysians-in-sg" class="text-2xl font-semibold text-ink dark:text-on-primary">4. Income Tax for Malaysians Working in Singapore</h2>
+    <p>Thousands of Malaysian citizens commute daily or reside in Singapore for work. Under the Singapore-Malaysia Double Taxation Agreement (DTA):</p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li>Income earned for work physically performed in Singapore is taxable in Singapore.</li>
+      <li>Malaysians who spend 183+ days in Singapore are taxed as residents at progressive rates (0%–24%).</li>
+      <li>Employment income taxed in Singapore is generally exempt from Malaysian income tax upon remittance into Malaysia under Malaysian tax laws.</li>
+    </ul>
+
+    <h2 id="tax-clearance-ir21" class="text-2xl font-semibold text-ink dark:text-on-primary">5. Form IR21 Tax Clearance Process</h2>
+    <p>When a non-Singapore citizen employee prepares to leave Singapore, resigns, or transfers overseas, employers must initiate <strong>Form IR21 Tax Clearance</strong>:</p>
+    <ol class="list-decimal pl-6 space-y-2">
+      <li><strong>Employer Notification:</strong> The employer files Form IR21 with IRAS at least 1 month prior to the employee's last day.</li>
+      <li><strong>Withholding Monies:</strong> The employer must withhold all payments (salary, bonus, severance) due to the employee.</li>
+      <li><strong>IRAS Assessment:</strong> IRAS computes final tax liability across all unassessed income years.</li>
+      <li><strong>Settlement & Release:</strong> Once the tax bill is settled, IRAS issues a clearance letter and the employer releases remaining funds to the employee.</li>
+    </ol>
+
+    <h2 id="dta-treaties" class="text-2xl font-semibold text-ink dark:text-on-primary">6. Double Taxation Agreements (DTAs)</h2>
+    <p>Singapore has over 90 comprehensive Double Taxation Avoidance Agreements (DTAs) worldwide. DTAs protect foreign workers from being taxed twice on the same income and often provide short-term tax exemptions for cross-border assignments.</p>
+
+    <h2 id="reliefs-for-expats" class="text-2xl font-semibold text-ink dark:text-on-primary">7. Tax Reliefs Available to Foreigners</h2>
+    <p>Although foreign pass holders cannot contribute to CPF (and thus do not get CPF tax relief), resident foreigners can reduce taxable income through:</p>
+    <ul>
+      <li><strong>Earned Income Relief:</strong> Up to S$1,000 automatically granted.</li>
+      <li><strong>Supplementary Retirement Scheme (SRS):</strong> Foreigners can contribute up to <strong>S$35,700</strong> per year, receiving a dollar-for-dollar tax deduction.</li>
+      <li><strong>Parent & Child Relief:</strong> Available if qualifying dependents meet IRAS dependency conditions.</li>
+    </ul>
+
+    <p>Learn how to optimize your reliefs in our <a href="/blogs/singapore-tax-reliefs-deductions-rebates-guide" class="text-link hover:underline">Singapore Tax Reliefs & Deductions Guide</a>.</p>
+
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">8. Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">How much tax do foreigners pay in Singapore?</h3>
+        <p>Foreign tax residents pay progressive rates from 0% to 24%. Non-residents pay a flat 15% on employment income or resident rates without reliefs (whichever is higher).</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Do Malaysians working in Singapore pay income tax?</h3>
+        <p>Yes. Employment income for work performed in Singapore is taxable in Singapore. If staying 183+ days, progressive resident rates apply.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is Form IR21 tax clearance for foreigners?</h3>
+        <p>Form IR21 is a mandatory IRAS tax clearance notice submitted by employers before a foreign worker leaves employment or departs Singapore.</p>
+      </div>
+    </div>
+
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Related Expat & Singapore Tax Links</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/knowledge/singapore-tax-residency" class="text-link hover:underline font-medium">Singapore Tax Residency Guide</a>
+        <a href="/blogs/singapore-income-tax-rates-brackets-2026" class="text-link hover:underline font-medium">Singapore Tax Rates & Brackets 2026</a>
+        <a href="/countries/singapore/income-tax/income-tax-calculator" class="text-link hover:underline font-medium">Personal Tax Calculator</a>
+        <a href="/knowledge/singapore-income-tax" class="text-link hover:underline font-medium">Singapore Income Tax Knowledge Hub</a>
+        <a href="/blogs/singapore-foreign-income-dividends-capital-gains-tax" class="text-link hover:underline font-medium">Foreign Income & Capital Gains Tax</a>
+        <a href="/countries/singapore" class="text-link hover:underline font-medium">Finsiva Singapore Portal</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>
