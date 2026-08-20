@@ -173,6 +173,7 @@ const mergedContent = {
 <CountryLayout
   title={`${country.name} ${calculator.name} ${country.taxYear}`}
   description={`Calculate your ${country.name} ${calculator.name.toLowerCase()} for the ${country.taxYear} tax year. ${calculator.description}`}
+  canonical={`https://finsiva.com/countries/${country.slug}/${category.slug}/${calculator.slug}`}
   breadcrumbs={[
     { label: "Countries", href: "/countries" },
     { label: country.name, href: `/countries/${country.slug}` },
@@ -1792,18 +1793,20 @@ const mergedContent = {
         />
       </div>
 
-      <script type="application/ld+json" set:html={JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: Object.entries(mergedContent.faqSchema).map(([name, text]) => ({
-          "@type": "Question",
-          name,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text
-          }
-        }))
-      })}></script>
+      {mergedContent.faq && mergedContent.faq.length > 0 && (
+        <script type="application/ld+json" set:html={JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: mergedContent.faq.map(item => ({
+            "@type": "Question",
+            name: item.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: item.answer
+            }
+          }))
+        })}></script>
+      )}
 
       <script type="application/ld+json" set:html={JSON.stringify({
         "@context": "https://schema.org",

@@ -42,6 +42,7 @@ if (!country || !category || !faq) {
 <CountryLayout
   title={`${faq.question} | ${country.name}`}
   description={faq.answer}
+  canonical={`https://finsiva.com/countries/${country.slug}/${category.slug}/faqs/${Astro.params.faq}`}
   breadcrumbs={[
     { label: "Countries", href: "/countries" },
     { label: country.name, href: `/countries/${country.slug}` },

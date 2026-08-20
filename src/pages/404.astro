@@ -5,9 +5,10 @@ import Layout from "../layouts/Layout.astro";
 <Layout 
   title="404 - Page Not Found" 
   description="The page you are looking for could not be found."
-  canonical="https://finsiva.com/"
+  canonical="https://finsiva.com/404"
+  robots="noindex, follow"
 >
-  <meta name="robots" content="noindex, nofollow" />
+  <meta name="robots" content="noindex, follow" slot="head" />
   <script is:inline>
     (function() {
       if (typeof window !== 'undefined') {

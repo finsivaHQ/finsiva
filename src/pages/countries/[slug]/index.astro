@@ -41,20 +41,23 @@ const popularCalcs = country.popularCalculators || [];
 
 const schema = {
   "@context": "https://schema.org",
-  "@type": "Country",
-  name: country.name,
+  "@type": "WebPage",
+  name: `${country.name} Tax Guide`,
   description: country.overview,
   url: `${baseUrl}/countries/${country.slug}`,
-  currency: country.currency,
-  dateModified: country.lastUpdated
+  about: {
+    "@type": "Country",
+    name: country.name,
+    currency: country.currency
+  }
 };
 
-const faqSchema = {
+const faqSchema = (country.countryFAQs || []).length > 0 ? {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   name: `${country.name} Tax FAQs`,
   url: `${baseUrl}/countries/${country.slug}`,
-  mainEntity: (country.countryFAQs || []).map(faq => ({
+  mainEntity: country.countryFAQs.map(faq => ({
     "@type": "Question",
     name: faq.question,
     acceptedAnswer: {
@@ -62,16 +65,7 @@ const faqSchema = {
       text: faq.answer
     }
   }))
-};
-
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Countries", item: `${baseUrl}/countries` },
-    { "@type": "ListItem", position: 2, name: country.name, item: `${baseUrl}/countries/${country.slug}` }
-  ]
-};
+} : undefined;
 
 const govOrgSchema = {
   "@context": "https://schema.org",
@@ -80,34 +74,10 @@ const govOrgSchema = {
   url: country.taxAuthorityUrl,
   description: `Official tax authority for ${country.name}`
 };
-
-const webPageSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: `${country.name} Tax Guide`,
-  description: country.overview,
-  url: `${baseUrl}/countries/${country.slug}`,
-  breadcrumb: {
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
-      { "@type": "ListItem", position: 2, name: "Countries", item: `${baseUrl}/countries` },
-      { "@type": "ListItem", position: 3, name: country.name, item: `${baseUrl}/countries/${country.slug}` }
-    ]
-  },
-  about: {
-    "@type": "Country",
-    name: country.name,
-    taxAuthority: {
-      "@type": "GovernmentOrganization",
-      name: country.officialTaxAuthority
-    }
-  }
-};
 ---
 
 <CountryLayout
-  title={`${country.name} Tax Guide | ${country.taxYear} Tax Brackets, Rates & Calculators`}
+  title={`${country.name} Tax Guide (${country.taxYear}) | Brackets & Calculators`}
   description={`${country.name} tax guide: ${country.taxYear} tax brackets, rates, deductions, credits, filing deadlines, and official government resources. Calculate your tax with our free ${country.name} tax calculators.`}
   keywords={`${country.name} tax, ${country.name} tax calculator, ${country.name} tax brackets, ${country.name} income tax, ${country.name} tax rates, ${country.name} tax deductions, ${country.name} tax credits, ${country.name} filing deadline, ${country.name} tax authority, ${country.name} tax guide`}
   breadcrumbs={[
@@ -121,10 +91,8 @@ const webPageSchema = {
   robots="index,follow"
 >
 
-<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
-<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+{faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
 <script type="application/ld+json" set:html={JSON.stringify(govOrgSchema)} />
-<script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />
 
 <!-- SECTION 1: HERO -->
 <CountryHero
@@ -160,6 +128,7 @@ const webPageSchema = {
     topRate={country.slug === 'hong-kong' ? '17% / 15%' : country.slug === 'singapore' ? '24%' : country.slug === 'united-states' ? '37%' : country.slug === 'united-kingdom' ? '45%' : country.slug === 'india' ? '30%' : country.slug === 'pakistan' ? '35%' : 'Standard'}
     basicAllowance={country.slug === 'hong-kong' ? 'HK$ 132,000' : country.slug === 'singapore' ? 'S$ 20,000' : country.slug === 'united-states' ? '$ 14,600' : country.slug === 'united-kingdom' ? '£ 12,570' : country.slug === 'india' ? '₹ 75,000' : country.slug === 'pakistan' ? 'Rs 600,000' : 'Standard'}
     capitalGains={country.taxSystemOverview?.capitalGainsTax || '0% (Exempt)'}
+    taxYear={country.taxYear}
   />
   <SalaryTaxChart
     currency={country.currency}

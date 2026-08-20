@@ -45,7 +45,10 @@ const {
 const initialLang = detectLanguage();
 setLang(initialLang);
 const initialDir = initialLang === 'ar' ? 'rtl' : 'auto';
-const pageUrl = canonical || `${Astro.site}${Astro.url.pathname}`;
+const rawPath = Astro.url.pathname;
+const cleanPath = rawPath === '/' ? '' : rawPath.replace(/\/+$/, '');
+const pageUrl = canonical ? canonical.replace(/\/+$/, '') : `https://finsiva.com${cleanPath}`;
+const ogImageUrl = image.startsWith('http') ? image : `https://finsiva.com${image.startsWith('/') ? '' : '/'}${image}`;
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -60,7 +63,7 @@ const organizationSchema = {
   ],
   "contactPoint": {
     "@type": "ContactPoint",
-    "email": "ornacasa11@gmail.com",
+    "email": "support@finsiva.com",
     "contactType": "customer support"
   }
 };
@@ -73,7 +76,7 @@ const webSiteSchema = {
   "description": "Universal tax calculator platform for accurate tax estimates across multiple countries",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://finsiva.com/search?q={search_term_string}",
+    "target": "https://finsiva.com/countries?q={search_term_string}",
     "query-input": "required name=search_term_string"
   }
 };
@@ -108,9 +111,9 @@ const webApplicationSchema = {
 const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Finsiva - Universal Tax Calculator",
-  "description": "Free online tax calculator for income tax, salary tax, payroll tax, GST, VAT, and more across multiple countries.",
-  "url": "https://finsiva.com",
+  "name": title,
+  "description": description,
+  "url": pageUrl,
   "isPartOf": {
     "@type": "WebSite",
     "name": "Finsiva",
@@ -189,20 +192,17 @@ const financialProductSchema = {
     <meta name="application-name" content="Finsiva Tax Calculator" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <link rel="canonical" href={canonical || `${Astro.site}${Astro.url.pathname}`} />
-    <link rel="alternate" hreflang="en" href={canonical || `${Astro.site}${Astro.url.pathname}`} />
-    <link rel="alternate" hreflang="zh-HK" href={canonical || `${Astro.site}${Astro.url.pathname}`} />
-    <link rel="alternate" hreflang="zh-CN" href={canonical || `${Astro.site}${Astro.url.pathname}`} />
-    <link rel="alternate" hreflang="ms" href={canonical || `${Astro.site}${Astro.url.pathname}`} />
-    <link rel="alternate" hreflang="x-default" href={canonical || `${Astro.site}${Astro.url.pathname}`} />
+    <link rel="canonical" href={pageUrl} />
+    <link rel="alternate" hreflang="en" href={pageUrl} />
+    <link rel="alternate" hreflang="x-default" href={pageUrl} />
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="//fonts.googleapis.com" />
     <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-    <meta property="og:url" content={canonical || `${Astro.site}${Astro.url.pathname}`} />
+    <meta property="og:url" content={pageUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={image || "/og-image.svg"} />
+    <meta property="og:image" content={ogImageUrl} />
     <meta property="og:image:alt" content={imageAlt} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -210,25 +210,12 @@ const financialProductSchema = {
     <meta property="og:site_name" content="Finsiva" />
     <meta property="og:locale" content="en_US" />
     <meta name="twitter:domain" content="finsiva.com" />
-    <link rel="alternate" hreflang="en-US" href={pageUrl} />
-    <link rel="alternate" hreflang="en-GB" href={pageUrl} />
-    <link rel="alternate" hreflang="hi-IN" href={pageUrl} />
-    <link rel="alternate" hreflang="es" href={pageUrl} />
-    <link rel="alternate" hreflang="fr" href={pageUrl} />
-    <link rel="alternate" hreflang="de" href={pageUrl} />
-    <link rel="alternate" hreflang="zh-CN" href={pageUrl} />
-    <link rel="alternate" hreflang="zh-TW" href={pageUrl} />
-    <link rel="alternate" hreflang="ja" href={pageUrl} />
-    <link rel="alternate" hreflang="ar" href={pageUrl} />
-    <link rel="alternate" hreflang="pt" href={pageUrl} />
-    <link rel="alternate" hreflang="ru" href={pageUrl} />
-    <link rel="alternate" hreflang="x-default" href={pageUrl} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@finsiva" />
     <meta name="twitter:creator" content="@finsiva" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={image || "/og-image.svg"} />
+    <meta name="twitter:image" content={ogImageUrl} />
     <meta name="twitter:image:alt" content={imageAlt} />
     <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(webSiteSchema)} />
