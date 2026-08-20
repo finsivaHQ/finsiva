@@ -35,8 +35,8 @@ const breadcrumbSchema = {
 ---
 
 <Layout
-  title="Malaysia Tax Calculators & Guides - Free Online Tools | Finsiva"
-  description="Free tax calculators and comprehensive guides for Malaysia income tax, SST, filing requirements, reliefs, and tax planning. Get accurate estimates with our Malaysia-specific tax tools."
+  title="Malaysia Tax Calculators & LHDN Tax Guides | Finsiva"
+  description="Free tax calculators and comprehensive LHDN guides for Malaysia income tax, SST (10%/8%), tax reliefs, rental income, business tax, and MyTax e-Filing."
   image="/og-image.svg"
   imageAlt="Malaysia tax calculator dashboard showing income tax, SST, and filing estimates"
   keywords="Malaysia tax, Malaysia tax calculator, Malaysian income tax, Malaysian SST, tax filing Malaysia, tax reliefs Malaysia, foreign income Malaysia, rental income Malaysia, business income Malaysia, Malaysian tax brackets"
@@ -48,23 +48,27 @@ const breadcrumbSchema = {
 
     <section id="hero" class="mb-20">
       <div class="text-center">
-        <span class="section-label !text-white bg-primary/10 rounded px-3 py-1 inline-block text-sm font-medium">Malaysia Tax Resources</span>
-        <h1 class="text-4xl font-bold text-ink dark:text-on-primary">Malaysia Tax Knowledge Center</h1>
+        <span class="section-label !text-white bg-primary/10 rounded px-3 py-1 inline-block text-sm font-medium">Malaysia Tax Resources (YA 2025)</span>
+        <h1 class="text-4xl font-bold text-ink dark:text-on-primary">Malaysia Tax Knowledge & Calculator Hub</h1>
         <p class="text-lg text-body dark:text-muted mt-3 max-w-2xl mx-auto">
-          Get accurate, up-to-date Malaysia tax estimates with our free online calculators. Calculate income tax, SST, filing requirements, and explore tax planning strategies.
+          Get accurate, up-to-date Malaysia tax estimates with our free online calculators. Estimate LHDN income tax, SST, eligible tax reliefs, rental income, and prepare for e-Filing.
         </p>
-        <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <a href={`${baseUrl}/countries/malaysia/income-tax`} class="flex flex-col items-center justify-center gap-3 rounded-lg border border-hairline bg-canvas dark:border-primary p-6">
-            <svg class="h-8 w-8 text-primary dark:text-link" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            <span class="text-sm text-ink dark:text-on-primary">Income Tax Calculator</span>
+        <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <a href={`${baseUrl}/countries/malaysia/income-tax/income-tax-calculator`} class="flex flex-col items-center justify-center gap-2 rounded-lg border border-hairline bg-canvas dark:border-primary p-4 hover:border-primary transition">
+            <svg class="h-6 w-6 text-primary dark:text-link" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span class="text-xs font-semibold text-ink dark:text-on-primary">Income Tax Calculator</span>
           </a>
-          <a href={`${baseUrl}/countries/malaysia/sst`} class="flex flex-col items-center justify-center gap-3 rounded-lg border border-hairline bg-canvas dark:border-primary p-6">
-            <svg class="h-8 w-8 text-primary dark:text-link" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
-            <span class="text-sm text-ink dark:text-on-primary">SST Calculator</span>
+          <a href={`${baseUrl}/countries/malaysia/tax-reliefs/tax-reliefs-calculator`} class="flex flex-col items-center justify-center gap-2 rounded-lg border border-hairline bg-canvas dark:border-primary p-4 hover:border-primary transition">
+            <svg class="h-6 w-6 text-primary dark:text-link" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <span class="text-xs font-semibold text-ink dark:text-on-primary">Tax Reliefs Calculator</span>
           </a>
-          <a href={`${baseUrl}/countries/malaysia/tax-filing`} class="flex flex-col items-center justify-center gap-3 rounded-lg border border-hairline bg-canvas dark:border-primary p-6">
-            <svg class="h-8 w-8 text-primary dark:text-link" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12h18M3 18h18" /></svg>
-            <span class="text-sm text-ink dark:text-on-primary">Tax Filing Assistant</span>
+          <a href={`${baseUrl}/countries/malaysia/sst/sst-calculator`} class="flex flex-col items-center justify-center gap-2 rounded-lg border border-hairline bg-canvas dark:border-primary p-4 hover:border-primary transition">
+            <svg class="h-6 w-6 text-primary dark:text-link" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            <span class="text-xs font-semibold text-ink dark:text-on-primary">SST Calculator</span>
+          </a>
+          <a href={`${baseUrl}/countries/malaysia/tax-filing/tax-filing-calculator`} class="flex flex-col items-center justify-center gap-2 rounded-lg border border-hairline bg-canvas dark:border-primary p-4 hover:border-primary transition">
+            <svg class="h-6 w-6 text-primary dark:text-link" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12h18M3 18h18" /></svg>
+            <span class="text-xs font-semibold text-ink dark:text-on-primary">MyTax Filing Assistant</span>
           </a>
         </div>
       </div>

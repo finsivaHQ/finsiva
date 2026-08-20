@@ -408,7 +408,36 @@ const govOrgSchema = {
         </div>
       )}
 
-      {!['hong-kong', 'pakistan'].includes(country.slug) && (
+      {country.slug === 'malaysia' && (
+        <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <a href="/countries/malaysia/income-tax/income-tax-calculator" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary text-base">Malaysia Income Tax Calculator</h4>
+            <p class="text-xs text-muted mt-1 dark:text-muted">Calculate progressive individual tax (0%-30%), PCB monthly deductions, and take-home pay.</p>
+          </a>
+          <a href="/countries/malaysia/tax-reliefs/tax-reliefs-calculator" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary text-base">Malaysia Tax Reliefs Calculator</h4>
+            <p class="text-xs text-muted mt-1 dark:text-muted">Estimate tax savings across 20+ LHDN reliefs (RM 9k personal, RM 4k EPF, medical & lifestyle).</p>
+          </a>
+          <a href="/countries/malaysia/sst/sst-calculator" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary text-base">Malaysia SST Calculator</h4>
+            <p class="text-xs text-muted mt-1 dark:text-muted">Calculate 10% Sales Tax and 8% Service Tax for transactions in Malaysia.</p>
+          </a>
+          <a href="/countries/malaysia/rental-income/rental-income-calculator" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary text-base">Rental Income Tax Calculator</h4>
+            <p class="text-xs text-muted mt-1 dark:text-muted">Compute net taxable rental income after allowable landlord property deductions.</p>
+          </a>
+          <a href="/countries/malaysia/business-income/business-income-calculator" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary text-base">Business & SME Tax Calculator</h4>
+            <p class="text-xs text-muted mt-1 dark:text-muted">Estimate corporate tax under the 17% SME rate (first RM 600k) and 24% standard rate.</p>
+          </a>
+          <a href="/countries/malaysia/tax-filing/tax-filing-calculator" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+            <h4 class="font-semibold text-ink dark:text-on-primary text-base">Tax Filing Assistant (MyTax)</h4>
+            <p class="text-xs text-muted mt-1 dark:text-muted">Prepare for LHDN e-Filing Form BE/B returns and check refund statuses.</p>
+          </a>
+        </div>
+      )}
+
+      {!['hong-kong', 'pakistan', 'malaysia'].includes(country.slug) && (
         <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <a href={`/countries/${country.slug}`} class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
             <h4 class="font-semibold text-ink dark:text-on-primary">{country.name} Calculators</h4>

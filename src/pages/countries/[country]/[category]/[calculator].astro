@@ -114,10 +114,50 @@ const pkGuideMap: Record<string, Array<{ title: string; slug: string }>> = {
   ]
 };
 
+const myGuideMap: Record<string, Array<{ title: string; slug: string }>> = {
+  "income-tax": [
+    { title: "Malaysia Income Tax Guide", slug: "/countries/malaysia/income-tax" },
+    { title: "LHDN Tax Reliefs Guide", slug: "/countries/malaysia/tax-reliefs" },
+    { title: "MyTax e-Filing Guide", slug: "/countries/malaysia/tax-filing" }
+  ],
+  "tax-reliefs": [
+    { title: "LHDN Tax Reliefs & Deductions", slug: "/countries/malaysia/tax-reliefs" },
+    { title: "Malaysia Income Tax Guide", slug: "/countries/malaysia/income-tax" },
+    { title: "MyTax e-Filing Guide", slug: "/countries/malaysia/tax-filing" }
+  ],
+  "sst": [
+    { title: "Malaysia SST Guide (10% & 8%)", slug: "/countries/malaysia/sst" },
+    { title: "Business Tax Guide", slug: "/countries/malaysia/business-income" },
+    { title: "Malaysia Income Tax Guide", slug: "/countries/malaysia/income-tax" }
+  ],
+  "rental-income": [
+    { title: "Rental Income & Property Tax Guide", slug: "/countries/malaysia/rental-income" },
+    { title: "LHDN Tax Reliefs Guide", slug: "/countries/malaysia/tax-reliefs" },
+    { title: "Malaysia Income Tax Guide", slug: "/countries/malaysia/income-tax" }
+  ],
+  "business-income": [
+    { title: "Business & SME Tax Guide", slug: "/countries/malaysia/business-income" },
+    { title: "Malaysia SST Guide", slug: "/countries/malaysia/sst" },
+    { title: "MyTax e-Filing Guide", slug: "/countries/malaysia/tax-filing" }
+  ],
+  "tax-filing": [
+    { title: "MyTax e-Filing Form BE/B Guide", slug: "/countries/malaysia/tax-filing" },
+    { title: "LHDN Tax Reliefs Guide", slug: "/countries/malaysia/tax-reliefs" },
+    { title: "Malaysia Income Tax Guide", slug: "/countries/malaysia/income-tax" }
+  ],
+  "foreign-income": [
+    { title: "Foreign-Sourced Income Guide", slug: "/countries/malaysia/foreign-income" },
+    { title: "Malaysia Income Tax Guide", slug: "/countries/malaysia/income-tax" },
+    { title: "Tax Residency Guide", slug: "/countries/malaysia/income-tax" }
+  ]
+};
+
 const suggestedArticles = country.slug === 'hong-kong' && hkGuideMap[category.slug]
   ? hkGuideMap[category.slug]
   : country.slug === 'pakistan' && pkGuideMap[category.slug]
   ? pkGuideMap[category.slug]
+  : country.slug === 'malaysia' && myGuideMap[category.slug]
+  ? myGuideMap[category.slug]
   : country.taxCategories
       .filter(cat => cat.slug !== category.slug)
       .slice(0, 3)

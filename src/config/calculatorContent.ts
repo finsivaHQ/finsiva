@@ -105,153 +105,148 @@ export const calculatorContent: Record<string, RichCalculatorContent> = {
 
   "malaysia-income-tax-income-tax-calculator": {
     "howToUse": {
-        "title": "How to Use",
-        "html": "<p>Use this Malaysia Income Tax calculator to estimate your tax liability. Enter the required details and click Calculate.</p>"
+        "title": "How to Use the Malaysia Income Tax Calculator",
+        "html": "<p>Enter your gross annual income in Malaysian Ringgit (MYR), select your tax residency status, and enter allowable LHDN reliefs (such as basic personal relief of RM 9,000, EPF contributions, and life insurance) to compute your total tax liability, effective tax rate, and monthly net take-home pay.</p>"
     },
     "understandingResults": {
-        "title": "Understanding Results",
-        "html": "<p><strong>Taxable Income:</strong> Income subject to tax. <strong>Tax Amount:</strong> Total tax liability. <strong>Effective Rate:</strong> Tax as percentage of income. <strong>Take-Home Pay:</strong> Income after tax.</p>"
+        "title": "Understanding Your Malaysia Tax Results",
+        "html": "<p><strong>Gross Annual Income:</strong> Total income before tax and reliefs.<br><strong>Chargeable Income:</strong> Gross income minus allowable LHDN tax reliefs.<br><strong>Income Tax Payable:</strong> Total annual tax calculated under LHDN progressive brackets (0%–30%).<br><strong>Monthly PCB Withholding:</strong> Compulsory Monthly Tax Deduction under Section 107B.<br><strong>Net Take-Home Pay:</strong> Monthly income after tax and EPF deductions.</p>"
     },
     "formula": {
-        "title": "Formula",
-        "html": "<p>Tax is computed using applicable rates and rules for Malaysia. Review the detailed methodology above for assumptions and calculations.</p>"
+        "title": "Malaysia Individual Income Tax Formula",
+        "html": "<p><strong>Chargeable Income = Gross Annual Income - Total Approved Reliefs</strong><br>Tax Payable is calculated by applying progressive rates (0% to 30%) to Chargeable Income according to the LHDNM tax schedule for Assessment Year 2025 (YA 2025).</p>"
     },
     "taxSlabs": {
-        "title": "Tax Slabs",
-        "html": "<p>Malaysia Income Tax slabs vary based on income level and taxpayer profile. Use this calculator to determine your exact liability under current rules.</p>"
+        "title": "LHDNM Individual Tax Brackets (YA 2025)",
+        "html": "<p>Resident individuals enjoy progressive rates starting at 0% up to RM 5,000 and topping out at 30% for chargeable income above RM 1,000,000. Non-residents are taxed at a flat rate of 30% without eligibility for tax reliefs.</p>"
     },
     "commonMistakes": {
-        "title": "Common Mistakes",
-        "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Not updating inputs for the correct tax year.</li><li>Using incorrect residency or employment status.</li><li>Forgetting to account for all income sources.</li><li>Not considering eligible deductions and reliefs.</li></ul>"
+        "title": "Common Mistakes to Avoid",
+        "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Forgetting to claim the basic personal relief of RM 9,000 automatically granted to all resident taxpayers.</li><li>Exceeding allowable LHDN caps on EPF relief (RM 4,000) or Life Insurance relief (RM 3,000).</li><li>Failing to keep physical or digital receipts for medical (RM 10,000) and lifestyle (RM 2,500) claims for 7 years.</li></ul>"
     },
     "relatedCalculators": {
-        "title": "Related Calculators",
-        "html": "<div class=\"grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3\">\n    <a href=\"/countries/malaysia\" class=\"block rounded border p-4 hover:border-primary transition\">More Malaysia Calculators</a>\n    <a href=\"/countries\" class=\"block rounded border p-4 hover:border-primary transition\">All Countries</a>\n    <a href=\"/\" class=\"block rounded border p-4 hover:border-primary transition\">Home</a>\n  </div>"
+        "title": "Related Malaysia Tax Calculators",
+        "html": "<div class=\"grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3\">\n    <a href=\"/countries/malaysia/tax-reliefs/tax-reliefs-calculator\" class=\"block rounded border p-4 hover:border-primary transition\">Malaysia Tax Reliefs Calculator</a>\n    <a href=\"/countries/malaysia/sst/sst-calculator\" class=\"block rounded border p-4 hover:border-primary transition\">Malaysia SST Calculator</a>\n    <a href=\"/countries/malaysia/tax-filing/tax-filing-calculator\" class=\"block rounded border p-4 hover:border-primary transition\">Tax Filing Assistant</a>\n  </div>"
     },
     "suggestedArticles": {
         "title": "Suggested Articles",
-        "html": "<div class=\"grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3\">\n    <a href=\"/countries/malaysia/income-tax\" class=\"block rounded border p-4 hover:border-primary transition\">Income Tax Guide</a>\n    <a href=\"/countries/malaysia\" class=\"block rounded border p-4 hover:border-primary transition\">Malaysia Tax Overview</a>\n    <a href=\"/\" class=\"block rounded border p-4 hover:border-primary transition\">All Calculators</a>\n  </div>"
+        "html": "<div class=\"grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3\">\n    <a href=\"/countries/malaysia/income-tax\" class=\"block rounded border p-4 hover:border-primary transition\">Malaysia Income Tax Guide</a>\n    <a href=\"/countries/malaysia/tax-reliefs\" class=\"block rounded border p-4 hover:border-primary transition\">LHDN Tax Reliefs Guide</a>\n    <a href=\"/countries/malaysia\" class=\"block rounded border p-4 hover:border-primary transition\">Malaysia Tax Hub</a>\n  </div>"
     },
     "officialResources": {
-        "title": "Official Resources",
-        "html": "<ul class=\"space-y-2\"><li><a href=\"https://www.hasil.gov.my\" target=\"_blank\" rel=\"noopener noreferrer\">LHDN Malaysia</a></li><li><a href=\"https://www.customs.gov.my\" target=\"_blank\" rel=\"noopener noreferrer\">Royal Malaysian Customs</a></li></ul>"
+        "title": "Official LHDNM Resources",
+        "html": "<ul class=\"space-y-2\"><li><a href=\"https://www.hasil.gov.my\" target=\"_blank\" rel=\"noopener noreferrer\">LHDNM Official Website</a></li><li><a href=\"https://mytax.hasil.gov.my\" target=\"_blank\" rel=\"noopener noreferrer\">LHDN MyTax Portal</a></li></ul>"
     },
     "faqSchema": {
-        "What is the standard deduction for Income Tax in Malaysia?": "Standard deductions vary by country. Check the latest official guidelines for your jurisdiction.",
-        "How to calculate Income Tax on salary in Malaysia?": "Enter your annual income, select your tax year, and use the calculator to get an estimate.",
-        "What are the Income Tax slabs in Malaysia?": "Slabs vary by income level and tax year. The calculator shows the applicable rates."
+        "What is the basic personal tax relief in Malaysia?": "For Assessment Year 2025, every resident individual automatically receives a basic personal tax relief of RM 9,000.",
+        "How is monthly PCB calculated in Malaysia?": "Employers calculate Monthly Tax Deduction (PCB) under Section 107B based on annual estimated salary and LHDNM tax tables.",
+        "What is the tax rate for non-residents in Malaysia?": "Non-residents are taxed at a flat rate of 30% on Malaysia-sourced income and cannot claim personal tax reliefs."
     },
 
     "overview": {
       "title": "Overview",
-      "html": "<p>This calculator helps you estimate your tax liability. Enter your details below for an estimate based on current tax rules.</p>"
+      "html": "<p>This Malaysia Income Tax Calculator estimates individual income tax liabilities under LHDNM progressive rates (0%–30%), calculates monthly PCB withholding deductions, and computes net take-home pay after EPF and allowable personal reliefs for Assessment Year 2025 (YA 2025).</p>"
     },
     "workedExample": {
       "title": "Example Calculation",
-      "html": "<p>Example: with an annual income of $50,000, the estimated tax would be calculated using the applicable rates. Use the calculator above for your specific situation.</p>"
+      "html": "<p>For a resident employee in Kuala Lumpur with a gross salary of RM 72,000 (RM 6,000/month):<br>• Gross Income: RM 72,000<br>• Basic Personal Relief: RM 9,000<br>• EPF Relief (11%): RM 7,920 (capped at RM 4,000)<br>• Total Reliefs: RM 13,000<br>• Chargeable Income: RM 59,000<br>• Estimated Annual Tax: RM 2,400 (Effective Tax Rate ~3.33%).</p>"
     },
     "benefits": {
-      "title": "Benefits of Using This Calculator",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Instant tax estimates</li><li>Up-to-date rates</li><li>Easy to use</li><li>Helps with financial planning</li></ul>"
+      "title": "Key Features",
+      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Calculates progressive LHDN tax brackets up to 30%</li><li>Includes Monthly Tax Deduction (PCB) estimation</li><li>Computes take-home salary after EPF and tax</li><li>Updated for Assessment Year 2025 rules</li></ul>"
     },
     "limitations": {
-      "title": "Limitations",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>This is an estimate only</li><li>Does not cover all deductions or credits</li><li>Tax laws change frequently</li><li>Consult a professional for complex situations</li></ul>"
+      "title": "Notice",
+      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Tax estimates assume active resident status (182+ days in Malaysia).</li><li>Discretionary rebates (such as Zakat or Fitrah) reduce final tax payable ringgit-for-ringgit.</li><li>For official return filing, access the LHDN MyTax portal (e-filing.hasil.gov.my).</li></ul>"
     },
     "faq": [
       {
-        "question": "What is the standard tax rate?",
-        "answer": "Rates vary by income level and jurisdiction."
+        "question": "What is the tax filing deadline for salaried individuals in Malaysia?",
+        "answer": "Form BE (salaried individuals without business income) must be filed by April 30th (or May 15th via LHDN e-Filing)."
       },
       {
-        "question": "How accurate is this calculator?",
-        "answer": "This calculator provides estimates based on current tax rules. For precise calculations, consult a tax professional."
+        "question": "How much can I claim for EPF tax relief?",
+        "answer": "Taxpayers can claim up to RM 4,000 for EPF contributions and up to RM 3,000 for life insurance premiums under LHDN rules."
       }
     ],
     "relatedCountry": {
       "title": "Related Country",
-      "html": "<p>Explore tax calculators for other countries.</p>"
+      "html": "<p>Compare with <a href='/countries/singapore'>Singapore Tax Calculator</a> or <a href='/countries/indonesia'>Indonesia Tax Guide</a>.</p>"
     },
     "educationalDisclaimer": {
       "title": "Educational Disclaimer",
-      "text": "This calculator is for informational and educational purposes only. It does not constitute legal or tax advice. Always consult a qualified professional."
+      "text": "This calculator provides estimates for informational and tax planning purposes based on published LHDNM tax rates."
     }
-},
+  },
 
   "malaysia-sst-sst-calculator": {
     "howToUse": {
-        "title": "How to Use",
-        "html": "<p>Use this Malaysia SST calculator to estimate your tax liability. Enter the required details and click Calculate.</p>"
+        "title": "How to Use the Malaysia SST Calculator",
+        "html": "<p>Enter the net invoice or transaction amount in Malaysian Ringgit (MYR), select whether to apply 10% Sales Tax or 8% Service Tax, and choose whether to add tax to a net amount or extract tax from a gross total.</p>"
     },
     "understandingResults": {
-        "title": "Understanding Results",
-        "html": "<p><strong>Taxable Income:</strong> Income subject to tax. <strong>Tax Amount:</strong> Total tax liability. <strong>Effective Rate:</strong> Tax as percentage of income. <strong>Take-Home Pay:</strong> Income after tax.</p>"
+        "title": "Understanding Your SST Results",
+        "html": "<p><strong>Net Amount:</strong> Pre-tax price of goods or services.<br><strong>SST Rate:</strong> 5%/10% Sales Tax on manufactured goods or 8% Service Tax on prescribed services.<br><strong>SST Amount:</strong> Total Sales and Service Tax payable to Royal Malaysian Customs.<br><strong>Gross Amount:</strong> Final inclusive bill payable by the customer.</p>"
     },
     "formula": {
-        "title": "Formula",
-        "html": "<p>Tax is computed using applicable rates and rules for Malaysia. Review the detailed methodology above for assumptions and calculations.</p>"
+        "title": "Malaysia SST Calculation Formula",
+        "html": "<p><strong>Service Tax (8%) = Net Amount x 0.08</strong><br><strong>Sales Tax (10%) = Net Amount x 0.10</strong><br>To extract 8% Service Tax from a gross total: <strong>Net Amount = Gross Total / 1.08</strong>.</p>"
     },
     "taxSlabs": {
-        "title": "Tax Slabs",
-        "html": "<p>Malaysia SST slabs vary based on income level and taxpayer profile. Use this calculator to determine your exact liability under current rules.</p>"
+        "title": "Malaysian SST Rates Schedule",
+        "html": "<p>Effective March 1, 2024, the standard Service Tax rate increased to 8% for most taxable services (including IT services, consultancy, and logistics). Food & Beverage and telecommunications remain at 6%. Sales Tax is levied at 5% or 10% on taxable manufactured goods.</p>"
     },
     "commonMistakes": {
-        "title": "Common Mistakes",
-        "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Not updating inputs for the correct tax year.</li><li>Using incorrect residency or employment status.</li><li>Forgetting to account for all income sources.</li><li>Not considering eligible deductions and reliefs.</li></ul>"
+        "title": "Common Mistakes to Avoid",
+        "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Applying the old 6% Service Tax rate to services that were updated to 8% in March 2024.</li><li>Confusing SST with input-tax credit systems like GST; SST is a single-stage tax without input tax claims.</li><li>Missing the bimonthly SST return filing deadline with Royal Malaysian Customs (JKDM).</li></ul>"
     },
     "relatedCalculators": {
         "title": "Related Calculators",
-        "html": "<div class=\"grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3\">\n    <a href=\"/countries/malaysia\" class=\"block rounded border p-4 hover:border-primary transition\">More Malaysia Calculators</a>\n    <a href=\"/countries\" class=\"block rounded border p-4 hover:border-primary transition\">All Countries</a>\n    <a href=\"/\" class=\"block rounded border p-4 hover:border-primary transition\">Home</a>\n  </div>"
+        "html": "<div class=\"grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3\">\n    <a href=\"/countries/malaysia/income-tax/income-tax-calculator\" class=\"block rounded border p-4 hover:border-primary transition\">Malaysia Income Tax Calculator</a>\n    <a href=\"/countries/malaysia/business-income/business-income-calculator\" class=\"block rounded border p-4 hover:border-primary transition\">Business & SME Tax Calculator</a>\n  </div>"
     },
     "suggestedArticles": {
         "title": "Suggested Articles",
-        "html": "<div class=\"grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3\">\n    <a href=\"/countries/malaysia/sst\" class=\"block rounded border p-4 hover:border-primary transition\">SST Guide</a>\n    <a href=\"/countries/malaysia\" class=\"block rounded border p-4 hover:border-primary transition\">Malaysia Tax Overview</a>\n    <a href=\"/\" class=\"block rounded border p-4 hover:border-primary transition\">All Calculators</a>\n  </div>"
+        "html": "<div class=\"grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3\">\n    <a href=\"/countries/malaysia/sst\" class=\"block rounded border p-4 hover:border-primary transition\">Malaysia SST Guide</a>\n    <a href=\"/countries/malaysia\" class=\"block rounded border p-4 hover:border-primary transition\">Malaysia Tax Hub</a>\n  </div>"
     },
     "officialResources": {
         "title": "Official Resources",
-        "html": "<ul class=\"space-y-2\"><li><a href=\"https://www.hasil.gov.my\" target=\"_blank\" rel=\"noopener noreferrer\">LHDN Malaysia</a></li><li><a href=\"https://www.customs.gov.my\" target=\"_blank\" rel=\"noopener noreferrer\">Royal Malaysian Customs</a></li></ul>"
+        "html": "<ul class=\"space-y-2\"><li><a href=\"https://mysst.customs.gov.my\" target=\"_blank\" rel=\"noopener noreferrer\">MySST Official Customs Portal</a></li></ul>"
     },
     "faqSchema": {
-        "What is the standard Sst rate in Malaysia?": "Standard rates vary by country and type of goods/services.",
-        "How to calculate Sst from total amount?": "Enter the total amount and select reverse calculation to extract the tax component.",
-        "What are the different Sst rates in Malaysia?": "Rates may include standard, reduced, zero-rated, and exempt categories."
+        "What is the current Service Tax rate in Malaysia?": "Effective March 1, 2024, the standard Service Tax rate in Malaysia is 8% on most taxable services.",
+        "What is the difference between Sales Tax and Service Tax in Malaysia?": "Sales Tax (5% or 10%) applies to manufactured and imported goods, while Service Tax (8%) applies to prescribed taxable services."
     },
 
     "overview": {
       "title": "Overview",
-      "html": "<p>This calculator helps you estimate your tax liability. Enter your details below for an estimate based on current tax rules.</p>"
+      "html": "<p>This Malaysia SST Calculator computes 10% Sales Tax on goods and 8% Service Tax on prescribed commercial services under the Sales Tax Act 2018 and Service Tax Act 2018 enforced by Royal Malaysian Customs.</p>"
     },
     "workedExample": {
       "title": "Example Calculation",
-      "html": "<p>Example: with an annual income of $50,000, the estimated tax would be calculated using the applicable rates. Use the calculator above for your specific situation.</p>"
+      "html": "<p>For professional consulting services valued at RM 5,000:<br>• Net Service Value: RM 5,000<br>• Service Tax (8%): RM 400<br>• Total Invoice Payable: RM 5,400.</p>"
     },
     "benefits": {
-      "title": "Benefits of Using This Calculator",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Instant tax estimates</li><li>Up-to-date rates</li><li>Easy to use</li><li>Helps with financial planning</li></ul>"
+      "title": "Key Features",
+      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Calculates 10% Sales Tax and 8% Service Tax</li><li>Supports tax-inclusive and tax-exclusive calculations</li><li>Updated for current Royal Malaysian Customs regulations</li></ul>"
     },
     "limitations": {
-      "title": "Limitations",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>This is an estimate only</li><li>Does not cover all deductions or credits</li><li>Tax laws change frequently</li><li>Consult a professional for complex situations</li></ul>"
+      "title": "Notice",
+      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>F&B and telecommunications services maintain a 6% rate under specific exemptions.</li><li>Verify registration thresholds (RM 500,000 turnover) on MySST.</li></ul>"
     },
     "faq": [
       {
-        "question": "What is the standard tax rate?",
-        "answer": "Rates vary by income level and jurisdiction."
-      },
-      {
-        "question": "How accurate is this calculator?",
-        "answer": "This calculator provides estimates based on current tax rules. For precise calculations, consult a tax professional."
+        "question": "When is the SST filing deadline in Malaysia?",
+        "answer": "SST returns (SST-02) must be submitted bimonthly to Royal Malaysian Customs no later than the last day of the month following the taxable period."
       }
     ],
     "relatedCountry": {
       "title": "Related Country",
-      "html": "<p>Explore tax calculators for other countries.</p>"
+      "html": "<p>Explore <a href='/countries/malaysia'>Malaysia Tax Overview</a> and <a href='/countries/singapore'>Singapore GST Calculator</a>.</p>"
     },
     "educationalDisclaimer": {
       "title": "Educational Disclaimer",
-      "text": "This calculator is for informational and educational purposes only. It does not constitute legal or tax advice. Always consult a qualified professional."
+      "text": "This calculator provides estimations based on Royal Malaysian Customs SST guidelines."
     }
-},
+  },
 
   "new-zealand-income-tax-income-tax-calculator": {
     "howToUse": {

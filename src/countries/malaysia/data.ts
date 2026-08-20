@@ -4,106 +4,113 @@ const taxCategories: TaxCategory[] = [
   {
     slug: "income-tax",
     name: "Income Tax",
-    description: "Individual and corporate income tax in Malaysia.",
-    overview: "Resident individuals pay progressive tax from 0% to 30%. Non-residents pay a flat 30%.",
+    description: "Individual and corporate income tax in Malaysia under LHDNM rules.",
+    overview: "Resident individuals pay progressive tax from 0% to 30% on chargeable income. Non-residents pay a flat 30%. Monthly Tax Deductions (PCB) are withheld by employers.",
     calculators: [
-      { slug: "income-tax-calculator", name: "Income Tax Calculator", description: "Calculate your Malaysian income tax." }
+      { slug: "income-tax-calculator", name: "Income Tax Calculator", description: "Calculate your Malaysian individual income tax, PCB deductions, and take-home pay under LHDN brackets." }
     ],
     guides: [
-      { slug: "tax-residency-guide", title: "Tax Residency Guide", description: "Understanding Malaysian tax residency rules." }
+      { slug: "tax-residency-guide", title: "Tax Residency Guide", description: "Understanding Malaysian 182-day physical presence tax residency rules." }
     ],
     faqs: [
-      { question: "What is the tax filing deadline?", answer: "April 30th for individuals, June 30th for businesses." }
+      { question: "What are the Malaysia income tax brackets for 2025?", answer: "Resident individuals are taxed at progressive rates from 0% to 30% after claiming basic personal relief of RM 9,000 and other eligible deductions." },
+      { question: "What is Monthly Tax Deduction (PCB)?", answer: "PCB is compulsory monthly tax withheld by employers from salary income and remitted to LHDNM under Section 107B." },
+      { question: "What is the tax rate for non-residents in Malaysia?", answer: "Non-resident individuals are taxed at a flat rate of 30% on Malaysia-sourced income without eligibility for personal reliefs." }
     ]
   },
   {
     slug: "sst",
-    name: "SST",
-    description: "Sales and Service Tax in Malaysia.",
-    overview: "Sales Tax is typically 10% and Service Tax is 8% on specified services.",
+    name: "Sales and Service Tax (SST)",
+    description: "Sales Tax (5%/10%) and Service Tax (8%) under Royal Malaysian Customs Department.",
+    overview: "Sales Tax is 5% or 10% on taxable manufactured and imported goods. Service Tax is 8% on prescribed services (up from 6% in 2024).",
     calculators: [
-      { slug: "sst-calculator", name: "SST Calculator", description: "Calculate SST on sales and services." }
+      { slug: "sst-calculator", name: "SST Calculator", description: "Calculate 10% Sales Tax or 8% Service Tax for transactions in Malaysia." }
     ],
     guides: [
-      { slug: "sst-guide", title: "SST Guide", description: "Understanding Sales and Service Tax in Malaysia." }
+      { slug: "sst-guide", title: "SST Guide", description: "Understanding SST registration thresholds, taxable service lists, and filing cycles in Malaysia." }
     ],
     faqs: [
-      { question: "What is the SST rate?", answer: "Sales Tax: typically 10%. Service Tax: 8%." }
+      { question: "What is the standard Service Tax rate in Malaysia?", answer: "The standard Service Tax rate in Malaysia is 8% on most taxable services (increased from 6% effective March 1, 2024)." },
+      { question: "What is the Sales Tax rate on goods?", answer: "Sales Tax is levied at 5% or 10% on taxable goods depending on product classification under the Sales Tax Act 2018." },
+      { question: "Who must register for SST in Malaysia?", answer: "Businesses providing taxable services or manufacturing taxable goods with annual turnover exceeding RM 500,000 (or RM 1.5 million for F&B) must register with Customs." }
     ]
   },
   {
     slug: "tax-filing",
-    name: "Tax Filing",
-    description: "Guidance on filing personal and business tax returns in Malaysia.",
-    overview: "Step-by-step process for submitting annual tax returns via e-Filing, deadlines, and required documents.",
+    name: "Tax Filing (MyTax)",
+    description: "Guidance on filing e-Filing Form BE/B returns with LHDNM.",
+    overview: "Step-by-step process for submitting annual tax returns via LHDN e-Filing (MyTax), deadlines, and required documentation.",
     calculators: [
-      { slug: "tax-filing-calculator", name: "Tax Filing Assistant", description: "Estimate your tax liability and prepare for filing." }
+      { slug: "tax-filing-calculator", name: "Tax Filing Assistant", description: "Estimate your final tax liability or refund before submitting your LHDN return." }
     ],
     guides: [
-      { slug: "tax-filing-guide", title: "Tax Filing Guide", description: "Complete guide to filing your Malaysian tax return." }
+      { slug: "tax-filing-guide", title: "Tax Filing Guide", description: "Complete guide to filing your Form BE or Form B through the LHDN MyTax portal." }
     ],
     faqs: [
-      { question: "When is the tax filing deadline?", answer: "April 30 for individuals, June 30 for businesses." }
+      { question: "When is the tax filing deadline in Malaysia?", answer: "Form BE (salaried individuals without business income) is due by April 30th (or May 15th via e-Filing). Form B (business income) is due by June 30th (or July 15th via e-Filing)." },
+      { question: "What happens if I overpaid PCB during the tax year?", answer: "LHDNM will credit the overpaid PCB directly to your bank account after you file your annual tax return." }
     ]
   },
   {
     slug: "tax-reliefs",
     name: "Tax Reliefs & Deductions",
-    description: "Overview of available tax reliefs, deductions, and exemptions for Malaysian taxpayers.",
-    overview: "Claim reliefs for EPF, life insurance, education, medical expenses, and more to reduce chargeable income.",
+    description: "Claim eligible LHDN tax reliefs to reduce your chargeable income.",
+    overview: "Claim reliefs for basic personal (RM 9,000), EPF contributions (RM 4,000), life insurance (RM 3,000), medical expenses (RM 10,000), lifestyle expenses (RM 2,500), and child education.",
     calculators: [
-      { slug: "tax-reliefs-calculator", name: "Tax Reliefs Calculator", description: "Calculate your total eligible tax reliefs." }
+      { slug: "tax-reliefs-calculator", name: "Tax Reliefs Calculator", description: "Calculate your total eligible tax reliefs and total tax savings under YA 2025 LHDN limits." }
     ],
     guides: [
-      { slug: "tax-reliefs-guide", title: "Tax Reliefs Guide", description: "Detailed explanation of all available tax reliefs in Malaysia." }
+      { slug: "tax-reliefs-guide", title: "Tax Reliefs Guide", description: "Comprehensive breakdown of all 20+ LHDN tax relief categories and receipts requirements." }
     ],
     faqs: [
-      { question: "What is the maximum EPF contribution eligible for tax relief?", answer: "RM 4,000 per year." }
+      { question: "What is the maximum EPF relief allowed by LHDN?", answer: "Taxpayers can claim up to RM 4,000 for mandatory/voluntary EPF contributions and up to RM 3,000 for life insurance premiums." },
+      { question: "What is the basic personal relief in Malaysia?", answer: "Every individual tax resident automatically receives a basic personal tax relief of RM 9,000." },
+      { question: "What is included in the lifestyle tax relief?", answer: "Lifestyle relief up to RM 2,500 covers books, personal computers, smartphones, internet subscriptions, and sports equipment." }
     ]
   },
   {
     slug: "foreign-income",
-    name: "Foreign Income",
-    description: "Taxation of foreign-sourced income for Malaysian residents and non-residents.",
-    overview: "Malaysia taxes residents on worldwide income with specific rules for foreign income, including exemptions and double taxation agreements.",
+    name: "Foreign-Sourced Income (FSI)",
+    description: "Taxation of foreign income remitted to Malaysia under Section 109M and DTAs.",
+    overview: "Malaysian residents receiving foreign-sourced income are subject to tax upon remittance unless eligible for bilateral Double Taxation Agreements (DTA) or statutory exemptions.",
     calculators: [
-      { slug: "foreign-income-calculator", name: "Foreign Income Tax Calculator", description: "Calculate tax on foreign-sourced income." }
+      { slug: "foreign-income-calculator", name: "Foreign Income Tax Calculator", description: "Calculate tax liability on foreign-sourced income remitted to Malaysia." }
     ],
     guides: [
-      { slug: "foreign-income-guide", title: "Foreign Income Guide", description: "Understanding how foreign income is taxed in Malaysia." }
+      { slug: "foreign-income-guide", title: "Foreign Income Guide", description: "Understanding LHDN foreign income remittance tax rules and foreign tax credits." }
     ],
     faqs: [
-      { question: "Is foreign income taxable in Malaysia?", answer: "Resident individuals are taxed on worldwide income; certain foreign income may be exempt under DTAs." }
+      { question: "Is foreign income taxed in Malaysia?", answer: "Foreign-sourced income remitted into Malaysia by resident individuals is subject to tax unless specifically exempted under statutory orders or Double Taxation Agreements." }
     ]
   },
   {
     slug: "rental-income",
-    name: "Rental Income",
-    description: "Taxation of rental income from residential and commercial properties in Malaysia.",
-    overview: "Rental income is subject to income tax after deducting allowable expenses such as maintenance, insurance, and loan interest.",
+    name: "Rental Income & Property Tax",
+    description: "Taxation of residential and commercial property rental income in Malaysia.",
+    overview: "Rental income is assessed under Section 4(d) of the Income Tax Act 1967 after deducting allowable expenses (assessment tax, quit rent, loan interest, insurance, and repairs).",
     calculators: [
-      { slug: "rental-income-calculator", name: "Rental Income Tax Calculator", description: "Calculate tax on your rental income." }
+      { slug: "rental-income-calculator", name: "Rental Income Tax Calculator", description: "Calculate net taxable rental income after deducting allowable landlord expenses." }
     ],
     guides: [
-      { slug: "rental-income-guide", title: "Rental Income Guide", description: "Guide to reporting and taxing rental income in Malaysia." }
+      { slug: "rental-income-guide", title: "Rental Income Guide", description: "Guide to reporting rental income, deductible property expenses, and RPGT in Malaysia." }
     ],
     faqs: [
-      { question: "Can I deduct mortgage interest from rental income?", answer: "Yes, loan interest on the property used to generate rental income is deductible." }
+      { question: "What expenses can landlords deduct from rental income?", answer: "Landlords can deduct assessment tax, quit rent, mortgage interest paid on property loans, fire insurance premiums, and tenant renewal costs." }
     ]
   },
   {
     slug: "business-income",
-    name: "Business Income",
-    description: "Taxation of business income for sole proprietors, partnerships, and SMEs in Malaysia.",
-    overview: "Business income is taxed at applicable rates after deducting business expenses, with specific rules for different business structures.",
+    name: "Business & SME Tax",
+    description: "Taxation for sole proprietors, partnerships, and SMEs in Malaysia.",
+    overview: "Qualifying SMEs (paid-up capital <= RM 2.5 million) pay a preferential 17% corporate tax on statutory income up to RM 600,000, and 24% on the balance.",
     calculators: [
-      { slug: "business-income-calculator", name: "Business Income Tax Calculator", description: "Calculate tax on your business income." }
+      { slug: "business-income-calculator", name: "Business Income Tax Calculator", description: "Calculate corporate and sole-proprietor business income tax." }
     ],
     guides: [
-      { slug: "business-income-guide", title: "Business Income Guide", description: "Understanding business income taxation for Malaysian SMEs." }
+      { slug: "business-income-guide", title: "Business Income Guide", description: "Understanding business tax deductions, capital allowances, and SME tax incentives in Malaysia." }
     ],
     faqs: [
-      { question: "What is the corporate tax rate for SMEs in Malaysia?", answer: "17% on the first RM 600,000 of chargeable income for qualifying SMEs." }
+      { question: "What is the corporate tax rate for SMEs in Malaysia?", answer: "Qualifying Malaysian SMEs enjoy a reduced 17% corporate tax rate on statutory income up to RM 600,000. Statutory income above RM 600,000 is taxed at the standard 24% rate." }
     ]
   }
 ];
