@@ -1,56 +1,102 @@
 ---
-interface Props {
-  countrySlug?: string;
+interface ImportantDate {
+  title: string;
+  date: string;
+  description: string;
 }
 
-const { countrySlug = "hong-kong" } = Astro.props;
+interface Props {
+  countryName: string;
+  importantDates?: ImportantDate[];
+}
 
-const deadlineMap: Record<string, { title: string; date: string; note: string }> = {
-  "hong-kong": {
-    title: "Hong Kong IRD BIR60 Individual Tax Return",
-    date: "2026-06-02",
-    note: "1 month from issue date (or July 2 via eTAX online filing)."
-  },
-  "united-states": {
-    title: "IRS Federal Individual Income Tax Filing Deadline",
-    date: "2026-04-15",
-    note: "June 15 extension automatically applies to US expats living abroad."
-  },
-  "india": {
-    title: "Income Tax Return (ITR) Filing Deadline AY 2026/27",
-    date: "2026-07-31",
-    note: "Mandatory for non-audit individual taxpayers under Section 139(1)."
-  },
-  "singapore": {
-    title: "IRAS Individual Tax Return Deadline",
-    date: "2026-04-18",
-    note: "Paper returns due April 15; e-Filing extended to April 18."
-  }
-};
-
-const info = deadlineMap[countrySlug || "hong-kong"] || {
-  title: "Official Tax Filing Season Deadline",
-  date: "2026-06-30",
-  note: "Check local tax authority guidelines for extension filing options."
-};
+const { countryName, importantDates = [] } = Astro.props;
 ---
 
-<div class="mt-6 rounded-2xl border border-amber-500/30 bg-amber-500/5 p-4 shadow-sm dark:border-amber-500/30 dark:bg-surface flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-  <div class="flex items-center gap-3">
-    <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-500/20 text-amber-600 dark:text-amber-400 font-bold">
-      📅
-    </div>
-    <div>
-      <div class="flex items-center gap-2">
-        <h4 class="text-sm font-bold text-ink dark:text-on-primary">{info.title}</h4>
-        <span class="text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-amber-500/20 text-amber-700 dark:text-amber-300">Upcoming</span>
+{importantDates.length > 0 && (
+  <div class="bg-surface rounded-xl border border-hairline dark:border-overlay-light p-6 shadow-sm mb-10">
+    <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
+      <div class="flex items-center gap-2.5">
+        <div class="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-ink dark:text-on-primary">Tax Calendar & Deadlines</h3>
+          <p class="text-xs text-muted">Official filing deadlines for {countryName}</p>
+        </div>
       </div>
-      <p class="text-xs text-muted dark:text-muted mt-0.5">{info.note}</p>
+    </div>
+
+    <div class="space-y-3">
+      {importantDates.map((item) => (
+        <div class="flex items-start justify-between gap-4 p-3 rounded-lg bg-canvas dark:bg-surface border border-hairline dark:border-overlay-light flex-wrap sm:flex-nowrap">
+          <div class="flex-1 min-w-0">
+            <div class="font-semibold text-sm text-ink dark:text-on-primary">{item.title}</div>
+            <div class="text-xs text-muted mt-0.5">{item.description}</div>
+          </div>
+          <div class="flex items-center gap-3 flex-shrink-0">
+            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary">
+              {item.date}
+            </span>
+            <button
+              type="button"
+              class="add-ics-btn text-xs font-medium text-primary hover:underline flex items-center gap-1 cursor-pointer"
+              data-title={`${countryName} Tax Deadline: ${item.title}`}
+              data-desc={item.description}
+              data-date={item.date}
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+              <span>Add to Cal</span>
+            </button>
+          </div>
+        </div>
+      ))}
     </div>
   </div>
+)}
 
-  <div class="shrink-0 text-right">
-    <div class="text-xs text-muted dark:text-muted font-medium">Filing Due Date</div>
-    <div class="text-sm sm:text-base font-extrabold text-amber-600 dark:text-amber-400">{info.date}</div>
-  </div>
-</div>
+<script>
+  document.addEventListener('astro:page-load', initCalendarBtns);
+  initCalendarBtns();
+
+  function initCalendarBtns() {
+    const btns = document.querySelectorAll('.add-ics-btn');
+    btns.forEach((btn) => {
+      if (btn.getAttribute('data-initialized') === 'true') return;
+      btn.setAttribute('data-initialized', 'true');
+
+      btn.addEventListener('click', () => {
+        const title = btn.getAttribute('data-title') || 'Tax Filing Deadline';
+        const desc = btn.getAttribute('data-desc') || '';
+        const rawDate = btn.getAttribute('data-date') || '';
+
+        // Generate ICS content
+        const now = new Date().toISOString().replace(/-|:|\.\d+/g, '');
+        const icsContent = [
+          'BEGIN:VCALENDAR',
+          'VERSION:2.0',
+          'PRODID:-//Finsiva//Tax Calendar//EN',
+          'BEGIN:VEVENT',
+          `UID:${now}@finsiva.com`,
+          `DTSTAMP:${now}`,
+          `SUMMARY:${title}`,
+          `DESCRIPTION:${desc}`,
+          'END:VEVENT',
+          'END:VCALENDAR'
+        ].join('\r\n');
+
+        const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+        const link = document.createElement('a');
+        link.href = window.URL.createObjectURL(blob);
+        link.setAttribute('download', `${title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.ics`);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      });
+    });
+  }
+</script>

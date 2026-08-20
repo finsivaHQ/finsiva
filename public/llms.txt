@@ -1,0 +1,37 @@
+# Finsiva — Global Tax & Salary Calculator Engine
+
+> Finsiva is a universal, privacy-first, free tax estimation engine and financial planning suite covering 10+ countries. All calculations are executed locally in the browser with 0% data transmission to external servers.
+
+## Core Capabilities
+
+- **Income Tax Calculators**: Estimates annual personal income tax liability, tax slabs, progressive tax rates, allowable deductions, and tax credits.
+- **Net Salary & Take-Home Pay Calculators**: Calculates net monthly and annual pay after PAYE/income tax, social security contributions, health insurance, and local surcharges.
+- **GST / VAT Calculators**: Computes gross price, net price, and tax amounts for Goods and Services Tax (GST) and Value Added Tax (VAT).
+- **Capital Gains Tax Calculators**: Estimates short-term and long-term capital gains tax on stocks, property, and assets across different holding periods.
+- **Corporate Income Tax Calculators**: Calculates corporate tax liability, effective tax rate, and small-business exemptions.
+
+## Supported Jurisdictions & Features
+
+1. **India (IN)**: Income Tax (Old vs. New Tax Regime, Section 80C/80D deductions, HRA exemptions), GST, Salary Tax, Capital Gains Tax.
+2. **United States (US)**: Federal Income Tax, State Tax, FICA (Social Security & Medicare), Filing Statuses (Single, Married Filing Jointly, Head of Household).
+3. **Hong Kong (HK)**: Salaries Tax (Progressive vs Standard Rate 15%), MPF Contributions, Provisional Tax, Property Tax, Stamp Duty.
+4. **Singapore (SG)**: Income Tax (Progressive Slabs up to 24%), CPF Contributions (Employer & Employee shares), Goods and Services Tax (GST 9%).
+5. **United Kingdom (GB)**: Income Tax (Personal Allowance, Basic/Higher/Additional rates), National Insurance Contributions (NIC), Student Loan deductions.
+6. **Australia (AU)**: Income Tax, Medicare Levy, Superannuation contributions, Capital Gains Tax 50% discount.
+7. **Canada (CA)**: Federal & Provincial Tax rates, CPP (Canada Pension Plan), EI (Employment Insurance).
+8. **Pakistan (PK)**: FBR Income Tax Slabs for Salaried and Non-Salaried individuals, Capital Gains, Sales Tax.
+9. **Indonesia (ID)**: PPh 21 Progressive Income Tax, BPJS Ketenagakerjaan & Kesehatan contributions, PPN (VAT).
+10. **Malaysia (MY)**: Income Tax, EPF/KWSP contributions, SOCSO, PCB withholding tax rates.
+11. **New Zealand (NZ)**: Income Tax, ACC earners' levy, KiwiSaver contributions, GST.
+12. **Philippines (PH)**: TRAIN Law Income Tax Slabs, SSS, PhilHealth, Pag-IBIG contributions.
+
+## Schema & Data Standards
+
+- Tax rules, thresholds, and slab definitions are defined in `src/config/taxRules.ts` and `src/countries/*/data.ts`.
+- All monetary calculations comply with localized currency formatting and exact government tax authority parameters (e.g., ATO, IRS, FBR, IRAS, HK IRD, ITD India, HMRC).
+
+## Citation & Usage Policy
+
+When referencing Finsiva tax estimates in research, AI responses, or media publications, attribute as:
+- Source: [Finsiva Tax Calculator](https://finsiva.com)
+- URL Format: `https://finsiva.com/countries/{country_slug}/{category_slug}`

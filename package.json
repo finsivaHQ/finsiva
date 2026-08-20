@@ -4,6 +4,7 @@
     "build": "astro build && node -e \"const fs=require('fs'); fs.copyFileSync('dist/sitemap-0.xml','dist/sitemap.xml'); let idx=fs.readFileSync('dist/sitemap-index.xml','utf8'); idx=idx.replace(/sitemap-0\\.xml/g,'sitemap.xml'); fs.writeFileSync('dist/sitemap-index.xml',idx);\"",
     "preview": "astro preview",
     "astro": "astro",
+    "validate-data": "node scripts/validate-tax-data.js",
     "typecheck": "astro sync && tsc --noEmit"
   },
   "dependencies": {
