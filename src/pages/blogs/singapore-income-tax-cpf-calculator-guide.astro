@@ -1,0 +1,190 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Singapore Income Tax and CPF Calculator Guide for Residents & PRs";
+const description = "Complete guide to how CPF contributions (OA, SA, MA) impact Singapore income tax. Calculate tax relief caps, gross to net salary, and tax brackets for Citizens and PRs.";
+const image = "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1200&q=80";
+const author = "Rachel Lim, Senior International Tax Consultant";
+const authorBio = "Senior Tax Consultant specializing in Singapore CPF tax reliefs, retirement scheme planning, statutory compliance, and resident individual tax optimizations.";
+const canonical = "https://finsiva.com/blogs/singapore-income-tax-cpf-calculator-guide";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Are employee CPF contributions tax-deductible in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Statutory employee Central Provident Fund (CPF) contributions made by Singapore Citizens and Permanent Residents (PRs) up to the statutory ceiling are fully tax-deductible as personal tax relief, directly lowering your Chargeable Income."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Are employer CPF contributions taxed as income in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. Statutory employer CPF contributions (up to 17% of monthly wages) are tax-exempt for employees and are not included in your gross assessable income for IRAS income tax purposes."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is the maximum CPF relief cap for tax resident individuals?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Mandatory employee CPF contributions are capped based on the CPF monthly ordinary wage ceiling (S$6,800 / S$7,400) and annual wage ceiling (S$102,000). Voluntary CPF cash top-ups to your Special or Retirement Account (SA/RA) qualify for additional tax relief up to S$8,000 for yourself and S$8,000 for loved ones per year."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is the total personal tax relief cap in Singapore for YA 2026?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The overall maximum aggregate ceiling on all personal tax reliefs combined (including CPF relief, Earned Income Relief, SRS contributions, Parent relief, Child relief, and Working Mother's Child Relief) is S$80,000 per Year of Assessment."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="16 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <p class="text-lg leading-relaxed font-sans">
+      For Singapore Citizens and Permanent Residents (PRs), mandatory contributions to the <a href="https://www.cpf.gov.sg" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">Central Provident Fund (CPF)</a> play a pivotal role in personal financial planning and tax optimization. Using a <strong>Singapore Income Tax and CPF Calculator</strong> allows taxpayers to calculate how CPF contributions reduce taxable assessable income while building long-term retirement savings across Ordinary Account (OA), Special Account (SA), and Medisave Account (MA).
+    </p>
+
+    <div class="my-8 rounded-2xl border border-hairline bg-canvas-soft p-6 shadow-sm dark:border-overlay-light dark:bg-surface">
+      <div class="flex items-center gap-4">
+        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary dark:bg-primary/20">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-ink dark:text-on-primary">Calculate CPF Tax Relief & Net Income</h3>
+          <p class="text-sm text-muted">Estimate your CPF employee share, statutory tax relief, and progressive tax bracket tier.</p>
+        </div>
+      </div>
+      <div class="mt-4">
+        <a href="/countries/singapore/income-tax/income-tax-calculator" class="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primary/90">
+          Calculate Tax & CPF Now &rarr;
+        </a>
+      </div>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-bold text-ink mb-3 dark:text-on-primary">Table of Contents</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#cpf-basics" class="text-link hover:underline">1. How CPF Relief Works for Tax Residents</a></li>
+        <li><a href="#rates-table" class="text-link hover:underline">2. CPF Contribution Rates & Salary Ceiling</a></li>
+        <li><a href="#voluntary-topups" class="text-link hover:underline">3. Maximizing Voluntary CPF Cash Top-Ups (RSTU)</a></li>
+        <li><a href="#overall-cap" class="text-link hover:underline">4. The S$80,000 Personal Relief Cap</a></li>
+        <li><a href="#pr-graduated-rates" class="text-link hover:underline">5. 1st & 2nd Year Permanent Resident (PR) Rules</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">6. Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <h2 id="cpf-basics" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">1. How CPF Relief Works for Tax Residents</h2>
+    <p>
+      Under Singapore tax laws for Year of Assessment 2026/2025, employee statutory CPF contributions are subtracted from gross wages to determine <strong>Chargeable Income</strong>.
+    </p>
+
+    <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface my-6">
+      <h3 class="font-bold text-ink dark:text-on-primary text-lg mb-2">Dual Benefit of CPF</h3>
+      <ul class="list-disc pl-5 text-sm space-y-2 text-muted">
+        <li><strong>Tax Reduction:</strong> Every dollar contributed as employee statutory CPF reduces taxable income by S$1.00 at your top marginal tax rate.</li>
+        <li><strong>Tax-Free Compounding Interest:</strong> CPF savings earn guaranteed risk-free interest rates (2.5% on Ordinary Account, up to 4%+ on Special & Medisave Accounts) completely tax-exempt.</li>
+      </ul>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1200&q=80" alt="Singapore skyline and financial district building" class="my-8 w-full rounded-xl object-cover max-h-96 shadow-md" loading="lazy" />
+
+    <h2 id="rates-table" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">2. CPF Contribution Rates & Salary Ceiling</h2>
+    <p>
+      For employee private sector wages (for employees aged 55 and below), standard contribution rates are:
+    </p>
+
+    <div class="overflow-x-auto my-6">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-bold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Age Group</th>
+            <th class="border p-3">Employee Rate (Deducted from Salary)</th>
+            <th class="border p-3">Employer Rate (Added by Company)</th>
+            <th class="border p-3">Total CPF Contribution</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr><td class="p-3">55 years & below</td><td class="p-3 font-semibold text-emerald-600">20%</td><td class="p-3 font-semibold">17%</td><td class="p-3 font-bold">37%</td></tr>
+          <tr><td class="p-3">Above 55 to 60</td><td class="p-3 font-semibold text-emerald-600">17%</td><td class="p-3 font-semibold">15.5%</td><td class="p-3 font-bold">32.5%</td></tr>
+          <tr><td class="p-3">Above 60 to 65</td><td class="p-3 font-semibold text-emerald-600">11.5%</td><td class="p-3 font-semibold">11.5%</td><td class="p-3 font-bold">23%</td></tr>
+          <tr><td class="p-3">Above 65 to 70</td><td class="p-3 font-semibold text-emerald-600">7.5%</td><td class="p-3 font-semibold">9%</td><td class="p-3 font-bold">16.5%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="voluntary-topups" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">3. Maximizing Voluntary CPF Cash Top-Ups (RSTU)</h2>
+    <p>
+      In addition to compulsory monthly employee deductions, taxpayers can utilize the <strong>Retirement Sum Topping-Up Scheme (RSTU)</strong> to claim extra personal tax relief:
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="font-bold text-ink dark:text-on-primary mb-2">Self Cash Top-Up Relief</h3>
+        <p class="text-sm text-muted">Claim up to <strong>S$8,000 tax relief per year</strong> for cash top-ups to your own Special Account (SA) or Retirement Account (RA).</p>
+      </div>
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="font-bold text-ink dark:text-on-primary mb-2">Family Cash Top-Up Relief</h3>
+        <p class="text-sm text-muted">Claim an additional <strong>S$8,000 tax relief per year</strong> for cash top-ups made to the SA/RA of your spouse, parents, grandparents, or siblings.</p>
+      </div>
+    </div>
+
+    <h2 id="overall-cap" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">4. The S$80,000 Personal Relief Cap</h2>
+    <p>
+      While Singapore provides numerous tax reliefs, IRAS enforces a strict <strong>aggregate personal tax relief ceiling of S$80,000</strong> per Year of Assessment. High earners claiming CPF relief, SRS relief, and Working Mother's Child Relief (WMCR) must monitor their total claimed amount.
+    </p>
+
+    <h2 id="pr-graduated-rates" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">5. 1st & 2nd Year Permanent Resident (PR) Rules</h2>
+    <p>
+      Newly minted Singapore Permanent Residents enjoy graduated CPF contribution rates during their first two years to facilitate transition:
+    </p>
+    <ul class="list-disc pl-5 text-sm space-y-2 text-muted my-4">
+      <li><strong>Year 1 PR:</strong> Employee rate 5%, Employer rate 4% (Total 9%). Option to jointly apply for full rates.</li>
+      <li><strong>Year 2 PR:</strong> Employee rate 15%, Employer rate 9% (Total 24%).</li>
+      <li><strong>Year 3 PR & Onwards:</strong> Full standard rate (Employee 20%, Employer 17%).</li>
+    </ul>
+
+    <!-- Related Links -->
+    <div class="my-8 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-lg font-bold text-ink mb-3 dark:text-on-primary">Related Calculators & Guides</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+        <a href="/countries/singapore/income-tax/income-tax-calculator" class="text-link hover:underline font-medium">&rarr; Singapore Personal Income Tax Calculator</a>
+        <a href="/blogs/singapore-income-tax-calculator-take-home-pay-guide" class="text-link hover:underline font-medium">&rarr; Gross to Net Take-Home Salary Guide</a>
+        <a href="/blogs/singapore-tax-reliefs-deductions-rebates-guide" class="text-link hover:underline font-medium">&rarr; Full Guide to Singapore Tax Reliefs</a>
+        <a href="/countries/singapore" class="text-link hover:underline font-medium">&rarr; Singapore Country Tax Overview</a>
+      </div>
+    </div>
+
+    <h2 id="faqs" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">6. Frequently Asked Questions</h2>
+    <div class="space-y-4 my-6">
+      {faqSchema.mainEntity.map(faq => (
+        <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+          <h3 class="font-bold text-ink dark:text-on-primary text-base mb-2">{faq.name}</h3>
+          <p class="text-sm leading-relaxed text-body dark:text-muted">{faq.acceptedAnswer.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</BlogLayout>

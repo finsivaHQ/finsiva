@@ -3,7 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const blogsDir = path.join(__dirname, 'pages/blogs');
+const blogsDir = path.join(__dirname, '../pages/blogs');
 
 interface BlogPost {
   title: string;
