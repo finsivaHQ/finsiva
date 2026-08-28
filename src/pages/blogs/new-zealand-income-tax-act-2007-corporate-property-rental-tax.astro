@@ -1,0 +1,215 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "New Zealand Income Tax Act 2007: Corporate, Rental Property, Investment & Law Guide";
+const description = "Legal and practical guide to the NZ Income Tax Act 2007. Covers corporate tax (28%), rental income tax, Bright-Line property rules, statute of limitations, and tax history.";
+const image = "https://images.unsplash.com/photo-1450133064473-71024230f91b?w=1200&q=80";
+const author = "Dr. Hamish Vance, Legal & Tax Policy Scholar";
+const authorBio = "Senior tax lawyer and author specializing in New Zealand statutory tax interpretation, corporate governance, property tax rules under the Income Tax Act 2007, and public revenue economics.";
+const canonical = "https://finsiva.com/blogs/new-zealand-income-tax-act-2007-corporate-property-rental-tax";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is the New Zealand corporate income tax rate?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>The corporate income tax rate in New Zealand is a flat 28% on taxable profits for resident and non-resident companies.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How is rental income taxed in New Zealand?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Net rental income (gross rent received minus allowable expenses such as insurance, rates, repairs, and maintenance) is treated as ordinary income and taxed at the landlord's individual marginal income tax rate (up to 39%).</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is the statute of limitations for IRD tax audits in New Zealand?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Under section 108 of the Tax Administration Act 1994, the standard statute of limitations (time bar) is 4 years from the end of the tax year in which the tax return was filed. However, if a return is fraudulent or wilfully misleading, IRD has no time limit to reassess tax.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "When was income tax first introduced in New Zealand?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Income tax was first introduced in New Zealand in 1891 under the Land and Income Assessment Act. The current governing statute is the Income Tax Act 2007.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is the Bright-Line test for property sales in NZ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>The Bright-Line test treats profit made on the sale of residential property sold within a specified holding period (e.g. 2 years, 5 years, or 10 years depending on acquisition date and legislative updates) as taxable income, unless it qualifies for the main home exemption.</p>"
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="17 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <p class="text-lg leading-relaxed">
+      The statutory foundation of taxation in New Zealand is the <strong>Income Tax Act 2007 (ITA 2007)</strong>. Working alongside the <em>Tax Administration Act 1994</em> and the <em>Goods and Services Tax Act 1985</em>, it sets out the legal rules governing personal income tax, corporate taxation (28%), rental property income, investment withholding taxes, and procedural compliance. This legal guide explores statutory rules, property tax laws, corporate return deadlines, and the historical evolution of NZ tax law.
+    </p>
+
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Table of Contents</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#statutory-framework" class="text-link hover:underline">1. Legislative Framework of the Income Tax Act 2007</a></li>
+        <li><a href="#history-nz-tax" class="text-link hover:underline">2. History of New Zealand Taxation (1891 to Present)</a></li>
+        <li><a href="#corporate-tax" class="text-link hover:underline">3. NZ Corporate Income Tax (28%) & Filing Rules</a></li>
+        <li><a href="#rental-property-tax" class="text-link hover:underline">4. Rental Property Tax & The Bright-Line Rule</a></li>
+        <li><a href="#investment-rwt-fif" class="text-link hover:underline">5. Investment Income, RWT & Foreign Investment Fund (FIF) Rules</a></li>
+        <li><a href="#statute-of-limitations" class="text-link hover:underline">6. IRD Statute of Limitations (4-Year Time Bar)</a></li>
+        <li><a href="#gst-and-revenue-breakdown" class="text-link hover:underline">7. GST (15%) & Government Revenue Breakdown</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">8. Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <h2 id="statutory-framework" class="text-2xl font-semibold text-ink dark:text-on-primary">1. Legislative Framework of the Income Tax Act 2007</h2>
+    <p>
+      The <strong>Income Tax Act 2007</strong> is a comprehensive plain-English codification of New Zealand tax law. It categorizes income into distinct core legal provisions:
+    </p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li><strong>Part C (Income):</strong> Defines income from employment, business profits, property sales, interest, dividends, and royalties.</li>
+      <li><strong>Part D (Deductions):</strong> Governs allowable expenditure and general permission rules (expenses incurred in deriving income).</li>
+      <li><strong>Part E (Timing & Accounting):</strong> Dictates cash vs. accrual accounting methods and tax years.</li>
+      <li><strong>Part L & M (Tax Credits):</strong> Specifies credits for foreign tax paid (FITO), personal rebates, and family support.</li>
+    </ul>
+
+    <h2 id="history-nz-tax" class="text-2xl font-semibold text-ink dark:text-on-primary">2. History of New Zealand Taxation (1891 to Present)</h2>
+    <p>
+      Income tax was first introduced in New Zealand under the <em>Land and Income Assessment Act 1891</em> to replace land tax revenue.
+    </p>
+    <p>
+      Major historic milestones include:
+    </p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li><strong>1958:</strong> Introduction of the PAYE (Pay As You Earn) withholding system.</li>
+      <li><strong>1986:</strong> Landmark tax reforms under the Fourth Labour Government introducing the 15% Goods and Services Tax (GST) and reducing top marginal income tax rates from 66% to 33%.</li>
+      <li><strong>2007:</strong> Enactment of the current <em>Income Tax Act 2007</em>.</li>
+      <li><strong>2021:</strong> Introduction of the 39% top marginal tax bracket for individual earnings above $180,000.</li>
+    </ul>
+
+    <h2 id="corporate-tax" class="text-2xl font-semibold text-ink dark:text-on-primary">3. NZ Corporate Income Tax (28%) & Filing Rules</h2>
+    <p>
+      Companies registered in New Zealand pay a flat <strong>28% corporate income tax rate</strong> on net assessable business profits.
+    </p>
+
+    <div class="overflow-x-auto my-4">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Entity Type</th>
+            <th class="border p-3">Tax Rate</th>
+            <th class="border p-3">Return Form & Filing Deadline</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr><td class="p-3 font-medium">Resident NZ Company</td><td class="p-3 font-bold text-primary">28.0%</td><td class="p-3">Form IR4 (Due March 31 with EOT)</td></tr>
+          <tr><td class="p-3 font-medium">Non-Resident Company</td><td class="p-3 font-bold text-primary">28.0%</td><td class="p-3">Form IR4NR (Due March 31 with EOT)</td></tr>
+          <tr><td class="p-3 font-medium">Trusts (Trustee Income)</td><td class="p-3 font-bold text-primary">39.0%</td><td class="p-3">Form IR6 (Due March 31 with EOT)</td></tr>
+          <tr><td class="p-3 font-medium">Sole Trader / Freelancer</td><td class="p-3">10.5% – 39.0%</td><td class="p-3">Form IR3 (Due July 7 / March 31)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Calculate business and individual taxes using our <a href="/countries/new-zealand/income-tax/income-tax-calculator" class="text-link hover:underline">New Zealand Income Tax Calculator</a>.</p>
+
+    <h2 id="rental-property-tax" class="text-2xl font-semibold text-ink dark:text-on-primary">4. Rental Property Tax & The Bright-Line Rule</h2>
+    <p>
+      Residential rental property owners in New Zealand must report gross rental receipts and pay income tax at their personal marginal rate (10.5% to 39%) on net rental profits.
+    </p>
+
+    <div class="my-6 rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface text-sm space-y-3">
+      <h3 class="text-base font-semibold text-ink dark:text-on-primary">Key Property Tax Rules under ITA 2007:</h3>
+      <ul class="list-disc pl-5 space-y-2">
+        <li><strong>Bright-Line Test:</strong> If residential property (other than the owner's main home) is acquired and sold within a specified statutory holding period (e.g. 2-year or 5-year bright-line rule depending on acquisition date), any profit made on the sale is treated as ordinary taxable income.</li>
+        <li><strong>Ring-Fencing of Rental Losses:</strong> Residential rental property losses cannot be offset against salary or other personal income. Losses are ring-fenced to be carried forward against future rental profits.</li>
+        <li><strong>Deductible Expenses:</strong> Rates, insurance, property management fees, repairs, maintenance, and accounting fees are fully deductible.</li>
+      </ul>
+    </div>
+
+    <h2 id="investment-rwt-fif" class="text-2xl font-semibold text-ink dark:text-on-primary">5. Investment Income, RWT & Foreign Investment Fund (FIF) Rules</h2>
+    <p>
+      Investment income earned by residents is taxed under specialized provisions:
+    </p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li><strong>Resident Withholding Tax (RWT):</strong> Banks and financial institutions deduct RWT on interest paid to residents at elected rates (10.5%, 17.5%, 30%, 33%, or 39%) matching their annual bracket.</li>
+      <li><strong>Foreign Investment Fund (FIF) Rules:</strong> NZ residents holding offshore equity portfolios costing over NZD $50,000 are subject to FIF rules, typically calculated using the <em>Fair Dividend Rate (FDR - 5% of opening market value)</em> or <em>Comparative Value (CV)</em> method.</li>
+    </ul>
+
+    <h2 id="statute-of-limitations" class="text-2xl font-semibold text-ink dark:text-on-primary">6. IRD Statute of Limitations (4-Year Time Bar)</h2>
+    <p>
+      Under section 108 of the <em>Tax Administration Act 1994</em>, IRD is bound by a <strong>4-year statute of limitations (time bar)</strong>. IRD cannot alter an assessment to increase tax payable if 4 years have passed from the end of the tax year in which the return was filed.
+    </p>
+    <p>
+      <em>Exception:</em> The 4-year time bar does not apply if a return is fraudulent, wilfully misleading, or if no return was filed.
+    </p>
+
+    <h2 id="gst-and-revenue-breakdown" class="text-2xl font-semibold text-ink dark:text-on-primary">7. GST (15%) & Government Revenue Breakdown</h2>
+    <p>
+      New Zealand's total tax revenue comes primarily from two main sources:
+    </p>
+    <ol class="list-decimal pl-6 space-y-2">
+      <li><strong>Personal & Corporate Income Tax:</strong> Represents ~60% of total tax receipts.</li>
+      <li><strong>Goods and Services Tax (GST - 15%):</strong> Represents ~30% of government tax receipts. Compute GST using our interactive <a href="/countries/new-zealand/gst/gst-calculator" class="text-link hover:underline">New Zealand GST Calculator</a>.</li>
+    </ol>
+
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">8. Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is the New Zealand corporate income tax rate?</h3>
+        <p>The corporate tax rate is a flat 28% on taxable profits.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">How is rental income taxed in New Zealand?</h3>
+        <p>Net rental profit (rent minus allowed expenses) is taxed as income at the landlord's marginal tax rate (up to 39%).</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is the IRD statute of limitations?</h3>
+        <p>IRD cannot alter a filed return after 4 years, unless the return was fraudulent or misleading.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">When was income tax introduced in NZ?</h3>
+        <p>Income tax was introduced in 1891. The governing statute today is the Income Tax Act 2007.</p>
+      </div>
+    </div>
+
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Explore Related New Zealand Tax Guides & Calculators</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/countries/new-zealand/income-tax/income-tax-calculator" class="text-link hover:underline font-medium">NZ Income Tax Calculator</a>
+        <a href="/countries/new-zealand/gst/gst-calculator" class="text-link hover:underline font-medium">NZ GST Calculator</a>
+        <a href="/blogs/new-zealand-income-tax-rates-brackets-2025-2026" class="text-link hover:underline font-medium">NZ Tax Rates & Brackets Guide</a>
+        <a href="/blogs/is-new-zealand-tax-free-haven-worldwide-tax-explained" class="text-link hover:underline font-medium">Is NZ a Tax Haven? Guide</a>
+        <a href="/blogs/new-zealand-income-tax-for-expats-foreigners-non-residents" class="text-link hover:underline font-medium">NZ Expat & Foreigner Tax Guide</a>
+        <a href="/blogs/new-zealand-tax-treaties-us-australia-uk-canada-comparison" class="text-link hover:underline font-medium">NZ Tax Treaties & Comparison</a>
+        <a href="/blogs/how-to-file-new-zealand-income-tax-return-ird-guide" class="text-link hover:underline font-medium">How to File NZ Tax Return</a>
+        <a href="/countries/new-zealand" class="text-link hover:underline font-medium">Finsiva New Zealand Hub</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>
