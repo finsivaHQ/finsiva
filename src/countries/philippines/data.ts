@@ -134,7 +134,7 @@ export const philippines: Country = {
   ],
   capitalGainsCalculators: [],
   corporateCalculators: [],
-  relatedCountries: ["singapore", "indonesia", "malaysia", "thailand"],
+  relatedCountries: ["singapore", "indonesia", "malaysia", "hong-kong"],
   latestUpdates: [
     { date: "2024-01-01", title: "2024 Tax Rates", description: "Updated tax brackets and VAT regulations for 2024. BIR continues to implement taxpayer-friendly measures." },
     { date: "2024-01-01", title: "TRAIN 2 Tax Reform", description: "Continuing implementation of tax reform measures including rationalized VAT and enhanced withholding tax system." }

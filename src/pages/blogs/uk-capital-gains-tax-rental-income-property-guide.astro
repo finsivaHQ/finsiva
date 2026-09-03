@@ -1,0 +1,156 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "UK Capital Gains & Rental Income Tax Guide 2025/2026: Property, Buy-to-Let & Shares";
+const description = "Comprehensive UK Capital Gains Tax and rental income guide. Learn about CGT rates (18%/24% property), Section 24 mortgage interest relief, 60-day property reporting, and HMRC Let Property Campaign.";
+const image = "/images/blogs/uk-capital-gains-rental-property-tax.svg";
+const author = "Nora Chen";
+const authorBio = "Chartered Property Tax Specialist & Financial Analyst focusing on UK real estate taxation, buy-to-let structuring, and capital gains planning.";
+const lastUpdated = "August 2026";
+const readTime = "13 min read";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the Capital Gains Tax allowance in the UK for 2025/2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The annual Capital Gains Tax exempt allowance is £3,000 per person for the 2025/2026 tax year. Gains above £3,000 are subject to CGT."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the CGT rates for selling residential property in the UK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Capital gains on residential property (second homes and buy-to-let properties) are taxed at 18% for Basic Rate taxpayers and 24% for Higher and Additional Rate taxpayers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Section 24 affect UK buy-to-let landlords?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Section 24 restricts individual landlords from deducting mortgage interest directly from gross rental income. Instead, landlords receive a 20% basic rate tax credit on mortgage interest paid."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the 60-day HMRC rule for reporting property sales?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "UK residents and non-residents who sell UK residential property with a Capital Gains Tax liability must report the sale and pay CGT within 60 calendar days of legal completion."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the HMRC Let Property Campaign?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Let Property Campaign allows residential landlords with undeclared rental income from previous years to voluntarily disclose unpaid tax to HMRC under favorable penalty terms."
+      }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": title,
+  "description": description,
+  "image": image,
+  "author": {
+    "@type": "Person",
+    "name": author,
+    "jobTitle": authorBio
+  },
+  "datePublished": "2026-08-17",
+  "dateModified": "2026-08-17"
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated={lastUpdated}
+  readTime={readTime}
+  faqSchema={faqSchema}
+  articleSchema={articleSchema}
+>
+  <article class="prose prose-lg dark:prose-invert max-w-none">
+    <h1>UK Capital Gains & Rental Income Tax Guide 2025/2026: Property, Buy-to-Let & Shares</h1>
+    
+    <p class="lead">
+      Real estate, stock investments, and property rentals form a central component of wealth creation in the UK. However, navigating <strong>Capital Gains Tax (CGT)</strong> and <strong>Rental Income Tax</strong> rules requires meticulous record-keeping and compliance with <strong>HM Revenue & Customs (HMRC)</strong> guidelines.
+    </p>
+
+    <img src={image} alt="UK Capital Gains and Rental Income Tax Flowchart" class="my-8 w-full rounded-xl border border-hairline shadow-md dark:border-overlay-lighter" loading="lazy" />
+
+    <nav class="my-8 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-bold text-ink dark:text-on-primary mt-0 mb-4">Table of Contents</h2>
+      <ul class="space-y-2 text-sm text-body dark:text-muted">
+        <li><a href="#cgt-rates-allowances" class="hover:underline text-link dark:text-link">1. Capital Gains Tax Rates & £3,000 Allowance</a></li>
+        <li><a href="#rental-income-section-24" class="hover:underline text-link dark:text-link">2. Rental Income Tax & Section 24 Mortgage Relief</a></li>
+        <li><a href="#60-day-reporting" class="hover:underline text-link dark:text-link">3. HMRC 60-Day CGT Property Reporting</a></li>
+        <li><a href="#let-property-campaign" class="hover:underline text-link dark:text-link">4. HMRC Let Property Campaign & Disclosure</a></li>
+        <li><a href="#gains-life-insurance" class="hover:underline text-link dark:text-link">5. Gains on Life Insurance Policies & Shares</a></li>
+        <li><a href="#faqs" class="hover:underline text-link dark:text-link">6. Frequently Asked Questions (FAQs)</a></li>
+      </ul>
+    </nav>
+
+    <h2 id="cgt-rates-allowances">1. Capital Gains Tax Rates & £3,000 Allowance</h2>
+    <p>
+      For the 2025/2026 tax year, the annual tax-free <a href="/knowledge/glossary/uk-capital-gains-allowance" class="text-link hover:underline dark:text-link">Capital Gains Allowance</a> is <strong>£3,000</strong>. Net gains above £3,000 are taxed based on your total income:
+    </p>
+    <ul>
+      <li><strong>Standard Assets (Shares, Crypto, Bonds):</strong> 10% for Basic Rate taxpayers; 20% for Higher/Additional Rate taxpayers.</li>
+      <li><strong>Residential Property (Buy-to-Let, Second Homes):</strong> 18% for Basic Rate taxpayers; 24% for Higher/Additional Rate taxpayers.</li>
+    </ul>
+
+    <h2 id="rental-income-section-24">2. Rental Income Tax & Section 24 Mortgage Relief</h2>
+    <p>
+      Individual landlords are subject to <a href="/knowledge/glossary/uk-section-24-property-tax" class="text-link hover:underline dark:text-link">Section 24 rules</a>. Instead of deducting mortgage interest directly from gross rent, landlords receive a <strong>20% basic rate tax credit</strong>.
+    </p>
+
+    <h2 id="60-day-reporting">3. HMRC 60-Day CGT Property Reporting</h2>
+    <p>
+      Disposing of a UK residential property resulting in CGT must be reported online to HMRC within <strong>60 days of completion</strong>. Late submissions trigger mandatory £100 fines plus interest.
+    </p>
+
+    <h2 id="let-property-campaign">4. HMRC Let Property Campaign & Disclosure</h2>
+    <p>
+      Landlords with historical undeclared rental income can normalize their tax status through the voluntary <strong>Let Property Campaign</strong>, minimizing penalties.
+    </p>
+
+    <h2 id="gains-life-insurance">5. Gains on Life Insurance Policies & Shares</h2>
+    <p>
+      Gains realized from UK life insurance policies (chargeable event gains) are treated as income rather than capital gains, benefiting from top-slicing relief to prevent unfair tax spikes into higher bands.
+    </p>
+
+    <h2 id="faqs">6. Frequently Asked Questions (FAQs)</h2>
+    <div class="space-y-4 my-6">
+      {faqSchema.mainEntity.map(faq => (
+        <div class="rounded-xl border border-hairline p-5 dark:border-overlay-lighter bg-canvas dark:bg-surface">
+          <h3 class="text-lg font-bold text-ink dark:text-on-primary m-0">{faq.name}</h3>
+          <p class="text-body dark:text-muted mt-2 mb-0">{faq.acceptedAnswer.text}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-bold text-ink dark:text-on-primary mt-0 mb-3">Explore Related Property Tax Resources</h3>
+      <ul class="space-y-2 mb-0">
+        <li><a href="/countries/united-kingdom/income-tax/income-tax-calculator" class="text-link hover:underline dark:text-link font-semibold">UK Income Tax Calculator</a></li>
+        <li><a href="/knowledge/uk-capital-gains-rental-property-tax-guide" class="text-link hover:underline dark:text-link">UK Capital Gains & Rental Property Guide</a></li>
+        <li><a href="/knowledge/glossary/uk-capital-gains-allowance" class="text-link hover:underline dark:text-link">Glossary: Capital Gains Allowance</a></li>
+        <li><a href="/knowledge/glossary/uk-section-24-property-tax" class="text-link hover:underline dark:text-link">Glossary: Section 24 Property Tax</a></li>
+      </ul>
+    </div>
+  </article>
+</BlogLayout>

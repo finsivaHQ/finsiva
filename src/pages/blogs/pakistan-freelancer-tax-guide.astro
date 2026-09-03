@@ -1,16 +1,66 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
 
-const title = "Pakistan Freelancer Tax Guide: Income Tax for Freelancers and Sole Proprietors";
-const description = "Pakistan freelancer tax guide. Learn tax obligations for freelancers, sole proprietors, and gig workers, progressive tax rates, deductions, and use our business income tax calculator Pakistan.";
-const image = "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1200&q=80";
-const author = "Hassan Raza";
-const authorBio = "Freelance economy expert focusing on IT sector taxation and digital remittances.";
-const lastUpdated = "July 2026";
-const readTime = "10 min read";
+const title = "Pakistan Freelancer Tax Guide 2026: IT Export Concessions & Rates";
+const description = "Complete guide to tax for freelancers and IT exporters in Pakistan. Learn Section 154A reduced 0.25% withholding tax, PSEB registration, Fiverr/Upwork earnings tax, and Google Adsense filing.";
+const image = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80";
+const canonical = "https://finsiva.com/blogs/pakistan-freelancer-tax-guide";
+const author = "Zainab Hussain";
+const authorBio = "Technology & IT export tax advisor helping software exporters, digital creators, and freelancers optimize FBR tax compliance.";
+const lastUpdated = "August 2026";
+const readTime = "15 min read";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the tax rate on foreign IT export earnings for freelancers in Pakistan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Under Section 154A of the Income Tax Ordinance 2001, foreign IT export earnings and IT-enabled services (ITES) remitted through official banking channels enjoy a reduced final withholding tax rate of 0.25% for registered exporters."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is Fiverr and Upwork income taxed in Pakistan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Income received from Fiverr, Upwork, Toptal, or overseas clients into Pakistani bank accounts via approved channels (such as Payoneer or SWIFT) is treated as foreign IT export income under Section 154A."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Google Adsense earnings subject to income tax in Pakistan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Google Adsense remittances received in USD via official banking channels qualify as foreign export of digital services, subject to Section 154A withholding tax."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are IT export services exempt from sales tax in Pakistan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Export of IT services and software outside Pakistan is zero-rated / exempt from provincial sales tax across Punjab (PRA), Sindh (SRB), KPK (KPRA), and ICT."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is PSEB registration recommended for Pakistani freelancers?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Registering with the Pakistan Software Export Board (PSEB) qualifies freelancers and IT companies for the reduced 0.25% final tax regime under Section 154A, commercial bank merchant accounts, and software park subsidies."
+      }
+    }
+  ]
+};
 ---
 
-<BlogLayout title={title} description={description} image={image} author={author} authorBio={authorBio} lastUpdated={lastUpdated} readTime={readTime}>
+<BlogLayout title={title} description={description} image={image} canonical={canonical} author={author} authorBio={authorBio} lastUpdated={lastUpdated} readTime={readTime}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <div class="min-h-screen bg-canvas dark:bg-canvas">
     <main class="min-h-screen">
       <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
@@ -23,163 +73,107 @@ const readTime = "10 min read";
         </nav>
 
         <article class="prose max-w-none">
-          <h1 class="text-4xl font-bold text-ink mb-4 dark:text-on-primary">Pakistan Freelancer Tax Guide: Income Tax for Freelancers and Sole Proprietors</h1>
-          <p class="text-lg text-body dark:text-muted">Last updated: July 2026 | 10 min read</p>
+          <h1 class="text-3xl sm:text-4xl font-bold text-ink mb-4 dark:text-on-primary">Pakistan Freelancer Tax Guide 2026: IT Export Concessions & Rates</h1>
+          <p class="text-lg text-body dark:text-muted">Last updated: August 2026 | Verified FBR Regulations | 15 min read</p>
 
-            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80" alt="Business meeting discussing freelancer taxation" class="mb-6 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80" alt="Pakistani IT freelancers working on laptops in a modern software tech office" class="mb-6 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
 
-            <div class="mt-8 space-y-6 text-body dark:text-muted">
-            <p>Freelancing has exploded in Pakistan, with software developers, graphic designers, writers, and virtual assistants earning locally and internationally. However, many freelancers remain unclear about their tax obligations. In Pakistan, freelancers and sole proprietors are generally taxed under the business income tax slabs unless their salary income exceeds 75% of their total income. Understanding these rules, allowable deductions, and the final tax regime for export income is essential for compliance and maximizing after-tax earnings.</p>
+          <!-- Early Calculator CTA -->
+          <div class="my-6 p-6 rounded-2xl border border-primary/30 bg-primary/5 dark:border-primary/20 dark:bg-primary/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <h3 class="text-xl font-bold text-ink dark:text-on-primary">Calculate Your Pakistan Freelancer & IT Tax</h3>
+              <p class="text-sm text-body dark:text-muted mt-1">Estimate Section 154A 0.25% export tax, business slabs, and net earnings.</p>
+            </div>
+            <a href="/countries/pakistan/income-tax/business-income-tax-calculator" class="btn btn-primary text-sm font-semibold shrink-0 px-5 py-2.5">
+              Launch Business Tax Calculator →
+            </a>
+          </div>
 
-            <p>This guide explains freelancer tax rates in Pakistan, deductions you can claim, advance tax payments, and how to use our <a href="/countries/pakistan/income-tax/business-income-tax-calculator">business income tax calculator Pakistan</a> to estimate your liability. You can also verify the latest rules on <a href="https://www.fbr.gov.pk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">fbr.gov.pk</a>.</p>
+          <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
+            <p>
+              Pakistan has emerged as one of the world's largest IT freelancing hubs. Understanding <strong>freelance tax pakistan</strong>, <strong>tax on freelancers in pakistan 2026</strong>, and statutory export incentives is crucial for software engineers, digital agency owners, and online creators.
+            </p>
+            <p>
+              The Federal Board of Revenue (FBR) provides highly attractive tax concessions under <strong>Section 154A</strong> of the <em>Income Tax Ordinance, 2001</em> to promote foreign exchange earnings from software export and IT-enabled services (ITES).
+            </p>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">How Freelancers Are Taxed in Pakistan</h2>
-            <p>Freelancers in Pakistan fall into two main tax categories depending on where their income originates:</p>
-            <ul class="list-disc pl-6 space-y-2">
-              <li><strong>Local clients (PKR income):</strong> Taxed under the standard business income tax slabs, same as sole proprietors and AOPs.</li>
-              <li><strong>Foreign clients (export income):</strong> Eligible for the final tax regime under Section 154A if at least 80% of foreign remittances arrive through official banking channels.</li>
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">1. Section 154A IT Export Tax Concessions</h2>
+            <p>
+              Under Section 154A, foreign currency proceeds derived from the export of computer software, IT services, or ITES remitted into Pakistan through banking channels are taxed under a concessional final tax regime:
+            </p>
+
+            <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+              <table class="w-full text-left text-sm">
+                <thead class="bg-canvas-soft border-b border-hairline dark:bg-surface/80 dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+                  <tr>
+                    <th class="p-3">Export Category</th>
+                    <th class="p-3">PSEB Registration Status</th>
+                    <th class="p-3">FBR Final Withholding Tax Rate</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+                  <tr>
+                    <td class="p-3 font-medium">Software Development & IT Export Services</td>
+                    <td class="p-3 font-bold text-emerald-600">Registered with PSEB</td>
+                    <td class="p-3 font-bold text-primary dark:text-on-primary">0.25% Final Tax</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-medium">IT-Enabled Services (ITES / BPO / Call Centers)</td>
+                    <td class="p-3 font-bold text-emerald-600">Registered with PSEB</td>
+                    <td class="p-3 font-bold text-primary dark:text-on-primary">0.25% Final Tax</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-medium">Unregistered IT Exporters / Freelancers</td>
+                    <td class="p-3 font-bold text-rose-600">Unregistered</td>
+                    <td class="p-3 font-medium">1% Final Tax (or Business Slabs)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">2. Tax Rules for Fiverr, Upwork & Google Adsense Earnings</h2>
+            <p>
+              Earnings generated from global freelance platforms receive specific tax treatment:
+            </p>
+            <ul>
+              <li><strong>Fiverr & Upwork Tax in Pakistan</strong>: Withdrawals routed via Payoneer or direct SWIFT bank wire into a Pakistani Rupee account are automatically categorized under Purpose Code <code>8443</code> (IT Export), qualifying for 0.25% withholding tax.</li>
+              <li><strong>Google Adsense Tax Information Pakistan</strong>: Adsense publishers receiving USD payouts for YouTube or website advertising proceeds enjoy zero-rated export status under Section 154A.</li>
+              <li><strong>Domestic Freelance Work</strong>: Income earned from clients located inside Pakistan does not qualify for Section 154A export concessions and is taxed under normal business income tax slabs.</li>
             </ul>
-            <p>If you earn exclusively from local Pakistani clients, your net taxable income is calculated by subtracting allowable business expenses from your gross revenue, then applying the progressive business slab rates. If you earn from foreign clients, your export income may qualify for a final flat tax ranging from <strong>0.25%</strong> to <strong>1%</strong> depending on your filer status and PSEB registration.</p>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Business Income Tax Slabs for Freelancers (FY 2024/25)</h2>
-            <p>For freelancers with local client income, the FBR applies progressive business slabs to net income after deductions. The exemption threshold is <strong>PKR 600,000</strong>.</p>
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">3. Sales Tax on IT Services & Software</h2>
+            <p>
+              Export of computer software and IT services outside Pakistan is <strong>zero-rated / exempt from sales tax</strong> across all provincial revenue boards (PRA, SRB, KPRA, BRA) and federal GST in ICT. Domestic sales of software and IT services inside Pakistan incur provincial sales tax ranging from 5% to 13%.
+            </p>
 
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Business Individual and AOP Tax Bands</h3>
-            <ul class="list-disc pl-6 space-y-2">
-              <li><strong>Up to PKR 600,000:</strong> 0%</li>
-              <li><strong>PKR 600,001 to 1,200,000:</strong> 15% on excess over PKR 600,000</li>
-              <li><strong>PKR 1,200,001 to 1,600,000:</strong> PKR 90,000 + 20% on excess over PKR 1,200,000</li>
-              <li><strong>PKR 1,600,001 to 3,200,000:</strong> PKR 170,000 + 30% on excess over PKR 1,600,000</li>
-              <li><strong>PKR 3,200,001 to 5,600,000:</strong> PKR 650,000 + 40% on excess over PKR 3,200,000</li>
-              <li><strong>Above PKR 5,600,000:</strong> PKR 1,610,000 + 45% on excess over PKR 5,600,000</li>
-            </ul>
-            <p>Because these rates are high, claiming every legitimate deduction is critical. Use our <a href="/countries/pakistan/income-tax/business-income-tax-calculator">business income tax calculator Pakistan</a> to model how expenses and deductions lower your tax liability.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Freelancer Tax Deductions</h2>
-            <p>Freelancers can deduct genuine business expenses from their gross income before applying tax slabs. Common deductible expenses include:</p>
-            <ul class="list-disc pl-6 space-y-2">
-              <li><strong>Office and internet costs:</strong> Rent for a home office, internet bills, electricity, and utility expenses apportioned for work use.</li>
-              <li><strong>Equipment and software:</strong> Laptops, monitors, design tools, software licenses, and domain hosting fees.</li>
-              <li><strong>Professional development:</strong> Online courses, certifications, workshops, and conferences.</li>
-              <li><strong>Travel and communication:</strong> Business travel, fuel, and mobile bills connected to client work.</li>
-              <li><strong>Outsourcing and subcontracting:</strong> Payments to other freelancers or agencies for project assistance.</li>
-              <li><strong>Bank fees and taxes:</strong> Payment processing fees and withholding taxes already paid.</li>
-            </ul>
-            <p>Section 154A export income is taxed on a final, gross basis with no deductions allowed. Local client income, however, allows full expense claims. Keep detailed invoices and receipts for all expenses to substantiate your deductions during an FBR audit.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">PSEB Registration and Export Income</h2>
-            <p>The Pakistan Software Export Board (PSEB) offers freelancers a dramatically reduced tax rate on export income. PSEB-registered freelancers pay only <strong>0.25%</strong> final tax on foreign remittances, while unregistered freelancers pay <strong>1%</strong>. Registration costs PKR 5,000 initially and PKR 3,500 annually for renewal, and it is valid for one year.</p>
-            <p>To qualify for the Section 154A rate:</p>
-            <ul class="list-disc pl-6 space-y-2">
-              <li>At least 80% of your export income must arrive through official Pakistani banking channels.</li>
-              <li>Your services must qualify as IT or IT-enabled services.</li>
-              <li>You must have a valid NTN and maintain proper financial records.</li>
-            </ul>
-            <p>Even if you earn in foreign currency through platforms like Upwork or Fiverr, routing the funds through a Pakistani bank account helps you qualify for the reduced rate and stay compliant with FBR rules.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Advance Tax and Quarterly Payments</h2>
-            <p>Freelancers without employer withholding must manage their own tax payments. If your tax liability in the prior year exceeded <strong>PKR 1 million</strong>, you must pay advance tax in quarterly installments. For most freelancers, the tax is self-assessed at year-end and paid by September 30. To avoid a large lump-sum payment, consider setting aside 25% to 30% of every invoice in a separate savings account.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Filing as a Freelancer on IRIS</h2>
-            <p>Registering as a freelancer on IRIS is straightforward. If you do not already have an NTN, complete e-enrollment on <a href="https://iris.fbr.gov.pk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">iris.fbr.gov.pk</a>. Once registered:</p>
-            <ul class="list-disc pl-6 space-y-2">
-              <li>Log in and select "Income Tax Return."</li>
-              <li>Declare your business income under the appropriate business head.</li>
-              <li>List all allowable business expenses and deductions.</li>
-              <li>Declare any foreign remittances under Section 154A if eligible.</li>
-              <li>Submit by September 30 to remain on the Active Taxpayer List.</li>
-            </ul>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Conclusion</h2>
-            <p>Freelancer tax in Pakistan is manageable once you understand the distinction between local and export income, claim every eligible deduction, and file on time. PSEB registration offers enormous savings on foreign income, while maintaining your ATL status reduces withholding taxes on every major transaction. Use our <a href="/countries/pakistan/income-tax/business-income-tax-calculator">business income tax calculator Pakistan</a> to estimate your liability, and explore our <a href="/blogs/pakistan-tax-filing-guide">Pakistan tax filing guide</a> to complete your IRIS submission.</p>
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">4. Step-by-Step PSEB Registration for Exporters</h2>
+            <ol class="list-decimal pl-6 space-y-2">
+              <li>Visit the Pakistan Software Export Board portal (<a href="https://pseb.org.pk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">pseb.org.pk</a>).</li>
+              <li>Submit your NTN, CNIC, business bank account statement, and company registration documents.</li>
+              <li>Obtain a PSEB Freelancer / IT Company Registration Certificate.</li>
+              <li>Submit the PSEB certificate to your commercial bank branch to ensure automatic application of the 0.25% Section 154A withholding rate.</li>
+            </ol>
+            <p>
+              Read our <a href="/blogs/pakistan-tax-filing-guide" class="text-link hover:underline">Pakistan Tax Filing Guide</a> or visit our <a href="/knowledge/pakistan-income-tax" class="text-link hover:underline">Pakistan Income Tax Knowledge Hub</a>.
+            </p>
 
             <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Frequently Asked Questions</h2>
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Are freelancers in Pakistan taxed under salaried or business slabs?</h3>
-            <p>Freelancers are generally taxed under the business individual slabs unless their salary income exceeds 75% of their total income. Most freelancers earning from local clients fall under the business slabs starting at 15% above PKR 600,000.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">What is the freelancer tax rate for export income?</h3>
-            <p>Export income under Section 154A is taxed at a final rate of 0.25% for PSEB-registered filers and 1% for non-PSEB filers. This applies only to foreign remittances received through official banking channels.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">What deductions can freelancers claim?</h3>
-            <p>Freelancers can deduct internet bills, software licenses, home office rent, professional development costs, travel, outreach subcontracting fees, and other legitimate business expenses from their gross income before applying tax slabs.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Do I need an NTN to work as a freelancer in Pakistan?</h3>
-            <p>Yes. Registering for an NTN through IRIS is mandatory for filing taxes, receiving foreign remittances through official channels, and avoiding non-filer withholding taxes. You can register online for free at <a href="https://iris.fbr.gov.pk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">iris.fbr.gov.pk</a>.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">How do I register with PSEB as a freelancer?</h3>
-            <p>Visit the PSEB portal, submit your NTN, CNIC, and bank account maintenance certificate, and pay the registration fee. After approval, you can enjoy the 0.25% tax rate on foreign-sourced IT income.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">What happens if a freelancer does not file a tax return?</h3>
-            <p>Non-filing results in removal from the Active Taxpayer List, higher withholding taxes, potential penalties, and difficulties with visa applications, loans, and government contracts. Filing even a nil return protects your financial standing.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Can I use a freelancer tax calculator in Pakistan?</h3>
-            <p>Yes. Our <a href="/countries/pakistan/income-tax/business-income-tax-calculator">business income tax calculator Pakistan</a> lets you enter gross income, expenses, and deductions to estimate your final tax liability accurately under the latest FBR slabs.</p>
           </div>
 
-          <div class="mt-12">
-            <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Related Calculators</h2>
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              <a href="/countries/pakistan/income-tax/business-income-tax-calculator" class="block rounded border p-4 hover:border-primary transition">Business Income Tax Calculator</a>
-              <a href="/countries/pakistan/income-tax/income-tax-calculator" class="block rounded border p-4 hover:border-primary transition">Pakistan Income Tax Calculator</a>
-              <a href="/countries/pakistan" class="block rounded border p-4 hover:border-primary transition">More Pakistan Calculators</a>
-            </div>
+          <div class="mt-8 space-y-4">
+            {faqSchema.mainEntity.map(faq => (
+              <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+                <h3 class="text-lg font-semibold text-ink dark:text-on-primary">{faq.name}</h3>
+                <p class="mt-2 text-sm text-body dark:text-muted leading-relaxed">{faq.acceptedAnswer.text}</p>
+              </div>
+            ))}
           </div>
 
-          <div class="mt-12">
-            <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Related Articles</h2>
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              <a href="/blogs/pakistan-income-tax-guide" class="block rounded border p-4 hover:border-primary transition">Pakistan Income Tax Guide</a>
-              <a href="/blogs/pakistan-tax-filing-guide" class="block rounded border p-4 hover:border-primary transition">Pakistan Tax Filing Guide</a>
-              <a href="/blogs/pakistan-fbr-tax-slabs" class="block rounded border p-4 hover:border-primary transition">FBR Tax Slabs 2024/25</a>
-            </div>
+          <div class="mt-12 p-6 rounded-2xl bg-canvas-soft border border-hairline dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="text-xl font-bold text-ink dark:text-on-primary">About the Author</h3>
+            <p class="mt-2 text-sm font-semibold text-primary dark:text-on-primary">{author}</p>
+            <p class="mt-1 text-sm text-body dark:text-muted">{authorBio}</p>
           </div>
-
-          <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Interesting Facts</h2>
-          <ul class="list-disc pl-6 space-y-2 text-body dark:text-muted">
-            <li>Most Pakistani freelancers are taxed under the business income tax slabs, with rates starting at 15% above the PKR 600,000 exemption threshold.</li>
-            <li>PSEB-registered freelancers pay only 0.25% tax on export income under Section 154A, compared to 1% for unregistered freelancers.</li>
-            <li>At least 80% of foreign-sourced income must be received through official Pakistani banking channels to qualify for the reduced export tax rate.</li>
-            <li>Freelancers with a prior-year tax liability exceeding PKR 1 million are required to pay advance tax in quarterly installments.</li>
-            <li>PSEB registration costs PKR 5,000 initially and PKR 3,500 for annual renewal, valid for one year.</li>
-          </ul>
-
-          <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Quick Quiz</h2>
-          <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
-            <p class="font-medium text-ink dark:text-on-primary">1. Under which tax system are most Pakistani freelancers taxed for local client income?</p>
-            <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
-              <li>A) Salaried income slabs</li>
-              <li>B) Business income slabs</li>
-              <li>C) Final tax regime only</li>
-              <li>D) Flat 10% rate</li>
-            </ul>
-          </div>
-          <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
-            <p class="font-medium text-ink dark:text-on-primary">2. What is the export income tax rate for PSEB-registered freelancers?</p>
-            <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
-              <li>A) 0.25%</li>
-              <li>B) 0.50%</li>
-              <li>C) 1%</li>
-              <li>D) 5%</li>
-            </ul>
-          </div>
-          <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
-            <p class="font-medium text-ink dark:text-on-primary">3. What percentage of foreign-sourced income must arrive through official banking channels to qualify for Section 154A?</p>
-            <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
-              <li>A) 50%</li>
-              <li>B) 70%</li>
-              <li>C) 80%</li>
-              <li>D) 90%</li>
-            </ul>
-          </div>
-
-          <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Further Reading</h2>
-          <ul class="list-disc pl-6 space-y-2 text-body dark:text-muted">
-            <li><a href="https://www.fbr.gov.pk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Federal Board of Revenue (FBR) – Official Website</a></li>
-            <li><a href="https://psbe.gov.pk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Pakistan Software Export Board (PSEB) – Registration and Guidelines</a></li>
-            <li><a href="https://en.wikipedia.org/wiki/Taxation_in_Pakistan" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Taxation in Pakistan – Wikipedia</a></li>
-            <li><a href="https://iris.fbr.gov.pk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">FBR IRIS Portal – Freelancer Filing Guide</a></li>
-          </ul>
-
         </article>
       </div>
     </main>

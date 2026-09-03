@@ -10,7 +10,7 @@ const comparisonPages = [
     title: "Hong Kong vs Singapore Tax Comparison 2026",
     countryA: "Hong Kong 🇭🇰",
     countryB: "Singapore 🇸🇬",
-    highlights: ["Max Rate: HK 17% vs SG 24%", "Capital Gains: Both 0%", "Territorial Basis vs Remittance Rules"],
+    highlights: ["Max Progressive Rate: HK 17% vs SG 24%", "Capital Gains Tax: Both 0% Exempt", "Territorial Tax Basis vs Remittance Exemption"],
     category: "Asian Financial Hubs"
   },
   {
@@ -18,7 +18,7 @@ const comparisonPages = [
     title: "United States vs United Kingdom Expat Tax Comparison",
     countryA: "United States 🇺🇸",
     countryB: "United Kingdom 🇬🇧",
-    highlights: ["Worldwide IRS Taxing vs Statutory Residency", "FEIE / FTC Credits vs UK Remittance Basis", "State Taxes vs UK National Insurance"],
+    highlights: ["Worldwide IRS Taxation vs Statutory Residency", "FEIE ($126k+) / FTC Credits vs UK Tax Relief", "State Taxes vs UK National Insurance (8%)"],
     category: "Western Hubs"
   },
   {
@@ -26,13 +26,21 @@ const comparisonPages = [
     title: "India vs Singapore NRI Tax Comparison Guide",
     countryA: "India 🇮🇳",
     countryB: "Singapore 🇸🇬",
-    highlights: ["NRI Tax Slabs vs SG Non-Resident 15%", "DTAA Tax Credit Rules", "Capital Gains & Foreign Remittance"],
+    highlights: ["NRI Tax Slabs vs SG Non-Resident 15%", "DTAA Foreign Tax Credit & Form 67", "Capital Gains & NRE Tax-Free Accounts"],
     category: "NRI & Emerging Markets"
   }
 ];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: title,
+  description: description,
+  url: "https://finsiva.com/compare"
+};
 ---
 
-<Layout title={title} description={description}>
+<Layout title={title} description={description} schema={schema}>
   <div class="min-h-screen bg-canvas dark:bg-canvas">
     <main class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
       <!-- Breadcrumbs -->
@@ -47,15 +55,15 @@ const comparisonPages = [
       <!-- Header -->
       <div class="mb-12 text-center sm:text-left">
         <h1 class="text-3xl font-extrabold tracking-tight text-ink sm:text-5xl dark:text-on-primary">
-          Expat Tax Comparison Hub
+          Expat & Global Tax Comparison Hub
         </h1>
-        <p class="mt-4 max-w-3xl text-lg text-body dark:text-muted">
-          Compare income tax brackets, capital gains, corporate rates, and expat allowances side-by-side between top global jurisdictions.
+        <p class="mt-4 max-w-3xl text-lg text-body dark:text-muted leading-relaxed">
+          Compare personal income tax brackets, capital gains exemptions, corporate tax incentives, and expat residency requirements side-by-side across major international financial jurisdictions.
         </p>
       </div>
 
       <!-- Comparison Cards Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         {comparisonPages.map(page => (
           <a href={`/compare/${page.slug}`} class="group rounded-2xl border border-hairline bg-canvas p-6 shadow-sm transition-all hover:border-primary hover:shadow-lg dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary flex flex-col justify-between">
             <div>
@@ -91,6 +99,41 @@ const comparisonPages = [
           </a>
         ))}
       </div>
+
+      <!-- Educational Guidance Section -->
+      <section class="rounded-2xl border border-hairline bg-canvas-soft p-8 dark:border-overlay-lighter dark:bg-surface mb-16">
+        <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">Key Factors When Comparing Global Tax Jurisdictions</h2>
+        <p class="text-body dark:text-muted mb-6 leading-relaxed">
+          Evaluating where to live, work remotely, or incorporate a business requires analyzing more than just headline income tax rates. Key legal and financial mechanisms significantly alter effective tax liabilities:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-canvas">
+            <h3 class="font-bold text-ink dark:text-on-primary mb-2">1. Taxing Principle (Citizenship vs. Residency)</h3>
+            <p class="text-sm text-body dark:text-muted">Most nations (UK, Singapore, India, HK) tax individuals based on physical residence. The US is an exception, taxing citizens worldwide regardless of domicile.</p>
+          </div>
+          <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-canvas">
+            <h3 class="font-bold text-ink dark:text-on-primary mb-2">2. Territorial vs. Worldwide System</h3>
+            <p class="text-sm text-body dark:text-muted">Territorial jurisdictions like Hong Kong tax only income earned locally. Remittance-based systems tax foreign income only when brought into the country.</p>
+          </div>
+          <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-canvas">
+            <h3 class="font-bold text-ink dark:text-on-primary mb-2">3. Social Security & Mandatory Contributions</h3>
+            <p class="text-sm text-body dark:text-muted">Mandatory payroll contributions like US FICA, UK National Insurance, or HK MPF alter take-home pay independently of income tax rates.</p>
+          </div>
+          <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-canvas">
+            <h3 class="font-bold text-ink dark:text-on-primary mb-2">4. Double Taxation Agreements (DTAs)</h3>
+            <p class="text-sm text-body dark:text-muted">Bilateral DTAs clarify tie-breaker residency rules and offer Foreign Tax Credits (FTC) to prevent paying double tax on cross-border earnings.</p>
+          </div>
+          <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-canvas">
+            <h3 class="font-bold text-ink dark:text-on-primary mb-2">5. Capital Gains & Dividend Exemption</h3>
+            <p class="text-sm text-body dark:text-muted">Jurisdictions like Hong Kong and Singapore levy 0% capital gains tax on investments, whereas India and the US apply specific holding period rates.</p>
+          </div>
+          <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-canvas">
+            <h3 class="font-bold text-ink dark:text-on-primary mb-2">6. Indirect & Consumption Taxes</h3>
+            <p class="text-sm text-body dark:text-muted">Value Added Tax (VAT) or Goods & Services Tax (GST) range from 0% in Hong Kong to 9% in Singapore and up to 20% in the UK, impacting cost of living.</p>
+          </div>
+        </div>
+      </section>
     </main>
   </div>
 </Layout>

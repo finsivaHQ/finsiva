@@ -10,7 +10,11 @@ const taxCategories: TaxCategory[] = [
       { slug: "income-tax-calculator", name: "Income Tax Calculator", description: "Calculate your UK income tax." }
     ],
     guides: [
-      { slug: "tax-residency-guide", title: "Tax Residency Guide", description: "Understanding UK tax residency and domicile rules." }
+      { slug: "tax-residency-guide", title: "Tax Residency Guide", description: "Understanding UK tax residency and domicile rules." },
+      { slug: "uk-income-tax-rates-brackets-guide", title: "UK Income Tax Rates & Brackets Guide", description: "Complete breakdown of UK tax bands, personal allowance, and PAYE tax calculation." },
+      { slug: "uk-expat-foreign-income-tax-guide", title: "UK Expat & Foreign Income Tax Guide", description: "Tax rules for US expats, foreign income, double tax treaties, and non-residents." },
+      { slug: "uk-capital-gains-rental-property-tax-guide", title: "UK Capital Gains & Rental Property Guide", description: "Tax rules for property sales, buy-to-let mortgage relief, and rental income." },
+      { slug: "uk-self-assessment-freelancer-dividend-tax-guide", title: "UK Self Assessment & Freelancer Guide", description: "Tax guide for sole traders, freelancers, company directors, and dividend tax." }
     ],
     faqs: [
       { question: "What is the personal allowance?", answer: "£12,570 for 2024/25 - income below this is tax-free." }
@@ -206,7 +210,7 @@ export const unitedKingdom: Country = {
   ],
   capitalGainsCalculators: [],
   corporateCalculators: [],
-  relatedCountries: ["united-states", "canada", "australia", "new-zealand"],
+  relatedCountries: ["united-states", "singapore", "new-zealand", "india"],
   latestUpdates: [
     { date: "2024-04-06", title: "2024/25 Tax Year Updates", description: "New tax rates and thresholds for the 2024/25 tax year including updated personal allowance and NI thresholds." },
     { date: "2024-01-01", title: "VAT Threshold Changes", description: "HMRC updated VAT registration threshold and enforcement policies for the new year." },

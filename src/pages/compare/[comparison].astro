@@ -14,17 +14,41 @@ const { comparison } = Astro.params;
 const dataMap: Record<string, any> = {
   "hong-kong-vs-singapore": {
     title: "Hong Kong vs Singapore Tax Comparison 2026/27: Rates, Capital Gains & Expat Rules",
-    description: "Detailed side-by-side tax comparison between Hong Kong and Singapore for expats and remote workers. Compare income tax rates (17% vs 24%), 0% capital gains, territorial tax rules, and MPF vs CPF.",
+    description: "Comprehensive side-by-side tax comparison between Hong Kong and Singapore for expats, business owners, and remote workers. Compare income tax rates (17% vs 24%), 0% capital gains, territorial tax rules, and MPF vs CPF.",
     countryA: { name: "Hong Kong", flag: "🇭🇰", currency: "HK$" },
     countryB: { name: "Singapore", flag: "🇸🇬", currency: "S$" },
-    summary: "Both Hong Kong and Singapore are tier-1 low-tax Asian financial hubs. Hong Kong caps personal salaries tax at 17% progressive or 15% standard rate, while Singapore progressive rates range from 0% to 24%. Neither levies capital gains tax.",
+    summary: "Both Hong Kong and Singapore are premier low-tax Asian financial hubs. Hong Kong caps personal salaries tax at 17% progressive or 15% standard rate, while Singapore's progressive rates range from 0% to 24%. Neither jurisdiction levies capital gains, dividend, or inheritance taxes, making both prime choices for global talent and international business structures.",
     matrix: [
-      { feature: "Top Income Tax Rate", countryA: "17% (or 15% Standard Rate)", countryB: "24% (on income > S$1M)" },
+      { feature: "Top Income Tax Rate", countryA: "17% (or 15% Standard Rate)", countryB: "24% (on income > S$500k)" },
       { feature: "Capital Gains Tax", countryA: "0% (Completely Exempt)", countryB: "0% (Completely Exempt)" },
-      { feature: "Corporate Tax Rate", countryA: "8.25% / 16.5%", countryB: "17% (Partial Exemption)" },
+      { feature: "Corporate Tax Rate", countryA: "8.25% (First HK$2M) / 16.5%", countryB: "17% (with Partial Tax Exemption)" },
       { feature: "Tax System Basis", countryA: "Strict Territorial Basis", countryB: "Territorial + Remittance Rules" },
       { feature: "Mandatory Pension Contribution", countryA: "MPF (5%, max HK$1,500/mo)", countryB: "CPF (up to 20% for Citizens/PRs)" },
-      { feature: "Dividend / Interest Tax", countryA: "0%", countryB: "0%" }
+      { feature: "Dividend & Interest Tax", countryA: "0% Withholding / 0% Personal", countryB: "0% Single-Tier System" },
+      { feature: "Sales Tax / VAT / GST", countryA: "0% (No Sales Tax or VAT)", countryB: "9% GST" }
+    ],
+    sections: [
+      {
+        title: "Tax Residency Criteria & Physical Presence Rules",
+        content: "In Hong Kong, tax residency is generally established if an individual ordinarily resides in Hong Kong or stays in Hong Kong for more than 180 days in a tax year (or more than 300 days in two consecutive tax years). Singapore uses the 183-day quantitative test: staying or exercising employment in Singapore for 183 days or more within a calendar year automatically renders you a tax resident for that Year of Assessment."
+      },
+      {
+        title: "Income Taxation & Allowance Structures",
+        content: "Hong Kong offers generous personal allowances (HK$132,000 basic allowance, plus child, dependent parent, and single parent allowances). Taxpayers pay the lower of progressive rates (2% to 17%) applied to net chargeable income or a 15% standard rate on gross income after allowable deductions. Singapore provides a personal income tax threshold starting at 0% for the first S$20,000, progressing up to 24% for chargeable income above S$500,000. Total personal tax reliefs in Singapore are capped at S$80,000 per assessment year."
+      },
+      {
+        title: "Territorial Taxation & Foreign Income Treatment",
+        content: "Hong Kong strictly adheres to the territorial principle of taxation: only income arising in or derived from Hong Kong is subject to Salaries Tax or Profits Tax. Offshore income is exempt regardless of whether it is remitted back to Hong Kong. Singapore also operates a territorial tax system, but foreign-sourced income remitted into Singapore by resident individuals is generally tax-exempt unless received through a partnership in Singapore."
+      },
+      {
+        title: "Mandatory Pensions: MPF vs. CPF",
+        content: "Hong Kong's Mandatory Provident Fund (MPF) requires both employers and employees to contribute 5% of relevant income, capped at HK$1,500 per month each (total HK$3,000/mo). Expatriates entering Hong Kong on work visas for less than 13 months or participating in overseas retirement schemes are exempt. Singapore's Central Provident Fund (CPF) applies only to Singapore Citizens and Permanent Residents (up to 20% employee, 17% employer). Employment Pass (EP) holders do not participate in CPF, meaning zero mandatory pension deductions from expatriate salaries."
+      }
+    ],
+    faqs: [
+      { q: "Which city is cheaper for expat personal income taxes: Hong Kong or Singapore?", a: "For mid-to-high income earners, Hong Kong's 17% progressive cap (or 15% standard rate) results in a lower effective tax bill than Singapore's progressive rates which reach 24% for high earners. However, for entry-level incomes below S$80,000, Singapore's low starting brackets can yield comparable net tax liabilities." },
+      { q: "Is foreign income taxed when remitted to Hong Kong or Singapore?", a: "Hong Kong does not tax foreign-sourced income even if remitted into Hong Kong. Singapore exempts foreign income remitted by individuals into Singapore under Section 13(7A) of the Income Tax Act, provided it is not received through a local business partnership." },
+      { q: "Do foreigners pay pension contributions in Hong Kong and Singapore?", a: "In Hong Kong, foreign workers staying over 13 months must join MPF unless covered by an overseas scheme. In Singapore, foreigners on Employment Pass or S Pass do not contribute to CPF at all." }
     ],
     calculatorsA: [
       { name: "HK Salaries Tax Calculator", url: "/countries/hong-kong/salaries-tax/salaries-tax-calculator" },
@@ -37,16 +61,41 @@ const dataMap: Record<string, any> = {
   },
   "united-states-vs-united-kingdom": {
     title: "US vs UK Tax Comparison for Expats & Dual Citizens 2026/27",
-    description: "Compare US federal and state taxes vs UK Income Tax & National Insurance. Learn about IRS FEIE, foreign tax credits, UK Statutory Residence, and pensions.",
+    description: "Compare US federal and state income taxes vs UK Income Tax & National Insurance. Detailed guide on citizenship taxation, IRS FEIE, FTC credits, UK Statutory Residence Test, and pension treatment.",
     countryA: { name: "United States", flag: "🇺🇸", currency: "USD" },
     countryB: { name: "United Kingdom", flag: "🇬🇧", currency: "GBP" },
-    summary: "The US taxes citizens on worldwide income regardless of residency (mitigated by FEIE and FTC), whereas the UK taxes based on residency under the Statutory Residence Test (SRT).",
+    summary: "The primary structural difference between US and UK taxation is jurisdiction basis: the US taxes its citizens and Green Card holders on worldwide income regardless of where they live, whereas the UK taxes based on tax residency under the Statutory Residence Test (SRT). Expats and dual citizens must navigate complex overlap rules to prevent double taxation.",
     matrix: [
-      { feature: "Taxing Authority Principle", countryA: "Citizenship-based Worldwide Tax", countryB: "Residency-based Tax System" },
-      { feature: "Top Federal/Personal Tax Rate", countryA: "37% (+ state taxes 0-13.3%)", countryB: "45% Additional Rate" },
-      { feature: "Social / Pension Tax", countryA: "FICA (6.2% SS + 1.45% Medicare)", countryB: "National Insurance (8% + 2%)" },
-      { feature: "Expat Tax Relief", countryA: "FEIE ($126,500) + Foreign Tax Credit", countryB: "Double Taxation Relief (DTA)" },
-      { feature: "Capital Gains Tax Rate", countryA: "0% / 15% / 20% (Long-term)", countryB: "10% / 20% (Residential 18%/24%)" }
+      { feature: "Taxing Authority Principle", countryA: "Citizenship-based Worldwide Tax", countryB: "Residency-based Tax System (SRT)" },
+      { feature: "Top Federal/Personal Tax Rate", countryA: "37% (+ state income tax 0-13.3%)", countryB: "45% Additional Rate (over £125,140)" },
+      { feature: "Social Security / Pension Tax", countryA: "FICA (6.2% SS + 1.45% Medicare)", countryB: "National Insurance (8% + 2% Employee)" },
+      { feature: "Expat Tax Relief Mechanism", countryA: "FEIE ($126,500+) + Foreign Tax Credit", countryB: "Double Taxation Agreement (DTA) Relief" },
+      { feature: "Capital Gains Tax Rate", countryA: "0% / 15% / 20% (Long-term)", countryB: "10% / 20% (Residential 18%/24%)" },
+      { feature: "Dividend Allowance / Tax", countryA: "Qualified 0%/15%/20% + Ordinary Rates", countryB: "£500 Tax-Free Allowance, then 8.75%-39.35%" },
+      { feature: "Sales Tax / Consumption Tax", countryA: "State/Local Sales Tax (0% - 10.25%)", countryB: "20% Standard Value Added Tax (VAT)" }
+    ],
+    sections: [
+      {
+        title: "US Worldwide Citizenship Tax vs. UK Statutory Residency",
+        content: "The United States is unique among major economies in levying citizenship-based taxation. US citizens and Green Card holders residing anywhere in the world must file annual IRS Form 1040 reporting global income. In contrast, the United Kingdom taxes individuals strictly based on residency as evaluated under HMRC's Statutory Residence Test (SRT), which considers day counts, family ties, accommodation, and work days in the UK."
+      },
+      {
+        title: "US Expat Reliefs: FEIE vs. Foreign Tax Credit (FTC)",
+        content: "US expats living in the UK can reduce or eliminate US income tax liability using two primary mechanisms: the Foreign Earned Income Exclusion (FEIE under Section 911) which excludes up to $126,500 of earned salary, or the Foreign Tax Credit (FTC under Section 901) which allows a dollar-for-dollar credit for UK income taxes paid. Because UK income tax rates are generally higher than US federal rates, most US expats in the UK benefit more from claiming FTC, generating excess tax credits to offset future US taxes."
+      },
+      {
+        title: "UK National Insurance vs. US FICA & Totalization Agreement",
+        content: "US workers employed in the UK are subject to UK National Insurance Contributions (NIC) at 8% on earnings between £12,570 and £50,270, plus 2% on earnings above £50,270. Under the US-UK Totalization Agreement, temporary cross-border transferees (seconded for under 5 years) can remain covered by US Social Security/FICA and obtain a Certificate of Coverage to be exempt from UK NIC."
+      },
+      {
+        title: "Pensions: 401(k) / IRA vs. UK Workplace Pensions & SIPPs",
+        content: "Under Article 18 of the US-UK Income Tax Treaty, contributions made to a recognized UK pension scheme (such as an employer workplace pension or SIPP) by a US citizen living in the UK are deductible on US tax returns up to statutory limits, and growth within the pension remains tax-deferred until distribution."
+      }
+    ],
+    faqs: [
+      { q: "Do US citizens living in the UK have to file taxes in both countries?", a: "Yes. US citizens residing in the UK must file annual returns with HMRC for UK taxes and with the IRS for US taxes. Double taxation is mitigated through the US-UK Tax Treaty using Foreign Tax Credits or FEIE." },
+      { q: "Which country has higher personal tax rates: US or UK?", a: "The UK generally has higher effective tax rates for middle and upper-middle income earners due to the 40% Higher Rate starting at £50,270 and 8% National Insurance. US federal rates start lower, though state and local taxes vary by state." },
+      { q: "How are UK capital gains taxed for US expats?", a: "US expats in the UK must calculate capital gains under both UK HMRC rules and US IRS rules. Both countries levy capital gains tax, and Foreign Tax Credits can be applied to prevent double taxation on the same gain." }
     ],
     calculatorsA: [
       { name: "US Effective Tax Rate Calculator", url: "/countries/united-states/income-tax/effective-tax-rate" },
@@ -59,15 +108,41 @@ const dataMap: Record<string, any> = {
   },
   "india-vs-singapore-nri-tax": {
     title: "India vs Singapore Tax Comparison for NRIs 2026/27",
-    description: "Compare Indian NRI taxation rules (New vs Old Tax Regime) against Singapore tax residency benefits. Learn DTAA tax credits, remittance, and capital gains.",
+    description: "Detailed guide comparing Indian NRI tax rules under New vs Old Tax Regimes against Singapore tax residency advantages. Learn about DTAA tax credits, remittance rules, capital gains, and NRE/NRO accounts.",
     countryA: { name: "India", flag: "🇮🇳", currency: "₹" },
     countryB: { name: "Singapore", flag: "🇸🇬", currency: "S$" },
-    summary: "NRIs working in Singapore enjoy Singapore's low tax rates (0-24%) on local income, while Indian-sourced income remains taxable in India under the New or Old regime.",
+    summary: "Non-Resident Indians (NRIs) residing and working in Singapore benefit from Singapore's competitive tax rates (0% to 24%) on Singapore-sourced income, while retaining tax-free status on NRE account interest in India. Indian-sourced income (such as rental income, dividends, or capital gains in India) remains taxable under Indian Income Tax provisions.",
     matrix: [
-      { feature: "Tax Slabs (Top Bracket)", countryA: "30% (+ 4% Health & Edu Cess)", countryB: "24% (Progressive)" },
-      { feature: "NRI Status Threshold", countryA: "182 days outside India", countryB: "183+ days in Singapore = Tax Resident" },
-      { feature: "Capital Gains on Stocks", countryA: "STCG 20% / LTCG 12.5%", countryB: "0% Capital Gains" },
-      { feature: "GST / Sales Tax", countryA: "GST 5%, 12%, 18%, 28%", countryB: "GST 9%" }
+      { feature: "Top Personal Tax Bracket", countryA: "30% (+ 4% Health & Edu Cess + Surcharge)", countryB: "24% (Progressive)" },
+      { feature: "Tax Residency Criterion", countryA: "182+ days outside India = NRI status", countryB: "183+ days in Singapore = Tax Resident" },
+      { feature: "Capital Gains Tax on Equities", countryA: "STCG 20% / LTCG 12.5% (above ₹1.25 Lakh)", countryB: "0% Capital Gains Tax" },
+      { feature: "Bank Account Interest Tax", countryA: "NRE Account 0% Exempt / NRO Account Taxable", countryB: "0% Tax on Savings Account Interest" },
+      { feature: "Sales / Consumption Tax", countryA: "GST (5%, 12%, 18%, 28%)", countryB: "GST (9%)" },
+      { feature: "Foreign Tax Credit (DTAA)", countryA: "Article 25 DTAA Credit Mechanism", countryB: "Foreign Tax Credit / Exemptions" },
+      { feature: "Tax Year Period", countryA: "April 1 – March 31 (Financial Year)", countryB: "January 1 – December 31 (Calendar Year)" }
+    ],
+    sections: [
+      {
+        title: "Establishing NRI Status in India vs. Singapore Tax Residency",
+        content: "Under Section 6 of the Indian Income Tax Act, an individual qualifies as Non-Resident Indian (NRI) if they spend less than 182 days in India during a financial year (or less than 60 days if Indian-sourced income exceeds ₹15 Lakhs). In Singapore, spending 183 days or more in a calendar year grants Singapore Tax Resident status, qualifying you for progressive tax rates starting at 0% and personal tax reliefs."
+      },
+      {
+        title: "Taxation of Foreign Remittances & NRE/NRO Accounts",
+        content: "Income earned in Singapore and remitted to India into an NRE (Non-Resident External) or FCNR account is 100% tax-exempt in India. Interest earned on NRE deposit accounts is also completely tax-free under Section 10(4)(ii). However, income earned from Indian assets (e.g. rent from Indian property, dividends from Indian companies, or interest on NRO accounts) is taxable in India and subject to TDS."
+      },
+      {
+        title: "Capital Gains: India's Budget 2024 Revisions vs. Singapore 0% Policy",
+        content: "India taxes equity capital gains with Short-Term Capital Gains (STCG) at 20% and Long-Term Capital Gains (LTCG) at 12.5% on gains exceeding ₹1.25 Lakh. Real estate gains in India are subject to 12.5% LTCG without indexation benefits for properties acquired after July 23, 2024. Singapore levies zero capital gains tax on stocks, real estate, crypto, or private equity investments."
+      },
+      {
+        title: "India-Singapore Double Taxation Avoidance Agreement (DTAA)",
+        content: "The India-Singapore DTAA ensures that income is not taxed twice. If an NRI pays tax in Singapore on income that is also taxable in India (or vice versa), they can claim a Foreign Tax Credit under Article 25 of the DTAA by filing Form 67 on the Indian e-Filing portal before submitting their Indian income tax return."
+      }
+    ],
+    faqs: [
+      { q: "Is salary earned in Singapore taxable in India for NRIs?", a: "No. Salary earned for services performed in Singapore by an NRI is considered foreign-sourced income and is strictly non-taxable in India under Section 5 of the Income Tax Act." },
+      { q: "How is rental income from Indian property taxed for NRIs living in Singapore?", a: "Rental income from property located in India is taxable in India regardless of residency. NRIs receive a standard 30% deduction under Section 24(a) plus deductions for property tax and home loan interest." },
+      { q: "Can an NRI claim DTAA benefits between India and Singapore?", a: "Yes. NRIs can obtain a Tax Residency Certificate (TRC) from IRAS Singapore and submit Form 10F along with Form 67 to claim lower TDS rates or Foreign Tax Credits under the DTAA." }
     ],
     calculatorsA: [
       { name: "India Income Tax Calculator", url: "/countries/india/income-tax/income-tax-calculator" },
@@ -80,9 +155,22 @@ const dataMap: Record<string, any> = {
 };
 
 const data = dataMap[comparison || "hong-kong-vs-singapore"];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: data.faqs.map((f: any) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: f.a
+    }
+  }))
+};
 ---
 
-<Layout title={data.title} description={data.description}>
+<Layout title={data.title} description={data.description} schema={faqSchema}>
   <div class="min-h-screen bg-canvas dark:bg-canvas">
     <main class="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
       <!-- Breadcrumbs -->
@@ -98,6 +186,7 @@ const data = dataMap[comparison || "hong-kong-vs-singapore"];
 
       <!-- Header -->
       <div class="mb-10 text-center sm:text-left">
+        <span class="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary mb-3">2026/27 Expat Tax Analysis</span>
         <h1 class="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl dark:text-on-primary leading-tight">
           {data.title}
         </h1>
@@ -106,18 +195,18 @@ const data = dataMap[comparison || "hong-kong-vs-singapore"];
         </p>
       </div>
 
-      <!-- Comparison Matrix Table -->
+      <!-- Side-by-Side Comparison Matrix Table -->
       <div class="my-8 overflow-hidden rounded-2xl border border-hairline bg-canvas shadow-sm dark:border-overlay-lighter dark:bg-surface">
         <div class="bg-canvas-soft px-6 py-4 dark:bg-canvas/60 border-b border-hairline dark:border-overlay-lighter flex items-center justify-between">
-          <h2 class="text-lg font-bold text-ink dark:text-on-primary">Side-by-Side Comparison Table</h2>
-          <span class="text-xs text-muted">2026/27 Tax Rules</span>
+          <h2 class="text-lg font-bold text-ink dark:text-on-primary">Side-by-Side Tax Comparison Matrix</h2>
+          <span class="text-xs text-muted">2026/27 Provisions</span>
         </div>
 
         <div class="overflow-x-auto">
           <table class="w-full text-left text-sm">
             <thead class="bg-canvas-soft/40 text-xs font-semibold uppercase tracking-wider text-muted dark:bg-canvas/40 border-b border-hairline dark:border-overlay-lighter">
               <tr>
-                <th class="px-6 py-4">Tax Feature</th>
+                <th class="px-6 py-4">Tax Feature / Provision</th>
                 <th class="px-6 py-4 text-primary">{data.countryA.flag} {data.countryA.name}</th>
                 <th class="px-6 py-4 text-emerald-600 dark:text-emerald-400">{data.countryB.flag} {data.countryB.name}</th>
               </tr>
@@ -133,6 +222,20 @@ const data = dataMap[comparison || "hong-kong-vs-singapore"];
             </tbody>
           </table>
         </div>
+      </div>
+
+      <!-- Detailed Analysis Sections -->
+      <div class="my-12 space-y-10">
+        <h2 class="text-2xl font-bold text-ink dark:text-on-primary border-b border-hairline pb-3 dark:border-overlay-lighter">
+          Detailed Technical Comparison & Key Tax Rules
+        </h2>
+
+        {data.sections.map((sec: any) => (
+          <section class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface shadow-xs">
+            <h3 class="text-xl font-semibold text-ink dark:text-on-primary mb-3">{sec.title}</h3>
+            <p class="text-body dark:text-muted leading-relaxed text-base">{sec.content}</p>
+          </section>
+        ))}
       </div>
 
       <!-- Interactive Calculators Links -->
@@ -163,6 +266,22 @@ const data = dataMap[comparison || "hong-kong-vs-singapore"];
           </div>
         </div>
       </div>
+
+      <!-- FAQ Section with Schema -->
+      <section class="my-12 rounded-2xl border border-hairline bg-canvas-soft p-8 dark:border-overlay-lighter dark:bg-surface">
+        <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-6">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          {data.faqs.map((faq: any) => (
+            <details class="group rounded-xl border border-hairline bg-canvas p-5 transition hover:border-primary dark:border-overlay-lighter dark:bg-canvas">
+              <summary class="cursor-pointer font-semibold text-ink dark:text-on-primary flex justify-between items-center">
+                <span>{faq.q}</span>
+                <svg class="h-5 w-5 text-muted transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <p class="mt-3 text-sm text-body dark:text-muted leading-relaxed">{faq.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
     </main>
   </div>
 </Layout>

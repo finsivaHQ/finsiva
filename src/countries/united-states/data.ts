@@ -1,4 +1,4 @@
-﻿import type { Country, TaxCategory } from "../types";
+import type { Country, TaxCategory } from "../types";
 
 const taxCategories: TaxCategory[] = [
   {
@@ -508,7 +508,7 @@ export const unitedStates: Country = {
     { slug: "capital-gains-calculator", name: "Capital Gains Tax Calculator", category: "capital-gains-tax" },
     { slug: "payroll-tax-calculator", name: "Payroll Tax Calculator", category: "payroll-tax" }
   ],
-  relatedCountries: ["united-kingdom", "canada"],
+  relatedCountries: ["united-kingdom", "singapore", "hong-kong", "india"],
   latestUpdates: [
     { date: "2025-01-01", title: "2025 Tax Brackets Updated", description: "IRS released updated tax brackets for 2025 with adjusted standard deductions and bracket thresholds." },
     { date: "2024-12-31", title: "SECURE 2.0 Act Provisions", description: "New retirement account rules and increased catch-up contributions for 2025." },

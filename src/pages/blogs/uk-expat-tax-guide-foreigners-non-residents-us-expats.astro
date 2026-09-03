@@ -1,0 +1,167 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "UK Expat Tax Guide 2025/2026: Foreigners, Non-Residents & US Expats";
+const description = "Comprehensive UK expat tax guide. Learn about Statutory Residence Test (SRT), filing non-resident tax returns, foreign income tax, US-UK double taxation treaties, and non-dom reforms.";
+const image = "/images/blogs/uk-expat-tax-guide-2026.svg";
+const author = "Charlotte Vance";
+const authorBio = "Chartered Tax Adviser (CTA) specializing in cross-border UK-US international private client taxation and expatriate tax planning.";
+const lastUpdated = "August 2026";
+const readTime = "15 min read";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do US citizens living in the UK avoid double taxation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "US expats can utilize the Foreign Tax Credit (FTC) on IRS Form 1116 or the Foreign Earned Income Exclusion (FEIE) on Form 2555 under the US-UK Double Taxation Agreement (DTAA) to offset UK Income Tax against US tax liability."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the 183-day UK tax residency rule?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under the Statutory Residence Test (SRT), spending 183 or more days in the UK during a single tax year automatically makes you a UK tax resident, subjecting your worldwide income to UK tax."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do non-residents have to pay UK tax on UK property rental income?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. UK rental income earned by non-residents is subject to UK tax under the Non-Resident Landlord (NRL) Scheme. Landlords can apply via Form NRL1 to receive rental income gross."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are US IRAs and 401(k) pensions taxed in the UK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under Article 17 of the US-UK Tax Treaty, periodic distributions from US pensions to a UK resident are taxable in the UK. Lump-sum transfers enjoy specific treaty protections."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What replaced the UK Non-Dom remittance basis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The legacy non-dom regime was replaced by a residence-based foreign income and gains (FIG) framework offering new arrivers 100% tax exemption on foreign earnings for their first 4 years of UK residence."
+      }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": title,
+  "description": description,
+  "image": image,
+  "author": {
+    "@type": "Person",
+    "name": author,
+    "jobTitle": authorBio
+  },
+  "datePublished": "2026-08-16",
+  "dateModified": "2026-08-16"
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated={lastUpdated}
+  readTime={readTime}
+  faqSchema={faqSchema}
+  articleSchema={articleSchema}
+>
+  <article class="prose prose-lg dark:prose-invert max-w-none">
+    <h1>UK Expat Tax Guide 2025/2026: Foreigners, Non-Residents & US Expats</h1>
+    
+    <p class="lead">
+      Relocating to the United Kingdom as a foreign worker, managing overseas assets while resident in the UK, or living abroad as a UK expat involves complex international tax regulations. <strong>HM Revenue & Customs (HMRC)</strong> enforces strict global tax reporting, while international double tax treaties determine which country holds primary taxing rights.
+    </p>
+
+    <img src={image} alt="UK Expat & Foreign Income Tax Guide Diagram" class="my-8 w-full rounded-xl border border-hairline shadow-md dark:border-overlay-lighter" loading="lazy" />
+
+    <nav class="my-8 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-bold text-ink dark:text-on-primary mt-0 mb-4">Table of Contents</h2>
+      <ul class="space-y-2 text-sm text-body dark:text-muted">
+        <li><a href="#statutory-residence-test" class="hover:underline text-link dark:text-link">1. Statutory Residence Test (SRT) Overview</a></li>
+        <li><a href="#us-expat-taxes" class="hover:underline text-link dark:text-link">2. US Expats in the UK: DTAA, FTC & IRS Form 8833</a></li>
+        <li><a href="#non-resident-landlord" class="hover:underline text-link dark:text-link">3. Non-Resident Tax Returns & NRL Scheme</a></li>
+        <li><a href="#foreign-pensions-dtaa" class="hover:underline text-link dark:text-link">4. Foreign Pensions, US IRA & Indian DTAA Rules</a></li>
+        <li><a href="#new-non-dom-regime" class="hover:underline text-link dark:text-link">5. The 4-Year Foreign Income Regime (Non-Dom Reforms)</a></li>
+        <li><a href="#faqs" class="hover:underline text-link dark:text-link">6. Frequently Asked Questions (FAQs)</a></li>
+      </ul>
+    </nav>
+
+    <h2 id="statutory-residence-test">1. Statutory Residence Test (SRT) Overview</h2>
+    <p>
+      Your UK tax position is governed by the <a href="/knowledge/glossary/uk-statutory-residence-test" class="text-link hover:underline dark:text-link">Statutory Residence Test (SRT)</a>. HMRC evaluates:
+    </p>
+    <ul>
+      <li><strong>Automatic Overseas Test:</strong> Spending under 16 days in the UK (or under 46 days if non-resident for 3 previous years) makes you automatically non-resident.</li>
+      <li><strong>Automatic UK Test:</strong> Spending 183 days or more in the UK automatically classifies you as a UK tax resident.</li>
+      <li><strong>Sufficient Ties Test:</strong> Evaluates UK accommodation, family ties, work days, and prior visit history.</li>
+    </ul>
+
+    <h2 id="us-expat-taxes">2. US Expats in the UK: DTAA, FTC & IRS Form 8833</h2>
+    <p>
+      Because the United States taxes its citizens based on citizenship regardless of residence, US expats in the UK must file tax returns in both jurisdictions annually.
+    </p>
+    <div class="rounded-xl border-l-4 border-blue-500 bg-blue-50/50 p-4 dark:bg-blue-950/30 my-6">
+      <h3 class="text-lg font-bold text-blue-900 dark:text-blue-200 m-0">Claiming Foreign Tax Credits (FTC)</h3>
+      <p class="text-blue-800 dark:text-blue-300 mt-2 mb-0">
+        Because UK Income Tax rates (20%–45%) are generally higher than US federal tax rates (10%–37%), US expats claiming the Foreign Tax Credit on IRS Form 1116 can usually wipe out US tax liability on UK-earned income.
+      </p>
+    </div>
+
+    <h2 id="non-resident-landlord">3. Non-Resident Tax Returns & NRL Scheme</h2>
+    <p>
+      If you live outside the UK but own rental property in London, Edinburgh, or elsewhere in the UK, your rental income remains subject to UK tax. Under the <strong>Non-Resident Landlord (NRL) Scheme</strong>, tenants or letting agents deduct 20% tax unless you submit an HMRC Form <strong>NRL1i</strong> application.
+    </p>
+
+    <h2 id="foreign-pensions-dtaa">4. Foreign Pensions, US IRA & Indian DTAA Rules</h2>
+    <p>
+      Cross-border pensions receive treaty protection under Double Taxation Agreements:
+    </p>
+    <ul>
+      <li><strong>US IRAs & 401(k)s:</strong> Distributions paid to a UK resident are taxable in the UK under Article 17 of the US-UK treaty.</li>
+      <li><strong>Indian Salaried Earnings (India-UK DTAA):</strong> DTAA Article 16 governs employment income, ensuring credit for taxes paid in either jurisdiction.</li>
+    </ul>
+
+    <h2 id="new-non-dom-regime">5. The 4-Year Foreign Income Regime (Non-Dom Reforms)</h2>
+    <p>
+      The legacy <a href="/knowledge/glossary/uk-non-domicile-status" class="text-link hover:underline dark:text-link">Non-Dom regime</a> and <a href="/knowledge/glossary/uk-remittance-basis" class="text-link hover:underline dark:text-link">Remittance Basis</a> have been replaced with a 4-year exemption on foreign income and gains for qualifying new UK arrivals.
+    </p>
+
+    <h2 id="faqs">6. Frequently Asked Questions (FAQs)</h2>
+    <div class="space-y-4 my-6">
+      {faqSchema.mainEntity.map(faq => (
+        <div class="rounded-xl border border-hairline p-5 dark:border-overlay-lighter bg-canvas dark:bg-surface">
+          <h3 class="text-lg font-bold text-ink dark:text-on-primary m-0">{faq.name}</h3>
+          <p class="text-body dark:text-muted mt-2 mb-0">{faq.acceptedAnswer.text}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-bold text-ink dark:text-on-primary mt-0 mb-3">Explore Related Expat Tax Resources</h3>
+      <ul class="space-y-2 mb-0">
+        <li><a href="/countries/united-kingdom/income-tax/income-tax-calculator" class="text-link hover:underline dark:text-link font-semibold">UK Income Tax Calculator</a></li>
+        <li><a href="/knowledge/uk-expat-foreign-income-tax-guide" class="text-link hover:underline dark:text-link">UK Expat & Foreign Income Guide</a></li>
+        <li><a href="/blogs/uk-income-tax-rates-brackets-salary-take-home-guide" class="text-link hover:underline dark:text-link">UK Income Tax Rates & Take Home Salary</a></li>
+        <li><a href="/knowledge/glossary/uk-statutory-residence-test" class="text-link hover:underline dark:text-link">Glossary: Statutory Residence Test</a></li>
+      </ul>
+    </div>
+  </article>
+</BlogLayout>

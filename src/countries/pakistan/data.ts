@@ -196,7 +196,7 @@ export const pakistan: Country = {
     { slug: "capital-gain-tax-calculator", name: "Capital Gain Tax Calculator", category: "property-tax" }
   ],
   corporateCalculators: [],
-  relatedCountries: ["india", "bangladesh", "sri-lanka"],
+  relatedCountries: ["india", "united-kingdom", "united-states"],
   latestUpdates: [
     { date: "2024-06-01", title: "2024-25 Budget Tax Changes", description: "New tax brackets and reliefs introduced in the federal budget for FY 2024-25." },
     { date: "2024-01-01", title: "FBR Digital Initiatives", description: "FBR continues to streamline tax filing and collection through digital platforms." }
