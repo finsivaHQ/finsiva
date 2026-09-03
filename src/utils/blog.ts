@@ -13,7 +13,6 @@ interface BlogPost {
 export function getSortedPosts(): BlogPost[] {
   const posts: BlogPost[] = [];
 
-  // Try reading via process.cwd()
   const blogsDir = path.join(process.cwd(), 'src/pages/blogs');
   
   if (fs.existsSync(blogsDir)) {
@@ -24,7 +23,7 @@ export function getSortedPosts(): BlogPost[] {
       
       const titleMatch = content.match(/const title = ["']([^"']+)["']/);
       const descMatch = content.match(/const description = ["']([^"']+)["']/);
-      const dateMatch = content.match(/Last updated: ([^|]+)/);
+      const dateMatch = content.match(/Last updated: ([^|]+)/) || content.match(/const lastUpdated = ["']([^"']+)["']/);
       const readTimeMatch = content.match(/(\d+) min read/);
       const authorMatch = content.match(/const author = ["']([^"']+)["']/);
       
@@ -33,7 +32,7 @@ export function getSortedPosts(): BlogPost[] {
           title: titleMatch[1],
           description: descMatch[1],
           slug: `/blogs/${file.replace(/\.astro$/, '')}`,
-          date: dateMatch ? dateMatch[1].trim() : '2026-07-24',
+          date: dateMatch ? (dateMatch[1] ? dateMatch[1].trim() : 'July 2026') : 'July 2026',
           readTime: readTimeMatch ? `${readTimeMatch[1]} min read` : '10 min read',
           author: authorMatch ? authorMatch[1] : 'Finsiva Team'
         });
