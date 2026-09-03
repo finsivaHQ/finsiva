@@ -43,40 +43,7 @@ const faqSchema = {
 ---
 
 <BlogLayout title={title} description={description} image={image} canonical={canonical} author={author} authorBio={authorBio} lastUpdated={lastUpdated} readTime={readTime}>
-  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
-
-  <div class="min-h-screen bg-canvas dark:bg-canvas">
-    <main class="min-h-screen">
-      <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-        <nav aria-label="Breadcrumb" class="mb-6 text-sm">
-          <ol class="flex flex-wrap items-center gap-2">
-            <li class="flex items-center gap-2"><a href="/" class="text-link hover:underline dark:text-link">Home</a></li>
-            <li class="flex items-center gap-2"><span class="text-muted">/</span><a href="/blogs" class="text-link hover:underline dark:text-link">Blogs</a></li>
-            <li class="flex items-center gap-2"><span class="text-muted">/</span><span class="font-medium text-ink dark:text-on-primary" aria-current="page">Hong Kong vs Singapore Tax</span></li>
-          </ol>
-        </nav>
-
-        <article class="prose max-w-none">
-          <h1 class="text-3xl sm:text-4xl font-bold text-ink mb-4 dark:text-on-primary">Hong Kong vs Singapore Tax Comparison: Expats & Corporate Rates</h1>
-          <p class="text-lg text-body dark:text-muted">Last updated: August 2026 | Comprehensive Asian Tax Hub Analysis | 11 min read</p>
-
-          <!-- Interactive Comparison CTAs -->
-          <div class="my-6 p-6 rounded-2xl border border-primary/30 bg-primary/5 dark:border-primary/20 dark:bg-primary/5 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>
-              <h3 class="text-xl font-bold text-ink dark:text-on-primary">Compare Your Tax Burden Side-by-Side</h3>
-              <p class="text-sm text-body dark:text-muted mt-1">Calculate your net take-home salary in Hong Kong (HKD) vs Singapore (SGD).</p>
-            </div>
-            <div class="flex flex-wrap gap-2 shrink-0">
-              <a href="/countries/hong-kong/salaries-tax/salaries-tax-calculator" class="btn btn-primary text-xs font-semibold px-4 py-2">
-                HK Tax Calculator →
-              </a>
-              <a href="/countries/singapore/income-tax/income-tax-calculator" class="btn btn-secondary text-xs font-semibold px-4 py-2">
-                SG Tax Calculator →
-              </a>
-            </div>
-          </div>
-
-          <div class="mt-8 space-y-6 text-body dark:text-muted">
+  <div class="mt-8 space-y-6 text-body dark:text-muted">
             <p>Hong Kong and Singapore are two of Asia's most popular destinations for expats and international businesses, offering low taxes, strategic locations, and strong legal systems. Choosing between them often comes down to which tax regime offers better savings for your personal and business circumstances. This guide compares salaries tax, corporate tax, property tax, stamp duty, and residency rules in Hong Kong and Singapore to help you decide which jurisdiction is better for your needs.</p>
 
             <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Salaries Tax Comparison</h2>
@@ -184,8 +151,5 @@ const faqSchema = {
             <li><a href="https://www.iras.gov.sg" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Singapore Inland Revenue Authority (iras.gov.sg)</a> - Singapore tax rates, reliefs, and QFEI details.</li>
             <li><a href="https://en.wikipedia.org/wiki/Taxation_in_Singapore" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Taxation in Singapore - Wikipedia</a> - General overview of Singapore's tax system.</li>
           </ul>
-        </article>
-      </div>
-    </main>
   </div>
 </BlogLayout>

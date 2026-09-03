@@ -65,60 +65,7 @@ const faqSchema = {
   lastUpdated="August 2026" 
   readTime="12 min read"
 >
-  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
-
-  <div class="min-h-screen bg-canvas dark:bg-canvas">
-    <main class="min-h-screen">
-      <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div class="flex flex-col lg:flex-row gap-12">
-          <div class="flex-1 min-w-0 article-content">
-        <!-- Breadcrumb -->
-        <nav aria-label="Breadcrumb" class="mb-6 text-sm">
-          <ol class="flex flex-wrap items-center gap-2">
-            <li class="flex items-center gap-2"><a href="/" class="text-link hover:underline dark:text-link">Home</a></li>
-            <li class="flex items-center gap-2"><span class="text-muted">/</span><a href="/blogs" class="text-link hover:underline dark:text-link">Guides</a></li>
-            <li class="flex items-center gap-2"><span class="text-muted">/</span><a href="/countries/hong-kong" class="text-link hover:underline dark:text-link">Hong Kong Tax</a></li>
-            <li class="flex items-center gap-2"><span class="text-muted">/</span><span class="font-medium text-ink dark:text-on-primary" aria-current="page">Net Salary Guide</span></li>
-          </ol>
-        </nav>
-
-        <article class="prose max-w-none">
-          <h1 class="text-3xl sm:text-4xl font-extrabold text-ink mb-4 dark:text-on-primary leading-tight">
-            Hong Kong Net Salary & Take-Home Pay Guide 2026/27: Salary After Tax
-          </h1>
-          
-          <div class="flex items-center gap-4 text-sm text-body dark:text-muted mb-8 pb-4 border-b border-hairline dark:border-overlay-lighter">
-            <span>By <strong class="text-ink dark:text-on-primary">Jessica Liu, CPA</strong></span>
-            <span>•</span>
-            <span>2026/27 Edition</span>
-            <span>•</span>
-            <span>12 min read</span>
-          </div>
-
-          <img 
-            src={image} 
-            alt="Hong Kong financial district finance calculation for net take home salary" 
-            class="mb-8 w-full rounded-2xl object-cover max-h-80 sm:max-h-96 shadow-sm" 
-            loading="lazy" 
-          />
-
-          <!-- Quick Banner CTA -->
-          <div class="my-8 rounded-2xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-lighter dark:bg-surface/60 shadow-sm">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-              <div>
-                <h3 class="text-lg font-bold text-ink dark:text-on-primary">Calculate Your HK Take-Home Pay Instantly</h3>
-                <p class="text-sm text-body dark:text-muted mt-1">Get your exact monthly net salary breakdown after MPF and Salaries Tax.</p>
-              </div>
-              <a 
-                href="/countries/hong-kong/salaries-tax/hk-net-salary-calculator" 
-                class="inline-flex items-center justify-center rounded-pill bg-primary px-5 py-2.5 text-sm font-semibold text-on-primary transition hover:opacity-90 dark:bg-on-primary dark:text-primary shrink-0"
-              >
-                Launch Net Salary Calculator &rarr;
-              </a>
-            </div>
-          </div>
-
-          <div class="space-y-8 text-body dark:text-muted leading-relaxed">
+  <div class="space-y-8 text-body dark:text-muted leading-relaxed">
             <section>
               <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">Understanding Gross vs Net Salary in Hong Kong</h2>
               <p>
@@ -238,11 +185,7 @@ const faqSchema = {
               </a>
             </div>
           </div>
-        </article>
-      </div>
+        </div>
       <StickyToc />
-    </div>
-  </div>
-</main>
   </div>
 </BlogLayout>

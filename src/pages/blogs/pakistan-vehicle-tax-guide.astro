@@ -51,37 +51,7 @@ const faqSchema = {
 ---
 
 <BlogLayout title={title} description={description} image={image} canonical={canonical} author={author} authorBio={authorBio} lastUpdated={lastUpdated} readTime={readTime}>
-  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
-
-  <div class="min-h-screen bg-canvas dark:bg-canvas">
-    <main class="min-h-screen">
-      <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-        <nav aria-label="Breadcrumb" class="mb-6 text-sm">
-          <ol class="flex flex-wrap items-center gap-2">
-            <li class="flex items-center gap-2"><a href="/" class="text-link hover:underline dark:text-link">Home</a></li>
-            <li class="flex items-center gap-2"><span class="text-muted" aria-hidden="true">/</span><a href="/blogs" class="text-link hover:underline dark:text-link">Blogs</a></li>
-            <li class="flex items-center gap-2"><span class="text-muted" aria-hidden="true">/</span><span class="font-medium text-ink dark:text-on-primary" aria-current="page">Pakistan Vehicle Tax Guide</span></li>
-          </ol>
-        </nav>
-
-        <article class="prose max-w-none">
-          <h1 class="text-3xl sm:text-4xl font-bold text-ink mb-4 dark:text-on-primary">Pakistan Vehicle Tax Guide 2026: Token Tax, Customs & Car Registration</h1>
-          <p class="text-lg text-body dark:text-muted">Last updated: August 2026 | Verified FBR & Provincial Excise Guidelines | 15 min read</p>
-
-          <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=1200&q=80" alt="Automobile vehicle taxation and online token tax payment in Pakistan" class="mb-6 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
-
-          <!-- Early Calculator CTA -->
-          <div class="my-6 p-6 rounded-2xl border border-primary/30 bg-primary/5 dark:border-primary/20 dark:bg-primary/5 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>
-              <h3 class="text-xl font-bold text-ink dark:text-on-primary">Calculate Vehicle Token Tax Instantly</h3>
-              <p class="text-sm text-body dark:text-muted mt-1">Check engine CC token tax across Punjab, Sindh, Islamabad, and KPK.</p>
-            </div>
-            <a href="/countries/pakistan/vehicle-tax/vehicle-tax-calculator" class="btn btn-primary text-sm font-semibold shrink-0 px-5 py-2.5">
-              Launch Vehicle Tax Calculator →
-            </a>
-          </div>
-
-          <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
+  <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
             <p>
               Understanding <strong>pakistan vehicle tax</strong>, <strong>car tax rates karachi</strong>, <strong>sindh motor vehicle tax</strong>, and federal customs duties is essential for car buyers, vehicle owners, and commercial fleet operators.
             </p>
@@ -157,9 +127,5 @@ const faqSchema = {
             <h3 class="text-xl font-bold text-ink dark:text-on-primary">About the Author</h3>
             <p class="mt-2 text-sm font-semibold text-primary dark:text-on-primary">{author}</p>
             <p class="mt-1 text-sm text-body dark:text-muted">{authorBio}</p>
-          </div>
-        </article>
-      </div>
-    </main>
   </div>
 </BlogLayout>
