@@ -1,6 +1,7 @@
 ---
 import CountryLayout from "../../../../../layouts/CountryLayout.astro";
 import { getCountryBySlug, getCategoryBySlug } from "../../../../../data/countries";
+import { getBaseUrl } from "../../../../../utils/routing";
 
 export function getStaticPaths() {
   const paths: { params: { country: string; category: string; faq: string } }[] = [];
@@ -37,6 +38,9 @@ if (!country || !category || !faq) {
   return Astro.redirect("/countries/");
 }
 
+const baseUrl = getBaseUrl();
+const canonicalUrl = `${baseUrl}/countries/${country.slug}/${category.slug}/faqs/faq-${faqIndex}/`;
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -52,8 +56,9 @@ const faqSchema = {
 ---
 
 <CountryLayout
-  title={`${faq.question} | ${country.name}`}
+  title={`${faq.question} | ${country.name} Tax FAQ`}
   description={faq.answer}
+  canonical={canonicalUrl}
   breadcrumbs={[
     { label: "Countries", href: "/countries/" },
     { label: country.name, href: `/countries/${country.slug}/` },
@@ -62,21 +67,50 @@ const faqSchema = {
   ]}
 >
   <script type="application/ld+json" slot="head" set:html={JSON.stringify(faqSchema)} />
+  
   <div class="mb-8">
-    <h1 class="text-4xl font-bold text-ink dark:text-on-primary">{faq.question}</h1>
+    <span class="inline-block rounded-md bg-primary/10 px-3 py-1 text-xs font-semibold text-primary uppercase tracking-wider dark:bg-surface/20 dark:text-link mb-3">
+      {country.name} • {category.name} FAQ
+    </span>
+    <h1 class="text-3xl font-bold text-ink sm:text-4xl dark:text-on-primary">{faq.question}</h1>
   </div>
 
-  <div class="rounded-lg border border-hairline bg-canvas p-8 dark:border-overlay-lighter dark:bg-surface">
-    <p class="text-body leading-relaxed text-lg dark:text-muted">{faq.answer}</p>
+  <div class="rounded-xl border border-hairline bg-canvas p-6 sm:p-8 dark:border-overlay-lighter dark:bg-surface">
+    <div class="prose max-w-none text-body leading-relaxed text-lg dark:text-muted">
+      <p class="font-medium text-ink dark:text-on-primary text-xl mb-4">{faq.answer}</p>
+      
+      <div class="mt-6 pt-6 border-t border-hairline dark:border-overlay-light">
+        <h2 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Tax Overview & Official Guidelines</h2>
+        <p class="text-sm text-body dark:text-muted leading-relaxed">
+          In {country.name}, tax regulations for {category.name.toLowerCase()} are administered directly by {country.officialTaxAuthority}. Taxpayers are advised to maintain complete documentation of income, deductions, and statutory filings to ensure full compliance with official tax codes.
+        </p>
+        <div class="mt-4 flex flex-wrap gap-4 text-sm">
+          <a
+            href={country.taxAuthorityUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 font-medium text-link hover:underline dark:text-link"
+          >
+            Visit {country.officialTaxAuthority} Official Portal ↗
+          </a>
+          <a
+            href={`/countries/${country.slug}/${category.slug}/`}
+            class="inline-flex items-center gap-1.5 font-medium text-link hover:underline dark:text-link"
+          >
+            Explore {country.name} {category.name} Guides & Calculators →
+          </a>
+        </div>
+      </div>
+    </div>
 
-    <div class="mt-8 pt-6 border-t border-hairline">
-      <h2 class="text-xl font-semibold text-ink mb-4 dark:text-on-primary" data-i18n="faq.related_questions">Related Questions</h2>
-      <ul class="space-y-2">
-        {category.faqs.filter((_, i) => i !== faqIndex).slice(0, 5).map((relatedFaq) => (
-          <li>
+    <div class="mt-10 pt-8 border-t border-hairline dark:border-overlay-light">
+      <h2 class="text-xl font-semibold text-ink mb-4 dark:text-on-primary" data-i18n="faq.related_questions">All Related {category.name} Questions</h2>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+        {category.faqs.map((relatedFaq, index) => (
+          <li class="rounded-lg border border-hairline p-3.5 hover:border-primary transition dark:border-overlay-lighter">
             <a
-              href={`/countries/${country.slug}/${category.slug}/faqs/faq-${category.faqs.indexOf(relatedFaq)}/`}
-              class="text-link hover:underline dark:text-link"
+              href={`/countries/${country.slug}/${category.slug}/faqs/faq-${index}/`}
+              class={`text-sm font-medium ${index === faqIndex ? 'text-primary font-semibold dark:text-link' : 'text-ink hover:text-primary dark:text-on-primary'}`}
             >
               {relatedFaq.question}
             </a>

@@ -135,6 +135,12 @@ const canonicalUrl = rawCanonical.endsWith('/') ? rawCanonical : `${rawCanonical
     <footer class="border-t border-hairline bg-canvas py-12 dark:border-overlay-light dark:bg-surface">
       <div class="mx-auto max-w-7xl px-4 text-center text-sm text-muted sm:px-6 lg:px-8 dark:text-muted">
         <nav class="flex flex-wrap items-center justify-center gap-6 mb-6">
+          <a href="/" class="text-link hover:underline dark:text-link">Home</a>
+          <a href="/countries/" class="text-link hover:underline dark:text-link">Countries</a>
+          <a href="/blogs/" class="text-link hover:underline dark:text-link">Tax Guides & Blog</a>
+          <a href="/income-tax-calculator/" class="text-link hover:underline dark:text-link">Income Tax Calculator</a>
+          <a href="/gst-calculator/" class="text-link hover:underline dark:text-link">GST Calculator</a>
+          <a href="/salary-tax-calculator/" class="text-link hover:underline dark:text-link">Salary Tax Calculator</a>
           <a href="/about/" class="text-link hover:underline dark:text-link">About</a>
           <a href="/editorial-policy/" class="text-link hover:underline dark:text-link">Editorial Policy</a>
           <a href="/contact/" class="text-link hover:underline dark:text-link">Contact us</a>
@@ -237,8 +243,8 @@ const canonicalUrl = rawCanonical.endsWith('/') ? rawCanonical : `${rawCanonical
           let text = textNode.textContent || "";
           let changed = false;
           let newText = text;
-          const cDict = countryNames[lang] || countryNames.en;
-          const catDict = categoryNames[lang] || categoryNames.en;
+          const cDict = (typeof countryNames !== 'undefined' && countryNames[lang]) || {};
+          const catDict = (typeof categoryNames !== 'undefined' && categoryNames[lang]) || {};
           for (const [enName, translated] of Object.entries(cDict)) {
             if (newText.includes(enName)) {
               newText = newText.replace(new RegExp(enName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), translated);

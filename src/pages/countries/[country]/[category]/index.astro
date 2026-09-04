@@ -78,10 +78,15 @@ if (!country || !category) {
     <section class="mb-12">
       <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary" data-i18n="category.frequently_asked_questions">Frequently Asked Questions</h2>
       <div class="space-y-4">
-        {category.faqs.map(faq => (
+        {category.faqs.map((faq, index) => (
             <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
-              <h3 class="font-semibold text-ink dark:text-on-primary"><span data-i18n="faq.question">{faq.question}</span></h3>
+              <a href={`/countries/${country.slug}/${category.slug}/faqs/faq-${index}/`} class="group block">
+                <h3 class="font-semibold text-ink group-hover:text-primary dark:text-on-primary"><span data-i18n="faq.question">{faq.question}</span></h3>
+              </a>
               <p class="mt-2 text-body dark:text-muted"><span data-i18n="faq.answer">{faq.answer}</span></p>
+              <a href={`/countries/${country.slug}/${category.slug}/faqs/faq-${index}/`} class="mt-3 inline-flex items-center gap-1 text-xs font-medium text-link dark:text-link hover:underline">
+                View detailed Q&A page →
+              </a>
             </div>
         ))}
       </div>

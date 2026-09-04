@@ -16,7 +16,7 @@ const posts = getSortedPosts();
           {posts.map(post => (
             <article class="rounded-xl border border-hairline bg-canvas p-6 transition hover:border-primary hover:shadow-lg dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
               <h2 class="text-xl font-semibold text-ink mb-2 dark:text-on-primary">
-                <a href={post.slug} class="hover:text-primary dark:hover:text-link">{post.title}</a>
+                <a href={`/blogs/${post.slug}/`} class="hover:text-primary dark:hover:text-link">{post.title}</a>
               </h2>
               <p class="text-sm text-muted mb-4 dark:text-muted">{post.description}</p>
               <div class="flex items-center gap-4 text-sm text-muted dark:text-muted">

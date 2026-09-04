@@ -14,7 +14,7 @@ export default defineConfig({
     changefreq: 'weekly',
     priority: 0.5,
     lastmod: new Date(),
-    filter: (page) => !page.includes('/405/') && !page.includes('/404/'),
+    filter: (page) => !page.includes('/405/') && !page.includes('/404/') && !page.includes('/personality-test/') && !page.includes('/knowledge/'),
   })],
   vite: {
     plugins: [tailwindcss()],
