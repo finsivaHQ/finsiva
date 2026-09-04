@@ -5,6 +5,11 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://finsiva.com',
   trailingSlash: 'always',
+  redirects: {
+    '/personality-test': '/',
+    '/knowledge': '/',
+    '/knowledge/hong-kong': '/',
+  },
   integrations: [sitemap({
     changefreq: 'weekly',
     priority: 0.5,
