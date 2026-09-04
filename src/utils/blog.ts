@@ -37,7 +37,7 @@ export function getSortedPosts(): BlogPost[] {
         slug: file.replace(/\.astro$/, ''),
         date: dateMatch ? dateMatch[1].trim() : '2026-07-24',
         readTime: readTimeMatch ? `${readTimeMatch[1]} min read` : '10 min read',
-        author: authorMatch ? authorMatch[1] : 'TaxPortal Team'
+        author: authorMatch ? authorMatch[1] : 'Finsiva Editorial Team'
       });
     }
   }
