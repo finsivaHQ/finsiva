@@ -36,11 +36,13 @@ const guide = category?.guides.find(g => g.slug === Astro.params.guide);
 if (!country || !category || !guide) {
   return Astro.redirect("/countries");
 }
+const canonicalUrl = `https://finsiva.com/countries/${country.slug}/${category.slug}/${guide.slug}/`;
 ---
 
 <CountryLayout
   title={`${guide.title} | ${country.name}`}
   description={guide.description}
+  canonical={canonicalUrl}
   breadcrumbs={[
     { label: "Countries", href: "/countries/" },
     { label: country.name, href: `/countries/${country.slug}/` },
@@ -49,7 +51,9 @@ if (!country || !category || !guide) {
   ]}
 >
   <div class="mb-8">
-    <img src={guide.image} alt={guide.title} class="w-full h-48 sm:h-64 object-cover rounded-xl mb-6" />
+    {guide.image && (
+      <img src={guide.image} alt={guide.title} width="800" height="300" loading="lazy" class="w-full h-48 sm:h-64 object-cover rounded-xl mb-6 bg-canvas-soft dark:bg-surface" />
+    )}
     <h1 class="text-4xl font-bold text-ink dark:text-on-primary" data-i18n="guide.title">{guide.title}</h1>
     <p class="mt-2 text-lg text-body dark:text-muted" data-i18n="guide.description">{guide.description}</p>
   </div>

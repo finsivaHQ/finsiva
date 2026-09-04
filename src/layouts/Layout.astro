@@ -39,9 +39,23 @@ const initialLang = detectLanguage();
 setLang(initialLang);
 const initialDir = initialLang === 'ar' ? 'rtl' : 'auto';
 
-const formattedPath = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
-const rawCanonical = canonical || new URL(formattedPath, Astro.site).href;
-const canonicalUrl = rawCanonical.endsWith('/') ? rawCanonical : `${rawCanonical}/`;
+const baseUrl = "https://finsiva.com";
+let canonicalUrl: string;
+
+if (canonical) {
+  if (canonical.startsWith("http://") || canonical.startsWith("https://")) {
+    canonicalUrl = canonical;
+  } else {
+    canonicalUrl = `${baseUrl}${canonical.startsWith("/") ? "" : "/"}${canonical}`;
+  }
+} else {
+  const formattedPath = Astro.url.pathname.endsWith("/") ? Astro.url.pathname : `${Astro.url.pathname}/`;
+  canonicalUrl = `${baseUrl}${formattedPath}`;
+}
+
+if (!canonicalUrl.endsWith("/")) {
+  canonicalUrl = `${canonicalUrl}/`;
+}
 ---
 
 <!doctype html>
@@ -65,8 +79,6 @@ const canonicalUrl = rawCanonical.endsWith('/') ? rawCanonical : `${rawCanonical
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Finsiva" />
     <meta property="og:locale" content="en_US" />
-    <link rel="alternate" hreflang="en" href={canonicalUrl} />
-    <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
@@ -96,12 +108,7 @@ const canonicalUrl = rawCanonical.endsWith('/') ? rawCanonical : `${rawCanonical
           "@type": "WebSite",
           "name": "Finsiva",
           "url": "https://finsiva.com",
-          "description": "Universal tax calculator platform for accurate tax estimates across multiple countries",
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://finsiva.com/search?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-          }
+          "description": "Universal tax calculator platform for accurate tax estimates across multiple countries"
         }
       </script>
       <script type="application/ld+json">
@@ -134,13 +141,20 @@ const canonicalUrl = rawCanonical.endsWith('/') ? rawCanonical : `${rawCanonical
     </main>
     <footer class="border-t border-hairline bg-canvas py-12 dark:border-overlay-light dark:bg-surface">
       <div class="mx-auto max-w-7xl px-4 text-center text-sm text-muted sm:px-6 lg:px-8 dark:text-muted">
-        <nav class="flex flex-wrap items-center justify-center gap-6 mb-6">
+        <nav class="flex flex-wrap items-center justify-center gap-6 mb-6" aria-label="Footer navigation">
           <a href="/" class="text-link hover:underline dark:text-link">Home</a>
           <a href="/countries/" class="text-link hover:underline dark:text-link">Countries</a>
           <a href="/blogs/" class="text-link hover:underline dark:text-link">Tax Guides & Blog</a>
           <a href="/income-tax-calculator/" class="text-link hover:underline dark:text-link">Income Tax Calculator</a>
-          <a href="/gst-calculator/" class="text-link hover:underline dark:text-link">GST Calculator</a>
           <a href="/salary-tax-calculator/" class="text-link hover:underline dark:text-link">Salary Tax Calculator</a>
+          <a href="/gst-calculator/" class="text-link hover:underline dark:text-link">GST Calculator</a>
+          <a href="/vat-calculator/" class="text-link hover:underline dark:text-link">VAT Calculator</a>
+          <a href="/sales-tax-calculator/" class="text-link hover:underline dark:text-link">Sales Tax Calculator</a>
+          <a href="/corporate-tax-calculator/" class="text-link hover:underline dark:text-link">Corporate Tax Calculator</a>
+          <a href="/capital-gains-tax-calculator/" class="text-link hover:underline dark:text-link">Capital Gains Tax Calculator</a>
+          <a href="/payroll-tax-calculator/" class="text-link hover:underline dark:text-link">Payroll Tax Calculator</a>
+          <a href="/property-tax-calculator/" class="text-link hover:underline dark:text-link">Property Tax Calculator</a>
+          <a href="/tax-refund-calculator/" class="text-link hover:underline dark:text-link">Tax Refund Calculator</a>
           <a href="/about/" class="text-link hover:underline dark:text-link">About</a>
           <a href="/editorial-policy/" class="text-link hover:underline dark:text-link">Editorial Policy</a>
           <a href="/contact/" class="text-link hover:underline dark:text-link">Contact us</a>

@@ -33,7 +33,7 @@ const baseUrl = getBaseUrl();
         <div class="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
           <div class="flex-1">
             <div class="flex items-center gap-4 mb-4">
-              <img src={country.flag} alt={country.name} class="h-16 w-auto sm:h-20 object-contain" />
+              <img src={country.flag} alt={country.name} width="80" height="53" loading="lazy" class="h-16 w-auto sm:h-20 object-contain" />
               <div>
                  <h1 class="text-3xl font-bold text-ink sm:text-4xl dark:text-on-primary"><span data-i18n="country.name">{country.name}</span></h1>
                  <p class="text-sm text-muted mt-1 dark:text-muted"><span data-i18n="country.continent_header">{country.continent}</span></p>

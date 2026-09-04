@@ -20,11 +20,13 @@ const category = getCategoryBySlug(Astro.params.country!, Astro.params.category!
 if (!country || !category) {
   return Astro.redirect("/countries");
 }
+const canonicalUrl = `https://finsiva.com/countries/${country.slug}/${category.slug}/`;
 ---
 
 <CountryLayout
-  title={`${category.name}`}
+  title={`${category.name} Tax Guide & Calculators | ${country.name}`}
   description={category.description}
+  canonical={canonicalUrl}
   breadcrumbs={[
     { label: "Countries", href: "/countries/" },
     { label: country.name, href: `/countries/${country.slug}/` },

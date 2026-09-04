@@ -64,11 +64,13 @@ const suggestedArticles = country.taxCategories
     slug: '/countries/' + country.slug + '/' + cat.slug + '/'
   }));
 
+const canonicalUrl = `https://finsiva.com/countries/${country.slug}/${category.slug}/${calculator.slug}/`;
 ---
 
 <CountryLayout
-  title={`${calculator.name}`}
+  title={`${calculator.name} | ${country.name}`}
   description={calculator.description}
+  canonical={canonicalUrl}
   breadcrumbs={[
     { label: "Countries", href: "/countries/" },
     { label: country.name, href: `/countries/${country.slug}/` },

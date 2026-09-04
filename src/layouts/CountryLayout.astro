@@ -11,19 +11,29 @@ interface Props {
 
 const { title, description, breadcrumbs, canonical } = Astro.props;
 
+const baseUrl = "https://finsiva.com";
+const formattedTitle = title.includes("Finsiva") ? title : `${title} | Finsiva`;
+
 const breadcrumbSchema = breadcrumbs && breadcrumbs.length > 0 ? {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
-  "itemListElement": breadcrumbs.map((item, index) => ({
-    "@type": "ListItem",
-    "position": index + 1,
-    "name": item.label,
-    "item": item.href ? new URL(item.href, Astro.site).href : undefined
-  }))
+  "itemListElement": breadcrumbs.map((item, index) => {
+    let itemUrl: string | undefined = undefined;
+    if (item.href) {
+      itemUrl = item.href.startsWith("http") ? item.href : `${baseUrl}${item.href.startsWith("/") ? "" : "/"}${item.href}`;
+      if (!itemUrl.endsWith("/")) itemUrl += "/";
+    }
+    return {
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.label,
+      "item": itemUrl
+    };
+  })
 } : null;
 ---
 
-<Layout title={`${title} | Finsiva`} description={description} {canonical}>
+<Layout title={formattedTitle} description={description} {canonical}>
   {breadcrumbSchema && (
     <script type="application/ld+json" slot="head" set:html={JSON.stringify(breadcrumbSchema)} />
   )}
