@@ -22,10 +22,10 @@ const baseUrl = getBaseUrl();
   title={`${country.name} | Finsiva`}
   description={country.overview}
   breadcrumbs={[
-    { label: "Countries", href: "/countries" },
+    { label: "Countries", href: "/countries/" },
     { label: country.name }
   ]}
-  canonical={`${baseUrl}/countries/${country.slug}`}
+  canonical={`${baseUrl}/countries/${country.slug}/`}
 >
   <section class="mb-12">
     <div class="rounded-2xl border border-hairline bg-gradient-to-br from-canvas to-canvas-soft shadow-sm dark:border-overlay-lighter dark:from-surface dark:to-canvas">

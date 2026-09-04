@@ -61,7 +61,7 @@ const suggestedArticles = country.taxCategories
   .slice(0, 3)
   .map(cat => ({
     title: cat.name + ' Guide',
-    slug: '/countries/' + country.slug + '/' + cat.slug
+    slug: '/countries/' + country.slug + '/' + cat.slug + '/'
   }));
 
 ---
@@ -70,9 +70,9 @@ const suggestedArticles = country.taxCategories
   title={`${calculator.name}`}
   description={calculator.description}
   breadcrumbs={[
-    { label: "Countries", href: "/countries" },
-    { label: country.name, href: `/countries/${country.slug}` },
-    { label: category.name, href: `/countries/${country.slug}/${category.slug}` },
+    { label: "Countries", href: "/countries/" },
+    { label: country.name, href: `/countries/${country.slug}/` },
+    { label: category.name, href: `/countries/${country.slug}/${category.slug}/` },
     { label: calculator.name }
   ]}
 >
@@ -877,7 +877,7 @@ else { hideError(); return; }
         <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Related Calculators</h2>
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {relatedCalculators.map(rc => (
-            <a href={`/countries/${country.slug}/${rc.categorySlug}/${rc.slug}`} class="rounded-lg border border-hairline bg-canvas p-4 hover:border-primary transition dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+            <a href={`/countries/${country.slug}/${rc.categorySlug}/${rc.slug}/`} class="rounded-lg border border-hairline bg-canvas p-4 hover:border-primary transition dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
               <h3 class="font-semibold text-ink dark:text-on-primary">{rc.name}</h3>
               <p class="text-sm text-muted mt-1 dark:text-muted">{category.name} - {country.name}</p>
             </a>
@@ -889,7 +889,7 @@ else { hideError(); return; }
         <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Suggested Articles</h2>
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {suggestedArticles.map(article => (
-            <a href={article.slug.startsWith('/') ? article.slug : `/blogs/${article.slug}`} class="rounded-lg border border-hairline bg-canvas p-4 hover:border-primary transition dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+            <a href={article.slug.startsWith('/') ? (article.slug.endsWith('/') ? article.slug : `${article.slug}/`) : `/blogs/${article.slug}/`} class="rounded-lg border border-hairline bg-canvas p-4 hover:border-primary transition dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
               <h3 class="font-semibold text-ink dark:text-on-primary">{article.title}</h3>
             </a>
           ))}

@@ -4,11 +4,12 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://finsiva.com',
+  trailingSlash: 'always',
   integrations: [sitemap({
     changefreq: 'weekly',
     priority: 0.5,
     lastmod: new Date(),
-    filter: (page) => !page.includes('/405/'),
+    filter: (page) => !page.includes('/405/') && !page.includes('/404/'),
   })],
   vite: {
     plugins: [tailwindcss()],

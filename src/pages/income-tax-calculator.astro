@@ -1,0 +1,63 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { countries } from "../data/countries";
+
+const taxType = "Income Tax Calculator";
+const description = "Free online income tax calculator. Estimate your taxable income, tax brackets, and take-home salary across multiple countries including US, India, UK, Hong Kong, Singapore, and more.";
+
+const relevantCountries = countries.filter(country =>
+  country.taxCategories.some(cat => cat.slug === "income-tax" || cat.calculators.some(c => c.slug.includes("income-tax")))
+);
+---
+
+<Layout
+  title={`${taxType} - Global Income Tax Estimator | Finsiva`}
+  description={description}
+>
+  <div class="min-h-screen bg-canvas dark:bg-canvas">
+    <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-ink sm:text-5xl dark:text-on-primary">{taxType}</h1>
+        <p class="mt-4 max-w-3xl mx-auto text-lg text-body dark:text-muted">
+          {description}
+        </p>
+      </div>
+
+      <div class="mb-12">
+        <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Select Your Country</h2>
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {relevantCountries.map(country => {
+            const category = country.taxCategories.find(cat => cat.slug === "income-tax") || country.taxCategories[0];
+            const calculator = category?.calculators.find(c => c.slug.includes("income-tax")) || category?.calculators[0];
+            const href = calculator ? `/countries/${country.slug}/${category.slug}/${calculator.slug}/` : `/countries/${country.slug}/`;
+            return (
+              <a
+                href={href}
+                class="group rounded-xl border border-hairline bg-canvas p-6 transition hover:border-primary hover:shadow-md dark:border-overlay-lighter dark:bg-surface"
+              >
+                <div class="flex items-center gap-4 mb-3">
+                  <img src={country.flag} alt={country.name} width="32" height="24" class="h-8 w-auto object-contain" />
+                  <div>
+                    <h3 class="font-semibold text-ink group-hover:text-primary dark:text-on-primary">{country.name}</h3>
+                    <p class="text-xs text-muted dark:text-muted">{country.currency}</p>
+                  </div>
+                </div>
+                <p class="text-sm text-body line-clamp-2 dark:text-muted">{calculator?.description || category?.description}</p>
+                <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-link group-hover:underline dark:text-link">
+                  Calculate Tax →
+                </span>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+
+      <div class="rounded-xl border border-hairline bg-canvas-soft p-8 dark:border-overlay-light dark:bg-surface">
+        <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">About Income Tax Calculation</h2>
+        <p class="text-body leading-relaxed dark:text-muted">
+          Income tax is levied on individuals and businesses based on their earnings. Tax systems vary worldwide—some use progressive tax brackets where higher income is taxed at higher rates, while others use flat rates or offer specific deductions for retirement, health insurance, and personal allowances. Choose a country above to calculate your exact income tax liability.
+        </p>
+      </div>
+    </section>
+  </div>
+</Layout>

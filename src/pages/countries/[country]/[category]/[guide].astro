@@ -42,9 +42,9 @@ if (!country || !category || !guide) {
   title={`${guide.title} | ${country.name}`}
   description={guide.description}
   breadcrumbs={[
-    { label: "Countries", href: "/countries" },
-    { label: country.name, href: `/countries/${country.slug}` },
-    { label: category.name, href: `/countries/${country.slug}/${category.slug}` },
+    { label: "Countries", href: "/countries/" },
+    { label: country.name, href: `/countries/${country.slug}/` },
+    { label: category.name, href: `/countries/${country.slug}/${category.slug}/` },
     { label: guide.title }
   ]}
 >
@@ -122,7 +122,7 @@ if (!country || !category || !guide) {
       <h3 class="text-lg font-semibold text-ink mb-4 dark:text-on-primary">Related Calculators</h3>
       <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
         {category.calculators.map(calc => (
-          <a href={`/countries/${country.slug}/${category.slug}/${calc.slug}`} class="text-link hover:underline dark:text-link">{calc.name}</a>
+          <a href={`/countries/${country.slug}/${category.slug}/${calc.slug}/`} class="text-link hover:underline dark:text-link">{calc.name}</a>
         ))}
       </div>
     </aside>

@@ -33,36 +33,35 @@ const country = getCountryBySlug(Astro.params.country!);
 const category = getCategoryBySlug(Astro.params.country!, Astro.params.category!);
 const faqIndex = parseInt(Astro.params.faq!.replace('faq-', ''));
 const faq = category?.faqs[faqIndex];
-
 if (!country || !category || !faq) {
-  return Astro.redirect("/countries");
+  return Astro.redirect("/countries/");
 }
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": {
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }
+};
 ---
 
 <CountryLayout
   title={`${faq.question} | ${country.name}`}
   description={faq.answer}
   breadcrumbs={[
-    { label: "Countries", href: "/countries" },
-    { label: country.name, href: `/countries/${country.slug}` },
-    { label: category.name, href: `/countries/${country.slug}/${category.slug}` },
+    { label: "Countries", href: "/countries/" },
+    { label: country.name, href: `/countries/${country.slug}/` },
+    { label: category.name, href: `/countries/${country.slug}/${category.slug}/` },
     { label: "FAQ" }
   ]}
 >
-  <script type="application/ld+json" slot="head">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": {
-        "@type": "Question",
-        "name": {faq.question},
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": {faq.answer}
-        }
-      }
-    }
-  </script>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(faqSchema)} />
   <div class="mb-8">
     <h1 class="text-4xl font-bold text-ink dark:text-on-primary">{faq.question}</h1>
   </div>
@@ -73,10 +72,10 @@ if (!country || !category || !faq) {
     <div class="mt-8 pt-6 border-t border-hairline">
       <h2 class="text-xl font-semibold text-ink mb-4 dark:text-on-primary" data-i18n="faq.related_questions">Related Questions</h2>
       <ul class="space-y-2">
-        {category.faqs.filter((_, i) => i !== faqIndex).slice(0, 5).map((relatedFaq, i) => (
+        {category.faqs.filter((_, i) => i !== faqIndex).slice(0, 5).map((relatedFaq) => (
           <li>
             <a
-              href={`/countries/${country.slug}/${category.slug}/faqs/faq-${category.faqs.indexOf(relatedFaq)}`}
+              href={`/countries/${country.slug}/${category.slug}/faqs/faq-${category.faqs.indexOf(relatedFaq)}/`}
               class="text-link hover:underline dark:text-link"
             >
               {relatedFaq.question}

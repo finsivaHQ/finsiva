@@ -1,0 +1,56 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { countries } from "../data/countries";
+
+const taxType = "Corporate Tax Calculator";
+const description = "Calculate corporate tax and business profits tax liability across Hong Kong, US, Singapore, India, and global jurisdictions.";
+
+const relevantCountries = countries.filter(country =>
+  country.taxCategories.some(cat => cat.slug.includes("corporate") || cat.slug.includes("profits") || cat.calculators.some(c => c.slug.includes("corporate") || c.slug.includes("profit") || c.slug.includes("business")))
+);
+---
+
+<Layout
+  title={`${taxType} - Business & Profits Tax Estimator | Finsiva`}
+  description={description}
+>
+  <div class="min-h-screen bg-canvas dark:bg-canvas">
+    <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-ink sm:text-5xl dark:text-on-primary">{taxType}</h1>
+        <p class="mt-4 max-w-3xl mx-auto text-lg text-body dark:text-muted">
+          {description}
+        </p>
+      </div>
+
+      <div class="mb-12">
+        <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Select Your Country</h2>
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {relevantCountries.map(country => {
+            const category = country.taxCategories.find(cat => cat.slug.includes("corporate") || cat.slug.includes("profits")) || country.taxCategories[0];
+            const calculator = category?.calculators[0];
+            const href = calculator ? `/countries/${country.slug}/${category.slug}/${calculator.slug}/` : `/countries/${country.slug}/`;
+            return (
+              <a
+                href={href}
+                class="group rounded-xl border border-hairline bg-canvas p-6 transition hover:border-primary hover:shadow-md dark:border-overlay-lighter dark:bg-surface"
+              >
+                <div class="flex items-center gap-4 mb-3">
+                  <img src={country.flag} alt={country.name} width="32" height="24" class="h-8 w-auto object-contain" />
+                  <div>
+                    <h3 class="font-semibold text-ink group-hover:text-primary dark:text-on-primary">{country.name}</h3>
+                    <p class="text-xs text-muted dark:text-muted">{country.currency}</p>
+                  </div>
+                </div>
+                <p class="text-sm text-body line-clamp-2 dark:text-muted">{calculator?.description || category?.description}</p>
+                <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-link group-hover:underline dark:text-link">
+                  Calculate Corporate Tax →
+                </span>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

@@ -107,8 +107,8 @@ const faqSchema = {
 ---
 
 <Layout
-  title="Tax Calculator - Free Online Tool for Global Taxes | Finsiva"
-  description="Use our free tax calculator to estimate income tax, salary tax, payroll tax, and take-home pay across multiple countries. Accurate, privacy-first, and always free."
+  title="Tax Hub - Free Online Tool for Global Taxes | Finsiva"
+  description="Use our free tax hub to estimate income tax, salary tax, payroll tax, and take-home pay across multiple countries. Accurate, privacy-first, and always free."
   canonical={baseUrl}
   robots="index,follow"
   schema={breadcrumbSchema}
@@ -117,12 +117,12 @@ const faqSchema = {
     <section class="relative overflow-hidden">
       <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-canvas-soft to-canvas dark:from-primary dark:to-primary" aria-hidden="true"></div>
       <div class="relative mx-auto max-w-7xl px-4 py-20 text-center sm:px-6 lg:px-8">
-        <h1 class="text-4xl font-bold tracking-tight text-ink sm:text-5xl dark:text-on-primary">Tax Calculator</h1>
+        <h1 class="text-4xl font-bold tracking-tight text-ink sm:text-5xl dark:text-on-primary">Tax Hub</h1>
         <p class="mt-4 max-w-3xl mx-auto text-lg text-body dark:text-muted">
           Free, accurate, and privacy-first tax calculators for individuals and businesses across multiple countries. Estimate income tax, salary tax, payroll tax, GST, VAT, and more.
         </p>
         <div class="mt-8 flex items-center justify-center gap-4">
-          <a href="/countries" class="rounded-pill bg-primary px-6 py-3 text-base font-medium text-on-primary transition hover:opacity-90 dark:bg-on-primary dark:text-primary">Explore All Calculators</a>
+          <a href="/countries/" class="rounded-pill bg-primary px-6 py-3 text-base font-medium text-on-primary transition hover:opacity-90 dark:bg-on-primary dark:text-primary">Explore All Calculators</a>
           <a href="#how-it-works" class="rounded-pill border border-hairline px-6 py-3 text-base font-medium text-ink transition hover:bg-canvas-soft dark:border-overlay-lighter dark:text-on-primary dark:hover:overlay-light">How It Works</a>
         </div>
       </div>
@@ -170,14 +170,14 @@ const faqSchema = {
         <p class="max-w-3xl text-lg text-body mb-10 dark:text-muted">Explore tax calculators tailored to the rules of each country. Select your country to view income tax slabs, payroll deductions, GST, VAT, and more.</p>
         <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
           {countries.map(country => (
-            <a href={`/countries/${country.slug}`} class="flex items-center gap-3 rounded-lg border border-hairline bg-canvas p-4 transition hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+            <a href={`/countries/${country.slug}/`} class="flex items-center gap-3 rounded-lg border border-hairline bg-canvas p-4 transition hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
               <img src={country.flag} alt={country.name} width="32" height="24" loading="lazy" class="h-8 w-auto object-contain" />
               <span class="font-medium text-ink dark:text-on-primary">{country.name}</span>
             </a>
           ))}
         </div>
         <div class="mt-6">
-          <a href="/countries" class="inline-flex items-center gap-2 text-sm font-medium text-link hover:underline dark:text-link">View all countries</a>
+          <a href="/countries/" class="inline-flex items-center gap-2 text-sm font-medium text-link hover:underline dark:text-link">View all countries</a>
         </div>
       </div>
     </section>
@@ -187,43 +187,43 @@ const faqSchema = {
         <h2 id="calculators-heading" class="text-3xl font-semibold text-ink mb-4 dark:text-on-primary">Popular Tax Calculators</h2>
         <p class="max-w-3xl text-lg text-body mb-10 dark:text-muted">Choose from a growing library of calculator categories. Each tool is designed around the specific tax structure of the country you select.</p>
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <a href="/income-tax-calculator" class="group rounded-xl border border-hairline bg-canvas p-6 transition hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+          <a href="/income-tax-calculator/" class="group rounded-xl border border-hairline bg-canvas p-6 transition hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
             <h3 class="text-xl font-semibold text-ink mb-2 dark:text-on-primary">Income Tax Calculator</h3>
             <p class="text-sm text-body dark:text-muted">Estimate federal, state, and local income tax across multiple countries with up-to-date slab rates.</p>
           </a>
-          <a href="/salary-tax-calculator" class="group rounded-xl border border-hairline bg-canvas p-6 transition hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+          <a href="/salary-tax-calculator/" class="group rounded-xl border border-hairline bg-canvas p-6 transition hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
             <h3 class="text-xl font-semibold text-ink mb-2 dark:text-on-primary">Salary Tax Calculator</h3>
             <p class="text-sm text-body dark:text-muted">Calculate tax on salary including allowances, bonuses, and employer contributions with detailed breakdowns.</p>
           </a>
-          <a href="/payroll-tax-calculator" class="group rounded-xl border border-hairline bg-canvas p-6 transition hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+          <a href="/payroll-tax-calculator/" class="group rounded-xl border border-hairline bg-canvas p-6 transition hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
             <h3 class="text-xl font-semibold text-ink mb-2 dark:text-on-primary">Payroll Tax Calculator</h3>
             <p class="text-sm text-body dark:text-muted">Estimate payroll taxes, employer contributions, and net pay for businesses and employees.</p>
           </a>
-          <a href="/gst-calculator" class="group rounded-xl border border-hairline bg-canvas p-6 transition hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+          <a href="/gst-calculator/" class="group rounded-xl border border-hairline bg-canvas p-6 transition hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
             <h3 class="text-xl font-semibold text-ink mb-2 dark:text-on-primary">GST Calculator</h3>
             <p class="text-sm text-body dark:text-muted">Calculate GST inclusive and exclusive amounts quickly and accurately.</p>
           </a>
-          <a href="/vat-calculator" class="group rounded-xl border border-hairline bg-canvas p-6 transition hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+          <a href="/vat-calculator/" class="group rounded-xl border border-hairline bg-canvas p-6 transition hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
             <h3 class="text-xl font-semibold text-ink mb-2 dark:text-on-primary">VAT Calculator</h3>
             <p class="text-sm text-body dark:text-muted">Estimate VAT on domestic and cross-border transactions with support for multiple rates.</p>
           </a>
-          <a href="/sales-tax-calculator" class="group rounded-xl border border-hairline bg-canvas p-6 transition hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+          <a href="/sales-tax-calculator/" class="group rounded-xl border border-hairline bg-canvas p-6 transition hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
             <h3 class="text-xl font-semibold text-ink mb-2 dark:text-on-primary">Sales Tax Calculator</h3>
             <p class="text-sm text-body dark:text-muted">Calculate sales tax on purchases for e-commerce, retail, and everyday transactions.</p>
           </a>
-          <a href="/capital-gains-tax-calculator" class="group rounded-xl border border-hairline bg-canvas p-6 transition hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+          <a href="/capital-gains-tax-calculator/" class="group rounded-xl border border-hairline bg-canvas p-6 transition hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
             <h3 class="text-xl font-semibold text-ink mb-2 dark:text-on-primary">Capital Gains Tax Calculator</h3>
             <p class="text-sm text-body dark:text-muted">Estimate capital gains tax on stocks, real estate, and other investments for short-term and long-term gains.</p>
           </a>
-          <a href="/property-tax-calculator" class="group rounded-xl border border-hairline bg-canvas p-6 transition hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+          <a href="/property-tax-calculator/" class="group rounded-xl border border-hairline bg-canvas p-6 transition hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
             <h3 class="text-xl font-semibold text-ink mb-2 dark:text-on-primary">Property Tax Calculator</h3>
             <p class="text-sm text-body dark:text-muted">Estimate property tax, stamp duty, and related costs for residential and commercial real estate.</p>
           </a>
-          <a href="/corporate-tax-calculator" class="group rounded-xl border border-hairline bg-canvas p-6 transition hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+          <a href="/corporate-tax-calculator/" class="group rounded-xl border border-hairline bg-canvas p-6 transition hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
             <h3 class="text-xl font-semibold text-ink mb-2 dark:text-on-primary">Corporate Tax Calculator</h3>
             <p class="text-sm text-body dark:text-muted">Estimate corporate tax liability for businesses including small business and multinational entities.</p>
           </a>
-          <a href="/tax-refund-calculator" class="group rounded-xl border border-hairline bg-canvas p-6 transition hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+          <a href="/tax-refund-calculator/" class="group rounded-xl border border-hairline bg-canvas p-6 transition hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
             <h3 class="text-xl font-semibold text-ink mb-2 dark:text-on-primary">Tax Refund Calculator</h3>
             <p class="text-sm text-body dark:text-muted">Estimate your tax refund based on income, withholding, deductions, and credits.</p>
           </a>

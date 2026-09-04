@@ -26,8 +26,8 @@ if (!country || !category) {
   title={`${category.name}`}
   description={category.description}
   breadcrumbs={[
-    { label: "Countries", href: "/countries" },
-    { label: country.name, href: `/countries/${country.slug}` },
+    { label: "Countries", href: "/countries/" },
+    { label: country.name, href: `/countries/${country.slug}/` },
     { label: category.name }
   ]}
 >
@@ -46,7 +46,7 @@ if (!country || !category) {
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {category.calculators.map(calc => (
           <a
-            href={`/countries/${country.slug}/${category.slug}/${calc.slug}`}
+            href={`/countries/${country.slug}/${category.slug}/${calc.slug}/`}
             class="rounded-lg border border-hairline bg-canvas p-6 hover:border-primary transition dark:border-overlay-lighter dark:bg-surface"
           >
             <h3 class="font-semibold text-ink dark:text-on-primary"><span data-i18n="calculator.name">{calc.name}</span></h3>
@@ -63,7 +63,7 @@ if (!country || !category) {
       <div class="space-y-4">
         {category.guides.map(guide => (
           <a
-            href={`/countries/${country.slug}/${category.slug}/${guide.slug}`}
+            href={`/countries/${country.slug}/${category.slug}/${guide.slug}/`}
             class="block rounded-lg border border-hairline bg-canvas p-6 hover:border-primary transition dark:border-overlay-lighter dark:bg-surface"
           >
             <h3 class="font-semibold text-ink dark:text-on-primary"><span data-i18n="guide.title">{guide.title}</span></h3>
@@ -96,7 +96,7 @@ if (!country || !category) {
         .slice(0, 6)
         .map(related => (
           <a
-            href={`/countries/${country.slug}/${related.slug}`}
+            href={`/countries/${country.slug}/${related.slug}/`}
             class="rounded-lg border border-hairline bg-canvas p-6 hover:border-primary transition dark:border-overlay-lighter dark:bg-surface"
           >
               <h3 class="font-semibold text-ink dark:text-on-primary"><span data-i18n="related.name">{related.name}</span></h3>
