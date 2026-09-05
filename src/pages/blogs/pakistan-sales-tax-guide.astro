@@ -1,5 +1,6 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
+import InteractiveCalculatorEmbed from "../../components/InteractiveCalculatorEmbed.astro";
 
 const title = "Pakistan Sales Tax & GST Guide (2026): 18% FBR Rate & Exemptions";
 const description = "Guide to sales tax in Pakistan under the Sales Tax Act 1990. Learn federal GST, provincial services tax, Sixth Schedule exempt goods, and STRN filing.";
@@ -100,6 +101,13 @@ const faqSchema = {
                 </tbody>
               </table>
             </div>
+
+            <InteractiveCalculatorEmbed
+              ruleId="pakistan-sales-tax-sales-tax-calculator"
+              instanceId="embed-pakistan-sales-tax-blog"
+              title="Pakistan 18% Sales Tax & GST Calculator"
+              description="Calculate 18% Federal Sales Tax on goods. Choose whether to add tax to a net amount (tax exclusive) or extract tax from a gross total (tax inclusive)."
+            />
 
             <p>
               Calculate tax-inclusive prices using our <a href="/countries/pakistan/sales-tax/gst-calculator" class="text-link hover:underline">Pakistan GST Calculator</a>.

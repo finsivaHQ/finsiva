@@ -1,5 +1,6 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
+import InteractiveCalculatorEmbed from "../../components/InteractiveCalculatorEmbed.astro";
 
 const title = "Hong Kong Rental Income Tax Guide: 15% Property Tax & 20% NAV Allowance";
 const description = "Landlord's guide to Hong Kong rental income tax. Learn how the IRD assesses Property Tax at 15% on Net Assessable Value (NAV), claim the 20% repair allowance, and calculate tax.";
@@ -87,6 +88,13 @@ const faqSchema = {
               <li>Net Assessable Value (NAV): HK$232,000</li>
               <li><strong>Property Tax Payable (15% × HK$232,000): HK$34,800</strong> (Effective rate on gross rent: 11.6%)</li>
             </ol>
+
+            <InteractiveCalculatorEmbed
+              ruleId="hong-kong-property-tax-hk-rental-tax-deduction-calculator"
+              instanceId="embed-hk-rental-blog"
+              title="Calculate Hong Kong Rental Property Tax"
+              description="Estimate your Net Assessable Value (NAV) and 15% Property Tax liability after applying the statutory 20% repair allowance."
+            />
 
             <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Property Tax Returns & IRD Filing Requirements</h2>
             <p>Landlords must declare rental income on Property Tax Returns (Form BIRC60 or BIR57) issued by the IRD. Electronic filing is available via the <a href="/blogs/hong-kong-etax-guide" class="text-link hover:underline dark:text-link">IRD eTAX Portal</a>, offering an automatic 1-month filing extension. Keep all tenancy agreements, bank statements, and rent receipts for at least 7 years for IRD audit compliance.</p>
