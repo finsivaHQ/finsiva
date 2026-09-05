@@ -1,6 +1,8 @@
 ---
 import CountryLayout from "../../../../layouts/CountryLayout.astro";
 import { getCountryBySlug, getCategoryBySlug } from "../../../../data/countries";
+import { getCurrentTaxYear } from "../../../../config/taxYears";
+import EditorialStandardsCard from "../../../../components/EditorialStandardsCard.astro";
 
 export function getStaticPaths() {
   const paths: { params: { country: string; category: string; guide: string } }[] = [];
@@ -59,7 +61,7 @@ if (!country || !category || !guide) {
     <div class="rounded-xl border border-hairline bg-canvas-soft p-8 dark:border-overlay-light dark:bg-surface">
       <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">Overview</h2>
       <p class="text-body leading-relaxed dark:text-muted">This comprehensive guide covers {guide.title.toLowerCase()} for {country.name}. Understanding {category.name.toLowerCase()} in {country.name} is essential for compliance and effective tax planning. This guide walks you through the key concepts, requirements, and best practices to help you navigate the tax landscape confidently.</p>
-      <p class="mt-4 text-body leading-relaxed dark:text-muted">Last updated: {new Date().toLocaleDateString("en-US", { year: "numeric", month: "long" })}.</p>
+      <p class="mt-4 text-body leading-relaxed dark:text-muted"><strong>Applicable Tax Period:</strong> Tax Year {getCurrentTaxYear(country.slug)}.</p>
     </div>
 
     {guide.sections && guide.sections.length > 0 && (

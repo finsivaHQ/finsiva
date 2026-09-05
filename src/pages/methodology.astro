@@ -1,0 +1,88 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Calculation Methodology - Finsiva"
+  description="Learn how Finsiva researches statutory tax rules, maps formulas, prioritizes official government sources, handles assumptions, and maintains tax calculator accuracy."
+>
+  <div class="min-h-screen bg-canvas dark:bg-canvas">
+    <main class="min-h-screen">
+      <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
+        <h1 class="text-4xl font-bold text-ink mb-6 dark:text-on-primary">Calculation Methodology & Research Process</h1>
+        
+        <p class="text-lg text-body mb-10 dark:text-muted">
+          At Finsiva, trust is built through technical transparency, statutory alignment, and mathematical rigor. We explain our tax research pipeline, calculation modeling, assumptions, and limitations below.
+        </p>
+
+        <div class="prose max-w-none space-y-8 text-body dark:text-muted">
+          <section>
+            <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">1. Primary Government Source Prioritization</h2>
+            <p>
+              Finsiva relies exclusively on official, statutory revenue guidance and enacted tax legislation for every supported jurisdiction. We do not base calculator logic on unverified news reporting or third-party blog posts. Primary sources include:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 mt-3">
+              <li><strong>United States:</strong> Internal Revenue Service (IRS) Code, Publications, and Form Instructions.</li>
+              <li><strong>United Kingdom:</strong> HM Revenue & Customs (HMRC) manuals and Finance Act provisions.</li>
+              <li><strong>India:</strong> Income Tax Department, CBDT circulars, CBIC GST portal releases, and annual Finance Acts.</li>
+              <li><strong>Hong Kong:</strong> Inland Revenue Department (IRD) Departmental Interpretation and Practice Notes (DIPNs).</li>
+              <li><strong>Singapore:</strong> Inland Revenue Authority of Singapore (IRAS) tax guides and statutory e-Tax guides.</li>
+              <li><strong>Pakistan:</strong> Federal Board of Revenue (FBR) Income Tax Ordinance, Sales Tax Act, and statutory circulars.</li>
+              <li><strong>Australia:</strong> Australian Taxation Office (ATO) legal database and public rulings.</li>
+              <li><strong>Canada:</strong> Canada Revenue Agency (CRA) tax packages and bulletins.</li>
+              <li><strong>Indonesia:</strong> Direktorat Jenderal Pajak (DJP) regulations and Minister of Finance decrees.</li>
+              <li><strong>New Zealand:</strong> Inland Revenue Department (IRD NZ) tax guides and tax tables.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">2. Rule & Formula Implementation</h2>
+            <p>
+              Each statutory tax structure is converted into deterministic code algorithms:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 mt-3">
+              <li><strong>Progressive Tax Slabs:</strong> Marginal tax rates are applied tier-by-tier across applicable thresholds.</li>
+              <li><strong>Statutory Deductions:</strong> Standard deductions, personal allowances, and non-refundable tax credits are applied in strict legal sequence.</li>
+              <li><strong>Regime Comparison:</strong> Dual-regime jurisdictions (e.g. India Old vs. New Regime) calculate parallel outputs using regime-specific exemption rules.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">3. Assumptions & Default Inputs</h2>
+            <p>
+              Calculators provide rapid estimates by establishing clear default assumptions (such as standard filing status, full-year residency, or standard deduction caps). Where user inputs vary—such as itemized deductions, dependents, or foreign tax credits—inputs must be specified in the tool controls.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">4. Local Browser Execution & Privacy</h2>
+            <p>
+              All mathematical calculations run client-side inside your web browser using vanilla JavaScript. No salary figures, tax deductions, or financial entries are transmitted to external servers or stored in databases.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">5. Maintenance & Rate Updates</h2>
+            <p>
+              Tax laws change with annual budget announcements, legislative updates, and inflation index adjustments. When official tax authority updates take effect, our statutory rules and calculator configs are updated accordingly.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">6. Error Correction Policy</h2>
+            <p>
+              If a statutory rate change or calculation discrepancy is identified, our editorial team investigates against official revenue publications and issues immediate corrections across affected calculator rules. Users can report potential discrepancies via our <a href="/contact" class="text-link hover:underline dark:text-link">Contact Page</a>.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">7. Limitations of Automated Estimates</h2>
+            <p>
+              Finsiva tools provide generalized financial estimates for planning purposes. They do not account for complex individual edge cases (such as bankruptcy tax claims, treaty non-domiciles, complex corporate restructuring, or specialized litigation refunds). For binding tax filings, users should verify figures with official tax authority portals or a qualified Chartered Accountant / Certified Public Accountant.
+            </p>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+</Layout>
