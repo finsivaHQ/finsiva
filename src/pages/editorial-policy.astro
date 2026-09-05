@@ -1,59 +1,214 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+
+const title = "Editorial Policy & Tax Research Standards | Finsiva";
+const description = "Learn how Finsiva researches tax information, maintains calculator accuracy, uses official government sources, handles updates and corrections, and communicates limitations.";
+const canonicalUrl = "https://finsiva.com/editorial-policy/";
+
+const breadcrumbs = [
+  { label: "Home", href: "/" },
+  { label: "Editorial Policy" }
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://finsiva.com/editorial-policy/#webpage",
+      "url": canonicalUrl,
+      "name": title,
+      "description": description,
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://finsiva.com/#website",
+        "url": "https://finsiva.com",
+        "name": "Finsiva"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://finsiva.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Editorial Policy",
+          "item": canonicalUrl
+        }
+      ]
+    }
+  ]
+};
 ---
 
-<Layout title="Editorial Policy - Finsiva" description="Finsiva editorial policy and content guidelines for our tax calculators and guides.">
+<Layout title={title} description={description} canonical={canonicalUrl} schema={schema}>
   <div class="min-h-screen bg-canvas dark:bg-canvas">
     <main class="min-h-screen">
-      <div class="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-        <h1 class="text-4xl font-bold text-ink mb-8 dark:text-on-primary">Editorial Policy</h1>
-        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80" alt="Editorial review and fact-checking" class="mb-6 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
-        
-        <div class="prose max-w-none space-y-6 text-body dark:text-muted">
-          <p>Finsiva is committed to providing accurate, reliable, and up-to-date tax information. Our editorial policy ensures that all content meets strict quality and accuracy standards. Every article, calculator description, and guide is produced through a structured process designed to minimize errors and maximize clarity for a global audience.</p>
-          
-          <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">Source Verification</h2>
-          <p>All tax information is sourced directly from official government resources, including tax authority publications, legislation, statutory instruments, and official guidance. We maintain a record of primary sources for every tax rate, threshold, and rule we publish. Wherever possible, we include direct links to government portals, revenue circulars, or legal databases so readers can verify our claims independently.</p>
-          <p>We do not rely on news articles, blog posts, or secondary summaries for rule definitions. If a rule is subject to interpretation, we consult official commentary or seek clarification from the relevant tax authority before publishing. Sources are reviewed at least quarterly to ensure they remain accessible and accurate.</p>
+      <div class="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
+        <Breadcrumbs items={breadcrumbs} />
 
-          <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">Content Accuracy</h2>
-          <p>All tax information is thoroughly researched and reviewed against official government sources, including tax authority publications, legislation, and official guidance. We strive to present information that is current at the time of publication. Our research team downloads the latest tax tables, budget announcements, and regulatory updates directly from government websites to ensure we are working from authoritative materials.</p>
-          <p>Before any calculator goes live, our research team downloads the latest official tax tables, legislation, and guidance documents from government portals. We do not rely on secondary summaries or news articles for rule definitions. Every bracket, threshold, and deduction is traced to a primary source.</p>
-          
-          <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">Writer Qualifications</h2>
-          <p>Finsiva contributors hold professional qualifications in accounting, taxation, law, or finance. Many are certified public accountants, chartered tax advisers, or licensed tax practitioners with years of experience in both public practice and private industry. Before writing for Finsiva, contributors must demonstrate subject-matter expertise through credentials, portfolio, or reference checks.</p>
-          <p>We maintain an internal directory of contributor qualifications and areas of specialization. When an article covers a complex topic such as transfer pricing, indirect tax, or cross-border payroll, it is assigned to a writer with documented experience in that specific field. This ensures that nuanced subjects receive treatment appropriate to their complexity.</p>
+        <header class="mb-10">
+          <h1 class="text-4xl font-bold text-ink dark:text-on-primary">
+            Editorial Policy & Tax Research Standards
+          </h1>
+          <p class="mt-4 text-lg text-body dark:text-muted leading-relaxed">
+            Finsiva provides accessible, transparent financial tools and tax guides. This document outlines our actual research methodology, source selection standards, quality control process, and content limitations.
+          </p>
+        </header>
 
-          <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">Professional Review</h2>
-          <p>Content is reviewed by qualified tax professionals and subject matter experts to ensure technical accuracy and clarity. Complex topics are simplified without sacrificing precision. Each article undergoes at least two review stages: one by the assigned writer and one by an independent reviewer with relevant credentials.</p>
-          <p>Draft content and calculator logic undergo a mandatory peer review by a second qualified tax professional. Only after both reviewers sign off do we publish. This double-check process is our primary defense against errors that could mislead users.</p>
-          
-          <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">Corrections Policy</h2>
-          <p>Tax laws and rates change frequently. We regularly update our content to reflect the latest changes and promptly correct any errors identified by users or reviewers. If we discover an inaccuracy after publication, we will update the content as soon as possible and, where appropriate, publish a correction note explaining what changed and why.</p>
-          <p>Corrections are reviewed by our editorial team within 48 hours, and verified changes are published with a transparent correction note so readers can track updates. Serious errors that could lead to financial loss or regulatory non-compliance are prioritized for immediate correction.</p>
-          <p>We maintain a public changelog for major guides and calculator updates. This log includes the date of change, a summary of what was corrected, and the source that prompted the update. Readers can use this log to understand the evolution of our content and assess its reliability over time.</p>
+        <div class="space-y-10 text-body dark:text-muted">
+          <!-- Section A: Our Approach -->
+          <section class="rounded-xl border border-hairline bg-canvas p-6 sm:p-8 dark:border-overlay-lighter dark:bg-surface">
+            <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">
+              1. Our Approach to Tax Content
+            </h2>
+            <p class="leading-relaxed">
+              We focus on clarity, factual accuracy, and technical reliability. Tax laws are inherently complex and jurisdiction-specific. Our goal is to translate statutory provisions, official tax brackets, and regulatory guidelines into user-friendly interactive calculators and structured guides without manufacturing authority or making false credentials claims.
+            </p>
+            <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+              <div class="rounded-lg border border-hairline bg-canvas-soft p-4 dark:border-overlay-light dark:bg-canvas">
+                <strong class="block text-ink dark:text-on-primary font-medium mb-1">Browser-Side Execution</strong>
+                <span>All calculations are computed locally in your browser without transmitting your personal financial inputs.</span>
+              </div>
+              <div class="rounded-lg border border-hairline bg-canvas-soft p-4 dark:border-overlay-light dark:bg-canvas">
+                <strong class="block text-ink dark:text-on-primary font-medium mb-1">Statutory Transparency</strong>
+                <span>Calculators cite the underlying statutory rules, tax acts, and official revenue publications used to build them.</span>
+              </div>
+              <div class="rounded-lg border border-hairline bg-canvas-soft p-4 dark:border-overlay-light dark:bg-canvas">
+                <strong class="block text-ink dark:text-on-primary font-medium mb-1">No Manufactured EEAT</strong>
+                <span>We rely on transparent processes, official sources, and factual calculations rather than inventing fictional reviewers or qualifications.</span>
+              </div>
+            </div>
+          </section>
 
-          <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">Updates and Corrections</h2>
-          <p>Tax laws and rates change frequently. We regularly update our content to reflect the latest changes and promptly correct any errors identified by users or reviewers.</p>
-          
-          <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">Transparency</h2>
-          <p>We are transparent about the limitations of our content. When a topic is outside our area of expertise, we say so clearly. When a rule is pending or subject to litigation, we note the uncertainty and encourage users to seek professional advice. We never overstate the accuracy or completeness of our guides.</p>
-          <p>Every page includes a disclaimer reminding readers that our content is for informational purposes only and does not constitute professional tax advice. We link to our Terms of Service and Privacy Policy from every page footer to ensure these documents are always accessible.</p>
+          <!-- Section B: Primary Sources -->
+          <section class="rounded-xl border border-hairline bg-canvas p-6 sm:p-8 dark:border-overlay-lighter dark:bg-surface">
+            <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">
+              2. Tax Research & Primary Sources
+            </h2>
+            <p class="leading-relaxed">
+              Finsiva content and calculator parameters are researched directly from official government tax authorities and statutory revenue documentation, including:
+            </p>
+            <div class="mt-4 space-y-3">
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                <li class="rounded-lg border border-hairline bg-canvas-soft p-3 dark:border-overlay-light dark:bg-canvas">
+                  <strong class="text-ink dark:text-on-primary">United States:</strong> Internal Revenue Service (IRS) & Treasury Regulations
+                </li>
+                <li class="rounded-lg border border-hairline bg-canvas-soft p-3 dark:border-overlay-light dark:bg-canvas">
+                  <strong class="text-ink dark:text-on-primary">United Kingdom:</strong> HM Revenue & Customs (HMRC)
+                </li>
+                <li class="rounded-lg border border-hairline bg-canvas-soft p-3 dark:border-overlay-light dark:bg-canvas">
+                  <strong class="text-ink dark:text-on-primary">India:</strong> Income Tax Department & Central Board of Direct Taxes (CBDT)
+                </li>
+                <li class="rounded-lg border border-hairline bg-canvas-soft p-3 dark:border-overlay-light dark:bg-canvas">
+                  <strong class="text-ink dark:text-on-primary">Hong Kong:</strong> Inland Revenue Department (IRD)
+                </li>
+                <li class="rounded-lg border border-hairline bg-canvas-soft p-3 dark:border-overlay-light dark:bg-canvas">
+                  <strong class="text-ink dark:text-on-primary">Singapore:</strong> Inland Revenue Authority of Singapore (IRAS)
+                </li>
+                <li class="rounded-lg border border-hairline bg-canvas-soft p-3 dark:border-overlay-light dark:bg-canvas">
+                  <strong class="text-ink dark:text-on-primary">Pakistan:</strong> Federal Board of Revenue (FBR)
+                </li>
+                <li class="rounded-lg border border-hairline bg-canvas-soft p-3 dark:border-overlay-light dark:bg-canvas">
+                  <strong class="text-ink dark:text-on-primary">Other Supported Regions:</strong> Corresponding official national and provincial revenue authorities (e.g. Inland Revenue NZ, BIR Philippines, Directorate General of Taxes Indonesia, LHDN Malaysia).
+                </li>
+              </ul>
+            </div>
+            <p class="mt-4 text-xs text-muted dark:text-muted">
+              Note: Specific calculator pages reference the exact government authority relevant to that jurisdiction. We do not base tax parameters on secondary commentary or unverified third-party blogs.
+            </p>
+          </section>
 
-          <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">Fact-Checking Process</h2>
-          <p>Before publication, every statistic, tax rate, and rule is cross-referenced against at least one official government source. Drafts are reviewed by at least one tax professional, and any conflicting information is flagged for resolution before going live.</p>
-          
-          <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">Source Attribution</h2>
-          <p>Wherever possible, we link directly to official tax authority guidance, legislation, and government publications. This allows readers to verify claims independently and access the full legal text if needed.</p>
-          
-          <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">Reader Corrections</h2>
-          <p>We encourage users to report inaccuracies. Corrections are reviewed by our editorial team within 48 hours, and verified changes are published with a transparent correction note so readers can track updates.</p>
-          
-          <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">Disclaimer</h2>
-          <p>All information provided on Finsiva is for general informational purposes only and does not constitute professional tax advice. Users should consult qualified tax professionals for advice specific to their circumstances.</p>
-          
-          <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">Related Pages</h2>
-          <p>For more information, see our <a href="/privacy" class="text-link hover:underline dark:text-link">Privacy Policy</a>, <a href="/terms" class="text-link hover:underline dark:text-link">Terms of Service</a>, <a href="/contact" class="text-link hover:underline dark:text-link">Contact</a> page, or explore our <a href="/countries" class="text-link hover:underline dark:text-link">country guides</a> and <a href="/blogs" class="text-link hover:underline dark:text-link">blog</a>.</p>
+          <!-- Section C: Calculator Accuracy -->
+          <section class="rounded-xl border border-hairline bg-canvas p-6 sm:p-8 dark:border-overlay-lighter dark:bg-surface">
+            <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">
+              3. Calculator Accuracy & Formula Verification
+            </h2>
+            <p class="leading-relaxed">
+              Every tax tool on Finsiva is engineered by modeling statutory mathematical formulas directly against published legislation and official tax tables.
+            </p>
+            <ul class="mt-4 space-y-2 list-disc pl-5">
+              <li><strong>Formula Validation:</strong> We verify formulas against edge-case income scenarios, statutory deductions, and tax relief thresholds.</li>
+              <li><strong>Transparency:</strong> Detailed formula steps and calculation breakdowns are published directly on each calculator page under the <a href="/methodology/" class="text-link hover:underline dark:text-link">Calculation Methodology</a> section.</li>
+              <li><strong>Browser-Side Execution:</strong> Calculations are computed dynamically in client-side JavaScript to prevent data latency or server processing mismatches.</li>
+            </ul>
+          </section>
+
+          <!-- Section D: Updates -->
+          <section class="rounded-xl border border-hairline bg-canvas p-6 sm:p-8 dark:border-overlay-lighter dark:bg-surface">
+            <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">
+              4. Statutory Updates & Maintenance
+            </h2>
+            <p class="leading-relaxed">
+              Tax rules, brackets, standard deductions, and thresholds change periodically following official budget announcements, annual tax year transitions, or statutory amendments.
+            </p>
+            <p class="mt-4 leading-relaxed">
+              When statutory changes take effect, Finsiva updates relevant calculation parameters and content to align with enacted effective dates. Each supported country section specifies the active tax year for which calculation rules apply (e.g., Tax Year 2025/26).
+            </p>
+          </section>
+
+          <!-- Section E: Corrections -->
+          <section class="rounded-xl border border-hairline bg-canvas p-6 sm:p-8 dark:border-overlay-lighter dark:bg-surface">
+            <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">
+              5. Discrepancy Reporting & Corrections
+            </h2>
+            <p class="leading-relaxed">
+              We take factual precision seriously. If you identify a discrepancy, updated statutory threshold, or calculation error, we encourage you to report it.
+            </p>
+            <p class="mt-4 leading-relaxed">
+              Submissions can be sent through our <a href="/contact/" class="text-link hover:underline dark:text-link">Contact Page</a>. Reported issues are reviewed against current statutory publications from the respective revenue authority, and validated corrections are applied promptly across affected tools.
+            </p>
+          </section>
+
+          <!-- Section F: Methodology -->
+          <section class="rounded-xl border border-hairline bg-canvas p-6 sm:p-8 dark:border-overlay-lighter dark:bg-surface">
+            <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">
+              6. Methodology & Assumptions
+            </h2>
+            <p class="leading-relaxed">
+              Calculator outputs on Finsiva are mathematical estimates based on user inputs and the statutory rules stated on each page. Individual tax liabilities depend on specialized circumstances (such as non-standard tax residency, treaty benefits, corporate entity structures, or custom exemptions) that general online tools cannot fully model.
+            </p>
+            <p class="mt-4 leading-relaxed">
+              To learn more about how specific formulas, bracket structures, and rounding rules are configured, visit our dedicated <a href="/methodology/" class="text-link hover:underline dark:text-link">Calculation Methodology</a> page.
+            </p>
+          </section>
+
+          <!-- Section G: Disclaimer -->
+          <section class="rounded-xl border border-hairline bg-canvas p-6 sm:p-8 dark:border-overlay-lighter dark:bg-surface">
+            <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">
+              7. Disclaimer of Professional Advice
+            </h2>
+            <p class="leading-relaxed">
+              All content and calculation tools on Finsiva are provided strictly for educational and informational purposes. Finsiva does not provide formal accounting, legal, or tax advisory services.
+            </p>
+            <p class="mt-4 leading-relaxed">
+              For binding tax filings, complex multi-jurisdictional tax planning, or personalized legal guidance, users should consult a qualified Certified Public Accountant (CPA), Chartered Accountant (CA), or licensed tax attorney.
+            </p>
+          </section>
+
+          <!-- Navigation & Related Policy Links -->
+          <section class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+            <h3 class="text-lg font-semibold text-ink mb-3 dark:text-on-primary">Related Governance Pages</h3>
+            <div class="flex flex-wrap gap-4 text-sm">
+              <a href="/methodology/" class="text-link hover:underline dark:text-link">Calculation Methodology</a>
+              <span class="text-muted" aria-hidden="true">•</span>
+              <a href="/privacy/" class="text-link hover:underline dark:text-link">Privacy Policy</a>
+              <span class="text-muted" aria-hidden="true">•</span>
+              <a href="/terms/" class="text-link hover:underline dark:text-link">Terms of Service</a>
+              <span class="text-muted" aria-hidden="true">•</span>
+              <a href="/about/" class="text-link hover:underline dark:text-link">About Us</a>
+              <span class="text-muted" aria-hidden="true">•</span>
+              <a href="/contact/" class="text-link hover:underline dark:text-link">Contact Us</a>
+            </div>
+          </section>
         </div>
       </div>
     </main>

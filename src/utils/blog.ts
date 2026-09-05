@@ -34,7 +34,7 @@ export function getSortedPosts(): BlogPost[] {
           slug: `/blogs/${file.replace(/\.astro$/, '')}`,
           date: dateMatch ? (dateMatch[1] ? dateMatch[1].trim() : 'July 2026') : 'July 2026',
           readTime: readTimeMatch ? `${readTimeMatch[1]} min read` : '10 min read',
-          author: authorMatch ? authorMatch[1] : 'Finsiva Team'
+          author: authorMatch ? authorMatch[1] : 'Finsiva Research & Methodology'
         });
       }
     }
