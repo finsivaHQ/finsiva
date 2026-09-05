@@ -48,7 +48,7 @@ const faqSchema = {
 
 <BlogLayout title={title} description={description} image={image} canonical={canonical} author="David Chan" authorBio="David Chan is a transport duty specialist covering Hong Kong First Registration Tax, vehicle licensing, and Transport Department regulations." lastUpdated="August 2026" readTime="10 min read">
   <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
-            <p>Vehicle ownership in Hong Kong involves substantial upfront duties and ongoing licensing fees designed to manage road traffic density. The primary car taxes administered by the <strong>Transport Department</strong> under the <em>Motor Vehicles (First Registration Tax) Ordinance (Cap. 330)</em> are <strong>First Registration Tax (FRT)</strong> and annual <strong>Vehicle License Fees</strong>.</p>
+            <p>Vehicle ownership in Hong Kong involves substantial upfront duties and ongoing licensing fees designed to manage road traffic density. For an overview of all Hong Kong tax categories and financial tools, visit our <a href="/countries/hong-kong" class="text-link hover:underline dark:text-link">Hong Kong Country Hub</a>. The primary vehicle duties administered by the <strong>Transport Department</strong> under the <em>Motor Vehicles (First Registration Tax) Ordinance (Cap. 330)</em> are <strong>First Registration Tax (FRT)</strong> and annual <strong>Vehicle License Fees</strong>.</p>
 
             <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">First Registration Tax (FRT) Progressive Rates</h2>
             <p>First Registration Tax is a one-off tax levied on private cars when first registered in Hong Kong. The tax is calculated progressively on the taxable value (published retail price or assessed import value):</p>
@@ -70,12 +70,34 @@ const faqSchema = {
               </table>
             </div>
 
+            <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6 mb-2">Step-by-Step FRT Calculation Example</h3>
+            <p>To illustrate how First Registration Tax is calculated for a new petrol private car with an assessed taxable value (published retail price) of <strong>HK$350,000</strong>:</p>
+            <ol class="list-decimal pl-6 space-y-2 my-3">
+              <li><strong>First HK$150,000 Bracket (46%):</strong> HK$150,000 × 46% = HK$69,000</li>
+              <li><strong>Next HK$150,000 Bracket (HK$150,001–HK$300,000 @ 72%):</strong> HK$150,000 × 72% = HK$108,000</li>
+              <li><strong>Remaining HK$50,000 Bracket (HK$300,001–HK$350,000 @ 100%):</strong> HK$50,000 × 100% = HK$50,000</li>
+              <li><strong>Total First Registration Tax Payable:</strong> HK$69,000 + HK$108,000 + HK$50,000 = <strong>HK$227,000</strong> (Effective FRT rate: 64.86%)</li>
+            </ol>
+
+            <div class="my-6 rounded-xl border border-hairline bg-canvas-soft p-5 shadow-sm dark:border-overlay-lighter dark:bg-surface">
+              <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div>
+                  <h3 class="font-bold text-ink dark:text-on-primary text-base">Calculate Your Vehicle's First Registration Tax</h3>
+                  <p class="text-xs text-muted mt-1">Determine your exact FRT obligation based on vehicle value, engine type, and applicable EV concessions.</p>
+                </div>
+                <a href="/countries/hong-kong/stamp-duty/first-registration-tax-calculator" class="inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-xs font-semibold text-white transition hover:bg-primary/90 whitespace-nowrap">
+                  Calculate FRT &rarr;
+                </a>
+              </div>
+            </div>
+
             <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Electric Vehicle (EV) Concessions & One-for-One Scheme</h2>
             <p>To promote clean transportation, the Hong Kong Government provides First Registration Tax concessions for Electric Vehicles (EVs):</p>
             <ul class="list-disc pl-6 space-y-2">
               <li><strong>Standard EV Concession:</strong> Private electric cars receive an FRT tax concession cap of up to <strong>HK$58,500</strong>.</li>
               <li><strong>"One-for-One Replacement" Scheme:</strong> Owners who scrap and deregister an eligible old private car to replace it with a new electric car receive an enhanced FRT concession cap of up to <strong>HK$172,500</strong>.</li>
             </ul>
+            <p class="text-xs text-muted mt-2">Note: EV concession amounts and eligibility rules are subject to periodic review by the Environment and Ecology Bureau and Transport Department. Vehicle buyers should verify current concession caps directly via the official <a href="https://www.td.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Transport Department EV Portal</a>.</p>
 
             <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Annual Motor Vehicle Licensing Fees (MVT)</h2>
             <p>Annual vehicle license renewal fees for petrol private passenger cars are determined by engine cylinder capacity (CC):</p>
@@ -88,7 +110,7 @@ const faqSchema = {
             </ul>
 
             <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Transport Department Registration Procedures</h2>
-            <p>Vehicle buyers must submit registration documents, proof of third-party insurance, vehicle inspection certificates (for vehicles aged 6+ years), and payment of FRT and license fees to the Transport Department licensing office.</p>
+            <p>Vehicle buyers must submit registration documents, proof of third-party insurance, vehicle inspection certificates (for vehicles aged 6+ years), and payment of FRT and license fees to the Transport Department licensing office. For digital tax filing and account management tools, see our <a href="/blogs/hong-kong-etax-guide" class="text-link hover:underline dark:text-link">Hong Kong eTAX Portal Guide</a>.</p>
 
             <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Frequently Asked Questions</h2>
             {faqSchema.mainEntity.map(faq => (
