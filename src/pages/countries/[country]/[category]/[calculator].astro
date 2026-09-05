@@ -300,11 +300,27 @@ const mergedContent = {
   overview: content?.overview || defaultContent.overview,
 };
 
+const pageTitle = ruleId === 'pakistan-sales-tax-sales-tax-calculator'
+  ? "Pakistan Sales Tax & GST Calculator 2025-2026 | Calculate 18% FBR GST"
+  : ruleId === 'hong-kong-stamp-duty-hk-property-stamp-duty-calculator'
+  ? "Hong Kong Property Stamp Duty Calculator 2025-2026 | Scale 2 AVD Rates"
+  : ruleId === 'malaysia-sst-sst-calculator'
+  ? "Malaysia SST Calculator 2025-2026 | Calculate 6% & 8% Service Tax"
+  : `${country.name} ${calculator.name} ${country.taxYear}`;
+
+const pageDescription = ruleId === 'pakistan-sales-tax-sales-tax-calculator'
+  ? "Calculate 18% FBR federal sales tax (GST) and provincial services tax in Pakistan. Compute inclusive and exclusive GST invoice amounts instantly with our free calculator."
+  : ruleId === 'hong-kong-stamp-duty-hk-property-stamp-duty-calculator'
+  ? "Calculate Hong Kong property stamp duty (Scale 2 AVD) and residential lease stamping duty. Compute buyer duty and tenancy agreement fees with the calculator."
+  : ruleId === 'malaysia-sst-sst-calculator'
+  ? "Calculate Malaysia Sales and Service Tax (SST). Compute applicable service tax and sales tax rates, including 6% and 8% service tax and 5%/10% sales tax where applicable."
+  : `Calculate your ${country.name} ${calculator.name.toLowerCase()} for the ${country.taxYear} tax year. ${calculator.description}`;
+
 ---
 
 <CountryLayout
-  title={`${country.name} ${calculator.name} ${country.taxYear}`}
-  description={`Calculate your ${country.name} ${calculator.name.toLowerCase()} for the ${country.taxYear} tax year. ${calculator.description}`}
+  title={pageTitle}
+  description={pageDescription}
   canonical={`https://finsiva.com/countries/${country.slug}/${category.slug}/${calculator.slug}`}
   breadcrumbs={[
     { label: "Countries", href: "/countries" },
