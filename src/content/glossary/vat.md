@@ -16,7 +16,7 @@ Value-Added Tax (VAT) is a consumption tax applied to the value added to goods a
 
 ## Explanation
 
-VAT works by taxing the "value added" at each step of the supply chain. Each business in the chain charges VAT on sales and can reclaim VAT paid on purchases, passing only the net amount to the government.
+VAT works by taxing the "value added" at each step of the supply chain. Each business in the chain charges VAT on sales and can reclaim VAT paid on purchases, passing only the net amount to the government. While most regions use VAT or GST, Malaysia applies a single-stage tax system; calculate sales or service tax rates using the [Malaysia SST Calculator](/countries/malaysia/sst/sst-calculator).
 
 ## Examples
 
