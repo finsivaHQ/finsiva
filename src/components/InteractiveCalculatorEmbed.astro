@@ -1,0 +1,284 @@
+---
+import { taxRules, type TaxRule } from "../config/taxRules";
+import { formatCurrency, getCurrency } from "../config/currencies";
+
+interface Props {
+  ruleId: string;
+  instanceId: string;
+  title?: string;
+  description?: string;
+}
+
+const { ruleId, instanceId, title, description } = Astro.props;
+
+const rule = taxRules.find((r: TaxRule) => r.id === ruleId);
+
+const countrySlug = rule?.countrySlug || "hong-kong";
+const currencyMap: Record<string, string> = {
+  "hong-kong": "HKD",
+  "pakistan": "PKR",
+  "united-states": "USD",
+  "india": "INR",
+  "singapore": "SGD",
+  "indonesia": "IDR",
+  "malaysia": "MYR",
+  "new-zealand": "NZD",
+  "philippines": "PHP",
+  "united-kingdom": "GBP"
+};
+const currencyCode = currencyMap[countrySlug] || "USD";
+const currency = getCurrency(currencyCode);
+---
+
+<div
+  id={`embed-container-${instanceId}`}
+  class="not-prose my-8 rounded-xl border border-hairline bg-canvas p-6 shadow-sm dark:border-overlay-lighter dark:bg-surface"
+  data-instance-id={instanceId}
+  data-rule-id={ruleId}
+  data-currency={currencyCode}
+>
+  <div class="mb-6 flex flex-wrap items-center justify-between gap-2 border-b border-hairline pb-4 dark:border-overlay-lighter">
+    <div>
+      <span class="inline-block rounded-md bg-primary/10 px-2.5 py-0.5 text-xs font-semibold text-primary dark:bg-on-primary/10 dark:text-link mb-1">
+        Interactive Calculator
+      </span>
+      <h3 class="text-xl font-bold text-ink dark:text-on-primary">
+        {title || rule?.name || "Tax Calculator"}
+      </h3>
+    </div>
+    {rule && (
+      <a
+        href={`/countries/${rule.countrySlug}/${rule.categorySlug}/${rule.calculatorSlug}/`}
+        class="inline-flex items-center gap-1 text-xs font-medium text-link hover:underline dark:text-link"
+        title="Open full page calculator tool"
+      >
+        Full Tool &rarr;
+      </a>
+    )}
+  </div>
+
+  {description && (
+    <p class="mb-6 text-sm text-body dark:text-muted">
+      {description}
+    </p>
+  )}
+
+  {rule ? (
+    <form id={`form-${instanceId}`} class="space-y-6" onsubmit="event.preventDefault()">
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        {rule.inputs.map((input) => (
+          <div>
+            <label for={`${input.id}-${instanceId}`} class="block text-sm font-medium text-ink mb-1.5 dark:text-on-primary">
+              <span>{input.label}</span>
+              {input.required && <span class="text-rose-500 ml-0.5">*</span>}
+            </label>
+
+            {input.type === "select" ? (
+              <select
+                id={`${input.id}-${instanceId}`}
+                data-input-key={input.id}
+                class="w-full rounded-lg border border-hairline bg-canvas-soft p-2.5 text-sm text-ink focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary dark:border-overlay-lighter dark:bg-surface dark:text-on-primary"
+              >
+                {input.options?.map((opt) => (
+                  <option value={opt.value} selected={opt.value === input.defaultValue}>
+                    {opt.label}
+                  </option>
+                ))}
+              </select>
+            ) : (
+              <input
+                type={input.type}
+                id={`${input.id}-${instanceId}`}
+                data-input-key={input.id}
+                autocomplete="off"
+                placeholder={input.placeholder}
+                class="w-full rounded-lg border border-hairline bg-canvas-soft p-2.5 text-sm text-ink focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary dark:border-overlay-lighter dark:bg-surface dark:text-on-primary"
+              />
+            )}
+
+            {input.helpText && (
+              <p class="mt-1 text-xs text-muted dark:text-muted">{input.helpText}</p>
+            )}
+          </div>
+        ))}
+      </div>
+
+      <div class="flex items-center gap-3 pt-2">
+        <button
+          type="button"
+          id={`btn-calc-${instanceId}`}
+          class="btn btn-primary px-5 py-2.5 text-sm font-medium"
+        >
+          Calculate
+        </button>
+        <button
+          type="button"
+          id={`btn-reset-${instanceId}`}
+          class="btn btn-secondary px-4 py-2.5 text-sm font-medium"
+        >
+          Reset
+        </button>
+      </div>
+    </form>
+  ) : (
+    <p class="text-sm text-muted dark:text-muted">Calculator rule definition not found.</p>
+  )}
+
+  <div id={`result-wrapper-${instanceId}`} class="mt-6">
+    <div id={`result-empty-${instanceId}`} class="rounded-lg border border-dashed border-hairline bg-canvas-soft p-6 text-center dark:border-overlay-lighter dark:bg-surface">
+      <p class="text-sm font-medium text-ink dark:text-on-primary">Enter your details above and click Calculate.</p>
+      <p class="mt-1 text-xs text-muted dark:text-muted">Your estimated tax results will appear here.</p>
+    </div>
+
+    <div id={`result-box-${instanceId}`} class="hidden rounded-lg border border-hairline bg-canvas-soft p-5 dark:border-overlay-lighter dark:bg-surface">
+      <h4 class="text-xs font-bold uppercase tracking-wider text-muted dark:text-muted mb-4">Calculation Results</h4>
+
+      {rule && (
+        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {rule.outputs.map((output) => (
+            <div class="rounded-lg border border-hairline bg-canvas p-3.5 dark:border-overlay-lighter dark:bg-surface/80">
+              <p class="text-xs font-medium text-muted dark:text-muted">{output.label}</p>
+              <p class="mt-1 text-lg font-bold text-ink dark:text-on-primary" id={`output-${output.id}-${instanceId}`}>
+                {output.format === "currency" ? formatCurrency(0, currencyCode) : output.format === "percentage" ? "0%" : "0"}
+              </p>
+              <p class="mt-0.5 text-xs text-muted dark:text-muted">{output.description}</p>
+            </div>
+          ))}
+        </div>
+      )}
+
+      <div class="mt-4 flex flex-wrap items-center justify-between gap-2 border-t border-hairline pt-3 dark:border-overlay-lighter">
+        <p class="text-xs text-muted dark:text-muted">
+          Estimate for planning purposes.
+        </p>
+        {rule && (
+          <a
+            href={`/countries/${rule.countrySlug}/${rule.categorySlug}/${rule.calculatorSlug}/`}
+            class="text-xs font-medium text-link hover:underline dark:text-link"
+          >
+            View detailed breakdowns & formulas &rarr;
+          </a>
+        )}
+      </div>
+    </div>
+
+    <div id={`error-box-${instanceId}`} class="hidden mt-4 rounded-lg bg-rose-50 p-3 text-xs text-rose-600 dark:bg-rose-900/20 dark:text-rose-400" role="alert">
+      Please enter valid positive numbers for all required fields.
+    </div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ instanceId, ruleId, currencyCode }}>
+  (function() {
+    const container = document.getElementById('embed-container-' + instanceId);
+    if (!container) return;
+
+    const form = container.querySelector('#form-' + instanceId);
+    const calcBtn = container.querySelector('#btn-calc-' + instanceId);
+    const resetBtn = container.querySelector('#btn-reset-' + instanceId);
+    const resultBox = container.querySelector('#result-box-' + instanceId);
+    const resultEmpty = container.querySelector('#result-empty-' + instanceId);
+    const errorBox = container.querySelector('#error-box-' + instanceId);
+
+    const currencySymbols = {
+      USD: '$', INR: '₹', HKD: 'HK$', SGD: 'S$', IDR: 'Rp',
+      MYR: 'RM', NZD: 'NZ$', PKR: 'Rs', PHP: '₱', GBP: '£'
+    };
+
+    function getInputVal(id) {
+      const el = container.querySelector('#' + id + '-' + instanceId);
+      if (!el) return null;
+      if (el.type === 'number') return parseFloat(el.value) || 0;
+      return el.value;
+    }
+
+    function fmtNum(num, dec) {
+      if (dec === undefined) dec = (currencyCode === 'IDR' || currencyCode === 'PKR' || currencyCode === 'INR') ? 0 : 2;
+      return num.toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec });
+    }
+
+    function fmtCurrency(num) {
+      const sym = currencySymbols[currencyCode] || '$';
+      return sym + ' ' + fmtNum(num);
+    }
+
+    function setOutputVal(id, value, format) {
+      const el = container.querySelector('#output-' + id + '-' + instanceId);
+      if (!el) return;
+      if (format === 'currency') el.textContent = fmtCurrency(value);
+      else if (format === 'percentage') el.textContent = (typeof value === 'number' ? value.toFixed(1) : value) + '%';
+      else el.textContent = fmtNum(value, 0);
+    }
+
+    function calculate() {
+      if (!form) return;
+      const inputs = form.querySelectorAll('input[required], select[required]');
+      let valid = true;
+      inputs.forEach(input => {
+        if (input.type === 'number' && (!input.value || parseFloat(input.value) < 0)) {
+          valid = false;
+          input.classList.add('border-rose-500');
+        } else {
+          input.classList.remove('border-rose-500');
+        }
+      });
+
+      if (!valid) {
+        if (errorBox) errorBox.classList.remove('hidden');
+        return;
+      }
+      if (errorBox) errorBox.classList.add('hidden');
+
+      if (ruleId === 'hong-kong-property-tax-hk-rental-tax-deduction-calculator' || ruleId === 'hong-kong-property-tax-property-tax-calculator') {
+        const rent = getInputVal('annualIncome') || 0;
+        const irrecoverable = getInputVal('irrecoverableRent') || 0;
+        const standard = rent * 0.20;
+        const nav = Math.max(0, rent - standard - irrecoverable);
+        const tax = nav * 0.15;
+        const rate = rent > 0 ? (tax / rent * 100) : 0;
+
+        setOutputVal('grossRentalIncome', rent, 'currency');
+        setOutputVal('standardDeduction', standard, 'currency');
+        setOutputVal('netAssessableValue', nav, 'currency');
+        setOutputVal('propertyTax', tax, 'currency');
+        setOutputVal('effectiveRate', rate, 'percentage');
+      } else if (ruleId === 'pakistan-sales-tax-sales-tax-calculator' || ruleId === 'pakistan-sales-tax-gst-calculator') {
+        const amount = getInputVal('amount') || 0;
+        const calcType = getInputVal('calculationType') || 'exclusive';
+        const rate = 0.18;
+        let vatAmount = 0, totalAmount = 0, netAmount = 0;
+
+        if (calcType === 'inclusive') {
+          vatAmount = amount - (amount / (1 + rate));
+          netAmount = amount / (1 + rate);
+          totalAmount = amount;
+        } else {
+          vatAmount = amount * rate;
+          netAmount = amount;
+          totalAmount = amount * (1 + rate);
+        }
+
+        setOutputVal('taxAmount', vatAmount, 'currency');
+        setOutputVal('vatAmount', vatAmount, 'currency');
+        setOutputVal('totalAmount', totalAmount, 'currency');
+        setOutputVal('netAmount', netAmount, 'currency');
+      } else {
+        const amount = getInputVal('amount') || getInputVal('annualIncome') || 0;
+        setOutputVal('totalAmount', amount, 'currency');
+      }
+
+      if (resultEmpty) resultEmpty.classList.add('hidden');
+      if (resultBox) resultBox.classList.remove('hidden');
+    }
+
+    function reset() {
+      if (form) form.reset();
+      if (resultBox) resultBox.classList.add('hidden');
+      if (resultEmpty) resultEmpty.classList.remove('hidden');
+      if (errorBox) errorBox.classList.add('hidden');
+    }
+
+    if (calcBtn) calcBtn.addEventListener('click', calculate);
+    if (resetBtn) resetBtn.addEventListener('click', reset);
+  })();
+</script>
