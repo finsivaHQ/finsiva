@@ -1,6 +1,8 @@
 ---
 import CountryLayout from "../../../../layouts/CountryLayout.astro";
 import { getCountryBySlug, getCategoryBySlug } from "../../../../data/countries";
+import { getCurrentTaxYear } from "../../../../config/taxYears";
+import EditorialStandardsCard from "../../../../components/EditorialStandardsCard.astro";
 
 export function getStaticPaths() {
   const paths: { params: { country: string; category: string; guide: string } }[] = [];
@@ -114,13 +116,25 @@ const canonicalUrl = `https://finsiva.com/countries/${country.slug}/${category.s
       </div>
     )}
 
-    <div class="rounded-xl border border-hairline bg-canvas-soft p-8 dark:border-overlay-light dark:bg-surface">
-      <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">Official Resources</h2>
-      <p class="text-body dark:text-muted">For the most accurate and up-to-date information, visit the official tax authority:</p>
-      <a href={country.taxAuthorityUrl} target="_blank" rel="noopener" class="mt-4 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-on-primary transition hover:bg-primary-dark dark:bg-on-primary dark:text-primary">
-        {country.officialTaxAuthority} <span aria-hidden="true">↗</span>
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-8 dark:border-overlay-light dark:bg-surface space-y-4">
+      <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Official Government Resources</h2>
+      <p class="text-body dark:text-muted">For statutory tax rates, official guidance, and regulatory filings in {country.name}, consult the primary revenue authority:</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm my-4">
+        <div>
+          <strong class="text-ink dark:text-on-primary">Source Authority:</strong>
+          <p class="text-body dark:text-muted mt-0.5">{country.officialTaxAuthority}</p>
+        </div>
+        <div>
+          <strong class="text-ink dark:text-on-primary">Applicable Tax Period:</strong>
+          <p class="text-body dark:text-muted mt-0.5">Tax Year {getCurrentTaxYear(country.slug)}</p>
+        </div>
+      </div>
+      <a href={country.taxAuthorityUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-on-primary transition hover:bg-primary-dark dark:bg-on-primary dark:text-primary">
+        Visit {country.officialTaxAuthority} Website <span aria-hidden="true">↗</span>
       </a>
     </div>
+
+    <EditorialStandardsCard />
 
     <aside class="mt-8 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface" aria-label="Related calculators">
       <h3 class="text-lg font-semibold text-ink mb-4 dark:text-on-primary">Related Calculators</h3>

@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import EditorialStandardsCard from "../components/EditorialStandardsCard.astro";
 import { countries } from "../data/countries";
 
 const taxType = "Salary Tax Calculator";
@@ -51,6 +52,8 @@ const relevantCountries = countries.filter(country =>
           })}
         </div>
       </div>
+
+      <EditorialStandardsCard class="mt-8" />
     </section>
   </div>
 </Layout>

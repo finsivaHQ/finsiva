@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import EditorialStandardsCard from "../components/EditorialStandardsCard.astro";
 import { countries } from "../data/countries";
 
 const taxType = "Income Tax Calculator";
@@ -52,12 +53,14 @@ const relevantCountries = countries.filter(country =>
         </div>
       </div>
 
-      <div class="rounded-xl border border-hairline bg-canvas-soft p-8 dark:border-overlay-light dark:bg-surface">
+      <div class="mt-8 rounded-xl border border-hairline bg-canvas-soft p-8 dark:border-overlay-light dark:bg-surface">
         <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">About Income Tax Calculation</h2>
         <p class="text-body leading-relaxed dark:text-muted">
           Income tax is levied on individuals and businesses based on their earnings. Tax systems vary worldwide—some use progressive tax brackets where higher income is taxed at higher rates, while others use flat rates or offer specific deductions for retirement, health insurance, and personal allowances. Choose a country above to calculate your exact income tax liability.
         </p>
       </div>
+
+      <EditorialStandardsCard class="mt-8" />
     </section>
   </div>
 </Layout>

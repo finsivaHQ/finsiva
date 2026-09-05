@@ -2,8 +2,9 @@
 import CountryLayout from "../../../../layouts/CountryLayout.astro";
 import { getCountryBySlug, getCategoryBySlug } from "../../../../data/countries";
 import { getCurrency, formatCurrency } from "../../../../config/currencies";
-import { getTaxYears } from "../../../../config/taxYears";
+import { getTaxYears, getCurrentTaxYear } from "../../../../config/taxYears";
 import { calculatorContent } from "../../../../config/calculatorContent";
+import EditorialStandardsCard from "../../../../components/EditorialStandardsCard.astro";
 import type { TaxRule } from "../../../../config/taxRules";
 
 export function getStaticPaths() {
@@ -899,10 +900,39 @@ else { hideError(); return; }
       </section>
 
       <section class="mt-12">
-        <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary" set:html={content.officialResources.title}></h2>
-        <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
-          <div class="prose max-w-none text-body dark:text-muted space-y-4" set:html={content.officialResources.html}></div>
+        <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Official Government Resources</h2>
+        <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+            <div>
+              <strong class="text-ink dark:text-on-primary">Source Authority:</strong>
+              <p class="text-body dark:text-muted mt-0.5">{country.officialTaxAuthority}</p>
+            </div>
+            <div>
+              <strong class="text-ink dark:text-on-primary">Applicable Tax Period:</strong>
+              <p class="text-body dark:text-muted mt-0.5">Tax Year {getCurrentTaxYear(country.slug)}</p>
+            </div>
+            <div>
+              <strong class="text-ink dark:text-on-primary">Source Purpose:</strong>
+              <p class="text-body dark:text-muted mt-0.5">Primary statutory revenue portal for official tax rates, allowances, and filing guidelines.</p>
+            </div>
+            <div>
+              <strong class="text-ink dark:text-on-primary">Methodology & Verification:</strong>
+              <p class="text-body dark:text-muted mt-0.5">Calculations are modeled against published revenue legislation from official government sources.</p>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-hairline dark:border-overlay-lighter flex flex-wrap items-center justify-between gap-4">
+            <a href={country.taxAuthorityUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-medium text-link hover:underline dark:text-link">
+              Visit {country.officialTaxAuthority} Website <span aria-hidden="true">↗</span>
+            </a>
+            {content && content.officialResources && (
+              <div class="text-xs text-body dark:text-muted prose prose-sm max-w-none" set:html={content.officialResources.html}></div>
+            )}
+          </div>
         </div>
+      </section>
+
+      <section class="mt-12">
+        <EditorialStandardsCard />
       </section>
 
       <script type="application/ld+json" set:html={JSON.stringify({
