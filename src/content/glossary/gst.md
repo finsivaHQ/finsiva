@@ -22,6 +22,7 @@ GST is similar to VAT in concept — it is a multi-stage tax on the value added 
 
 - In India, GST is applied at rates of 0%, 5%, 12%, 18%, and 28% depending on the type of goods or service.
 - In Australia, GST is a flat 10% on most goods and services.
+- In Malaysia, GST was replaced by Sales and Service Tax (SST); compute tax amounts using the [Malaysia SST Calculator](/countries/malaysia/sst/sst-calculator).
 
 ## Related Guides
 
