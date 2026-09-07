@@ -1,0 +1,148 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "UK Self Assessment & Sole Trader Tax Guide 2025/2026: Dividends, Business Expenses & Ltd Taxes";
+const description = "Comprehensive Self Assessment tax guide for sole traders, freelancers, Amazon sellers, and limited company directors. Learn about dividend tax rates, Corporation Tax (19%-25%), Class 4 NI, and allowable expenses.";
+const image = "/images/blogs/uk-self-assessment-sole-trader-tax.svg";
+const author = "James Sterling";
+const authorBio = "Senior UK Tax Accountant & Small Business Advisor specializing in Self Assessment filing, limited company dividend optimization, and HMRC compliance.";
+const lastUpdated = "August 2026";
+const readTime = "14 min read";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When is the HMRC Self Assessment online deadline for 2025/2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The online Self Assessment tax return deadline and final tax payment deadline is 31 January midnight following the end of the tax year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much dividend income can I receive tax-free in the UK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The annual Dividend Allowance is £500 for the 2025/2026 tax year. Dividend income above £500 is taxed at 8.75% (Basic Rate), 33.75% (Higher Rate), or 39.35% (Additional Rate)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the Corporation Tax rates in the UK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Corporation Tax is 19% for company profits up to £50,000 (Small Profits Rate) and 25% for profits over £250,000, with marginal relief applying between £50,000 and £250,000."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do Amazon, Etsy, and eBay sellers in the UK pay Income Tax?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Digital platform sellers earning gross trading income above the £1,000 Trading Allowance must register for Self Assessment and report trading profits to HMRC."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What Class 4 National Insurance do self-employed sole traders pay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Self-employed individuals pay 6% Class 4 NI on profits between £12,570 and £50,270, and 2% on profits above £50,270."
+      }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": title,
+  "description": description,
+  "image": image,
+  "author": {
+    "@type": "Person",
+    "name": author,
+    "jobTitle": authorBio
+  },
+  "datePublished": "2026-08-18",
+  "dateModified": "2026-08-18"
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated={lastUpdated}
+  readTime={readTime}
+  faqSchema={faqSchema}
+  articleSchema={articleSchema}
+>
+  
+    
+    <p class="lead">
+      Running a business in the UK—whether as a freelance sole trader, an e-commerce Amazon seller, or an incorporated Limited Company director—demands absolute clarity on tax deadlines, allowable expenses, dividend tax rates, and **HMRC Self Assessment** procedures.
+    </p>
+
+    <img src={image} alt="UK Self Assessment & Sole Trader Tax Timeline" class="my-8 w-full rounded-xl border border-hairline shadow-md dark:border-overlay-lighter" loading="lazy" />
+
+    <nav class="my-8 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-bold text-ink dark:text-on-primary mt-0 mb-4">Table of Contents</h2>
+      <ul class="space-y-2 text-sm text-body dark:text-muted">
+        <li><a href="#self-assessment-deadlines" class="hover:underline text-link dark:text-link">1. Self Assessment Deadlines & Payments on Account</a></li>
+        <li><a href="#sole-trader-ni" class="hover:underline text-link dark:text-link">2. Sole Trader Taxes & Class 4 National Insurance</a></li>
+        <li><a href="#ltd-dividend-tax" class="hover:underline text-link dark:text-link">3. Limited Company Corporation Tax & Dividend Tax Rates</a></li>
+        <li><a href="#allowable-expenses" class="hover:underline text-link dark:text-link">4. Allowable Expenses & Pension Relief Strategies</a></li>
+        <li><a href="#faqs" class="hover:underline text-link dark:text-link">5. Frequently Asked Questions (FAQs)</a></li>
+      </ul>
+    </nav>
+    <h2 id="self-assessment-deadlines">1. Self Assessment Deadlines & Payments on Account</h2>
+    <p>
+      Register for <a href="/knowledge/glossary/uk-self-assessment" class="text-link hover:underline dark:text-link">Self Assessment</a> by 5 October following your first business year.
+    </p>
+    <ul>
+      <li><strong>31 January:</strong> Online tax return submission, final tax bill payment, and 1st Payment on Account (50%).</li>
+      <li><strong>31 July:</strong> 2nd Payment on Account (50%).</li>
+    </ul>
+
+    <h2 id="sole-trader-ni">2. Sole Trader Taxes & Class 4 National Insurance</h2>
+    <p>
+      Sole traders receive the £1,000 Trading Allowance. Profits above £12,570 attract 20% Income Tax and 6% Class 4 National Insurance.
+    </p>
+
+    <h2 id="ltd-dividend-tax">3. Limited Company Corporation Tax & Dividend Tax Rates</h2>
+    <p>
+      Small companies pay 19% Corporation Tax up to £50k profit. Directors taking dividends benefit from a £500 <a href="/knowledge/glossary/uk-dividend-allowance" class="text-link hover:underline dark:text-link">Dividend Allowance</a>, with remaining dividends taxed at 8.75% (Basic), 33.75% (Higher), or 39.35% (Additional).
+    </p>
+
+    <h2 id="allowable-expenses">4. Allowable Expenses & Pension Relief Strategies</h2>
+    <p>
+      Deduct qualifying business costs (software, equipment, travel, office space) and executive pension contributions to legally minimize taxable profits.
+    </p>
+
+    <h2 id="faqs">5. Frequently Asked Questions (FAQs)</h2>
+    <div class="space-y-4 my-6">
+      {faqSchema.mainEntity.map(faq => (
+        <div class="rounded-xl border border-hairline p-5 dark:border-overlay-lighter bg-canvas dark:bg-surface">
+          <h3 class="text-lg font-bold text-ink dark:text-on-primary m-0">{faq.name}</h3>
+          <p class="text-body dark:text-muted mt-2 mb-0">{faq.acceptedAnswer.text}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-bold text-ink dark:text-on-primary mt-0 mb-3">Explore Related Self-Employed Tax Resources</h3>
+      <ul class="space-y-2 mb-0">
+        <li><a href="/countries/united-kingdom/income-tax/income-tax-calculator" class="text-link hover:underline dark:text-link font-semibold">UK Income Tax Calculator</a></li>
+        <li><a href="/countries/united-kingdom/national-insurance/ni-calculator" class="text-link hover:underline dark:text-link font-semibold">UK National Insurance Calculator</a></li>
+        <li><a href="/knowledge/uk-self-assessment-freelancer-dividend-tax-guide" class="text-link hover:underline dark:text-link">UK Self Assessment & Freelancer Guide</a></li>
+        <li><a href="/knowledge/glossary/uk-self-assessment" class="text-link hover:underline dark:text-link">Glossary: UK Self Assessment</a></li>
+        <li><a href="/knowledge/glossary/uk-dividend-allowance" class="text-link hover:underline dark:text-link">Glossary: UK Dividend Allowance</a></li>
+      </ul>
+    </div>
+  </BlogLayout>

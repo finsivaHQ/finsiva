@@ -56,48 +56,7 @@ const faqSchema = {
   lastUpdated="August 2026" 
   readTime="11 min read"
 >
-  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
-
-  <div class="min-h-screen bg-canvas dark:bg-canvas">
-    <main class="min-h-screen">
-      <div class="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
-        <nav aria-label="Breadcrumb" class="mb-6 text-sm">
-          <ol class="flex flex-wrap items-center gap-2">
-            <li class="flex items-center gap-2"><a href="/" class="text-link hover:underline dark:text-link">Home</a></li>
-            <li class="flex items-center gap-2"><span class="text-muted">/</span><a href="/blogs" class="text-link hover:underline dark:text-link">Guides</a></li>
-            <li class="flex items-center gap-2"><span class="text-muted">/</span><a href="/countries/hong-kong" class="text-link hover:underline dark:text-link">Hong Kong Tax</a></li>
-            <li class="flex items-center gap-2"><span class="text-muted">/</span><span class="font-medium text-ink dark:text-on-primary" aria-current="page">Expats Tax Guide</span></li>
-          </ol>
-        </nav>
-
-        <article class="prose max-w-none">
-          <h1 class="text-3xl sm:text-4xl font-extrabold text-ink mb-4 dark:text-on-primary leading-tight">
-            Hong Kong Tax Calculator for Expats & Foreigners 2026/27: Complete Tax Guide
-          </h1>
-          
-          <div class="flex items-center gap-4 text-sm text-body dark:text-muted mb-8 pb-4 border-b border-hairline dark:border-overlay-lighter">
-            <span>By <strong class="text-ink dark:text-on-primary">Emily Wong, CPA</strong></span>
-            <span>•</span>
-            <span>2026/27 Expat Rules</span>
-            <span>•</span>
-            <span>11 min read</span>
-          </div>
-
-          <img src={image} alt="Expats and foreign business professionals in Hong Kong office" class="mb-8 w-full rounded-2xl object-cover max-h-80 sm:max-h-96 shadow-sm" loading="lazy" />
-
-          <div class="my-8 rounded-2xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-lighter dark:bg-surface/60 shadow-sm">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-              <div>
-                <h3 class="text-lg font-bold text-ink dark:text-on-primary">Calculate Your HK Expat Tax Liability</h3>
-                <p class="text-sm text-body dark:text-muted mt-1">Free online calculator for foreigners and expat salary after tax in HK.</p>
-              </div>
-              <a href="/countries/hong-kong/salaries-tax/hong-kong-tax-calculator-for-expats" class="inline-flex items-center justify-center rounded-pill bg-primary px-5 py-2.5 text-sm font-semibold text-on-primary transition hover:opacity-90 dark:bg-on-primary dark:text-primary shrink-0">
-                Launch Expat Tax Tool &rarr;
-              </a>
-            </div>
-          </div>
-
-          <div class="space-y-8 text-body dark:text-muted leading-relaxed">
+  <div class="space-y-8 text-body dark:text-muted leading-relaxed">
             <section>
               <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">Why Hong Kong is a Top Tax Haven for Foreigners & Expats</h2>
               <p>
@@ -136,9 +95,7 @@ const faqSchema = {
                 ))}
               </div>
             </section>
-          </div>
-
-          <!-- Internal Links -->
+<!-- Internal Links -->
           <div class="mt-12 pt-8 border-t border-hairline dark:border-overlay-lighter">
             <h3 class="text-xl font-bold text-ink dark:text-on-primary mb-4">Related Calculators & Guides</h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -156,11 +113,6 @@ const faqSchema = {
               </a>
             </div>
           </div>
-        </article>
-      </div>
-    </main>
-  </div>
-</BlogLayout>
 
             <h3 class="text-xl font-semibold text-ink dark:text-on-primary">How can I minimize Hong Kong tax as an expat?</h3>
             <p>Ensure you accurately claim all personal allowances and MPF deductions. Compare the progressive rate and standard rate calculations. Use our <a href="/countries/hong-kong/salaries-tax/salaries-tax-calculator" class="text-link hover:underline dark:text-link">Hong Kong tax calculator</a> to model different scenarios. You may also want to review your employment contract structure with a tax professional.</p>
@@ -232,8 +184,4 @@ const faqSchema = {
             <li><a href="https://www.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Hong Kong Government Portal (gov.hk)</a> - Government services and official tax bulletins.</li>
             <li><a href="https://en.wikipedia.org/wiki/Taxation_in_Hong_Kong" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Taxation in Hong Kong - Wikipedia</a> - General overview of the Hong Kong tax system.</li>
           </ul>
-        </article>
-      </div>
-    </main>
-  </div>
 </BlogLayout>

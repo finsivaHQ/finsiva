@@ -1,0 +1,195 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Singapore Income Tax Guide for Malaysian & Indian Expats (DTA & Remittance)";
+const description = "Comprehensive Singapore income tax calculation guide for Malaysian Causeway commuters and Indian EP holders. Covers Singapore vs UK tax, DTAs, tax-free rules, and remittance.";
+const image = "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=80";
+const author = "Rachel Lim, Senior International Tax Consultant";
+const authorBio = "Senior Tax Specialist specializing in Malaysia-Singapore & India-Singapore double taxation treaties, cross-border remittance, and non-resident employee tax compliance.";
+const canonical = "https://finsiva.com/blogs/singapore-tax-for-malaysian-indian-expats-guide";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Do Malaysians working in Singapore pay income tax in Malaysia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Under Article 15 of the Malaysia-Singapore Double Taxation Agreement (DTA), income derived from employment exercised in Singapore is taxable in Singapore. Under Malaysia tax law, foreign-sourced employment income remitted by individuals into Malaysia is exempt from Malaysian income tax, preventing double taxation."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How do Indian NRIs working on EP in Singapore pay tax in India?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Indian citizens working in Singapore who qualify as Non-Resident Indians (NRI) under the Indian IT Act (staying outside India for 182+ days) pay income tax only in Singapore on their Singapore salary. Salary remitted from Singapore into Indian NRE/NRO bank accounts is tax-free in India."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How does Singapore income tax compare to UK income tax?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Singapore tax rates are significantly lower than the UK. Singapore resident tax rates range from 0% to 24% with zero capital gains tax and zero dividend tax, whereas the UK imposes progressive income tax up to 45%, 12% National Insurance contributions, and capital gains/dividend taxes."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Is foreign income remitted into Singapore tax-free?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. For individual tax residents, foreign-sourced income (such as foreign dividends, rental income, or capital gains) remitted into Singapore on or after 1 January 2004 is completely exempt from Singapore income tax."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="18 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <p class="text-lg leading-relaxed font-sans">
+      Malaysian cross-border commuters traveling daily across the Causeway and Indian professionals holding Employment Passes represent two of Singapore's largest foreign talent communities. Navigating <strong>Singapore income tax for Malaysians and Indian expats</strong> requires understanding bilateral <a href="https://www.iras.gov.sg/taxes/international-tax/double-taxation-agreements-(dtas)" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">Double Taxation Agreements (DTAs)</a>, Tax Residency Certificates (TRC), CPF exemption rules, and foreign remittance tax laws.
+    </p>
+
+    <div class="my-8 rounded-2xl border border-hairline bg-canvas-soft p-6 shadow-sm dark:border-overlay-light dark:bg-surface">
+      <div class="flex items-center gap-4">
+        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary dark:bg-primary/20">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path></svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-ink dark:text-on-primary">Calculate Singapore Tax for Foreigners</h3>
+          <p class="text-sm text-muted">Determine your exact Singapore tax liability, net take-home salary, and DTA tax exemption eligibility.</p>
+        </div>
+      </div>
+      <div class="mt-4">
+        <a href="/countries/singapore/income-tax/income-tax-calculator" class="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primary/90">
+          Calculate Tax Liability &rarr;
+        </a>
+      </div>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-bold text-ink mb-3 dark:text-on-primary">Table of Contents</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#malaysian-commuters" class="text-link hover:underline">1. Tax Rules for Malaysian Causeway Commuters</a></li>
+        <li><a href="#indian-nri-rules" class="text-link hover:underline">2. Tax Rules for Indian Professionals & NRIs</a></li>
+        <li><a href="#sg-vs-uk" class="text-link hover:underline">3. Singapore Tax vs UK Tax Comparison</a></li>
+        <li><a href="#tax-free-status" class="text-link hover:underline">4. Is Income in Singapore Tax-Free?</a></li>
+        <li><a href="#remittance-rules" class="text-link hover:underline">5. Foreign Income Remittance Rules</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">6. Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <h2 id="malaysian-commuters" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">1. Tax Rules for Malaysian Causeway Commuters</h2>
+    <p>
+      Tens of thousands of Malaysian citizens commute daily between Johor Bahru and Singapore or reside in Singapore under EP, S Pass, or Work Permit.
+    </p>
+
+    <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface my-6">
+      <h3 class="font-bold text-ink dark:text-on-primary text-lg mb-2">Malaysia-Singapore DTA Framework</h3>
+      <ul class="list-disc pl-5 text-sm space-y-2 text-muted">
+        <li><strong>Tax Resident Status:</strong> If a Malaysian works in Singapore for 183+ days in a calendar year, they are taxed as a Singapore tax resident at progressive rates (0% to 24%).</li>
+        <li><strong>LHDN (Lembaga Hasil Dalam Negeri) Exemption:</strong> Under Malaysian tax law, foreign employment income remitted back to Malaysia by individuals is tax-exempt. You do not pay tax to LHDN on your Singapore salary.</li>
+        <li><strong>No Double Tax:</strong> The DTA ensures you pay tax only to IRAS in Singapore.</li>
+      </ul>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=80" alt="Transport link connecting Malaysia and Singapore" class="my-8 w-full rounded-xl object-cover max-h-96 shadow-md" loading="lazy" />
+
+    <h2 id="indian-nri-rules" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">2. Tax Rules for Indian Professionals & NRIs</h2>
+    <p>
+      For Indian citizens holding Employment Passes (EP) or ONE Passes in Singapore, tax compliance spans both Singapore IRAS and the Income Tax Department of India:
+    </p>
+
+    <div class="space-y-4 my-6">
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="font-bold text-ink dark:text-on-primary text-base">NRI Tax Status in India</h3>
+        <p class="mt-1 text-sm text-muted">To qualify as an Non-Resident Indian (NRI), you must be physically present in India for fewer than 182 days in a financial year (April 1 to March 31). NRIs pay zero tax in India on income earned outside India.</p>
+      </div>
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="font-bold text-ink dark:text-on-primary text-base">NRE & NRO Account Remittances</h3>
+        <p class="mt-1 text-sm text-muted">Money remitted from your Singapore bank account into an Indian NRE (Non-Resident External) account is completely tax-free and fully repatriable. Interest earned on NRE deposits in India is also exempt from Indian tax.</p>
+      </div>
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="font-bold text-ink dark:text-on-primary text-base">Tax Residency Certificate (TRC)</h3>
+        <p class="mt-1 text-sm text-muted">You can request an official Certificate of Tax Residence (COR/TRC) from IRAS via myTax Portal to present to Indian financial institutions or tax authorities under the India-Singapore DTA.</p>
+      </div>
+    </div>
+
+    <h2 id="sg-vs-uk" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">3. Singapore Tax vs UK Tax Comparison</h2>
+    <p>
+      Expatriates relocating from the UK or evaluating UK vs Singapore employment offers experience a substantial tax differential:
+    </p>
+
+    <div class="overflow-x-auto my-6">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-bold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Tax Feature</th>
+            <th class="border p-3">Singapore</th>
+            <th class="border p-3">United Kingdom (UK)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr><td class="p-3 font-semibold">Top Income Tax Rate</td><td class="p-3 text-emerald-600 font-bold">24% (above S$1M)</td><td class="p-3 text-rose-600 font-bold">45% (above £125,140)</td></tr>
+          <tr><td class="p-3 font-semibold">Payroll / Social Security Tax</td><td class="p-3 font-medium">0% for foreign expats</td><td class="p-3 font-medium">8% to 12% National Insurance</td></tr>
+          <tr><td class="p-3 font-semibold">Capital Gains Tax</td><td class="p-3 text-emerald-600 font-bold">0% (Capital gains exempt)</td><td class="p-3 text-rose-600 font-bold">Up to 24% on gains</td></tr>
+          <tr><td class="p-3 font-semibold">Dividend Tax</td><td class="p-3 text-emerald-600 font-bold">0% (1-Tier system tax-free)</td><td class="p-3 text-rose-600 font-bold">Up to 39.35% on dividends</td></tr>
+          <tr><td class="p-3 font-semibold">Effective Tax on S$150k (£90k)</td><td class="p-3 text-emerald-600 font-bold">~8.3% effective tax</td><td class="p-3 text-rose-600 font-bold">~34% effective tax & NI</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="tax-free-status" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">4. Is Income in Singapore Tax-Free?</h2>
+    <p>
+      A common search term among expats is <em>"Is Singapore tax-free income?"</em> While Singapore is not a zero-tax haven like Dubai or the Cayman Islands, its personal tax system is exceptionally low:
+    </p>
+    <ul class="list-disc pl-5 text-sm space-y-2 text-muted my-4">
+      <li><strong>First S$20,000 is 0% taxed.</strong></li>
+      <li><strong>Capital gains on stocks, crypto, real estate are 100% tax-free.</strong></li>
+      <li><strong>Inheritance tax and wealth tax do not exist.</strong></li>
+    </ul>
+
+    <h2 id="remittance-rules" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">5. Foreign Income Remittance Rules</h2>
+    <p>
+      Under Section 13(7A) of the Income Tax Act, foreign-sourced dividends, overseas property rentals, or foreign capital gains remitted into Singapore by individual residents are <strong>completely exempt from Singapore tax</strong>.
+    </p>
+
+    <!-- Related Links -->
+    <div class="my-8 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-lg font-bold text-ink mb-3 dark:text-on-primary">Explore Related Guides</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+        <a href="/countries/singapore/income-tax/income-tax-calculator" class="text-link hover:underline font-medium">&rarr; Singapore Income Tax Calculator</a>
+        <a href="/blogs/singapore-foreign-income-dividends-capital-gains-tax" class="text-link hover:underline font-medium">&rarr; Foreign Income & Capital Gains Tax Guide</a>
+        <a href="/blogs/singapore-expat-employment-pass-tax-calculator-guide" class="text-link hover:underline font-medium">&rarr; EP & Expat Tax Calculator Guide</a>
+        <a href="/countries/singapore" class="text-link hover:underline font-medium">&rarr; Singapore Tax Hub Overview</a>
+      </div>
+    </div>
+
+    <h2 id="faqs" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">6. Frequently Asked Questions</h2>
+    <div class="space-y-4 my-6">
+      {faqSchema.mainEntity.map(faq => (
+        <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+          <h3 class="font-bold text-ink dark:text-on-primary text-base mb-2">{faq.name}</h3>
+          <p class="text-sm leading-relaxed text-body dark:text-muted">{faq.acceptedAnswer.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</BlogLayout>

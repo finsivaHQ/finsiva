@@ -1,5 +1,6 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
+import InteractiveCalculatorEmbed from "../../components/InteractiveCalculatorEmbed.astro";
 
 const title = "Hong Kong Property Tax Guide: Rates, Deductions & Calculation";
 const description = "Hong Kong property tax guide for property owners and landlords. Understand 15% standard rate on Net Assessable Value, 20% statutory repair allowance, and filing.";
@@ -55,41 +56,11 @@ const faqSchema = {
 ---
 
 <BlogLayout title={title} description={description} image={image} canonical={canonical} author="Sarah Lee" authorBio="Sarah Lee is a property tax advisor with deep expertise in Hong Kong real estate taxation. She helps landlords and property investors optimize their tax positions." lastUpdated="August 2026" readTime="10 min read">
-  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
-
-  <div class="min-h-screen bg-canvas dark:bg-canvas">
-    <main class="min-h-screen">
-      <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-        <nav aria-label="Breadcrumb" class="mb-6 text-sm">
-          <ol class="flex flex-wrap items-center gap-2">
-            <li class="flex items-center gap-2"><a href="/" class="text-link hover:underline dark:text-link">Home</a></li>
-            <li class="flex items-center gap-2"><span class="text-muted">/</span><a href="/blogs" class="text-link hover:underline dark:text-link">Blogs</a></li>
-            <li class="flex items-center gap-2"><span class="text-muted">/</span><span class="font-medium text-ink dark:text-on-primary" aria-current="page">Hong Kong Property Tax Guide</span></li>
-          </ol>
-        </nav>
-
-        <article class="prose max-w-none">
-          <h1 class="text-3xl sm:text-4xl font-bold text-ink mb-4 dark:text-on-primary">Hong Kong Property Tax Guide: Rates & Calculations for Landlords</h1>
-          <p class="text-lg text-body dark:text-muted">Last updated: August 2026 | Verified IRD Guidelines | 10 min read</p>
-
-          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80" alt="Hong Kong residential property buildings - Property Tax Guide" class="mb-6 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
-
-          <!-- Early Calculator CTA -->
-          <div class="my-6 p-6 rounded-2xl border border-primary/30 bg-primary/5 dark:border-primary/20 dark:bg-primary/5 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>
-              <h3 class="text-xl font-bold text-ink dark:text-on-primary">Calculate Your Hong Kong Property Tax</h3>
-              <p class="text-sm text-body dark:text-muted mt-1">Estimate your Net Assessable Value, statutory 20% repair allowance, and property tax instantly.</p>
-            </div>
-            <a href="/countries/hong-kong/property-tax/property-tax-calculator" class="btn btn-primary text-sm font-semibold shrink-0 px-5 py-2.5">
-              Launch Property Tax Calculator →
-            </a>
-          </div>
-
-          <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
+  <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
             <p>Hong Kong Property Tax is charged under Part 2 of the <em>Inland Revenue Ordinance</em> on owners of land or buildings situated in Hong Kong. Unlike jurisdictions with progressive municipal property taxes, Hong Kong imposes a flat standard rate on rental earnings while exempting owner-occupied residential properties from rental income tax.</p>
 
             <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">What is Property Tax in Hong Kong?</h2>
-            <p>Property tax is an annual tax assessed on the <strong>Net Assessable Value (NAV)</strong> of real property that generates rental income. If a property is owner-occupied and produces zero rental revenue, property tax is not charged. However, if a flat or commercial unit is let out, the owner must report the rental proceeds to the Inland Revenue Department (IRD).</p>
+            <p>Property tax is an annual tax assessed on the <strong>Net Assessable Value (NAV)</strong> of real property that generates rental income. If a property is owner-occupied and produces zero rental revenue, property tax is not charged. However, if a flat or commercial unit is let out, the owner must report the rental proceeds to the Inland Revenue Department (IRD). For detailed landlord tax compliance guidelines, see our <a href="/blogs/hong-kong-rental-income-tax-guide" class="text-link hover:underline dark:text-link">Hong Kong Rental Income Tax Guide</a>.</p>
 
             <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Property Tax Rates (15% Standard Rate)</h2>
             <p>The standard property tax rate is <strong>15%</strong>. The tax is calculated on the Net Assessable Value (NAV), derived after statutory deductions:</p>
@@ -101,6 +72,23 @@ const faqSchema = {
               Net Assessable Value (NAV) = AV × 80%<br/>
               <strong>Property Tax Payable = NAV × 15%</strong>
             </div>
+
+            <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6 mb-2">Step-by-Step Property Tax Worked Example</h3>
+            <p>Consider a Hong Kong landlord who receives HK$30,000 monthly rent (HK$360,000 annually) and pays HK$12,000 in annual government rates:</p>
+            <ol class="list-decimal pl-6 space-y-2 my-3">
+              <li><strong>Gross Rental Income:</strong> HK$360,000</li>
+              <li><strong>Less Rates Paid by Owner:</strong> -HK$12,000 = HK$348,000 (Assessable Value)</li>
+              <li><strong>Less 20% Statutory Repair Allowance:</strong> -HK$69,600 (20% of HK$348,000)</li>
+              <li><strong>Net Assessable Value (NAV):</strong> HK$278,400</li>
+              <li><strong>Property Tax Payable (15% × HK$278,400): HK$41,760</strong> (Effective tax rate on gross rent: 11.6%)</li>
+            </ol>
+
+            <InteractiveCalculatorEmbed
+              ruleId="hong-kong-property-tax-property-tax-calculator"
+              instanceId="embed-hk-property-tax-blog"
+              title="Hong Kong Property Tax & NAV Calculator"
+              description="Estimate your Net Assessable Value (NAV) and 15% Property Tax liability after applying rates and the statutory 20% repair allowance."
+            />
 
             <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Who is Liable for Hong Kong Property Tax?</h2>
             <p>The legal owner recorded in the Land Registry is liable for property tax. If a property is co-owned:</p>
@@ -121,11 +109,15 @@ const faqSchema = {
             <p>It is vital not to confuse Property Tax with Stamp Duty:</p>
             <ul class="list-disc pl-6 space-y-2">
               <li><strong>Property Tax:</strong> Annual tax on rental earnings from property ownership.</li>
-              <li><strong>Stamp Duty:</strong> One-off duty paid upon purchasing property (Scale 2 AVD, BSD, SSD) or executing a tenancy agreement. See our <a href="/blogs/hong-kong-stamp-duty-guide" class="text-link hover:underline dark:text-link">Hong Kong Stamp Duty Guide</a>.</li>
+              <li><strong>Stamp Duty:</strong> One-off duty paid upon purchasing property (Scale 2 AVD, BSD, SSD) or executing a tenancy agreement. See our <a href="/blogs/hong-kong-stamp-duty-guide" class="text-link hover:underline dark:text-link">Hong Kong Stamp Duty Guide</a> or compute transaction duties with the <a href="/countries/hong-kong/stamp-duty/hk-property-stamp-duty-calculator" class="text-link hover:underline dark:text-link">Hong Kong Property Stamp Duty Calculator</a>.</li>
             </ul>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Filing Returns via eTAX</h2>
-            <p>Landlords receive Property Tax Returns (Form BIRC60 or BIR57) annually. You can submit returns and track assessments online via the <a href="/blogs/hong-kong-etax-guide" class="text-link hover:underline dark:text-link">IRD eTAX Portal</a>.</p>
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Property Tax Return Filing & Payment Process</h2>
+            <p>Landlords receive Property Tax Returns (Form BIRC60 for corporations or BIR57 for individuals/co-owners) annually in early April. Key filing and payment steps include:</p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>Filing Deadline:</strong> Returns must be filed within 1 month. Submitting online via the <a href="/blogs/hong-kong-etax-guide" class="text-link hover:underline dark:text-link">IRD eTAX Portal</a> grants an automatic 1-month filing extension.</li>
+              <li><strong>Provisional Property Tax:</strong> Demand notes include final tax for the past year and provisional tax for the upcoming year, payable in two installments (typically November and January).</li>
+            </ul>
 
             <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Frequently Asked Questions</h2>
             {faqSchema.mainEntity.map(faq => (
@@ -173,8 +165,4 @@ const faqSchema = {
             <li><a href="https://www.rvd.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Rating and Valuation Department (RVD) - Government Rates</a></li>
             <li><a href="https://www.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Hong Kong Government Official Portal</a></li>
           </ul>
-        </article>
-      </div>
-    </main>
-  </div>
 </BlogLayout>

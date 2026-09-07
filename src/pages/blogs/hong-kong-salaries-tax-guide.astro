@@ -105,77 +105,7 @@ const faqSchema = {
   lastUpdated="August 2026" 
   readTime="14 min read"
 >
-  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
-
-  <div class="min-h-screen bg-canvas dark:bg-canvas">
-    <main class="min-h-screen">
-      <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div class="flex flex-col lg:flex-row gap-12">
-          <div class="flex-1 min-w-0 article-content">
-        <!-- Breadcrumb Navigation -->
-        <nav aria-label="Breadcrumb" class="mb-6 text-sm">
-          <ol class="flex flex-wrap items-center gap-2">
-            <li class="flex items-center gap-2"><a href="/" class="text-link hover:underline dark:text-link">Home</a></li>
-            <li class="flex items-center gap-2"><span class="text-muted">/</span><a href="/blogs" class="text-link hover:underline dark:text-link">Guides</a></li>
-            <li class="flex items-center gap-2"><span class="text-muted">/</span><a href="/countries/hong-kong" class="text-link hover:underline dark:text-link">Hong Kong Tax</a></li>
-            <li class="flex items-center gap-2"><span class="text-muted">/</span><span class="font-medium text-ink dark:text-on-primary" aria-current="page">Salaries Tax Guide</span></li>
-          </ol>
-        </nav>
-
-        <article class="prose max-w-none">
-          <h1 class="text-3xl sm:text-4xl font-extrabold text-ink mb-4 dark:text-on-primary leading-tight">
-            Hong Kong Salaries Tax Guide 2026/27: Rates, Computation, Allowances & Calculator
-          </h1>
-          
-          <div class="flex items-center gap-4 text-sm text-body dark:text-muted mb-8 pb-4 border-b border-hairline dark:border-overlay-lighter">
-            <span>By <strong class="text-ink dark:text-on-primary">Jessica Liu, CPA</strong></span>
-            <span>•</span>
-            <span>Updated for 2026/27 Assessment Year</span>
-            <span>•</span>
-            <span>14 min read</span>
-          </div>
-
-          <img 
-            src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=1200&q=80" 
-            alt="Hong Kong skyline and financial district - Salaries Tax Calculation Guide" 
-            class="mb-8 w-full rounded-2xl object-cover max-h-80 sm:max-h-96 shadow-sm" 
-            loading="lazy" 
-          />
-
-          <!-- Quick Jump CTA Callout -->
-          <div class="my-8 rounded-2xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-lighter dark:bg-surface/60 shadow-sm">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-              <div>
-                <h3 class="text-lg font-bold text-ink dark:text-on-primary">Need an Instant Tax Estimate?</h3>
-                <p class="text-sm text-body dark:text-muted mt-1">Use our free Hong Kong Salaries Tax Calculator for progressive & standard rate breakdown.</p>
-              </div>
-              <a 
-                href="/countries/hong-kong/salaries-tax/salaries-tax-calculator" 
-                class="inline-flex items-center justify-center rounded-pill bg-primary px-5 py-2.5 text-sm font-semibold text-on-primary transition hover:opacity-90 dark:bg-on-primary dark:text-primary shrink-0"
-              >
-                Launch HK Tax Calculator &rarr;
-              </a>
-            </div>
-          </div>
-
-          <!-- Table of Contents -->
-          <div class="my-8 rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
-            <h2 class="text-xl font-bold text-ink mb-4 dark:text-on-primary">Table of Contents</h2>
-            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-link dark:text-link-soft">
-              <li><a href="#overview" class="hover:underline">1. Overview of HK Salaries Tax</a></li>
-              <li><a href="#tax-brackets" class="hover:underline">2. Progressive Rates vs Standard Rate</a></li>
-              <li><a href="#allowances" class="hover:underline">3. Personal Allowances Table 2026/27</a></li>
-              <li><a href="#mpf-deductions" class="hover:underline">4. MPF & Tax Deductions</a></li>
-              <li><a href="#computation-formula" class="hover:underline">5. Salaries Tax Computation Formula</a></li>
-              <li><a href="#case-studies" class="hover:underline">6. Real-World Case Studies</a></li>
-              <li><a href="#expat-rules" class="hover:underline">7. Expat & Foreigner 60-Day Rule</a></li>
-              <li><a href="#etax-filing" class="hover:underline">8. eTAX Online Filing & Deadlines</a></li>
-              <li><a href="#common-mistakes" class="hover:underline">9. Common Tax Filing Mistakes</a></li>
-              <li><a href="#faqs" class="hover:underline">10. Frequently Asked Questions</a></li>
-            </ul>
-          </div>
-
-          <div class="space-y-8 text-body dark:text-muted leading-relaxed">
+  <div class="space-y-8 text-body dark:text-muted leading-relaxed">
             <!-- Section 1 -->
             <section id="overview">
               <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">1. Overview of Hong Kong Salaries Tax (2026/27)</h2>
@@ -539,11 +469,5 @@ const faqSchema = {
             <li><a href="https://www.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Hong Kong Government Official Portal</a></li>
             <li><a href="https://www.pwc.com/hk/en/services/tax/hong-kong-taxation.html" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">PwC Hong Kong Taxation Overview</a></li>
           </ul>
-        </article>
-      </div>
       <StickyToc />
-    </div>
-  </div>
-</main>
-  </div>
 </BlogLayout>

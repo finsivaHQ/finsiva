@@ -1,0 +1,176 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+
+const title = "Pakistan Tax Residency & Foreign Income Guide 2026: 183-Day Rule & Remittances";
+const description = "Complete guide to Pakistani tax residency rules, physical presence test (183-day rule), foreign income taxation, overseas Pakistani FBR IRIS filing, and Section 111(4) remittance exemptions.";
+const baseUrl = "https://finsiva.com";
+const currentUrl = `${baseUrl}/knowledge/pakistan-tax-residency`;
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How is tax residency determined in Pakistan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Under Section 82 of the Income Tax Ordinance 2001, an individual is a tax resident of Pakistan if present in Pakistan for 183 days or more in aggregate during the tax year (July 1 to June 30), or present for 120 days in the current year and 365 days in the preceding 4 years."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Are non-resident Pakistanis (NRPs) required to pay tax on foreign income?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. Non-resident Pakistanis are taxed ONLY on Pakistan-sourced income (such as rental income from property in Pakistan or dividends from Pakistani companies). Foreign-sourced salary and foreign business income are exempt from FBR tax."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Are foreign remittances sent to Pakistan taxable by FBR?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Under Section 111(4) of the Income Tax Ordinance 2001, foreign currency remittances sent into Pakistan through official banking channels by non-residents or resident individuals are legally protected and exempt from income tax probe or taxation."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Do overseas Pakistanis need to register on FBR IRIS?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, overseas Pakistanis holding property, bank accounts, or investments in Pakistan should register on FBR IRIS and file annual returns declaring non-resident status to maintain Active Taxpayer List (ATL) status and avoid heavy withholding taxes."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is Pakistan's role in the OECD Common Reporting Standard (CRS)?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Pakistan is a signatory to the OECD Multilateral Competent Authority Agreement. FBR automatically exchanges financial account information with over 100 partner jurisdictions under CRS."
+      }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Pakistan Tax Residency & Foreign Income Guide 2026",
+  description: "Comprehensive authority guide on Pakistan tax residency rules, Section 82 183-day presence test, overseas Pakistani tax obligations, and Section 111(4) remittance protection.",
+  url: currentUrl,
+  author: { "@type": "Organization", name: "Finsiva" },
+  dateModified: "2026-08-15"
+};
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonical={currentUrl}
+  robots="index,follow"
+  schema={articleSchema}
+  image="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1200&q=80"
+  imageAlt="Global map and foreign currency tax residency in Pakistan"
+>
+  <article id="main-content" class="min-h-screen bg-canvas dark:bg-canvas">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <Breadcrumbs items={[
+        { label: "Home", href: "/" },
+        { label: "Knowledge Center", href: "/knowledge" },
+        { label: "Pakistan Tax Residency" }
+      ]} />
+
+      <header class="pt-8 pb-12">
+        <h1 class="text-4xl font-extrabold tracking-tight text-ink dark:text-on-primary sm:text-5xl">Pakistan Tax Residency & Foreign Income Hub</h1>
+        <p class="mt-4 text-xl text-body dark:text-muted">Detailed legal framework for tax residency, physical presence criteria, overseas Pakistani taxation, non-resident filing, and foreign remittance protection.</p>
+        <div class="mt-4 flex flex-wrap items-center gap-4 text-sm text-muted dark:text-muted">
+          <time datetime="2026-08-15">Last updated: August 2026</time>
+          <span aria-hidden="true">·</span>
+          <span>18 min read</span>
+          <span aria-hidden="true">·</span>
+          <span>Section 82 & Section 111(4) Verified</span>
+        </div>
+      </header>
+
+      <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1200&q=80" alt="International currencies, passport, and foreign tax documents" class="mb-8 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
+
+      <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+      <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+
+      <div class="prose max-w-none prose-headings:mt-10 prose-headings:mb-4 prose-h2:text-2xl prose-h2:font-semibold prose-h2:text-ink dark:prose-h2:text-on-primary prose-h3:text-xl prose-h3:font-semibold prose-h3:text-ink dark:prose-h3:text-on-primary prose-p:text-body prose-p:leading-relaxed prose-a:text-link prose-a:underline prose-a:decoration-dashed prose-a:underline-offset-4 prose-a:hover:text-primary prose-ul:list-disc prose-ul:pl-6 prose-ol:list-decimal prose-ol:pl-6 prose-li:mt-2 prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:pl-4 prose-blockquote:py-2 prose-blockquote:italic prose-blockquote:text-body dark:prose-blockquote:bg-primary/10">
+
+        <h2>1. The 183-Day Physical Presence Test (Section 82)</h2>
+        <p>
+          Tax residency in Pakistan is governed by <strong>Section 82</strong> of the <em>Income Tax Ordinance, 2001</em>. An individual is classified as a tax resident of Pakistan for a tax year if they meet any of the following statutory criteria:
+        </p>
+        <ol>
+          <li><strong>Physical Presence Criterion</strong>: Present in Pakistan for a period of, or periods amounting in aggregate to, <strong>183 days or more</strong> in the tax year (July 1 to June 30).</li>
+          <li><strong>Cumulative Presence Criterion</strong>: Present in Pakistan for <strong>120 days or more</strong> in the tax year AND present in Pakistan for an aggregate of <strong>365 days or more</strong> in the four preceding tax years.</li>
+          <li><strong>Government Employee Criterion</strong>: An employee or official of the Federal or Provincial Government of Pakistan posted abroad during the tax year.</li>
+        </ol>
+
+        <h2>2. Resident vs Non-Resident Tax Scope</h2>
+        <p>
+          The distinction between resident and non-resident status dictates the global scope of taxable income:
+        </p>
+        <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+          <table class="w-full text-left text-sm">
+            <thead class="bg-canvas-soft border-b border-hairline dark:bg-surface/80 dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+              <tr>
+                <th class="p-3">Taxpayer Status</th>
+                <th class="p-3">Pakistan-Sourced Income</th>
+                <th class="p-3">Foreign-Sourced Income</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+              <tr>
+                <td class="p-3 font-bold">Tax Resident</td>
+                <td class="p-3 text-emerald-600 font-semibold">Taxable under FBR Slabs</td>
+                <td class="p-3 text-emerald-600 font-semibold">Taxable (Subject to Foreign Tax Credit)</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold">Non-Resident (NRP)</td>
+                <td class="p-3 text-emerald-600 font-semibold">Taxable under FBR Slabs</td>
+                <td class="p-3 font-bold text-primary dark:text-on-primary">EXEMPT from FBR Tax</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>3. Statutory Foreign Remittance Protection (Section 111(4))</h2>
+        <p>
+          To encourage foreign capital inflows, the Government of Pakistan provides statutory tax protection under <strong>Section 111(4)</strong> of the Income Tax Ordinance. Foreign currency remittances transmitted to Pakistan through normal banking channels (such as SWIFT wire transfers or approved exchange companies) and encashed in Pakistani Rupees are fully protected from FBR tax assessment probes and are not subject to income tax.
+        </p>
+        <p>
+          Read our comprehensive guide on <a href="/blogs/pakistan-foreign-income-remittance-tax-guide">Overseas Pakistani Foreign Income & Remittance Tax</a> for full documentation requirements.
+        </p>
+
+        <h2>4. Double Taxation Avoidance Agreements (DTAA)</h2>
+        <p>
+          Pakistan has bilateral Double Taxation Avoidance Agreements (DTAA) with over 66 countries, including the United Arab Emirates, Saudi Arabia, United Kingdom, United States, Canada, Malaysia, and Qatar. Under these treaties, tax paid in a foreign jurisdiction can be claimed as a Foreign Tax Credit under <strong>Section 103</strong> to eliminate double taxation.
+        </p>
+
+        <h2>5. Overseas Pakistani IRIS Return Filing</h2>
+        <p>
+          Overseas Pakistanis who own real estate in Pakistan, maintain high-yield bank deposits, or invest in Pakistani stocks are strongly advised to file annual tax returns on FBR IRIS (<a href="https://iris.fbr.gov.pk" target="_blank" rel="noopener noreferrer">iris.fbr.gov.pk</a>). Declaring non-resident status ensures inclusion in the Active Taxpayer List (ATL), granting a 50% reduction on property seller/buyer withholding tax under Section 236C/236K and bank transactions.
+        </p>
+        <p>
+          For step-by-step return filing instructions, consult our <a href="/blogs/pakistan-tax-filing-guide">Pakistan FBR Tax Filing Guide</a> or calculate annual tax obligations on our <a href="/countries/pakistan/income-tax/income-tax-calculator">Income Tax Calculator</a>.
+        </p>
+      </div>
+
+      <div class="mt-12 space-y-4">
+        <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">Tax Residency FAQs</h2>
+        {faqSchema.mainEntity.map(faq => (
+          <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="text-lg font-semibold text-ink dark:text-on-primary">{faq.name}</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted leading-relaxed">{faq.acceptedAnswer.text}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </article>
+</Layout>

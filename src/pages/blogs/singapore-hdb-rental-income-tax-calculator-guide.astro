@@ -1,0 +1,181 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Singapore HDB & Property Rental Income Tax Calculator Guide 2026";
+const description = "Step-by-step calculation guide for rental income tax on HDB flats, rooms, and private property in Singapore. Learn the 15% deeming rule, interest deductions, and Excel setup.";
+const image = "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&q=80";
+const author = "Rachel Lim, Senior International Tax Consultant";
+const authorBio = "Senior Property & Rental Income Tax Specialist advising HDB homeowners and real estate investors on IRAS rental tax deeming rules, mortgage interest deductions, and property tax compliance.";
+const canonical = "https://finsiva.com/blogs/singapore-hdb-rental-income-tax-calculator-guide";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Is HDB rental income taxable in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. All gross rental income earned from renting out an entire HDB flat or individual bedrooms is subject to Singapore personal income tax under IRAS guidelines and must be declared in your annual income tax return (Form B/B1)."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How does the 15% deemed expense rule work for rental property tax?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "To simplify tax filing for residential property owners, IRAS allows individual landlords to claim a flat 15% deemed expense deduction on gross rental income (in place of actual maintenance, agent fees, and fire insurance), plus claim actual mortgage interest paid on the property loan."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Can joint property owners split rental income tax in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Net taxable rental income is apportioned between co-owners based on their legal share of ownership in the property (e.g., 50/50 for joint tenancy or according to tenancy-in-common shares)."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Is property tax deductible against rental income?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Property tax paid to IRAS for the rented premises is deductible if you opt to claim actual itemized rental expenses. However, if you opt for the 15% simplified deemed expense method, property tax is deemed covered under the 15% flat deduction (though mortgage interest remains separately deductible)."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="15 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <p class="text-lg leading-relaxed font-sans">
+      Whether you are an HDB homeowner subletting extra bedrooms, renting out an entire HDB flat under HDB approval, or managing a portfolio of private residential condominiums, understanding how to use an <strong>HDB Rental Income Tax Calculator in Singapore</strong> is essential. Rental income is treated as taxable assessable income by the <a href="https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/special-tax-schemes/tax-treatment-of-rental-income-from-residential-properties" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">Inland Revenue Authority of Singapore (IRAS)</a>.
+    </p>
+
+    <div class="my-8 rounded-2xl border border-hairline bg-canvas-soft p-6 shadow-sm dark:border-overlay-light dark:bg-surface">
+      <div class="flex items-center gap-4">
+        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary dark:bg-primary/20">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 00-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-ink dark:text-on-primary">Calculate Property Stamp Duty & Rental Tax</h3>
+          <p class="text-sm text-muted">Estimate net taxable rental income, allowable interest deductions, and property stamp duty.</p>
+        </div>
+      </div>
+      <div class="mt-4">
+        <a href="/countries/singapore/stamp-duty/stamp-duty-calculator" class="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primary/90">
+          Open Stamp Duty & Property Calculator &rarr;
+        </a>
+      </div>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-bold text-ink mb-3 dark:text-on-primary">Table of Contents</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#gross-rental-definition" class="text-link hover:underline">1. What Constitutes Gross Rental Income?</a></li>
+        <li><a href="#deemed-vs-actual" class="text-link hover:underline">2. The 15% Deemed Expense Rule vs Actual Expenses</a></li>
+        <li><a href="#mortgage-interest" class="text-link hover:underline">3. Deducting Housing Loan Mortgage Interest</a></li>
+        <li><a href="#hdb-room-rental" class="text-link hover:underline">4. Specific Rules for HDB Room & Whole Flat Rentals</a></li>
+        <li><a href="#excel-rental-calculator" class="text-link hover:underline">5. Building an HDB Rental Tax Calculator in Excel</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">6. Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <h2 id="gross-rental-definition" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">1. What Constitutes Gross Rental Income?</h2>
+    <p>
+      IRAS defines <strong>Gross Rental Income</strong> as the total rental payment received from tenants, including payments for furniture, fittings, maintenance fees, and utility reimbursements.
+    </p>
+
+    <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface my-6">
+      <h3 class="font-bold text-ink dark:text-on-primary text-base mb-2">Exclusions from Taxable Rental Income</h3>
+      <p class="text-sm text-muted">Security deposits refunded to tenants at tenancy end are non-taxable. However, forfeited security deposits retained for tenant breach or unpaid rent become taxable in the year of forfeiture.</p>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&q=80" alt="Modern apartment interior living room design" class="my-8 w-full rounded-xl object-cover max-h-96 shadow-md" loading="lazy" />
+
+    <h2 id="deemed-vs-actual" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">2. The 15% Deemed Expense Rule vs Actual Expenses</h2>
+    <p>
+      To reduce paperwork for residential landlords, IRAS offers two methods for claiming rental expense deductions:
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+      <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="font-bold text-ink dark:text-on-primary text-lg mb-2">Option A: Simplified 15% Deemed Expense</h3>
+        <p class="text-sm text-muted">Claim a flat <strong>15% deduction on Gross Rent</strong> without keeping receipts for repairs, agent commission, or maintenance. <em>Mortgage interest remains separately deductible!</em></p>
+        <div class="mt-3 font-mono text-xs bg-canvas-soft p-3 rounded dark:bg-surface border border-hairline">
+          Net Taxable Rental = (Gross Rent × 85%) - Mortgage Interest
+        </div>
+      </div>
+
+      <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="font-bold text-ink dark:text-on-primary text-lg mb-2">Option B: Actual Itemized Expense Claim</h3>
+        <p class="text-sm text-muted">Deduct actual incurred costs such as agent commission, property tax, fire insurance, aircon servicing, and repairs. Must retain complete receipts for 5 years.</p>
+        <div class="mt-3 font-mono text-xs bg-canvas-soft p-3 rounded dark:bg-surface border border-hairline">
+          Net Taxable Rental = Gross Rent - Actual Expenses - Mortgage Interest
+        </div>
+      </div>
+    </div>
+
+    <h2 id="mortgage-interest" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">3. Deducting Housing Loan Mortgage Interest</h2>
+    <p>
+      Interest paid on bank housing loans or HDB concessionary loans taken to purchase the rental property is fully tax-deductible against gross rent. Note: Only the <strong>interest portion</strong> is deductible—principal repayments cannot be claimed.
+    </p>
+
+    <h2 id="hdb-room-rental" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">4. Specific Rules for HDB Room & Whole Flat Rentals</h2>
+    <p>
+      Renting out HDB flats requires compliance with Housing & Development Board (HDB) minimum occupation period (MOP) rules and citizenship eligibility:
+    </p>
+    <ul class="list-disc pl-5 text-sm space-y-2 text-muted my-4">
+      <li><strong>HDB Bedroom Subletting:</strong> Income from renting 1 or 2 bedrooms while owner occupies the unit is taxable. 15% deemed expense option applies.</li>
+      <li><strong>Whole HDB Flat Rental:</strong> Requires completion of 5-year MOP and HDB approval. Income is reported under owner's personal income tax return.</li>
+    </ul>
+
+    <h2 id="excel-rental-calculator" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">5. Building an HDB Rental Tax Calculator in Excel</h2>
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface my-6">
+      <h3 class="font-bold text-ink dark:text-on-primary mb-3">Excel Formulas for Rental Tax Calculation</h3>
+      <ol class="list-decimal space-y-2 pl-5 text-sm">
+        <li><strong>Cell B1 (Monthly Gross Rent):</strong> e.g., <code>3500</code></li>
+        <li><strong>Cell B2 (Annual Gross Rent):</strong> <code>=B1 * 12</code> (e.g., S$42,000)</li>
+        <li><strong>Cell B3 (Annual Mortgage Interest):</strong> e.g., <code>12000</code></li>
+        <li><strong>Cell B4 (15% Deemed Expenses):</strong> <code>=B2 * 0.15</code> (e.g., S$6,300)</li>
+        <li><strong>Cell B5 (Net Taxable Rental Income):</strong> <code>=MAX(0, B2 - B4 - B3)</code> (e.g., S$23,700)</li>
+      </ol>
+    </div>
+
+    <!-- Related Links -->
+    <div class="my-8 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-lg font-bold text-ink mb-3 dark:text-on-primary">Related Property & Tax Guides</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+        <a href="/countries/singapore/stamp-duty/stamp-duty-calculator" class="text-link hover:underline font-medium">&rarr; Property Stamp Duty & ABSD Calculator</a>
+        <a href="/blogs/singapore-rental-property-income-tax-guide" class="text-link hover:underline font-medium">&rarr; General Singapore Rental Income Tax Guide</a>
+        <a href="/blogs/singapore-income-tax-calculator-take-home-pay-guide" class="text-link hover:underline font-medium">&rarr; Personal Income Tax Calculator Guide</a>
+        <a href="/countries/singapore" class="text-link hover:underline font-medium">&rarr; Singapore Tax Hub Overview</a>
+      </div>
+    </div>
+
+    <h2 id="faqs" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">6. Frequently Asked Questions</h2>
+    <div class="space-y-4 my-6">
+      {faqSchema.mainEntity.map(faq => (
+        <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+          <h3 class="font-bold text-ink dark:text-on-primary text-base mb-2">{faq.name}</h3>
+          <p class="text-sm leading-relaxed text-body dark:text-muted">{faq.acceptedAnswer.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</BlogLayout>

@@ -1,0 +1,227 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "New Zealand Income Tax for Foreigners, Expats, Students & Non-Residents: IRD Guide";
+const description = "Complete tax guide for expats, foreign workers, non-residents, working holiday visa holders, international students, and Indian expats in New Zealand. Covers IRD tax numbers, NRWT, and salary after tax.";
+const image = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80";
+const author = "Kavita Sharma, Expat Tax & Mobility Specialist";
+const authorBio = "Senior Global Mobility Consultant specializing in cross-border tax compliance, non-resident withholding tax, expat payroll, and IRD registration for foreign workers in New Zealand.";
+const canonical = "https://finsiva.com/blogs/new-zealand-income-tax-for-expats-foreigners-non-residents";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How are non-residents taxed on income in New Zealand?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Non-residents are taxed only on income sourced directly from New Zealand. Employment income earned while physically in NZ is taxed at standard personal income tax rates (10.5% to 39%), while passive NZ-sourced income (interest, dividends, royalties) is subject to Non-Resident Withholding Tax (NRWT).</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is an IRD number and how do foreign workers get one?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>An IRD number is an 8 or 9-digit unique tax identification number issued by Inland Revenue. Foreign workers, expats, and students can apply online through the IRD website (Form IR595 / IR742) by presenting a valid passport, NZ work or student visa, and proof of an active NZ bank account.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How much tax does a nurse or healthcare worker pay in NZ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>A registered nurse in Auckland or Wellington earning an average annual salary of NZD $85,000 pays approximately $18,970 in income tax and $1,360 in ACC levy, resulting in a net monthly take-home pay of around $5,389 (before KiwiSaver or student loan deductions).</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Do international students pay income tax in New Zealand?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Yes. International students on student visas who work part-time (up to 20 hours per week during semesters or full-time during holidays) pay standard PAYE income tax starting at 10.5% on their earnings.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What tax rate applies to Working Holiday Visa holders in NZ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Working holiday visa holders are taxed using standard progressive tax rates (starting at 10.5% under Tax Code 'M' if it is their primary job). They must provide their employer with an IRD number; otherwise, no-notification tax rate of 45% will be deducted.</p>"
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="16 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <p class="text-lg leading-relaxed">
+      Moving to New Zealand to work, study, or live as an expat is an exciting opportunity, but navigating the <strong>New Zealand income tax system for foreigners, non-residents, and international workers</strong> is essential to ensure compliance and avoid unexpected tax penalties. This comprehensive guide covers IRD tax numbers, Non-Resident Withholding Tax (NRWT), Working Holiday Visas, and take-home salary calculations for popular expat professions.
+    </p>
+
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Table of Contents</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#ird-number-guide" class="text-link hover:underline">1. Getting Your NZ IRD Tax Number (Application & Format)</a></li>
+        <li><a href="#resident-vs-nonresident-tax" class="text-link hover:underline">2. Resident vs. Non-Resident Tax Status Rules</a></li>
+        <li><a href="#nrwt-explained" class="text-link hover:underline">3. Non-Resident Withholding Tax (NRWT) Rates</a></li>
+        <li><a href="#working-holiday-visa" class="text-link hover:underline">4. Working Holiday Visa (WHV) Tax Rules</a></li>
+        <li><a href="#international-students-indians" class="text-link hover:underline">5. Tax Rules for International Students & Indian Expats</a></li>
+        <li><a href="#nurse-salary-example" class="text-link hover:underline">6. Nurse & Expat Salary Take-Home Breakdown (Auckland/Wellington)</a></li>
+        <li><a href="#work-commute-expenses" class="text-link hover:underline">7. Work-Related Travel, Commuting & Rideshare Expenses</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">8. Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <h2 id="ird-number-guide" class="text-2xl font-semibold text-ink dark:text-on-primary">1. Getting Your NZ IRD Tax Number (Application & Format)</h2>
+    <p>
+      An <strong>IRD number</strong> is a unique 8 or 9-digit tax identification number (e.g. <code>123-456-789</code>) issued by New Zealand's Inland Revenue Department. Every employee, contractor, business, or student earning income in New Zealand must have an IRD number.
+    </p>
+    <p>
+      If you work without giving your employer an IRD number, your employer is legally required to deduct tax at the maximum <strong>"no-notification" tax rate of 45%</strong> plus ACC levy!
+    </p>
+
+    <div class="my-6 rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface text-sm space-y-2">
+      <h3 class="text-base font-semibold text-ink dark:text-on-primary">How Foreigners & Expats Apply for an IRD Number:</h3>
+      <ol class="list-decimal pl-5 space-y-2">
+        <li><strong>Apply Online:</strong> Complete the online application on the official <a href="https://www.ird.govt.nz" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">IRD website</a>.</li>
+        <li><strong>Required Documents:</strong> Valid passport number, NZ Immigration visa application number (Work Visa, Student Visa, or Resident Visa), and an active New Zealand bank account number (or customer due diligence proof).</li>
+        <li><strong>Processing Time:</strong> Typically 2 to 10 business days. You will receive your IRD number via SMS or email.</li>
+      </ol>
+    </div>
+
+    <h2 id="resident-vs-nonresident-tax" class="text-2xl font-semibold text-ink dark:text-on-primary">2. Resident vs. Non-Resident Tax Status Rules</h2>
+    <p>
+      For tax purposes, IRD classifies individuals into two main categories:
+    </p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li><strong>Tax Resident (183+ Days):</strong> Taxed on <em>worldwide income</em> across progressive tax brackets (10.5% to 39%). Eligible for personal tax credits (e.g., Independent Earner Tax Credit).</li>
+      <li><strong>Non-Resident (Fewer than 183 Days):</strong> Taxed <em>only on NZ-sourced income</em>. Employment income earned in NZ is taxed at normal progressive rates, but non-residents cannot claim certain tax credits.</li>
+    </ul>
+
+    <h2 id="nrwt-explained" class="text-2xl font-semibold text-ink dark:text-on-primary">3. Non-Resident Withholding Tax (NRWT) Rates</h2>
+    <p>
+      If a non-resident earns passive income from New Zealand investment sources, the payer deducts <strong>Non-Resident Withholding Tax (NRWT)</strong> at source. Standard default NRWT rates (before applying Double Tax Agreements) are:
+    </p>
+    <div class="overflow-x-auto">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Income Source</th>
+            <th class="border p-3">Default Statutory NRWT Rate</th>
+            <th class="border p-3">Reduced DTA Rate (US / UK / AUS)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr><td class="p-3">NZ Bank Interest</td><td class="p-3">15%</td><td class="p-3">10%</td></tr>
+          <tr><td class="p-3">Fully Imputed Dividends</td><td class="p-3">0%</td><td class="p-3">0%</td></tr>
+          <tr><td class="p-3">Unimputed Dividends</td><td class="p-3">30%</td><td class="p-3">15%</td></tr>
+          <tr><td class="p-3">Royalties</td><td class="p-3">15%</td><td class="p-3">5% – 10%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="working-holiday-visa" class="text-2xl font-semibold text-ink dark:text-on-primary">4. Working Holiday Visa (WHV) Tax Rules</h2>
+    <p>
+      Thousands of young travelers visit New Zealand annually on Working Holiday Visas (subclass 417 / 462 equivalent). WHV holders are subject to the same income tax rates as local workers:
+    </p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li>First $14,000 earned is taxed at <strong>10.5%</strong>.</li>
+      <li>Income between $14,001 and $48,000 is taxed at <strong>17.5%</strong>.</li>
+      <li>Use Tax Code <strong>'M'</strong> for your main temporary job, and submit an IR330 form promptly.</li>
+    </ul>
+
+    <h2 id="international-students-indians" class="text-2xl font-semibold text-ink dark:text-on-primary">5. Tax Rules for International Students & Indian Expats</h2>
+    <p>
+      International students from India, China, the UK, and elsewhere who hold a valid NZ Student Visa are permitted to work up to 20 hours per week during semester periods and full-time during official scheduled breaks.
+    </p>
+    <p>
+      All student earnings are taxed under PAYE at standard rates. If an international student earns $20,000 in a tax year:
+    </p>
+
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-5 dark:border-overlay-light dark:bg-surface font-mono text-sm space-y-1">
+      <p>Gross Income: $20,000</p>
+      <p>Tax on $14,000 @ 10.5% = $1,470.00</p>
+      <p>Tax on $6,000 @ 17.5% = $1,050.00</p>
+      <p>ACC Earners' Levy (1.60%) = $320.00</p>
+      <p class="font-bold text-primary">Total Tax & Levy: $2,840.00 (Effective Rate: ~14.2%)</p>
+      <p class="font-bold text-ink dark:text-on-primary">Annual Take-Home Salary: $17,160.00</p>
+    </div>
+
+    <h2 id="nurse-salary-example" class="text-2xl font-semibold text-ink dark:text-on-primary">6. Nurse & Expat Salary Take-Home Breakdown (Auckland/Wellington)</h2>
+    <p>
+      Healthcare professionals and nurses recruited by Te Whatu Ora (Health New Zealand) represent a major segment of foreign skilled workers. Let's analyze a registered nurse earning <strong>NZD $85,000</strong> per year in Auckland:
+    </p>
+
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface space-y-2 text-sm font-mono">
+      <p><strong>Gross Annual Nurse Salary:</strong> $85,000.00</p>
+      <p>Income Tax ($0–$14k @ 10.5%): $1,470.00</p>
+      <p>Income Tax ($14k–$48k @ 17.5%): $5,950.00</p>
+      <p>Income Tax ($48k–$70k @ 30%): $6,600.00</p>
+      <p>Income Tax ($70k–$85k @ 33%): $4,950.00</p>
+      <p><strong>Total Income Tax:</strong> $18,970.00</p>
+      <p><strong>ACC Levy (1.60%):</strong> $1,360.00</p>
+      <p class="text-primary font-bold"><strong>Net Take-Home Salary:</strong> $64,670.00 / year</p>
+      <p class="text-ink dark:text-on-primary font-bold"><strong>Monthly Take-Home:</strong> $5,389.17 / month ($1,243.65 / week)</p>
+    </div>
+
+    <p>Calculate your net salary using our <a href="/countries/new-zealand/income-tax/income-tax-calculator" class="text-link hover:underline">New Zealand Income Tax Calculator</a>.</p>
+
+    <h2 id="work-commute-expenses" class="text-2xl font-semibold text-ink dark:text-on-primary">7. Work-Related Travel, Commuting & Rideshare Expenses</h2>
+    <p>
+      A common question among expats and contractors commuting across Auckland, Wellington, or Christchurch is whether daily transportation expenses or rideshare/taxi usage can be deducted. In New Zealand:
+    </p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li><strong>Standard Employees:</strong> Daily commuting between your home and primary workplace is considered private travel and is <em>not tax-deductible</em>.</li>
+      <li><strong>Self-Employed & Independent Contractors:</strong> Business travel between client sites, equipment transport, or business visits via car, rideshare, or taxi services can be claimed using actual expenses or IRD kilometre rates.</li>
+    </ul>
+
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">8. Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">How are non-residents taxed on income in New Zealand?</h3>
+        <p>Non-residents are taxed only on NZ-sourced income. Employment income is taxed at progressive rates, while passive investment income is subject to NRWT.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is an IRD number and how do foreign workers get one?</h3>
+        <p>It is an 8 or 9-digit tax ID. Foreigners apply online at ird.govt.nz with passport, visa, and bank account details.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">How much tax does a nurse pay in NZ?</h3>
+        <p>On an $85,000 salary, a nurse pays ~$18,970 in income tax and $1,360 in ACC levy, receiving ~$5,389 net per month.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Do international students pay income tax in New Zealand?</h3>
+        <p>Yes, student earnings are subject to standard PAYE income tax starting at 10.5%.</p>
+      </div>
+    </div>
+
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Explore Related New Zealand Tax Guides & Calculators</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/countries/new-zealand/income-tax/income-tax-calculator" class="text-link hover:underline font-medium">NZ Income Tax Calculator</a>
+        <a href="/blogs/new-zealand-income-tax-rates-brackets-2025-2026" class="text-link hover:underline font-medium">NZ Tax Rates & Brackets Guide</a>
+        <a href="/blogs/is-new-zealand-tax-free-haven-worldwide-tax-explained" class="text-link hover:underline font-medium">Is NZ a Tax Haven? Guide</a>
+        <a href="/blogs/new-zealand-tax-treaties-us-australia-uk-canada-comparison" class="text-link hover:underline font-medium">NZ Tax Treaties & Comparison</a>
+        <a href="/blogs/how-to-file-new-zealand-income-tax-return-ird-guide" class="text-link hover:underline font-medium">How to File NZ Tax Return</a>
+        <a href="/blogs/new-zealand-income-tax-act-2007-corporate-property-rental-tax" class="text-link hover:underline font-medium">Income Tax Act 2007 & Rental Tax</a>
+        <a href="/countries/new-zealand" class="text-link hover:underline font-medium">Finsiva New Zealand Hub</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>

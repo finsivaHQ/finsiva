@@ -1,0 +1,240 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+
+const title = "Pakistan Tax Calculators 2026: Salary, Income, GST, Property & Vehicle";
+const description = "Access all free online Pakistan tax calculators on Finsiva. Calculate monthly salary tax under FBR progressive slabs, 18% GST, provincial property tax, CGT, and vehicle token tax.";
+const baseUrl = "https://finsiva.com";
+const currentUrl = `${baseUrl}/knowledge/pakistan-tax-calculators`;
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Are the Pakistan tax calculators updated for FBR tax slabs?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, all Pakistan tax calculators on Finsiva use current FBR statutory tax rates and progressive tax slabs for salaried workers, businesses, property transactions, and sales tax."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How does the active Filer vs Non-Filer toggle affect calculations?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "FBR Active Taxpayers (Filers) enjoy 50% lower withholding tax rates on property buying/selling, bank transfers, vehicle registration, and cash withdrawals. The toggles adjust withholding tax rates automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Can I calculate monthly salary tax under Section 149?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our Pakistan Salary Tax Calculator estimates monthly tax deductions based on gross pay, basic salary, exempt medical allowance (10% threshold), and statutory slab brackets."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How is 18% GST calculated on goods and services in Pakistan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The Sales Tax & GST Calculator computes both inclusive (price ÷ 1.18) and exclusive (price × 0.18) amounts for transactions across Pakistan."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Which vehicle token tax calculators are supported?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Finsiva supports vehicle token tax calculators for Punjab (ePay), Sindh (e-Payment GOS), Islamabad Capital Territory (ICT), and KPK based on engine CC capacity and filer status."
+      }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Pakistan Tax Calculators Directory 2026: Free FBR & Provincial Tools",
+  description: "Complete directory of Pakistan tax calculation tools for salary, income, sales tax, property CGT, and vehicle token tax.",
+  url: currentUrl,
+  author: { "@type": "Organization", name: "Finsiva" },
+  dateModified: "2026-08-15"
+};
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonical={currentUrl}
+  robots="index,follow"
+  schema={articleSchema}
+  image="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&q=80"
+  imageAlt="Pakistan tax calculators online software on laptop screen"
+>
+  <article id="main-content" class="min-h-screen bg-canvas dark:bg-canvas">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <Breadcrumbs items={[
+        { label: "Home", href: "/" },
+        { label: "Knowledge Center", href: "/knowledge" },
+        { label: "Pakistan Tax Calculators" }
+      ]} />
+
+      <header class="pt-8 pb-12">
+        <h1 class="text-4xl font-extrabold tracking-tight text-ink dark:text-on-primary sm:text-5xl">Pakistan Tax Calculators Hub 2026</h1>
+        <p class="mt-4 text-xl text-body dark:text-muted">Free, accurate online tax calculation tools built specifically for Pakistani taxpayers, employers, freelancers, property investors, and vehicle owners.</p>
+        <div class="mt-4 flex flex-wrap items-center gap-4 text-sm text-muted dark:text-muted">
+          <time datetime="2026-08-15">Last updated: August 2026</time>
+          <span aria-hidden="true">·</span>
+          <span>15 min read</span>
+          <span aria-hidden="true">·</span>
+          <span>10 Free Interactive Tools</span>
+        </div>
+      </header>
+
+      <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&q=80" alt="Tax calculation tools and online financial reporting" class="mb-8 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
+
+      <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+      <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-6">Income & Salary Tax Calculators</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="p-6 rounded-2xl border border-hairline bg-canvas hover:border-primary/50 transition-all dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="text-xl font-bold text-ink dark:text-on-primary">Pakistan Income Tax Calculator</h3>
+            <p class="text-sm text-body dark:text-muted mt-2">
+              Calculate annual income tax for salaried workers and sole proprietors based on current FBR progressive tax slabs (0% to 35%). Includes deductions for Zakat and approved donations.
+            </p>
+            <a href="/countries/pakistan/income-tax/income-tax-calculator" class="mt-4 inline-flex items-center text-sm font-semibold text-primary dark:text-on-primary hover:underline">
+              Launch Income Tax Calculator →
+            </a>
+          </div>
+
+          <div class="p-6 rounded-2xl border border-hairline bg-canvas hover:border-primary/50 transition-all dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="text-xl font-bold text-ink dark:text-on-primary">Pakistan Salary Tax Calculator</h3>
+            <p class="text-sm text-body dark:text-muted mt-2">
+              Estimate monthly tax withheld from paycheck by employers under Section 149. Compute basic pay, exempt medical allowance (10% of basic pay), EOBI, and net take-home salary.
+            </p>
+            <a href="/countries/pakistan/income-tax/salary-tax-calculator" class="mt-4 inline-flex items-center text-sm font-semibold text-primary dark:text-on-primary hover:underline">
+              Launch Salary Tax Calculator →
+            </a>
+          </div>
+
+          <div class="p-6 rounded-2xl border border-hairline bg-canvas hover:border-primary/50 transition-all dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="text-xl font-bold text-ink dark:text-on-primary">Business Income Tax Calculator</h3>
+            <p class="text-sm text-body dark:text-muted mt-2">
+              Calculate tax liability for small business owners, traders, partnership firms (AOP), and individual commercial operators under non-salaried business slabs.
+            </p>
+            <a href="/countries/pakistan/income-tax/business-income-tax-calculator" class="mt-4 inline-flex items-center text-sm font-semibold text-primary dark:text-on-primary hover:underline">
+              Launch Business Tax Calculator →
+            </a>
+          </div>
+
+          <div class="p-6 rounded-2xl border border-hairline bg-canvas hover:border-primary/50 transition-all dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="text-xl font-bold text-ink dark:text-on-primary">Capital Gain Tax Calculator</h3>
+            <p class="text-sm text-body dark:text-muted mt-2">
+              Calculate capital gains tax (CGT) on real estate property sales and stock market securities based on holding periods, purchase dates, and active filer status.
+            </p>
+            <a href="/countries/pakistan/income-tax/capital-gain-tax-calculator" class="mt-4 inline-flex items-center text-sm font-semibold text-primary dark:text-on-primary hover:underline">
+              Launch Capital Gain Tax Calculator →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-6">Sales Tax & Goods/Services Tax (GST) Tools</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="p-6 rounded-2xl border border-hairline bg-canvas hover:border-primary/50 transition-all dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="text-xl font-bold text-ink dark:text-on-primary">Pakistan Sales Tax Calculator</h3>
+            <p class="text-sm text-body dark:text-muted mt-2">
+              Compute 18% federal sales tax on commercial goods, input tax credits, registered vs unregistered supplier tax differentials, and net sales tax payable to FBR.
+            </p>
+            <a href="/countries/pakistan/sales-tax/sales-tax-calculator" class="mt-4 inline-flex items-center text-sm font-semibold text-primary dark:text-on-primary hover:underline">
+              Launch Sales Tax Calculator →
+            </a>
+          </div>
+
+          <div class="p-6 rounded-2xl border border-hairline bg-canvas hover:border-primary/50 transition-all dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="text-xl font-bold text-ink dark:text-on-primary">Pakistan GST Calculator</h3>
+            <p class="text-sm text-body dark:text-muted mt-2">
+              Calculate tax-inclusive and tax-exclusive amounts instantly for retail goods, laptops, software, and services across federal and provincial jurisdictions.
+            </p>
+            <a href="/countries/pakistan/sales-tax/gst-calculator" class="mt-4 inline-flex items-center text-sm font-semibold text-primary dark:text-on-primary hover:underline">
+              Launch GST Calculator →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-6">Property, Rental & Vehicle Tax Tools</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="p-6 rounded-2xl border border-hairline bg-canvas hover:border-primary/50 transition-all dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="text-xl font-bold text-ink dark:text-on-primary">Property Tax & Valuation Calculator</h3>
+            <p class="text-sm text-body dark:text-muted mt-2">
+              Calculate Urban Immovable Property Tax (UIPT) for 5 marla, 10 marla, 1 kanal houses in Lahore, Karachi, and Islamabad along with buyer/seller withholding taxes under Section 236C/236K.
+            </p>
+            <a href="/countries/pakistan/property-tax/property-tax-calculator" class="mt-4 inline-flex items-center text-sm font-semibold text-primary dark:text-on-primary hover:underline">
+              Launch Property Tax Calculator →
+            </a>
+          </div>
+
+          <div class="p-6 rounded-2xl border border-hairline bg-canvas hover:border-primary/50 transition-all dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="text-xl font-bold text-ink dark:text-on-primary">Rental Income Tax Calculator</h3>
+            <p class="text-sm text-body dark:text-muted mt-2">
+              Determine income tax on gross rental receipts derived from residential and commercial properties in Pakistan under FBR property tax slabs.
+            </p>
+            <a href="/countries/pakistan/property-tax/rental-income-tax-calculator" class="mt-4 inline-flex items-center text-sm font-semibold text-primary dark:text-on-primary hover:underline">
+              Launch Rental Income Calculator →
+            </a>
+          </div>
+
+          <div class="p-6 rounded-2xl border border-hairline bg-canvas hover:border-primary/50 transition-all dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="text-xl font-bold text-ink dark:text-on-primary">Vehicle Token Tax Calculator</h3>
+            <p class="text-sm text-body dark:text-muted mt-2">
+              Calculate annual vehicle token tax, registration charges, and transfer fees by engine CC capacity for vehicles registered in Punjab, Sindh, ICT, and KPK.
+            </p>
+            <a href="/countries/pakistan/vehicle-tax/vehicle-tax-calculator" class="mt-4 inline-flex items-center text-sm font-semibold text-primary dark:text-on-primary hover:underline">
+              Launch Vehicle Tax Calculator →
+            </a>
+          </div>
+
+          <div class="p-6 rounded-2xl border border-hairline bg-canvas hover:border-primary/50 transition-all dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="text-xl font-bold text-ink dark:text-on-primary">Sindh & Islamabad Token Tax Calculator</h3>
+            <p class="text-sm text-body dark:text-muted mt-2">
+              Check province-specific motor vehicle token rates, lifetime tax for engines below 1000cc, and MTMIS online payment schedules.
+            </p>
+            <a href="/countries/pakistan/vehicle-tax/sindh-vehicle-tax-calculator" class="mt-4 inline-flex items-center text-sm font-semibold text-primary dark:text-on-primary hover:underline">
+              Launch Sindh Vehicle Calculator →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Educational Content Section -->
+      <div class="prose max-w-none prose-headings:mt-10 prose-headings:mb-4 prose-h2:text-2xl prose-h2:font-semibold prose-h2:text-ink dark:prose-h2:text-on-primary prose-p:text-body prose-p:leading-relaxed prose-a:text-link prose-a:underline">
+        <h2>How Tax Calculations Work in Pakistan</h2>
+        <p>
+          Tax calculations on Finsiva follow the authoritative legal frameworks of the <em>Income Tax Ordinance, 2001</em>, the <em>Sales Tax Act, 1990</em>, and provincial motor vehicle and property tax statutes.
+        </p>
+        <p>
+          For comprehensive guides on how to optimize taxes legally, file annual IRIS tax returns, and verify Active Taxpayer List (ATL) status, visit our main <a href="/knowledge/pakistan-income-tax">Pakistan Income Tax Knowledge Hub</a> or read the <a href="/blogs/pakistan-tax-filing-guide">Pakistan FBR Tax Filing Guide</a>.
+        </p>
+      </div>
+
+      <div class="mt-12 space-y-4">
+        <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">Calculator FAQs</h2>
+        {faqSchema.mainEntity.map(faq => (
+          <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="text-lg font-semibold text-ink dark:text-on-primary">{faq.name}</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted leading-relaxed">{faq.acceptedAnswer.text}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </article>
+</Layout>

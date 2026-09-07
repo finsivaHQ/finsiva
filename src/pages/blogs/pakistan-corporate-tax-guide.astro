@@ -1,0 +1,151 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Pakistan Corporate & Business Tax Guide 2026: Company Rates & Slabs";
+const description = "Complete guide to corporate tax in Pakistan. Learn company tax rates (29%), SME tax rate (22%), AOP partnership slabs, sole proprietorship taxes, turnover tax (1.25%), and Super Tax under Section 4C.";
+const image = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80";
+const canonical = "https://finsiva.com/blogs/pakistan-corporate-tax-guide";
+const author = "Farhan Ahmed";
+const authorBio = "Corporate tax attorney and consultant advising private limited companies, SMEs, and AOPs on FBR tax compliance and corporate structuring.";
+const lastUpdated = "August 2026";
+const readTime = "15 min read";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the corporate tax rate for companies in Pakistan for 2026?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The standard corporate income tax rate for public and private limited companies in Pakistan is 29% on taxable net profits. Small companies (SMEs) enjoy a reduced rate of 22%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are Association of Persons (AOP) and partnerships taxed in Pakistan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "An Association of Persons (AOP) is taxed as a separate entity under non-salaried business tax slabs ranging from 0% to 35%. Once tax is paid by the AOP, profit distributions to partners are tax-exempt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is minimum turnover tax under Section 113 in Pakistan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Section 113 requires companies and specified businesses to pay a minimum turnover tax (typically 1.25% of gross turnover) if normal corporate tax payable is less than the minimum threshold."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Super Tax under Section 4C of the Income Tax Ordinance?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Super Tax is a high-earning levy assessed under Section 4C on high-earning corporate entities and individuals with income exceeding specified thresholds (ranging from 1% to 10%)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the tax rate for sole proprietorship businesses in Pakistan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sole proprietors pay business income tax under non-salaried individual slabs. The first PKR 600,000 is tax-free (0%), with marginal rates up to 35% on income exceeding PKR 3.2 million."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout title={title} description={description} image={image} canonical={canonical} author={author} authorBio={authorBio} lastUpdated={lastUpdated} readTime={readTime}>
+  <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
+            <p>
+              Navigating <strong>corporate tax in Pakistan</strong> and understanding business taxation structures is essential for company directors, sole proprietors, distributors, and partnership firms.
+            </p>
+            <p>
+              The Federal Board of Revenue (FBR) enforces tax obligations under the <em>Income Tax Ordinance, 2001</em> based on business legal entity classification: Private Limited Companies, Small Companies (SMEs), Associations of Persons (AOPs), and Sole Proprietorships.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">1. Corporate Tax Rates in Pakistan (2026)</h2>
+            <p>
+              Corporate tax rates apply to net taxable profits after allowable business expenses and depreciation:
+            </p>
+
+            <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+              <table class="w-full text-left text-sm">
+                <thead class="bg-canvas-soft border-b border-hairline dark:bg-surface/80 dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+                  <tr>
+                    <th class="p-3">Business Entity Type</th>
+                    <th class="p-3">FBR Corporate Income Tax Rate</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+                  <tr>
+                    <td class="p-3 font-medium">Standard Companies (Public & Private Ltd)</td>
+                    <td class="p-3 font-bold text-primary dark:text-on-primary">29% Flat Corporate Tax</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-medium">Small Companies (Qualified SMEs)</td>
+                    <td class="p-3 font-bold text-emerald-600">22% Reduced Tax Rate</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-medium">Banking Companies</td>
+                    <td class="p-3 font-bold text-rose-600">35% Corporate Tax + Super Tax</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-medium">Sole Proprietors / Unincorporated Traders</td>
+                    <td class="p-3">Progressive Business Slabs (0% to 35%)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">2. Association of Persons (AOP) & Partnership Taxation</h2>
+            <p>
+              An <strong>Association of Persons (AOP)</strong> or registered partnership firm is treated as a separate taxable entity under FBR rules. The AOP calculates net business profit and pays tax under non-salaried business slabs. Once the AOP clears its tax liability, profit distributions received by individual partners are <strong>exempt from further income tax</strong> in their personal returns.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">3. Minimum Turnover Tax under Section 113</h2>
+            <p>
+              Under <strong>Section 113</strong>, if a company or specified business entity incurs a net loss or pays normal income tax below 1.25% of gross turnover, it is required to pay a minimum turnover tax of <strong>1.25%</strong> on gross revenue. Excess turnover tax paid can be carried forward for adjustment against future tax liabilities for up to 5 tax years.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">4. Super Tax under Section 4C</h2>
+            <p>
+              The FBR levies a progressive <strong>Super Tax under Section 4C</strong> on high-earning entities and companies whose annual income exceeds specified thresholds:
+            </p>
+            <ul>
+              <li><strong>Income PKR 150M – 200M</strong>: 1% Super Tax</li>
+              <li><strong>Income PKR 200M – 250M</strong>: 2% Super Tax</li>
+              <li><strong>Income PKR 250M – 300M</strong>: 3% Super Tax</li>
+              <li><strong>Income PKR 300M – 350M</strong>: 4% Super Tax</li>
+              <li><strong>Income Above PKR 500M</strong>: Up to 10% Super Tax for specified sectors</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">5. Withholding Tax on Distributors & Suppliers</h2>
+            <p>
+              Businesses acting as distributors, wholesalers, or suppliers face advance withholding tax under Section 153 and Section 236G/236H. Active filers receive lower withholding rates on commercial invoices, while non-filers incur penal withholding deductions up to 200% higher.
+            </p>
+            <p>
+              Calculate commercial tax obligations on our <a href="/countries/pakistan/income-tax/business-income-tax-calculator" class="text-link hover:underline">Business Tax Calculator</a> or explore our main <a href="/knowledge/pakistan-income-tax" class="text-link hover:underline">Pakistan Income Tax Knowledge Hub</a>.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Frequently Asked Questions</h2>
+          </div>
+
+          <div class="mt-8 space-y-4">
+            {faqSchema.mainEntity.map(faq => (
+              <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+                <h3 class="text-lg font-semibold text-ink dark:text-on-primary">{faq.name}</h3>
+                <p class="mt-2 text-sm text-body dark:text-muted leading-relaxed">{faq.acceptedAnswer.text}</p>
+              </div>
+            ))}
+          </div>
+
+          <div class="mt-12 p-6 rounded-2xl bg-canvas-soft border border-hairline dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="text-xl font-bold text-ink dark:text-on-primary">About the Author</h3>
+            <p class="mt-2 text-sm font-semibold text-primary dark:text-on-primary">{author}</p>
+            <p class="mt-1 text-sm text-body dark:text-muted">{authorBio}</p>
+  </div>
+</BlogLayout>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgSelf" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#312e81"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgSelf)"/>
+  <rect x="40" y="40" width="1120" height="550" rx="24" fill="none" stroke="#6366f1" stroke-width="3"/>
+  
+  <text x="60" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="600" fill="#a5b4fc" letter-spacing="2">SELF EMPLOYMENT &amp; CORPORATE TAX</text>
+  <text x="60" y="170" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="800" fill="#ffffff">UK Self Assessment &amp; Sole Trader Tax</text>
+  <text x="60" y="215" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" fill="#c7d2fe">Dividends, Trading Allowance, Class 2/4 NI &amp; Ltd Company Taxes</text>
+  
+  <g transform="translate(60, 260)">
+    <!-- Card 1: Deadlines -->
+    <rect x="0" y="0" width="340" height="240" rx="16" fill="#1e1b4b" stroke="#6366f1" stroke-width="2"/>
+    <text x="24" y="45" font-family="sans-serif" font-size="20" font-weight="700" fill="#a5b4fc">Self Assessment</text>
+    <text x="24" y="85" font-family="sans-serif" font-size="24" font-weight="800" fill="#ffffff">Key Deadlines</text>
+    <text x="24" y="125" font-family="sans-serif" font-size="16" fill="#c7d2fe">• Jan 31: Online Tax Return</text>
+    <text x="24" y="155" font-family="sans-serif" font-size="16" fill="#c7d2fe">• Jan 31: 1st Payment on Account</text>
+    <text x="24" y="185" font-family="sans-serif" font-size="16" fill="#c7d2fe">• Jul 31: 2nd Payment on Account</text>
+
+    <!-- Card 2: Dividends -->
+    <rect x="370" y="0" width="340" height="240" rx="16" fill="#1e1b4b" stroke="#6366f1" stroke-width="2"/>
+    <text x="24" y="45" font-family="sans-serif" font-size="20" font-weight="700" fill="#38bdf8">Ltd Directors</text>
+    <text x="24" y="85" font-family="sans-serif" font-size="24" font-weight="800" fill="#ffffff">Dividend Tax Rates</text>
+    <text x="24" y="125" font-family="sans-serif" font-size="16" fill="#c7d2fe">• £500 Dividend Allowance</text>
+    <text x="24" y="155" font-family="sans-serif" font-size="16" fill="#c7d2fe">• 8.75% Basic Dividend Rate</text>
+    <text x="24" y="185" font-family="sans-serif" font-size="16" fill="#c7d2fe">• 33.75% Higher Dividend Rate</text>
+
+    <!-- Card 3: Deductions -->
+    <rect x="740" y="0" width="340" height="240" rx="16" fill="#1e1b4b" stroke="#6366f1" stroke-width="2"/>
+    <text x="24" y="45" font-family="sans-serif" font-size="20" font-weight="700" fill="#22c55e">Tax Savings</text>
+    <text x="24" y="85" font-family="sans-serif" font-size="24" font-weight="800" fill="#ffffff">Pension Relief &amp; Trading</text>
+    <text x="24" y="125" font-family="sans-serif" font-size="16" fill="#c7d2fe">• £1,000 Trading Allowance</text>
+    <text x="24" y="155" font-family="sans-serif" font-size="16" fill="#c7d2fe">• £60,000 Annual Pension Limit</text>
+    <text x="24" y="185" font-family="sans-serif" font-size="16" fill="#c7d2fe">• Allowable Business Expenses</text>
+  </g>
+
+  <rect x="60" y="535" width="1080" height="35" rx="8" fill="#1e1b4b"/>
+  <text x="80" y="558" font-family="sans-serif" font-size="14" fill="#a5b4fc">HMRC Self Assessment Portal • Corporation Tax 19%-25% • Small Business Tax Strategies</text>
+</svg>

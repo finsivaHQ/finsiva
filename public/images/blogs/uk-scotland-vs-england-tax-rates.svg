@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgScot" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgScot)"/>
+  <rect x="40" y="40" width="1120" height="550" rx="24" fill="none" stroke="#2563eb" stroke-width="3"/>
+  
+  <text x="60" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="600" fill="#60a5fa" letter-spacing="2">REGIONAL TAX COMPARISON</text>
+  <text x="60" y="170" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="800" fill="#ffffff">Scotland vs England Income Tax Rates</text>
+  <text x="60" y="215" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" fill="#bfdbfe">Scottish 6-Band Tax System vs Rest of UK 3-Band Tax System</text>
+  
+  <g transform="translate(60, 260)">
+    <!-- Column 1: Scotland -->
+    <rect x="0" y="0" width="520" height="240" rx="16" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
+    <text x="24" y="45" font-family="sans-serif" font-size="22" font-weight="800" fill="#60a5fa">Scotland Tax Bands (Scottish Government)</text>
+    <text x="24" y="85" font-family="sans-serif" font-size="15" fill="#e2e8f0">• Starter Rate (19%): £12,571 – £14,876</text>
+    <text x="24" y="115" font-family="sans-serif" font-size="15" fill="#e2e8f0">• Basic Rate (20%): £14,877 – £26,561</text>
+    <text x="24" y="145" font-family="sans-serif" font-size="15" fill="#e2e8f0">• Intermediate Rate (21%): £26,562 – £43,662</text>
+    <text x="24" y="175" font-family="sans-serif" font-size="15" fill="#e2e8f0">• Higher Rate (42%): £43,663 – £75,000</text>
+    <text x="24" y="205" font-family="sans-serif" font-size="15" fill="#e2e8f0">• Advanced (45%) &amp; Top Rate (48%): £75k+</text>
+
+    <!-- Column 2: Rest of UK -->
+    <rect x="560" y="0" width="520" height="240" rx="16" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    <text x="24" y="45" font-family="sans-serif" font-size="22" font-weight="800" fill="#34d399">Rest of UK (England, Wales, NI)</text>
+    <text x="24" y="85" font-family="sans-serif" font-size="15" fill="#e2e8f0">• Personal Allowance (0%): Up to £12,570</text>
+    <text x="24" y="125" font-family="sans-serif" font-size="15" fill="#e2e8f0">• Basic Rate (20%): £12,571 – £50,270</text>
+    <text x="24" y="165" font-family="sans-serif" font-size="15" fill="#e2e8f0">• Higher Rate (40%): £50,271 – £125,140</text>
+    <text x="24" y="205" font-family="sans-serif" font-size="15" fill="#e2e8f0">• Additional Rate (45%): Over £125,140</text>
+  </g>
+
+  <rect x="60" y="535" width="1080" height="35" rx="8" fill="#1e293b"/>
+  <text x="80" y="558" font-family="sans-serif" font-size="14" fill="#93c5fd">HMRC Scottish Taxpayer Status (S Tax Code) • Devolved Powers • Take-Home Pay Comparison</text>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgProp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="100%" stop-color="#022c22"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgProp)"/>
+  <rect x="40" y="40" width="1120" height="550" rx="24" fill="none" stroke="#047857" stroke-width="3"/>
+  
+  <text x="60" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="600" fill="#34d399" letter-spacing="2">PROPERTY &amp; INVESTMENT TAXATION</text>
+  <text x="60" y="170" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="800" fill="#ffffff">UK Capital Gains &amp; Rental Income Tax</text>
+  <text x="60" y="215" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" fill="#a7f3d0">Buy-to-Let, Section 24 Relief, CGT Allowances &amp; Airbnb Taxes</text>
+  
+  <g transform="translate(60, 260)">
+    <!-- Card 1: CGT Rates -->
+    <rect x="0" y="0" width="340" height="240" rx="16" fill="#022c22" stroke="#059669" stroke-width="2"/>
+    <text x="24" y="45" font-family="sans-serif" font-size="20" font-weight="700" fill="#34d399">Capital Gains Tax</text>
+    <text x="24" y="85" font-family="sans-serif" font-size="24" font-weight="800" fill="#ffffff">CGT Rates &amp; Allowance</text>
+    <text x="24" y="125" font-family="sans-serif" font-size="16" fill="#a7f3d0">• £3,000 Annual Exemption</text>
+    <text x="24" y="155" font-family="sans-serif" font-size="16" fill="#a7f3d0">• 10% / 20% Standard Assets</text>
+    <text x="24" y="185" font-family="sans-serif" font-size="16" fill="#a7f3d0">• 18% / 24% Residential Property</text>
+
+    <!-- Card 2: Rental Income -->
+    <rect x="370" y="0" width="340" height="240" rx="16" fill="#022c22" stroke="#059669" stroke-width="2"/>
+    <text x="24" y="45" font-family="sans-serif" font-size="20" font-weight="700" fill="#fbbf24">Rental Income</text>
+    <text x="24" y="85" font-family="sans-serif" font-size="24" font-weight="800" fill="#ffffff">Section 24 &amp; Expenses</text>
+    <text x="24" y="125" font-family="sans-serif" font-size="16" fill="#a7f3d0">• 20% Tax Credit for Mortgage</text>
+    <text x="24" y="155" font-family="sans-serif" font-size="16" fill="#a7f3d0">• £1,000 Property Allowance</text>
+    <text x="24" y="185" font-family="sans-serif" font-size="16" fill="#a7f3d0">• Allowable Repair Expenses</text>
+
+    <!-- Card 3: Non-Residents & Airbnb -->
+    <rect x="740" y="0" width="340" height="240" rx="16" fill="#022c22" stroke="#059669" stroke-width="2"/>
+    <text x="24" y="45" font-family="sans-serif" font-size="20" font-weight="700" fill="#38bdf8">Special Property Rules</text>
+    <text x="24" y="85" font-family="sans-serif" font-size="24" font-weight="800" fill="#ffffff">Airbnb &amp; Disclosures</text>
+    <text x="24" y="125" font-family="sans-serif" font-size="16" fill="#a7f3d0">• 60-Day CGT Reporting Rule</text>
+    <text x="24" y="155" font-family="sans-serif" font-size="16" fill="#a7f3d0">• HMRC Let Property Campaign</text>
+    <text x="24" y="185" font-family="sans-serif" font-size="16" fill="#a7f3d0">• Non-Resident Property CGT</text>
+  </g>
+
+  <rect x="60" y="535" width="1080" height="35" rx="8" fill="#022c22"/>
+  <text x="80" y="558" font-family="sans-serif" font-size="14" fill="#6ee7b7">HMRC Property Tax Rules • Stamp Duty Land Tax (SDLT) • Buy-to-Let Advisory</text>
+</svg>

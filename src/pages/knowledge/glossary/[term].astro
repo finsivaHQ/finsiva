@@ -95,7 +95,7 @@ const termSchema = {
             <ul class="space-y-2">
               {term.data.relatedGuides.map(rel => (
                 <li>
-                  <a href={`/knowledge/${rel}`} class="text-link hover:underline dark:text-link">{rel}</a>
+                  <a href={rel.startsWith('/') ? rel : `/knowledge/${rel}`} class="text-link hover:underline dark:text-link">{rel}</a>
                 </li>
               ))}
             </ul>

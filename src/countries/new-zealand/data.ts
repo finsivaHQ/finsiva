@@ -133,7 +133,7 @@ export const newZealand: Country = {
   ],
   capitalGainsCalculators: [],
   corporateCalculators: [],
-  relatedCountries: ["singapore", "united-kingdom", "australia"],
+  relatedCountries: ["singapore", "united-kingdom", "united-states"],
   latestUpdates: [
     { date: "2024-03-31", title: "2024 Tax Rates Updated", description: "IRD released updated tax rates and thresholds for the 2024-25 tax year." },
     { date: "2024-01-01", title: "Bright-Line Period Extended", description: "Bright-line test for residential property extended to 10 years for properties acquired after 27 March 2021." }

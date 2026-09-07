@@ -241,7 +241,7 @@ export const malaysia: Country = {
   ],
   capitalGainsCalculators: [],
   corporateCalculators: [],
-  relatedCountries: ["singapore", "indonesia", "thailand"],
+  relatedCountries: ["singapore", "indonesia", "hong-kong", "philippines"],
   latestUpdates: [
     { date: "2024-01-01", title: "Budget 2024 Tax Changes", description: "New tax reliefs, revised income tax rates, and updated EPF contribution rates announced." },
     { date: "2024-01-01", title: "Updated SST Rates", description: "LHDNM confirmed current Sales and Service Tax rates for the year." }

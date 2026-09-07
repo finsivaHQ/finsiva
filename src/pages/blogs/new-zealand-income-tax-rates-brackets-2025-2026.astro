@@ -1,0 +1,233 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "New Zealand Income Tax Rates & Brackets (2025–2026): Complete IRD Tax Guide";
+const description = "Comprehensive guide to New Zealand personal income tax rates, tax brackets (10.5% to 39%), IRD tax codes, marginal vs effective rates, ACC levy, and $100k salary calculation.";
+const image = "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&q=80";
+const author = "Liam McKenzie, Senior NZ Tax Consultant & CA";
+const authorBio = "Chartered Accountant (CA ANZ) and New Zealand tax advisory specialist with over 14 years of experience guiding individuals, expats, and businesses through Inland Revenue Department (IRD) compliance.";
+const canonical = "https://finsiva.com/blogs/new-zealand-income-tax-rates-brackets-2025-2026";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What are the New Zealand income tax brackets for 2025 and 2026?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>New Zealand operates a 5-tier progressive personal income tax structure: 10.5% on income up to $14,000; 17.5% on income from $14,001 to $48,000; 30% from $48,001 to $70,000; 33% from $70,001 to $180,000; and 39% on any income earned above $180,000.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How much is $100,000 after tax in New Zealand?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>On a $100,000 annual gross salary in New Zealand, total income tax payable is $23,920, and the ACC Earners' Levy is $1,600 (at 1.60%), resulting in an annual net take-home salary of $74,480 (approx. $6,206.67 per month or $1,432.31 per week) before any KiwiSaver contributions or student loan deductions.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Is there a tax-free threshold in New Zealand?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>No. New Zealand does not have a 0% tax-free income allowance threshold. All personal income starting from the very first dollar ($1) is subject to income tax, starting at the lowest marginal tax rate of 10.5%.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is the highest income tax rate in New Zealand?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>The top income tax rate in New Zealand is 39%, which applies to individual annual income exceeding NZD $180,000.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is the difference between tax code M and tax code S in NZ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Tax code 'M' (Main) is used for your primary job or single main source of income. Tax code 'S' (Secondary) is used for secondary income, such as a second job, part-time work, or secondary employment, requiring tax to be deducted at a flat rate matching your total estimated annual bracket.</p>"
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="16 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <p class="text-lg leading-relaxed">
+      Understanding <strong>New Zealand income tax rates, tax brackets, and IRD thresholds for 2025 and 2026</strong> is essential for anyone living, working, or investing in New Zealand. Administered by the <a href="https://www.ird.govt.nz" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">Inland Revenue Department (IRD)</a>, New Zealand employs a progressive personal income tax structure where rates range from <strong>10.5% to 39%</strong> depending on your total income level.
+    </p>
+
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Table of Contents</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#nz-tax-brackets-table" class="text-link hover:underline">1. Official NZ Income Tax Brackets Table (2025–2026)</a></li>
+        <li><a href="#how-nz-tax-works" class="text-link hover:underline">2. How Does New Zealand Income Tax Work?</a></li>
+        <li><a href="#marginal-vs-effective" class="text-link hover:underline">3. Marginal Tax Rate vs Effective Tax Rate Breakdown</a></li>
+        <li><a href="#worked-salary-example" class="text-link hover:underline">4. $100,000 Salary After Tax Calculation Example</a></li>
+        <li><a href="#ird-tax-codes" class="text-link hover:underline">5. New Zealand Tax Codes Explained (M, S, SL, etc.)</a></li>
+        <li><a href="#acc-earners-levy" class="text-link hover:underline">6. ACC Earners' Levy & Statutory Deductions</a></li>
+        <li><a href="#residual-income-tax" class="text-link hover:underline">7. What is Residual Income Tax (RIT)?</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">8. Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <h2 id="nz-tax-brackets-table" class="text-2xl font-semibold text-ink dark:text-on-primary">1. Official NZ Income Tax Brackets Table (2025–2026)</h2>
+    <p>In New Zealand, every dollar of personal income earned by resident individuals is taxed at progressive tax bands. The table below outlines the current income tax thresholds, tax slabs, and marginal tax rates set by the Inland Revenue Department under the <em>Income Tax Act 2007</em>.</p>
+
+    <div class="overflow-x-auto">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Income Tax Bracket / Threshold (NZD)</th>
+            <th class="border p-3">Marginal Tax Rate</th>
+            <th class="border p-3">Tax Payable on Bracket</th>
+            <th class="border p-3">Cumulative Maximum Tax</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr><td class="p-3">$0 – $14,000</td><td class="p-3 font-medium text-primary">10.5%</td><td class="p-3">$1,470</td><td class="p-3">$1,470</td></tr>
+          <tr><td class="p-3">$14,001 – $48,000</td><td class="p-3 font-medium text-primary">17.5%</td><td class="p-3">$5,950</td><td class="p-3">$7,420</td></tr>
+          <tr><td class="p-3">$48,001 – $70,000</td><td class="p-3 font-medium text-primary">30.0%</td><td class="p-3">$6,600</td><td class="p-3">$14,020</td></tr>
+          <tr><td class="p-3">$70,001 – $180,000</td><td class="p-3 font-medium text-primary">33.0%</td><td class="p-3">$36,300</td><td class="p-3">$50,320</td></tr>
+          <tr><td class="p-3">Over $180,000</td><td class="p-3 font-medium text-primary">39.0%</td><td class="p-3">39% on balance</td><td class="p-3">Variable</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Calculate your exact take-home pay instantly using our free, interactive <a href="/countries/new-zealand/income-tax/income-tax-calculator" class="text-link hover:underline">New Zealand Income Tax Calculator</a>.</p>
+
+    <h2 id="how-nz-tax-works" class="text-2xl font-semibold text-ink dark:text-on-primary">2. How Does New Zealand Income Tax Work?</h2>
+    <p>
+      New Zealand operates a <strong>Pay As You Earn (PAYE)</strong> system. When you work as an employee, your employer automatically calculates and deducts income tax and statutory levies from your paycheck each payday and remits them directly to the Inland Revenue Department (IRD).
+    </p>
+    <p>
+      Unlike countries such as Australia or the United States, New Zealand <strong>does not have a general tax-free threshold</strong>. Every dollar you earn from $1 onwards is taxed starting at 10.5%. However, tax rates are progressive, meaning you only pay higher rates on the portion of your income that falls into higher thresholds.
+    </p>
+
+    <div class="my-6 rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+      <h3 class="text-lg font-semibold text-ink mb-2 dark:text-on-primary">Key Principles of NZ Income Taxation:</h3>
+      <ul class="list-disc pl-6 space-y-2 text-sm">
+        <li><strong>Tax Year:</strong> The NZ tax year runs from <strong>April 1 to March 31</strong> of the following year.</li>
+        <li><strong>Worldwide Taxation:</strong> NZ tax residents pay tax on their worldwide income. Non-residents pay tax only on NZ-sourced income.</li>
+        <li><strong>No General Capital Gains Tax:</strong> NZ does not levy a broad capital gains tax, though specific gains (such as residential property under the Bright-Line rule) are taxed as income.</li>
+        <li><strong>Pay As You Earn (PAYE):</strong> Employment income tax is withheld at source automatically every pay cycle.</li>
+      </ul>
+    </div>
+
+    <h2 id="marginal-vs-effective" class="text-2xl font-semibold text-ink dark:text-on-primary">3. Marginal Tax Rate vs Effective Tax Rate Breakdown</h2>
+    <p>
+      A common point of confusion is the distinction between your <strong>marginal tax rate</strong> and your <strong>effective tax rate</strong>:
+    </p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li><strong>Marginal Tax Rate:</strong> The rate of tax applied to the very last dollar of income you earn. For example, if you earn $85,000 per year, your marginal tax rate is 33% because your top dollars fall into the $70,001–$180,000 tax band.</li>
+      <li><strong>Effective Tax Rate (Average Tax Rate):</strong> The actual percentage of your total income paid in tax. Because your first $14,000 is taxed at 10.5%, your next $34,000 at 17.5%, and so forth, your overall effective tax rate is significantly lower than your top marginal rate.</li>
+    </ul>
+
+    <h2 id="worked-salary-example" class="text-2xl font-semibold text-ink dark:text-on-primary">4. $100,000 Salary After Tax Calculation Example</h2>
+    <p>
+      Let's examine a detailed step-by-step mathematical breakdown for a taxpayer earning an annual gross salary of <strong>NZD $100,000</strong> in New Zealand:
+    </p>
+
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface space-y-3 font-mono text-sm">
+      <p><strong>Gross Annual Salary:</strong> $100,000.00</p>
+      <hr class="border-hairline dark:border-overlay-lighter" />
+      <p>1. Tax on First $14,000 @ 10.5% = $1,470.00</p>
+      <p>2. Tax on Next $34,000 ($14,001 to $48,000) @ 17.5% = $5,950.00</p>
+      <p>3. Tax on Next $22,000 ($48,001 to $70,000) @ 30.0% = $6,600.00</p>
+      <p>4. Tax on Remaining $30,000 ($70,001 to $100,000) @ 33.0% = $9,900.00</p>
+      <hr class="border-hairline dark:border-overlay-lighter" />
+      <p><strong>Total Income Tax:</strong> $23,920.00</p>
+      <p><strong>ACC Earners' Levy (1.60%):</strong> $1,600.00</p>
+      <p class="text-primary font-bold"><strong>Total Statutory Deductions:</strong> $25,520.00</p>
+      <p class="text-ink dark:text-on-primary font-bold text-base"><strong>Net Take-Home Salary:</strong> $74,480.00 / year ($6,206.67 / month)</p>
+    </div>
+
+    <p>
+      In this scenario, while the employee's <strong>marginal tax rate</strong> is 33%, their <strong>effective income tax rate</strong> is 23.92% (or 25.52% including the ACC levy).
+    </p>
+
+    <h2 id="ird-tax-codes" class="text-2xl font-semibold text-ink dark:text-on-primary">5. New Zealand Tax Codes Explained (M, S, SL, etc.)</h2>
+    <p>
+      When starting employment in New Zealand, you must complete an <strong>IR330 Tax Code Declaration form</strong>. IRD uses your tax code to determine how your employer calculates pay period tax deductions:
+    </p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li><strong>M (Main):</strong> Used for your primary income source (where you earn the majority of your income) if you do not have a student loan.</li>
+      <li><strong>M SL (Main + Student Loan):</strong> Used for your main job if you have a New Zealand student loan.</li>
+      <li><strong>S (Secondary - Low Income):</strong> Used for a second job if your total annual income across all jobs is between $14,001 and $48,000 (withheld at 17.5%).</li>
+      <li><strong>SH (Secondary - High Income):</strong> Used for a second job if total annual income is between $70,001 and $180,000 (withheld at 33%).</li>
+      <li><strong>ST (Secondary - Top Rate):</strong> Used for secondary income when total income exceeds $180,000 (withheld at 39%).</li>
+      <li><strong>NSW (Non-Resident Seasonal Worker):</strong> Applies to recognized seasonal employer (RSE) workers (flat 10.5%).</li>
+    </ul>
+
+    <h2 id="acc-earners-levy" class="text-2xl font-semibold text-ink dark:text-on-primary">6. ACC Earners' Levy & Statutory Deductions</h2>
+    <p>
+      In addition to income tax, all employees in New Zealand pay the <strong>Accident Compensation Corporation (ACC) Earners' Levy</strong>. ACC provides comprehensive no-fault personal injury coverage across New Zealand.
+    </p>
+    <p>
+      The ACC Earners' Levy is automatically deducted alongside PAYE tax at a rate of <strong>1.60% (inclusive of GST)</strong> up to a maximum liable income cap (e.g. capped at $142,283 of earnings).
+    </p>
+
+    <h2 id="residual-income-tax" class="text-2xl font-semibold text-ink dark:text-on-primary">7. What is Residual Income Tax (RIT)?</h2>
+    <p>
+      <strong>Residual Income Tax (RIT)</strong> is the amount of income tax you owe after deducting tax credits (such as foreign tax credits, donation tax credits, or tax already paid at source via PAYE).
+    </p>
+    <p>
+      If your RIT exceeds <strong>NZD $5,000</strong> at the end of a tax year, you may be required to pay <strong>Provisional Tax</strong> in installments across the subsequent tax year.
+    </p>
+
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">8. Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What are the New Zealand income tax brackets for 2025 and 2026?</h3>
+        <p>Progressive rates are: 10.5% ($0–$14k), 17.5% ($14,001–$48k), 30% ($48,001–$70k), 33% ($70,001–$180k), and 39% (above $180k).</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">How much is $100,000 after tax in New Zealand?</h3>
+        <p>Income tax is $23,920 and ACC levy is $1,600, giving a net take-home salary of $74,480 annually ($6,206.67 monthly).</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Is there a tax-free threshold in New Zealand?</h3>
+        <p>No. Income from $1 upwards is subject to tax starting at 10.5%.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is the highest income tax rate in New Zealand?</h3>
+        <p>The top personal rate is 39% on income over NZD $180,000.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is the difference between tax code M and S?</h3>
+        <p>Tax code M applies to your primary salary. Tax code S applies to secondary jobs so tax is withheld accurately at your marginal rate.</p>
+      </div>
+    </div>
+
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Explore Related New Zealand Tax Guides & Calculators</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/countries/new-zealand/income-tax/income-tax-calculator" class="text-link hover:underline font-medium">NZ Income Tax Calculator</a>
+        <a href="/countries/new-zealand/gst/gst-calculator" class="text-link hover:underline font-medium">NZ GST Calculator</a>
+        <a href="/blogs/is-new-zealand-tax-free-haven-worldwide-tax-explained" class="text-link hover:underline font-medium">Is NZ a Tax Haven? Guide</a>
+        <a href="/blogs/new-zealand-income-tax-for-expats-foreigners-non-residents" class="text-link hover:underline font-medium">NZ Expat & Foreigner Tax Guide</a>
+        <a href="/blogs/new-zealand-tax-treaties-us-australia-uk-canada-comparison" class="text-link hover:underline font-medium">NZ Tax Treaties & Comparison</a>
+        <a href="/blogs/how-to-file-new-zealand-income-tax-return-ird-guide" class="text-link hover:underline font-medium">How to File NZ Tax Return</a>
+        <a href="/blogs/new-zealand-income-tax-act-2007-corporate-property-rental-tax" class="text-link hover:underline font-medium">Income Tax Act 2007 & Rental Tax</a>
+        <a href="/countries/new-zealand" class="text-link hover:underline font-medium">Finsiva New Zealand Hub</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>

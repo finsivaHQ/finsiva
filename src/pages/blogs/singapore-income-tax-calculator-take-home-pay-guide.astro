@@ -1,0 +1,278 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Singapore Income Tax Calculator & Take-Home Pay Guide 2026";
+const description = "Learn how Singapore personal income tax and net take-home salary are calculated. Comprehensive formula breakdowns, Excel steps, monthly calculations, and online calculator tools.";
+const image = "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&q=80";
+const author = "Rachel Lim, Senior International Tax Consultant";
+const authorBio = "Senior Tax Consultant specializing in Singapore personal tax planning, gross-to-net salary structuring, IRAS compliance, and individual tax optimization.";
+const canonical = "https://finsiva.com/blogs/singapore-income-tax-calculator-take-home-pay-guide";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How is Singapore income tax calculated for salaried individuals?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Singapore personal income tax is computed by taking your total gross annual income (salary, bonuses, director fees, allowances), subtracting allowable employment expenses and total eligible personal tax reliefs (capped at S$80,000) to find your Chargeable Income. Progressive resident rates from 0% to 24% are then applied to your Chargeable Income, after which statutory government tax rebates are deducted to arrive at final net tax payable."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is the difference between gross salary and take-home pay in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Gross salary is your total contract compensation before any deductions. Take-home pay (net salary after tax) is the exact amount deposited into your bank account after deducting mandatory Central Provident Fund (CPF) employee contributions (up to 20% for citizens/PRs) and accounting for your annual individual income tax liabilities."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How do I build a Singapore income tax calculator in Excel?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "In Excel, set up input cells for Gross Salary, Bonuses, and Personal Reliefs. Calculate Chargeable Income using MAX(0, Gross Income - Reliefs). Use nested IF statements or VLOOKUP with TRUE lookup against the official IRAS progressive tax bracket table to calculate marginal tax per tier, then sum the tier results."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How much annual income is tax-free in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "For Singapore tax residents, the first S$20,000 of chargeable annual income is taxed at 0%. Furthermore, automatic Earned Income Relief (S$1,000 for individuals under 55) means residents generally pay zero personal income tax if their gross annual assessable income is S$21,000 or below."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Are monthly salary tax payments withheld directly from paychecks in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Unlike countries with PAYE/TDS payroll tax withholding, Singapore employers do not deduct personal income tax from monthly paychecks. Taxpayers pay their annual tax bill directly to IRAS in a lump sum or via interest-free 12-month GIRO monthly installments after receiving their Notice of Assessment (NOA)."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="18 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <p class="text-lg leading-relaxed font-sans">
+      Understanding <strong>how Singapore income tax is calculated</strong> and determining your exact <strong>after-tax net take-home salary</strong> is essential for professionals, employment pass holders, and expatriates living in Singapore. Recognized worldwide for its low, progressive tax structure, Singapore offers a straightforward system administered by the <a href="https://www.iras.gov.sg" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">Inland Revenue Authority of Singapore (IRAS)</a>.
+    </p>
+
+    <p>
+      Whether you are using an <strong>online Singapore Income Tax Calculator 2026</strong>, designing a custom <strong>Singapore Income Tax Calculator Excel spreadsheet</strong>, or converting your annual salary offer to monthly take-home pay, this guide breaks down every formula step-by-step.
+    </p>
+
+    <!-- Interactive Tool Callout -->
+    <div class="my-8 rounded-2xl border border-hairline bg-canvas-soft p-6 shadow-sm dark:border-overlay-light dark:bg-surface">
+      <div class="flex items-center gap-4">
+        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary dark:bg-primary/20">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-ink dark:text-on-primary">Calculate Your Net Salary Instantly</h3>
+          <p class="text-sm text-muted">Estimate your progressive income tax, CPF deductions, and monthly take-home pay for YA 2026.</p>
+        </div>
+      </div>
+      <div class="mt-4">
+        <a href="/countries/singapore/income-tax/income-tax-calculator" class="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primary/90">
+          Open Singapore Income Tax Calculator &rarr;
+        </a>
+      </div>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-bold text-ink mb-3 dark:text-on-primary">Table of Contents</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#core-formula" class="text-link hover:underline">1. The Core Singapore Income Tax Formula</a></li>
+        <li><a href="#tax-brackets-2026" class="text-link hover:underline">2. Progressive Tax Brackets (YA 2026 / 2025)</a></li>
+        <li><a href="#gross-to-net" class="text-link hover:underline">3. Gross Salary to Net Take-Home Pay</a></li>
+        <li><a href="#excel-calculator" class="text-link hover:underline">4. Building a Singapore Tax Calculator in Excel</a></li>
+        <li><a href="#monthly-vs-annual" class="text-link hover:underline">5. Monthly vs Annual Income Tax Calculations</a></li>
+        <li><a href="#case-studies" class="text-link hover:underline">6. Salary Calculation Case Studies</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">7. Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <h2 id="core-formula" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">1. The Core Singapore Income Tax Formula</h2>
+    <p>
+      To understand <strong>how tax is calculated in Singapore</strong>, you must follow the statutory multi-step calculation prescribed under the <a href="https://sso.agc.gov.sg/Act/ITA1947" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">Singapore Income Tax Act 1947</a>:
+    </p>
+
+    <div class="space-y-4 my-6">
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+        <span class="text-xs font-bold uppercase tracking-wider text-primary">Step 1: Gross Assessable Income</span>
+        <p class="mt-1 text-sm"><strong>Gross Assessable Income</strong> = Basic Monthly Salary + Fixed Allowances + Bonuses + Commission + Director Fees + Employment Perks (Housing, Transport, Car Allowances).</p>
+      </div>
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+        <span class="text-xs font-bold uppercase tracking-wider text-primary">Step 2: Net Employment Income</span>
+        <p class="mt-1 text-sm"><strong>Net Employment Income</strong> = Gross Assessable Income - Allowable Employment Expenses (unreimbursed official work costs).</p>
+      </div>
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+        <span class="text-xs font-bold uppercase tracking-wider text-primary">Step 3: Chargeable Income</span>
+        <p class="mt-1 text-sm"><strong>Chargeable Income</strong> = Net Employment Income - Total Eligible Personal Tax Reliefs (capped at S$80,000 maximum per YA).</p>
+      </div>
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+        <span class="text-xs font-bold uppercase tracking-wider text-primary">Step 4: Gross Tax Payable</span>
+        <p class="mt-1 text-sm"><strong>Gross Tax Payable</strong> = Apply progressive IRAS tax rate schedule (0% to 24%) to Chargeable Income.</p>
+      </div>
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+        <span class="text-xs font-bold uppercase tracking-wider text-primary">Step 5: Final Net Tax Payable</span>
+        <p class="mt-1 text-sm"><strong>Final Net Tax Payable</strong> = Gross Tax Payable - Personal Income Tax Rebates (e.g. 50% PIT rebate up to S$200).</p>
+      </div>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?w=1200&q=80" alt="Financial analytics report and calculator on wooden desk" class="my-8 w-full rounded-xl object-cover max-h-96 shadow-md" loading="lazy" />
+
+    <h2 id="tax-brackets-2026" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">2. Progressive Tax Brackets (YA 2026 / 2025)</h2>
+    <p>
+      For tax resident individuals (Singapore Citizens, PRs, and foreigners residing in Singapore for 183+ days), Singapore applies a progressive tax schedule across 13 income tiers:
+    </p>
+
+    <div class="overflow-x-auto my-6">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-bold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Chargeable Income Bracket (SGD)</th>
+            <th class="border p-3">Marginal Rate (%)</th>
+            <th class="border p-3">Gross Tax Payable on Bracket</th>
+            <th class="border p-3">Cumulative Tax Payable</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr><td class="p-3">First S$20,000</td><td class="p-3 font-semibold">0%</td><td class="p-3">S$0</td><td class="p-3 font-medium">S$0</td></tr>
+          <tr><td class="p-3">Next S$10,000 (S$20,001 – S$30,000)</td><td class="p-3 font-semibold">2%</td><td class="p-3">S$200</td><td class="p-3 font-medium">S$200</td></tr>
+          <tr><td class="p-3">Next S$10,000 (S$30,001 – S$40,000)</td><td class="p-3 font-semibold">3.5%</td><td class="p-3">S$350</td><td class="p-3 font-medium">S$550</td></tr>
+          <tr><td class="p-3">Next S$40,000 (S$40,001 – S$80,000)</td><td class="p-3 font-semibold">7%</td><td class="p-3">S$2,800</td><td class="p-3 font-medium">S$3,350</td></tr>
+          <tr><td class="p-3">Next S$40,000 (S$80,001 – S$120,000)</td><td class="p-3 font-semibold">11.5%</td><td class="p-3">S$4,600</td><td class="p-3 font-medium">S$7,950</td></tr>
+          <tr><td class="p-3">Next S$40,000 (S$120,001 – S$160,000)</td><td class="p-3 font-semibold">15%</td><td class="p-3">S$6,000</td><td class="p-3 font-medium">S$13,950</td></tr>
+          <tr><td class="p-3">Next S$40,000 (S$160,001 – S$200,000)</td><td class="p-3 font-semibold">18%</td><td class="p-3">S$7,200</td><td class="p-3 font-medium">S$21,150</td></tr>
+          <tr><td class="p-3">Next S$40,000 (S$200,001 – S$240,000)</td><td class="p-3 font-semibold">19%</td><td class="p-3">S$7,600</td><td class="p-3 font-medium">S$28,750</td></tr>
+          <tr><td class="p-3">Next S$40,000 (S$240,001 – S$280,000)</td><td class="p-3 font-semibold">19.5%</td><td class="p-3">S$7,800</td><td class="p-3 font-medium">S$36,550</td></tr>
+          <tr><td class="p-3">Next S$40,000 (S$280,001 – S$320,000)</td><td class="p-3 font-semibold">20%</td><td class="p-3">S$8,000</td><td class="p-3 font-medium">S$44,550</td></tr>
+          <tr><td class="p-3">Next S$180,000 (S$320,001 – S$500,000)</td><td class="p-3 font-semibold">22%</td><td class="p-3">S$39,600</td><td class="p-3 font-medium">S$84,150</td></tr>
+          <tr><td class="p-3">Next S$500,000 (S$500,001 – S$1,000,000)</td><td class="p-3 font-semibold">23%</td><td class="p-3">S$115,000</td><td class="p-3 font-medium">S$199,150</td></tr>
+          <tr><td class="p-3">Amount Exceeding S$1,000,000</td><td class="p-3 font-semibold">24%</td><td class="p-3">24% on balance</td><td class="p-3 font-medium">Top Marginal Rate</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="gross-to-net" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">3. Gross Salary to Net Take-Home Pay</h2>
+    <p>
+      To compute <strong>Singapore gross-to-net salary</strong>, remember that employee CPF contributions apply to Citizens and Permanent Residents, whereas Employment Pass (EP) and S Pass holders are exempt from CPF.
+    </p>
+
+    <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface my-6">
+      <h3 class="font-bold text-ink dark:text-on-primary text-lg mb-3">Formula for Annual Net Take-Home Pay</h3>
+      <p class="font-mono text-sm bg-canvas-soft p-3 rounded-lg dark:bg-surface">
+        Annual Net Take-Home Pay = Annual Gross Salary - Employee CPF Contributions (if PR/Citizen) - Annual Income Tax Payable
+      </p>
+      <p class="mt-3 text-sm">
+        For EP/S Pass foreign professionals who do not pay CPF, net salary simply equals <strong>Gross Annual Income minus IRAS Income Tax Payable</strong>.
+      </p>
+    </div>
+
+    <h2 id="excel-calculator" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">4. Building a Singapore Tax Calculator in Excel</h2>
+    <p>
+      If you want to construct your own <strong>Singapore Income Tax Calculator Excel spreadsheet</strong>, use the following cell mapping and formula logic:
+    </p>
+
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface my-6">
+      <h3 class="font-bold text-ink dark:text-on-primary mb-3">Excel Setup Step-by-Step</h3>
+      <ol class="list-decimal space-y-2 pl-5 text-sm">
+        <li><strong>Cell B1 (Gross Annual Salary):</strong> Enter your annual wage e.g., <code>120000</code>.</li>
+        <li><strong>Cell B2 (Personal Reliefs):</strong> Enter earned income relief, CPF relief, SRS relief e.g., <code>15000</code>.</li>
+        <li><strong>Cell B3 (Chargeable Income):</strong> Formula: <code>=MAX(0, B1 - MIN(80000, B2))</code></li>
+        <li><strong>Cell B4 (Tax Payable):</strong> Formula using nested VLOOKUP / IFS logic:
+          <pre class="mt-2 rounded bg-canvas p-3 font-mono text-xs dark:bg-surface border border-hairline overflow-x-auto">
+=IFS(
+  B3<=20000, 0,
+  B3<=30000, 200 + (B3-30000)*0.02,
+  B3<=40000, 550 + (B3-40000)*0.035,
+  B3<=80000, 3350 + (B3-80000)*0.07,
+  B3<=120000, 7950 + (B3-120000)*0.115,
+  B3<=160000, 13950 + (B3-160000)*0.15,
+  B3<=200000, 21150 + (B3-200000)*0.18,
+  TRUE, 28750 + (B3-200000)*0.19
+)
+          </pre>
+        </li>
+      </ol>
+    </div>
+
+    <h2 id="monthly-vs-annual" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">5. Monthly vs Annual Income Tax Calculations</h2>
+    <p>
+      In Singapore, tax is assessed annually based on income earned during the calendar year (Jan 1 to Dec 31). However, many individuals prefer to set aside a monthly tax provision from their paycheck.
+    </p>
+
+    <p>
+      IRAS allows taxpayers to pay their tax bill via interest-free <strong>12-month GIRO monthly deduction plans</strong>. For example, if your annual tax bill is S$6,000, GIRO will automatically deduct S$500 per month from your bank account starting in May.
+    </p>
+
+    <h2 id="case-studies" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">6. Salary Calculation Case Studies</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+      <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="font-bold text-ink dark:text-on-primary text-lg mb-2">Case Study A: EP Holder (S$100,000 Annual Salary)</h3>
+        <ul class="text-sm space-y-2 text-muted">
+          <li><strong>Gross Salary:</strong> S$100,000</li>
+          <li><strong>Earned Income Relief:</strong> S$1,000</li>
+          <li><strong>Chargeable Income:</strong> S$99,000</li>
+          <li><strong>Tax on first S$80k:</strong> S$3,350</li>
+          <li><strong>Tax on remaining S$19k (11.5%):</strong> S$2,185</li>
+          <li><strong>Total Annual Tax:</strong> S$5,535 (Effective Rate: 5.54%)</li>
+          <li><strong>Net Annual Take-Home Pay:</strong> S$94,465</li>
+          <li><strong>Monthly Net Take-Home Pay:</strong> S$7,872</li>
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="font-bold text-ink dark:text-on-primary text-lg mb-2">Case Study B: Citizen with S$120,000 Salary</h3>
+        <ul class="text-sm space-y-2 text-muted">
+          <li><strong>Gross Salary:</strong> S$120,000</li>
+          <li><strong>Employee CPF (20% capped):</strong> S$17,040</li>
+          <li><strong>Chargeable Income (after reliefs):</strong> S$101,960</li>
+          <li><strong>Total Annual Tax Payable:</strong> S$5,875</li>
+          <li><strong>Net Monthly Cash Deposited:</strong> S$8,580</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Related Calculators & Content -->
+    <div class="my-8 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-lg font-bold text-ink mb-3 dark:text-on-primary">Explore Related Tools & Guides</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+        <a href="/countries/singapore/income-tax/income-tax-calculator" class="text-link hover:underline font-medium">&rarr; Singapore Personal Income Tax Calculator</a>
+        <a href="/blogs/singapore-tax-reliefs-deductions-rebates-guide" class="text-link hover:underline font-medium">&rarr; Singapore Tax Reliefs & Deductions Guide</a>
+        <a href="/blogs/singapore-expat-employment-pass-tax-calculator-guide" class="text-link hover:underline font-medium">&rarr; Expat & Employment Pass Tax Guide</a>
+        <a href="/knowledge/singapore-tax-calculators" class="text-link hover:underline font-medium">&rarr; Singapore Tax Calculators Knowledge Hub</a>
+      </div>
+    </div>
+
+    <h2 id="faqs" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">7. Frequently Asked Questions</h2>
+    <div class="space-y-4 my-6">
+      {faqSchema.mainEntity.map(faq => (
+        <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+          <h3 class="font-bold text-ink dark:text-on-primary text-base mb-2">{faq.name}</h3>
+          <p class="text-sm leading-relaxed text-body dark:text-muted">{faq.acceptedAnswer.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</BlogLayout>

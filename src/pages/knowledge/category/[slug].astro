@@ -27,7 +27,7 @@ const baseUrl = "https://finsiva.com";
 <Layout
   title={`${category} Guides | Finsiva Knowledge Center`}
   description={`Explore our collection of educational guides on ${category}. Clear, expert-written explanations to help you understand tax concepts.`}
-  canonical={`${baseUrl}/knowledge/category/${category.toLowerCase().replace(/\s+/g, '-')}`}
+  canonical={`${baseUrl}/knowledge/category/${category.toLowerCase().replace(/[\/\s]+/g, '-').replace(/-+/g, '-')}`}
   robots="index,follow"
   image="/og-image.svg"
   imageAlt={`${category} guides — Finsiva Knowledge Center`}

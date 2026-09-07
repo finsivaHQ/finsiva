@@ -1,0 +1,274 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "UK Income Tax Rates 2025/2026 & 2026/2027: Brackets, Personal Allowance & Take-Home Salary Guide";
+const description = "Comprehensive guide to UK income tax rates, Personal Allowance, PAYE tax codes, National Insurance deductions, £100k tax trap, and gross to net take-home salary calculations.";
+const image = "/images/blogs/uk-income-tax-rates-brackets-2026.svg";
+const author = "Alistair Crawford";
+const authorBio = "Senior UK Tax Advisory Consultant & ACA Charterholder specializing in HMRC PAYE compliance, personal tax planning, and high-net-worth income optimization.";
+const lastUpdated = "August 2026";
+const readTime = "14 min read";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are the UK Income Tax brackets for 2025/2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For the rest of the UK (England, Wales, Northern Ireland), the Personal Allowance is £12,570 (0%), the Basic Rate is 20% on taxable income from £12,571 to £50,270, the Higher Rate is 40% from £50,271 to £125,140, and the Additional Rate is 45% on income above £125,140."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much take-home pay do I get on a £50,000 salary in the UK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On a £50,000 gross annual salary in England, you pay approximately £7,486 in Income Tax and £2,994 in Class 1 National Insurance, resulting in an annual net take-home pay of £39,520 (approx £3,293 per month)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much net salary is £100,000 after tax in the UK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On a £100,000 salary, you pay £27,432 in Income Tax and £4,011 in National Insurance, giving an annual take-home pay of £68,557 (approx £5,713 per month)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the 60% marginal tax trap in the UK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The 60% tax trap occurs on income between £100,000 and £125,140. For every £2 earned above £100k, you lose £1 of your Personal Allowance. This loss of allowance combined with 40% Higher Rate tax creates an effective marginal tax rate of 60% (62% including NI)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a 1257L tax code on my UK payslip?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tax code 1257L is the standard tax code indicating that you are entitled to the full annual Personal Allowance of £12,570 for the tax year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does National Insurance affect my take-home pay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Class 1 National Insurance is deducted at 8% on weekly earnings between £242 and £967 (£12,570 to £50,270 per year) and 2% on earnings above £967 per week."
+      }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": title,
+  "description": description,
+  "image": image,
+  "author": {
+    "@type": "Person",
+    "name": author,
+    "jobTitle": authorBio
+  },
+  "datePublished": "2026-08-15",
+  "dateModified": "2026-08-15"
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated={lastUpdated}
+  readTime={readTime}
+  faqSchema={faqSchema}
+  articleSchema={articleSchema}
+>
+  
+    
+    <p class="lead">
+      Understanding how your hard-earned salary is taxed in the United Kingdom is fundamental to financial planning. Whether you are negotiating a new salary, calculating monthly budgeting, or optimizing workplace pension contributions, understanding <strong>HMRC Income Tax bands</strong>, <strong>National Insurance thresholds</strong>, and the <strong>Personal Allowance taper</strong> helps you maximize your net take-home pay.
+    </p>
+
+    <img src={image} alt="UK Income Tax Rates and Brackets 2025/2026 Infographic" class="my-8 w-full rounded-xl border border-hairline shadow-md dark:border-overlay-lighter" loading="lazy" />
+
+    <nav class="my-8 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-bold text-ink dark:text-on-primary mt-0 mb-4">Table of Contents</h2>
+      <ul class="space-y-2 text-sm text-body dark:text-muted">
+        <li><a href="#uk-tax-bands" class="hover:underline text-link dark:text-link">1. UK Income Tax Rates & Bands 2025/2026</a></li>
+        <li><a href="#personal-allowance-taper" class="hover:underline text-link dark:text-link">2. Personal Allowance & The £100,000 Tax Trap</a></li>
+        <li><a href="#national-insurance" class="hover:underline text-link dark:text-link">3. Class 1 National Insurance Contributions</a></li>
+        <li><a href="#salary-take-home-table" class="hover:underline text-link dark:text-link">4. Gross to Net Salary Comparison Table (£30k to £120k)</a></li>
+        <li><a href="#tax-reduction-strategies" class="hover:underline text-link dark:text-link">5. Proven Strategies to Reduce Your Taxable Income</a></li>
+        <li><a href="#faqs" class="hover:underline text-link dark:text-link">6. Frequently Asked Questions (FAQs)</a></li>
+      </ul>
+    </nav>
+    <h2 id="uk-tax-bands">1. UK Income Tax Rates & Bands 2025/2026</h2>
+    <p>
+      The UK tax system is progressive, meaning higher portions of your income are taxed at higher marginal rates. For taxpayers residing in England, Wales, and Northern Ireland, HMRC applies the following Income Tax bands:
+    </p>
+
+    <div class="overflow-x-auto my-6">
+      <table class="w-full text-left border-collapse border border-hairline dark:border-overlay-lighter">
+        <thead>
+          <tr class="bg-canvas-soft dark:bg-surface border-b border-hairline dark:border-overlay-lighter">
+            <th class="p-3 font-semibold text-ink dark:text-on-primary">Tax Band</th>
+            <th class="p-3 font-semibold text-ink dark:text-on-primary">Taxable Income Threshold</th>
+            <th class="p-3 font-semibold text-ink dark:text-on-primary">Tax Rate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-hairline dark:border-overlay-lighter">
+            <td class="p-3">Personal Allowance</td>
+            <td class="p-3">Up to £12,570</td>
+            <td class="p-3 font-bold text-emerald-600 dark:text-emerald-400">0%</td>
+          </tr>
+          <tr class="border-b border-hairline dark:border-overlay-lighter">
+            <td class="p-3">Basic Rate</td>
+            <td class="p-3">£12,571 to £50,270</td>
+            <td class="p-3 font-bold text-blue-600 dark:text-blue-400">20%</td>
+          </tr>
+          <tr class="border-b border-hairline dark:border-overlay-lighter">
+            <td class="p-3">Higher Rate</td>
+            <td class="p-3">£50,271 to £125,140</td>
+            <td class="p-3 font-bold text-amber-600 dark:text-amber-400">40%</td>
+          </tr>
+          <tr>
+            <td class="p-3">Additional Rate</td>
+            <td class="p-3">Above £125,140</td>
+            <td class="p-3 font-bold text-red-600 dark:text-red-400">45%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      You can test different salary figures using our free <a href="/countries/united-kingdom/income-tax/income-tax-calculator" class="text-link hover:underline dark:text-link font-semibold">UK Income Tax Calculator</a>.
+    </p>
+
+    <h2 id="personal-allowance-taper">2. Personal Allowance & The £100,000 Tax Trap</h2>
+    <p>
+      Standard UK taxpayers receive an annual tax-free <a href="/knowledge/glossary/uk-personal-allowance" class="text-link hover:underline dark:text-link">Personal Allowance</a> of £12,570. However, high earners face a significant cliff edge known as the <strong>£100,000 Personal Allowance Taper</strong>.
+    </p>
+
+    <div class="rounded-xl border-l-4 border-amber-500 bg-amber-50/50 p-4 dark:bg-amber-950/30 my-6">
+      <h3 class="text-lg font-bold text-amber-900 dark:text-amber-200 m-0">Warning: The 60% Marginal Tax Rate</h3>
+      <p class="text-amber-800 dark:text-amber-300 mt-2 mb-0">
+        For every £2 of adjusted net income you earn over £100,000, your Personal Allowance drops by £1. Between £100,000 and £125,140, this loss of tax-free allowance coupled with 40% Higher Rate tax results in an effective <strong>60% marginal tax rate</strong> (62% including 2% National Insurance).
+      </p>
+    </div>
+
+    <h2 id="national-insurance">3. Class 1 National Insurance Contributions</h2>
+    <p>
+      Employees also pay Class 1 <a href="/knowledge/glossary/uk-national-insurance" class="text-link hover:underline dark:text-link">National Insurance (NI)</a> through the <a href="/knowledge/glossary/uk-paye" class="text-link hover:underline dark:text-link">PAYE system</a>. 
+    </p>
+    <ul>
+      <li><strong>Main Rate (8%):</strong> Deducted on earnings between £12,570 and £50,270 per year (£242 to £967 per week).</li>
+      <li><strong>Upper Rate (2%):</strong> Deducted on earnings above £50,270 per year.</li>
+    </ul>
+
+    <h2 id="salary-take-home-table">4. Gross to Net Salary Comparison Table (£30k to £120k)</h2>
+    <p>
+      The table below provides a detailed breakdown of Income Tax, Class 1 National Insurance, and annual net take-home salary for common UK benchmark incomes:
+    </p>
+
+    <div class="overflow-x-auto my-6">
+      <table class="w-full text-left border-collapse border border-hairline dark:border-overlay-lighter text-sm">
+        <thead>
+          <tr class="bg-canvas-soft dark:bg-surface border-b border-hairline dark:border-overlay-lighter">
+            <th class="p-2.5 font-semibold text-ink dark:text-on-primary">Gross Salary</th>
+            <th class="p-2.5 font-semibold text-ink dark:text-on-primary">Income Tax</th>
+            <th class="p-2.5 font-semibold text-ink dark:text-on-primary">Class 1 NI</th>
+            <th class="p-2.5 font-semibold text-ink dark:text-on-primary">Annual Take-Home</th>
+            <th class="p-2.5 font-semibold text-ink dark:text-on-primary">Monthly Take-Home</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-hairline dark:border-overlay-lighter">
+            <td class="p-2.5 font-medium">£30,000</td>
+            <td class="p-2.5">£3,486</td>
+            <td class="p-2.5">£1,394</td>
+            <td class="p-2.5 font-bold text-emerald-600 dark:text-emerald-400">£25,120</td>
+            <td class="p-2.5 font-bold">£2,093</td>
+          </tr>
+          <tr class="border-b border-hairline dark:border-overlay-lighter">
+            <td class="p-2.5 font-medium">£40,000</td>
+            <td class="p-2.5">£5,486</td>
+            <td class="p-2.5">£2,194</td>
+            <td class="p-2.5 font-bold text-emerald-600 dark:text-emerald-400">£32,320</td>
+            <td class="p-2.5 font-bold">£2,693</td>
+          </tr>
+          <tr class="border-b border-hairline dark:border-overlay-lighter">
+            <td class="p-2.5 font-medium">£50,000</td>
+            <td class="p-2.5">£7,486</td>
+            <td class="p-2.5">£2,994</td>
+            <td class="p-2.5 font-bold text-emerald-600 dark:text-emerald-400">£39,520</td>
+            <td class="p-2.5 font-bold">£3,293</td>
+          </tr>
+          <tr class="border-b border-hairline dark:border-overlay-lighter">
+            <td class="p-2.5 font-medium">£60,000</td>
+            <td class="p-2.5">£11,432</td>
+            <td class="p-2.5">£3,211</td>
+            <td class="p-2.5 font-bold text-emerald-600 dark:text-emerald-400">£45,357</td>
+            <td class="p-2.5 font-bold">£3,780</td>
+          </tr>
+          <tr class="border-b border-hairline dark:border-overlay-lighter">
+            <td class="p-2.5 font-medium">£70,000</td>
+            <td class="p-2.5">£15,432</td>
+            <td class="p-2.5">£3,411</td>
+            <td class="p-2.5 font-bold text-emerald-600 dark:text-emerald-400">£51,157</td>
+            <td class="p-2.5 font-bold">£4,263</td>
+          </tr>
+          <tr class="border-b border-hairline dark:border-overlay-lighter">
+            <td class="p-2.5 font-medium">£100,000</td>
+            <td class="p-2.5">£27,432</td>
+            <td class="p-2.5">£4,011</td>
+            <td class="p-2.5 font-bold text-emerald-600 dark:text-emerald-400">£68,557</td>
+            <td class="p-2.5 font-bold">£5,713</td>
+          </tr>
+          <tr>
+            <td class="p-2.5 font-medium">£120,000</td>
+            <td class="p-2.5">£44,432</td>
+            <td class="p-2.5">£4,411</td>
+            <td class="p-2.5 font-bold text-emerald-600 dark:text-emerald-400">£71,157</td>
+            <td class="p-2.5 font-bold">£5,930</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="tax-reduction-strategies">5. Proven Strategies to Reduce Your Taxable Income</h2>
+    <ol>
+      <li><strong>Salary Sacrifice Pension Contributions:</strong> Contributing pre-tax salary to an occupational pension scheme lowers your gross income below the £100,000 threshold, reclaiming your Personal Allowance.</li>
+      <li><strong>Marriage Allowance:</strong> Lower-earning spouses can transfer £1,260 of unused allowance to save up to £252/yr.</li>
+      <li><strong>Work-Related Expenses:</strong> Claim professional subscriptions (e.g., ACA, ACCA, BMA), uniform washing, and home working allowances from HMRC.</li>
+    </ol>
+
+    <h2 id="faqs">6. Frequently Asked Questions (FAQs)</h2>
+    <div class="space-y-4 my-6">
+      {faqSchema.mainEntity.map(faq => (
+        <div class="rounded-xl border border-hairline p-5 dark:border-overlay-lighter bg-canvas dark:bg-surface">
+          <h3 class="text-lg font-bold text-ink dark:text-on-primary m-0">{faq.name}</h3>
+          <p class="text-body dark:text-muted mt-2 mb-0">{faq.acceptedAnswer.text}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-bold text-ink dark:text-on-primary mt-0 mb-3">Explore Related UK Tax Resources</h3>
+      <ul class="space-y-2 mb-0">
+        <li><a href="/countries/united-kingdom/income-tax/income-tax-calculator" class="text-link hover:underline dark:text-link font-semibold">UK Income Tax Calculator</a></li>
+        <li><a href="/countries/united-kingdom/national-insurance/ni-calculator" class="text-link hover:underline dark:text-link font-semibold">UK National Insurance Calculator</a></li>
+        <li><a href="/knowledge/uk-expat-foreign-income-tax-guide" class="text-link hover:underline dark:text-link">UK Expat & Foreign Income Tax Guide</a></li>
+        <li><a href="/blogs/uk-scotland-vs-england-income-tax-rates-guide" class="text-link hover:underline dark:text-link">Scotland vs England Income Tax Comparison</a></li>
+        <li><a href="/knowledge/glossary/uk-personal-allowance" class="text-link hover:underline dark:text-link">Glossary: UK Personal Allowance</a></li>
+      </ul>
+    </div>
+  </BlogLayout>

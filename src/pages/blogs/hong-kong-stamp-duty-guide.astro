@@ -47,37 +47,7 @@ const faqSchema = {
 ---
 
 <BlogLayout title={title} description={description} image={image} canonical={canonical} author="Andrew Ho" authorBio="Andrew Ho is a tax attorney specializing in Hong Kong real estate conveyancing, stamp duty planning, and IRD regulatory compliance." lastUpdated="August 2026" readTime="11 min read">
-  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
-
-  <div class="min-h-screen bg-canvas dark:bg-canvas">
-    <main class="min-h-screen">
-      <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-        <nav aria-label="Breadcrumb" class="mb-6 text-sm">
-          <ol class="flex flex-wrap items-center gap-2">
-            <li class="flex items-center gap-2"><a href="/" class="text-link hover:underline dark:text-link">Home</a></li>
-            <li class="flex items-center gap-2"><span class="text-muted">/</span><a href="/blogs" class="text-link hover:underline dark:text-link">Blogs</a></li>
-            <li class="flex items-center gap-2"><span class="text-muted">/</span><span class="font-medium text-ink dark:text-on-primary" aria-current="page">Hong Kong Stamp Duty Guide</span></li>
-          </ol>
-        </nav>
-
-        <article class="prose max-w-none">
-          <h1 class="text-3xl sm:text-4xl font-bold text-ink mb-4 dark:text-on-primary">Hong Kong Stamp Duty Guide: Property & Tenancy Stamp Duty Rates</h1>
-          <p class="text-lg text-body dark:text-muted">Last updated: August 2026 | Verified Stamp Office Rules | 11 min read</p>
-
-          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80" alt="Tax documents and stamp duty paperwork - Stamp Duty Guide" class="mb-6 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
-
-          <!-- Early Calculator CTA -->
-          <div class="my-6 p-6 rounded-2xl border border-primary/30 bg-primary/5 dark:border-primary/20 dark:bg-primary/5 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>
-              <h3 class="text-xl font-bold text-ink dark:text-on-primary">Calculate Your HK Property & Lease Stamp Duty</h3>
-              <p class="text-sm text-body dark:text-muted mt-1">Estimate Scale 2 AVD rates, first-time buyer concessions, and tenancy agreement stamping fees instantly.</p>
-            </div>
-            <a href="/countries/hong-kong/stamp-duty/hk-property-stamp-duty-calculator" class="btn btn-primary text-sm font-semibold shrink-0 px-5 py-2.5">
-              Launch Stamp Duty Calculator →
-            </a>
-          </div>
-
-          <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
+  <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
             <p>Hong Kong <strong>Stamp Duty</strong> is a statutory transaction duty governed by the <em>Stamp Duty Ordinance (Cap. 117)</em> and administered by the <strong>Stamp Office</strong> of the Inland Revenue Department. Stamp duty applies to conveyances on sale of residential and commercial property, agreements for sale, and tenancy agreements (leases).</p>
 
             <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Ad Valorem Stamp Duty (AVD) Scale 2 Rates</h2>
@@ -165,8 +135,4 @@ const faqSchema = {
             <li><a href="https://www.ird.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Inland Revenue Department (IRD) - Stamp Office Guidance</a></li>
             <li><a href="https://www.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Hong Kong Government e-Stamping Portal</a></li>
           </ul>
-        </article>
-      </div>
-    </main>
-  </div>
 </BlogLayout>

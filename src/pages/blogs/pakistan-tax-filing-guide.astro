@@ -1,190 +1,162 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
 
-const title = "Pakistan Tax Filing Guide 2024/25: How to File FBR Income Tax Return";
-const description = "Pakistan tax filing guide for 2024/25. Learn how to file FBR income tax returns online through Iris, required documents, deadlines, and how to claim tax refunds.";
-const image = "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80";
+const title = "Pakistan FBR Tax Filing Guide 2026: IRIS Portal, Deadlines & ATL";
+const description = "Complete step-by-step guide to online tax filing in Pakistan via FBR IRIS portal. Learn NTN registration, income tax filing deadline, ATL benefits, Befiler/Softax services, and amnesty schemes.";
+const image = "https://images.unsplash.com/photo-1450133064473-71024230f91b?w=1200&q=80";
+const canonical = "https://finsiva.com/blogs/pakistan-tax-filing-guide";
+const author = "Ayesha Malik";
+const authorBio = "Chartered accountant specializing in FBR IRIS tax return filing, tax advisory, and corporate tax compliance in Lahore and Karachi.";
+const lastUpdated = "August 2026";
+const readTime = "16 min read";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the official income tax filing deadline in Pakistan for 2026?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The statutory tax filing deadline for individuals and salaried workers in Pakistan is September 30 following the close of the tax year on June 30."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I register for a National Tax Number (NTN) on FBR IRIS?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "You can obtain an NTN by registering online at the FBR IRIS portal (iris.fbr.gov.pk) using your CNIC/NICOP, mobile number registered in your name, and email address."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the benefits of filing a tax return and appearing on the Active Taxpayer List (ATL)?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Active tax filers on the ATL enjoy a 50% discount on withholding taxes for property purchases, vehicle token payments, bank cash withdrawals, and dividend payouts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What tax advisory and filing services exist in Pakistan (Befiler, Softax, HQ Tax)?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Taxpayers can file directly on FBR IRIS or utilize certified tax consultant firms and digital platforms such as Befiler, Softax Karachi, or HQ Tax & Financial Inc Lahore for guided filing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a Tax Amnesty Scheme in Pakistan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A Tax Amnesty Scheme is a statutory asset declaration scheme periodically announced by the government allowing taxpayers to declare undisclosed assets by paying a concessional flat tax rate without penalties."
+      }
+    }
+  ]
+};
 ---
 
-<BlogLayout title={title} description={description} image={image} author="Ahmed Khan" authorBio="Tax professional specializing in Pakistani federal tax compliance and IRIS filing procedures." lastUpdated="July 2026" readTime="10 min read">
-  <div class="min-h-screen bg-canvas dark:bg-canvas">
-    <main class="min-h-screen">
-      <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-        <nav aria-label="Breadcrumb" class="mb-6 text-sm">
-          <ol class="flex flex-wrap items-center gap-2">
-            <li class="flex items-center gap-2"><a href="/" class="text-link hover:underline dark:text-link">Home</a></li>
-            <li class="flex items-center gap-2"><span class="text-muted" aria-hidden="true">/</span><a href="/blogs" class="text-link hover:underline dark:text-link">Blogs</a></li>
-            <li class="flex items-center gap-2"><span class="text-muted" aria-hidden="true">/</span><span class="font-medium text-ink dark:text-on-primary" aria-current="page">Pakistan Tax Filing Guide</span></li>
-          </ol>
-        </nav>
+<BlogLayout title={title} description={description} image={image} canonical={canonical} author={author} authorBio={authorBio} lastUpdated={lastUpdated} readTime={readTime}>
+  <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
+            <p>
+              Annual <strong>income tax filing pakistan</strong> is a mandatory obligation for eligible individuals, salaried workers, business entities, and non-resident Pakistanis with assets in the country. The Federal Board of Revenue (FBR) conducts all e-filing through its official portal, <strong>IRIS FBR</strong> (<a href="https://iris.fbr.gov.pk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">iris.fbr.gov.pk</a>).
+            </p>
+            <p>
+              Whether you plan to file returns yourself, obtain a <strong>national tax no pakistan</strong> (NTN), or hire professional <strong>tax firms in karachi</strong> or <strong>tax services in lahore</strong> (such as Befiler, Softax Karachi, or HQ Tax & Financial Inc Lahore), this guide explains the step-by-step process.
+            </p>
 
-        <article class="prose max-w-none">
-          <h1 class="text-4xl font-bold text-ink mb-4 dark:text-on-primary">Pakistan Tax Filing Guide 2024/25: How to File FBR Income Tax Return</h1>
-          <p class="text-lg text-body dark:text-muted">Last updated: July 2026 | 10 min read</p>
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">1. Step-by-Step Online Tax Filing on FBR IRIS</h2>
+            <ol class="list-decimal pl-6 space-y-2">
+              <li><strong>Registration & NTN Generation</strong>: Access <code>iris.fbr.gov.pk</code>, click <em>Registration for Unregistered Person</em>, and enter your CNIC, mobile number, and email to obtain an NTN.</li>
+              <li><strong>Income Declaration</strong>: Under Form <code>114(1)</code>, enter annual salary income, business profits, rental income, or capital gains.</li>
+              <li><strong>Adjustable Tax Claims</strong>: Enter advance withholding taxes paid on mobile bills, electricity bills, property transfers, and bank transactions.</li>
+              <li><strong>Wealth Statement (Section 116)</strong>: Declare personal assets (real estate property, vehicles, bank balances) and annual household expenses.</li>
+              <li><strong>Verification & Submission</strong>: Verify your four-digit PIN code and submit the return before the official deadline.</li>
+            </ol>
 
-          <div class="mt-8 space-y-6 text-body dark:text-muted">
-            <p>Filing your income tax return in Pakistan is both a legal obligation and a strategic financial decision. The process is now fully digital through the FBR's IRIS portal, making it possible to file your return from home in under an hour if you have your documents ready. For Tax Year 2024/25, the filing deadline is <strong>September 30, 2025</strong>, and missing this date can result in penalties and removal from the Active Taxpayer List (ATL).</p>
-
-            <p>This step-by-step Pakistan tax filing guide explains how to register on IRIS, the documents you need, how to file an electronic return, and how to claim a tax refund if excess tax was deducted at source. For more tax planning tips, read our <a href="/blogs/pakistan-income-tax-guide">Pakistan income tax guide</a> and use our <a href="/countries/pakistan/income-tax/income-tax-calculator">Pakistan income tax calculator</a> to estimate your liability before filing.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Why Filing Your Tax Return Matters</h2>
-            <p>Filing a tax return does more than just satisfy legal requirements. It places you on the FBR's Active Taxpayer List, which halves the withholding tax you pay on banking transactions, property purchases, vehicle registration, and prize bonds. A filer pays 0.6% on bank withdrawals, while a non-filer pays 1.5%. On a PKR 2 million bank transaction, that difference is PKR 18,000.</p>
-            <p>Other benefits of filing include:</p>
-            <ul class="list-disc pl-6 space-y-2">
-              <li>Eligibility for loans, visas, and government tenders</li>
-              <li>Ability to claim tax refunds for excess deductions</li>
-              <li>Documentation of income and assets for future transactions</li>
-              <li>Protection against FBR penalties and legal notices</li>
-              <li>Lower withholding tax on dividends, profit on debt, and mutual funds</li>
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">2. Tax Filing Deadline 2026 & Penalties</h2>
+            <p>
+              The statutory deadline for filing individual and salaried income tax returns is <strong>September 30</strong> following the end of the tax year on June 30.
+            </p>
+            <ul>
+              <li><strong>Penalty for Late Filing</strong>: Non-filing or late filing incurs a minimum statutory penalty of PKR 1,000 per day under Section 182.</li>
+              <li><strong>Active Taxpayer List (ATL) Status</strong>: Late filers are placed on the late-filer list and must pay an ATL surcharge (PKR 1,000 for individuals) to activate active filer status.</li>
             </ul>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Registering on the IRIS Portal</h2>
-            <p>The FBR's IRIS (Integrated Revenue Information System) portal at <a href="https://iris.fbr.gov.pk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">iris.fbr.gov.pk</a> is the official platform for all income tax, sales tax, and wealth statement activities. To register for the first time:</p>
-            <ul class="list-disc pl-6 space-y-2">
-              <li>Visit <a href="https://iris.fbr.gov.pk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">iris.fbr.gov.pk</a> and click "Register."</li>
-              <li>Enter your CNIC number and create a password.</li>
-              <li>Verify your mobile number and email through the OTP sent by FBR.</li>
-              <li>Complete the e-enrollment form with your personal and income details.</li>
-              <li>Your National Tax Number (NTN) is generated instantly.</li>
-            </ul>
-            <p>If you already have an NTN but lost your IRIS password, use the "Forgot Password" option to reset it via your registered email or mobile number.</p>
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">3. Active Taxpayer List (ATL) Benefits vs Non-Filers</h2>
+            <p>
+              Being on the FBR Active Taxpayer List provides substantial financial savings:
+            </p>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Documents Required for Tax Filing</h2>
-            <p>Gather the following documents before you start filing to avoid delays:</p>
-            <ul class="list-disc pl-6 space-y-2">
-              <li><strong>CNIC:</strong> Original and scanned copy</li>
-              <li><strong>NTN:</strong> Already registered through IRIS enrollment</li>
-              <li><strong>Salary certificate:</strong> Issued by your employer showing gross salary, allowances, and tax deducted at source</li>
-              <li><strong>Bank statements:</strong> All bank accounts for the full financial year (July to June)</li>
-              <li><strong>Proof of deductions:</strong> Retirement contributions, charitable donations, Zakat receipts</li>
-              <li><strong>Property and vehicle details:</strong> For wealth statement completion</li>
-              <li><strong>Rent receipts:</strong> If claiming housing or rent-related allowances</li>
+            <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+              <table class="w-full text-left text-sm">
+                <thead class="bg-canvas-soft border-b border-hairline dark:bg-surface/80 dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+                  <tr>
+                    <th class="p-3">Transaction Type</th>
+                    <th class="p-3">Active Tax Filer Rate</th>
+                    <th class="p-3">Non-Filer Rate</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+                  <tr>
+                    <td class="p-3 font-medium">Property Purchase (Section 236K)</td>
+                    <td class="p-3 font-bold text-emerald-600">3% to 4%</td>
+                    <td class="p-3 font-bold text-rose-600">10.5% to 12%</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-medium">Property Sale (Section 236C)</td>
+                    <td class="p-3 font-bold text-emerald-600">3%</td>
+                    <td class="p-3 font-bold text-rose-600">10%</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-medium">Bank Cash Withdrawal (> PKR 50k/day)</td>
+                    <td class="p-3 font-bold text-emerald-600">0%</td>
+                    <td class="p-3 font-bold text-rose-600">0.6%</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-medium">Dividend Income</td>
+                    <td class="p-3 font-bold text-emerald-600">15%</td>
+                    <td class="p-3 font-bold text-rose-600">30%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">4. Tax Firms & Digital Services (Befiler, Softax, HQ Tax)</h2>
+            <p>
+              Taxpayers seeking assistance can work with established advisory firms and digital portals:
+            </p>
+            <ul>
+              <li><strong>Befiler Pakistan</strong>: Online platform assisting individuals and freelancers with IRIS filing.</li>
+              <li><strong>Softax Karachi</strong>: Corporate tax advisory firm specializing in sales tax and corporate tax compliance.</li>
+              <li><strong>HQ Tax & Financial Inc Lahore</strong>: Professional tax firm providing tax audit and return services in Lahore.</li>
             </ul>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Step-by-Step Tax Filing Process</h2>
-            <p>For salaried individuals, FBR provides a simplified return form (Form 114(I)) designed for easy completion. The general steps are:</p>
-            <ul class="list-disc pl-6 space-y-2">
-              <li><strong>Log in to IRIS:</strong> Access your dashboard at iris.fbr.gov.pk using your NTN or CNIC.</li>
-              <li><strong>Select the tax year:</strong> Choose Tax Year 2025 (July 2024 – June 2025).</li>
-              <li><strong>Open the return form:</strong> Click "Declaration," then "Income Tax Return," and select Form 114(I) for salaried individuals.</li>
-              <li><strong>Fill personal information:</strong> Verify name, CNIC, address, and residency status (183-day rule).</li>
-              <li><strong>Enter income details:</strong> Declare salary income from employers and income from other sources such as rent, freelancing, or investments.</li>
-              <li><strong>Claim deductions and credits:</strong> Input allowable deductions such as EOBI, pension contributions, and charitable donations.</li>
-              <li><strong>Complete wealth statement:</strong> Report assets and liabilities as of June 30, 2025.</li>
-              <li><strong>Submit and download acknowledgment:</strong> Save your acknowledgment slip immediately after submission.</li>
-            </ul>
-            <p>Your name should appear on the Active Taxpayer List within a week of successful submission. You can confirm this on <a href="https://www.fbr.gov.pk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">fbr.gov.pk</a>.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Penalties for Late Filing</h2>
-            <p>FBR enforces strict deadlines to ensure timely tax collection. Late filing penalties include:</p>
-            <ul class="list-disc pl-6 space-y-2">
-              <li><strong>Late fee:</strong> PKR 1,000 per day of delay, with a minimum of PKR 10,000</li>
-              <li><strong>ATL removal:</strong> Delayed filers may be removed from the Active Taxpayer List, triggering higher withholding tax rates</li>
-              <li><strong>Loss of credibility:</strong> Late returns can affect visa applications, bank loans, and government tenders</li>
-            </ul>
-            <p>Because extensions are not guaranteed, it is best to file before September 30 even if you have no taxable income. Filing a nil return maintains your ATL status and protects you from penalties.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">How to Claim a Tax Refund</h2>
-            <p>If the tax deducted at source exceeds your actual tax liability, you are entitled to a refund. To claim a refund through IRIS:</p>
-            <ul class="list-disc pl-6 space-y-2">
-              <li>Log in to your IRIS account.</li>
-              <li>Navigate to "Refund" and select "Refund Application."</li>
-              <li>Fill in the details of excess tax paid with Computerized Payment Receipt (CPR) references.</li>
-              <li>Submit the application and track its status through your dashboard.</li>
-            </ul>
-            <p>Refunds can take anywhere from three months to over a year, depending on case complexity and FBR workload. Having a tax professional handle your refund claim often improves processing speed.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Conclusion</h2>
-            <p>Filing your FBR income tax return on time is one of the easiest ways to reduce your overall tax burden and avoid penalties. The IRIS portal makes the process accessible, and Form 114(I) simplifies filing for salaried individuals. Use our <a href="/countries/pakistan/income-tax/income-tax-calculator">Pakistan income tax calculator</a> to estimate your liability, gather your documents, and file before September 30 to secure your place on the Active Taxpayer List.</p>
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">5. Tax Amnesty Schemes in Pakistan</h2>
+            <p>
+              Periodically, the Federal Government introduces a <strong>tax amnesty scheme in pakistan</strong> allowing citizens to declare undisclosed domestic or foreign assets by paying a flat tax rate without facing prosecution or penalty.
+            </p>
+            <p>
+              Visit our main <a href="/knowledge/pakistan-income-tax" class="text-link hover:underline">Pakistan Income Tax Hub</a> or review <a href="/knowledge/pakistan-tax-residency" class="text-link hover:underline">Pakistan Tax Residency Rules</a>.
+            </p>
 
             <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Frequently Asked Questions</h2>
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">What is the deadline to file an income tax return in Pakistan for 2024/25?</h3>
-            <p>The deadline to file an income tax return for Tax Year 2024/25 is September 30, 2025. FBR occasionally extends this through official notifications, but always file before the original date to avoid penalties.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">How do I register for an NTN online?</h3>
-            <p>You can register for an NTN online through the IRIS portal at <a href="https://iris.fbr.gov.pk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">iris.fbr.gov.pk</a>. Enter your CNIC, verify your contact details, complete the enrollment form, and your NTN will be generated instantly via SMS and email.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">What is Form 114(I) in Pakistan?</h3>
-            <p>Form 114(I) is the simplified electronic income tax return form designed for salaried individuals, pensioners, and others with primarily salary income. It covers income details, deductions, tax credits, and wealth statements.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Can I file a tax return if I have no taxable income?</h3>
-            <p>Yes. Filing a nil return keeps you on the Active Taxpayer List, protects you from non-filer withholding taxes, and maintains your financial standing for loans and property transactions.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">What is the penalty for late tax filing in Pakistan?</h3>
-            <p>The penalty for late filing is PKR 1,000 per day of delay, with a minimum of PKR 10,000. Additionally, late filers may be removed from the Active Taxpayer List, exposing them to higher withholding taxes.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">How long does a tax refund take in Pakistan?</h3>
-            <p>Refunds typically take 3 to 12 months, depending on the complexity of the case and FBR processing times. You can track your refund status through the IRIS dashboard after submitting your refund application.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">What is the difference between eFBR and IRIS?</h3>
-            <p>eFBR was FBR's older portal. IRIS is the current, integrated system that covers income tax returns, sales tax, wealth statements, refunds, and e-payments. For practical purposes, IRIS is the only portal you need today.</p>
           </div>
 
-          <div class="mt-12">
-            <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Related Calculators</h2>
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              <a href="/countries/pakistan/income-tax/income-tax-calculator" class="block rounded border p-4 hover:border-primary transition">Pakistan Income Tax Calculator</a>
-              <a href="/countries/pakistan/income-tax/salary-tax-calculator" class="block rounded border p-4 hover:border-primary transition">Pakistan Salary Tax Calculator</a>
-              <a href="/countries/pakistan" class="block rounded border p-4 hover:border-primary transition">More Pakistan Calculators</a>
-            </div>
+          <div class="mt-8 space-y-4">
+            {faqSchema.mainEntity.map(faq => (
+              <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+                <h3 class="text-lg font-semibold text-ink dark:text-on-primary">{faq.name}</h3>
+                <p class="mt-2 text-sm text-body dark:text-muted leading-relaxed">{faq.acceptedAnswer.text}</p>
+              </div>
+            ))}
           </div>
 
-          <div class="mt-12">
-            <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Related Articles</h2>
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              <a href="/blogs/pakistan-income-tax-guide" class="block rounded border p-4 hover:border-primary transition">Pakistan Income Tax Guide</a>
-              <a href="/blogs/pakistan-salary-tax-guide" class="block rounded border p-4 hover:border-primary transition">Pakistan Salary Tax Guide</a>
-              <a href="/blogs/pakistan-fbr-tax-slabs" class="block rounded border p-4 hover:border-primary transition">FBR Tax Slabs 2024/25</a>
-            </div>
-          </div>
-
-          <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Interesting Facts</h2>
-          <ul class="list-disc pl-6 space-y-2 text-body dark:text-muted">
-            <li>The FBR IRIS portal allows fully digital income tax return filing, eliminating the need for physical visits.</li>
-            <li>Being on the Active Taxpayer List halves withholding tax on banking transactions, property purchases, and vehicle registration.</li>
-            <li>Late filing penalties start at PKR 10,000 and increase by PKR 1,000 per day until the return is filed.</li>
-            <li>Form 114(I) is the simplified return form specifically designed for salaried individuals, pensioners, and those with primarily salary income.</li>
-          </ul>
-
-          <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Quick Quiz</h2>
-          <div class="space-y-4">
-            <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
-              <p class="font-medium text-ink dark:text-on-primary">1. What is the official FBR portal for filing income tax returns?</p>
-              <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
-                <li>eFBR</li>
-                <li>IRIS</li>
-                <li>NTN Portal</li>
-                <li>TaxNet</li>
-              </ul>
-            </div>
-            <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
-              <p class="font-medium text-ink dark:text-on-primary">2. How much is the late filing penalty per day in Pakistan?</p>
-              <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
-                <li>PKR 500</li>
-                <li>PKR 1,000</li>
-                <li>PKR 2,000</li>
-                <li>PKR 5,000</li>
-              </ul>
-            </div>
-            <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
-              <p class="font-medium text-ink dark:text-on-primary">3. What does ATL stand for in Pakistani tax terminology?</p>
-              <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
-                <li>Annual Tax Levy</li>
-                <li>Active Taxpayer List</li>
-                <li>Advance Tax Limit</li>
-                <li>Automated Tax Line</li>
-              </ul>
-            </div>
-          </div>
-
-          <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Further Reading</h2>
-          <ul class="list-disc pl-6 space-y-2 text-body dark:text-muted">
-            <li><a href="https://www.fbr.gov.pk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Federal Board of Revenue (fbr.gov.pk)</a> - Official tax rules, notifications, and Active Taxpayer List verification.</li>
-            <li><a href="https://iris.fbr.gov.pk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">IRIS Portal (iris.fbr.gov.pk)</a> - Online income tax return filing, refunds, and e-payments.</li>
-            <li><a href="https://en.wikipedia.org/wiki/Taxation_in_Pakistan" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Taxation in Pakistan - Wikipedia</a> - General overview of Pakistan's tax system and history.</li>
-          </ul>
-        </article>
-      </div>
-    </main>
+          <div class="mt-12 p-6 rounded-2xl bg-canvas-soft border border-hairline dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="text-xl font-bold text-ink dark:text-on-primary">About the Author</h3>
+            <p class="mt-2 text-sm font-semibold text-primary dark:text-on-primary">{author}</p>
+            <p class="mt-1 text-sm text-body dark:text-muted">{authorBio}</p>
   </div>
 </BlogLayout>

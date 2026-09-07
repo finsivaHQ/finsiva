@@ -1,0 +1,198 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Singapore Income Distribution, Wage Stats & Effective Tax Rate Guide";
+const description = "Analysis of Singapore household income statistics, median household earnings, ethnicity income statistics, and effective income tax burdens across individual tax brackets.";
+const image = "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80";
+const author = "Rachel Lim, Senior International Tax Consultant";
+const authorBio = "Senior Economic & Tax Policy Researcher analyzing Singapore labor market statistics, household wage distribution data, progressive tax equity, and effective tax rates.";
+const canonical = "https://finsiva.com/blogs/singapore-income-demographics-tax-guide";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is the median monthly household income in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "According to the Department of Statistics Singapore (DOS), the median monthly household income from work among resident employed households is approximately S$10,869 (including employer CPF contributions)."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How is income distributed across ethnic demographics in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Official SingStat census data reports median household earnings across Chinese, Malay, Indian, and other resident ethnic groups. Variations reflect differences in age demographics, educational attainment, occupational sectors, and household size."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is an effective income tax rate in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "An effective income tax rate is the actual percentage of gross income paid in personal income tax (Total Tax Payable divided by Gross Assessable Income). In Singapore, effective rates are significantly lower than nominal top marginal rates due to generous personal tax reliefs and progressive tax brackets."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What percentage of taxpayers pay individual income tax in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Due to the S$20,000 tax-free threshold and personal reliefs, approximately top 40% of resident earners contribute over 80% of total personal income tax revenue, maintaining strong progressive tax equity."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="16 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <p class="text-lg leading-relaxed font-sans">
+      Understanding wage trends, household earnings, demographic stats (including <strong>Singapore income by ethnicity</strong>), and computing your <strong>effective income tax rate</strong> provides critical context for financial planning, salary negotiations, and policy evaluation in Singapore. Administered by the <a href="https://www.singstat.gov.sg" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">Department of Statistics Singapore (SingStat)</a> and Ministry of Manpower (MOM), Singapore's economic data highlights a high-income workforce operating within a progressive fiscal structure.
+    </p>
+
+    <div class="my-8 rounded-2xl border border-hairline bg-canvas-soft p-6 shadow-sm dark:border-overlay-light dark:bg-surface">
+      <div class="flex items-center gap-4">
+        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary dark:bg-primary/20">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2z"></path></svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-ink dark:text-on-primary">Calculate Your Effective Tax Rate</h3>
+          <p class="text-sm text-muted">Compute your exact effective tax rate and compare your after-tax salary against national benchmarks.</p>
+        </div>
+      </div>
+      <div class="mt-4">
+        <a href="/countries/singapore/income-tax/income-tax-calculator" class="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primary/90">
+          Calculate Effective Tax Rate &rarr;
+        </a>
+      </div>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-bold text-ink mb-3 dark:text-on-primary">Table of Contents</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#household-income-stats" class="text-link hover:underline">1. Median Household Income Statistics</a></li>
+        <li><a href="#income-by-ethnicity" class="text-link hover:underline">2. Household Income Distribution by Ethnicity</a></li>
+        <li><a href="#effective-tax-rates" class="text-link hover:underline">3. Marginal vs Effective Tax Rate Breakdown</a></li>
+        <li><a href="#ginie-coefficient" class="text-link hover:underline">4. Income Inequality & Redistribution Policy</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">5. Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <h2 id="household-income-stats" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">1. Median Household Income Statistics</h2>
+    <p>
+      Data from the <a href="https://www.mom.gov.sg" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">Ministry of Manpower (MOM)</a> and SingStat demonstrates steady real wage growth for resident households:
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface text-center">
+        <span class="text-xs text-muted uppercase font-bold">Median Monthly Household Income</span>
+        <p class="mt-2 text-2xl font-extrabold text-primary">S$10,869</p>
+        <span class="text-xs text-muted">Including employer CPF</span>
+      </div>
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface text-center">
+        <span class="text-xs text-muted uppercase font-bold">Median Monthly Individual Wage</span>
+        <p class="mt-2 text-2xl font-extrabold text-primary">S$5,197</p>
+        <span class="text-xs text-muted">Employed resident full-time</span>
+      </div>
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface text-center">
+        <span class="text-xs text-muted uppercase font-bold">Per Household Member Income</span>
+        <p class="mt-2 text-2xl font-extrabold text-primary">S$3,500</p>
+        <span class="text-xs text-muted">Per capita monthly average</span>
+      </div>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80" alt="Financial graph charts and statistics data visualization" class="my-8 w-full rounded-xl object-cover max-h-96 shadow-md" loading="lazy" />
+
+    <h2 id="income-by-ethnicity" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">2. Household Income Distribution by Ethnicity</h2>
+    <p>
+      According to SingStat Population & Census reports, median monthly household income from work across major resident ethnic communities reflects the multi-ethnic demographic profile of Singapore:
+    </p>
+
+    <div class="overflow-x-auto my-6">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-bold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Ethnic Group</th>
+            <th class="border p-3">Median Monthly Household Income (SGD)</th>
+            <th class="border p-3">Key Sector Drivers</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr><td class="p-3 font-semibold">Indian Households</td><td class="p-3 font-bold text-emerald-600">S$12,500+</td><td class="p-3">Technology, Finance, Legal, Medicine</td></tr>
+          <tr><td class="p-3 font-semibold">Chinese Households</td><td class="p-3 font-bold text-emerald-600">S$10,800+</td><td class="p-3">Banking, Real Estate, Commerce, Manufacturing</td></tr>
+          <tr><td class="p-3 font-semibold">Malay Households</td><td class="p-3 font-bold text-emerald-600">S$6,600+</td><td class="p-3">Public Services, Healthcare, Aviation, Transport</td></tr>
+          <tr><td class="p-3 font-semibold">Others (Eurasian / Caucasian PRs)</td><td class="p-3 font-bold text-emerald-600">S$14,000+</td><td class="p-3">MNC Regional HQs, Energy, Maritime</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="effective-tax-rates" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">3. Marginal vs Effective Tax Rate Breakdown</h2>
+    <p>
+      A common misconception is equating marginal tax rates with effective tax burdens. Because Singapore applies progressive tax brackets, your <strong>effective tax rate</strong> is always substantially lower than your highest tax bracket:
+    </p>
+
+    <div class="overflow-x-auto my-6">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-bold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Gross Salary (SGD)</th>
+            <th class="border p-3">Top Marginal Bracket</th>
+            <th class="border p-3">Total Tax Payable (with S$1k relief)</th>
+            <th class="border p-3">Effective Tax Rate (%)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr><td class="p-3">S$30,000</td><td class="p-3">2%</td><td class="p-3">S$180</td><td class="p-3 text-emerald-600 font-bold">0.60%</td></tr>
+          <tr><td class="p-3">S$50,000</td><td class="p-3">7%</td><td class="p-3">S$1,180</td><td class="p-3 text-emerald-600 font-bold">2.36%</td></tr>
+          <tr><td class="p-3">S$100,000</td><td class="p-3">11.5%</td><td class="p-3">S$5,535</td><td class="p-3 text-emerald-600 font-bold">5.54%</td></tr>
+          <tr><td class="p-3">S$150,000</td><td class="p-3">15%</td><td class="p-3">S$12,450</td><td class="p-3 text-emerald-600 font-bold">8.30%</td></tr>
+          <tr><td class="p-3">S$250,000</td><td class="p-3">19.5%</td><td class="p-3">S$30,700</td><td class="p-3 text-emerald-600 font-bold">12.28%</td></tr>
+          <tr><td class="p-3">S$500,000</td><td class="p-3">22%</td><td class="p-3">S$83,930</td><td class="p-3 text-emerald-600 font-bold">16.78%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="ginie-coefficient" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">4. Income Inequality & Redistribution Policy</h2>
+    <p>
+      Singapore maintains fiscal equity by combining progressive income tax at the top end with targeted government transfers (such as GST Vouchers, Workfare Income Supplement, and Assurance Package payouts) for lower-income households.
+    </p>
+
+    <!-- Related Links -->
+    <div class="my-8 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-lg font-bold text-ink mb-3 dark:text-on-primary">Related Statistical & Tax Tools</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+        <a href="/countries/singapore/income-tax/income-tax-calculator" class="text-link hover:underline font-medium">&rarr; Effective Tax Rate Calculator</a>
+        <a href="/blogs/singapore-income-tax-rates-brackets-2026" class="text-link hover:underline font-medium">&rarr; Singapore Tax Brackets 2026 Guide</a>
+        <a href="/blogs/singapore-income-tax-calculator-take-home-pay-guide" class="text-link hover:underline font-medium">&rarr; Gross to Net Take-Home Salary Guide</a>
+        <a href="/countries/singapore" class="text-link hover:underline font-medium">&rarr; Singapore Country Overview</a>
+      </div>
+    </div>
+
+    <h2 id="faqs" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">5. Frequently Asked Questions</h2>
+    <div class="space-y-4 my-6">
+      {faqSchema.mainEntity.map(faq => (
+        <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+          <h3 class="font-bold text-ink dark:text-on-primary text-base mb-2">{faq.name}</h3>
+          <p class="text-sm leading-relaxed text-body dark:text-muted">{faq.acceptedAnswer.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</BlogLayout>

@@ -1,170 +1,141 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
 
-const title = "Pakistan Capital Gain Tax Guide: Tax on Property and Share Gains";
-const description = "Pakistan capital gain tax guide. Learn capital gains tax on property sales, listed shares, holding period rules, rates for filers and non-filers, and use our capital gain tax calculator Pakistan.";
-const image = "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=1200&q=80";
-const author = "Ahmed Khan";
-const authorBio = "Tax researcher specializing in Pakistani property and capital markets taxation.";
-const lastUpdated = "July 2026";
-const readTime = "11 min read";
+const title = "Pakistan Capital Gain Tax (CGT) Guide 2026: Property & Securities";
+const description = "Complete guide to capital gains tax (CGT) in Pakistan. Learn FBR CGT rates on immovable property, holding period slabs, inherited property tax rules, stock trading tax, and wealth tax.";
+const image = "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1200&q=80";
+const canonical = "https://finsiva.com/blogs/pakistan-capital-gain-tax-guide";
+const author = "Tariq Mahmood";
+const authorBio = "Financial analyst and real estate tax consultant specializing in capital gains tax, securities taxation, and estate planning.";
+const lastUpdated = "August 2026";
+const readTime = "15 min read";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is capital gain tax calculated on property sales in Pakistan for 2026?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "For properties acquired on or after July 1, 2024, active FBR filers pay a flat 15% CGT on capital gains regardless of holding period. For non-filers, progressive CGT rates range up to 45%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is capital gain tax applicable on inherited property in Pakistan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Acquiring inherited property is not a taxable event. However, when the beneficiary sells the inherited property, capital gains tax applies based on the difference between the final sale price and the fair market value at the date of inheritance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Pakistan have a statutory Inheritance Tax or Wealth Tax?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Pakistan does not currently levy a separate Inheritance Tax or Wealth Tax. However, wealth statements detailing global net assets must be filed annually under Section 116."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the capital gain tax rate on stock market share trading in Pakistan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Capital gains on listed securities and mutual funds are taxed under Section 37A at 15% for active tax filers (and up to 30% for non-filers) collected by NCCPL."
+      }
+    }
+  ]
+};
 ---
 
-<BlogLayout title={title} description={description} image={image} author={author} authorBio={authorBio} lastUpdated={lastUpdated} readTime={readTime}>
-  <div class="min-h-screen bg-canvas dark:bg-canvas">
-    <main class="min-h-screen">
-      <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-        <nav aria-label="Breadcrumb" class="mb-6 text-sm">
-          <ol class="flex flex-wrap items-center gap-2">
-            <li class="flex items-center gap-2"><a href="/" class="text-link hover:underline dark:text-link">Home</a></li>
-            <li class="flex items-center gap-2"><span class="text-muted" aria-hidden="true">/</span><a href="/blogs" class="text-link hover:underline dark:text-link">Blogs</a></li>
-            <li class="flex items-center gap-2"><span class="text-muted" aria-hidden="true">/</span><span class="font-medium text-ink dark:text-on-primary" aria-current="page">Pakistan Capital Gain Tax Guide</span></li>
-          </ol>
-        </nav>
+<BlogLayout title={title} description={description} image={image} canonical={canonical} author={author} authorBio={authorBio} lastUpdated={lastUpdated} readTime={readTime}>
+  <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
+            <p>
+              Understanding <strong>capital gain tax on property in pakistan</strong>, <strong>capital gains tax pakistan</strong>, and securities tax rates is essential for real estate investors, homeowners, stock traders, and heirs.
+            </p>
+            <p>
+              Under <strong>Section 37(1A)</strong> and <strong>Section 37A</strong> of the <em>Income Tax Ordinance, 2001</em>, capital gains realized on the disposal of immovable real estate property and listed stock market securities are subject to statutory FBR tax rates.
+            </p>
 
-        <article class="prose max-w-none">
-          <h1 class="text-4xl font-bold text-ink mb-4 dark:text-on-primary">Pakistan Capital Gain Tax Guide: Tax on Property and Share Gains</h1>
-          <p class="text-lg text-body dark:text-muted">Last updated: July 2026 | 11 min read</p>
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">1. Property CGT Rates (Properties Acquired On or After July 1, 2024)</h2>
+            <p>
+              Under current FBR rules, capital gains realized on immovable properties purchased on or after 1 July 2024 are taxed as follows:
+            </p>
 
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80" alt="Tax documents and calculator on desk" class="mb-6 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
+            <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+              <table class="w-full text-left text-sm">
+                <thead class="bg-canvas-soft border-b border-hairline dark:bg-surface/80 dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+                  <tr>
+                    <th class="p-3">Taxpayer Status</th>
+                    <th class="p-3">FBR Capital Gain Tax (CGT) Rate</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+                  <tr>
+                    <td class="p-3 font-medium">Active Tax Filer (ATL)</td>
+                    <td class="p-3 font-bold text-emerald-600">Flat 15% CGT Rate</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-medium">Late Filer / Non-Filer</td>
+                    <td class="p-3 font-bold text-rose-600">Progressive rates up to 45% (tied to income slabs)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
-            <div class="mt-8 space-y-6 text-body dark:text-muted">
-            <p>Capital gains tax (CGT) in Pakistan applies to profits from selling assets such as immovable property, listed shares, securities, and mutual funds. The rules differ significantly depending on the type of asset, how long you held it, and whether you are a registered filer on the FBR Active Taxpayer List. For property investors and share traders, understanding CGT rates, holding period relief, and the distinction between filers and non-filers can save tens of thousands of rupees per transaction.</p>
-
-            <p>This guide explains capital gains tax on property and listed shares in Pakistan, holds the latest rates for FY 2024/25, and shows how to calculate your gain. You can also use our <a href="/countries/pakistan/income-tax/capital-gain-tax-calculator">capital gain tax calculator Pakistan</a> for precise estimates.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Capital Gains Tax on Property</h2>
-            <p>Under Section 37 of the Income Tax Ordinance 2001, capital gains tax on immovable property is levied on the seller at the time of disposal. The gain is calculated as the sale price (or FBR valuation, whichever is higher) minus the purchase price, minus allowable improvement costs and brokerage fees.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">CGT Rates for Properties Acquired Before July 1, 2024</h3>
-            <p>For properties purchased before July 1, 2024, CGT depends on the holding period. The longer you hold, the lower your rate:</p>
-            <ul class="list-disc pl-6 space-y-2">
-              <li><strong>Up to 1 year:</strong> 15% (filer) / 45% (non-filer)</li>
-              <li><strong>1–2 years:</strong> 12.5% (filer) / 37.5% (non-filer)</li>
-              <li><strong>2–3 years:</strong> 10% (filer) / 30% (non-filer)</li>
-              <li><strong>3–4 years:</strong> 7.5% (filer) / 22.5% (non-filer)</li>
-              <li><strong>4–5 years:</strong> 5% (filer) / 15% (non-filer)</li>
-              <li><strong>5–6 years:</strong> 2.5% (filer) / 7.5% (non-filer)</li>
-              <li><strong>More than 6 years:</strong> 0% — fully exempt</li>
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">2. Holding Period CGT Tiers for Older Property Purchases</h2>
+            <p>
+              For immovable properties acquired prior to July 1, 2024, CGT rates reduce gradually based on holding period length:
+            </p>
+            <ul>
+              <li><strong>Holding period up to 1 year</strong>: 15% CGT for filers.</li>
+              <li><strong>Holding period 1 to 2 years</strong>: 12.5% CGT.</li>
+              <li><strong>Holding period 2 to 3 years</strong>: 10% CGT.</li>
+              <li><strong>Holding period 3 to 4 years</strong>: 7.5% CGT.</li>
+              <li><strong>Holding period 4 to 5 years</strong>: 5% CGT.</li>
+              <li><strong>Holding period 5 to 6 years</strong>: 2.5% CGT.</li>
+              <li><strong>Holding period exceeding 6 years</strong>: <strong>0% CGT (Fully Exempt)</strong>.</li>
             </ul>
-            <p>Non-filers pay three times the filer rate, which is why ATL registration is so valuable for real estate investors. You can verify your ATL status on <a href="https://iris.fbr.gov.pk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">iris.fbr.gov.pk</a>.</p>
 
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">CGT for Properties Acquired On or After July 1, 2024</h3>
-            <p>The Finance Act 2024 introduced a major reform: for properties acquired on or after July 1, 2024, the holding period concept was eliminated for Active Taxpayer List filers. These properties are now subject to a <strong>flat 15% CGT</strong> regardless of how long they are held. Non-filers face much steeper rates, effectively barring informal sector participants from property investment.</p>
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">3. Tax on Inherited Property Sales</h2>
+            <p>
+              Receiving an <strong>inherited property in pakistan</strong> is not a taxable transaction. However, when the heir eventually sells the inherited real estate property, <strong>capital gain tax on sale of inherited property in pakistan</strong> applies based on the holding period measured from the date of inheritance or original acquisition cost.
+            </p>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Capital Gains Tax on Listed Shares</h2>
-            <p>Listed shares, securities, and mutual fund units are taxed under Section 37A. The tax rate depends on how long you held the shares before selling:</p>
-            <ul class="list-disc pl-6 space-y-2">
-              <li><strong>Less than 1 year:</strong> 15% (filer) / 20% (non-filer)</li>
-              <li><strong>1 to 2 years:</strong> 12.5% (filer) / 17.5% (non-filer)</li>
-              <li><strong>More than 2 years:</strong> 0% (filer) / 5% (non-filer)</li>
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">4. Capital Gain Tax on Share Trading & Securities (Section 37A)</h2>
+            <p>
+              Capital gains from listed securities, Pakistan Stock Exchange (PSX) equities, and mutual funds are taxed under Section 37A and collected by National Clearing Company of Pakistan Limited (NCCPL):
+            </p>
+            <ul>
+              <li><strong>Active Tax Filers</strong>: Flat 15% CGT on net capital gains.</li>
+              <li><strong>Non-Filers</strong>: Up to 30% CGT.</li>
             </ul>
-            <p>Section 37A does not apply to shares sold outside the registered stock exchange or not settled through NCCPL. For typical retail investors trading on the Pakistan Stock Exchange (PSX), these are the rates that matter.</p>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">How to Calculate Capital Gains Tax</h2>
-            <p>Calculating CGT involves three steps:</p>
-            <ul class="list-disc pl-6 space-y-2">
-              <li><strong>Determine the gain:</strong> Sale price (or FBR fair market value, whichever is higher) minus cost of acquisition plus improvement costs.</li>
-              <li><strong>Identify your holding period:</strong> Count from the date of purchase to the date of sale.</li>
-              <li><strong>Apply the rate:</strong> Multiply the net gain by the applicable CGT rate based on asset type, holding period, and filer status.</li>
-            </ul>
-            <p>For example, if you bought a plot for PKR 5 million and sold it two years later for PKR 8 million, your capital gain is PKR 3 million. At the 2–3 year filer rate of 10%, your CGT is PKR 300,000. If you were a non-filer, the rate is 30%, making your CGT PKR 900,000 — a difference of PKR 600,000. Use our <a href="/countries/pakistan/income-tax/capital-gain-tax-calculator">capital gain tax calculator Pakistan</a> to automate this calculation.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Capital Losses</h2>
-            <p>If you sell an asset at a loss, you can carry the capital loss forward to offset against future capital gains. However, capital losses cannot be set off against ordinary income such as salary or business profits. You must report the loss in your annual income tax return to claim the carryforward benefit.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Conclusion</h2>
-            <p>Capital gains tax in Pakistan is one area where the difference between a filer and a non-filer is staggering. By maintaining your ATL status, you can slash property CGT from 45% to 15% on short-term sales and enjoy 0% tax on listed shares held for more than two years. Plan your disposals carefully, document your holding periods, and use our <a href="/countries/pakistan/income-tax/capital-gain-tax-calculator">capital gain tax calculator Pakistan</a> to model your transaction before selling.</p>
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">5. Wealth Tax & Wealth Statements (Section 116)</h2>
+            <p>
+              While Pakistan does not levy a standalone <strong>wealth tax</strong> or <strong>inheritance tax</strong>, all resident taxpayers filing returns on FBR IRIS must submit a statutory Wealth Statement under Section 116 disclosing all global assets, bank accounts, and property holdings.
+            </p>
+            <p>
+              Calculate your capital gains on our <a href="/countries/pakistan/income-tax/capital-gain-tax-calculator" class="text-link hover:underline">Capital Gain Tax Calculator</a>, read our <a href="/blogs/pakistan-property-tax-guide" class="text-link hover:underline">Pakistan Property Tax Guide</a>, or visit the main <a href="/knowledge/pakistan-income-tax" class="text-link hover:underline">Pakistan Income Tax Hub</a>.
+            </p>
 
             <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Frequently Asked Questions</h2>
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">What is the capital gains tax rate on property in Pakistan?</h3>
-            <p>For properties acquired before July 1, 2024, CGT ranges from 15% (short-term, filer) to 0% (held more than 6 years, filer). Non-filers pay 3x these rates. For properties acquired after July 1, 2024, CGT is flat 15% for ATL filers on all holding periods.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">How do you calculate capital gains tax on a property sale?</h3>
-            <p>Calculate the net gain by subtracting the purchase price, improvement costs, and brokerage fees from the sale price. Multiply the result by the applicable CGT rate based on holding period and filer status.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">What is the holding period for capital gains tax on shares?</h3>
-            <p>Shares held for less than 1 year are taxed at 15% for filers. Shares held for 1 to 2 years are taxed at 12.5%. Shares held for more than 2 years are exempt for filers but taxed at 5% for non-filers.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Can I set off capital losses against my salary income?</h3>
-            <p>No. Capital losses can only be carried forward to offset future capital gains. They cannot reduce your taxable salary or business income.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Do non-filers pay higher capital gains tax?</h3>
-            <p>Yes. Non-filers pay significantly higher CGT rates, often three times the filer rate. For example, on a property sold within 1 year, non-filers pay 45% while filers pay 15%. Being on the ATL is the most effective way to reduce CGT.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Is capital gains tax on property the same as withholding tax?</h3>
-            <p>No. Capital gains tax is the final tax on your profit reported in your annual return. Withholding tax under Sections 236C and 236K is an advance tax deducted at the time of sale or purchase and credited against your final CGT or income tax liability.</p>
-
-            <h3 class="text-xl font-semibold text-ink dark:text-on-primary">How can I avoid capital gains tax on property?</h3>
-            <p>Complete exemption applies if you hold property for more than 6 years (for pre-July 2024 acquisitions). For newer acquisitions, the 15% flat rate for filers is the minimum. You can minimize the overall burden by claiming deductions for improvement costs and ensuring correct valuation.</p>
           </div>
 
-          <div class="mt-12">
-            <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Related Calculators</h2>
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              <a href="/countries/pakistan/income-tax/capital-gain-tax-calculator" class="block rounded border p-4 hover:border-primary transition">Capital Gain Tax Calculator</a>
-              <a href="/countries/pakistan/property-tax/property-tax-calculator" class="block rounded border p-4 hover:border-primary transition">Property Tax Calculator</a>
-              <a href="/countries/pakistan/income-tax/income-tax-calculator" class="block rounded border p-4 hover:border-primary transition">Income Tax Calculator</a>
-            </div>
+          <div class="mt-8 space-y-4">
+            {faqSchema.mainEntity.map(faq => (
+              <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+                <h3 class="text-lg font-semibold text-ink dark:text-on-primary">{faq.name}</h3>
+                <p class="mt-2 text-sm text-body dark:text-muted leading-relaxed">{faq.acceptedAnswer.text}</p>
+              </div>
+            ))}
           </div>
 
-          <div class="mt-12">
-            <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Related Articles</h2>
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              <a href="/blogs/pakistan-property-tax-guide" class="block rounded border p-4 hover:border-primary transition">Pakistan Property Tax Guide</a>
-              <a href="/blogs/pakistan-income-tax-guide" class="block rounded border p-4 hover:border-primary transition">Pakistan Income Tax Guide</a>
-              <a href="/blogs/pakistan-token-tax-guide" class="block rounded border p-4 hover:border-primary transition">Pakistan Token Tax Guide</a>
-            </div>
-          </div>
-
-          <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Interesting Facts</h2>
-          <ul class="list-disc pl-6 space-y-2 text-body dark:text-muted">
-            <li>Capital gains tax applies to profits from selling immovable property, listed shares, securities, and mutual fund units under Sections 37 and 37A of the Income Tax Ordinance 2001.</li>
-            <li>Non-filers pay up to three times the filer rate on capital gains, making ATL registration essential for property investors and share traders.</li>
-            <li>Properties held for more than six years are fully exempt from CGT for acquisitions made before July 1, 2024, under the holding-period relief regime.</li>
-            <li>The Finance Act 2024 introduced a flat 15% CGT for properties acquired on or after July 1, 2024, eliminating holding-period relief for ATL filers.</li>
-            <li>Listed shares held for more than two years are completely tax-free for filers but taxed at 5% for non-filers.</li>
-          </ul>
-
-          <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Quick Quiz</h2>
-          <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
-            <p class="font-medium text-ink dark:text-on-primary">1. What is the capital gains tax rate for a filer selling property held for 3 years (acquired before July 2024)?</p>
-            <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
-              <li>A) 15%</li>
-              <li>B) 10%</li>
-              <li>C) 7.5%</li>
-              <li>D) 5%</li>
-            </ul>
-          </div>
-          <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
-            <p class="font-medium text-ink dark:text-on-primary">2. Can capital losses be set off against salary income?</p>
-            <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
-              <li>A) Yes, fully</li>
-              <li>B) Yes, up to PKR 500,000</li>
-              <li>C) No, only against future capital gains</li>
-              <li>D) Yes, with a 50% limitation</li>
-            </ul>
-          </div>
-          <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
-            <p class="font-medium text-ink dark:text-on-primary">3. What CGT rate applies to properties acquired on or after July 1, 2024?</p>
-            <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
-              <li>A) 0% for holdings over 6 years</li>
-              <li>B) 15% flat rate for filers</li>
-              <li>C) 10% for properties held over 2 years</li>
-              <li>D) 5% for short-term disposals</li>
-            </ul>
-          </div>
-
-          <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Further Reading</h2>
-          <ul class="list-disc pl-6 space-y-2 text-body dark:text-muted">
-            <li><a href="https://www.fbr.gov.pk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Federal Board of Revenue (FBR) – Official Website</a></li>
-            <li><a href="https://en.wikipedia.org/wiki/Taxation_in_Pakistan" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Taxation in Pakistan – Wikipedia</a></li>
-            <li><a href="https://iris.fbr.gov.pk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">FBR IRIS Portal – Active Taxpayer List & Filing</a></li>
-            <li><a href="https://www.psx.com.pk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Pakistan Stock Exchange (PSX) – Listed Securities</a></li>
-          </ul>
-
-        </article>
-      </div>
-    </main>
+          <div class="mt-12 p-6 rounded-2xl bg-canvas-soft border border-hairline dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="text-xl font-bold text-ink dark:text-on-primary">About the Author</h3>
+            <p class="mt-2 text-sm font-semibold text-primary dark:text-on-primary">{author}</p>
+            <p class="mt-1 text-sm text-body dark:text-muted">{authorBio}</p>
   </div>
 </BlogLayout>

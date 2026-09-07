@@ -95,7 +95,10 @@ const pkGuideMap: Record<string, Array<{ title: string; slug: string }>> = {
   "income-tax": [
     { title: "Pakistan Income Tax Guide", slug: "/blogs/pakistan-income-tax-guide" },
     { title: "Pakistan Salary Tax Guide", slug: "/blogs/pakistan-salary-tax-guide" },
-    { title: "FBR Tax Slabs Guide", slug: "/blogs/pakistan-fbr-tax-slabs" }
+    { title: "FBR Tax Slabs Guide", slug: "/blogs/pakistan-fbr-tax-slabs" },
+    { title: "Freelancer Tax Guide", slug: "/blogs/pakistan-freelancer-tax-guide" },
+    { title: "Foreign Income & Remittances", slug: "/blogs/pakistan-foreign-income-remittance-tax-guide" },
+    { title: "Corporate & Business Tax Guide", slug: "/blogs/pakistan-corporate-tax-guide" }
   ],
   "sales-tax": [
     { title: "Pakistan Sales Tax Guide", slug: "/blogs/pakistan-sales-tax-guide" },
@@ -110,7 +113,7 @@ const pkGuideMap: Record<string, Array<{ title: string; slug: string }>> = {
   "vehicle-tax": [
     { title: "Pakistan Vehicle Tax Guide", slug: "/blogs/pakistan-vehicle-tax-guide" },
     { title: "Pakistan Token Tax Guide", slug: "/blogs/pakistan-token-tax-guide" },
-    { title: "Pakistan Property Tax Guide", slug: "/blogs/pakistan-property-tax-guide" }
+    { title: "PTA Mobile Tax Guide", slug: "/blogs/pakistan-pta-mobile-tax-guide" }
   ]
 };
 
@@ -299,11 +302,27 @@ const mergedContent = {
 
 const isThinContent = !rule && !content;
 
+const pageTitle = ruleId === 'pakistan-sales-tax-sales-tax-calculator'
+  ? "Pakistan Sales Tax & GST Calculator 2025-2026 | Calculate 18% FBR GST"
+  : ruleId === 'hong-kong-stamp-duty-hk-property-stamp-duty-calculator'
+  ? "Hong Kong Property Stamp Duty Calculator 2025-2026 | Scale 2 AVD Rates"
+  : ruleId === 'malaysia-sst-sst-calculator'
+  ? "Malaysia SST Calculator 2025-2026 | Calculate 6% & 8% Service Tax"
+  : `${country.name} ${calculator.name} ${country.taxYear}`;
+
+const pageDescription = ruleId === 'pakistan-sales-tax-sales-tax-calculator'
+  ? "Calculate 18% FBR federal sales tax (GST) and provincial services tax in Pakistan. Compute inclusive and exclusive GST invoice amounts instantly with our free calculator."
+  : ruleId === 'hong-kong-stamp-duty-hk-property-stamp-duty-calculator'
+  ? "Calculate Hong Kong property stamp duty (Scale 2 AVD) and residential lease stamping duty. Compute buyer duty and tenancy agreement fees with the calculator."
+  : ruleId === 'malaysia-sst-sst-calculator'
+  ? "Calculate Malaysia Sales and Service Tax (SST). Compute applicable service tax and sales tax rates, including 6% and 8% service tax and 5%/10% sales tax where applicable."
+  : `Calculate your ${country.name} ${calculator.name.toLowerCase()} for the ${country.taxYear} tax year. ${calculator.description}`;
+
 ---
 
 <CountryLayout
-  title={`${country.name} ${calculator.name} ${country.taxYear}`}
-  description={`Calculate your ${country.name} ${calculator.name.toLowerCase()} for the ${country.taxYear} tax year. ${calculator.description}`}
+  title={pageTitle}
+  description={pageDescription}
   canonical={`https://finsiva.com/countries/${country.slug}/${category.slug}/${calculator.slug}`}
   robots={isThinContent ? "noindex, follow" : undefined}
   breadcrumbs={[
@@ -323,12 +342,12 @@ const isThinContent = !rule && !content;
   <div class="mb-4 flex items-center gap-3 text-sm text-muted dark:text-muted">
     <span class="tag tag-primary">{country.name}</span>
     <span class="tag">{category.name}</span>
-    <span class="tag">Last updated: {new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</span>
+    <span class="tag">Tax Period: {country.taxYear || "2025/26"}</span>
   </div>
 
   <FactCheckedBadge
-    reviewerName="Finsiva Tax Compliance Board"
-    reviewerTitle="Certified Tax Policy Analysts"
+    reviewerName="Finsiva Research & Methodology"
+    reviewerTitle="Statutory Research"
     sourceName={country.officialTaxAuthority}
     sourceUrl={country.taxAuthorityUrl}
     lastChecked={country.taxYear}

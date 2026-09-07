@@ -1,14 +1,14 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
 
-const title = "Pakistan Salary Tax Guide: Tax on Salary for Salaried Individuals";
-const description = "Pakistan salary tax guide for salaried individuals. Learn how tax on salary is calculated under FBR rules, Section 149 deductions, and calculate take-home pay.";
+const title = "Pakistan Salary Tax Guide 2026: Tax Slabs, Paycheck Deduction & Calculator";
+const description = "Complete guide to salary tax in Pakistan for salaried employees. Learn how Section 149 withholding tax is calculated, FBR salary slabs, tax on PKR 50,000 salary, and medical exemptions.";
 const image = "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=80";
 const canonical = "https://finsiva.com/blogs/pakistan-salary-tax-guide";
 const author = "Zainab Hussain";
-const authorBio = "Employment tax consultant focusing on salary taxation and employer compliance.";
+const authorBio = "Payroll tax consultant and compliance auditor specializing in Pakistani salary taxation, Section 149 withholding, and employee benefits structuring.";
 const lastUpdated = "August 2026";
-const readTime = "9 min read";
+const readTime = "15 min read";
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -16,26 +16,50 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How is tax on salary calculated in Pakistan?",
-      "acceptedAnswer": {
+      "name": "What is the minimum salary required to pay income tax in Pakistan?",
+      acceptedAnswer: {
         "@type": "Answer",
-        "text": "Tax on salary is calculated by taking annual gross salary, subtracting exempt allowances (medical allowance up to 10% of basic salary) and contributions, applying FBR progressive tax slabs, and dividing by 12 for monthly withholding."
+        text: "The minimum taxable salary threshold in Pakistan is PKR 600,000 annually (or PKR 50,000 per month). If your annual taxable salary is PKR 600,000 or below, your income tax rate is 0%."
       }
     },
     {
       "@type": "Question",
-      "name": "What is Section 149 withholding tax on salary in Pakistan?",
-      "acceptedAnswer": {
+      "name": "Is there income tax on a salary of PKR 50,000 per month in Pakistan?",
+      acceptedAnswer: {
         "@type": "Answer",
-        "text": "Section 149 mandates that every employer deduct income tax from an employee's salary each month and deposit it with the FBR by the 15th of the following month."
+        text: "No. A monthly salary of PKR 50,000 equals an annual gross income of PKR 600,000, which falls exactly within the 0% FBR tax-free slab."
       }
     },
     {
       "@type": "Question",
-      "name": "Do I still need to file a tax return if my employer deducts tax monthly?",
-      "acceptedAnswer": {
+      "name": "How is monthly salary tax calculated under Section 149?",
+      acceptedAnswer: {
         "@type": "Answer",
-        "text": "Yes. Monthly employer withholding satisfies payment requirements, but filing an annual tax return is mandatory to stay on the Active Taxpayer List (ATL) and claim refunds for excess tax deducted."
+        text: "Under Section 149, the employer estimates annual gross salary, subtracts exempt allowances (such as medical allowance up to 10% of basic pay), applies progressive FBR tax slabs, and divides total tax by 12."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Professional Tax on salary in Pakistan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Professional Tax is a provincial levy deducted by employers in Punjab, Sindh, and ICT from salaried employees earning above specified monthly thresholds (typically PKR 100 to PKR 500 per month)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Super Tax levied on high salary income in Pakistan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, salaried individuals earning ultra-high annual salaries exceeding specified statutory thresholds are subject to progressive Super Tax under Section 4C."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are medical allowances and house rent allowances (HRA) tax-exempt?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Medical allowance is exempt from income tax up to 10% of basic pay, provided actual medical reimbursement is not claimed. House rent allowance (HRA) is fully taxable as part of gross salary."
       }
     }
   ]
@@ -43,74 +67,95 @@ const faqSchema = {
 ---
 
 <BlogLayout title={title} description={description} image={image} canonical={canonical} author={author} authorBio={authorBio} lastUpdated={lastUpdated} readTime={readTime}>
-  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
+            <p>
+              Calculating <strong>pakistan salary tax</strong> and understanding <strong>income tax on salary in pakistan</strong> is vital for all employed professionals. Employers deduct salary tax at source every month under <strong>Section 149</strong> of the <em>Income Tax Ordinance, 2001</em>.
+            </p>
+            <p>
+              Whether you want to know the <strong>minimum salary for income tax in pakistan</strong>, check the tax impact on a <strong>tax on 50000 salary in pakistan</strong>, or understand <strong>professional tax on salary in pakistan</strong>, this guide breaks down all FBR progressive salary slabs and payroll withholding rules.
+            </p>
 
-  <div class="min-h-screen bg-canvas dark:bg-canvas">
-    <main class="min-h-screen">
-      <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-        <nav aria-label="Breadcrumb" class="mb-6 text-sm">
-          <ol class="flex flex-wrap items-center gap-2">
-            <li class="flex items-center gap-2"><a href="/" class="text-link hover:underline dark:text-link">Home</a></li>
-            <li class="flex items-center gap-2"><span class="text-muted" aria-hidden="true">/</span><a href="/blogs" class="text-link hover:underline dark:text-link">Blogs</a></li>
-            <li class="flex items-center gap-2"><span class="text-muted" aria-hidden="true">/</span><span class="font-medium text-ink dark:text-on-primary" aria-current="page">Pakistan Salary Tax Guide</span></li>
-          </ol>
-        </nav>
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">1. FBR Current Salary Tax Slabs (2026)</h2>
+            <p>
+              An individual qualifies for salaried status if at least 75% of their total annual income comes from employment salary. The statutory FBR salary slabs apply as follows:
+            </p>
 
-        <article class="prose max-w-none">
-          <h1 class="text-3xl sm:text-4xl font-bold text-ink mb-4 dark:text-on-primary">Pakistan Salary Tax Guide: Tax on Salary for Salaried Individuals</h1>
-          <p class="text-lg text-body dark:text-muted">Last updated: August 2026 | Verified FBR Guidelines | 9 min read</p>
-
-          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80" alt="Salary tax calculation documents and payroll reports" class="mb-6 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
-
-          <!-- Early Calculator CTA -->
-          <div class="my-6 p-6 rounded-2xl border border-primary/30 bg-primary/5 dark:border-primary/20 dark:bg-primary/5 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>
-              <h3 class="text-xl font-bold text-ink dark:text-on-primary">Calculate Your Pakistan Salary Tax & Take-Home Pay</h3>
-              <p class="text-sm text-body dark:text-muted mt-1">Check your monthly tax deduction, exempt allowances, and net salary instantly.</p>
+            <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+              <table class="w-full text-left text-sm">
+                <thead class="bg-canvas-soft border-b border-hairline dark:bg-surface/80 dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+                  <tr>
+                    <th class="p-3">Annual Taxable Salary (PKR)</th>
+                    <th class="p-3">Monthly Equivalent (PKR)</th>
+                    <th class="p-3">FBR Salary Tax Slab Rate</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+                  <tr><td class="p-3 font-medium">Up to PKR 600,000</td><td class="p-3">Up to PKR 50,000 / mo</td><td class="p-3 font-bold text-primary dark:text-on-primary">0% (Tax-Free Threshold)</td></tr>
+                  <tr><td class="p-3 font-medium">PKR 600,001 – 1,200,000</td><td class="p-3">PKR 50,001 – 100,000 / mo</td><td class="p-3">5% of excess over PKR 600,000</td></tr>
+                  <tr><td class="p-3 font-medium">PKR 1,200,001 – 2,200,000</td><td class="p-3">PKR 100,001 – 183,333 / mo</td><td class="p-3">PKR 30,000 + 15% of excess over PKR 1.2M</td></tr>
+                  <tr><td class="p-3 font-medium">PKR 2,200,001 – 3,200,000</td><td class="p-3">PKR 183,334 – 266,667 / mo</td><td class="p-3">PKR 180,000 + 25% of excess over PKR 2.2M</td></tr>
+                  <tr><td class="p-3 font-medium">PKR 3,200,001 – 4,100,000</td><td class="p-3">PKR 266,668 – 341,667 / mo</td><td class="p-3">PKR 430,000 + 30% of excess over PKR 3.2M</td></tr>
+                  <tr><td class="p-3 font-medium">Above PKR 4,100,000</td><td class="p-3">Above PKR 341,667 / mo</td><td class="p-3 font-bold text-primary dark:text-on-primary">PKR 700,000 + 35% of excess over PKR 4.1M</td></tr>
+                </tbody>
+              </table>
             </div>
-            <a href="/countries/pakistan/income-tax/salary-tax-calculator" class="btn btn-primary text-sm font-semibold shrink-0 px-5 py-2.5">
-              Launch Pakistan Salary Tax Calculator →
-            </a>
-          </div>
 
-          <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
-            <p>Tax on salary in Pakistan is calculated using progressive FBR slabs and deducted monthly by your employer under <strong>Section 149</strong> of the <em>Income Tax Ordinance, 2001</em>. Employers handle the deduction, but understanding how salary tax is calculated is essential for verifying pay slips and optimizing deductions.</p>
+            <p>
+              Verify your net paycheck using our <a href="/countries/pakistan/income-tax/salary-tax-calculator" class="text-link hover:underline">Pakistan Salary Tax Calculator</a>.
+            </p>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">How Is Tax on Salary Calculated?</h2>
-            <p>Employers compute monthly salary tax using the following steps:</p>
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">2. Tax Calculation for PKR 50,000 vs PKR 100,000 Monthly Salary</h2>
+            <p>
+              Let's compare monthly paycheck deductions across common salary tiers:
+            </p>
+            <ul>
+              <li><strong>PKR 50,000 Monthly Salary (PKR 600,000 Annual)</strong>: Tax is <strong>PKR 0 per month</strong> because total annual salary does not exceed the PKR 600,000 tax-free limit.</li>
+              <li><strong>PKR 100,000 Monthly Salary (PKR 1,200,000 Annual)</strong>: Annual tax = 5% of (1,200,000 - 600,000) = PKR 30,000. Monthly tax deduction = <strong>PKR 2,500 per month</strong>.</li>
+              <li><strong>PKR 200,000 Monthly Salary (PKR 2,400,000 Annual)</strong>: Annual tax = PKR 30,000 + 15% of (2,400,000 - 1,200,000) = PKR 30,000 + PKR 180,000 = PKR 210,000. Monthly tax deduction = <strong>PKR 17,500 per month</strong>.</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">3. Exempt Salary Allowances & Deductions</h2>
+            <p>
+              Employers compute taxable salary after adjusting for statutory allowances under the Income Tax Ordinance:
+            </p>
             <ol class="list-decimal pl-6 space-y-2">
-              <li><strong>Project Annual Gross Salary:</strong> Estimate basic pay, allowances, bonuses, and perquisites.</li>
-              <li><strong>Subtract Exempt Allowances:</strong> Medical allowance (up to 10% of basic salary) and other statutory allowances are deducted.</li>
-              <li><strong>Deduct Contributions:</strong> EOBI, provident fund, and approved pension scheme contributions reduce taxable pay.</li>
-              <li><strong>Apply FBR Progressive Slabs:</strong> Apply slab rates to determine total annual tax.</li>
-              <li><strong>Divide by 12:</strong> Deduct equal monthly tax installments from your paycheck.</li>
+              <li><strong>Medical Allowance</strong>: Tax-exempt up to 10% of basic pay if actual medical reimbursement is not claimed.</li>
+              <li><strong>EOBI & Provident Fund Contributions</strong>: Employee contributions to recognized provident funds and EOBI reduce taxable pay.</li>
+              <li><strong>Zakat Deduction</strong>: Statutory Zakat deducted at source from bank accounts reduces total taxable income.</li>
             </ol>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Section 149 Withholding & Filer Status</h2>
-            <p>While monthly withholding satisfies payment requirements, filing your return annually via the <a href="https://iris.fbr.gov.pk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">FBR IRIS Portal</a> places you on the Active Taxpayer List (ATL) and qualifies you for filer status discounts. Learn more in our <a href="/blogs/pakistan-income-tax-guide" class="text-link hover:underline dark:text-link">Pakistan Income Tax Guide</a>.</p>
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">4. Provincial Professional Tax on Salary</h2>
+            <p>
+              In addition to federal income tax, provincial governments levy a nominal <strong>Professional Tax on salary</strong> deducted by employers:
+            </p>
+            <ul>
+              <li><strong>Punjab Professional Tax</strong>: Nominal monthly levy ranging from PKR 100 to PKR 500 based on salary slabs.</li>
+              <li><strong>Sindh Professional Tax</strong>: Deducted by employers under Sindh revenue rules for employees earning above PKR 15,000 per month.</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">5. Section 149 Payroll Compliance & Filer Benefits</h2>
+            <p>
+              Employers must deposit monthly withholding tax with the FBR by the 15th of the following month. However, employees must still file an annual income tax return via the <a href="https://iris.fbr.gov.pk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">FBR IRIS Portal</a> by <strong>September 30</strong> to secure Active Taxpayer List (ATL) status.
+            </p>
+            <p>
+              Read our <a href="/blogs/pakistan-tax-filing-guide" class="text-link hover:underline">Pakistan FBR Tax Filing Guide</a> or review the main <a href="/knowledge/pakistan-income-tax" class="text-link hover:underline">Pakistan Income Tax Knowledge Hub</a> for complete details.
+            </p>
 
             <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Frequently Asked Questions</h2>
           </div>
-          <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
-            <p class="font-medium text-ink dark:text-on-primary">3. What is the annual tax-free income limit for salaried individuals in Pakistan?</p>
-            <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
-              <li>A) PKR 500,000</li>
-              <li>B) PKR 550,000</li>
-              <li>C) PKR 600,000</li>
-              <li>D) PKR 650,000</li>
-            </ul>
+
+          <div class="mt-8 space-y-4">
+            {faqSchema.mainEntity.map(faq => (
+              <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+                <h3 class="text-lg font-semibold text-ink dark:text-on-primary">{faq.name}</h3>
+                <p class="mt-2 text-sm text-body dark:text-muted leading-relaxed">{faq.acceptedAnswer.text}</p>
+              </div>
+            ))}
           </div>
 
-          <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Further Reading</h2>
-          <ul class="list-disc pl-6 space-y-2 text-body dark:text-muted">
-            <li><a href="https://www.fbr.gov.pk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Federal Board of Revenue (FBR) – Official Website</a></li>
-            <li><a href="https://en.wikipedia.org/wiki/Taxation_in_Pakistan" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Taxation in Pakistan – Wikipedia</a></li>
-            <li><a href="https://iris.fbr.gov.pk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">FBR IRIS Portal – Salary Tax Filing</a></li>
-            <li><a href="https://www.fbr.gov.pk/forms-and-publications" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">FBR Forms and Publications Library</a></li>
-          </ul>
-
-        </article>
-      </div>
-    </main>
+          <div class="mt-12 p-6 rounded-2xl bg-canvas-soft border border-hairline dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="text-xl font-bold text-ink dark:text-on-primary">About the Author</h3>
+            <p class="mt-2 text-sm font-semibold text-primary dark:text-on-primary">{author}</p>
+            <p class="mt-1 text-sm text-body dark:text-muted">{authorBio}</p>
   </div>
 </BlogLayout>
