@@ -36,12 +36,15 @@ const guide = category?.guides.find(g => g.slug === Astro.params.guide);
 if (!country || !category || !guide) {
   return Astro.redirect("/countries");
 }
+
+const isThinContent = !guide.sections?.length && !guide.steps?.length && !guide.tips?.length;
 ---
 
 <CountryLayout
   title={`${guide.title} | ${country.name}`}
   description={guide.description}
   canonical={`https://finsiva.com/countries/${country.slug}/${category.slug}/${guide.slug}`}
+  robots={isThinContent ? "noindex, follow" : undefined}
   breadcrumbs={[
     { label: "Countries", href: "/countries" },
     { label: country.name, href: `/countries/${country.slug}` },
