@@ -32,8 +32,8 @@ This is why knowing your marginal rate helps with financial decisions — it tel
 
 ## Related Guides
 
-- [Marginal vs Effective Tax Rate](/knowledge/marginal-vs-effective-tax-rate)
-- [Tax Brackets Explained](/knowledge/tax-brackets-explained)
+- [Marginal vs Effective Tax Rate](/knowledge/marginal-vs-effective-tax-rate/)
+- [Tax Brackets Explained](/knowledge/tax-brackets-explained/)
 
 ## Related Calculators
 
@@ -41,5 +41,5 @@ This is why knowing your marginal rate helps with financial decisions — it tel
 
 ## See Also
 
-- [Effective Tax Rate](/knowledge/glossary/effective-tax-rate)
-- [Tax Bracket](/knowledge/glossary/tax-bracket)
+- [Effective Tax Rate](/knowledge/glossary/effective-tax-rate/)
+- [Tax Bracket](/knowledge/glossary/tax-bracket/)

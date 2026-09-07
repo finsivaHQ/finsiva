@@ -39,9 +39,9 @@ Moving into a higher bracket does NOT mean all your income is taxed at the highe
 
 ## Related Guides
 
-- [Tax Brackets Explained](/knowledge/tax-brackets-explained)
-- [Marginal vs Effective Tax Rate](/knowledge/marginal-vs-effective-tax-rate)
-- [Progressive Tax Explained](/knowledge/progressive-tax-explained)
+- [Tax Brackets Explained](/knowledge/tax-brackets-explained/)
+- [Marginal vs Effective Tax Rate](/knowledge/marginal-vs-effective-tax-rate/)
+- [Progressive Tax Explained](/knowledge/progressive-tax-explained/)
 
 ## Related Calculators
 
@@ -49,5 +49,5 @@ Moving into a higher bracket does NOT mean all your income is taxed at the highe
 
 ## See Also
 
-- [Marginal Tax Rate](/knowledge/glossary/marginal-tax-rate)
-- [Effective Tax Rate](/knowledge/glossary/effective-tax-rate)
+- [Marginal Tax Rate](/knowledge/glossary/marginal-tax-rate/)
+- [Effective Tax Rate](/knowledge/glossary/effective-tax-rate/)

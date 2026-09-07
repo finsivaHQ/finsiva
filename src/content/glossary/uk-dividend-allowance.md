@@ -18,4 +18,4 @@ Dividend income above the **Dividend Allowance** is taxed at specific dividend r
 - **Higher Rate Band:** 33.75%
 - **Additional Rate Band:** 39.35%
 
-Calculate salary and dividend income tax using our [UK Income Tax Calculator](/countries/united-kingdom/income-tax/income-tax-calculator).
+Calculate salary and dividend income tax using our [UK Income Tax Calculator](/countries/united-kingdom/income-tax/income-tax-calculator/).

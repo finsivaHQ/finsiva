@@ -22,4 +22,4 @@ The **PAYE System** ensures employment tax is collected incrementally throughout
 - **BR / D0 / D1:** Emergency or secondary tax codes applying tax at 20%, 40%, or 45% without allocating a personal allowance.
 - **S-prefix (e.g. S1257L):** Identifies a Scottish taxpayer subject to Scottish income tax rates.
 
-Calculate your exact PAYE deductions with our free [UK Income Tax Calculator](/countries/united-kingdom/income-tax/income-tax-calculator).
+Calculate your exact PAYE deductions with our free [UK Income Tax Calculator](/countries/united-kingdom/income-tax/income-tax-calculator/).

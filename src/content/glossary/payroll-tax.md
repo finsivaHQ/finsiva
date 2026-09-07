@@ -28,7 +28,7 @@ Payroll taxes differ from income taxes in that they are typically:
 
 ## Related Guides
 
-- [Payroll Tax Basics](/knowledge/payroll-tax-basics)
+- [Payroll Tax Basics](/knowledge/payroll-tax-basics/)
 
 ## Related Calculators
 
@@ -36,4 +36,4 @@ Payroll taxes differ from income taxes in that they are typically:
 
 ## See Also
 
-- [Withholding](/knowledge/glossary/withholding)
+- [Withholding](/knowledge/glossary/withholding/)

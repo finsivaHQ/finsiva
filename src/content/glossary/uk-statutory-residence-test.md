@@ -19,4 +19,4 @@ The **Statutory Residence Test (SRT)** comprises three sequential tests:
 2. **Automatic UK Tests:** Criteria where you are automatically UK resident (e.g. 183+ days in the UK or only home in the UK).
 3. **Sufficient Ties Test:** Evaluates UK ties (family, accommodation, work, 90-day tie) alongside days spent in the UK.
 
-Explore residency impacts using our [UK Income Tax Calculator](/countries/united-kingdom/income-tax/income-tax-calculator).
+Explore residency impacts using our [UK Income Tax Calculator](/countries/united-kingdom/income-tax/income-tax-calculator/).

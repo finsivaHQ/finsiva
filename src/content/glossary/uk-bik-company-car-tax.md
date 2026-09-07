@@ -26,9 +26,9 @@ The taxable benefit amount equals the car's official P11D price multiplied by th
 
 ## Related Calculators
 
-- [UK EV Tax Calculator](/countries/united-kingdom/vehicle-tax/ev-tax-calculator)
-- [UK National Insurance Calculator](/countries/united-kingdom/national-insurance/ni-calculator)
+- [UK EV Tax Calculator](/countries/united-kingdom/vehicle-tax/ev-tax-calculator/)
+- [UK National Insurance Calculator](/countries/united-kingdom/national-insurance/ni-calculator/)
 
 ## See Also
 
-- [UK Electric Vehicle Road Tax (VED)](/knowledge/glossary/uk-ev-road-tax)
+- [UK Electric Vehicle Road Tax (VED)](/knowledge/glossary/uk-ev-road-tax/)

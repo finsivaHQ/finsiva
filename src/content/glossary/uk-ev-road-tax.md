@@ -23,9 +23,9 @@ Prior to 1 April 2025, zero-emission electric vehicles were exempt from annual V
 
 ## Related Calculators
 
-- [UK EV Tax Calculator](/countries/united-kingdom/vehicle-tax/ev-tax-calculator)
-- [UK Income Tax Calculator](/countries/united-kingdom/income-tax/income-tax-calculator)
+- [UK EV Tax Calculator](/countries/united-kingdom/vehicle-tax/ev-tax-calculator/)
+- [UK Income Tax Calculator](/countries/united-kingdom/income-tax/income-tax-calculator/)
 
 ## See Also
 
-- [Benefit-in-Kind Electric Company Car Tax](/knowledge/glossary/uk-bik-company-car-tax)
+- [Benefit-in-Kind Electric Company Car Tax](/knowledge/glossary/uk-bik-company-car-tax/)

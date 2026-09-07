@@ -42,7 +42,7 @@ Based on where you actually live and maintain your center of economic interests.
 
 ## Related Guides
 
-- [Tax Residency Explained](/knowledge/tax-residency-explained)
+- [Tax Residency Explained](/knowledge/tax-residency-explained/)
 
 ## Related Calculators
 
@@ -50,4 +50,4 @@ Based on where you actually live and maintain your center of economic interests.
 
 ## See Also
 
-- [Tax Bracket](/knowledge/glossary/tax-bracket)
+- [Tax Bracket](/knowledge/glossary/tax-bracket/)

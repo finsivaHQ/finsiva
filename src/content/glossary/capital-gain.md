@@ -30,7 +30,7 @@ Capital gains arise when you sell an asset for more than your **cost basis** (th
 
 ## Related Guides
 
-- [Capital Gains Tax Basics](/knowledge/capital-gains-tax-basics)
+- [Capital Gains Tax Basics](/knowledge/capital-gains-tax-basics/)
 
 ## Related Calculators
 
@@ -38,4 +38,4 @@ Capital gains arise when you sell an asset for more than your **cost basis** (th
 
 ## See Also
 
-- [Tax Bracket](/knowledge/glossary/tax-bracket)
+- [Tax Bracket](/knowledge/glossary/tax-bracket/)

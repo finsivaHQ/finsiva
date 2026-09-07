@@ -35,8 +35,8 @@ For individuals, gross income typically includes:
 
 ## Related Guides
 
-- [What Is Income Tax?](/knowledge/what-is-income-tax)
-- [Marginal vs Effective Tax Rate](/knowledge/marginal-vs-effective-tax-rate)
+- [What Is Income Tax?](/knowledge/what-is-income-tax/)
+- [Marginal vs Effective Tax Rate](/knowledge/marginal-vs-effective-tax-rate/)
 
 ## Related Calculators
 
@@ -44,5 +44,5 @@ For individuals, gross income typically includes:
 
 ## See Also
 
-- [AGI](/knowledge/glossary/agi)
-- [Taxable Income](/knowledge/glossary/taxable-income)
+- [AGI](/knowledge/glossary/agi/)
+- [Taxable Income](/knowledge/glossary/taxable-income/)

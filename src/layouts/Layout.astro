@@ -46,8 +46,8 @@ const initialLang = detectLanguage();
 setLang(initialLang);
 const initialDir = initialLang === 'ar' ? 'rtl' : 'auto';
 const rawPath = Astro.url.pathname;
-const cleanPath = rawPath === '/' ? '' : rawPath.replace(/\/+$/, '');
-const pageUrl = canonical ? canonical.replace(/\/+$/, '') : `https://finsiva.com${cleanPath}`;
+const cleanPath = rawPath.replace(/\/+$/, '') || '';
+const pageUrl = canonical ? (canonical.replace(/\/+$/, '') + '/') : `https://finsiva.com${cleanPath}/`;
 const ogImageUrl = image.startsWith('http') ? image : `https://finsiva.com${image.startsWith('/') ? '' : '/'}${image}`;
 
 const organizationSchema = {
@@ -248,51 +248,51 @@ const financialProductSchema = {
           <div class="space-y-4">
             <h3 class="text-sm font-semibold uppercase tracking-wider text-ink dark:text-on-primary">Top Calculators</h3>
             <ul class="space-y-2">
-              <li><a href="/countries/united-states/income-tax/effective-tax-rate" class="text-sm text-link hover:underline dark:text-link">US Income Tax Calculator</a></li>
-              <li><a href="/countries/hong-kong/salaries-tax/salaries-tax-calculator" class="text-sm text-link hover:underline dark:text-link">HK Salaries Tax Calculator</a></li>
-              <li><a href="/countries/singapore/income-tax/income-tax-calculator" class="text-sm text-link hover:underline dark:text-link">Singapore Tax Calculator</a></li>
-              <li><a href="/countries/india/income-tax/income-tax-calculator" class="text-sm text-link hover:underline dark:text-link">India Income Tax Calculator</a></li>
-              <li><a href="/countries/united-kingdom/national-insurance/ni-calculator" class="text-sm text-link hover:underline dark:text-link">UK Payroll & NI Calculator</a></li>
+              <li><a href="/countries/united-states/income-tax/effective-tax-rate/" class="text-sm text-link hover:underline dark:text-link">US Income Tax Calculator</a></li>
+              <li><a href="/countries/hong-kong/salaries-tax/salaries-tax-calculator/" class="text-sm text-link hover:underline dark:text-link">HK Salaries Tax Calculator</a></li>
+              <li><a href="/countries/singapore/income-tax/income-tax-calculator/" class="text-sm text-link hover:underline dark:text-link">Singapore Tax Calculator</a></li>
+              <li><a href="/countries/india/income-tax/income-tax-calculator/" class="text-sm text-link hover:underline dark:text-link">India Income Tax Calculator</a></li>
+              <li><a href="/countries/united-kingdom/national-insurance/ni-calculator/" class="text-sm text-link hover:underline dark:text-link">UK Payroll & NI Calculator</a></li>
             </ul>
           </div>
           <div class="space-y-4">
             <h3 class="text-sm font-semibold uppercase tracking-wider text-ink dark:text-on-primary">Expat Compare</h3>
             <ul class="space-y-2">
-              <li><a href="/compare" class="text-sm text-link hover:underline dark:text-link">Tax Comparison Hub</a></li>
-              <li><a href="/compare/hong-kong-vs-singapore" class="text-sm text-link hover:underline dark:text-link">Hong Kong vs Singapore</a></li>
-              <li><a href="/compare/united-states-vs-united-kingdom" class="text-sm text-link hover:underline dark:text-link">US vs UK Expat Tax</a></li>
-              <li><a href="/compare/india-vs-singapore-nri-tax" class="text-sm text-link hover:underline dark:text-link">India vs Singapore NRI Tax</a></li>
-              <li><a href="/countries" class="text-sm text-link hover:underline dark:text-link">All Country Tax Portals</a></li>
+              <li><a href="/compare/" class="text-sm text-link hover:underline dark:text-link">Tax Comparison Hub</a></li>
+              <li><a href="/compare/hong-kong-vs-singapore/" class="text-sm text-link hover:underline dark:text-link">Hong Kong vs Singapore</a></li>
+              <li><a href="/compare/united-states-vs-united-kingdom/" class="text-sm text-link hover:underline dark:text-link">US vs UK Expat Tax</a></li>
+              <li><a href="/compare/india-vs-singapore-nri-tax/" class="text-sm text-link hover:underline dark:text-link">India vs Singapore NRI Tax</a></li>
+              <li><a href="/countries/" class="text-sm text-link hover:underline dark:text-link">All Country Tax Portals</a></li>
             </ul>
           </div>
           <div class="space-y-4">
             <h3 class="text-sm font-semibold uppercase tracking-wider text-ink dark:text-on-primary">Knowledge Categories</h3>
             <ul class="space-y-2">
-              <li><a href="/knowledge/category/income-tax" class="text-sm text-link hover:underline dark:text-link">Income Tax Basics</a></li>
-              <li><a href="/knowledge/category/tax-planning" class="text-sm text-link hover:underline dark:text-link">Tax Planning Guides</a></li>
-              <li><a href="/knowledge/category/gst-vat" class="text-sm text-link hover:underline dark:text-link">GST & VAT Guides</a></li>
-              <li><a href="/knowledge/category/capital-gains" class="text-sm text-link hover:underline dark:text-link">Capital Gains Tax</a></li>
-              <li><a href="/knowledge/category/payroll-taxes" class="text-sm text-link hover:underline dark:text-link">Payroll & Social Tax</a></li>
+              <li><a href="/knowledge/category/income-tax/" class="text-sm text-link hover:underline dark:text-link">Income Tax Basics</a></li>
+              <li><a href="/knowledge/category/tax-planning/" class="text-sm text-link hover:underline dark:text-link">Tax Planning Guides</a></li>
+              <li><a href="/knowledge/category/gst-vat/" class="text-sm text-link hover:underline dark:text-link">GST & VAT Guides</a></li>
+              <li><a href="/knowledge/category/capital-gains/" class="text-sm text-link hover:underline dark:text-link">Capital Gains Tax</a></li>
+              <li><a href="/knowledge/category/payroll-taxes/" class="text-sm text-link hover:underline dark:text-link">Payroll & Social Tax</a></li>
             </ul>
           </div>
           <div class="space-y-4">
             <h3 class="text-sm font-semibold uppercase tracking-wider text-ink dark:text-on-primary">Popular Hubs</h3>
             <ul class="space-y-2">
-              <li><a href="/countries/india" class="text-sm text-link hover:underline dark:text-link">India Tax Portal</a></li>
-              <li><a href="/countries/united-states" class="text-sm text-link hover:underline dark:text-link">United States Tax Portal</a></li>
-              <li><a href="/countries/united-kingdom" class="text-sm text-link hover:underline dark:text-link">United Kingdom Tax Portal</a></li>
-              <li><a href="/countries/hong-kong" class="text-sm text-link hover:underline dark:text-link">Hong Kong Tax Portal</a></li>
-              <li><a href="/countries/singapore" class="text-sm text-link hover:underline dark:text-link">Singapore Tax Portal</a></li>
+              <li><a href="/countries/india/" class="text-sm text-link hover:underline dark:text-link">India Tax Portal</a></li>
+              <li><a href="/countries/united-states/" class="text-sm text-link hover:underline dark:text-link">United States Tax Portal</a></li>
+              <li><a href="/countries/united-kingdom/" class="text-sm text-link hover:underline dark:text-link">United Kingdom Tax Portal</a></li>
+              <li><a href="/countries/hong-kong/" class="text-sm text-link hover:underline dark:text-link">Hong Kong Tax Portal</a></li>
+              <li><a href="/countries/singapore/" class="text-sm text-link hover:underline dark:text-link">Singapore Tax Portal</a></li>
             </ul>
           </div>
           <div class="space-y-4">
             <h3 class="text-sm font-semibold uppercase tracking-wider text-ink dark:text-on-primary">Company & Policy</h3>
             <ul class="space-y-2">
-              <li><a href="/about" class="text-sm text-link hover:underline dark:text-link">About Us</a></li>
-              <li><a href="/contact" class="text-sm text-link hover:underline dark:text-link">Contact Us</a></li>
-              <li><a href="/editorial-policy" class="text-sm text-link hover:underline dark:text-link">Editorial Policy</a></li>
-              <li><a href="/privacy" class="text-sm text-link hover:underline dark:text-link">Privacy Policy</a></li>
-              <li><a href="/terms" class="text-sm text-link hover:underline dark:text-link">Terms of Service</a></li>
+              <li><a href="/about/" class="text-sm text-link hover:underline dark:text-link">About Us</a></li>
+              <li><a href="/contact/" class="text-sm text-link hover:underline dark:text-link">Contact Us</a></li>
+              <li><a href="/editorial-policy/" class="text-sm text-link hover:underline dark:text-link">Editorial Policy</a></li>
+              <li><a href="/privacy/" class="text-sm text-link hover:underline dark:text-link">Privacy Policy</a></li>
+              <li><a href="/terms/" class="text-sm text-link hover:underline dark:text-link">Terms of Service</a></li>
             </ul>
           </div>
         </div>

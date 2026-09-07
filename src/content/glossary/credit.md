@@ -43,8 +43,8 @@ Credits are dollar-for-dollar reductions of your tax bill and are generally more
 
 ## Related Guides
 
-- [Tax Credits Explained](/knowledge/tax-credits-explained)
-- [Tax Deductions Explained](/knowledge/tax-deductions-explained)
+- [Tax Credits Explained](/knowledge/tax-credits-explained/)
+- [Tax Deductions Explained](/knowledge/tax-deductions-explained/)
 
 ## Related Calculators
 
@@ -52,4 +52,4 @@ Credits are dollar-for-dollar reductions of your tax bill and are generally more
 
 ## See Also
 
-- [Deduction](/knowledge/glossary/deduction)
+- [Deduction](/knowledge/glossary/deduction/)

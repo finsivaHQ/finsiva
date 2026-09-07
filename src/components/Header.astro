@@ -27,7 +27,7 @@ const is404 = currentPath === "/404";
         <nav class="hidden md:flex items-center gap-1" aria-label="Main navigation">
           <a href="/" class={`nav-link rounded-pill px-3 py-2 text-sm font-medium transition ${isHome ? "nav-link-active" : "text-ink dark:text-on-primary"}`} aria-current={isHome ? "page" : undefined}><span data-i18n="common.home">Home</span></a>
           <div class="relative group">
-            <a href="/countries" id="country-picker-btn" class={`nav-link rounded-pill px-3 py-2 text-sm font-medium transition inline-flex items-center gap-1 ${isCountries ? "nav-link-active" : "text-ink dark:text-on-primary"}`} aria-current={isCountries ? "page" : undefined} aria-expanded="false" aria-haspopup="true">
+            <a href="/countries/" id="country-picker-btn" class={`nav-link rounded-pill px-3 py-2 text-sm font-medium transition inline-flex items-center gap-1 ${isCountries ? "nav-link-active" : "text-ink dark:text-on-primary"}`} aria-current={isCountries ? "page" : undefined} aria-expanded="false" aria-haspopup="true">
               <span data-i18n="common.countries">Countries</span>
               <svg class="h-3 w-3 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </a>
@@ -36,56 +36,56 @@ const is404 = currentPath === "/404";
             <div id="country-picker-menu" class="hidden group-hover:block absolute left-0 z-50 mt-1 w-64 origin-top-left rounded-xl border border-hairline bg-canvas/95 backdrop-blur-md p-2 shadow-xl dark:border-overlay-lighter dark:bg-surface/95 transition-all duration-200">
               <div class="px-2 py-1 text-[11px] font-bold uppercase tracking-wider text-muted dark:text-muted mb-1">Quick Select Country</div>
               <div class="grid grid-cols-1 gap-0.5 max-h-72 overflow-y-auto">
-                <a href="/countries/hong-kong" class="flex items-center justify-between px-2.5 py-1.5 rounded-lg text-sm text-ink hover:bg-canvas-soft dark:text-on-primary dark:hover:bg-overlay-light transition-colors">
+                <a href="/countries/hong-kong/" class="flex items-center justify-between px-2.5 py-1.5 rounded-lg text-sm text-ink hover:bg-canvas-soft dark:text-on-primary dark:hover:bg-overlay-light transition-colors">
                   <span class="flex items-center gap-2"><span>🇭🇰</span> <span class="font-medium">Hong Kong</span></span>
                   <span class="text-xs text-muted">Salaries, Tax</span>
                 </a>
-                <a href="/countries/united-states" class="flex items-center justify-between px-2.5 py-1.5 rounded-lg text-sm text-ink hover:bg-canvas-soft dark:text-on-primary dark:hover:bg-overlay-light transition-colors">
+                <a href="/countries/united-states/" class="flex items-center justify-between px-2.5 py-1.5 rounded-lg text-sm text-ink hover:bg-canvas-soft dark:text-on-primary dark:hover:bg-overlay-light transition-colors">
                   <span class="flex items-center gap-2"><span>🇺🇸</span> <span class="font-medium">United States</span></span>
                   <span class="text-xs text-muted">Federal, State</span>
                 </a>
-                <a href="/countries/india" class="flex items-center justify-between px-2.5 py-1.5 rounded-lg text-sm text-ink hover:bg-canvas-soft dark:text-on-primary dark:hover:bg-overlay-light transition-colors">
+                <a href="/countries/india/" class="flex items-center justify-between px-2.5 py-1.5 rounded-lg text-sm text-ink hover:bg-canvas-soft dark:text-on-primary dark:hover:bg-overlay-light transition-colors">
                   <span class="flex items-center gap-2"><span>🇮🇳</span> <span class="font-medium">India</span></span>
                   <span class="text-xs text-muted">GST, Income</span>
                 </a>
-                <a href="/countries/singapore" class="flex items-center justify-between px-2.5 py-1.5 rounded-lg text-sm text-ink hover:bg-canvas-soft dark:text-on-primary dark:hover:bg-overlay-light transition-colors">
+                <a href="/countries/singapore/" class="flex items-center justify-between px-2.5 py-1.5 rounded-lg text-sm text-ink hover:bg-canvas-soft dark:text-on-primary dark:hover:bg-overlay-light transition-colors">
                   <span class="flex items-center gap-2"><span>🇸🇬</span> <span class="font-medium">Singapore</span></span>
                   <span class="text-xs text-muted">Income, GST</span>
                 </a>
-                <a href="/countries/united-kingdom" class="flex items-center justify-between px-2.5 py-1.5 rounded-lg text-sm text-ink hover:bg-canvas-soft dark:text-on-primary dark:hover:bg-overlay-light transition-colors">
+                <a href="/countries/united-kingdom/" class="flex items-center justify-between px-2.5 py-1.5 rounded-lg text-sm text-ink hover:bg-canvas-soft dark:text-on-primary dark:hover:bg-overlay-light transition-colors">
                   <span class="flex items-center gap-2"><span>🇬🇧</span> <span class="font-medium">United Kingdom</span></span>
                   <span class="text-xs text-muted">PAYE, VAT</span>
                 </a>
-                <a href="/countries/malaysia" class="flex items-center justify-between px-2.5 py-1.5 rounded-lg text-sm text-ink hover:bg-canvas-soft dark:text-on-primary dark:hover:bg-overlay-light transition-colors">
+                <a href="/countries/malaysia/" class="flex items-center justify-between px-2.5 py-1.5 rounded-lg text-sm text-ink hover:bg-canvas-soft dark:text-on-primary dark:hover:bg-overlay-light transition-colors">
                   <span class="flex items-center gap-2"><span>🇲🇾</span> <span class="font-medium">Malaysia</span></span>
                   <span class="text-xs text-muted">Income, SST</span>
                 </a>
-                <a href="/countries/pakistan" class="flex items-center justify-between px-2.5 py-1.5 rounded-lg text-sm text-ink hover:bg-canvas-soft dark:text-on-primary dark:hover:bg-overlay-light transition-colors">
+                <a href="/countries/pakistan/" class="flex items-center justify-between px-2.5 py-1.5 rounded-lg text-sm text-ink hover:bg-canvas-soft dark:text-on-primary dark:hover:bg-overlay-light transition-colors">
                   <span class="flex items-center gap-2"><span>🇵🇰</span> <span class="font-medium">Pakistan</span></span>
                   <span class="text-xs text-muted">FBR, Sales</span>
                 </a>
-                <a href="/countries/philippines" class="flex items-center justify-between px-2.5 py-1.5 rounded-lg text-sm text-ink hover:bg-canvas-soft dark:text-on-primary dark:hover:bg-overlay-light transition-colors">
+                <a href="/countries/philippines/" class="flex items-center justify-between px-2.5 py-1.5 rounded-lg text-sm text-ink hover:bg-canvas-soft dark:text-on-primary dark:hover:bg-overlay-light transition-colors">
                   <span class="flex items-center gap-2"><span>🇵🇭</span> <span class="font-medium">Philippines</span></span>
                   <span class="text-xs text-muted">BIR, VAT</span>
                 </a>
-                <a href="/countries/indonesia" class="flex items-center justify-between px-2.5 py-1.5 rounded-lg text-sm text-ink hover:bg-canvas-soft dark:text-on-primary dark:hover:bg-overlay-light transition-colors">
+                <a href="/countries/indonesia/" class="flex items-center justify-between px-2.5 py-1.5 rounded-lg text-sm text-ink hover:bg-canvas-soft dark:text-on-primary dark:hover:bg-overlay-light transition-colors">
                   <span class="flex items-center gap-2"><span>🇮🇩</span> <span class="font-medium">Indonesia</span></span>
                   <span class="text-xs text-muted">PPh, VAT</span>
                 </a>
-                <a href="/countries/new-zealand" class="flex items-center justify-between px-2.5 py-1.5 rounded-lg text-sm text-ink hover:bg-canvas-soft dark:text-on-primary dark:hover:bg-overlay-light transition-colors">
+                <a href="/countries/new-zealand/" class="flex items-center justify-between px-2.5 py-1.5 rounded-lg text-sm text-ink hover:bg-canvas-soft dark:text-on-primary dark:hover:bg-overlay-light transition-colors">
                   <span class="flex items-center gap-2"><span>🇳🇿</span> <span class="font-medium">New Zealand</span></span>
                   <span class="text-xs text-muted">PAYE, GST</span>
                 </a>
               </div>
               <div class="mt-1 pt-1 border-t border-hairline dark:border-overlay-light text-center">
-                <a href="/countries" class="block py-1 text-xs font-semibold text-primary hover:underline">View All 10+ Countries →</a>
+                <a href="/countries/" class="block py-1 text-xs font-semibold text-primary hover:underline">View All 10+ Countries →</a>
               </div>
             </div>
           </div>
-          <a href="/blogs" class={`nav-link rounded-pill px-3 py-2 text-sm font-medium transition ${isBlog ? "nav-link-active" : "text-ink dark:text-on-primary"}`} aria-current={isBlog ? "page" : undefined}><span data-i18n="common.guides">Guides</span></a>
-          <a href="/compare" class="nav-link rounded-pill px-3 py-2 text-sm font-medium transition text-ink dark:text-on-primary"><span>Compare Tax</span></a>
-          <a href="/knowledge" class={`nav-link rounded-pill px-3 py-2 text-sm font-medium transition ${isKnowledge ? "nav-link-active" : "text-ink dark:text-on-primary"}`} aria-current={isKnowledge ? "page" : undefined}><span data-i18n="common.knowledge_center">Knowledge Center</span></a>
-          <a href="/about" class={`nav-link rounded-pill px-3 py-2 text-sm font-medium transition ${isAbout ? "nav-link-active" : "text-ink dark:text-on-primary"}`} aria-current={isAbout ? "page" : undefined}><span data-i18n="common.about_us">About Us</span></a>
+          <a href="/blogs/" class={`nav-link rounded-pill px-3 py-2 text-sm font-medium transition ${isBlog ? "nav-link-active" : "text-ink dark:text-on-primary"}`} aria-current={isBlog ? "page" : undefined}><span data-i18n="common.guides">Guides</span></a>
+          <a href="/compare/" class="nav-link rounded-pill px-3 py-2 text-sm font-medium transition text-ink dark:text-on-primary"><span>Compare Tax</span></a>
+          <a href="/knowledge/" class={`nav-link rounded-pill px-3 py-2 text-sm font-medium transition ${isKnowledge ? "nav-link-active" : "text-ink dark:text-on-primary"}`} aria-current={isKnowledge ? "page" : undefined}><span data-i18n="common.knowledge_center">Knowledge Center</span></a>
+          <a href="/about/" class={`nav-link rounded-pill px-3 py-2 text-sm font-medium transition ${isAbout ? "nav-link-active" : "text-ink dark:text-on-primary"}`} aria-current={isAbout ? "page" : undefined}><span data-i18n="common.about_us">About Us</span></a>
         </nav>
       </div>
 
@@ -139,11 +139,11 @@ const is404 = currentPath === "/404";
   <div id="mobile-menu" class="md:hidden overflow-hidden transition-all duration-300 ease-in-out" style="max-height:0;opacity:0;" role="navigation" aria-label="Mobile navigation">
     <div class="mx-auto max-w-7xl px-4 py-3 space-y-1">
       <a href="/" class="mobile-nav-link block rounded-pill px-4 py-3 text-sm font-medium text-ink dark:text-on-primary transition-colors"><span data-i18n="common.home">Home</span></a>
-      <a href="/countries" class="mobile-nav-link block rounded-pill px-4 py-3 text-sm font-medium text-ink dark:text-on-primary transition-colors"><span data-i18n="common.countries">Countries</span></a>
-      <a href="/blogs" class="mobile-nav-link block rounded-pill px-4 py-3 text-sm font-medium text-ink dark:text-on-primary transition-colors"><span data-i18n="common.guides">Guides</span></a>
-      <a href="/knowledge" class="mobile-nav-link block rounded-pill px-4 py-3 text-sm font-medium text-ink dark:text-on-primary transition-colors"><span data-i18n="common.knowledge_center">Knowledge Center</span></a>
-      <a href="/about" class="mobile-nav-link block rounded-pill px-4 py-3 text-sm font-medium text-ink dark:text-on-primary transition-colors"><span data-i18n="common.about_us">About Us</span></a>
-      <a href="/contact" class="mobile-nav-link block rounded-pill px-4 py-3 text-sm font-medium text-ink dark:text-on-primary transition-colors"><span data-i18n="common.contact">Contact</span></a>
+      <a href="/countries/" class="mobile-nav-link block rounded-pill px-4 py-3 text-sm font-medium text-ink dark:text-on-primary transition-colors"><span data-i18n="common.countries">Countries</span></a>
+      <a href="/blogs/" class="mobile-nav-link block rounded-pill px-4 py-3 text-sm font-medium text-ink dark:text-on-primary transition-colors"><span data-i18n="common.guides">Guides</span></a>
+      <a href="/knowledge/" class="mobile-nav-link block rounded-pill px-4 py-3 text-sm font-medium text-ink dark:text-on-primary transition-colors"><span data-i18n="common.knowledge_center">Knowledge Center</span></a>
+      <a href="/about/" class="mobile-nav-link block rounded-pill px-4 py-3 text-sm font-medium text-ink dark:text-on-primary transition-colors"><span data-i18n="common.about_us">About Us</span></a>
+      <a href="/contact/" class="mobile-nav-link block rounded-pill px-4 py-3 text-sm font-medium text-ink dark:text-on-primary transition-colors"><span data-i18n="common.contact">Contact</span></a>
     </div>
   </div>
 </header>

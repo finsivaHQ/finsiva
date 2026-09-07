@@ -45,8 +45,8 @@ The deduction can be either the **standard deduction** (a flat amount set by law
 
 ## Related Guides
 
-- [Tax Deductions Explained](/knowledge/tax-deductions-explained)
-- [What Is Income Tax?](/knowledge/what-is-income-tax)
+- [Tax Deductions Explained](/knowledge/tax-deductions-explained/)
+- [What Is Income Tax?](/knowledge/what-is-income-tax/)
 
 ## Related Calculators
 
@@ -55,5 +55,5 @@ The deduction can be either the **standard deduction** (a flat amount set by law
 
 ## See Also
 
-- [Gross Income](/knowledge/glossary/gross-income)
-- [Net Income](/knowledge/glossary/net-income)
+- [Gross Income](/knowledge/glossary/gross-income/)
+- [Net Income](/knowledge/glossary/net-income/)

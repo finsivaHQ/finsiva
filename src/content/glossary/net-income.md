@@ -31,8 +31,8 @@ For tax calculation purposes, net income typically refers to taxable income afte
 
 ## Related Guides
 
-- [What Is Income Tax?](/knowledge/what-is-income-tax)
-- [Progressive Tax Explained](/knowledge/progressive-tax-explained)
+- [What Is Income Tax?](/knowledge/what-is-income-tax/)
+- [Progressive Tax Explained](/knowledge/progressive-tax-explained/)
 
 ## Related Calculators
 
@@ -40,5 +40,5 @@ For tax calculation purposes, net income typically refers to taxable income afte
 
 ## See Also
 
-- [Gross Income](/knowledge/glossary/gross-income)
-- [Taxable Income](/knowledge/glossary/taxable-income)
+- [Gross Income](/knowledge/glossary/gross-income/)
+- [Taxable Income](/knowledge/glossary/taxable-income/)

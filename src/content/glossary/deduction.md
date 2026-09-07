@@ -38,7 +38,7 @@ Deductions work by lowering the amount of income that is subject to tax. The val
 
 ## Related Guides
 
-- [Tax Deductions Explained](/knowledge/tax-deductions-explained)
+- [Tax Deductions Explained](/knowledge/tax-deductions-explained/)
 
 ## Related Calculators
 
@@ -46,4 +46,4 @@ Deductions work by lowering the amount of income that is subject to tax. The val
 
 ## See Also
 
-- [Credit](/knowledge/glossary/credit)
+- [Credit](/knowledge/glossary/credit/)

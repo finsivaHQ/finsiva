@@ -40,6 +40,28 @@ if (!country || !category || !guide) {
 }
 
 const isThinContent = !guide.sections?.length && !guide.steps?.length && !guide.tips?.length;
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": `${guide.title} | ${country.name}`,
+  "description": guide.description,
+  "image": `https://finsiva.com${guide.image}`,
+  "author": {
+    "@type": "Organization",
+    "name": "Finsiva Research"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Finsiva",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://finsiva.com/logo.png"
+    }
+  },
+  "datePublished": "2024-01-01T08:00:00+08:00",
+  "dateModified": new Date().toISOString()
+};
 ---
 
 <CountryLayout
@@ -47,6 +69,7 @@ const isThinContent = !guide.sections?.length && !guide.steps?.length && !guide.
   description={guide.description}
   canonical={`https://finsiva.com/countries/${country.slug}/${category.slug}/${guide.slug}`}
   robots={isThinContent ? "noindex, follow" : undefined}
+  schema={articleSchema}
   breadcrumbs={[
     { label: "Countries", href: "/countries" },
     { label: country.name, href: `/countries/${country.slug}` },
@@ -210,7 +233,7 @@ const isThinContent = !guide.sections?.length && !guide.steps?.length && !guide.
 
     <div class="mt-8 rounded-xl border border-hairline bg-canvas p-8 dark:border-overlay-lighter dark:bg-surface">
       <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">Was this helpful?</h2>
-      <p class="text-body dark:text-muted">We continuously improve our guides based on user feedback. If you found this guide useful, explore our calculators for instant estimates, or visit our <a href="/knowledge" class="text-link hover:underline dark:text-link">Knowledge Center</a> for more tax education.</p>
+      <p class="text-body dark:text-muted">We continuously improve our guides based on user feedback. If you found this guide useful, explore our calculators for instant estimates, or visit our <a href="/knowledge/" class="text-link hover:underline dark:text-link">Knowledge Center</a> for more tax education.</p>
     </div>
   </div>
 </CountryLayout>

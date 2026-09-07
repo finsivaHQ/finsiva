@@ -34,8 +34,8 @@ AGI = Gross Income − Above-the-Line Deductions
 
 ## Related Guides
 
-- [What Is Income Tax?](/knowledge/what-is-income-tax)
-- [Tax Deductions Explained](/knowledge/tax-deductions-explained)
+- [What Is Income Tax?](/knowledge/what-is-income-tax/)
+- [Tax Deductions Explained](/knowledge/tax-deductions-explained/)
 
 ## Related Calculators
 
@@ -43,5 +43,5 @@ AGI = Gross Income − Above-the-Line Deductions
 
 ## See Also
 
-- [Gross Income](/knowledge/glossary/gross-income)
-- [Taxable Income](/knowledge/glossary/taxable-income)
+- [Gross Income](/knowledge/glossary/gross-income/)
+- [Taxable Income](/knowledge/glossary/taxable-income/)

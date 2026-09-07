@@ -30,7 +30,7 @@ Withholding ensures that taxpayers pay their taxes throughout the year rather th
 
 ## Related Guides
 
-- [What Is Income Tax?](/knowledge/what-is-income-tax)
+- [What Is Income Tax?](/knowledge/what-is-income-tax/)
 
 ## Related Calculators
 
@@ -39,4 +39,4 @@ Withholding ensures that taxpayers pay their taxes throughout the year rather th
 
 ## See Also
 
-- [Payroll Tax](/knowledge/glossary/payroll-tax)
+- [Payroll Tax](/knowledge/glossary/payroll-tax/)

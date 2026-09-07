@@ -23,4 +23,4 @@ The **UK Personal Allowance** is set annually by HM Revenue & Customs (HMRC).
 - **Effective Marginal Tax Rate:** Between £100,000 and £125,140, loss of the Personal Allowance combined with 40% Higher Rate tax creates an effective 60% marginal tax rate.
 - **Marriage Allowance:** Spouses and civil partners can transfer up to £1,260 of unused Personal Allowance to lower their combined tax bill if one partner earns below £12,570.
 
-Estimate your net income after Personal Allowance using our free [UK Income Tax Calculator](/countries/united-kingdom/income-tax/income-tax-calculator).
+Estimate your net income after Personal Allowance using our free [UK Income Tax Calculator](/countries/united-kingdom/income-tax/income-tax-calculator/).

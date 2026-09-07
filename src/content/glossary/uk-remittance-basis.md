@@ -15,4 +15,4 @@ relatedGlossary:
 
 Opting for the **Remittance Basis** requires forfeiting the UK Personal Allowance and Annual Exempt Amount for Capital Gains Tax, unless foreign unremitted income is under £2,000.
 
-Check global tax liabilities with our [UK Income Tax Calculator](/countries/united-kingdom/income-tax/income-tax-calculator).
+Check global tax liabilities with our [UK Income Tax Calculator](/countries/united-kingdom/income-tax/income-tax-calculator/).

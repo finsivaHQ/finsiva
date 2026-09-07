@@ -20,4 +20,4 @@ relatedGlossary:
 - Taxpayers may be pushed into higher tax brackets because gross rental income inflates adjusted net income.
 - A 20% basic rate tax reduction is applied to finance costs at the end of the tax calculation.
 
-Calculate landlord income tax using our free [UK Income Tax Calculator](/countries/united-kingdom/income-tax/income-tax-calculator).
+Calculate landlord income tax using our free [UK Income Tax Calculator](/countries/united-kingdom/income-tax/income-tax-calculator/).

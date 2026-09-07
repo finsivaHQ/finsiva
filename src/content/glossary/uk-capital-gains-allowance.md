@@ -20,4 +20,4 @@ The **Capital Gains Tax Allowance** applies per individual tax year and cannot b
 - **Higher & Additional Rate Taxpayers:** 20% on stocks/shares; 24% on residential property gains.
 - **Spouse Transfer:** Capital assets transferred between married couples or civil partners occur on a no-gain/no-loss basis, effectively doubling the household allowance.
 
-Review your asset gains alongside income tax bands using our [UK Income Tax Calculator](/countries/united-kingdom/income-tax/income-tax-calculator).
+Review your asset gains alongside income tax bands using our [UK Income Tax Calculator](/countries/united-kingdom/income-tax/income-tax-calculator/).

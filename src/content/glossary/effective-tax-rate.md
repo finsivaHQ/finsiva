@@ -39,8 +39,8 @@ Effective Tax Rate = (Total Tax ÷ Total Taxable Income) × 100
 
 ## Related Guides
 
-- [Marginal vs Effective Tax Rate](/knowledge/marginal-vs-effective-tax-rate)
-- [Progressive Tax Explained](/knowledge/progressive-tax-explained)
+- [Marginal vs Effective Tax Rate](/knowledge/marginal-vs-effective-tax-rate/)
+- [Progressive Tax Explained](/knowledge/progressive-tax-explained/)
 
 ## Related Calculators
 
@@ -48,5 +48,5 @@ Effective Tax Rate = (Total Tax ÷ Total Taxable Income) × 100
 
 ## See Also
 
-- [Marginal Tax Rate](/knowledge/glossary/marginal-tax-rate)
-- [Tax Bracket](/knowledge/glossary/tax-bracket)
+- [Marginal Tax Rate](/knowledge/glossary/marginal-tax-rate/)
+- [Tax Bracket](/knowledge/glossary/tax-bracket/)

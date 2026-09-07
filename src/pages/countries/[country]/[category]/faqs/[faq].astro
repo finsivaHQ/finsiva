@@ -106,7 +106,7 @@ if (!country || !category || !faq) {
 
     <section class="mt-8 rounded-xl border border-hairline bg-canvas-soft p-8 dark:border-overlay-light dark:bg-surface" aria-labelledby="faq-help">
       <h2 id="faq-help" class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">Need More Help?</h2>
-      <p class="text-body leading-relaxed dark:text-muted">If you could not find the answer you were looking for, we have additional resources available. Browse our <a href={`/countries/${country.slug}/${category.slug}`} class="text-link hover:underline dark:text-link">{category.name} guides</a> for detailed walkthroughs, or use our <a href={`/countries/${country.slug}`} class="text-link hover:underline dark:text-link">{country.name} tax calculators</a> for instant estimates. You can also reach out through our <a href="/contact" class="text-link hover:underline dark:text-link">contact page</a> for further assistance.</p>
+      <p class="text-body leading-relaxed dark:text-muted">If you could not find the answer you were looking for, we have additional resources available. Browse our <a href={`/countries/${country.slug}/${category.slug}`} class="text-link hover:underline dark:text-link">{category.name} guides</a> for detailed walkthroughs, or use our <a href={`/countries/${country.slug}`} class="text-link hover:underline dark:text-link">{country.name} tax calculators</a> for instant estimates. You can also reach out through our <a href="/contact/" class="text-link hover:underline dark:text-link">contact page</a> for further assistance.</p>
     </section>
 
     <div class="mt-8 rounded-xl border border-hairline bg-canvas p-8 dark:border-overlay-lighter dark:bg-surface">
@@ -126,8 +126,8 @@ if (!country || !category || !faq) {
       <ul class="mt-4 list-disc pl-6 space-y-2 text-body dark:text-muted">
         <li>Bookmark the official {country.officialTaxAuthority} announcements page.</li>
         <li>Use our <a href={`/countries/${country.slug}`} class="text-link hover:underline dark:text-link">{country.name} calculator suite</a> to model changes as rates update.</li>
-        <li>Read our latest <a href="/blogs" class="text-link hover:underline dark:text-link">tax blog posts</a> for strategic planning ideas.</li>
-        <li>Consult the <a href="/knowledge" class="text-link hover:underline dark:text-link">Knowledge Center</a> for foundational concepts that underpin current rules.</li>
+        <li>Read our latest <a href="/blogs/" class="text-link hover:underline dark:text-link">tax blog posts</a> for strategic planning ideas.</li>
+        <li>Consult the <a href="/knowledge/" class="text-link hover:underline dark:text-link">Knowledge Center</a> for foundational concepts that underpin current rules.</li>
       </ul>
     </section>
   </div>

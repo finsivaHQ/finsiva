@@ -22,4 +22,4 @@ relatedGlossary:
 - **31 January:** Deadline for online tax returns and payment of tax due plus the first Payment on Account for the next year.
 - **31 July:** Second Payment on Account deadline.
 
-Check self-employment tax liabilities with our [UK Income Tax Calculator](/countries/united-kingdom/income-tax/income-tax-calculator).
+Check self-employment tax liabilities with our [UK Income Tax Calculator](/countries/united-kingdom/income-tax/income-tax-calculator/).

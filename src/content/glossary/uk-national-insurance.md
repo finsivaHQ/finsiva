@@ -21,4 +21,4 @@ relatedGlossary:
 - **Class 1 (Employers):** Employer contribution on employee earnings above the secondary threshold.
 - **Class 2 & Class 4 (Self-Employed):** Class 4 NI is calculated on taxable trading profits through Self Assessment.
 
-Calculate your exact NI payments using our [UK National Insurance Calculator](/countries/united-kingdom/national-insurance/ni-calculator).
+Calculate your exact NI payments using our [UK National Insurance Calculator](/countries/united-kingdom/national-insurance/ni-calculator/).
