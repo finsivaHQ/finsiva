@@ -1,0 +1,270 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Malaysia Property Assessment Tax (Cukai Pintu), Quit Rent & Digital Services Tax Guide 2026";
+const description = "Comprehensive 2026 guide to Malaysia property taxes: Assessment Tax (Cukai Pintu), Quit Rent (Cukai Tanah / Cukai Petak), foreign property owner rules, LHDN rental income declaration, and digital services withholding tax.";
+const image = "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=80";
+const author = "Michael Tang, Senior Tax & Corporate Advisory Lead";
+const authorBio = "Senior tax consultant specializing in Malaysian municipal property assessment taxes (Cukai Pintu), state land office quit rents (Cukai Tanah), Section 4(d) rental income declarations, and digital services tax compliance.";
+const canonical = "https://finsiva.com/blogs/malaysia-property-tax-cukai-pintu-quit-rent-digital-services-guide";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is the difference between Cukai Pintu (Assessment Tax) and Cukai Tanah (Quit Rent) in Malaysia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Assessment Tax (Cukai Pintu) is levied twice a year by local municipal councils (such as DBKL, MBPJ, MBSA) to fund municipal services (garbage collection, road maintenance, street lighting). Quit Rent (Cukai Tanah / Cukai Petak) is levied annually by state land offices (Pejabat Tanah dan Galian) on land ownership.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How is Assessment Tax (Cukai Pintu) calculated in Malaysia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Cukai Pintu is calculated as a statutory percentage (typically 4% to 6% for residential property, and 10% to 12% for commercial property) multiplied by the Estimated Annual Rental Value determined by the local municipal council.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How do landlords declare rental income to LHDN in Malaysia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Landlords declare rental income under Section 4(d) of the Income Tax Act 1967 on their annual e-Filing Form BE/B. Allowable expenses (assessment tax, quit rent, loan interest, insurance, repairs) are subtracted from gross rental income to determine net taxable rental income.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Do foreign property owners pay property tax in Malaysia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Yes. Foreign property owners in Malaysia pay the exact same municipal Cukai Pintu and state Cukai Tanah rates as local citizens. However, if a foreign non-resident earns rental income, that rental income is subject to a flat 30% non-resident income tax rate.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is Malaysia withholding tax / SST on digital services under Section 109G?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Under Malaysian tax law, foreign digital service providers selling electronic services (cloud software, streaming, online advertising) to Malaysian consumers must register for 8% Service Tax (SST) under the Royal Malaysian Customs Department. Business-to-business imported digital services are subject to 8% reverse charge SST or Section 109G withholding tax.</p>"
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="23 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <!-- Intro Banner -->
+    <p class="text-xl leading-relaxed font-light text-ink dark:text-on-primary">
+      Property ownership and real estate investment in Malaysia involve ongoing statutory local taxes—searched as <em>"malaysia property tax payment"</em>, <em>"property assessment tax malaysia"</em>, <em>"land tax malaysia"</em>, and <em>"house rental income tax declaration malaysia"</em>. Administered by local municipal councils, state land offices, and <a href="https://www.hasil.gov.my" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">LHDNM</a>, this 2026 guide breaks down <strong>Assessment Tax (Cukai Pintu)</strong>, <strong>Quit Rent (Cukai Tanah / Cukai Petak)</strong>, landlord rental declarations, and <strong>digital services withholding tax</strong>.
+    </p>
+
+    <!-- Key Takeaways Card -->
+    <div class="rounded-2xl border border-primary/20 bg-primary/5 p-6 dark:border-primary/30 dark:bg-primary/10">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white font-bold text-sm">🏛️</span>
+        <h3 class="text-lg font-bold text-ink dark:text-on-primary">Property Taxes & Withholding Overview 2026</h3>
+      </div>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Cukai Pintu (Assessment Tax):</strong> Paid bi-annually (Feb 28 & Aug 31) to local municipal council.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Cukai Tanah (Quit Rent):</strong> Paid annually (by May 31) to state land office (Pejabat Tanah).</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>LHDN Rental Declaration:</strong> Net rental income (after expenses) taxed under Section 4(d).</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Digital Services Tax:</strong> 8% Service Tax (SST) / Section 109G withholding on foreign digital services.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-semibold text-ink mb-4 dark:text-on-primary">Guide Navigation</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#cukai-pintu-assessment-tax" class="text-link hover:underline">1. Assessment Tax (Cukai Pintu) Formulas & Due Dates</a></li>
+        <li><a href="#cukai-tanah-cukai-petak-quit-rent" class="text-link hover:underline">2. Quit Rent (Cukai Tanah) & Parcel Rent (Cukai Petak)</a></li>
+        <li><a href="#property-tax-for-foreigners" class="text-link hover:underline">3. Property Tax Rules for Foreign Owners in Malaysia</a></li>
+        <li><a href="#lhdn-rental-income-declaration" class="text-link hover:underline">4. Declaring Rental Income to LHDN (Deductible Expenses)</a></li>
+        <li><a href="#property-agent-income-tax" class="text-link hover:underline">5. Property Agent Commission Income Taxation</a></li>
+        <li><a href="#digital-services-withholding-tax" class="text-link hover:underline">6. Malaysia Withholding Tax & SST on Digital Services</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">7. Frequently Asked Questions (FAQ)</a></li>
+      </ul>
+    </div>
+
+    <!-- Section 1 -->
+    <h2 id="cukai-pintu-assessment-tax" class="text-2xl font-semibold text-ink dark:text-on-primary">1. Assessment Tax (Cukai Pintu) Formulas & Due Dates</h2>
+    <p>
+      <strong>Assessment Tax (Cukai Pintu or Cukai Taksiran)</strong> is a local municipal property tax collected twice a year by local authorities (e.g., Dewan Bandaraya Kuala Lumpur - DBKL, Majlis Bandaraya Petaling Jaya - MBPJ, Majlis Bandaraya Shah Alam - MBSA).
+    </p>
+    <p>
+      The revenue raised from Cukai Pintu finances municipal services: public cleaning, garbage collection, maintenance of public parks, drain maintenance, and street lighting.
+    </p>
+
+    <!-- Formula Box -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface font-mono text-sm my-6">
+      <div class="font-bold text-ink dark:text-on-primary font-sans mb-2">Official Cukai Pintu Calculation Formula</div>
+      <code>Estimated Annual Rental Value = Monthly Estimated Rent × 12 Months</code><br/>
+      <code>Annual Cukai Pintu = Estimated Annual Rental Value × Rate % (4% to 6% Residential)</code><br/>
+      <code>Bi-Annual Payment = Annual Cukai Pintu ÷ 2</code>
+    </div>
+
+    <p class="text-sm font-semibold">Cukai Pintu Payment Due Dates:</p>
+    <ul class="list-disc pl-6 space-y-1 text-sm">
+      <li><strong>First Half Payment (1st Term):</strong> Due by <strong>28 February</strong> annually.</li>
+      <li><strong>Second Half Payment (2nd Term):</strong> Due by <strong>31 August</strong> annually.</li>
+    </ul>
+
+    <!-- Section 2 -->
+    <h2 id="cukai-tanah-cukai-petak-quit-rent" class="text-2xl font-semibold text-ink dark:text-on-primary">2. Quit Rent (Cukai Tanah) & Parcel Rent (Cukai Petak)</h2>
+    <p>
+      <strong>Quit Rent (Cukai Tanah)</strong> is a state land tax imposed annually on all landed property under the National Land Code 1965 (Act 56) by the state Land and Mines Office (Pejabat Tanah dan Galian - PTG).
+    </p>
+    <p>
+      For strata properties (condominiums, apartments, commercial suites), state governments (such as Selangor, Kuala Lumpur, Penang, and Johor) have converted traditional shared quit rent into <strong>Cukai Petak (Parcel Rent)</strong>, billed directly to individual unit owners.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6 text-sm">
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h4 class="font-bold text-ink mb-1 dark:text-on-primary">Cukai Tanah (Landed Homes)</h4>
+        <p class="text-xs text-muted dark:text-muted">Calculated per square meter of land size. Due annually by <strong>31 May</strong> to Pejabat Tanah.</p>
+      </div>
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h4 class="font-bold text-ink mb-1 dark:text-on-primary">Cukai Petak (Strata Units)</h4>
+        <p class="text-xs text-muted dark:text-muted">Direct individual bill calculated based on parcel square meters. Paid online via state land portals (e-Tanah).</p>
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <h2 id="property-tax-for-foreigners" class="text-2xl font-semibold text-ink dark:text-on-primary">3. Property Tax Rules for Foreign Owners in Malaysia</h2>
+    <p>
+      Foreign nationals owning real estate in Malaysia are subject to statutory property taxes:
+    </p>
+    <ul class="list-disc pl-6 space-y-2 text-sm">
+      <li><strong>Local Municipal Taxes (Cukai Pintu & Cukai Tanah):</strong> Foreigners pay the exact same municipal and state land rates as Malaysian citizens.</li>
+      <li><strong>Rental Income Tax (Flat 30%):</strong> If a foreign property owner is a non-resident for tax purposes (&lt;182 days presence), net rental income earned in Malaysia is taxed at a flat <strong>30% non-resident tax rate</strong> under Section 4(d).</li>
+    </ul>
+
+    <!-- Section 4 -->
+    <h2 id="lhdn-rental-income-declaration" class="text-2xl font-semibold text-ink dark:text-on-primary">4. Declaring Rental Income to LHDN (Deductible Expenses)</h2>
+    <p>
+      Malaysian landlords must declare rental income derived from letting out residential or commercial real estate on their annual LHDN e-Filing Form BE / Form B under Section 4(d).
+    </p>
+    <p>
+      Statutory municipal Cukai Pintu and state Cukai Tanah payments are <strong>100% tax-deductible expenses</strong> against gross rental income!
+    </p>
+
+    <!-- Table of Rental Expense Claimability -->
+    <div class="overflow-x-auto my-6">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Property Expense</th>
+            <th class="border p-3">LHDN Tax Deductibility</th>
+            <th class="border p-3">Tax Impact Example</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter text-sm">
+          <tr>
+            <td class="p-3 font-medium">Cukai Pintu (Assessment Tax)</td>
+            <td class="p-3 font-bold text-emerald-600">100% DEDUCTIBLE</td>
+            <td class="p-3">Deducted from gross rent before tax computation.</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Cukai Tanah / Cukai Petak (Quit Rent)</td>
+            <td class="p-3 font-bold text-emerald-600">100% DEDUCTIBLE</td>
+            <td class="p-3">Deducted from gross rent before tax computation.</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Housing Loan Interest</td>
+            <td class="p-3 font-bold text-emerald-600">DEDUCTIBLE (Interest Only)</td>
+            <td class="p-3">Bank loan interest portion reduces net chargeable rent.</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Property Repairs & Maintenance</td>
+            <td class="p-3 font-bold text-emerald-600">DEDUCTIBLE</td>
+            <td class="p-3">Plumbing, painting, aircon servicing fees.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Section 5 -->
+    <h2 id="property-agent-income-tax" class="text-2xl font-semibold text-ink dark:text-on-primary">5. Property Agent Commission Income Taxation</h2>
+    <p>
+      Real estate negotiators (RENs) and licensed property agents in Malaysia earn commission income assessed as <strong>Business / Commission Income under Section 4(a)</strong>.
+    </p>
+    <p>
+      Agents must submit Form B by June 30th annually and can claim business deductions: vehicle mileage, advertising portals (PropertyGuru, iProperty), licensing fees, and marketing materials.
+    </p>
+
+    <!-- Section 6 -->
+    <h2 id="digital-services-withholding-tax" class="text-2xl font-semibold text-ink dark:text-on-primary">6. Malaysia Withholding Tax & SST on Digital Services</h2>
+    <p>
+      In addition to physical real estate taxes, businesses and consumers utilizing digital platforms encounter <strong>Malaysia Digital Services Tax (SST / Withholding Tax)</strong>:
+    </p>
+    <ul class="list-disc pl-6 space-y-2 text-sm">
+      <li><strong>Digital Service Tax (8% SST):</strong> Foreign digital service providers (Google, Meta, AWS, Netflix) selling software, streaming, or digital ads to Malaysian consumers collect 8% Service Tax (increased from 6% in 2024).</li>
+      <li><strong>B2B Reverse Charge & Section 109G:</strong> Malaysian companies acquiring imported digital services from non-resident providers must account for 8% reverse-charge Service Tax or Section 109G withholding tax.</li>
+    </ul>
+
+    <p class="mt-4">
+      Calculate your net rental tax and income tax estimates using our <a href="/countries/malaysia/rental-income/rental-income-calculator/" class="text-link font-semibold hover:underline">Malaysia Rental Income Tax Calculator</a>.
+    </p>
+
+    <!-- Section 7 FAQs -->
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">7. Frequently Asked Questions (FAQ)</h2>
+    <div class="space-y-4">
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">When are Cukai Pintu payments due in Malaysia?</h3>
+        <p class="mt-1 text-sm">Cukai Pintu is paid twice a year: First term due by February 28, and second term due by August 31.</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Can I deduct Cukai Pintu and Cukai Tanah from LHDN rental income?</h3>
+        <p class="mt-1 text-sm">Yes. Assessment tax (Cukai Pintu) and Quit rent (Cukai Tanah) paid for a rented property are 100% tax-deductible under Section 4(d).</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is the digital services tax rate in Malaysia?</h3>
+        <p class="mt-1 text-sm">The digital service tax rate under the Service Tax Act 2018 is 8% on imported digital services.</p>
+      </div>
+    </div>
+
+    <!-- Related Links -->
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Related Malaysia Tax Guides & Tools</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/countries/malaysia/rental-income/rental-income-calculator/" class="text-link hover:underline font-medium">Rental Income Tax Calculator</a>
+        <a href="/blogs/malaysia-rpgt-real-property-gains-tax-2026-guide/" class="text-link hover:underline font-medium">Real Property Gains Tax (RPGT) Guide</a>
+        <a href="/blogs/malaysia-property-stamp-duty-mot-loan-agreement-guide/" class="text-link hover:underline font-medium">Property Stamp Duty & MOT Guide</a>
+        <a href="/blogs/malaysia-freelancer-rental-airbnb-dividend-tax-guide/" class="text-link hover:underline font-medium">Rental Income & Airbnb Tax Guide</a>
+        <a href="/blogs/malaysia-personal-income-tax-rates-brackets-2026-guide/" class="text-link hover:underline font-medium">Personal Income Tax Rates 2026</a>
+        <a href="/countries/malaysia/" class="text-link hover:underline font-medium">Finsiva Malaysia Tax Hub</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>

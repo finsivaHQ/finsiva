@@ -1,0 +1,280 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Malaysia Real Property Gains Tax (RPGT) Guide 2026: Rates, Calculation & Foreigner Rules";
+const description = "Comprehensive 2026 guide to Malaysia Real Property Gains Tax (RPGT) under the RPGT Act 1976. Learn RPGT rates for individuals (0% after 5 years), foreigners (30%), companies, RPC shares, and inherited property exemptions.";
+const image = "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&q=80";
+const author = "Michael Tang, Senior Tax & Corporate Advisory Lead";
+const authorBio = "Senior tax consultant specializing in Malaysian real estate taxation, Real Property Gains Tax (RPGT Act 1976) compliance, Real Property Company (RPC) share transfers, and cross-border property disposals.";
+const canonical = "https://finsiva.com/blogs/malaysia-rpgt-real-property-gains-tax-2026-guide";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What are the Real Property Gains Tax (RPGT) rates in Malaysia for 2026?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>For Malaysian citizens and Permanent Residents (PRs), RPGT is 30% for property disposed within 3 years, 20% in the 4th year, 15% in the 5th year, and 0% for property disposed in the 6th year onwards. Foreigners and non-citizens pay a flat 30% RPGT regardless of holding period (except 10% in 6th year onwards for corporate entities).</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Is there capital gains tax on selling property in Malaysia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Malaysia does not impose a general capital gains tax on stocks or personal assets. However, gains derived from the disposal of real property (land and buildings) and shares in a Real Property Company (RPC) are strictly taxable under the Real Property Gains Tax Act 1976.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Is inherited property subject to RPGT in Malaysia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>The transfer of property from a deceased person's estate to an executor or beneficiary is deemed a disposal at 'no gain no loss' under Schedule 2 of the RPGT Act. When the beneficiary eventually sells the property, the acquisition price is deemed to be the original acquisition price paid by the deceased.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is a Real Property Company (RPC) under Malaysian tax law?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>A Real Property Company (RPC) is a controlled company where the defined value of its real property (or RPC shares) owned is not less than 75% of its total tangible assets. Disposal of RPC shares attracts RPGT under Section 15B of the RPGT Act 1976.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What forms must be submitted to LHDN when selling property in Malaysia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Both seller and buyer must submit statutory RPGT declarations within 60 days of the sale agreement date: Seller files Form CKHT 1A (or CKHT 1B for RPC shares), while Buyer files Form CKHT 2A and retains 3% (or 7% for foreigners) of the purchase price for LHDN withholding.</p>"
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="24 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <!-- Intro Banner -->
+    <p class="text-xl leading-relaxed font-light text-ink dark:text-on-primary">
+      Understanding <strong>Real Property Gains Tax (RPGT) in Malaysia</strong>—searched frequently as <em>"malaysia rpgt 2026"</em>, <em>"property gain tax malaysia 2026"</em>, <em>"rpgt for foreigners in malaysia"</em>, or <em>"selling property in malaysia tax"</em>—is essential for property owners, real estate investors, and corporate entities. Enforced under the <strong>Real Property Gains Tax Act 1976 (Act 169)</strong> by <a href="https://www.hasil.gov.my" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">LHDNM</a>, RPGT applies to net capital gains derived from disposing of land, residential homes, commercial properties, and shares in a Real Property Company (RPC).
+    </p>
+
+    <!-- Key Takeaways Card -->
+    <div class="rounded-2xl border border-primary/20 bg-primary/5 p-6 dark:border-primary/30 dark:bg-primary/10">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white font-bold text-sm">🏡</span>
+        <h3 class="text-lg font-bold text-ink dark:text-on-primary">2026 RPGT Key Summary</h3>
+      </div>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Citizens & PRs (6th Year+):</strong> 0% RPGT rate on residential & commercial properties held >5 years.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Foreigners & Non-Citizens:</strong> 30% RPGT for disposals in 1st to 5th years; 30% in 6th year onwards.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Statutory Exemption:</strong> RM 10,000 or 10% of net gain (whichever is higher) per transaction.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>CKHT 60-Day Deadline:</strong> Both buyer & seller must submit Form CKHT within 60 days of SPA execution.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-semibold text-ink mb-4 dark:text-on-primary">Guide Navigation</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#rpgt-rate-structure-2026" class="text-link hover:underline">1. Official 2026 RPGT Rate Schedule Table</a></li>
+        <li><a href="#how-rpgt-is-calculated" class="text-link hover:underline">2. How RPGT is Calculated: Chargeable Gain Formula</a></li>
+        <li><a href="#rpgt-exemptions-allowances" class="text-link hover:underline">3. RPGT Exemptions (Once-in-a-Lifetime & RM10k Exemption)</a></li>
+        <li><a href="#rpgt-for-foreigners" class="text-link hover:underline">4. RPGT Rules & Withholding Tax for Foreigners</a></li>
+        <li><a href="#rpgt-on-companies-and-rpc-shares" class="text-link hover:underline">5. Corporate RPGT & Real Property Company (RPC) Shares</a></li>
+        <li><a href="#rpgt-on-inherited-property" class="text-link hover:underline">6. RPGT on Inherited Property & Gift Transfers</a></li>
+        <li><a href="#ckht-forms-submission-process" class="text-link hover:underline">7. CKHT Form Filing & Purchaser 3% Withholding</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">8. Frequently Asked Questions (FAQ)</a></li>
+      </ul>
+    </div>
+
+    <!-- Section 1 -->
+    <h2 id="rpgt-rate-structure-2026" class="text-2xl font-semibold text-ink dark:text-on-primary">1. Official 2026 RPGT Rate Schedule Table</h2>
+    <p>
+      The Real Property Gains Tax rate in Malaysia depends on three factors: taxpayer category (Citizen/PR vs Foreigner vs Company), property type (residential vs commercial), and holding period from acquisition date to disposal date.
+    </p>
+
+    <!-- RPGT Rates Table -->
+    <div class="overflow-x-auto my-6">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Disposal Holding Period</th>
+            <th class="border p-3">Malaysian Citizens & PRs</th>
+            <th class="border p-3">Malaysian Companies (Sdn Bhd)</th>
+            <th class="border p-3">Foreigners & Foreign Entities</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 font-medium">Within 3 Years (1st to 36th Month)</td>
+            <td class="p-3 font-bold text-red-600">30%</td>
+            <td class="p-3 font-bold text-red-600">30%</td>
+            <td class="p-3 font-bold text-red-600">30%</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">In the 4th Year (37th to 48th Month)</td>
+            <td class="p-3 font-bold text-slate-700 dark:text-slate-300">20%</td>
+            <td class="p-3 font-bold text-slate-700 dark:text-slate-300">20%</td>
+            <td class="p-3 font-bold text-red-600">30%</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">In the 5th Year (49th to 60th Month)</td>
+            <td class="p-3 font-bold text-slate-700 dark:text-slate-300">15%</td>
+            <td class="p-3 font-bold text-slate-700 dark:text-slate-300">15%</td>
+            <td class="p-3 font-bold text-red-600">30%</td>
+          </tr>
+          <tr class="bg-primary/5 font-semibold dark:bg-primary/10">
+            <td class="p-3 text-primary font-bold">6th Year Onwards (From 61st Month)</td>
+            <td class="p-3 font-extrabold text-emerald-600 text-base">0% (EXEMPT)</td>
+            <td class="p-3 font-bold text-primary">10%</td>
+            <td class="p-3 font-bold text-red-600">30%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Section 2 -->
+    <h2 id="how-rpgt-is-calculated" class="text-2xl font-semibold text-ink dark:text-on-primary">2. How RPGT is Calculated: Chargeable Gain Formula</h2>
+    <p>
+      RPGT is calculated on the <strong>Net Chargeable Gain</strong> derived after subtracting allowable acquisition expenses, renovation expenses, legal fees, agent commissions, and statutory exemptions from the gross disposal price.
+    </p>
+
+    <!-- Formula Box -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface font-mono text-sm my-6">
+      <div class="font-bold text-ink dark:text-on-primary font-sans mb-2">Official LHDN RPGT Computation Formula</div>
+      <code>Disposal Price = Gross Sale Price - (Agent Commission + Stamp Duty + Legal Fees)</code><br/>
+      <code>Acquisition Price = Original Purchase Price + Legal Fees + Stamp Duty + Permanent Renovations</code><br/>
+      <code>Gross Gain = Disposal Price - Acquisition Price</code><br/>
+      <code>Net Chargeable Gain = Gross Gain - Statutory Exemption (RM 10,000 or 10% of gain)</code><br/>
+      <code>RPGT Payable = Net Chargeable Gain × Applicable RPGT Rate (%)</code>
+    </div>
+
+    <!-- Section 3 -->
+    <h2 id="rpgt-exemptions-allowances" class="text-2xl font-semibold text-ink dark:text-on-primary">3. RPGT Exemptions (Once-in-a-Lifetime & RM10k Exemption)</h2>
+    <p>
+      The Malaysian government grants specific statutory exemptions under Schedule 3 of the RPGT Act:
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6 text-sm">
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+        <span class="rounded bg-emerald-500/10 px-2.5 py-1 text-xs font-bold text-emerald-600">Private Residence Exemption</span>
+        <h4 class="font-bold text-ink mt-2 mb-1 dark:text-on-primary">Once-in-a-Lifetime Exemption</h4>
+        <p class="text-sm text-body dark:text-muted">
+          Every Malaysian citizen or PR is entitled to a 100% RPGT exemption on the disposal of ONE private residential property in their lifetime under Paragraph 9, Schedule 3.
+        </p>
+      </div>
+
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+        <span class="rounded bg-primary/10 px-2.5 py-1 text-xs font-bold text-primary">Standard Statutory Exemption</span>
+        <h4 class="font-bold text-ink mt-2 mb-1 dark:text-on-primary">RM 10,000 / 10% Exemption</h4>
+        <p class="text-sm text-body dark:text-muted">
+          An automatic exemption of RM 10,000 or 10% of the net profit (whichever is higher) applies to every property disposal for individual taxpayers.
+        </p>
+      </div>
+    </div>
+
+    <!-- Section 4 -->
+    <h2 id="rpgt-for-foreigners" class="text-2xl font-semibold text-ink dark:text-on-primary">4. RPGT Rules & Withholding Tax for Foreigners</h2>
+    <p>
+      If a foreigner sells property in Malaysia, specific foreign tax rules apply under the RPGT Act:
+    </p>
+    <ul class="list-disc pl-6 space-y-2 text-sm">
+      <li><strong>Flat 30% RPGT Rate:</strong> Foreigners pay 30% RPGT regardless of whether the property was held for 1 year or 10 years.</li>
+      <li><strong>7% Purchaser Retention:</strong> When purchasing property from a foreigner, the buyer must retain <strong>7% of the total purchase price</strong> (instead of the standard 3% for local sellers) and remit it to LHDNM within 60 days via Form CKHT 2A.</li>
+    </ul>
+
+    <!-- Section 5 -->
+    <h2 id="rpgt-on-companies-and-rpc-shares" class="text-2xl font-semibold text-ink dark:text-on-primary">5. Corporate RPGT & Real Property Company (RPC) Shares</h2>
+    <p>
+      Companies acquiring real estate must consider <strong>Real Property Company (RPC)</strong> share rules under Section 15B.
+    </p>
+    <p>
+      If a controlled company owns real property (or RPC shares) whose defined value is at least <strong>75% of its total tangible assets</strong>, the company is classified as an RPC. Selling shares in an RPC triggers RPGT in the exact same manner as selling physical property!
+    </p>
+
+    <!-- Section 6 -->
+    <h2 id="rpgt-on-inherited-property" class="text-2xl font-semibold text-ink dark:text-on-primary">6. RPGT on Inherited Property & Gift Transfers</h2>
+    <p>
+      Transferring property through inheritance or family gifts is treated as follows:
+    </p>
+    <ul class="list-disc pl-6 space-y-2 text-sm">
+      <li><strong>Inheritance Transfer:</strong> Deemed a "no gain no loss" transfer. The beneficiary inherits the deceased's original acquisition price and holding date.</li>
+      <li><strong>Family Gift Transfers:</strong> Transfers between husband and wife, or between parent and child (provided the parent/child is a citizen) are granted 100% RPGT exemption under Paragraph 12, Schedule 2.</li>
+    </ul>
+
+    <!-- Section 7 -->
+    <h2 id="ckht-forms-submission-process" class="text-2xl font-semibold text-ink dark:text-on-primary">7. CKHT Form Filing & Purchaser 3% Withholding</h2>
+    <p>
+      Both parties must file statutory forms with LHDN within <strong>60 days</strong> of signing the Sale and Purchase Agreement (SPA):
+    </p>
+    <ol class="list-decimal pl-6 space-y-2 text-sm">
+      <li><strong>Form CKHT 1A:</strong> Submitted by the seller (declaring disposal price and acquisition history).</li>
+      <li><strong>Form CKHT 2A:</strong> Submitted by the buyer (declaring purchase details and 3% or 7% money retention).</li>
+      <li><strong>Form CKHT 3:</strong> Submitted by the seller if claiming 100% RPGT exemption.</li>
+    </ol>
+
+    <p class="mt-4">
+      Calculate your net property income and tax estimates using our <a href="/countries/malaysia/rental-income/rental-income-calculator/" class="text-link font-semibold hover:underline">Malaysia Rental & Property Tax Calculator</a>.
+    </p>
+
+    <!-- Section 8 FAQs -->
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">8. Frequently Asked Questions (FAQ)</h2>
+    <div class="space-y-4">
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is the RPGT rate in Malaysia for property sold after 5 years?</h3>
+        <p class="mt-1 text-sm">For Malaysian citizens and PRs, RPGT is 0% (completely exempt) for properties sold in the 6th year onwards. Foreigners pay 30% and companies pay 10%.</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is the CKHT filing deadline in Malaysia?</h3>
+        <p class="mt-1 text-sm">Both buyer and seller must submit Form CKHT 1A and CKHT 2A to LHDN within 60 days of executing the Sale and Purchase Agreement (SPA).</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is the RPGT withholding percentage retained by the buyer?</h3>
+        <p class="mt-1 text-sm">The buyer's lawyer must withhold 3% of the total purchase price (or 7% if selling party is a foreigner/non-resident) and remit it to LHDN within 60 days.</p>
+      </div>
+    </div>
+
+    <!-- Related Links -->
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Related Malaysia Property & Tax Resources</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/blogs/malaysia-property-stamp-duty-mot-loan-agreement-guide/" class="text-link hover:underline font-medium">Property Stamp Duty & MOT Guide</a>
+        <a href="/blogs/malaysia-property-tax-cukai-pintu-quit-rent-digital-services-guide/" class="text-link hover:underline font-medium">Cukai Pintu & Quit Rent Tax Guide</a>
+        <a href="/blogs/malaysia-freelancer-rental-airbnb-dividend-tax-guide/" class="text-link hover:underline font-medium">Rental Income & Airbnb Tax Guide</a>
+        <a href="/blogs/malaysia-personal-income-tax-rates-brackets-2026-guide/" class="text-link hover:underline font-medium">Personal Income Tax Rates 2026</a>
+        <a href="/blogs/malaysia-expats-foreigners-non-resident-tax-guide-2026/" class="text-link hover:underline font-medium">Expats & Foreigners Tax Guide</a>
+        <a href="/countries/malaysia/" class="text-link hover:underline font-medium">Finsiva Malaysia Tax Portal</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>
