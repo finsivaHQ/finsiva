@@ -1,0 +1,261 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Malaysia Corporate Income Tax & SME Tax Rate Guide 2026: 17% vs 24% Rates";
+const description = "Comprehensive 2026 guide to Malaysia corporate income tax. Learn the flat 24% corporate tax rate, SME 17% preferential rate (up to RM 600k statutory income), enterprise/sole proprietor tax comparison, Section 107A/109B withholding tax, and Form CP58.";
+const image = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80";
+const author = "Michael Tang, Senior Tax & Corporate Advisory Lead";
+const authorBio = "Senior corporate tax consultant specializing in Malaysian corporate tax compliance, SME tax incentives, Form C filings, withholding tax (Section 107A/109B), and business entity structuring.";
+const canonical = "https://finsiva.com/blogs/malaysia-company-corporate-sme-tax-rate-2026-guide";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is the corporate tax rate in Malaysia for 2026?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>The standard headline corporate income tax rate in Malaysia is 24% for resident companies. Qualifying Small and Medium Enterprises (SMEs) enjoy a reduced preferential rate of 17% on statutory income up to RM 600,000.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Which companies qualify for the 17% SME corporate tax rate in Malaysia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>To qualify for the 17% SME tax rate, a company incorporated in Malaysia must have a paid-up capital of RM 2.5 million or less in ordinary shares AND annual gross business sales not exceeding RM 50 million.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How are sole proprietorships and partnerships taxed in Malaysia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Sole proprietorships and partnerships are not taxed as separate corporate legal entities. Business profits are passed through to the individual owners and taxed under personal progressive income tax rates (0% to 30%) using Form B.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is Section 107A and Section 109B withholding tax in Malaysia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Section 107A requires a 13% withholding tax (10% company + 3% employee) on payments made to non-resident contractors for services performed in Malaysia. Section 109B imposes a 10% withholding tax on technical fees, royalties, or installation services paid to non-residents.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is Form CP58 in Malaysian business taxation?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Form CP58 is a mandatory annual statement of monetary and non-monetary incentive payments (commissions, bonuses, trips) issued by companies to agents, dealers, or distributors exceeding RM 5,000 annually.</p>"
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="23 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <!-- Intro Banner -->
+    <p class="text-xl leading-relaxed font-light text-ink dark:text-on-primary">
+      Understanding <strong>company income tax rate in Malaysia</strong>—searched frequently as <em>"corporate income tax rate malaysia 2026"</em>, <em>"sme tax rate malaysia"</em>, or <em>"enterprise income tax malaysia"</em>—is crucial for business founders, company directors, and foreign investors. Administered by <a href="https://www.hasil.gov.my" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">LHDNM</a> under the Income Tax Act 1967, Malaysia offers competitive corporate taxation with preferential tiers for SMEs.
+    </p>
+
+    <!-- Key Takeaways Card -->
+    <div class="rounded-2xl border border-primary/20 bg-primary/5 p-6 dark:border-primary/30 dark:bg-primary/10">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white font-bold text-sm">🏢</span>
+        <h3 class="text-lg font-bold text-ink dark:text-on-primary">Corporate Tax Key Highlights 2026</h3>
+      </div>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Standard Corporate Rate:</strong> Flat 24% on statutory chargeable income.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>SME Preferential Rate:</strong> 17% on first RM 600,000 chargeable income (paid-up capital ≤ RM 2.5m).</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Single-Tier Dividends:</strong> Corporate dividends paid to shareholders are 100% tax-exempt.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Interactive Calculator:</strong> Estimate corporate tax via our <a href="/countries/malaysia/business-income/business-income-calculator/" class="text-link font-semibold hover:underline">Malaysia Business Income Tax Calculator</a>.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-semibold text-ink mb-4 dark:text-on-primary">Guide Navigation</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#corporate-tax-rates-overview" class="text-link hover:underline">1. Headline Corporate Tax Rate (24%) vs SME Rates</a></li>
+        <li><a href="#sme-tax-incentive-qualifications" class="text-link hover:underline">2. SME 17% Tax Tier Qualification Criteria</a></li>
+        <li><a href="#entity-comparison-sdn-bhd-vs-sole-prop" class="text-link hover:underline">3. Entity Tax Comparison: Sdn Bhd vs Sole Proprietorship</a></li>
+        <li><a href="#withholding-tax-section-107a-109b" class="text-link hover:underline">4. Section 107A & Section 109B Withholding Tax</a></li>
+        <li><a href="#cp58-commission-statement" class="text-link hover:underline">5. Form CP58 Agent & Distributor Commission Declarations</a></li>
+        <li><a href="#capital-allowances-deductions" class="text-link hover:underline">6. Capital Allowances vs Non-Deductible Expenses</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">7. Frequently Asked Questions (FAQ)</a></li>
+      </ul>
+    </div>
+
+    <!-- Section 1 -->
+    <h2 id="corporate-tax-rates-overview" class="text-2xl font-semibold text-ink dark:text-on-primary">1. Headline Corporate Tax Rate (24%) vs SME Rates</h2>
+    <p>
+      In Malaysia, companies incorporated under the Companies Act 2016 (Sdn Bhd or Berhad) are subject to corporate income tax on statutory income derived from Malaysia.
+    </p>
+
+    <!-- Table of Corporate Tax Tiers -->
+    <div class="overflow-x-auto my-6">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Company Classification</th>
+            <th class="border p-3">Chargeable Income Tier (MYR)</th>
+            <th class="border p-3">Statutory Tax Rate (2026)</th>
+            <th class="border p-3">Tax Payable Notes</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr class="bg-primary/5 font-medium dark:bg-primary/10">
+            <td class="p-3 font-bold text-primary" rowspan="2">Qualifying SME (Capital ≤ RM 2.5m)</td>
+            <td class="p-3">First RM 600,000</td>
+            <td class="p-3 font-extrabold text-primary">17%</td>
+            <td class="p-3 text-primary">Max tax savings of RM 42,000 vs standard rate.</td>
+          </tr>
+          <tr class="bg-primary/5 font-medium dark:bg-primary/10">
+            <td class="p-3">Above RM 600,000</td>
+            <td class="p-3 font-bold">24%</td>
+            <td class="p-3">Balance taxed at standard rate.</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Non-SME / Large Corporation</td>
+            <td class="p-3">Full Chargeable Income</td>
+            <td class="p-3 font-bold text-slate-700 dark:text-slate-300">24%</td>
+            <td class="p-3">Flat headline rate applied from RM 1.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Section 2 -->
+    <h2 id="sme-tax-incentive-qualifications" class="text-2xl font-semibold text-ink dark:text-on-primary">2. SME 17% Tax Tier Qualification Criteria</h2>
+    <p>
+      To enjoy the preferential 17% corporate tax rate on the first RM 600,000 of statutory income, a company must satisfy three mandatory LHDNM conditions:
+    </p>
+    <ul class="list-disc pl-6 space-y-2 text-sm">
+      <li><strong>Paid-up Capital:</strong> Paid-up capital in respect of ordinary shares does not exceed RM 2.5 million at the beginning of the basis period.</li>
+      <li><strong>Gross Sales Turnover:</strong> Total annual gross business turnover does not exceed RM 50 million for the basis period.</li>
+      <li><strong>No Related Corporate Shareholding:</strong> The company is not part of a corporate group where a related company has paid-up capital exceeding RM 2.5 million.</li>
+    </ul>
+
+    <!-- Section 3 -->
+    <h2 id="entity-comparison-sdn-bhd-vs-sole-prop" class="text-2xl font-semibold text-ink dark:text-on-primary">3. Entity Tax Comparison: Sdn Bhd vs Sole Proprietorship</h2>
+    <p>
+      Entrepreneurs choosing between a <strong>Sdn Bhd (Private Limited)</strong> and a <strong>Sole Proprietorship / Partnership</strong> must consider tax structures:
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+        <span class="rounded bg-primary/10 px-2.5 py-1 text-xs font-bold text-primary">Sdn Bhd (Company)</span>
+        <h4 class="font-bold text-ink mt-2 mb-1 dark:text-on-primary">Flat Corporate Tax (17% / 24%)</h4>
+        <p class="text-sm text-body dark:text-muted">
+          Profit is taxed at 17% (SME) or 24%. Dividends paid out to directors/shareholders are 100% tax-free under single-tier tax system.
+        </p>
+      </div>
+
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+        <span class="rounded bg-emerald-500/10 px-2.5 py-1 text-xs font-bold text-emerald-600">Sole Proprietor / Partnership</span>
+        <h4 class="font-bold text-ink mt-2 mb-1 dark:text-on-primary">Personal Progressive Tax (0% - 30%)</h4>
+        <p class="text-sm text-body dark:text-muted">
+          Net business profits are passed through to owner's personal Form B and taxed at progressive personal rates (up to 30%).
+        </p>
+      </div>
+    </div>
+
+    <!-- Section 4 -->
+    <h2 id="withholding-tax-section-107a-109b" class="text-2xl font-semibold text-ink dark:text-on-primary">4. Section 107A & Section 109B Withholding Tax</h2>
+    <p>
+      When Malaysian companies make payments to non-resident entities, withholding tax must be deducted and remitted to LHDNM within 1 month:
+    </p>
+    <ul class="list-disc pl-6 space-y-2 text-sm">
+      <li><strong>Section 107A Withholding Tax:</strong> 13% withholding (10% contract value + 3% employee component) on payments to non-resident contractors for contract services rendered in Malaysia.</li>
+      <li><strong>Section 109B Withholding Tax:</strong> 10% withholding on payments for technical fees, installation services, software licensing, or royalties paid to non-resident service providers.</li>
+    </ul>
+
+    <!-- Section 5 -->
+    <h2 id="cp58-commission-statement" class="text-2xl font-semibold text-ink dark:text-on-primary">5. Form CP58 Agent & Distributor Commission Declarations</h2>
+    <p>
+      Under LHDNM rules, companies paying commissions, incentive trips, or bonuses to local agents, dealers, or distributors must issue an annual <strong>Form CP58 statement</strong> by March 31 if total incentives exceed RM 5,000 per year.
+    </p>
+
+    <!-- Section 6 -->
+    <h2 id="capital-allowances-deductions" class="text-2xl font-semibold text-ink dark:text-on-primary">6. Capital Allowances vs Non-Deductible Expenses</h2>
+    <p>
+      Accounting depreciation is non-deductible for tax purposes in Malaysia. Instead, companies claim statutory <strong>Capital Allowances (CA)</strong>:
+    </p>
+
+    <div class="space-y-3 my-6 font-mono text-sm">
+      <div class="rounded-lg bg-canvas p-4 border border-hairline dark:bg-slate-900 dark:border-slate-800">
+        <div class="font-bold text-primary font-sans mb-1">ICT Equipment & Computers</div>
+        <code>Initial Allowance: 20% | Annual Allowance: 40% (Fully written off in 2 years)</code>
+      </div>
+      <div class="rounded-lg bg-canvas p-4 border border-hairline dark:bg-slate-900 dark:border-slate-800">
+        <div class="font-bold text-primary font-sans mb-1">Office Machinery & Commercial Plant</div>
+        <code>Initial Allowance: 20% | Annual Allowance: 14%</code>
+      </div>
+    </div>
+
+    <p class="mt-4">
+      Calculate your corporate tax obligation and SME exemptions using our <a href="/countries/malaysia/business-income/business-income-calculator/" class="text-link font-semibold hover:underline">Malaysia Business Income Tax Calculator</a>.
+    </p>
+
+    <!-- Section 7 FAQs -->
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">7. Frequently Asked Questions (FAQ)</h2>
+    <div class="space-y-4">
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is the corporate tax rate in Malaysia for 2026?</h3>
+        <p class="mt-1 text-sm">The headline rate is 24%. Qualifying SMEs with paid-up capital ≤ RM 2.5m pay 17% on the first RM 600,000 of statutory income.</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Are corporate dividends taxed in Malaysia?</h3>
+        <p class="mt-1 text-sm">No. Malaysia operates a single-tier corporate tax system where dividends paid to shareholders are 100% tax-exempt.</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is the withholding tax rate under Section 109B?</h3>
+        <p class="mt-1 text-sm">The withholding tax rate is 10% on technical fees, installation services, and royalties paid to non-residents.</p>
+      </div>
+    </div>
+
+    <!-- Related Links -->
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Related Malaysia Business Tax Tools</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/countries/malaysia/business-income/business-income-calculator/" class="text-link hover:underline font-medium">Business Income Tax Calculator</a>
+        <a href="/blogs/malaysia-personal-income-tax-rates-brackets-2026-guide/" class="text-link hover:underline font-medium">Personal Tax Rates & Brackets 2026</a>
+        <a href="/blogs/malaysia-expats-foreigners-non-resident-tax-guide-2026/" class="text-link hover:underline font-medium">Expats & Foreigners Tax Guide</a>
+        <a href="/blogs/malaysia-freelancer-rental-airbnb-dividend-tax-guide/" class="text-link hover:underline font-medium">Freelancer, Rental & Dividend Tax Guide</a>
+        <a href="/blogs/malaysia-mytax-lhdn-efiling-tax-reliefs-2026-guide/" class="text-link hover:underline font-medium">MyTax e-Filing & Tax Reliefs Guide</a>
+        <a href="/countries/malaysia/" class="text-link hover:underline font-medium">Finsiva Malaysia Tax Hub</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>

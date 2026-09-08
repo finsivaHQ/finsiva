@@ -1,0 +1,262 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Malaysia Income Tax for Foreigners & Expats 2026: 30% Non-Resident Rate & 182-Day Rule";
+const description = "Complete 2026 guide to Malaysia income tax for foreigners, expats, and non-residents. Learn the 182-day physical presence rule, 30% flat tax rate, 60-day exemption, tax clearance (CP21), and Singapore-Malaysia cross-border tax.";
+const image = "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1200&q=80";
+const author = "Michael Tang, Senior Tax & Corporate Advisory Lead";
+const authorBio = "Senior tax consultant specializing in Malaysian expatriate taxation, non-resident tax clearance (CP21/CP22A), Double Taxation Agreements (DTA), and cross-border Singapore-Malaysia tax planning.";
+const canonical = "https://finsiva.com/blogs/malaysia-expats-foreigners-non-resident-tax-guide-2026";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How are foreigners taxed on income earned in Malaysia in 2026?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Foreigners residing in Malaysia for 182 days or more in a calendar year are treated as tax residents and taxed at progressive resident rates (0% to 30%) with personal reliefs. Foreigners residing in Malaysia for fewer than 182 days are non-residents taxed at a flat 30% without personal reliefs.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is the 60-day short-term employment exemption rule for foreigners in Malaysia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Foreigners who exercise employment in Malaysia for 60 days or less in a calendar year are completely exempt from Malaysian income tax on that employment income, provided they are not public entertainers or company directors.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Do foreign workers need to pay income tax in Malaysia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Yes. All foreign workers (including Employment Pass holders, S Pass holders, and foreign manual laborers) earning employment income derived from Malaysia are subject to Malaysian income tax under Section 4(a) of the Income Tax Act 1967.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Do Malaysians working in Singapore need to pay income tax in Malaysia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Employment income earned in Singapore by Malaysian citizens physically exercising employment in Singapore is sourced in Singapore. Under the Malaysia-Singapore Double Taxation Agreement (DTA), it is taxed in Singapore and generally exempt from Malaysian tax when remitted.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is Tax Clearance (Form CP21 / CP22A) when an expat leaves Malaysia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Employers must notify LHDNM at least 30 days before a foreign employee terminates employment or departs Malaysia permanently by submitting Form CP21. The employer must withhold final salary payments until LHDN issues a Tax Clearance Letter.</p>"
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="23 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <!-- Intro Banner -->
+    <p class="text-xl leading-relaxed font-light text-ink dark:text-on-primary">
+      Navigating <strong>income tax in Malaysia for foreigners and expats</strong> in 2026 requires a clear understanding of tax residency rules under the <strong>Malaysian Income Tax Act 1967</strong>. Whether you are an expatriate holding an Employment Pass (EP), a foreign worker, or a Malaysian commuting across the Causeway to work in Singapore, knowing whether you are taxed at the <strong>flat 30% non-resident tax rate</strong> or progressive resident rates (0% to 30%) can save thousands in tax dollars.
+    </p>
+
+    <!-- Key Takeaways Card -->
+    <div class="rounded-2xl border border-primary/20 bg-primary/5 p-6 dark:border-primary/30 dark:bg-primary/10">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white font-bold text-sm">✈️</span>
+        <h3 class="text-lg font-bold text-ink dark:text-on-primary">Expat & Foreigner Tax Essentials</h3>
+      </div>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>182-Day Rule:</strong> Stay ≥182 days in a calendar year to qualify as a Tax Resident (0%–30%).</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Non-Resident Rate:</strong> Flat 30% tax on employment & business income for stays &lt;182 days.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>60-Day Exemption:</strong> Employment in Malaysia ≤60 days per year is 100% tax-exempt.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Form CP21 Tax Clearance:</strong> Mandatory employer filing 30 days before an expat leaves Malaysia.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-semibold text-ink mb-4 dark:text-on-primary">Guide Navigation</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#182-day-tax-residency-rule" class="text-link hover:underline">1. The Quantitative 182-Day Tax Residency Rule</a></li>
+        <li><a href="#resident-vs-non-resident-rates" class="text-link hover:underline">2. Resident Progressive (0%-30%) vs Non-Resident (30%) Rates</a></li>
+        <li><a href="#60-day-short-term-exemption" class="text-link hover:underline">3. The 60-Day Short-Term Employment Exemption</a></li>
+        <li><a href="#malaysians-working-in-singapore" class="text-link hover:underline">4. Malaysians Working in Singapore: Tax Rules</a></li>
+        <li><a href="#form-cp21-tax-clearance" class="text-link hover:underline">5. Expat Departure & Form CP21 Tax Clearance</a></li>
+        <li><a href="#double-taxation-agreements-dta" class="text-link hover:underline">6. Double Taxation Agreements (DTA) Relief</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">7. Frequently Asked Questions (FAQ)</a></li>
+      </ul>
+    </div>
+
+    <!-- Section 1 -->
+    <h2 id="182-day-tax-residency-rule" class="text-2xl font-semibold text-ink dark:text-on-primary">1. The Quantitative 182-Day Tax Residency Rule</h2>
+    <p>
+      Under Section 7(1)(a) of the Income Tax Act 1967, an individual is deemed a <strong>Malaysian tax resident</strong> for a particular Year of Assessment (YA) if they are physically present in Malaysia for <strong>182 days or more</strong> during that calendar year (January 1 to December 31).
+    </p>
+
+    <!-- Visual Decision Flowchart -->
+    <div class="my-6 rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+      <h3 class="text-lg font-semibold text-ink mb-4 text-center dark:text-on-primary">Foreigner Tax Residency Status Decision Flowchart</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center text-sm">
+        <div class="rounded-lg border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-800">
+          <div class="font-bold text-primary mb-1">Physical Stay ≤ 60 Days</div>
+          <p class="text-xs text-muted dark:text-muted"><strong>Tax Treatment: EXEMPT</strong><br/>100% Tax Exempt under Section 132/133 short-term rule.</p>
+        </div>
+        <div class="rounded-lg border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-800">
+          <div class="font-bold text-amber-600 mb-1">Physical Stay 61 – 181 Days</div>
+          <p class="text-xs text-muted dark:text-muted"><strong>Tax Treatment: NON-RESIDENT</strong><br/>Flat 30% tax rate on gross income. No personal reliefs.</p>
+        </div>
+        <div class="rounded-lg border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-800">
+          <div class="font-bold text-emerald-600 mb-1">Physical Stay ≥ 182 Days</div>
+          <p class="text-xs text-muted dark:text-muted"><strong>Tax Treatment: RESIDENT</strong><br/>Progressive rates (0% – 30%). Eligible for RM9k+ reliefs.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <h2 id="resident-vs-non-resident-rates" class="text-2xl font-semibold text-ink dark:text-on-primary">2. Resident Progressive (0%-30%) vs Non-Resident (30%) Rates</h2>
+    <p>
+      The difference in tax liability between resident and non-resident status in Malaysia is substantial:
+    </p>
+
+    <!-- Comparison Table -->
+    <div class="overflow-x-auto my-6">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Taxation Feature</th>
+            <th class="border p-3">Resident Status (≥182 Days)</th>
+            <th class="border p-3">Non-Resident Status (&lt;182 Days)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 font-medium">Employment Tax Rate</td>
+            <td class="p-3 font-bold text-emerald-600">Progressive 0% to 30%</td>
+            <td class="p-3 font-bold text-red-600">Flat 30%</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Personal Tax Reliefs (RM 9,000 basic, EPF, Medical)</td>
+            <td class="p-3 text-emerald-600 font-bold">ELIGIBLE (Up to RM 40,000+ total claims)</td>
+            <td class="p-3 text-red-600 font-bold">NOT ELIGIBLE (Zero reliefs allowed)</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Personal Tax Rebate (RM 400 for income ≤RM 35k)</td>
+            <td class="p-3 text-emerald-600 font-bold">ELIGIBLE</td>
+            <td class="p-3 text-red-600 font-bold">NOT ELIGIBLE</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Public Interest / Royalty / Interest Tax Rate</td>
+            <td class="p-3 font-medium">Progressive rates</td>
+            <td class="p-3 font-medium">Flat 10% – 15% withholding tax</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Section 3 -->
+    <h2 id="60-day-short-term-exemption" class="text-2xl font-semibold text-ink dark:text-on-primary">3. The 60-Day Short-Term Employment Exemption</h2>
+    <p>
+      Foreign experts, consultants, and auditors visiting Malaysia for short business trips benefit from the <strong>60-Day Exemption Rule</strong>:
+    </p>
+    <p>
+      If your physical presence and employment in Malaysia do not exceed 60 days in a calendar year, your employment income derived from Malaysia is <strong>100% exempt from Malaysian income tax</strong>.
+    </p>
+
+    <!-- Section 4 -->
+    <h2 id="malaysians-working-in-singapore" class="text-2xl font-semibold text-ink dark:text-on-primary">4. Malaysians Working in Singapore: Tax Rules</h2>
+    <p>
+      Thousands of Malaysian citizens commute daily from Johor Bahru or reside in Singapore for employment.
+    </p>
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Tax Treatment Under Singapore-Malaysia DTA</h3>
+    <ul class="list-disc pl-6 space-y-2 text-sm">
+      <li><strong>Singapore Employment Sourced in Singapore:</strong> Salary earned for work physically performed in Singapore is subject to Singapore Income Tax (IRAS).</li>
+      <li><strong>Exempt from Malaysian Tax:</strong> Under Article 14 of the Malaysia-Singapore Double Taxation Agreement, employment income taxed in Singapore is completely exempt from Malaysian income tax when remitted back to Malaysia.</li>
+      <li><strong>Reporting Requirement:</strong> Malaysian workers residing in Malaysia while working in Singapore do not need to pay Malaysian income tax on their Singapore salaries.</li>
+    </ul>
+
+    <!-- Section 5 -->
+    <h2 id="form-cp21-tax-clearance" class="text-2xl font-semibold text-ink dark:text-on-primary">5. Expat Departure & Form CP21 Tax Clearance</h2>
+    <p>
+      When a foreign employee finishes their employment contract or leaves Malaysia permanently, LHDNM mandates a formal procedure known as <strong>Tax Clearance</strong>:
+    </p>
+    <ol class="list-decimal pl-6 space-y-2 text-sm">
+      <li><strong>Form CP21 Submission:</strong> The employer must submit Form CP21 to LHDNM at least 30 days before the expat's expected departure date.</li>
+      <li><strong>Salary Withholding:</strong> The employer is legally required to withhold all monies (salary, bonuses, gratuities) due to the foreign employee until LHDN issues a <em>Surat Penyelesaian Cukai (Tax Clearance Letter)</em>.</li>
+      <li><strong>Settlement:</strong> Any outstanding tax liability is deducted from the withheld salary, and the balance is released to the expat.</li>
+    </ol>
+
+    <!-- Section 6 -->
+    <h2 id="double-taxation-agreements-dta" class="text-2xl font-semibold text-ink dark:text-on-primary">6. Double Taxation Agreements (DTA) Relief</h2>
+    <p>
+      Malaysia has signed comprehensive <strong>Double Taxation Agreements (DTAs)</strong> with over 70 countries (including the US, UK, Australia, Singapore, Japan, Germany, and China). DTAs prevent foreign workers from being taxed twice on the same income.
+    </p>
+    <p>
+      Estimate your net take-home salary after tax using our <a href="/countries/malaysia/income-tax/income-tax-calculator/" class="text-link font-semibold hover:underline">Malaysia Income Tax Calculator</a>.
+    </p>
+
+    <!-- Section 7 FAQs -->
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">7. Frequently Asked Questions (FAQ)</h2>
+    <div class="space-y-4">
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is the non-resident tax rate in Malaysia?</h3>
+        <p class="mt-1 text-sm">Non-resident individuals staying in Malaysia for fewer than 182 days are taxed at a flat rate of 30% on employment income without personal tax reliefs.</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">How do I become a tax resident in Malaysia?</h3>
+        <p class="mt-1 text-sm">You become a tax resident by physically staying in Malaysia for 182 days or more in a calendar year (or under 2-year linking rules).</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Do foreign workers pay income tax in Malaysia?</h3>
+        <p class="mt-1 text-sm">Yes. All foreign workers exercising employment in Malaysia are subject to Malaysian income tax under LHDNM rules.</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Do Malaysians working in Singapore pay tax in Malaysia?</h3>
+        <p class="mt-1 text-sm">No. Income earned from employment exercised in Singapore is taxed in Singapore and exempt from Malaysian tax when remitted.</p>
+      </div>
+    </div>
+
+    <!-- Related Links -->
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Related Malaysia Tax Articles & Tools</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/countries/malaysia/income-tax/income-tax-calculator/" class="text-link hover:underline font-medium">Malaysia Income Tax Calculator</a>
+        <a href="/blogs/malaysia-personal-income-tax-rates-brackets-2026-guide/" class="text-link hover:underline font-medium">Personal Tax Rates & Brackets 2026</a>
+        <a href="/blogs/malaysia-foreign-source-income-tax-fsi-2026-guide/" class="text-link hover:underline font-medium">Foreign Source Income (FSI) Tax Guide</a>
+        <a href="/blogs/malaysia-company-corporate-sme-tax-rate-2026-guide/" class="text-link hover:underline font-medium">Corporate & SME Tax Rate Guide</a>
+        <a href="/blogs/malaysia-mytax-lhdn-efiling-tax-reliefs-2026-guide/" class="text-link hover:underline font-medium">MyTax e-Filing & 20+ Tax Reliefs Guide</a>
+        <a href="/countries/malaysia/" class="text-link hover:underline font-medium">Finsiva Malaysia Tax Hub</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>

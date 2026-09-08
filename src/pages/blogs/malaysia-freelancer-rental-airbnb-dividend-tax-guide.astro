@@ -1,0 +1,273 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Malaysia Freelancer, Rental Property, Airbnb & Investment Income Tax Guide 2026";
+const description = "Comprehensive 2026 guide to Malaysian tax rules for freelancers, self-employed gig workers (Grab), Airbnb hosts, rental property landlords, dividend investors, and fixed deposit interest.";
+const image = "https://images.unsplash.com/photo-1556742049-0a6791497792?w=1200&q=80";
+const author = "Michael Tang, Senior Tax & Corporate Advisory Lead";
+const authorBio = "Senior tax consultant specializing in Malaysian sole-proprietor business taxation, rental income expense claims under Section 4(d), RPGT property tax, and investment income tax exemptions.";
+const canonical = "https://finsiva.com/blogs/malaysia-freelancer-rental-airbnb-dividend-tax-guide";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How is rental income taxed in Malaysia for 2026?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Rental income received from residential or commercial properties in Malaysia is assessed as non-business income under Section 4(d) of the Income Tax Act 1967. Landlords pay tax on net rental income after deducting allowable expenses such as assessment tax, quit rent, mortgage interest, and fire insurance.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Are Airbnb and homestay earnings taxed as rental or business income in Malaysia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>If an Airbnb host provides active supplementary services (such as daily cleaning, breakfast, room service, or laundry), LHDNM assesses the income as Business Income under Section 4(a) via Form B, allowing broader business expense claims and capital allowances.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Are stock market dividends taxable in Malaysia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Dividends paid by Malaysian public listed companies operate under the Single-Tier Dividend System. Tax paid by the distributing corporation is final, making dividend distributions 100% tax-exempt in the hands of individual shareholders.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Is fixed deposit interest taxable for individuals in Malaysia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Interest income derived from fixed deposits placed with licensed commercial banks and financial institutions in Malaysia by resident individuals is 100% tax-exempt under Schedule 6 of the Income Tax Act 1967.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How do freelancers and Grab drivers report income to LHDN?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Freelancers, insurance agents, real estate agents, and Grab drivers earn trade or commission income assessed under Section 4(a). They must file Form B electronically via MyTax by June 30th annually, keeping 7 years of income and expense receipts.</p>"
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="24 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <!-- Intro Banner -->
+    <p class="text-xl leading-relaxed font-light text-ink dark:text-on-primary">
+      Modern income streams in Malaysia—ranging from <strong>freelance income tax</strong>, <strong>Grab driver & e-hailing earnings</strong>, <strong>Airbnb homestay revenue</strong>, <strong>house rental income tax declarations</strong>, to dividend and fixed deposit investments—require careful categorization under <a href="https://www.hasil.gov.my" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">LHDNM rules</a>. This 2026 guide explains allowable deductions, exemptions, and tax computation formats across all non-salaried income categories.
+    </p>
+
+    <!-- Key Takeaways Card -->
+    <div class="rounded-2xl border border-primary/20 bg-primary/5 p-6 dark:border-primary/30 dark:bg-primary/10">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white font-bold text-sm">💡</span>
+        <h3 class="text-lg font-bold text-ink dark:text-on-primary">Freelancer & Investment Tax Quick Guide</h3>
+      </div>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Freelancers & Gig Workers:</strong> Taxed under Section 4(a) via Form B (Deadline: June 30).</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Landlords (Section 4d):</strong> Deduct quit rent, assessment tax, loan interest & repairs.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Malaysian Dividends:</strong> 100% Tax-Exempt under the Single-Tier System.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Fixed Deposit Interest:</strong> 100% Tax-Exempt for individual bank accounts.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-semibold text-ink mb-4 dark:text-on-primary">Guide Navigation</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#freelancer-self-employed-taxation" class="text-link hover:underline">1. Freelancers, Gig Workers & Grab Drivers Tax Rules</a></li>
+        <li><a href="#rental-income-section-4d-deductions" class="text-link hover:underline">2. Residential & Commercial Rental Income Tax (Section 4d)</a></li>
+        <li><a href="#airbnb-homestay-business-vs-rental" class="text-link hover:underline">3. Airbnb & Short-Term Homestay Tax Classification</a></li>
+        <li><a href="#single-tier-dividend-exemption" class="text-link hover:underline">4. Single-Tier Stock Dividend Tax Exemption</a></li>
+        <li><a href="#fixed-deposit-interest-taxability" class="text-link hover:underline">5. Fixed Deposit Interest & Forex Trading Tax Rules</a></li>
+        <li><a href="#rpgt-real-property-gains-tax" class="text-link hover:underline">6. Real Property Gains Tax (RPGT) Overview</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">7. Frequently Asked Questions (FAQ)</a></li>
+      </ul>
+    </div>
+
+    <!-- Section 1 -->
+    <h2 id="freelancer-self-employed-taxation" class="text-2xl font-semibold text-ink dark:text-on-primary">1. Freelancers, Gig Workers & Grab Drivers Tax Rules</h2>
+    <p>
+      If you work as an independent consultant, software developer, insurance agent, real estate agent, or e-hailing Grab driver, your income is classified as <strong>Business / Commission Income under Section 4(a)</strong> of the Income Tax Act 1967.
+    </p>
+    <p>
+      Unlike salaried employees who file Form BE by April 30, self-employed individuals must submit <strong>Form B by June 30</strong> annually.
+    </p>
+
+    <!-- Deductible Expenses Card -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface my-6">
+      <h3 class="text-lg font-bold text-ink mb-3 dark:text-on-primary">Allowable Business Expenses for Freelancers & Commission Earners</h3>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+        <li class="flex items-start gap-2">
+          <span class="text-emerald-600 font-bold">✓</span>
+          <span><strong>Work Equipment:</strong> Laptops, smartphones, software licenses, internet subscriptions used for work.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-emerald-600 font-bold">✓</span>
+          <span><strong>Travel & Fuel:</strong> Mileage, petrol, toll, and parking incurred for client meetings or Grab rides.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-emerald-600 font-bold">✓</span>
+          <span><strong>Office & Marketing:</strong> Co-working desk space, website hosting, digital advertising expenses.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-emerald-600 font-bold">✓</span>
+          <span><strong>Professional Fees:</strong> Accounting fees, secretarial fees, and legal expenses directly tied to business.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Section 2 -->
+    <h2 id="rental-income-section-4d-deductions" class="text-2xl font-semibold text-ink dark:text-on-primary">2. Residential & Commercial Rental Income Tax (Section 4d)</h2>
+    <p>
+      Rental income derived from letting out real estate in Malaysia is assessed as non-business income under <strong>Section 4(d)</strong>. Landlords are taxed only on <strong>Net Rental Income</strong>.
+    </p>
+
+    <!-- Table of Rental Expense Deductions -->
+    <div class="overflow-x-auto my-6">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Property Expense Category</th>
+            <th class="border p-3">LHDN Tax Deductibility Status</th>
+            <th class="border p-3">Example Deductible Items</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter text-sm">
+          <tr>
+            <td class="p-3 font-medium">Statutory Property Taxes</td>
+            <td class="p-3 font-bold text-emerald-600">FULLY DEDUCTIBLE</td>
+            <td class="p-3">Annual Assessment Tax (Cukai Pintu) & Quit Rent (Cukai Tanah).</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Housing Loan Interest</td>
+            <td class="p-3 font-bold text-emerald-600">DEDUCTIBLE (Interest Portion Only)</td>
+            <td class="p-3">Interest charged on bank mortgage loans (principal repayment non-deductible).</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Maintenance & Repairs</td>
+            <td class="p-3 font-bold text-emerald-600">DEDUCTIBLE</td>
+            <td class="p-3">Plumbing repairs, aircon servicing, painting, fire insurance premiums.</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Tenant Acquisition Costs</td>
+            <td class="p-3 font-bold text-emerald-600">DEDUCTIBLE (Renewal Only)</td>
+            <td class="p-3">Agent commission & legal fees for renewing existing tenancy agreements.</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Initial Capital Improvements</td>
+            <td class="p-3 text-red-600 font-bold">NON-DEDUCTIBLE (Capital Expenditure)</td>
+            <td class="p-3">Initial renovations, extension of rooms, purchasing first furniture set.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="mt-4">
+      Calculate your net taxable rental income using our <a href="/countries/malaysia/rental-income/rental-income-calculator/" class="text-link font-semibold hover:underline">Malaysia Rental Income Tax Calculator</a>.
+    </p>
+
+    <!-- Section 3 -->
+    <h2 id="airbnb-homestay-business-vs-rental" class="text-2xl font-semibold text-ink dark:text-on-primary">3. Airbnb & Short-Term Homestay Tax Classification</h2>
+    <p>
+      LHDNM differentiates between passive long-term renting and active short-term Airbnb hosting:
+    </p>
+    <ul class="list-disc pl-6 space-y-2 text-sm">
+      <li><strong>Passive Rental (Section 4d):</strong> Standard residential renting without additional services. Deductions limited to basic property expenses.</li>
+      <li><strong>Active Business (Section 4a):</strong> Homestays or Airbnb units providing daily housekeeping, meals, laundry, or reception desks. Assessed as business income, allowing capital allowances on furniture and aircon units.</li>
+    </ul>
+
+    <!-- Section 4 -->
+    <h2 id="single-tier-dividend-exemption" class="text-2xl font-semibold text-ink dark:text-on-primary">4. Single-Tier Stock Dividend Tax Exemption</h2>
+    <p>
+      Under Malaysia's <strong>Single-Tier Dividend System</strong> (introduced under Section 108 of the Income Tax Act 1967), corporate income tax paid by a company (24%) is final.
+    </p>
+    <p>
+      Dividends distributed by Malaysian public listed companies (e.g. Maybank, Public Bank, Tenaga Nasional) or private Sdn Bhd companies are <strong>100% tax-exempt</strong> in the hands of individual shareholders and do not need to be declared as taxable income.
+    </p>
+
+    <!-- Section 5 -->
+    <h2 id="fixed-deposit-interest-taxability" class="text-2xl font-semibold text-ink dark:text-on-primary">5. Fixed Deposit Interest & Forex Trading Tax Rules</h2>
+    <p>
+      Investment interest and capital gains operate under specific statutory exemptions in Malaysia:
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6 text-sm">
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h4 class="font-bold text-ink mb-1 dark:text-on-primary">Fixed Deposit Interest (Individuals)</h4>
+        <p class="text-xs text-muted dark:text-muted">Interest earned from FDs in licensed Malaysian commercial/Islamic banks is <strong>100% TAX-EXEMPT for individuals</strong> under Schedule 6.</p>
+      </div>
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h4 class="font-bold text-ink mb-1 dark:text-on-primary">Stock Trading & Forex Gains</h4>
+        <p class="text-xs text-muted dark:text-muted">Capital gains from stock market trading are generally non-taxable unless LHDN determines trading activities constitute a systematic "Badges of Trade".</p>
+      </div>
+    </div>
+
+    <!-- Section 6 -->
+    <h2 id="rpgt-real-property-gains-tax" class="text-2xl font-semibold text-ink dark:text-on-primary">6. Real Property Gains Tax (RPGT) Overview</h2>
+    <p>
+      While Malaysia has zero general capital gains tax, gains from disposing of real estate property are subject to <strong>Real Property Gains Tax (RPGT)</strong> under the Real Property Gains Tax Act 1976. For Malaysian citizens and PRs, RPGT on residential property held for more than 5 years is <strong>0%</strong>.
+    </p>
+
+    <!-- Section 7 FAQs -->
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">7. Frequently Asked Questions (FAQ)</h2>
+    <div class="space-y-4">
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Are stock dividends taxable in Malaysia?</h3>
+        <p class="mt-1 text-sm">No. Dividends from Malaysian companies operate under the Single-Tier system and are 100% tax-exempt for shareholders.</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Is Fixed Deposit interest taxable for individuals?</h3>
+        <p class="mt-1 text-sm">No. Interest earned on fixed deposits placed with licensed banks in Malaysia is 100% tax-exempt for resident individuals.</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What form do freelancers use to file tax in Malaysia?</h3>
+        <p class="mt-1 text-sm">Freelancers, sole proprietors, and Grab drivers must file Form B electronically via MyTax by June 30th annually.</p>
+      </div>
+    </div>
+
+    <!-- Related Links -->
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Related Malaysia Tax Guides & Calculators</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/countries/malaysia/rental-income/rental-income-calculator/" class="text-link hover:underline font-medium">Malaysia Rental Income Tax Calculator</a>
+        <a href="/countries/malaysia/business-income/business-income-calculator/" class="text-link hover:underline font-medium">Malaysia Business Income Tax Calculator</a>
+        <a href="/blogs/malaysia-personal-income-tax-rates-brackets-2026-guide/" class="text-link hover:underline font-medium">Personal Tax Rates & Brackets 2026</a>
+        <a href="/blogs/malaysia-company-corporate-sme-tax-rate-2026-guide/" class="text-link hover:underline font-medium">Corporate & SME Tax Rate Guide</a>
+        <a href="/blogs/malaysia-mytax-lhdn-efiling-tax-reliefs-2026-guide/" class="text-link hover:underline font-medium">MyTax e-Filing & 20+ Tax Reliefs Guide</a>
+        <a href="/countries/malaysia/" class="text-link hover:underline font-medium">Finsiva Malaysia Tax Portal</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>

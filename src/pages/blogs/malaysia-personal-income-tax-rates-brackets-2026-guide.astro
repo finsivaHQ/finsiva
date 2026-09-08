@@ -1,0 +1,360 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Malaysia Personal Income Tax Guide 2026: Tax Rates, Brackets, PCB & Net Salary";
+const description = "Comprehensive 2026 guide to Malaysia individual income tax. Learn progressive resident tax rates (0% to 30%), chargeable income calculation, PCB deductions, minimum taxable salary, and RM 400 tax rebates.";
+const image = "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&q=80";
+const author = "Michael Tang, Senior Tax & Corporate Advisory Lead";
+const authorBio = "Senior tax consultant specializing in Malaysian Income Tax Act 1967 compliance, LHDNM tax filing, Monthly Tax Deduction (PCB) calculations, and personal tax optimization.";
+const canonical = "https://finsiva.com/blogs/malaysia-personal-income-tax-rates-brackets-2026-guide";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What are the individual income tax rates in Malaysia for 2026?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>For Year of Assessment 2026, resident individuals in Malaysia are taxed at progressive rates ranging from 0% to 30% across 11 income tiers. Non-residents pay a flat tax rate of 30% on all Malaysia-sourced employment and trade income.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is the minimum salary to pay income tax in Malaysia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>An individual earning a monthly gross salary of around RM 3,050 (or RM 36,600 annually) after mandatory EPF contributions generally falls below the taxable threshold due to the RM 9,000 basic personal tax relief and RM 400 tax rebate for chargeable income up to RM 35,000.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How is Monthly Tax Deduction (PCB / Potongan Cukai Bulanan) calculated in Malaysia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>PCB is a mandatory monthly tax deduction withheld directly by employers from an employee's salary under Section 107B of the Income Tax Act 1967, based on LHDNM automated tax tables and declared personal reliefs.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is the difference between Gross Income and Chargeable Income in Malaysia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Gross Income includes total salary, bonuses, director fees, and allowances. Chargeable Income equals Gross Income minus allowable tax-exempt allowances and total approved LHDN tax reliefs (such as RM 9,000 personal relief and EPF deductions).</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Who qualifies for the RM 400 personal tax rebate in Malaysia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Resident individual taxpayers whose annual Chargeable Income does not exceed RM 35,000 are entitled to an automatic personal tax rebate of RM 400 under Section 6A of the Income Tax Act 1967.</p>"
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="24 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <!-- Intro Banner -->
+    <p class="text-xl leading-relaxed font-light text-ink dark:text-on-primary">
+      Navigating <strong>Malaysia Income Tax</strong>—governed by the statutory <strong>Income Tax Act 1967</strong> and administered by <a href="https://www.hasil.gov.my" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">Lembaga Hasil Dalam Negeri Malaysia (LHDNM)</a>—is essential for every working professional, salaried employee, and tax resident. If you are asking <em>"apa itu income tax malaysia"</em>, <em>"how much salary need to pay income tax in malaysia"</em>, or searching for the latest <strong>2026 Malaysia tax rate table</strong>, this guide breaks down tax brackets, PCB deductions, and net take-home pay calculations.
+    </p>
+
+    <!-- Key Takeaways Card -->
+    <div class="rounded-2xl border border-primary/20 bg-primary/5 p-6 dark:border-primary/30 dark:bg-primary/10">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white font-bold text-sm">🇲🇾</span>
+        <h3 class="text-lg font-bold text-ink dark:text-on-primary">2026 Personal Income Tax Key Highlights</h3>
+      </div>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Resident Progressive Rates (2026):</strong> 0% to 30% across 11 income brackets.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Basic Personal Relief:</strong> Automatic RM 9,000 tax deduction for all resident individuals.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Minimum Taxable Threshold:</strong> Monthly income around RM 3,050+ (after EPF).</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Interactive Tax Estimator:</strong> Compute your take-home pay via our <a href="/countries/malaysia/income-tax/income-tax-calculator/" class="text-link font-semibold hover:underline">Malaysia Income Tax Calculator</a>.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-semibold text-ink mb-4 dark:text-on-primary">Article Outline</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#how-malaysian-taxation-works" class="text-link hover:underline">1. How Individual Taxation Works in Malaysia</a></li>
+        <li><a href="#income-tax-brackets-2026-table" class="text-link hover:underline">2. Official Malaysia Tax Rates & Brackets Table 2026</a></li>
+        <li><a href="#gross-vs-chargeable-income" class="text-link hover:underline">3. Calculating Gross Income vs Chargeable Income</a></li>
+        <li><a href="#minimum-salary-tax-threshold" class="text-link hover:underline">4. Minimum Salary Threshold & Tax Free Allowance</a></li>
+        <li><a href="#pcb-monthly-tax-deduction" class="text-link hover:underline">5. Understanding PCB (Potongan Cukai Bulanan)</a></li>
+        <li><a href="#tax-rebates-rm400" class="text-link hover:underline">6. Personal Tax Rebates (RM 400 Rebate & Zakat)</a></li>
+        <li><a href="#worked-calculation-example" class="text-link hover:underline">7. Worked Calculation Example: RM 60,000 Annual Salary</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">8. Frequently Asked Questions (FAQ)</a></li>
+      </ul>
+    </div>
+
+    <!-- Section 1 -->
+    <h2 id="how-malaysian-taxation-works" class="text-2xl font-semibold text-ink dark:text-on-primary">1. How Individual Taxation Works in Malaysia</h2>
+    <p>
+      Under the <strong>Malaysian Income Tax Act 1967 (Act 53)</strong>, tax is levied annually on income accruing in or derived from Malaysia. Malaysia operates a self-assessment tax regime (SST) administered by <strong>LHDNM (Hasil)</strong>.
+    </p>
+    <p>
+      Taxpayers fall into two main legal categories:
+    </p>
+    <ul class="list-disc pl-6 space-y-2 text-sm">
+      <li><strong>Tax Residents:</strong> Individuals residing physically in Malaysia for 182 days or more in a calendar year. Taxed at progressive rates from 0% to 30% and entitled to LHDN personal tax reliefs.</li>
+      <li><strong>Non-Residents:</strong> Individuals residing in Malaysia for fewer than 182 days. Taxed at a flat rate of 30% without access to personal tax reliefs.</li>
+    </ul>
+
+    <!-- Section 2 -->
+    <h2 id="income-tax-brackets-2026-table" class="text-2xl font-semibold text-ink dark:text-on-primary">2. Official Malaysia Tax Rates & Brackets Table 2026</h2>
+    <p>
+      The table below shows the official LHDNM progressive individual tax rates for resident taxpayers in Year of Assessment 2026:
+    </p>
+
+    <!-- Tax Brackets Table -->
+    <div class="overflow-x-auto my-6">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Chargeable Income Tier (MYR)</th>
+            <th class="border p-3">Tax Rate (%)</th>
+            <th class="border p-3">Base Tax Payable (MYR)</th>
+            <th class="border p-3">Cumulative Tax (MYR)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 font-medium">0 – 5,000</td>
+            <td class="p-3 font-bold text-emerald-600">0%</td>
+            <td class="p-3">RM 0</td>
+            <td class="p-3 font-medium">RM 0</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">5,001 – 20,000</td>
+            <td class="p-3 font-bold text-slate-700 dark:text-slate-300">1%</td>
+            <td class="p-3">RM 150</td>
+            <td class="p-3 font-medium">RM 150</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">20,001 – 35,000</td>
+            <td class="p-3 font-bold text-slate-700 dark:text-slate-300">3%</td>
+            <td class="p-3">RM 450</td>
+            <td class="p-3 font-medium">RM 600</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">35,001 – 50,000</td>
+            <td class="p-3 font-bold text-slate-700 dark:text-slate-300">6%</td>
+            <td class="p-3">RM 900</td>
+            <td class="p-3 font-medium">RM 1,500</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">50,001 – 70,000</td>
+            <td class="p-3 font-bold text-slate-700 dark:text-slate-300">11%</td>
+            <td class="p-3">RM 2,200</td>
+            <td class="p-3 font-medium">RM 3,700</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">70,001 – 100,000</td>
+            <td class="p-3 font-bold text-slate-700 dark:text-slate-300">19%</td>
+            <td class="p-3">RM 5,700</td>
+            <td class="p-3 font-medium">RM 9,400</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">100,001 – 400,000</td>
+            <td class="p-3 font-bold text-amber-600">25%</td>
+            <td class="p-3">RM 75,000</td>
+            <td class="p-3 font-medium">RM 84,400</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">400,001 – 600,000</td>
+            <td class="p-3 font-bold text-amber-600">26%</td>
+            <td class="p-3">RM 52,000</td>
+            <td class="p-3 font-medium">RM 136,400</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">600,001 – 2,000,000</td>
+            <td class="p-3 font-bold text-primary">28%</td>
+            <td class="p-3">RM 392,000</td>
+            <td class="p-3 font-medium">RM 528,400</td>
+          </tr>
+          <tr class="bg-primary/5 font-semibold dark:bg-primary/10">
+            <td class="p-3 text-primary">Above 2,000,000</td>
+            <td class="p-3 font-extrabold text-primary text-base">30%</td>
+            <td class="p-3">—</td>
+            <td class="p-3 text-primary font-bold">Top Marginal Rate</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Section 3 -->
+    <h2 id="gross-vs-chargeable-income" class="text-2xl font-semibold text-ink dark:text-on-primary">3. Calculating Gross Income vs Chargeable Income</h2>
+    <p>
+      In Malaysian tax computation format, tax is NOT calculated on your total gross salary. It is calculated on your <strong>Chargeable Income</strong>.
+    </p>
+
+    <!-- Formula Box -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface font-mono text-sm my-6">
+      <div class="font-bold text-ink dark:text-on-primary font-sans mb-2">Official LHDN Chargeable Income Computation Formula</div>
+      <code>Gross Annual Salary & Allowances</code><br/>
+      <code>MINUS: Tax-Exempt Allowances (e.g. Travel, Childcare)</code><br/>
+      <code>= Total Statutory Employment Income</code><br/>
+      <code>MINUS: Total Eligible Personal Tax Reliefs (EPF, Medical, Life Ins, Personal RM9k)</code><br/>
+      <code>= NET CHARGEABLE INCOME (Tax Base Applied to Brackets)</code>
+    </div>
+
+    <!-- Section 4 -->
+    <h2 id="minimum-salary-tax-threshold" class="text-2xl font-semibold text-ink dark:text-on-primary">4. Minimum Salary Threshold & Tax Free Allowance</h2>
+    <p>
+      Many employees search <em>"minimum salary to pay income tax in malaysia"</em> or <em>"syarat income tax malaysia"</em>.
+    </p>
+    <p>
+      An individual who earns <strong>below RM 3,050 per month</strong> (after deducting mandatory 11% EPF employee contributions) generally has zero tax liability. Here is why:
+    </p>
+    <ul class="list-disc pl-6 space-y-2 text-sm">
+      <li>Gross annual salary of RM 36,600 minus 11% EPF (RM 4,026) = RM 32,574 assessable income.</li>
+      <li>Subtract RM 9,000 basic personal relief = RM 23,574 Chargeable Income.</li>
+      <li>Gross tax payable on RM 23,574 is RM 257.22.</li>
+      <li>Because Chargeable Income (RM 23,574) is below RM 35,000, the individual receives the automatic <strong>RM 400 Personal Tax Rebate</strong>, bringing final tax payable to <strong>RM 0</strong>!</li>
+    </ul>
+
+    <!-- Section 5 -->
+    <h2 id="pcb-monthly-tax-deduction" class="text-2xl font-semibold text-ink dark:text-on-primary">5. Understanding PCB (Potongan Cukai Bulanan)</h2>
+    <p>
+      <strong>Potongan Cukai Bulanan (PCB)</strong> is a compulsory tax withholding mechanism enforced under Section 107B of the Income Tax Act 1967. Employers deduct PCB directly from an employee's monthly pay check and remit it to LHDNM by the 15th of the following month.
+    </p>
+    <p>
+      When you submit your annual <strong>Form BE</strong> via e-Filing in April, if your total PCB withheld exceeds your actual final tax liability, LHDN will automatically issue a <strong>tax refund</strong> directly to your bank account.
+    </p>
+
+    <!-- Section 6 -->
+    <h2 id="tax-rebates-rm400" class="text-2xl font-semibold text-ink dark:text-on-primary">6. Personal Tax Rebates (RM 400 Rebate & Zakat)</h2>
+    <p>
+      Tax rebates are subtracted directly from your final tax payable dollar-for-dollar (unlike tax reliefs, which reduce chargeable income):
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6 text-sm">
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h4 class="font-bold text-ink mb-1 dark:text-on-primary">RM 400 Individual Rebate</h4>
+        <p class="text-xs text-muted dark:text-muted">Available to resident taxpayers whose Chargeable Income does not exceed RM 35,000.</p>
+      </div>
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h4 class="font-bold text-ink mb-1 dark:text-on-primary">Zakat & Fitrah Rebate</h4>
+        <p class="text-xs text-muted dark:text-muted">Muslim taxpayers can claim a 100% tax rebate for obligate Zakat or Fitrah paid to state Islamic religious bodies.</p>
+      </div>
+    </div>
+
+    <!-- Section 7 Worked Example -->
+    <h2 id="worked-calculation-example" class="text-2xl font-semibold text-ink dark:text-on-primary">7. Worked Calculation Example: RM 60,000 Annual Salary</h2>
+    <p>
+      Consider a resident employee earning a monthly gross salary of RM 5,000 (RM 60,000 annually) with standard claims:
+    </p>
+
+    <!-- Worked Example Breakdown Card -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface my-6">
+      <h3 class="text-lg font-bold text-ink mb-4 dark:text-on-primary">Step-by-Step LHDN Tax Calculation Breakdown</h3>
+      <div class="space-y-3 text-sm font-mono">
+        <div class="flex justify-between border-b border-hairline pb-2 dark:border-overlay-lighter">
+          <span>Gross Annual Salary (RM 5,000 × 12):</span>
+          <span class="font-bold">RM 60,000.00</span>
+        </div>
+        <div class="flex justify-between border-b border-hairline pb-2 dark:border-overlay-lighter text-emerald-600">
+          <span>Less: Personal Relief (Automatic):</span>
+          <span>- RM 9,000.00</span>
+        </div>
+        <div class="flex justify-between border-b border-hairline pb-2 dark:border-overlay-lighter text-emerald-600">
+          <span>Less: EPF Employee Contribution (11% max claim RM4,000):</span>
+          <span>- RM 4,000.00</span>
+        </div>
+        <div class="flex justify-between border-b border-hairline pb-2 dark:border-overlay-lighter text-emerald-600">
+          <span>Less: Lifestyle Tax Relief (Laptop/Internet):</span>
+          <span>- RM 2,500.00</span>
+        </div>
+        <div class="flex justify-between border-b border-hairline pb-2 dark:border-overlay-lighter font-bold text-ink dark:text-on-primary">
+          <span>NET CHARGEABLE INCOME:</span>
+          <span class="text-primary">RM 44,500.00</span>
+        </div>
+        <div class="flex justify-between border-b border-hairline pb-2 dark:border-overlay-lighter pt-2">
+          <span>Tax on First RM 35,000 (Fixed Tier Tax):</span>
+          <span>RM 600.00</span>
+        </div>
+        <div class="flex justify-between border-b border-hairline pb-2 dark:border-overlay-lighter">
+          <span>Tax on Remaining RM 9,500 @ 6%:</span>
+          <span>RM 570.00</span>
+        </div>
+        <div class="flex justify-between text-base font-extrabold text-ink dark:text-on-primary pt-1">
+          <span>TOTAL ANNUAL TAX PAYABLE:</span>
+          <span class="text-primary">RM 1,170.00</span>
+        </div>
+        <div class="flex justify-between text-xs text-muted dark:text-muted pt-1 font-sans">
+          <span>Effective Tax Rate:</span>
+          <span>1.95% of Gross Income</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="mt-4">
+      Estimate your exact take-home pay and tax liability using our interactive <a href="/countries/malaysia/income-tax/income-tax-calculator/" class="text-link font-semibold hover:underline">Malaysia Income Tax Calculator</a>.
+    </p>
+
+    <!-- Section 8 FAQs -->
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">8. Frequently Asked Questions (FAQ)</h2>
+    <div class="space-y-4">
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What are the Malaysia personal income tax rates for 2026?</h3>
+        <p class="mt-1 text-sm">Tax rates for resident individuals range from 0% to 30% across 11 progressive tiers. Non-residents are taxed at a flat rate of 30%.</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is the minimum salary to pay income tax in Malaysia?</h3>
+        <p class="mt-1 text-sm">An employee earning around RM 3,050/month (after EPF) generally owes zero income tax due to the RM 9,000 personal relief and RM 400 tax rebate.</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is PCB in Malaysian salary slips?</h3>
+        <p class="mt-1 text-sm">PCB (Potongan Cukai Bulanan) is compulsory monthly tax withheld from your salary by your employer and remitted to LHDNM.</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">How do I claim a tax refund from LHDN?</h3>
+        <p class="mt-1 text-sm">Submit your annual Form BE via MyTax e-Filing. If your total PCB deductions exceed your final calculated tax liability, LHDN will refund the excess directly to your bank account.</p>
+      </div>
+    </div>
+
+    <!-- Related Links -->
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Related Malaysia Tax Guides & Calculators</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/countries/malaysia/income-tax/income-tax-calculator/" class="text-link hover:underline font-medium">Malaysia Income Tax Calculator</a>
+        <a href="/blogs/malaysia-expats-foreigners-non-resident-tax-guide-2026/" class="text-link hover:underline font-medium">Expats & Foreigners Tax Guide 2026</a>
+        <a href="/blogs/malaysia-foreign-source-income-tax-fsi-2026-guide/" class="text-link hover:underline font-medium">Foreign Source Income (FSI) Tax Guide</a>
+        <a href="/blogs/malaysia-company-corporate-sme-tax-rate-2026-guide/" class="text-link hover:underline font-medium">Corporate & SME Tax Rate Guide (17%/24%)</a>
+        <a href="/blogs/malaysia-freelancer-rental-airbnb-dividend-tax-guide/" class="text-link hover:underline font-medium">Freelancer, Rental & Airbnb Tax Guide</a>
+        <a href="/blogs/malaysia-mytax-lhdn-efiling-tax-reliefs-2026-guide/" class="text-link hover:underline font-medium">MyTax e-Filing & 20+ Tax Reliefs Guide</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>

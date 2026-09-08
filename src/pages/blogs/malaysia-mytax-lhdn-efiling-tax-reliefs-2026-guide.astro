@@ -1,0 +1,312 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Malaysia LHDN MyTax e-Filing Guide 2026: Form BE/B, Deadlines & Tax Reliefs";
+const description = "Complete 2026 guide to LHDNM MyTax e-Filing (hasil.gov.my). Learn Form BE and Form B filing deadlines, 20+ claimable tax reliefs (EPF, life insurance, medical, lifestyle), online tax payments, and amended returns.";
+const image = "https://images.unsplash.com/photo-1554224154-22dec7ec8818?w=1200&q=80";
+const author = "Michael Tang, Senior Tax & Corporate Advisory Lead";
+const authorBio = "Senior tax consultant specializing in Malaysian LHDNM MyTax e-Filing compliance, Form BE/B submission, tax relief audit documentation, and tax payment processing.";
+const canonical = "https://finsiva.com/blogs/malaysia-mytax-lhdn-efiling-tax-reliefs-2026-guide";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What are the e-Filing deadlines for Form BE and Form B in Malaysia for 2026?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>For Year of Assessment 2026, the e-Filing deadline for Form BE (salaried individuals without business income) is May 15, 2026 (with grace period). The e-Filing deadline for Form B (self-employed individuals with business income) is July 15, 2026.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is the basic personal tax relief limit in Malaysia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Every resident individual taxpayer automatically receives a basic personal tax relief of RM 9,000 under Section 46 of the Income Tax Act 1967.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What items can be claimed under the Lifestyle Tax Relief (up to RM 2,500)?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Lifestyle tax relief up to RM 2,500 covers purchase of books, journals, personal computers, smartphones, tablets, home internet subscriptions, and sports equipment/gym memberships.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How can taxpayers pay income tax online to LHDN in Malaysia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Taxpayers can pay income tax online via the ByrHASIL portal on MyTax (mytax.hasil.gov.my) using FPX online banking, credit card (Visa/Mastercard), or internet banking bill payments.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How long must tax receipts be kept for LHDN audit in Malaysia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Under Section 82A of the Income Tax Act 1967, taxpayers are legally required to keep all tax receipts, EA forms, and supporting documents for a minimum period of 7 years from the end of the year in which the tax return is filed.</p>"
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="25 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <!-- Intro Banner -->
+    <p class="text-xl leading-relaxed font-light text-ink dark:text-on-primary">
+      Filing your annual tax return with <a href="https://www.hasil.gov.my" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">Lembaga Hasil Dalam Negeri Malaysia (LHDNM)</a> via the official <strong>MyTax e-Filing portal</strong> (<em>mytax.hasil.gov.my</em>) is a smooth process when prepared. Whether searching for <strong>Form BE efiling guide</strong>, <strong>LHDN tax relief claimable items</strong>, online tax payment options by credit card, or finding your local LHDN branch (in KL, Petaling Jaya, Shah Alam, Penang, or JB), this comprehensive 2026 guide covers everything you need to file accurately.
+    </p>
+
+    <!-- Key Takeaways Card -->
+    <div class="rounded-2xl border border-primary/20 bg-primary/5 p-6 dark:border-primary/30 dark:bg-primary/10">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white font-bold text-sm">📝</span>
+        <h3 class="text-lg font-bold text-ink dark:text-on-primary">MyTax e-Filing & Reliefs Quick Summary</h3>
+      </div>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Form BE Deadline (Salaried):</strong> April 30 (Paper) / May 15 (e-Filing grace period).</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Form B Deadline (Business):</strong> June 30 (Paper) / July 15 (e-Filing grace period).</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Top Reliefs:</strong> Personal (RM9k), EPF (RM4k), Life Ins (RM3k), Medical (RM10k), Lifestyle (RM2.5k).</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Interactive Relief Calculator:</strong> Calculate your total savings via our <a href="/countries/malaysia/tax-reliefs/tax-reliefs-calculator/" class="text-link font-semibold hover:underline">Malaysia Tax Reliefs Calculator</a>.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-semibold text-ink mb-4 dark:text-on-primary">Guide Navigation</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#mytax-efiling-step-by-step" class="text-link hover:underline">1. Step-by-Step MyTax (e-Filing) Submission Guide</a></li>
+        <li><a href="#form-be-vs-form-b-deadlines" class="text-link hover:underline">2. Form BE vs Form B Deadlines & Late Penalties</a></li>
+        <li><a href="#master-list-tax-reliefs-2026" class="text-link hover:underline">3. Master List of 20+ LHDN Tax Reliefs & Limits (2026)</a></li>
+        <li><a href="#paying-tax-online-byrhasil" class="text-link hover:underline">4. How to Pay Income Tax Online (ByrHASIL / Credit Card)</a></li>
+        <li><a href="#amended-return-form-errors" class="text-link hover:underline">5. Correcting Errors: Amended Return Form (Tata Cara Pindaan)</a></li>
+        <li><a href="#7-year-record-keeping-lhdn-branches" class="text-link hover:underline">6. 7-Year Receipt Keeping Rules & LHDN Branch Directory</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">7. Frequently Asked Questions (FAQ)</a></li>
+      </ul>
+    </div>
+
+    <!-- Section 1 -->
+    <h2 id="mytax-efiling-step-by-step" class="text-2xl font-semibold text-ink dark:text-on-primary">1. Step-by-Step MyTax (e-Filing) Submission Guide</h2>
+    <p>
+      LHDNM's central portal <strong>MyTax</strong> (<a href="https://mytax.hasil.gov.my" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">mytax.hasil.gov.my</a>) provides a single sign-on access to e-Filing, PCB ledgers, and tax payment status.
+    </p>
+
+    <!-- Workflow Diagram -->
+    <div class="my-6 rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+      <h3 class="text-lg font-semibold text-ink mb-4 text-center dark:text-on-primary">4-Step MyTax e-Filing Submission Process</h3>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-3 text-center text-sm">
+        <div class="rounded-lg border border-slate-200 bg-slate-50 p-3 dark:border-slate-700 dark:bg-slate-800">
+          <div class="font-bold text-primary mb-1">1. Login MyTax</div>
+          <p class="text-xs text-muted dark:text-muted">Login using MyKad NRIC number and Digital Certificate password.</p>
+        </div>
+        <div class="rounded-lg border border-slate-200 bg-slate-50 p-3 dark:border-slate-700 dark:bg-slate-800">
+          <div class="font-bold text-primary mb-1">2. Select e-Form</div>
+          <p class="text-xs text-muted dark:text-muted">Choose e-BE (salaried) or e-B (business) for Year of Assessment 2026.</p>
+        </div>
+        <div class="rounded-lg border border-slate-200 bg-slate-50 p-3 dark:border-slate-700 dark:bg-slate-800">
+          <div class="font-bold text-primary mb-1">3. Key In Income & Reliefs</div>
+          <p class="text-xs text-muted dark:text-muted">Verify EA Form pre-filled salary; enter EPF, lifestyle, and medical relief amounts.</p>
+        </div>
+        <div class="rounded-lg border border-slate-200 bg-slate-50 p-3 dark:border-slate-700 dark:bg-slate-800">
+          <div class="font-bold text-primary mb-1">4. Sign & Submit</div>
+          <p class="text-xs text-muted dark:text-muted">Review summary. Digitally sign and download e-BE verification slip & receipt.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <h2 id="form-be-vs-form-b-deadlines" class="text-2xl font-semibold text-ink dark:text-on-primary">2. Form BE vs Form B Deadlines & Late Penalties</h2>
+    <div class="overflow-x-auto my-6">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Tax Return Form</th>
+            <th class="border p-3">Taxpayer Profile Category</th>
+            <th class="border p-3">Paper Manual Deadline</th>
+            <th class="border p-3">MyTax e-Filing Deadline (Grace Period)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 font-bold text-primary">Form BE / e-BE</td>
+            <td class="p-3">Resident Salaried Employees (No Business Income)</td>
+            <td class="p-3">30 April 2026</td>
+            <td class="p-3 font-bold text-emerald-600">15 May 2026</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-bold text-slate-700 dark:text-slate-300">Form B / e-B</td>
+            <td class="p-3">Resident Individuals with Business / Freelance Income</td>
+            <td class="p-3">30 June 2026</td>
+            <td class="p-3 font-bold text-emerald-600">15 July 2026</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-bold text-slate-700 dark:text-slate-300">Form M / e-M</td>
+            <td class="p-3">Non-Resident Individuals</td>
+            <td class="p-3">30 April / 30 June</td>
+            <td class="p-3">15 May / 15 July</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Section 3 -->
+    <h2 id="master-list-tax-reliefs-2026" class="text-2xl font-semibold text-ink dark:text-on-primary">3. Master List of 20+ LHDN Tax Reliefs & Limits (2026)</h2>
+    <p>
+      Claiming all eligible tax reliefs is the single most effective way to reduce your chargeable income:
+    </p>
+
+    <!-- Tax Relief Master Table -->
+    <div class="overflow-x-auto my-6">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Tax Relief Category</th>
+            <th class="border p-3">Maximum Limit (MYR)</th>
+            <th class="border p-3">Qualifying Expenses & Conditions</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 font-bold text-primary">Individual Basic Personal Relief</td>
+            <td class="p-3 font-bold text-primary">RM 9,000</td>
+            <td class="p-3">Automatic relief granted to every resident individual taxpayer.</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">EPF Employee Contribution Relief</td>
+            <td class="p-3 font-bold text-emerald-600">RM 4,000</td>
+            <td class="p-3">Mandatory and voluntary contributions to EPF (KWSP).</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Life Insurance & Takaful Premiums</td>
+            <td class="p-3 font-bold text-emerald-600">RM 3,000</td>
+            <td class="p-3">Life insurance policy premiums paid for self or spouse.</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Medical Expenses (Self, Spouse, Child)</td>
+            <td class="p-3 font-bold text-emerald-600">RM 10,000</td>
+            <td class="p-3">Serious illness treatment, fertility treatment, vaccination (RM1k), health screening (RM1k).</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Lifestyle Tax Relief</td>
+            <td class="p-3 font-bold text-emerald-600">RM 2,500</td>
+            <td class="p-3">Books, smartphones, laptops, tablets, internet subscriptions, sports equipment.</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Additional Sports Lifestyle Relief</td>
+            <td class="p-3 font-bold text-emerald-600">RM 1,000</td>
+            <td class="p-3">Purchase of sports equipment, rental of sports facilities, competition fees.</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Education Fees (Self)</td>
+            <td class="p-3 font-bold text-emerald-600">RM 7,000</td>
+            <td class="p-3">Tertiary degrees in law, accounting, medicine, IT, or approved upskilling courses (RM2k cap).</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Child Relief (Under 18 Years)</td>
+            <td class="p-3 font-bold text-emerald-600">RM 2,000 / child</td>
+            <td class="p-3">Unmarried child under 18 years of age.</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Higher Education Child Relief (Diploma/Degree)</td>
+            <td class="p-3 font-bold text-emerald-600">RM 8,000 / child</td>
+            <td class="p-3">Unmarried child over 18 years studying full-time in college/university.</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">SSPN Net Savings (Child Education)</td>
+            <td class="p-3 font-bold text-emerald-600">RM 8,000</td>
+            <td class="p-3">Net deposit in Skim Simpanan Pendidikan Nasional (SSPN) account for children.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="mt-4">
+      Calculate your complete tax relief savings with our <a href="/countries/malaysia/tax-reliefs/tax-reliefs-calculator/" class="text-link font-semibold hover:underline">Malaysia Tax Reliefs Calculator</a>.
+    </p>
+
+    <!-- Section 4 -->
+    <h2 id="paying-tax-online-byrhasil" class="text-2xl font-semibold text-ink dark:text-on-primary">4. How to Pay Income Tax Online (ByrHASIL / Credit Card)</h2>
+    <p>
+      If your annual tax calculation shows a tax balance payable after PCB, you can pay online via:
+    </p>
+    <ul class="list-disc pl-6 space-y-2 text-sm">
+      <li><strong>ByrHASIL FPX:</strong> Instant online banking transfer directly within MyTax.</li>
+      <li><strong>Credit Card (Visa / Mastercard):</strong> Pay online via the ByrHASIL credit card payment portal.</li>
+      <li><strong>Commercial Internet Banking:</strong> Bill payment via Maybank2u, CIMB Clicks, RHB, Public Bank using your Tax Reference Number.</li>
+    </ul>
+
+    <!-- Section 5 -->
+    <h2 id="amended-return-form-errors" class="text-2xl font-semibold text-ink dark:text-on-primary">5. Correcting Errors: Amended Return Form (Tata Cara Pindaan)</h2>
+    <p>
+      If you made a mistake on your submitted e-Filing (e.g. forgot to claim a tax relief or declared incorrect income), you can submit an <strong>Amended Return Form (Borang Nyata Pindaan / e-Pindaan)</strong> via MyTax within 6 months from the original filing deadline.
+    </p>
+
+    <!-- Section 6 -->
+    <h2 id="7-year-record-keeping-lhdn-branches" class="text-2xl font-semibold text-ink dark:text-on-primary">6. 7-Year Receipt Keeping Rules & LHDN Branch Directory</h2>
+    <p>
+      Under Section 82A of the Income Tax Act 1967, taxpayers must retain all EA forms, purchase receipts, insurance statements, and medical bills for a <strong>minimum of 7 years</strong> for LHDN tax audit verification.
+    </p>
+
+    <!-- Section 7 FAQs -->
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">7. Frequently Asked Questions (FAQ)</h2>
+    <div class="space-y-4">
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is the deadline for e-Filing Form BE in 2026?</h3>
+        <p class="mt-1 text-sm">The e-Filing deadline for Form BE (salaried employees) is May 15, 2026 (including the official 15-day e-Filing grace period).</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is included in the RM 2,500 Lifestyle Tax Relief?</h3>
+        <p class="mt-1 text-sm">Books, magazines, smartphones, laptops, tablets, internet subscriptions, and sports equipment.</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">How long do I need to keep tax receipts in Malaysia?</h3>
+        <p class="mt-1 text-sm">You are legally required to keep all tax receipts and supporting documents for 7 years from the end of the relevant tax year.</p>
+      </div>
+    </div>
+
+    <!-- Related Links -->
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Related Malaysia Tax Articles & Calculators</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/countries/malaysia/tax-reliefs/tax-reliefs-calculator/" class="text-link hover:underline font-medium">Malaysia Tax Reliefs Calculator</a>
+        <a href="/countries/malaysia/tax-filing/tax-filing-calculator/" class="text-link hover:underline font-medium">Tax Filing Assistant Calculator</a>
+        <a href="/blogs/malaysia-personal-income-tax-rates-brackets-2026-guide/" class="text-link hover:underline font-medium">Personal Tax Rates & Brackets 2026</a>
+        <a href="/blogs/malaysia-expats-foreigners-non-resident-tax-guide-2026/" class="text-link hover:underline font-medium">Expats & Foreigners Tax Guide 2026</a>
+        <a href="/blogs/malaysia-company-corporate-sme-tax-rate-2026-guide/" class="text-link hover:underline font-medium">Corporate & SME Tax Rate Guide</a>
+        <a href="/countries/malaysia/" class="text-link hover:underline font-medium">Finsiva Malaysia Tax Hub</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>

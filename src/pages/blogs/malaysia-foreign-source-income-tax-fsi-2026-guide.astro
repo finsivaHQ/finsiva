@@ -1,0 +1,214 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Malaysia Foreign Source Income (FSI) Tax Guide 2026: Remittance & Overseas Dividends";
+const description = "Comprehensive 2026 guide to Malaysia Foreign-Sourced Income (FSI) taxation. Learn about LHDN remittance rules, 3% gross tax rate, foreign dividend exemptions, statutory conditions, and Double Tax Relief.";
+const image = "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=1200&q=80";
+const author = "Michael Tang, Senior Tax & Corporate Advisory Lead";
+const authorBio = "Senior tax consultant specializing in Malaysian foreign-sourced income (FSI) taxation, cross-border remittance planning, Double Taxation Agreements (DTA), and Section 132/133 foreign tax credits.";
+const canonical = "https://finsiva.com/blogs/malaysia-foreign-source-income-tax-fsi-2026-guide";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Is foreign income received in Malaysia taxable in 2026?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Foreign-sourced income (FSI) remitted into Malaysia by resident individuals is subject to tax unless specifically exempted under statutory orders (such as the Income Tax Exemption Order for qualifying foreign dividends and employment income meeting economic substance criteria).</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Are foreign dividends received by Malaysian residents taxable?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Foreign dividends remitted into Malaysia by resident individuals and companies are tax-exempt until December 31, 2026, provided the foreign dividend has been subjected to tax in the source country with a headline tax rate of at least 15%.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is the 3% concessionary tax rate on foreign income remittance in Malaysia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>During the transitional period announced in Budget updates, LHDN offered a concessionary tax rate of 3% on the gross amount of foreign-sourced income remitted into Malaysia. Post-transitional period, remitted FSI is taxed at prevailing scale rates (up to 30% for individuals and 24% for companies) unless exempt.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How does Double Taxation Agreement (DTA) bilateral credit work for foreign income in Malaysia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Under Section 132 and Section 133 of the Income Tax Act 1967, taxpayers can claim a Double Tax Credit against Malaysian tax payable for foreign tax paid in the source country, preventing double taxation.</p>"
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="22 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <!-- Intro Banner -->
+    <p class="text-xl leading-relaxed font-light text-ink dark:text-on-primary">
+      Understanding the taxation of <strong>Foreign-Sourced Income (FSI) in Malaysia</strong>—often searched as <em>"foreign source income malaysia tax"</em>, <em>"tax on foreign income malaysia 2026"</em>, or <em>"remittance to malaysia taxable"</em>—is vital for Malaysian residents earning overseas dividends, foreign rental income, or offshore business profits. Governed by <a href="https://www.hasil.gov.my" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">LHDNM</a> under Paragraph 28, Schedule 6 of the Income Tax Act 1967, this guide explains current FSI tax exemptions and compliance rules for 2026.
+    </p>
+
+    <!-- Key Takeaways Card -->
+    <div class="rounded-2xl border border-primary/20 bg-primary/5 p-6 dark:border-primary/30 dark:bg-primary/10">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white font-bold text-sm">🌐</span>
+        <h3 class="text-lg font-bold text-ink dark:text-on-primary">Foreign Source Income (FSI) Tax Summary</h3>
+      </div>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Territorial Basis Rule:</strong> Income derived outside Malaysia is generally non-taxable unless remitted into Malaysia.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Foreign Dividends Exemption:</strong> Tax-exempt through 2026 if foreign source headline rate is ≥15%.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Bilateral DTA Credit:</strong> Claim Section 132/133 foreign tax credits to eliminate double tax.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Interactive Calculator:</strong> Estimate your FSI tax liability via our <a href="/countries/malaysia/foreign-income/foreign-income-calculator/" class="text-link font-semibold hover:underline">Malaysia Foreign Income Calculator</a>.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-semibold text-ink mb-4 dark:text-on-primary">Guide Navigation</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#fsi-tax-framework-malaysia" class="text-link hover:underline">1. The Foreign-Sourced Income (FSI) Legal Framework</a></li>
+        <li><a href="#remittance-rule-when-tax-applies" class="text-link hover:underline">2. The Remittance Trigger: When Foreign Income is Taxed</a></li>
+        <li><a href="#foreign-dividend-exemption-conditions" class="text-link hover:underline">3. Tax Exemption Conditions for Foreign Dividends</a></li>
+        <li><a href="#transitional-3-percent-rate" class="text-link hover:underline">4. Budget Updates & The Concessionary 3% Rate</a></li>
+        <li><a href="#section-132-133-dta-credits" class="text-link hover:underline">5. Claiming Section 132 & 133 Foreign Tax Credits</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">6. Frequently Asked Questions (FAQ)</a></li>
+      </ul>
+    </div>
+
+    <!-- Section 1 -->
+    <h2 id="fsi-tax-framework-malaysia" class="text-2xl font-semibold text-ink dark:text-on-primary">1. The Foreign-Sourced Income (FSI) Legal Framework</h2>
+    <p>
+      Historically, Malaysia operated a strict territorial tax system, exempting all foreign-sourced income remitted into Malaysia by resident individuals. Following international tax standards (EU and OECD economic substance guidelines), Budget 2022 and subsequent tax circulars brought foreign-sourced income received in Malaysia by tax residents into the scope of taxation under Section 4(f) of the Income Tax Act 1967.
+    </p>
+
+    <!-- Visual Matrix Card -->
+    <div class="my-6 rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+      <h3 class="text-lg font-semibold text-ink mb-4 text-center dark:text-on-primary">Foreign Income Tax Treatment Matrix (2026 Rules)</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center text-sm">
+        <div class="rounded-lg border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-800">
+          <div class="font-bold text-emerald-600 mb-1">Offshore (Unremitted)</div>
+          <p class="text-xs text-muted dark:text-muted">Foreign income kept in overseas bank accounts or reinvested abroad is <strong>100% NON-TAXABLE in Malaysia</strong>.</p>
+        </div>
+        <div class="rounded-lg border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-800">
+          <div class="font-bold text-primary mb-1">Qualifying Remitted Dividends</div>
+          <p class="text-xs text-muted dark:text-muted">Remitted foreign dividends meeting headline rate ≥15% are <strong>EXEMPT from Malaysian Tax</strong> through 2026.</p>
+        </div>
+        <div class="rounded-lg border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-800">
+          <div class="font-bold text-amber-600 mb-1">Non-Qualifying Remitted FSI</div>
+          <p class="text-xs text-muted dark:text-muted">Remitted foreign interest, rental, or trade income without exemption is <strong>TAXABLE at progressive rates (0%–30%)</strong>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <h2 id="remittance-rule-when-tax-applies" class="text-2xl font-semibold text-ink dark:text-on-primary">2. The Remittance Trigger: When Foreign Income is Taxed</h2>
+    <p>
+      LHDNM defines <em>"received in Malaysia"</em> as:
+    </p>
+    <ul class="list-disc pl-6 space-y-2 text-sm">
+      <li><strong>Electronic Transfer:</strong> Funds transferred from a foreign bank account to a Malaysian bank account.</li>
+      <li><strong>Cash / Cheque Import:</strong> Physical cash, cashier's orders, or bank drafts brought into Malaysia.</li>
+      <li><strong>Debt Settlement:</strong> Using foreign income to settle debts or expenses incurred in Malaysia.</li>
+    </ul>
+
+    <!-- Section 3 -->
+    <h2 id="foreign-dividend-exemption-conditions" class="text-2xl font-semibold text-ink dark:text-on-primary">3. Tax Exemption Conditions for Foreign Dividends</h2>
+    <p>
+      Under LHDN Guidelines, foreign dividends remitted by individual tax residents in Malaysia are <strong>exempt from income tax</strong> if they meet statutory conditions:
+    </p>
+    <ol class="list-decimal pl-6 space-y-2 text-sm">
+      <li><strong>Source Tax Country Rate:</strong> The foreign dividend income must have been subject to tax in the country of origin where the headline corporate tax rate is at least <strong>15%</strong>.</li>
+      <li><strong>Tax Paid in Source Jurisdiction:</strong> The taxpayer must provide documentary proof (such as tax deduction certificates or foreign dividend vouchers) showing foreign tax was paid.</li>
+    </ol>
+
+    <!-- Section 4 -->
+    <h2 id="transitional-3-percent-rate" class="text-2xl font-semibold text-ink dark:text-on-primary">4. Budget Updates & The Concessionary 3% Rate</h2>
+    <p>
+      During the initial transition phase (1 January 2022 to 30 June 2022), LHDNM applied a concessionary gross tax rate of <strong>3% on foreign income remitted into Malaysia</strong>. From 1 July 2022 through 2026, remitted foreign-sourced income that does not qualify for statutory exemptions is taxed at standard scale rates (0% to 30% for individuals, 24% for corporations).
+    </p>
+
+    <!-- Section 5 -->
+    <h2 id="section-132-133-dta-credits" class="text-2xl font-semibold text-ink dark:text-on-primary">5. Claiming Section 132 & 133 Foreign Tax Credits</h2>
+    <p>
+      To prevent double taxation on remitted offshore earnings, the Income Tax Act 1967 provides two relief mechanisms:
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6 text-sm">
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h4 class="font-bold text-ink mb-1 dark:text-on-primary">Section 132 Bilateral Relief (DTA Countries)</h4>
+        <p class="text-xs text-muted dark:text-muted">Full double tax credit against Malaysian tax for foreign tax paid in countries with which Malaysia has a Double Taxation Agreement.</p>
+      </div>
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h4 class="font-bold text-ink mb-1 dark:text-on-primary">Section 133 Unilateral Relief (Non-DTA Countries)</h4>
+        <p class="text-xs text-muted dark:text-muted">Unilateral relief capped at 50% of foreign tax paid for income remitted from non-DTA partner countries.</p>
+      </div>
+    </div>
+
+    <p>
+      Estimate your potential foreign tax credit and net tax payable with our <a href="/countries/malaysia/foreign-income/foreign-income-calculator/" class="text-link font-semibold hover:underline">Malaysia Foreign Income Calculator</a>.
+    </p>
+
+    <!-- Section 6 FAQs -->
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">6. Frequently Asked Questions (FAQ)</h2>
+    <div class="space-y-4">
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Is foreign-sourced income taxed in Malaysia if kept overseas?</h3>
+        <p class="mt-1 text-sm">No. Foreign income kept in offshore bank accounts or reinvested abroad is not subject to Malaysian income tax.</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Are foreign dividends remitted to Malaysia tax-free?</h3>
+        <p class="mt-1 text-sm">Yes, provided the foreign dividends were subject to tax in the source country with a headline tax rate of at least 15%.</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">How do I claim Double Tax Relief (DTA credit) in Malaysia?</h3>
+        <p class="mt-1 text-sm">Declare foreign income received on your e-Filing Form BE/B and claim bilateral credit under Section 132 by submitting foreign tax vouchers.</p>
+      </div>
+    </div>
+
+    <!-- Related Links -->
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Related Malaysia Tax Articles & Tools</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/countries/malaysia/foreign-income/foreign-income-calculator/" class="text-link hover:underline font-medium">Malaysia Foreign Income Calculator</a>
+        <a href="/blogs/malaysia-personal-income-tax-rates-brackets-2026-guide/" class="text-link hover:underline font-medium">Personal Tax Rates & Brackets 2026</a>
+        <a href="/blogs/malaysia-expats-foreigners-non-resident-tax-guide-2026/" class="text-link hover:underline font-medium">Expats & Foreigners Tax Guide 2026</a>
+        <a href="/blogs/malaysia-company-corporate-sme-tax-rate-2026-guide/" class="text-link hover:underline font-medium">Corporate & SME Tax Rate Guide</a>
+        <a href="/blogs/malaysia-mytax-lhdn-efiling-tax-reliefs-2026-guide/" class="text-link hover:underline font-medium">MyTax e-Filing & 20+ Tax Reliefs Guide</a>
+        <a href="/countries/malaysia/" class="text-link hover:underline font-medium">Finsiva Malaysia Tax Portal</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>
