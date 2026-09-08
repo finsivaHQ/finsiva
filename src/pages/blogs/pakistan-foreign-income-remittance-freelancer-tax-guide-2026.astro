@@ -1,0 +1,281 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Pakistan Foreign Income, Remittances & Freelancer Tax Guide 2026";
+const description = "Complete guide to foreign income tax in Pakistan. Learn tax rules on foreign salary, Section 111 foreign remittance exemptions, IT freelancer 0.25% concessional tax, and banking withholding rules under FBR.";
+const image = "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1200&q=80";
+const canonical = "https://finsiva.com/blogs/pakistan-foreign-income-remittance-freelancer-tax-guide-2026";
+const author = "Usman Qureshi, Cross-Border & Expat Tax Advisory Lead";
+const authorBio = "International tax specialist advising overseas Pakistanis, remote IT freelancers, software exporters, and foreign earners on FBR foreign income reporting, double tax treaties, and SBP remittance codes.";
+const lastUpdated = "September 2026";
+const readTime = "19 min read";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is foreign income taxable in Pakistan for resident and non-resident individuals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Resident taxpayers in Pakistan are taxed on worldwide income (including foreign salary, foreign investments, and global business profits) under Section 11. Non-resident Pakistanis (NRPs) are taxed strictly on Pakistan-source income."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are foreign banking remittances exempt from income tax probe under Section 111(4)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under Section 111(4) of the Income Tax Ordinance 2001, foreign exchange remitted from abroad into Pakistan through official banking channels (encashed in PKR) cannot be questioned by FBR regarding its origin, subject to statutory limits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the income tax rate for freelancers and IT exporters in Pakistan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Export proceeds from IT and IT-enabled services (ITeS) received by registered freelancers and software companies incur a concessional final tax rate of 0.25% (or 1% for unregistered entities) under Section 154A, provided foreign remittances are received via banking channels."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does tax credit work for tax paid abroad under Double Taxation Avoidance Agreements (DTAA)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under Section 103, resident taxpayers who pay foreign income tax on overseas income can claim a foreign tax credit against their Pakistan tax liability to prevent double taxation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the withholding tax rate on foreign bank transfers and card remittances in Pakistan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under Section 236Y, advance withholding tax on outward foreign remittances made via credit card, debit card, or international wire transfer is 5% for active tax filers and 10% to 15% for non-filers."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  canonical={canonical}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated={lastUpdated}
+  readTime={readTime}
+  schema={faqSchema}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <div class="mt-8 space-y-8 text-body dark:text-muted leading-relaxed">
+    {/* Executive Summary */}
+    <div class="p-6 rounded-2xl bg-surface-subtle border border-hairline dark:bg-card dark:border-overlay-lighter shadow-sm">
+      <h2 class="text-xl font-semibold text-ink dark:text-on-primary mb-3">Executive Summary</h2>
+      <p class="text-sm sm:text-base text-ink-light dark:text-muted">
+        Managing <strong>foreign income tax in pakistan</strong>, <strong>foreign income tax pakistan</strong>, and <strong>tax on foreign income in pakistan</strong> requires understanding FBR tax residency rules under the <em>Income Tax Ordinance, 2001</em>. Whether you earn a <strong>foreign salary income tax in pakistan</strong>, operate as an IT remote worker evaluating <strong>freelance income tax pakistan</strong>, or receive banking transfers subject to <strong>withholding tax on foreign remittances in pakistan</strong>, knowing how statutory exemptions and Double Tax Agreements (DTAA) operate is essential for legal protection.
+      </p>
+    </div>
+
+    {/* Section 1: Worldwide Taxation vs Non-Resident Rules */}
+    <section class="space-y-4">
+      <h2 class="text-2xl font-bold text-ink dark:text-on-primary">1. FBR Tax Residency & Worldwide Taxation Framework</h2>
+      <p>
+        Under Section 11 of the Income Tax Ordinance, Pakistan enforces a dual tax system based on physical residency status:
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
+        <div class="p-5 rounded-2xl border border-hairline bg-surface dark:bg-card dark:border-overlay-lighter space-y-2">
+          <div class="text-xs uppercase font-bold text-brand-primary dark:text-accent">Resident Taxpayers</div>
+          <h3 class="font-bold text-ink dark:text-on-primary text-base">Worldwide Income Taxation</h3>
+          <p class="text-sm text-ink-light dark:text-muted">
+            If an individual stays in Pakistan for <strong>183 days or more</strong> during a tax year (July 1 to June 30), they are classified as a Resident. Residents MUST report global income—including <strong>pakistan tax on foreign income</strong>, overseas rental yields, foreign capital gains, and foreign salary—in their annual wealth statement.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl border border-hairline bg-surface dark:bg-card dark:border-overlay-lighter space-y-2">
+          <div class="text-xs uppercase font-bold text-green-600">Non-Resident Pakistanis (NRPs)</div>
+          <h3 class="font-bold text-ink dark:text-on-primary text-base">Pakistan-Source Income Only</h3>
+          <p class="text-sm text-ink-light dark:text-muted">
+            Non-Residents (present in Pakistan &lt; 183 days) are taxed <strong>strictly on Pakistan-source income</strong> (such as local rental income or dividends). Foreign earnings generated abroad are 100% exempt from Pakistan taxation under Section 102.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {/* Section 2: Foreign Remittance Protections (Section 111) */}
+    <section class="space-y-4">
+      <h2 class="text-2xl font-bold text-ink dark:text-on-primary">2. Section 111(4) Immunity for Inward Banking Remittances</h2>
+      <p>
+        A key statutory incentive for non-resident workers and overseas Pakistanis sending funds home concerns <strong>income tax on foreign remittance in pakistan</strong>.
+      </p>
+
+      <div class="p-6 rounded-2xl bg-surface border border-hairline dark:bg-card dark:border-overlay-lighter space-y-3">
+        <h3 class="font-bold text-ink dark:text-on-primary text-lg">Section 111(4) Statutory Protection Rules:</h3>
+        <p class="text-sm text-ink-light dark:text-muted">
+          Under Section 111(4) of the Income Tax Ordinance, any foreign currency remitted into Pakistan through normal banking channels (via SBP-authorized banks or money exchange companies) and converted to PKR cannot be subjected to FBR audit questions regarding its source.
+        </p>
+
+        <div class="p-4 rounded-xl bg-surface-subtle dark:bg-card-hover border border-hairline dark:border-overlay-lighter text-xs sm:text-sm space-y-1">
+          <p class="font-semibold text-brand-primary dark:text-accent">Mandatory Conditions for Section 111(4) Protection:</p>
+          <ul class="list-disc pl-4 space-y-1">
+            <li>Remittance must enter Pakistan via official banking channels (SWIFT wire, RDA Roshan Digital Account, Western Union, MoneyGram).</li>
+            <li>Funds must be encashed in PKR through an authorized dealer (bank encashment certificate issued).</li>
+            <li>Cash hand-deliveries or unofficial Hawala/Hundi channels do NOT qualify and risk heavy anti-money laundering penalties under SBP rules.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    {/* Section 3: IT Freelancer & Export Concessions */}
+    <section class="space-y-4">
+      <h2 class="text-2xl font-bold text-ink dark:text-on-primary">3. Freelancing Income Tax & IT Export Concessions (Section 154A)</h2>
+      <p>
+        The federal government offers specialized tax regimes for remote software engineers, digital creators, and freelancers evaluating <strong>freelancing income tax in pakistan</strong>, <strong>income tax for freelancer in pakistan</strong>, and <strong>income tax on freelance work pakistan</strong>:
+      </p>
+
+      {/* Freelancer Tax Schedule */}
+      <div class="my-6 overflow-x-auto rounded-xl border border-hairline dark:border-overlay-lighter">
+        <table class="w-full text-left text-sm text-ink dark:text-muted">
+          <thead class="bg-surface-subtle dark:bg-card-hover text-xs uppercase font-semibold text-ink dark:text-on-primary">
+            <tr>
+              <th class="p-3">Category / Registration Status</th>
+              <th class="p-3">Final Tax Rate (Sec 154A)</th>
+              <th class="p-3">SBP Purpose Code Requirement</th>
+              <th class="p-3">Compliance Obligations</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+            <tr class="hover:bg-surface-subtle/50 dark:hover:bg-card-hover/50">
+              <td class="p-3 font-semibold">PSEB Registered IT Export Freelancers</td>
+              <td class="p-3 text-green-600 font-extrabold">0.25% Final Tax</td>
+              <td class="p-3 font-medium">Code R-1050 (IT Services Exports)</td>
+              <td class="p-3 text-xs">File annual FBR return under Section 154A; no further tax audit.</td>
+            </tr>
+            <tr class="hover:bg-surface-subtle/50 dark:hover:bg-card-hover/50">
+              <td class="p-3 font-semibold">Non-PSEB Registered Tech Freelancers</td>
+              <td class="p-3 text-brand-primary font-bold">1.0% Final Tax</td>
+              <td class="p-3 font-medium">Code R-1050 (IT Services Exports)</td>
+              <td class="p-3 text-xs">Bank automatically deducts 1% WHT upon foreign currency conversion.</td>
+            </tr>
+            <tr class="hover:bg-surface-subtle/50 dark:hover:bg-card-hover/50">
+              <td class="p-3 font-semibold">Non-IT Service Exporters (Consulting, Marketing)</td>
+              <td class="p-3 text-yellow-600 font-bold">1.0% – 1.5% Final Tax</td>
+              <td class="p-3 font-medium">General Export Remittance Code</td>
+              <td class="p-3 text-xs">Final tax discharge on gross foreign earnings under Section 154A.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-muted">
+        Details on PSEB registration can be verified via the <a href="https://pseb.org.pk" target="_blank" rel="noopener noreferrer" class="text-brand-primary hover:underline">Pakistan Software Export Board (PSEB) Portal</a>.
+      </p>
+    </section>
+
+    {/* Section 4: Foreign Tax Credit & DTAA Agreements */}
+    <section class="space-y-4">
+      <h2 class="text-2xl font-bold text-ink dark:text-on-primary">4. Foreign Tax Credit (Section 103) & Double Taxation Relief</h2>
+      <p>
+        To prevent double taxation on <strong>tax on foreign source income in pakistan</strong>, Section 103 allows resident taxpayers to claim a Foreign Tax Credit against foreign income taxes paid abroad to foreign tax agencies (such as US IRS, UK HMRC, or UAE FTA).
+      </p>
+
+      <div class="p-5 rounded-2xl bg-surface border border-hairline dark:bg-card dark:border-overlay-lighter space-y-3">
+        <h3 class="font-bold text-ink dark:text-on-primary text-lg">Foreign Tax Credit Formula:</h3>
+        <p class="text-sm">
+          Foreign Tax Credit Allowed = Lesser of:
+        </p>
+
+        <div class="p-4 bg-surface-subtle dark:bg-card-hover rounded-xl text-sm font-semibold space-y-1">
+          <p>1. Actual foreign income tax paid abroad.</p>
+          <p>2. Pakistan tax payable on the foreign-source income (calculated as: <em>[Foreign Income ÷ Total Worldwide Income] × Total Pakistan Tax</em>).</p>
+        </div>
+      </div>
+    </section>
+
+    {/* Section 5: Step-by-Step Freelancer & Remittance Example */}
+    <section class="space-y-4">
+      <h2 class="text-2xl font-bold text-ink dark:text-on-primary">5. Step-by-Step Calculation: IT Freelancer Remittance Tax</h2>
+      <p>
+        Consider a PSEB-registered software developer in Islamabad receiving USD 20,000 annually from US clients (converted at USD 1 = PKR 280 = PKR 5,600,000 total).
+      </p>
+
+      <div class="p-6 rounded-2xl bg-surface border border-hairline dark:bg-card dark:border-overlay-lighter space-y-3 text-sm">
+        <div class="flex justify-between items-center pb-2 border-b border-hairline dark:border-overlay-lighter">
+          <span>Gross Remitted Export Revenue</span>
+          <span class="font-semibold">PKR 5,600,000</span>
+        </div>
+        <div class="flex justify-between items-center pb-2 border-b border-hairline dark:border-overlay-lighter text-green-600 font-bold">
+          <span>Concessional Final Tax (Section 154A @ 0.25%)</span>
+          <span>PKR 14,000</span>
+        </div>
+        <div class="flex justify-between items-center pt-2 font-bold text-green-600 text-base">
+          <span>Net Take-Home Remittance After Final Tax</span>
+          <span>PKR 5,586,000</span>
+        </div>
+        <p class="text-xs text-muted mt-2">
+          Because 0.25% is a Final Tax, no additional progressive salary or business tax rates apply to these export earnings.
+        </p>
+      </div>
+    </section>
+
+    {/* Interactive Embed */}
+    <div class="my-8 p-6 rounded-2xl bg-brand-primary/5 border border-brand-primary/20 dark:bg-accent/5 dark:border-accent/20">
+      <h3 class="text-xl font-bold text-ink dark:text-on-primary mb-2">Estimate Foreign & Freelance Income Tax</h3>
+      <p class="text-sm text-ink-light dark:text-muted mb-4">
+        Calculate your foreign remittance tax, IT export final tax, and SBP remittance conversion deductions using our free tools.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/blogs/pakistan-freelancer-tax-guide" class="px-5 py-2.5 rounded-xl bg-brand-primary text-white font-semibold text-sm hover:opacity-90 transition-opacity">
+          Open Freelancer Tax Calculator →
+        </a>
+        <a href="/countries/pakistan/income-tax/income-tax-calculator" class="px-5 py-2.5 rounded-xl border border-hairline dark:border-overlay-lighter bg-surface dark:bg-card text-ink dark:text-on-primary font-semibold text-sm hover:bg-surface-subtle transition-colors">
+          Open Income Tax Calculator
+        </a>
+      </div>
+    </div>
+
+    {/* FAQs Section */}
+    <section class="space-y-4">
+      <h2 class="text-2xl font-bold text-ink dark:text-on-primary">6. Frequently Asked Questions (FAQs)</h2>
+      <div class="space-y-3">
+        {faqSchema.mainEntity.map((faq) => (
+          <details class="group p-4 rounded-xl border border-hairline bg-surface dark:bg-card dark:border-overlay-lighter [&_summary::-webkit-details-marker]:none">
+            <summary class="flex cursor-pointer items-center justify-between font-semibold text-ink dark:text-on-primary">
+              <span>{faq.name}</span>
+              <span class="ml-2 transition group-open:-rotate-180">↓</span>
+            </summary>
+            <p class="mt-3 text-sm text-ink-light dark:text-muted leading-relaxed">
+              {faq.acceptedAnswer.text}
+            </p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    {/* Suggested / Related Content */}
+    <section class="mt-12 pt-8 border-t border-hairline dark:border-overlay-lighter">
+      <h3 class="text-lg font-bold text-ink dark:text-on-primary mb-4">Suggested & Related Tax Guides</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+        <a href="/blogs/pakistan-salary-income-tax-slabs-evolution-guide-2026" class="p-4 rounded-xl border border-hairline bg-surface dark:bg-card hover:border-brand-primary transition-colors">
+          <div class="font-bold text-ink dark:text-on-primary">Pakistan Salary Tax Slabs Master Guide (2021–2026)</div>
+          <div class="text-xs text-muted mt-1">FBR tax slabs evolution, PKR 600K limit, and monthly deductions.</div>
+        </a>
+        <a href="/blogs/pakistan-business-tax-slabs-corporate-aop-withholding-guide-2026" class="p-4 rounded-xl border border-hairline bg-surface dark:bg-card hover:border-brand-primary transition-colors">
+          <div class="font-bold text-ink dark:text-on-primary">Pakistan Business & Corporate Tax Guide 2026</div>
+          <div class="text-xs text-muted mt-1">Sole proprietorship slabs, AOP tax, and corporate 29% tax.</div>
+        </a>
+        <a href="/blogs/pakistan-rental-property-income-agricultural-tax-guide-2026" class="p-4 rounded-xl border border-hairline bg-surface dark:bg-card hover:border-brand-primary transition-colors">
+          <div class="font-bold text-ink dark:text-on-primary">Pakistan Rental Property & Agricultural Tax Guide</div>
+          <div class="text-xs text-muted mt-1">Section 15 property tax, Section 7E, and provincial agricultural tax.</div>
+        </a>
+        <a href="/knowledge/pakistan-tax-calculators" class="p-4 rounded-xl border border-hairline bg-surface dark:bg-card hover:border-brand-primary transition-colors">
+          <div class="font-bold text-ink dark:text-on-primary">All Pakistan Tax Calculators</div>
+          <div class="text-xs text-muted mt-1">Access free tools for salary tax, property tax, GST, and token tax.</div>
+        </a>
+      </div>
+    </section>
+  </div>
+</BlogLayout>
