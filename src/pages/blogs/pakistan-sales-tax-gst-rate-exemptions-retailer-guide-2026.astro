@@ -1,0 +1,380 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Pakistan Sales Tax & GST Master Guide 2026: 18% Rate, Retailers & Exemptions";
+const description = "Complete guide to sales tax in Pakistan under the Sales Tax Act 1990. Learn current 18% FBR GST rates, Sixth Schedule exempt goods, Tier-1 retailer POS rules, custom duty on vehicle imports like Aqua car, and STRN filing.";
+const image = "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1200&q=80";
+const canonical = "https://finsiva.com/blogs/pakistan-sales-tax-gst-rate-exemptions-retailer-guide-2026";
+const author = "Farhan Ahmed, Indirect Tax Advisory Lead";
+const authorBio = "Senior tax consultant specializing in federal sales tax (Sales Tax Act 1990), FBR Iris e-filing, STRN registration, customs duty valuations, and Tier-1 POS integration across Pakistan.";
+const lastUpdated = "September 2026";
+const readTime = "18 min read";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the current sales tax rate in Pakistan for 2025–2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The standard federal sales tax rate in Pakistan is 18% on the supply and import of taxable goods under Section 3 of the Sales Tax Act 1990. Certain items attract reduced rates under the Eighth Schedule or zero-rating under the Fifth Schedule."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What goods are exempted from sales tax in Pakistan under the Sixth Schedule?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Sixth Schedule lists goods exempted from sales tax, including unprocessed agricultural produce, wheat, fresh milk, live poultry, textbooks, holy scriptures, basic pharmaceuticals, and specified renewable energy equipment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Further Tax on supplies to unregistered persons in Pakistan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under Section 3(1A) of the Sales Tax Act 1990, registered manufacturers and distributors must charge an additional 4% Further Tax (on top of 18% standard GST) when supplying taxable goods to unregistered persons."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does sales tax apply to retailers and Tier-1 POS integration in Pakistan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tier-1 retailers (chain stores, stores in air-conditioned malls, bulk importers, or retailers with annual electricity bills > PKR 1.2M) must integrate their Point of Sale (POS) systems directly with FBR's real-time computerised system. Non-Tier-1 retailers pay sales tax through their monthly commercial electricity bills."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is custom duty and sales tax calculated on imported hybrid cars like the Toyota Aqua in Pakistan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Imported vehicles attract Customs Duty, Sales Tax (18%), Federal Excise Duty (FED), Additional Customs Duty (ACD), and Regulatory Duty (RD) based on engine CC capacity. Hybrid electric vehicles (HEVs) up to 1800cc benefit from statutory concessions under the Customs Act."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  canonical={canonical}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated={lastUpdated}
+  readTime={readTime}
+  schema={faqSchema}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <div class="mt-8 space-y-8 text-body dark:text-muted leading-relaxed">
+    {/* Intro Overview */}
+    <div class="p-6 rounded-2xl bg-surface-subtle border border-hairline dark:bg-card dark:border-overlay-lighter shadow-sm">
+      <h2 class="text-xl font-semibold text-ink dark:text-on-primary mb-3">Executive Summary</h2>
+      <p class="text-sm sm:text-base text-ink-light dark:text-muted">
+        Navigating <strong>pakistan sales tax</strong> and <strong>goods and services tax in pakistan</strong> requires understanding the statutory rules laid out in the <em>Sales Tax Act 1990</em>. Whether you are managing commercial imports, running a registered manufacturing business, operating a retail store, or evaluating consumer purchase taxes, knowing the <strong>current sales tax rate in pakistan</strong> (18% standard rate) is vital for full FBR tax compliance.
+      </p>
+    </div>
+
+    {/* Section 1: Sales Tax Rates & Legal Framework */}
+    <section class="space-y-4">
+      <h2 class="text-2xl font-bold text-ink dark:text-on-primary">1. Overview of Federal Sales Tax Rates in Pakistan (2025–2026)</h2>
+      <p>
+        Under Section 3 of the <em>Sales Tax Act 1990</em>, the Federal Board of Revenue (FBR) levies indirect tax on the import and domestic supply of goods. Commonly referred to as <strong>general sales tax in pakistan</strong> or <strong>gst tax in pakistan</strong>, the standard statutory <strong>pakistan gst rate</strong> is <strong>18%</strong>.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
+        <div class="p-5 rounded-xl border border-hairline bg-surface dark:bg-card dark:border-overlay-lighter text-center">
+          <div class="text-3xl font-extrabold text-brand-primary dark:text-accent mb-1">18%</div>
+          <div class="text-sm font-semibold text-ink dark:text-on-primary">Standard GST Rate</div>
+          <div class="text-xs text-muted mt-1">Applies to most taxable goods & commercial imports</div>
+        </div>
+        <div class="p-5 rounded-xl border border-hairline bg-surface dark:bg-card dark:border-overlay-lighter text-center">
+          <div class="text-3xl font-extrabold text-brand-primary dark:text-accent mb-1">+4%</div>
+          <div class="text-sm font-semibold text-ink dark:text-on-primary">Further Tax</div>
+          <div class="text-xs text-muted mt-1">Levied on supplies made to unregistered buyers</div>
+        </div>
+        <div class="p-5 rounded-xl border border-hairline bg-surface dark:bg-card dark:border-overlay-lighter text-center">
+          <div class="text-3xl font-extrabold text-brand-primary dark:text-accent mb-1">0%</div>
+          <div class="text-sm font-semibold text-ink dark:text-on-primary">Zero-Rated Exports</div>
+          <div class="text-xs text-muted mt-1">Fifth Schedule exports & international supplies</div>
+        </div>
+      </div>
+
+      <p>
+        The <strong>rate of sales tax in pakistan</strong> is adjusted periodically via the annual Finance Act. For the fiscal years <strong>sales tax rate in pakistan 2025 26</strong> and <strong>sales tax pakistan 2026</strong>, the baseline <strong>sales tax percentage in pakistan</strong> remains fixed at 18%, replacing the legacy 17% rate from earlier assessment periods. Taxpayers can verify official FBR notices directly via <a href="https://fbr.gov.pk" target="_blank" rel="noopener noreferrer" class="text-brand-primary hover:underline">FBR Pakistan Official Portal</a>.
+      </p>
+
+      {/* Key Rate Comparison Table */}
+      <div class="my-6 overflow-x-auto rounded-xl border border-hairline dark:border-overlay-lighter">
+        <table class="w-full text-left text-sm text-ink dark:text-muted">
+          <thead class="bg-surface-subtle dark:bg-card-hover text-xs uppercase font-semibold text-ink dark:text-on-primary">
+            <tr>
+              <th class="p-3">Schedule / Category</th>
+              <th class="p-3">Applicable GST / Sales Tax Rate</th>
+              <th class="p-3">Description & Scope</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+            <tr class="hover:bg-surface-subtle/50 dark:hover:bg-card-hover/50">
+              <td class="p-3 font-semibold">Standard Taxable Goods</td>
+              <td class="p-3 text-brand-primary font-bold">18%</td>
+              <td class="p-3">Default statutory tax on manufactured goods and commercial imports under Section 3.</td>
+            </tr>
+            <tr class="hover:bg-surface-subtle/50 dark:hover:bg-card-hover/50">
+              <td class="p-3 font-semibold">Fifth Schedule (Zero-Rated)</td>
+              <td class="p-3 text-green-600 font-bold">0%</td>
+              <td class="p-3">Direct exports of goods, supplies to diplomats, and specific duty-free export processing zones.</td>
+            </tr>
+            <tr class="hover:bg-surface-subtle/50 dark:hover:bg-card-hover/50">
+              <td class="p-3 font-semibold">Sixth Schedule (Exempt Goods)</td>
+              <td class="p-3 text-blue-600 font-bold">Exempt (0%)</td>
+              <td class="p-3">Basic food items, fresh produce, unprocessed agriculture, wheat, milk, books, and essential medicines.</td>
+            </tr>
+            <tr class="hover:bg-surface-subtle/50 dark:hover:bg-card-hover/50">
+              <td class="p-3 font-semibold">Eighth Schedule (Reduced Rates)</td>
+              <td class="p-3 font-bold">1% – 12%</td>
+              <td class="p-3">Concessional rates for locally manufactured tractors, specialized agricultural machinery, and fertilizer inputs.</td>
+            </tr>
+            <tr class="hover:bg-surface-subtle/50 dark:hover:bg-card-hover/50">
+              <td class="p-3 font-semibold">Unregistered Buyer Penalty</td>
+              <td class="p-3 text-red-600 font-bold">18% + 4% = 22%</td>
+              <td class="p-3">Standard 18% GST plus 4% Further Tax under Section 3(1A) for supplies to non-STRN holders.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    {/* Section 2: List of Exempted Goods */}
+    <section class="space-y-4">
+      <h2 class="text-2xl font-bold text-ink dark:text-on-primary">2. List of Goods Exempted from Sales Tax in Pakistan (Sixth Schedule)</h2>
+      <p>
+        Under Section 13 of the Sales Tax Act 1990, items listed in the <strong>list of goods exempted from sales tax in pakistan</strong> (Sixth Schedule) are fully exempt from the 18% tax. Exemptions are primarily designed to relieve lower-income households and support essential sectors.
+      </p>
+
+      <div class="p-5 rounded-2xl bg-surface border border-hairline dark:bg-card dark:border-overlay-lighter space-y-3">
+        <h3 class="font-semibold text-ink dark:text-on-primary text-lg">Key Exempt Commodity Categories:</h3>
+        <ul class="list-disc pl-5 space-y-2 text-sm">
+          <li><strong>Basic Food Staples:</strong> Unprocessed wheat, wheat flour (atta), fresh milk, un-bottled dairy, live poultry, fresh mutton, beef, fish, eggs, and fresh fruits/vegetables.</li>
+          <li><strong>Education & Literature:</strong> Printed textbooks, educational software CDs, newspapers, journals, and holy books.</li>
+          <li><strong>Health & Lifesaving Medicines:</strong> Active Pharmaceutical Ingredients (APIs), essential diagnostic test kits, and life-saving human drugs registered under the Drug Regulatory Authority of Pakistan (DRAP).</li>
+          <li><strong>Renewable Energy Equipment:</strong> Solar panels, photovoltaic cells, and specific solar inverter components certified by AEDB.</li>
+          <li><strong>Agricultural Inputs:</strong> Locally produced seeds, organic fertilizers, and raw cotton.</li>
+        </ul>
+      </div>
+
+      <p class="text-sm text-muted">
+        <em>Note on Input Credit:</em> Unlike zero-rated supplies under the Fifth Schedule, sellers dealing strictly in exempt goods under the Sixth Schedule cannot claim input tax credit refunds for GST paid on their business overheads.
+      </p>
+    </section>
+
+    {/* Section 3: Imports & Custom Duty Breakdown (Aqua Car Example) */}
+    <section class="space-y-4">
+      <h2 class="text-2xl font-bold text-ink dark:text-on-primary">3. Sales Tax on Imports & Customs Duties (Aqua Car Import Tax Case Study)</h2>
+      <p>
+        All <strong>sales tax on imports in pakistan</strong> is collected by Pakistan Customs at the port of entry on behalf of the FBR. The taxable import value includes the Cost, Insurance, and Freight (CIF) value, plus Customs Duty, Additional Customs Duty (ACD), and Regulatory Duty (RD).
+      </p>
+      <p>
+        A frequent query among car buyers and vehicle importers concerns the <strong>aqua car custom duty in pakistan</strong> (Toyota Aqua 1500cc hybrid hatchback). Importing used or new hybrid electric vehicles (HEVs) involves a multi-layered duty structure:
+      </p>
+
+      <div class="p-6 rounded-2xl bg-surface-subtle border border-hairline dark:bg-card dark:border-overlay-lighter space-y-4">
+        <h3 class="text-lg font-bold text-ink dark:text-on-primary">Toyota Aqua (1490cc HEV) Custom Duty & Tax Breakdown Matrix</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+          <div class="p-3 bg-surface dark:bg-card-hover rounded-lg border border-hairline dark:border-overlay-lighter">
+            <span class="text-muted block text-xs">Customs Duty (Base Rate)</span>
+            <span class="font-bold text-ink dark:text-on-primary">50% of Assessed Valuation</span>
+            <span class="text-xs text-muted block mt-1">(50% duty concession applies to HEVs up to 1800cc under SRO 525)</span>
+          </div>
+          <div class="p-3 bg-surface dark:bg-card-hover rounded-lg border border-hairline dark:border-overlay-lighter">
+            <span class="text-muted block text-xs">Federal Sales Tax (GST)</span>
+            <span class="font-bold text-brand-primary dark:text-accent">18% on (Assessed Value + Duties)</span>
+            <span class="text-xs text-muted block mt-1">Calculated under Section 3(1)(b) at sea/land port</span>
+          </div>
+          <div class="p-3 bg-surface dark:bg-card-hover rounded-lg border border-hairline dark:border-overlay-lighter">
+            <span class="text-muted block text-xs">Federal Excise Duty (FED)</span>
+            <span class="font-bold text-ink dark:text-on-primary">2.5% to 5%</span>
+            <span class="text-xs text-muted block mt-1">Based on engine displacement slab</span>
+          </div>
+          <div class="p-3 bg-surface dark:bg-card-hover rounded-lg border border-hairline dark:border-overlay-lighter">
+            <span class="text-muted block text-xs">Advance Income Tax (Sec 148)</span>
+            <span class="font-bold text-ink dark:text-on-primary">6% (Filer) / 12% (Non-Filer)</span>
+            <span class="text-xs text-muted block mt-1">Adjustable advance income tax at import</span>
+          </div>
+        </div>
+        <p class="text-xs text-muted mt-2">
+          Calculations use FBR fixed valuation tables (US Dollar benchmark values converted to PKR at State Bank exchange rates). Calculate your exact import taxes using our <a href="/countries/pakistan/sales-tax/sales-tax-calculator" class="text-brand-primary font-semibold hover:underline">Pakistan Sales Tax & Import Duties Calculator</a>.
+        </p>
+      </div>
+    </section>
+
+    {/* Section 4: Retail Tax & Tier-1 POS Rules */}
+    <section class="space-y-4">
+      <h2 class="text-2xl font-bold text-ink dark:text-on-primary">4. Retail Tax Rules & Tier-1 Retailer POS Integration in Pakistan</h2>
+      <p>
+        The FBR enforces strict <strong>sales tax rules in pakistan</strong> regarding <strong>retail tax in pakistan</strong>, establishing two distinct retail tax mechanisms for <strong>sales tax for retailers in pakistan</strong> and <strong>sales tax on retailers in pakistan</strong>:
+      </p>
+
+      <div class="space-y-4">
+        <div class="p-5 rounded-xl border border-hairline bg-surface dark:bg-card dark:border-overlay-lighter">
+          <h3 class="font-semibold text-brand-primary dark:text-accent text-lg mb-2">Category A: Tier-1 Retailers (Mandatory Real-Time POS Integration)</h3>
+          <p class="text-sm text-ink-light dark:text-muted mb-3">
+            Under Rule 150ZE of the Sales Tax Rules 2006, Tier-1 retailers MUST integrate their Point-of-Sale (POS) cash registers directly with FBR's computerised system for invoice verification.
+          </p>
+          <div class="text-xs font-medium text-ink dark:text-on-primary bg-surface-subtle dark:bg-card-hover p-3 rounded-lg border border-hairline dark:border-overlay-lighter space-y-1">
+            <p><strong>Tier-1 Qualification Criteria:</strong></p>
+            <ul class="list-disc pl-4 space-y-1">
+              <li>Retailers operating as a chain of stores across Pakistan.</li>
+              <li>Retail stores located inside air-conditioned shopping malls or plazas.</li>
+              <li>Retailers whose cumulative electricity bill exceeds PKR 1,200,000 in the preceding 12 months.</li>
+              <li>Wholesalers-cum-retailers engaged in bulk imports or distribution.</li>
+              <li>Shops with minimum covered floor area of 1,000 sq ft (or 2,000 sq ft for furniture outlets).</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-xl border border-hairline bg-surface dark:bg-card dark:border-overlay-lighter">
+          <h3 class="font-semibold text-ink dark:text-on-primary text-lg mb-2">Category B: Non-Tier-1 Retailers (Commercial Power Bill Tax)</h3>
+          <p class="text-sm text-ink-light dark:text-muted">
+            Smaller retailers outside Tier-1 criteria pay sales tax through monthly electricity bills issued by DISCOs (LESCO, K-Electric, IESCO, KEPCO) at prescribed slab rates ranging from PKR 3,000 to PKR 50,000 per month depending on bill amounts.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {/* Section 5: Unregistered Persons & Sales Tax Registration (STRN) */}
+    <section class="space-y-4">
+      <h2 class="text-2xl font-bold text-ink dark:text-on-primary">5. Supplies to Unregistered Persons & STRN Registration Rules</h2>
+      <p>
+        To broaden the tax net, <strong>sales tax rules pakistan</strong> penalize transactions with unregistered traders. Under Section 3(1A), registered manufacturers must charge 4% Further Tax whenever making <strong>sales tax on unregistered person in pakistan</strong> transactions.
+      </p>
+
+      <div class="p-5 rounded-2xl bg-surface border border-hairline dark:bg-card dark:border-overlay-lighter space-y-3">
+        <h3 class="font-semibold text-ink dark:text-on-primary text-lg">Sales Tax Registration (STRN) Mandatory Thresholds:</h3>
+        <p class="text-sm">
+          Businesses operating as <strong>sales tax registered companies in pakistan</strong> must obtain a 13-digit Sales Tax Registration Number (STRN) via the FBR Iris portal if they fall under:
+        </p>
+        <ul class="list-disc pl-5 space-y-1 text-sm">
+          <li><strong>Manufacturers:</strong> Annual turnover exceeding PKR 10 million.</li>
+          <li><strong>Importers & Exporters:</strong> Mandatory registration regardless of turnover.</li>
+          <li><strong>Wholesalers & Distributors:</strong> Mandatory registration.</li>
+          <li><strong>Tier-1 Retailers:</strong> Mandatory real-time POS registration.</li>
+        </ul>
+      </div>
+
+      {/* Iris Monthly Compliance Timeline */}
+      <div class="p-6 rounded-2xl bg-surface-subtle border border-hairline dark:bg-card dark:border-overlay-lighter space-y-4">
+        <h3 class="text-lg font-bold text-ink dark:text-on-primary">Monthly Sales Tax Compliance Calendar (FBR Iris)</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+          <div class="p-3 bg-surface dark:bg-card-hover rounded-lg border border-hairline dark:border-overlay-lighter">
+            <span class="text-xs font-bold text-brand-primary dark:text-accent block">By 15th of Every Month</span>
+            <span class="font-semibold text-ink dark:text-on-primary">Load Sales Invoices (Annex C)</span>
+            <p class="text-xs text-muted mt-1">Submit electronic buyer invoices on FBR Iris e-portal.</p>
+          </div>
+          <div class="p-3 bg-surface dark:bg-card-hover rounded-lg border border-hairline dark:border-overlay-lighter">
+            <span class="text-xs font-bold text-brand-primary dark:text-accent block">By 18th of Every Month</span>
+            <span class="font-semibold text-ink dark:text-on-primary">Submit Monthly Return (Form STR-7)</span>
+            <p class="text-xs text-muted mt-1">Finalize input-output tax reconciliation and file return.</p>
+          </div>
+          <div class="p-3 bg-surface dark:bg-card-hover rounded-lg border border-hairline dark:border-overlay-lighter">
+            <span class="text-xs font-bold text-brand-primary dark:text-accent block">By 24th of Every Month</span>
+            <span class="font-semibold text-ink dark:text-on-primary">Pay Net Sales Tax Liability</span>
+            <p class="text-xs text-muted mt-1">Generate CPR PSID and deposit sales tax via online banking.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Section 6: Step-by-Step Practical Calculation Example */}
+    <section class="space-y-4">
+      <h2 class="text-2xl font-bold text-ink dark:text-on-primary">6. Practical Step-by-Step Sales Tax Calculation Example</h2>
+      <p>
+        Consider a registered manufacturer selling commercial electric appliances worth PKR 1,000,000 net of tax.
+      </p>
+
+      <div class="p-6 rounded-2xl bg-surface border border-hairline dark:bg-card dark:border-overlay-lighter space-y-4 text-sm">
+        <div class="flex justify-between items-center pb-2 border-b border-hairline dark:border-overlay-lighter">
+          <span>Net Goods Valuation</span>
+          <span class="font-semibold">PKR 1,000,000</span>
+        </div>
+        <div class="flex justify-between items-center pb-2 border-b border-hairline dark:border-overlay-lighter">
+          <span>Standard GST (18%)</span>
+          <span class="font-semibold text-brand-primary dark:text-accent">+ PKR 180,000</span>
+        </div>
+        <div class="flex justify-between items-center pb-2 border-b border-hairline dark:border-overlay-lighter">
+          <span>Scenario A: Sale to STRN Registered Buyer</span>
+          <span class="font-bold text-green-600">Total Invoice: PKR 1,180,000</span>
+        </div>
+        <div class="flex justify-between items-center pb-2 border-b border-hairline dark:border-overlay-lighter">
+          <span>Scenario B: Sale to Unregistered Buyer (+4% Further Tax)</span>
+          <span class="font-bold text-red-600">Total Invoice: PKR 1,220,000</span>
+        </div>
+        <div class="p-3 bg-surface-subtle dark:bg-card-hover rounded-lg text-xs text-muted">
+          <em>Input Tax Adjustment:</em> If the manufacturer paid PKR 100,000 in input GST on raw materials, the net sales tax payable to FBR under Scenario A is PKR 180,000 − PKR 100,000 = <strong>PKR 80,000</strong>.
+        </div>
+      </div>
+    </section>
+
+    {/* Interactive Embed */}
+    <div class="my-8 p-6 rounded-2xl bg-brand-primary/5 border border-brand-primary/20 dark:bg-accent/5 dark:border-accent/20">
+      <h3 class="text-xl font-bold text-ink dark:text-on-primary mb-2">Calculate Sales Tax & GST Instantly</h3>
+      <p class="text-sm text-ink-light dark:text-muted mb-4">
+        Compute federal sales tax (18%), input tax adjustments, further tax penalties, or inclusive pricing using our free tools.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/countries/pakistan/sales-tax/sales-tax-calculator" class="px-5 py-2.5 rounded-xl bg-brand-primary text-white font-semibold text-sm hover:opacity-90 transition-opacity">
+          Open Sales Tax Calculator →
+        </a>
+        <a href="/countries/pakistan/sales-tax/gst-calculator" class="px-5 py-2.5 rounded-xl border border-hairline dark:border-overlay-lighter bg-surface dark:bg-card text-ink dark:text-on-primary font-semibold text-sm hover:bg-surface-subtle transition-colors">
+          Open 18% GST Calculator
+        </a>
+      </div>
+    </div>
+
+    {/* FAQs Section */}
+    <section class="space-y-4">
+      <h2 class="text-2xl font-bold text-ink dark:text-on-primary">7. Frequently Asked Questions (FAQs)</h2>
+      <div class="space-y-3">
+        {faqSchema.mainEntity.map((faq) => (
+          <details class="group p-4 rounded-xl border border-hairline bg-surface dark:bg-card dark:border-overlay-lighter [&_summary::-webkit-details-marker]:none">
+            <summary class="flex cursor-pointer items-center justify-between font-semibold text-ink dark:text-on-primary">
+              <span>{faq.name}</span>
+              <span class="ml-2 transition group-open:-rotate-180">↓</span>
+            </summary>
+            <p class="mt-3 text-sm text-ink-light dark:text-muted leading-relaxed">
+              {faq.acceptedAnswer.text}
+            </p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    {/* Suggested / Related Articles */}
+    <section class="mt-12 pt-8 border-t border-hairline dark:border-overlay-lighter">
+      <h3 class="text-lg font-bold text-ink dark:text-on-primary mb-4">Suggested & Related Tax Guides</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+        <a href="/blogs/pakistan-services-sales-tax-it-software-sindh-islamabad-guide-2026" class="p-4 rounded-xl border border-hairline bg-surface dark:bg-card hover:border-brand-primary transition-colors">
+          <div class="font-bold text-ink dark:text-on-primary">Pakistan Services Sales Tax & IT Guide 2026</div>
+          <div class="text-xs text-muted mt-1">SRB Sindh 2011 rules, Islamabad ICT rates, and software exports tax.</div>
+        </a>
+        <a href="/blogs/pakistan-property-sale-tax-capital-gain-inherited-property-guide-2026" class="p-4 rounded-xl border border-hairline bg-surface dark:bg-card hover:border-brand-primary transition-colors">
+          <div class="font-bold text-ink dark:text-on-primary">Pakistan Property Sale Tax & CGT Guide 2026</div>
+          <div class="text-xs text-muted mt-1">Inherited property capital gains tax, buyer/seller withholding rates.</div>
+        </a>
+        <a href="/blogs/pakistan-freelancer-tax-guide" class="p-4 rounded-xl border border-hairline bg-surface dark:bg-card hover:border-brand-primary transition-colors">
+          <div class="font-bold text-ink dark:text-on-primary">Pakistan Freelancer Tax Guide</div>
+          <div class="text-xs text-muted mt-1">IT export remittance tax concessions under FBR rules.</div>
+        </a>
+        <a href="/knowledge/pakistan-tax-calculators" class="p-4 rounded-xl border border-hairline bg-surface dark:bg-card hover:border-brand-primary transition-colors">
+          <div class="font-bold text-ink dark:text-on-primary">All Pakistan Tax Calculators</div>
+          <div class="text-xs text-muted mt-1">Access free tools for salary tax, property tax, GST, and token tax.</div>
+        </a>
+      </div>
+    </section>
+  </div>
+</BlogLayout>

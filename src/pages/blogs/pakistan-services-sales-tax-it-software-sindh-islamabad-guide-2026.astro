@@ -1,0 +1,313 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Pakistan Services Sales Tax & IT Guide 2026: Sindh SRB, ICT & Software Rules";
+const description = "Comprehensive guide to sales tax on services in Pakistan. Learn Sindh SRB rules 2011, Islamabad ICT rates, sales tax on IT services & software exports, laptop custom tax, and provincial withholding rules.";
+const image = "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=1200&q=80";
+const canonical = "https://finsiva.com/blogs/pakistan-services-sales-tax-it-software-sindh-islamabad-guide-2026";
+const author = "Zainab Chaudhry, Corporate Tax & Provincial Advisory Lead";
+const authorBio = "Provincial indirect tax specialist advising software exporters, IT consultancies, and multi-locational service providers on SRB, PRA, and ICT sales tax compliance and withholding rules.";
+const lastUpdated = "September 2026";
+const readTime = "17 min read";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is sales tax on services levied in Pakistan across different provinces?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under the 18th Constitutional Amendment, sales tax on services is a provincial domain administered by Sindh Revenue Board (SRB at 13%-15%), Punjab Revenue Authority (PRA at 16%), Khyber Pakhtunkhwa Revenue Authority (KPRA), Balochistan Revenue Authority (BRA), and FBR for Islamabad Capital Territory (ICT at 15%)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the Sindh Sales Tax on Services Rules 2011 and SRB Withholding Rules?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enacted under the Sindh Sales Tax on Services Act 2011, the rules govern service registration, monthly e-filing by the 18th, and withholding obligations where corporate buyers withhold 20% to 100% of sales tax from service providers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the sales tax rate on IT services, software, and IT exports in Pakistan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Export of IT services and software is zero-rated (0% sales tax) provided remittance is routed through banking channels. Domestic software development and IT services incur reduced provincial sales tax rates (ranging from 3% to 15% depending on province and PSEB registration)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the sales tax on services in Islamabad (ICT)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sales tax in Islamabad is governed by the Islamabad Capital Territory (Tax on Services) Ordinance 2001 administered by the FBR, with a standard rate of 15% on commercial services and reduced rates for IT and call centers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there sales tax on laptops and IT hardware imports in Pakistan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Laptops and personal computers imported or sold locally attract federal sales tax under FBR customs schedules, while qualified educational or software export equipment may receive statutory import duty concessions."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  canonical={canonical}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated={lastUpdated}
+  readTime={readTime}
+  schema={faqSchema}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <div class="mt-8 space-y-8 text-body dark:text-muted leading-relaxed">
+    {/* Intro Summary */}
+    <div class="p-6 rounded-2xl bg-surface-subtle border border-hairline dark:bg-card dark:border-overlay-lighter shadow-sm">
+      <h2 class="text-xl font-semibold text-ink dark:text-on-primary mb-3">Executive Summary</h2>
+      <p class="text-sm sm:text-base text-ink-light dark:text-muted">
+        Following the 18th Amendment to the Constitution of Pakistan, legislative power over <strong>gst on services in pakistan</strong> and <strong>sales tax on services in pakistan</strong> was transferred from the federal government to individual provinces and the federal capital territory. Operating an IT firm, software agency, consultancy, or service business requires strict adherence to provincial revenue authorities—specifically the <strong>sindh sales tax rules</strong> administered by SRB and <strong>sales tax in islamabad</strong> administered by FBR.
+      </p>
+    </div>
+
+    {/* Section 1: Provincial Service Tax Framework */}
+    <section class="space-y-4">
+      <h2 class="text-2xl font-bold text-ink dark:text-on-primary">1. Provincial Jurisdictions & Service Sales Tax Rates in Pakistan</h2>
+      <p>
+        Unlike goods taxation governed centrally by the FBR, service taxation depends entirely on where the service is rendered or consumed (origin vs destination principle). Each province operates its own revenue authority and statute:
+      </p>
+
+      {/* Provincial Revenue Authorities Table */}
+      <div class="my-6 overflow-x-auto rounded-xl border border-hairline dark:border-overlay-lighter">
+        <table class="w-full text-left text-sm text-ink dark:text-muted">
+          <thead class="bg-surface-subtle dark:bg-card-hover text-xs uppercase font-semibold text-ink dark:text-on-primary">
+            <tr>
+              <th class="p-3">Jurisdiction</th>
+              <th class="p-3">Revenue Authority</th>
+              <th class="p-3">Governing Act</th>
+              <th class="p-3">Standard Tax Rate</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+            <tr class="hover:bg-surface-subtle/50 dark:hover:bg-card-hover/50">
+              <td class="p-3 font-semibold">Sindh Province</td>
+              <td class="p-3">Sindh Revenue Board (SRB)</td>
+              <td class="p-3 text-xs">Sindh Sales Tax on Services Act 2011</td>
+              <td class="p-3 text-brand-primary font-bold">13% – 15%</td>
+            </tr>
+            <tr class="hover:bg-surface-subtle/50 dark:hover:bg-card-hover/50">
+              <td class="p-3 font-semibold">Punjab Province</td>
+              <td class="p-3">Punjab Revenue Authority (PRA)</td>
+              <td class="p-3 text-xs">Punjab Sales Tax on Services Act 2012</td>
+              <td class="p-3 text-brand-primary font-bold">16%</td>
+            </tr>
+            <tr class="hover:bg-surface-subtle/50 dark:hover:bg-card-hover/50">
+              <td class="p-3 font-semibold">Islamabad (ICT)</td>
+              <td class="p-3">FBR (ICT Wing)</td>
+              <td class="p-3 text-xs">ICT (Tax on Services) Ordinance 2001</td>
+              <td class="p-3 text-brand-primary font-bold">15%</td>
+            </tr>
+            <tr class="hover:bg-surface-subtle/50 dark:hover:bg-card-hover/50">
+              <td class="p-3 font-semibold">Khyber Pakhtunkhwa</td>
+              <td class="p-3">KP Revenue Authority (KPRA)</td>
+              <td class="p-3 text-xs">KPK Finance Act 2013</td>
+              <td class="p-3 font-bold">15%</td>
+            </tr>
+            <tr class="hover:bg-surface-subtle/50 dark:hover:bg-card-hover/50">
+              <td class="p-3 font-semibold">Balochistan</td>
+              <td class="p-3">Balochistan Revenue Authority (BRA)</td>
+              <td class="p-3 text-xs">Balochistan Sales Tax on Services Act 2015</td>
+              <td class="p-3 font-bold">15%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-muted">
+        Official details on SRB provincial notifications can be accessed via the <a href="https://srb.gos.pk" target="_blank" rel="noopener noreferrer" class="text-brand-primary hover:underline">Sindh Revenue Board Official Portal</a> and <a href="https://pra.punjab.gov.pk" target="_blank" rel="noopener noreferrer" class="text-brand-primary hover:underline">Punjab Revenue Authority Portal</a>.
+      </p>
+    </section>
+
+    {/* Section 2: Sindh SRB Rules & Withholding Rules */}
+    <section class="space-y-4">
+      <h2 class="text-2xl font-bold text-ink dark:text-on-primary">2. Sindh Sales Tax on Services Rules 2011 & SRB Withholding Framework</h2>
+      <p>
+        The <strong>sindh sales tax on services rules</strong> and <strong>sindh sales tax on services rules 2011</strong> form the primary legal foundation for services performed, received, or rendered in Karachi, Hyderabad, and across Sindh.
+      </p>
+      <p>
+        Under the <em>Sindh Sales Tax Special Procedure (Withholding) Rules</em>, also known as <strong>sindh sales tax withholding rules</strong> and <strong>sindh sales tax on services withholding rules</strong>, specific entities are designated as "Withholding Agents":
+      </p>
+
+      <div class="p-6 rounded-2xl bg-surface border border-hairline dark:bg-card dark:border-overlay-lighter space-y-4">
+        <h3 class="font-bold text-ink dark:text-on-primary text-lg">Who is an SRB Withholding Agent?</h3>
+        <ul class="list-disc pl-5 space-y-2 text-sm">
+          <li>Federal, provincial, and municipal government departments.</li>
+          <li>Autonomous bodies, public sector enterprises, and financial institutions.</li>
+          <li>SRB-registered companies receiving services from unregistered or registered service providers.</li>
+        </ul>
+
+        <div class="p-4 rounded-xl bg-surface-subtle dark:bg-card-hover border border-hairline dark:border-overlay-lighter text-sm space-y-2">
+          <p class="font-semibold text-brand-primary dark:text-accent">Key SRB Withholding Ratios:</p>
+          <ul class="list-disc pl-4 space-y-1 text-xs sm:text-sm">
+            <li><strong>Services from Unregistered Persons:</strong> 100% of the sales tax amount must be withheld by the recipient and deposited directly into the Sindh Treasury.</li>
+            <li><strong>Advertisement Services:</strong> 100% withholding applied by corporate advertisers.</li>
+            <li><strong>Standard Registered Service Providers:</strong> 20% of the total SST charged on the invoice is withheld by corporate buyers, with 80% paid directly to the service provider.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    {/* Section 3: IT Services & Software Sales Tax */}
+    <section class="space-y-4">
+      <h2 class="text-2xl font-bold text-ink dark:text-on-primary">3. Sales Tax on IT Services, Software & Export Concessions</h2>
+      <p>
+        Pakistan's rapidly growing technology sector enjoys specific concessions for <strong>sales tax on it services in pakistan</strong>, <strong>gst on software in pakistan</strong>, and <strong>sales tax on software in pakistan</strong>.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
+        <div class="p-5 rounded-2xl border border-hairline bg-surface dark:bg-card dark:border-overlay-lighter space-y-2">
+          <div class="text-xs uppercase font-bold text-green-600">Zero-Rated Export Regime</div>
+          <h3 class="font-bold text-ink dark:text-on-primary text-base">Export of IT & Software Services</h3>
+          <p class="text-sm text-ink-light dark:text-muted">
+            Under <strong>sales tax on export of services in pakistan</strong> rules, exporting software development, SaaS products, mobile apps, or BPO services to foreign clients is subject to <strong>0% sales tax</strong>.
+          </p>
+          <p class="text-xs text-muted">
+            <em>Mandatory Condition:</em> Foreign exchange earnings must be remitted into Pakistan through official banking channels under Purpose Code R-1050 (IT Exports) registered with SBP and Pakistan Software Export Board (PSEB).
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl border border-hairline bg-surface dark:bg-card dark:border-overlay-lighter space-y-2">
+          <div class="text-xs uppercase font-bold text-brand-primary dark:text-accent">Domestic Concessional Rates</div>
+          <h3 class="font-bold text-ink dark:text-on-primary text-base">Domestic Software & IT Consultancy</h3>
+          <p class="text-sm text-ink-light dark:text-muted">
+            Providing custom software or IT consulting to domestic Pakistani companies is subject to reduced provincial sales tax rates (e.g., 3% reduced rate in Punjab PRA and 3% to 13% in SRB for registered PSEB members).
+          </p>
+        </div>
+      </div>
+
+      <div class="p-5 rounded-xl border border-hairline bg-surface-subtle dark:bg-card dark:border-overlay-lighter">
+        <h3 class="font-semibold text-ink dark:text-on-primary text-base mb-2">Import Customs & Sales Tax on Laptops & IT Hardware</h3>
+        <p class="text-sm text-ink-light dark:text-muted">
+          While software code is intangible and taxed under provincial service laws, physical hardware like laptops, servers, and routers falls under federal FBR customs jurisdiction. <strong>Sales tax on laptops in pakistan</strong> applies at import, though IT export houses registered under PSEB can utilize green channel duty concessions for business expansion hardware.
+        </p>
+      </div>
+    </section>
+
+    {/* Section 4: Islamabad ICT Sales Tax Rules */}
+    <section class="space-y-4">
+      <h2 class="text-2xl font-bold text-ink dark:text-on-primary">4. Sales Tax on Services in Islamabad Capital Territory (ICT)</h2>
+      <p>
+        Businesses located in Islamabad, Rawalpindi corporate hubs, or IT parks operating in the federal capital fall under <strong>sales tax on services in islamabad</strong> regulations.
+      </p>
+
+      <div class="p-5 rounded-2xl bg-surface border border-hairline dark:bg-card dark:border-overlay-lighter space-y-3">
+        <h3 class="font-bold text-ink dark:text-on-primary text-lg">ICT Tax Framework Highlights:</h3>
+        <ul class="list-disc pl-5 space-y-2 text-sm">
+          <li><strong>Standard ICT Rate:</strong> 15% on general commercial services (hotels, construction, legal, advertising, security).</li>
+          <li><strong>IT & IT-Enabled Services:</strong> Concessional rate of 5% without input tax credit, or 15% with full input tax credit claimable against ICT returns.</li>
+          <li><strong>Call Centers & Tech Support:</strong> 15% rate, with export revenues zero-rated when foreign inward remittances are documented.</li>
+        </ul>
+      </div>
+    </section>
+
+    {/* Section 5: Step-by-Step Invoice & Withholding Calculation */}
+    <section class="space-y-4">
+      <h2 class="text-2xl font-bold text-ink dark:text-on-primary">5. Step-by-Step Service Invoice & SRB Withholding Example</h2>
+      <p>
+        Let us examine an IT development firm in Karachi issuing a domestic software consultancy invoice of PKR 500,000 to a corporate client under 13% SRB sales tax.
+      </p>
+
+      <div class="p-6 rounded-2xl bg-surface border border-hairline dark:bg-card dark:border-overlay-lighter space-y-3 text-sm">
+        <div class="flex justify-between items-center pb-2 border-b border-hairline dark:border-overlay-lighter">
+          <span>Gross Service Fee</span>
+          <span class="font-semibold">PKR 500,000</span>
+        </div>
+        <div class="flex justify-between items-center pb-2 border-b border-hairline dark:border-overlay-lighter">
+          <span>Sindh Sales Tax (SST @ 13%)</span>
+          <span class="font-semibold text-brand-primary dark:text-accent">+ PKR 65,000</span>
+        </div>
+        <div class="flex justify-between items-center pb-2 border-b border-hairline dark:border-overlay-lighter">
+          <span>Total Invoice Amount</span>
+          <span class="font-bold">PKR 565,000</span>
+        </div>
+        <div class="flex justify-between items-center pb-2 border-b border-hairline dark:border-overlay-lighter text-red-600">
+          <span>Less: SRB Withholding Tax (20% of SST)</span>
+          <span class="font-semibold text-red-600">− PKR 13,000</span>
+        </div>
+        <div class="flex justify-between items-center pt-2 font-bold text-green-600 text-base">
+          <span>Net Cheque Received by IT Firm</span>
+          <span>PKR 552,000</span>
+        </div>
+        <p class="text-xs text-muted mt-2">
+          The corporate buyer deposits the withheld PKR 13,000 directly into the Sindh Treasury via SRB PSID challan.
+        </p>
+      </div>
+    </section>
+
+    {/* Interactive Embed */}
+    <div class="my-8 p-6 rounded-2xl bg-brand-primary/5 border border-brand-primary/20 dark:bg-accent/5 dark:border-accent/20">
+      <h3 class="text-xl font-bold text-ink dark:text-on-primary mb-2">Estimate Service Sales Tax & Withholding</h3>
+      <p class="text-sm text-ink-light dark:text-muted mb-4">
+        Calculate federal and provincial sales tax liabilities, IT export zero-rating, or commercial withholding deductions using our free tools.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/countries/pakistan/sales-tax/sales-tax-calculator" class="px-5 py-2.5 rounded-xl bg-brand-primary text-white font-semibold text-sm hover:opacity-90 transition-opacity">
+          Open Pakistan Sales Tax Calculator →
+        </a>
+        <a href="/blogs/pakistan-freelancer-tax-guide" class="px-5 py-2.5 rounded-xl border border-hairline dark:border-overlay-lighter bg-surface dark:bg-card text-ink dark:text-on-primary font-semibold text-sm hover:bg-surface-subtle transition-colors">
+          View Freelancer IT Export Guide
+        </a>
+      </div>
+    </div>
+
+    {/* FAQs Section */}
+    <section class="space-y-4">
+      <h2 class="text-2xl font-bold text-ink dark:text-on-primary">6. Frequently Asked Questions (FAQs)</h2>
+      <div class="space-y-3">
+        {faqSchema.mainEntity.map((faq) => (
+          <details class="group p-4 rounded-xl border border-hairline bg-surface dark:bg-card dark:border-overlay-lighter [&_summary::-webkit-details-marker]:none">
+            <summary class="flex cursor-pointer items-center justify-between font-semibold text-ink dark:text-on-primary">
+              <span>{faq.name}</span>
+              <span class="ml-2 transition group-open:-rotate-180">↓</span>
+            </summary>
+            <p class="mt-3 text-sm text-ink-light dark:text-muted leading-relaxed">
+              {faq.acceptedAnswer.text}
+            </p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    {/* Suggested / Related Content */}
+    <section class="mt-12 pt-8 border-t border-hairline dark:border-overlay-lighter">
+      <h3 class="text-lg font-bold text-ink dark:text-on-primary mb-4">Suggested & Related Tax Guides</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+        <a href="/blogs/pakistan-sales-tax-gst-rate-exemptions-retailer-guide-2026" class="p-4 rounded-xl border border-hairline bg-surface dark:bg-card hover:border-brand-primary transition-colors">
+          <div class="font-bold text-ink dark:text-on-primary">Pakistan Sales Tax & GST Master Guide 2026</div>
+          <div class="text-xs text-muted mt-1">18% GST rate on goods, Sixth Schedule exemptions, and Aqua car import duties.</div>
+        </a>
+        <a href="/blogs/pakistan-freelancer-tax-guide" class="p-4 rounded-xl border border-hairline bg-surface dark:bg-card hover:border-brand-primary transition-colors">
+          <div class="font-bold text-ink dark:text-on-primary">Pakistan Freelancer Tax Guide</div>
+          <div class="text-xs text-muted mt-1">FBR tax slabs, 0.25% foreign remittance tax, and PSEB registration.</div>
+        </a>
+        <a href="/blogs/pakistan-corporate-tax-guide" class="p-4 rounded-xl border border-hairline bg-surface dark:bg-card hover:border-brand-primary transition-colors">
+          <div class="font-bold text-ink dark:text-on-primary">Pakistan Corporate Tax Guide</div>
+          <div class="text-xs text-muted mt-1">29% corporate income tax, super tax, and WHT compliance.</div>
+        </a>
+        <a href="/knowledge/pakistan-tax-calculators" class="p-4 rounded-xl border border-hairline bg-surface dark:bg-card hover:border-brand-primary transition-colors">
+          <div class="font-bold text-ink dark:text-on-primary">All Pakistan Tax Calculators</div>
+          <div class="text-xs text-muted mt-1">Explore all calculators for income tax, sales tax, and property taxes.</div>
+        </a>
+      </div>
+    </section>
+  </div>
+</BlogLayout>
