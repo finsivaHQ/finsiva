@@ -1,0 +1,277 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Singapore Overseas Online Shopping GST & Low Value Goods (LVG) Import Tax Guide 2026";
+const description = "Complete 2026 guide to Singapore GST on overseas online purchases, Low Value Goods (LVG < S$400), e-commerce platforms (Amazon, AliExpress, ASOS), FedEx shipping permits, and digital services tax.";
+const image = "https://images.unsplash.com/photo-1556742049-0a6791497792?w=1200&q=80";
+const author = "Michael Tang, Senior Tax & Corporate Advisory Lead";
+const authorBio = "Corporate tax advisor specializing in Singapore Goods and Services Tax (GST), cross-border trade, Overseas Vendor Registration (OVR), and e-commerce import compliance.";
+const canonical = "https://finsiva.com/blogs/singapore-ecommerce-low-value-goods-gst-guide";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How does GST apply to low-value goods (LVG under S$400) in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Since January 1, 2023, low-value goods (LVG) valued at S$400 or less imported into Singapore via air or post attract 9% GST. Overseas e-commerce platforms registered under the Overseas Vendor Registration (OVR) framework collect GST directly at the point of sale.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Why do AliExpress, Amazon, and ASOS charge GST on Singapore orders?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Under Singapore's OVR scheme, overseas e-commerce platforms with global turnover exceeding S$1 million and selling more than S$100,000 of low-value goods to Singapore consumers are legally required to register with IRAS and collect 9% GST on all online purchases.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How is GST collected on imports exceeding S$400 in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>For imported goods exceeding S$400 (or imported via sea/land freight), GST is assessed by Singapore Customs at entry. Couriers like FedEx, DHL, and UPS pay the import GST on behalf of the importer and collect it alongside handling permit fees prior to delivery.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Does Singapore charge GST on digital services and software subscriptions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Yes. Singapore's digital services tax applies 9% GST to all overseas digital B2C services, including video streaming, cloud storage, online gaming, and digital software subscriptions under the OVR framework.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Are shipping and freight charges subject to GST when importing to Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Yes. When computing import GST for goods exceeding S$400, Singapore Customs calculates 9% GST based on the total CIF value (Cost of goods + Insurance + Freight charges).</p>"
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="20 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <!-- Intro Banner -->
+    <p class="text-xl leading-relaxed font-light text-ink dark:text-on-primary">
+      With the explosion of global e-commerce, shopping online from international merchants—whether purchasing items on <strong>Amazon, AliExpress, ASOS, Taobao, or eBay</strong>—now involves mandatory <strong>Singapore GST on imported goods</strong> and <strong>overseas online purchases</strong>. If you are importing products into Singapore from Malaysia, China, Europe, or the United States, understanding how <strong>Singapore Low Value Goods (LVG) GST</strong> works is crucial to avoid unexpected customs clearance fees.
+    </p>
+
+    <!-- Key Takeaways Card -->
+    <div class="rounded-2xl border border-primary/20 bg-primary/5 p-6 dark:border-primary/30 dark:bg-primary/10">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white font-bold text-sm">🛍️</span>
+        <h3 class="text-lg font-bold text-ink dark:text-on-primary">E-Commerce & Import GST Quick Overview</h3>
+      </div>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>LVG Rule (≤ S$400):</strong> 9% GST charged at checkout by OVR-registered merchants (Amazon, AliExpress, etc.).</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>High Value Rule (> S$400):</strong> GST assessed by Singapore Customs upon arrival, collected via couriers (FedEx, DHL).</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>CIF Tax Base:</strong> Tax is computed on Cost + Insurance + Freight charges.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Digital Services Tax:</strong> 9% GST applies to software, streaming, and digital downloads.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-semibold text-ink mb-4 dark:text-on-primary">Article Contents</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#low-value-goods-framework" class="text-link hover:underline">1. The S$400 Low Value Goods (LVG) Rule Explained</a></li>
+        <li><a href="#ovr-amazon-aliexpress-asos" class="text-link hover:underline">2. Why Amazon, AliExpress & ASOS Charge 9% GST</a></li>
+        <li><a href="#imports-above-400" class="text-link hover:underline">3. Import GST on Shipments Exceeding S$400</a></li>
+        <li><a href="#shipping-freight-cif" class="text-link hover:underline">4. How Shipping & Freight Charges Affect Import GST</a></li>
+        <li><a href="#customs-permits-fedex" class="text-link hover:underline">5. Singapore Customs Clearance & FedEx GST Permits</a></li>
+        <li><a href="#digital-services-tax" class="text-link hover:underline">6. Singapore Digital Services Tax Framework</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">7. Frequently Asked Questions (FAQ)</a></li>
+      </ul>
+    </div>
+
+    <!-- Section 1 -->
+    <h2 id="low-value-goods-framework" class="text-2xl font-semibold text-ink dark:text-on-primary">1. The S$400 Low Value Goods (LVG) Rule Explained</h2>
+    <p>
+      Prior to 2023, goods imported into Singapore by air or post valued at S$400 or less enjoyed a GST relief exemption. However, to level the playing field between local brick-and-mortar retailers and foreign e-commerce giants, the Singapore Government introduced the <strong>Low Value Goods (LVG) GST framework</strong>.
+    </p>
+    <p>
+      Under current rules in 2026, <strong>all low-value goods (LVG) valued at S$400 or below</strong> imported via air or post attract the standard <strong>9% Singapore GST</strong>.
+    </p>
+
+    <!-- Visual Infographic / Threshold Table -->
+    <div class="my-6 rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+      <h3 class="text-lg font-semibold text-ink mb-4 text-center dark:text-on-primary">Singapore Customs Import GST Threshold Matrix</h3>
+      <div class="overflow-x-auto">
+        <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+          <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+            <tr>
+              <th class="border p-3">Shipment Value (CIF)</th>
+              <th class="border p-3">Import Transport Mode</th>
+              <th class="border p-3">Applicable GST Rate</th>
+              <th class="border p-3">GST Collection Mechanism</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+            <tr>
+              <td class="p-3 font-medium">≤ S$400 (Low Value Goods)</td>
+              <td class="p-3">Air Courier or Postal Mail</td>
+              <td class="p-3 font-bold text-primary">9% GST</td>
+              <td class="p-3">Collected at checkout by e-commerce platform / OVR vendor.</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-medium">> S$400 (High Value Goods)</td>
+              <td class="p-3">Air, Postal, Sea, or Land</td>
+              <td class="p-3 font-bold text-primary">9% GST + Customs Duty (if applicable)</td>
+              <td class="p-3">Assessed at Singapore Customs checkpoint; paid via courier permit (FedEx/DHL).</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-medium">Any Value</td>
+              <td class="p-3">Sea or Land Freight (e.g., Malaysia to Singapore)</td>
+              <td class="p-3 font-bold text-primary">9% GST</td>
+              <td class="p-3">Assessed by Singapore Customs upon arrival at border checkpoints.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <h2 id="ovr-amazon-aliexpress-asos" class="text-2xl font-semibold text-ink dark:text-on-primary">2. Why Amazon, AliExpress & ASOS Charge 9% GST</h2>
+    <p>
+      If you shop on <strong>Amazon Singapore, AliExpress, ASOS, Taobao, or iHerb</strong>, you will notice 9% GST automatically added to your checkout total when delivering to a Singapore address.
+    </p>
+    <p>
+      This is governed by IRAS's <strong>Overseas Vendor Registration (OVR) regime</strong>. Under OVR rules, any overseas merchant or digital marketplace platform must register for GST in Singapore if they meet two mandatory criteria:
+    </p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li><strong>Global Annual Turnover:</strong> Exceeds S$1 million; and</li>
+      <li><strong>Supplies to Singapore Consumers:</strong> Supplies of low-value goods or digital services to non-GST registered consumers in Singapore exceed S$100,000 per year.</li>
+    </ul>
+
+    <!-- Section 3 -->
+    <h2 id="imports-above-400" class="text-2xl font-semibold text-ink dark:text-on-primary">3. Import GST on Shipments Exceeding S$400</h2>
+    <p>
+      When ordering high-value items—such as high-end electronics, designer apparel, luxury watches, or industrial machinery—valued above S$400, GST is collected through Singapore Customs rather than at the merchant's online checkout.
+    </p>
+    <p>
+      When the package arrives at Changi Airfreight Centre or Singapore Port, Singapore Customs calculates 9% import GST based on the total <strong>CIF Value (Cost + Insurance + Freight)</strong>.
+    </p>
+
+    <!-- Formula Box -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface font-mono text-sm my-4">
+      <div class="font-bold text-ink dark:text-on-primary font-sans mb-2">Import GST Calculation Formula (High Value Goods)</div>
+      <code>CIF Value = Item Value (FOB) + Shipping Freight + Shipping Insurance</code><br/>
+      <code>Import GST Payable = (CIF Value + Customs Duty + Excise Duty) × 9%</code>
+    </div>
+
+    <!-- Section 4 -->
+    <h2 id="shipping-freight-cif" class="text-2xl font-semibold text-ink dark:text-on-primary">4. How Shipping & Freight Charges Affect Import GST</h2>
+    <p>
+      A common misconception when searching for <em>"freight charges gst singapore"</em> or <em>"singapore shipping gst"</em> is that tax applies only to the item price itself.
+    </p>
+    <p>
+      In reality, IRAS and Singapore Customs require GST to be paid on the total landed cost. If an item costs S$380 and international express shipping costs S$50, the total CIF value is S$430. Because S$430 exceeds the S$400 threshold, the shipment shifts into the customs clearance process and 9% GST applies to the entire S$430 amount (resulting in S$38.70 GST payable).
+    </p>
+
+    <!-- Section 5 -->
+    <h2 id="customs-permits-fedex" class="text-2xl font-semibold text-ink dark:text-on-primary">5. Singapore Customs Clearance & FedEx GST Permits</h2>
+    <p>
+      When importing goods into Singapore via express couriers like <strong>FedEx, DHL, UPS, or EMS</strong>, couriers act as declaring agents to submit customs trade documentation (GST import permit).
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h4 class="font-bold text-ink mb-1 dark:text-on-primary">Inward GST Permit</h4>
+        <p class="text-xs text-muted dark:text-muted">A mandatory customs trade permit required for commercial importations exceeding statutory duty thresholds.</p>
+      </div>
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h4 class="font-bold text-ink mb-1 dark:text-on-primary">Courier Handling Fees</h4>
+        <p class="text-xs text-muted dark:text-muted">Couriers pay import GST upfront on your behalf and charge a administrative disbursement fee (typically S$10 to S$25) upon delivery.</p>
+      </div>
+    </div>
+
+    <p>
+      Businesses importing goods for resale can claim back this import GST as <strong>Input Tax</strong> on their quarterly IRAS Form F5 filing, provided they retain official Singapore Customs Inward Permits and courier tax invoices. Calculate your exact tax liabilities with our <a href="/countries/singapore/gst/gst-calculator/" class="text-link font-semibold hover:underline">Singapore GST Calculator</a>.
+    </p>
+
+    <!-- Section 6 -->
+    <h2 id="digital-services-tax" class="text-2xl font-semibold text-ink dark:text-on-primary">6. Singapore Digital Services Tax Framework</h2>
+    <p>
+      In addition to physical goods, Singapore applies <strong>9% GST on imported digital services</strong>. Digital services encompass any service supplied over the internet with minimal human intervention:
+    </p>
+    <ul class="list-disc pl-6 space-y-2 text-sm">
+      <li><strong>Streaming Media:</strong> Netflix, Spotify, YouTube Premium, Disney+.</li>
+      <li><strong>Software & Cloud Applications:</strong> Adobe Creative Cloud, Microsoft 365, Google One, Zoom, SaaS subscriptions.</li>
+      <li><strong>Online Gaming & Mobile Apps:</strong> Steam game purchases, Apple App Store, Google Play Store.</li>
+      <li><strong>Digital Advertising & E-Learning:</strong> Google Ads, Meta Ads, Coursera courses consumed by local residents.</li>
+    </ul>
+
+    <!-- Section 7 FAQs -->
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">7. Frequently Asked Questions (FAQ)</h2>
+    <div class="space-y-4">
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">How does GST apply to low-value goods (LVG under S$400) in Singapore?</h3>
+        <p class="mt-1 text-sm">All low-value goods (S$400 or below) imported into Singapore by air or post attract 9% GST. Overseas e-commerce platforms registered under OVR collect GST directly at checkout.</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Why do AliExpress, Amazon, and ASOS charge GST on Singapore orders?</h3>
+        <p class="mt-1 text-sm">Under Singapore's OVR regime, overseas merchants with global revenue >S$1 million selling >S$100k to Singapore must register with IRAS and collect 9% GST at checkout.</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">How is GST collected on imports exceeding S$400?</h3>
+        <p class="mt-1 text-sm">Goods exceeding S$400 are assessed by Singapore Customs upon entry. Express couriers (FedEx/DHL) pay import GST on your behalf and bill you upon delivery.</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Are shipping and freight charges subject to GST?</h3>
+        <p class="mt-1 text-sm">Yes. Singapore Customs calculates import GST on the total CIF value (Cost of goods + Insurance + Freight charges).</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Does Singapore charge GST on digital services?</h3>
+        <p class="mt-1 text-sm">Yes. All overseas digital services (streaming, SaaS, cloud storage, mobile apps) attract 9% GST under the OVR framework.</p>
+      </div>
+    </div>
+
+    <!-- Related Links / Suggested Content -->
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Explore More Singapore Tax Resources</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/countries/singapore/gst/gst-calculator/" class="text-link hover:underline font-medium">Singapore GST Calculator (9%)</a>
+        <a href="/blogs/singapore-gst-rate-2026-guide/" class="text-link hover:underline font-medium">Singapore GST Rate 2026 Guide</a>
+        <a href="/blogs/singapore-zero-gst-warehouse-wgst-customs-guide/" class="text-link hover:underline font-medium">Zero-GST Warehouse (ZGW) Scheme</a>
+        <a href="/blogs/singapore-gst-registration-accounting-compliance-guide/" class="text-link hover:underline font-medium">GST Business Accounting & Audit Guide</a>
+        <a href="/blogs/singapore-property-rental-vehicle-tourist-gst-refund-guide/" class="text-link hover:underline font-medium">Property & Tourist GST Refund Guide</a>
+        <a href="/countries/singapore/" class="text-link hover:underline font-medium">Finsiva Singapore Tax Portal</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>

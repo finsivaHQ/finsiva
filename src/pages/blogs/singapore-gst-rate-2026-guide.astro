@@ -1,0 +1,407 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Singapore GST Rate 2026 Guide: 9% Tax Rate, Rate Hike History & IRAS Rules";
+const description = "Comprehensive 2026 guide to Singapore Goods and Services Tax (GST/VAT). Learn about the 9% rate, historical rate hikes (3% to 9%), IRAS compliance, pay GST online options, and global VAT comparisons.";
+const image = "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&q=80";
+const author = "Michael Tang, Senior Tax & Corporate Advisory Lead";
+const authorBio = "Corporate tax advisor specializing in Singapore Goods and Services Tax (GST), company compliance, IRAS tax audits, and cross-border trade optimization.";
+const canonical = "https://finsiva.com/blogs/singapore-gst-rate-2026-guide";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is the current GST rate in Singapore for 2026?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>The standard Goods and Services Tax (GST) rate in Singapore for 2026 is 9%. This rate applies to all taxable supplies of goods and services in Singapore as well as imported goods and digital services.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "When did Singapore's GST increase to 9%?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Singapore's GST rate was increased in two stages announced in Budget 2022: from 7% to 8% on January 1, 2023, and from 8% to 9% on January 1, 2024. The 9% rate remains active through 2026.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is the difference between GST and VAT in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>In Singapore, Goods and Services Tax (GST) is the local term for Value Added Tax (VAT). Both refer to the multi-stage consumption tax levied on domestic consumption of goods and services.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How can businesses pay GST online to IRAS in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Businesses can pay GST online via GIRO, PayNow QR, FAST, or internet banking through the IRAS myTax Portal (myTax.iras.gov.sg).</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What are the primary types of GST in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Singapore classifies supplies into standard-rated (9%), zero-rated (0% for exports and international services), and exempt supplies (financial services, residential property rental/sale, and investment precious metals).</p>"
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="22 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <!-- Intro Banner -->
+    <p class="text-xl leading-relaxed font-light text-ink dark:text-on-primary">
+      Understanding <strong>Singapore GST (Goods and Services Tax)</strong>—often referred to globally as <strong>Singapore VAT</strong> or <em>singapur gst / gst singapura</em>—is essential for consumers, business owners, and international investors. Administered strictly by the <a href="https://www.iras.gov.sg" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">Inland Revenue Authority of Singapore (IRAS)</a>, the current Singapore GST rate stands at <strong>9%</strong> in 2026.
+    </p>
+
+    <!-- Key Takeaways Card -->
+    <div class="rounded-2xl border border-primary/20 bg-primary/5 p-6 dark:border-primary/30 dark:bg-primary/10">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white font-bold text-sm">✓</span>
+        <h3 class="text-lg font-bold text-ink dark:text-on-primary">2026 Singapore GST At A Glance</h3>
+      </div>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Current Rate (2026):</strong> 9% standard rate across taxable domestic & imported goods.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>IRAS Tax Portal:</strong> E-file and pay GST online via <a href="https://mytax.iras.gov.sg" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">myTax Portal</a>.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Historical Shift:</strong> Phased hike from 7% (pre-2023) → 8% (2023) → 9% (2024–2026).</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Interactive Calculator:</strong> Estimate inclusive/exclusive tax via our <a href="/countries/singapore/gst/gst-calculator/" class="text-link font-semibold hover:underline">Singapore GST Calculator</a>.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Navigation / TOC -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-semibold text-ink mb-4 dark:text-on-primary">Article Outline & Navigation</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#what-is-singapore-gst" class="text-link hover:underline">1. What is Singapore GST & How It Works</a></li>
+        <li><a href="#gst-rate-history-timeline" class="text-link hover:underline">2. Singapore GST Rate Hike History (3% to 9%)</a></li>
+        <li><a href="#types-of-gst-supplies" class="text-link hover:underline">3. Types of GST Supplies in Singapore</a></li>
+        <li><a href="#calculate-9-percent-gst" class="text-link hover:underline">4. How to Calculate 9% GST (Formula & Examples)</a></li>
+        <li><a href="#iras-compliance-payment" class="text-link hover:underline">5. IRAS GST Login, Filing & Paying Online</a></li>
+        <li><a href="#global-vat-comparison" class="text-link hover:underline">6. Singapore GST vs Regional & Global VAT Rates</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">7. Frequently Asked Questions (FAQ)</a></li>
+      </ul>
+    </div>
+
+    <!-- Section 1 -->
+    <h2 id="what-is-singapore-gst" class="text-2xl font-semibold text-ink dark:text-on-primary">1. What is Singapore GST & How It Works</h2>
+    <p>
+      The <strong>Goods and Services Tax (GST)</strong> in Singapore—known in Malay as <em>GST Singapura</em> or Bahasa Indonesia as <em>GST Singapore adalah</em> tax konsumsi—is a broad-based consumption tax levied on the import of goods, as well as nearly all supplies of goods and services in Singapore.
+    </p>
+    <p>
+      If you are searching <em>"singapore gst how many percent"</em> or <em>"singapore gst how much"</em>, the standard rate as enforced by the <strong>Inland Revenue Authority of Singapore (IRAS)</strong> is <strong>9%</strong>. In global terminology, Singapore GST is equivalent to Value-Added Tax (VAT), sales tax, or consumption tax in other jurisdictions.
+    </p>
+
+    <!-- Visual Chart: GST Flow Diagram -->
+    <div class="my-6 rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+      <h3 class="text-lg font-semibold text-ink mb-4 text-center dark:text-on-primary">Visual Flow of Singapore GST Collection Framework</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center text-sm">
+        <div class="rounded-lg border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-800">
+          <div class="font-bold text-primary mb-1">Step 1: Import / Production</div>
+          <p class="text-xs text-muted dark:text-muted">GST (9%) paid on raw materials or customs entry via Singapore Customs.</p>
+        </div>
+        <div class="rounded-lg border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-800">
+          <div class="font-bold text-primary mb-1">Step 2: Business Supply</div>
+          <p class="text-xs text-muted dark:text-muted">GST registered businesses charge 9% Output Tax and claim 9% Input Tax on business purchases.</p>
+        </div>
+        <div class="rounded-lg border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-800">
+          <div class="font-bold text-primary mb-1">Step 3: End Consumer</div>
+          <p class="text-xs text-muted dark:text-muted">Final consumer pays 9% GST. Net tax revenue remitted to Singapore Government Treasury.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <h2 id="gst-rate-history-timeline" class="text-2xl font-semibold text-ink dark:text-on-primary">2. Singapore GST Rate Hike History (3% to 9%)</h2>
+    <p>
+      Many taxpayers ask about the <strong>last GST increase in Singapore</strong>, <em>"singapore gst 5 to 7"</em>, <em>"singapore gst increase to 8"</em>, and <em>"when was the 9 gst singapore implementation"</em>. Since its inception in April 1994, the Singapore government GST rate has undergone structured statutory revisions to fund healthcare infrastructure, social safety nets, and economic growth for an aging population.
+    </p>
+
+    <!-- Table: Historical Timeline -->
+    <div class="overflow-x-auto my-6">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Implementation Period</th>
+            <th class="border p-3">Statutory GST Rate</th>
+            <th class="border p-3">Government Policy Context</th>
+            <th class="border p-3">Key Budget Announcement</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 font-medium">1 April 1994 – 31 December 2002</td>
+            <td class="p-3 font-bold text-slate-700 dark:text-slate-300">3%</td>
+            <td class="p-3">Initial introduction of GST in Singapore to broaden the tax base.</td>
+            <td class="p-3">Budget 1993</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">1 January 2003 – 31 December 2003</td>
+            <td class="p-3 font-bold text-slate-700 dark:text-slate-300">4%</td>
+            <td class="p-3">Phased fiscal adjustment following Asian financial recovery.</td>
+            <td class="p-3">Budget 2002</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">1 January 2004 – 30 June 2007</td>
+            <td class="p-3 font-bold text-slate-700 dark:text-slate-300">5%</td>
+            <td class="p-3">Fiscal consolidation and corporate tax rate reduction.</td>
+            <td class="p-3">Budget 2003</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">1 July 2007 – 31 December 2022</td>
+            <td class="p-3 font-bold text-slate-700 dark:text-slate-300">7%</td>
+            <td class="p-3">Maintained at 7% for 15 years to support healthcare & social spending.</td>
+            <td class="p-3">Budget 2007</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">1 January 2023 – 31 December 2023</td>
+            <td class="p-3 font-bold text-amber-600">8%</td>
+            <td class="p-3">First step of two-tier GST rate hike (8% GST Singapore).</td>
+            <td class="p-3">Budget 2022</td>
+          </tr>
+          <tr class="bg-primary/5 font-semibold dark:bg-primary/10">
+            <td class="p-3 text-primary">1 January 2024 – Present (2026)</td>
+            <td class="p-3 font-extrabold text-primary text-base">9%</td>
+            <td class="p-3 text-ink dark:text-on-primary">Final tier of GST increase (9% GST Singapore rate maintained through 2026).</td>
+            <td class="p-3">Budget 2022 / 2024 / 2026</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      For those wondering about <strong>GST 2026 Singapore rate changes</strong> or <em>"sg gst rate increase 2026"</em>: the Singapore Ministry of Finance has confirmed that the <strong>9% GST rate</strong> will remain stable through 2026, with no further rate hikes planned in the immediate fiscal pipeline.
+    </p>
+
+    <!-- Section 3 -->
+    <h2 id="types-of-gst-supplies" class="text-2xl font-semibold text-ink dark:text-on-primary">3. Types of GST Supplies in Singapore</h2>
+    <p>
+      IRAS categorizes transactions into four primary tax treatments under Singapore tax legislation:
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="rounded bg-primary/10 px-2.5 py-1 text-xs font-bold text-primary">Standard-Rated (9%)</span>
+        </div>
+        <h4 class="font-bold text-ink mb-2 dark:text-on-primary">Standard Domestic Supplies</h4>
+        <p class="text-sm text-body dark:text-muted">
+          Most goods sold and services rendered in Singapore attract the standard 9% GST. Examples include retail goods, dining, professional advisory, domestic transport, and imported goods.
+        </p>
+      </div>
+
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="rounded bg-emerald-500/10 px-2.5 py-1 text-xs font-bold text-emerald-600">Zero-Rated (0%)</span>
+        </div>
+        <h4 class="font-bold text-ink mb-2 dark:text-on-primary">Exports & International Services</h4>
+        <p class="text-sm text-body dark:text-muted">
+          Exported physical goods and international services (e.g. cross-border freight, services provided to overseas clients) are taxed at 0%. Businesses can still claim back input GST incurred.
+        </p>
+      </div>
+
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="rounded bg-slate-500/10 px-2.5 py-1 text-xs font-bold text-slate-600 dark:text-slate-300">Exempt Supplies (0%)</span>
+        </div>
+        <h4 class="font-bold text-ink mb-2 dark:text-on-primary">Financial & Property Transactions</h4>
+        <p class="text-sm text-body dark:text-muted">
+          Exempt supplies include provision of financial services (interest, loan issuance), sale and lease of residential properties, and investment precious metals (IPM gold, silver, platinum).
+        </p>
+      </div>
+
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="rounded bg-purple-500/10 px-2.5 py-1 text-xs font-bold text-purple-600">Out of Scope</span>
+        </div>
+        <h4 class="font-bold text-ink mb-2 dark:text-on-primary">Non-Taxable Transactions</h4>
+        <p class="text-sm text-body dark:text-muted">
+          Third-country sales (goods transferred from country A to B without touching Singapore), private transactions, and statutory government regulatory fees.
+        </p>
+      </div>
+    </div>
+
+    <!-- Section 4 -->
+    <h2 id="calculate-9-percent-gst" class="text-2xl font-semibold text-ink dark:text-on-primary">4. How to Calculate 9% GST (Formula & Examples)</h2>
+    <p>
+      Calculating Singapore GST depends on whether your baseline price is <strong>GST-exclusive</strong> (tax added on top) or <strong>GST-inclusive</strong> (tax embedded inside the total price).
+    </p>
+
+    <!-- Calculation Formulas Card -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-lg font-bold text-ink mb-4 dark:text-on-primary">Official Singapore GST Formulas (9% Rate)</h3>
+      <div class="space-y-4 font-mono text-sm">
+        <div class="rounded-lg bg-canvas p-4 border border-hairline dark:bg-slate-900 dark:border-slate-800">
+          <div class="font-bold text-primary font-sans mb-1">1. GST Exclusive Formula (Add 9% to Net Price)</div>
+          <code>GST Amount = Net Price × 0.09</code><br/>
+          <code>Total Invoice Price = Net Price × 1.09</code>
+        </div>
+        <div class="rounded-lg bg-canvas p-4 border border-hairline dark:bg-slate-900 dark:border-slate-800">
+          <div class="font-bold text-primary font-sans mb-1">2. GST Inclusive Formula (Extract 9% from Gross Price)</div>
+          <code>GST Amount = Gross Price × (9 / 109) = Gross Price × 0.0825688</code><br/>
+          <code>Net Base Price = Gross Price × (100 / 109)</code>
+        </div>
+      </div>
+    </div>
+
+    <p class="mt-4">
+      Try our interactive <a href="/countries/singapore/gst/gst-calculator/" class="text-link font-semibold hover:underline">Singapore GST Calculator</a> to calculate net amounts, tax components, and gross totals instantly!
+    </p>
+
+    <!-- Section 5 -->
+    <h2 id="iras-compliance-payment" class="text-2xl font-semibold text-ink dark:text-on-primary">5. IRAS GST Login, Filing & Paying Online</h2>
+    <p>
+      All GST-registered companies in Singapore must file quarterly or monthly <strong>Form F5 Returns</strong> electronically via the IRAS <strong>myTax Portal</strong> (<a href="https://mytax.iras.gov.sg" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">mytax.iras.gov.sg</a>).
+    </p>
+
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary">How to Pay GST Online in Singapore</h3>
+    <ol class="list-decimal pl-6 space-y-3">
+      <li>
+        <strong>Log in to myTax Portal:</strong> Authenticate using your company's Corppass credentials to access your GST portal account.
+      </li>
+      <li>
+        <strong>File Form F5 GST Return:</strong> Declare total taxable supplies, output tax collected, and allowable input tax claimed for the accounting period.
+      </li>
+      <li>
+        <strong>Submit Online Payment:</strong> Pay the net GST payable within one month from the end of the accounting period. Supported payment channels include:
+        <ul class="list-disc pl-6 mt-1 space-y-1 text-sm">
+          <li><strong>GIRO:</strong> Automated direct debit with an extended payment deadline (up to 15th of the following month).</li>
+          <li><strong>PayNow QR:</strong> Instant electronic transfer via corporate banking apps.</li>
+          <li><strong>Internet Banking / FAST / Telegraphic Transfer:</strong> Direct bill payment using IRAS Virtual Account number.</li>
+        </ul>
+      </li>
+    </ol>
+
+    <!-- Section 6 -->
+    <h2 id="global-vat-comparison" class="text-2xl font-semibold text-ink dark:text-on-primary">6. Singapore GST vs Regional & Global VAT Rates</h2>
+    <p>
+      Even after increasing to 9%, Singapore maintains one of the most competitive consumption tax rates among developed economies globally, making it a compelling hub for business regional headquarters and logistics operations.
+    </p>
+
+    <!-- Comparative Table -->
+    <div class="overflow-x-auto my-6">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Country / Jurisdiction</th>
+            <th class="border p-3">Consumption Tax Name</th>
+            <th class="border p-3">Standard Tax Rate (2026)</th>
+            <th class="border p-3">Comparison vs Singapore (9%)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr class="bg-primary/5 font-medium dark:bg-primary/10">
+            <td class="p-3 font-bold text-primary">Singapore 🇸🇬</td>
+            <td class="p-3">GST (Goods & Services Tax)</td>
+            <td class="p-3 font-extrabold text-primary">9%</td>
+            <td class="p-3 text-primary">Baseline Benchmark</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Malaysia 🇲🇾</td>
+            <td class="p-3">SST (Sales & Services Tax)</td>
+            <td class="p-3">6% – 8% (Variable)</td>
+            <td class="p-3 font-medium text-emerald-600">Slightly lower rate on selected services</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Indonesia 🇮🇩</td>
+            <td class="p-3">PPN (Value Added Tax)</td>
+            <td class="p-3">11% – 12%</td>
+            <td class="p-3">Higher (+2% to +3%)</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Thailand 🇹🇭</td>
+            <td class="p-3">VAT</td>
+            <td class="p-3">7%</td>
+            <td class="p-3 font-medium text-emerald-600">Lower (-2%)</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">United Kingdom 🇬🇧</td>
+            <td class="p-3">VAT</td>
+            <td class="p-3">20%</td>
+            <td class="p-3 text-red-600 font-medium">Much Higher (+11%)</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Australia 🇦🇺</td>
+            <td class="p-3">GST</td>
+            <td class="p-3">10%</td>
+            <td class="p-3 font-medium">Comparable (+1%)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Section 7 FAQs -->
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">7. Frequently Asked Questions (FAQ)</h2>
+    <div class="space-y-4">
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is the current GST rate in Singapore for 2026?</h3>
+        <p class="mt-1 text-sm">The standard Goods and Services Tax (GST) rate in Singapore is 9%. It applies to all taxable sales of goods and services as well as goods imported into Singapore.</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">When did Singapore's GST increase to 9%?</h3>
+        <p class="mt-1 text-sm">Singapore's GST rate was increased in two steps: from 7% to 8% on January 1, 2023, and from 8% to 9% on January 1, 2024. The 9% rate continues through 2026.</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is the difference between GST and VAT in Singapore?</h3>
+        <p class="mt-1 text-sm">In Singapore, GST (Goods and Services Tax) is the official terminology for VAT (Value-Added Tax). Both describe a multi-stage tax levied on domestic consumption.</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">How do I pay GST online to IRAS?</h3>
+        <p class="mt-1 text-sm">Log in to the IRAS myTax Portal using Corppass, submit your quarterly Form F5 return, and pay via GIRO, PayNow QR, or FAST bank transfer.</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What supplies are zero-rated for GST in Singapore?</h3>
+        <p class="mt-1 text-sm">Exported goods and international services (such as cross-border transport and services provided to overseas entities) are zero-rated (0% GST).</p>
+      </div>
+    </div>
+
+    <!-- Related Links / Suggested Content -->
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Related Singapore GST & Tax Articles</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/countries/singapore/gst/gst-calculator/" class="text-link hover:underline font-medium">Singapore GST Calculator (9%)</a>
+        <a href="/blogs/singapore-ecommerce-low-value-goods-gst-guide/" class="text-link hover:underline font-medium">Overseas Online Purchases & LVG GST</a>
+        <a href="/blogs/singapore-zero-gst-warehouse-wgst-customs-guide/" class="text-link hover:underline font-medium">Zero-GST Warehouse (ZGW) Guide</a>
+        <a href="/blogs/singapore-gst-registration-accounting-compliance-guide/" class="text-link hover:underline font-medium">GST Registration & Accounting Entries</a>
+        <a href="/blogs/singapore-property-rental-vehicle-tourist-gst-refund-guide/" class="text-link hover:underline font-medium">Property GST & Tourist Refund Guide</a>
+        <a href="/blogs/singapore-corporate-tax-guide-2026/" class="text-link hover:underline font-medium">Singapore Corporate Tax Guide 2026</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>

@@ -1,0 +1,339 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Singapore GST Registration, Accounting Entries & Service Charge Guide 2026";
+const description = "Complete 2026 guide to Singapore GST registration thresholds (S$1M turnover), voluntary registration, accounting journal entries, 10% service charge vs 9% GST rules, and IRAS audit compliance.";
+const image = "https://images.unsplash.com/photo-1554224154-22dec7ec8818?w=1200&q=80";
+const author = "Michael Tang, Senior Tax & Corporate Advisory Lead";
+const authorBio = "Corporate tax advisor specializing in Singapore Goods and Services Tax (GST) registration, accounting systems setup, IRAS tax audits, and compliance management.";
+const canonical = "https://finsiva.com/blogs/singapore-gst-registration-accounting-compliance-guide";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "When is GST registration compulsory for a company in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>GST registration is compulsory under Singapore law if your business taxable turnover exceeds S$1 million at the end of any calendar year (retrospective basis) or is expected to exceed S$1 million in the next 12 months (prospective basis).</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How does the 10% service charge and 9% GST work together at Singapore restaurants?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>In Singapore F&B establishments, the 10% service charge is added to the food bill first. The 9% GST is then calculated on the combined total of (Food & Beverage + 10% Service Charge), yielding an effective extra charge of 19.9% above menu prices.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What are the essential double-entry accounting entries for GST in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>When issuing a sales invoice, Output Tax is credited (Liability). When receiving a supplier invoice, Input Tax is debited (Asset). At quarter end, net GST Payable = Credit Output Tax minus Debit Input Tax.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How can businesses verify if a company is GST-registered in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Businesses can search the official IRAS GST Registered Business Search portal using the company's UEN or GST Registration Number (GST Reg No) to verify tax registration status.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What are the penalties for GST evasion or late filing in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Late filing of Form F5 incurs a 5% penalty plus additional monthly 2% interest penalties. Intentional GST evasion carries penalties up to 300% of tax undercharged, plus fines up to S$10,000 and imprisonment.</p>"
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="23 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <!-- Intro Banner -->
+    <p class="text-xl leading-relaxed font-light text-ink dark:text-on-primary">
+      Operating a business in Singapore requires strict compliance with the <a href="https://www.iras.gov.sg" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">Inland Revenue Authority of Singapore (IRAS)</a>. Whether you operate a growing startup evaluating <strong>GST registered company Singapore rules</strong>, accounting teams managing <strong>GST accounting entries</strong>, or consumers calculating <strong>service charge and GST in Singapore</strong> (the "10% + 9%" dining rule), maintaining accurate financial records is paramount.
+    </p>
+
+    <!-- Key Takeaways Card -->
+    <div class="rounded-2xl border border-primary/20 bg-primary/5 p-6 dark:border-primary/30 dark:bg-primary/10">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white font-bold text-sm">📊</span>
+        <h3 class="text-lg font-bold text-ink dark:text-on-primary">GST Business Compliance Key Facts</h3>
+      </div>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Compulsory Registration:</strong> Required when taxable turnover exceeds S$1,000,000.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>F&B 10% + 9% Rule:</strong> GST is applied on (Food + Service Charge). Effective add-on: 19.9%.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Verify GST Reg No:</strong> Check suppliers via the IRAS GST Registered Business Search.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Accounting Entries:</strong> Debit Input Tax (Asset) vs Credit Output Tax (Liability).</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-semibold text-ink mb-4 dark:text-on-primary">Section Breakdown</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#compulsory-vs-voluntary-registration" class="text-link hover:underline">1. Compulsory vs Voluntary GST Registration Rules</a></li>
+        <li><a href="#service-charge-and-gst-math" class="text-link hover:underline">2. The 10% Service Charge + 9% GST Rule Explained</a></li>
+        <li><a href="#gst-accounting-entries" class="text-link hover:underline">3. Standard GST Accounting Entries & Adjustments</a></li>
+        <li><a href="#special-gst-schemes" class="text-link hover:underline">4. GST on Commission, Second-Hand Goods & Insurance</a></li>
+        <li><a href="#verify-gst-reg-no" class="text-link hover:underline">5. How to Check GST Reg No & List of Companies</a></li>
+        <li><a href="#iras-audit-evasion-penalties" class="text-link hover:underline">6. IRAS GST Audit Risks & Evasion Penalties</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">7. Frequently Asked Questions (FAQ)</a></li>
+      </ul>
+    </div>
+
+    <!-- Section 1 -->
+    <h2 id="compulsory-vs-voluntary-registration" class="text-2xl font-semibold text-ink dark:text-on-primary">1. Compulsory vs Voluntary GST Registration Rules</h2>
+    <p>
+      In Singapore, business entities are divided into <strong>GST registered companies</strong> and <strong>non-GST registered companies</strong>. Registration is governed by two statutory tests:
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+        <span class="rounded bg-primary/10 px-2.5 py-1 text-xs font-bold text-primary">Retrospective Basis</span>
+        <h4 class="font-bold text-ink mt-2 mb-1 dark:text-on-primary">12-Month Past Turnover</h4>
+        <p class="text-sm text-body dark:text-muted">
+          Your taxable turnover at the end of any calendar quarter (31 Mar, 30 Jun, 30 Sep, 31 Dec) for the past 12 months exceeds S$1 million. You must apply for GST registration within 30 days.
+        </p>
+      </div>
+
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+        <span class="rounded bg-emerald-500/10 px-2.5 py-1 text-xs font-bold text-emerald-600">Prospective Basis</span>
+        <h4 class="font-bold text-ink mt-2 mb-1 dark:text-on-primary">12-Month Future Turnover</h4>
+        <p class="text-sm text-body dark:text-muted">
+          You have reasonable grounds to expect your taxable turnover in the next 12 months will exceed S$1 million (e.g. signing a major sales contract). You must register within 30 days of contract execution.
+        </p>
+      </div>
+    </div>
+
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Voluntary GST Registration</h3>
+    <p>
+      Businesses with turnover under S$1 million can apply for <em>voluntary GST registration</em>. While voluntary registration allows you to claim back 9% Input Tax on office rent, computers, and inventory, it requires a minimum 2-year commitment and mandatory e-invoicing compliance (InvoiceNow).
+    </p>
+
+    <!-- Section 2 -->
+    <h2 id="service-charge-and-gst-math" class="text-2xl font-semibold text-ink dark:text-on-primary">2. The 10% Service Charge + 9% GST Rule Explained</h2>
+    <p>
+      One of the most frequent consumer questions in Singapore revolves around <em>"service charge and gst in singapore"</em>, <em>"singapore gst and service charge"</em>, or <em>"singapore gst service charge calculation"</em>.
+    </p>
+    <p>
+      In Singapore restaurants, hotels, and cafes, menus often display prices followed by <code>++</code> (e.g., <code>S$100++</code>). Here is how the math works:
+    </p>
+
+    <!-- Calculation Example Card -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface my-6">
+      <h3 class="text-lg font-bold text-ink mb-3 dark:text-on-primary">Step-by-Step 10% Service Charge + 9% GST Breakdown</h3>
+      <div class="space-y-3 text-sm">
+        <div class="flex justify-between border-b border-hairline pb-2 dark:border-overlay-lighter">
+          <span>Base Menu Food & Beverage Total:</span>
+          <span class="font-mono font-bold">S$100.00</span>
+        </div>
+        <div class="flex justify-between border-b border-hairline pb-2 dark:border-overlay-lighter">
+          <span>Add 10% Service Charge (10% of S$100):</span>
+          <span class="font-mono font-bold text-amber-600">+ S$10.00</span>
+        </div>
+        <div class="flex justify-between border-b border-hairline pb-2 dark:border-overlay-lighter font-semibold">
+          <span>Subtotal before GST:</span>
+          <span class="font-mono">S$110.00</span>
+        </div>
+        <div class="flex justify-between border-b border-hairline pb-2 dark:border-overlay-lighter">
+          <span>Add 9% Singapore GST (9% of S$110 Subtotal):</span>
+          <span class="font-mono font-bold text-primary">+ S$9.90</span>
+        </div>
+        <div class="flex justify-between text-base font-extrabold text-ink dark:text-on-primary pt-1">
+          <span>Final Total Payable Bill:</span>
+          <span class="font-mono text-primary">S$119.90</span>
+        </div>
+      </div>
+      <p class="mt-4 text-xs text-muted dark:text-muted">
+        <em>Crucial Tax Note: GST is legally levied on the service charge because service charges form part of the total gross consideration for the dining service! This yields an effective total tax/service addition of <strong>19.9%</strong>.</em>
+      </p>
+    </div>
+
+    <!-- Section 3 -->
+    <h2 id="gst-accounting-entries" class="text-2xl font-semibold text-ink dark:text-on-primary">3. Standard GST Accounting Entries & Adjustments</h2>
+    <p>
+      For accountants and finance managers, maintaining accurate double-entry ledger postings for GST transactions is critical for quarterly IRAS Form F5 reporting.
+    </p>
+
+    <!-- Table of Accounting Entries -->
+    <div class="overflow-x-auto my-6">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Transaction Scenario</th>
+            <th class="border p-3">Account Title (Debit / Credit)</th>
+            <th class="border p-3">Monetary Amount (S$1,000 Sale @ 9%)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter font-mono text-xs">
+          <tr>
+            <td class="p-3 font-sans font-medium">Sales Invoice Issued to Customer (Output Tax)</td>
+            <td class="p-3">
+              DR Accounts Receivable: S$1,090<br/>
+              CR Sales Revenue: S$1,000<br/>
+              <strong class="text-red-600">CR Output Tax Payable (Liability): S$90</strong>
+            </td>
+            <td class="p-3 font-sans">Creates S$90 liability payable to IRAS.</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-sans font-medium">Supplier Purchase Invoice Received (Input Tax)</td>
+            <td class="p-3">
+              DR Inventory / Expense: S$500<br/>
+              <strong class="text-emerald-600">DR Input Tax Claimable (Asset): S$45</strong><br/>
+              CR Accounts Payable: S$545
+            </td>
+            <td class="p-3 font-sans">Creates S$45 tax asset claimable from IRAS.</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-sans font-medium">Quarterly Net GST Settlement Posting</td>
+            <td class="p-3">
+              DR Output Tax Liability: S$90<br/>
+              CR Input Tax Asset: S$45<br/>
+              <strong class="text-primary">CR Cash / Bank (Net GST Paid): S$45</strong>
+            </td>
+            <td class="p-3 font-sans">Net S$45 remitted to IRAS via GIRO / myTax Portal.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="mt-4">
+      Use our <a href="/countries/singapore/gst/gst-calculator/" class="text-link font-semibold hover:underline">Singapore GST Calculator</a> to calculate exact input and output tax allocations instantly!
+    </p>
+
+    <!-- Section 4 -->
+    <h2 id="special-gst-schemes" class="text-2xl font-semibold text-ink dark:text-on-primary">4. GST on Commission, Second-Hand Goods & Insurance</h2>
+    <p>
+      IRAS enforces specialized rules for specific commercial transactions:
+    </p>
+    <ul class="list-disc pl-6 space-y-3 text-sm">
+      <li>
+        <strong>GST on Commission:</strong> Agency commissions, brokerage fees, and sales agent compensation earned in Singapore attract 9% GST. If the underlying agency service is provided to a non-resident entity benefiting an overseas recipient, zero-rating (0%) may apply.
+      </li>
+      <li>
+        <strong>GST on Second-Hand Goods (Gross Margin Scheme):</strong> Businesses trading in second-hand goods (e.g. used automobiles, luxury watches) can apply the Gross Margin Scheme, calculating 9% GST only on the <em>gross profit margin</em> (Selling Price minus Purchase Price) rather than full sales value.
+      </li>
+      <li>
+        <strong>GST on Insurance Premiums:</strong> General insurance premiums (property, vehicle, fire, liability) in Singapore attract 9% GST. Life insurance policies and international marine cargo insurance are exempt or zero-rated.
+      </li>
+    </ul>
+
+    <!-- Section 5 -->
+    <h2 id="verify-gst-reg-no" class="text-2xl font-semibold text-ink dark:text-on-primary">5. How to Check GST Reg No & List of Companies</h2>
+    <p>
+      Before claiming Input Tax on a vendor's tax invoice, Singapore businesses are required to verify that the supplier is genuinely GST-registered. Charging GST without valid registration is a criminal offense under the Goods and Services Tax Act.
+    </p>
+    <ol class="list-decimal pl-6 space-y-2 text-sm">
+      <li>Visit the official <strong>IRAS GST Registered Business Search</strong> portal.</li>
+      <li>Enter the supplier's <strong>Unique Entity Number (UEN)</strong> or <strong>GST Registration Number (GST Reg No)</strong>.</li>
+      <li>Confirm that the registration status is active and that the company name matches the invoice header exactly.</li>
+    </ol>
+
+    <!-- Section 6 -->
+    <h2 id="iras-audit-evasion-penalties" class="text-2xl font-semibold text-ink dark:text-on-primary">6. IRAS GST Audit Risks & Evasion Penalties</h2>
+    <p>
+      IRAS employs sophisticated data analytics to audit GST returns. Common audit triggers include sudden spikes in Input Tax claims, discrepancies between Corporate Income Tax (Form C-S) revenue and GST Form F5 sales declarations, and missing export documents for zero-rated goods.
+    </p>
+
+    <!-- Penalty Table -->
+    <div class="overflow-x-auto my-6">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Offense Category</th>
+            <th class="border p-3">Statutory Offense Type</th>
+            <th class="border p-3">Maximum Financial & Penal Sanctions</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 font-medium">Late Filing / Payment</td>
+            <td class="p-3">Failing to file Form F5 by due date</td>
+            <td class="p-3 text-amber-600 font-bold">5% late penalty + 2% per month interest (up to 50% max).</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Incorrect Return (Unintentional)</td>
+            <td class="p-3">Filing incorrect GST returns without reasonable excuse</td>
+            <td class="p-3 text-red-600 font-bold">Penalty equal to 200% of tax undercharged + fines up to S$5,000.</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Willful GST Evasion</td>
+            <td class="p-3">Intentional tax fraud, fake invoices, or illegal claims</td>
+            <td class="p-3 text-red-700 font-extrabold">Penalty up to 300% of tax undercharged + S$10,000 fine + 7 years imprisonment.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Section 7 FAQs -->
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">7. Frequently Asked Questions (FAQ)</h2>
+    <div class="space-y-4">
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">When is GST registration compulsory in Singapore?</h3>
+        <p class="mt-1 text-sm">Registration is compulsory when annual taxable turnover exceeds S$1 million on a past 12-month retrospective basis or expected 12-month prospective basis.</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">How does the 10% service charge and 9% GST work together?</h3>
+        <p class="mt-1 text-sm">The 10% service charge is added to the bill first, and 9% GST is calculated on the subtotal of (Food + Service Charge), resulting in an effective 19.9% total addition.</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">How do I verify a supplier's GST Registration Number?</h3>
+        <p class="mt-1 text-sm">Use the official IRAS GST Registered Business Search portal to verify UEN or GST Reg No before claiming input tax.</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Can non-GST registered companies charge GST?</h3>
+        <p class="mt-1 text-sm">No. Unregistered businesses cannot charge GST. Collecting GST without valid IRAS registration is a serious criminal offense.</p>
+      </div>
+    </div>
+
+    <!-- Related Links / Suggested Content -->
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Explore Related Guides & Tools</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/countries/singapore/gst/gst-calculator/" class="text-link hover:underline font-medium">Singapore GST Calculator (9%)</a>
+        <a href="/blogs/singapore-gst-rate-2026-guide/" class="text-link hover:underline font-medium">Singapore GST Rate 2026 Guide</a>
+        <a href="/blogs/singapore-ecommerce-low-value-goods-gst-guide/" class="text-link hover:underline font-medium">Overseas Online Shopping & LVG GST</a>
+        <a href="/blogs/singapore-zero-gst-warehouse-wgst-customs-guide/" class="text-link hover:underline font-medium">Zero-GST Warehouse (ZGW) Scheme</a>
+        <a href="/blogs/singapore-property-rental-vehicle-tourist-gst-refund-guide/" class="text-link hover:underline font-medium">Property GST & Tourist Refund Guide</a>
+        <a href="/countries/singapore/corporate-tax/income-tax-calculator/" class="text-link hover:underline font-medium">Singapore Corporate Tax Estimator</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>

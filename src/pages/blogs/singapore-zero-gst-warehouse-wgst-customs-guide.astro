@@ -1,0 +1,284 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Singapore Zero-GST Warehouse Scheme (ZGW/WGST) & Duty Exemption Guide 2026";
+const description = "Comprehensive 2026 guide to Singapore Zero-GST Warehouse Scheme (ZGW/WGST), list of zero-GST warehouses, customs duty suspension, ETRS tax refunds, export zero-rating, and gold GST exemptions.";
+const image = "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=80";
+const author = "Michael Tang, Senior Tax & Corporate Advisory Lead";
+const authorBio = "Corporate tax advisor specializing in Singapore Goods and Services Tax (GST), Zero-GST Warehouse licensing, customs trade logistics, and international supply chain optimization.";
+const canonical = "https://finsiva.com/blogs/singapore-zero-gst-warehouse-wgst-customs-guide";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is a Zero-GST Warehouse (ZGW / WGST) in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>A Zero-GST Warehouse (ZGW), operating under the Warehouse Logistics Scheme, is a designated premise licensed by Singapore Customs where business owners can store imported non-dutiable goods with import GST suspended until the goods are removed for local consumption.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How does the Zero-GST Warehouse scheme benefit trading and logistics companies?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>The ZGW scheme eliminates upfront GST payments on imported inventory intended for re-export or transshipment. If goods stored in a ZGW are re-exported, no GST is payable at all, preserving corporate cash flow.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What are the three license types under the Zero-GST Warehouse Scheme?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Singapore Customs offers Type III (major logistics hubs), Type II (medium-scale warehouses), and Type I (smaller storage facilities) licenses based on annual turnover and inventory audit capabilities.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Are investment gold and precious metals exempt from GST in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Yes. Investment Precious Metals (IPM)—including qualifying gold, silver, and platinum bars/coins meeting minimum purity standards (e.g. 99.5% gold purity)—are completely exempt from Singapore GST.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How does zero-rating work for services provided to overseas companies in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Under Section 21(3) of the Singapore GST Act, services supplied under contract to an overseas entity that directly benefit an overseas recipient are zero-rated (0% GST).</p>"
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="21 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <!-- Intro Banner -->
+    <p class="text-xl leading-relaxed font-light text-ink dark:text-on-primary">
+      Singapore's position as a premier global logistics hub relies heavily on its trade-facilitation frameworks. Among the most strategic mechanisms administered by <a href="https://www.customs.gov.sg" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">Singapore Customs</a> and <a href="https://www.iras.gov.sg" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">IRAS</a> is the <strong>Zero-GST Warehouse Scheme (ZGW)</strong>—frequently searched as <em>wgst warehouse singapore</em>, <em>zero gst warehouse singapore</em>, or <em>custom gst singapore</em>.
+    </p>
+
+    <!-- Key Takeaways Card -->
+    <div class="rounded-2xl border border-primary/20 bg-primary/5 p-6 dark:border-primary/30 dark:bg-primary/10">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white font-bold text-sm">🏭</span>
+        <h3 class="text-lg font-bold text-ink dark:text-on-primary">ZGW & Customs Trade Highlights</h3>
+      </div>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>GST Suspension:</strong> Import 9% GST is fully suspended while inventory resides inside a licensed ZGW.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Re-Export Relief:</strong> Zero GST payable when goods are removed from ZGW for overseas export.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>IPM Gold Exemption:</strong> Qualifying investment gold, silver & platinum are 100% GST-exempt.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary font-bold">•</span>
+          <span><strong>Services to Foreign Clients:</strong> Zero-rated (0% GST) under Section 21(3) international service rules.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-semibold text-ink mb-4 dark:text-on-primary">Guide Navigation</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#what-is-zero-gst-warehouse" class="text-link hover:underline">1. What is the Zero-GST Warehouse (ZGW) Scheme?</a></li>
+        <li><a href="#types-of-zgw-licenses" class="text-link hover:underline">2. Types of ZGW License Categories (Type I, II & III)</a></li>
+        <li><a href="#benefits-re-export-cashflow" class="text-link hover:underline">3. Working Capital & Cashflow Benefits of ZGW</a></li>
+        <li><a href="#zero-rating-overseas-services" class="text-link hover:underline">4. Zero-Rating Services to Overseas Companies</a></li>
+        <li><a href="#gold-precious-metals-gst" class="text-link hover:underline">5. Singapore Gold GST Rate & Investment Precious Metals</a></li>
+        <li><a href="#etrs-tourist-tax-refund" class="text-link hover:underline">6. ETRS & Singapore Customs Allowances</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">7. Frequently Asked Questions (FAQ)</a></li>
+      </ul>
+    </div>
+
+    <!-- Section 1 -->
+    <h2 id="what-is-zero-gst-warehouse" class="text-2xl font-semibold text-ink dark:text-on-primary">1. What is the Zero-GST Warehouse (ZGW) Scheme?</h2>
+    <p>
+      The <strong>Zero-GST Warehouse Scheme (ZGW)</strong> is a statutory trade program under Singapore Customs regulations that permits approved logistics operators, importers, and trading companies to store imported non-dutiable goods with <strong>import 9% GST suspended</strong> indefinitely until the goods are entered into the local domestic market.
+    </p>
+    <p>
+      For trading firms inquiring about <em>"list of zero gst warehouse in singapore"</em> or <em>"wgst warehouse singapore"</em>, major logistics hubs across Changi Airport Cargo Complex, Jurong Logistics Hub, Tuas Port, and Keppel Distripark operate licensed ZGW facilities.
+    </p>
+
+    <!-- Visual Process Flow -->
+    <div class="my-6 rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+      <h3 class="text-lg font-semibold text-ink mb-4 text-center dark:text-on-primary">Zero-GST Warehouse Duty Suspension Workflow</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center text-sm">
+        <div class="rounded-lg border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-800">
+          <div class="font-bold text-primary mb-1">1. Goods Import Entry</div>
+          <p class="text-xs text-muted dark:text-muted">Imported goods arrive at port/airport. Declared under Inward Permit into ZGW. <strong>GST is 100% suspended.</strong></p>
+        </div>
+        <div class="rounded-lg border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-800">
+          <div class="font-bold text-primary mb-1">2. Storage & Value-Add</div>
+          <p class="text-xs text-muted dark:text-muted">Inventory stored, repacked, or consolidated inside licensed ZGW facility without tax triggering.</p>
+        </div>
+        <div class="rounded-lg border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-800">
+          <div class="font-bold text-primary mb-1">3. Removal Decision</div>
+          <p class="text-xs text-muted dark:text-muted"><strong>If Re-Exported:</strong> 0% GST (Zero-Rated).<br/><strong>If Sold Domestically:</strong> 9% GST paid upon clearance.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <h2 id="types-of-zgw-licenses" class="text-2xl font-semibold text-ink dark:text-on-primary">2. Types of ZGW License Categories (Type I, II & III)</h2>
+    <p>
+      Singapore Customs issues three distinct ZGW license types based on corporate turnover, storage footprint, and internal inventory accounting controls:
+    </p>
+
+    <!-- Table of License Types -->
+    <div class="overflow-x-auto my-6">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">ZGW License Type</th>
+            <th class="border p-3">Target Business Operations</th>
+            <th class="border p-3">Storage & Control Requirements</th>
+            <th class="border p-3">GST Permit Declaration Flexibility</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 font-bold text-primary">Type III License</td>
+            <td class="p-3 font-medium">Major third-party logistics providers (3PLs) and large regional distribution centers.</td>
+            <td class="p-3">Requires TradeFIRST Premium band rating and automated warehouse management system (WMS).</td>
+            <td class="p-3 font-semibold text-emerald-600">Highest flexibility; monthly consolidated permit reporting.</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-bold text-slate-700 dark:text-slate-300">Type II License</td>
+            <td class="p-3 font-medium">Medium-sized trading enterprises and specialized distributor warehouses.</td>
+            <td class="p-3">Requires TradeFIRST Standard band rating and robust inventory tracking.</td>
+            <td class="p-3">Weekly or periodic permit declarations.</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-bold text-slate-700 dark:text-slate-300">Type I License</td>
+            <td class="p-3 font-medium">Smaller importers or dedicated single-company storage units.</td>
+            <td class="p-3">Basic inventory control audit trail required by Singapore Customs.</td>
+            <td class="p-3">Per-shipment permit declarations prior to removal.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Section 3 -->
+    <h2 id="benefits-re-export-cashflow" class="text-2xl font-semibold text-ink dark:text-on-primary">3. Working Capital & Cashflow Benefits of ZGW</h2>
+    <p>
+      Without a Zero-GST Warehouse, an importer bringing S$10,000,000 worth of electronic components into Singapore would have to pay <strong>S$900,000 upfront in 9% import GST</strong> to Singapore Customs, only to claim it back months later as Input Tax on their IRAS Form F5 return.
+    </p>
+    <p>
+      By utilizing a ZGW, that S$900,000 cash outlay is completely eliminated, unlocking massive liquidity for trading companies. Calculate potential tax savings with our <a href="/countries/singapore/gst/gst-calculator/" class="text-link font-semibold hover:underline">Singapore GST Calculator</a>.
+    </p>
+
+    <!-- Section 4 -->
+    <h2 id="zero-rating-overseas-services" class="text-2xl font-semibold text-ink dark:text-on-primary">4. Zero-Rating Services to Overseas Companies</h2>
+    <p>
+      A frequent compliance question for Singapore service providers is: <em>"What is the Singapore GST on services provided to an overseas company?"</em>
+    </p>
+    <p>
+      Under Section 21(3) of the Singapore Goods and Services Tax Act, services supplied under contract to an overseas entity are <strong>zero-rated (0% GST)</strong> if they fall into internationally recognized categories:
+    </p>
+    <ul class="list-disc pl-6 space-y-2 text-sm">
+      <li><strong>Cross-Border Professional Services:</strong> Software development, consulting, legal, and financial advisory supplied to overseas clients.</li>
+      <li><strong>International Freight & Shipping Logistics:</strong> Transporting goods from Singapore to overseas destinations or third-country freight services.</li>
+      <li><strong>Advertising & Digital Marketing:</strong> Marketing services aimed at audiences located outside Singapore.</li>
+    </ul>
+
+    <!-- Section 5 -->
+    <h2 id="gold-precious-metals-gst" class="text-2xl font-semibold text-ink dark:text-on-primary">5. Singapore Gold GST Rate & Investment Precious Metals</h2>
+    <p>
+      Singapore aims to be the premier precious metals trading hub in Asia. Under the <strong>Investment Precious Metals (IPM) GST Exemption Scheme</strong>, qualifying gold, silver, and platinum bars and coins are completely <strong>exempt from Singapore GST (0%)</strong>.
+    </p>
+
+    <!-- IPM Purity Criteria Box -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface my-4">
+      <h4 class="font-bold text-ink mb-3 dark:text-on-primary">Statutory Purity Requirements for GST-Exempt Gold & Metals</h4>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+        <div class="rounded-lg bg-canvas p-4 border border-hairline dark:bg-slate-900 dark:border-slate-800">
+          <div class="font-bold text-amber-500 mb-1">🥇 Gold (IPM)</div>
+          <p class="text-xs text-muted dark:text-muted">Must have minimum purity of <strong>99.5%</strong> (e.g. 24K gold bars, Canadian Maple Leaf, American Eagle, LBMA accredited bars).</p>
+        </div>
+        <div class="rounded-lg bg-canvas p-4 border border-hairline dark:bg-slate-900 dark:border-slate-800">
+          <div class="font-bold text-slate-400 mb-1">🥈 Silver (IPM)</div>
+          <p class="text-xs text-muted dark:text-muted">Must have minimum purity of <strong>99.9%</strong> (e.g. 999 fine silver bullion bars and coins).</p>
+        </div>
+        <div class="rounded-lg bg-canvas p-4 border border-hairline dark:bg-slate-900 dark:border-slate-800">
+          <div class="font-bold text-cyan-500 mb-1">⚪ Platinum (IPM)</div>
+          <p class="text-xs text-muted dark:text-muted">Must have minimum purity of <strong>99.0%</strong> (e.g. LBMA/LPPM accredited platinum bullion).</p>
+        </div>
+      </div>
+    </div>
+    <p class="text-sm">
+      <em>Note: Non-investment gold (such as decorative 18K/22K jewelry or numismatic collectible coins with high collector premiums) remains subject to standard 9% Singapore GST.</em>
+    </p>
+
+    <!-- Section 6 -->
+    <h2 id="etrs-tourist-tax-refund" class="text-2xl font-semibold text-ink dark:text-on-primary">6. ETRS & Singapore Customs Allowances</h2>
+    <p>
+      In addition to commercial logistics, Singapore Customs grants individual travellers and tourists specific <strong>GST-free allowances</strong> and refund schemes:
+    </p>
+    <ul class="list-disc pl-6 space-y-2 text-sm">
+      <li><strong>Singapore GST Free Allowance (Travellers):</strong> Individuals entering Singapore enjoy GST import relief on personal goods up to S$500 (if away for 48+ hours) or S$100 (if away for less than 48 hours).</li>
+      <li><strong>Electronic Tourist Refund Scheme (eTRS):</strong> Tourists purchasing goods in Singapore can claim back GST paid upon departure via eTRS kiosks at Changi Airport.</li>
+    </ul>
+
+    <!-- Section 7 FAQs -->
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">7. Frequently Asked Questions (FAQ)</h2>
+    <div class="space-y-4">
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is a Zero-GST Warehouse (ZGW) in Singapore?</h3>
+        <p class="mt-1 text-sm">A Zero-GST Warehouse is a customs-licensed facility where businesses can store imported non-dutiable goods with 9% import GST suspended until removed for local consumption.</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What happens if goods in a ZGW are re-exported?</h3>
+        <p class="mt-1 text-sm">If goods stored in a ZGW are re-exported overseas, no GST is payable at all (0% zero-rated supply).</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Is gold subject to GST in Singapore?</h3>
+        <p class="mt-1 text-sm">Investment Precious Metals (IPM gold bars/coins with >=99.5% purity) are 100% GST-exempt. Decorative gold jewelry attracts standard 9% GST.</p>
+      </div>
+
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Are services supplied to overseas clients subject to Singapore GST?</h3>
+        <p class="mt-1 text-sm">No. Under Section 21(3) of the GST Act, services supplied under contract to overseas entities that benefit foreign recipients are zero-rated (0%).</p>
+      </div>
+    </div>
+
+    <!-- Related Links / Suggested Content -->
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Explore Related Guides & Calculators</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/countries/singapore/gst/gst-calculator/" class="text-link hover:underline font-medium">Singapore GST Calculator (9%)</a>
+        <a href="/blogs/singapore-gst-rate-2026-guide/" class="text-link hover:underline font-medium">Singapore GST Rate 2026 Guide</a>
+        <a href="/blogs/singapore-ecommerce-low-value-goods-gst-guide/" class="text-link hover:underline font-medium">Overseas Shopping & LVG GST Guide</a>
+        <a href="/blogs/singapore-gst-registration-accounting-compliance-guide/" class="text-link hover:underline font-medium">GST Business Accounting & Filing Guide</a>
+        <a href="/blogs/singapore-corporate-tax-guide-2026/" class="text-link hover:underline font-medium">Singapore Corporate Income Tax 17% Guide</a>
+        <a href="/countries/singapore/" class="text-link hover:underline font-medium">Finsiva Singapore Portal</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>
