@@ -1,0 +1,270 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "NZ Overseas Income & FIF Tax Guide: Foreign Investments, UK Pension Transfers & Dividend Tax";
+const description = "Comprehensive IRD guide to New Zealand overseas income tax, Foreign Investment Fund (FIF) rules, UK pension transfer taxes, Portfolio Investment Entity (PIE) tax, and foreign dividend withholding tax.";
+const image = "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1200&q=80";
+const author = "Caleb Thorne, Senior Tax Advisory Lead";
+const authorBio = "Public accountant and international tax technology advisor assisting expats, migrants, UK pension holders, and global investors with IRD foreign income compliance, FIF rules, and PIE tax structuring.";
+const canonical = "https://finsiva.com/blogs/nz-overseas-income-fif-uk-pension-transfer-tax-guide";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How does New Zealand tax overseas and foreign income?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>New Zealand tax residents are taxed on their worldwide income. This includes foreign employment income, offshore rental profits, international dividends, foreign bank interest, and overseas pension distributions. Non-residents are taxed only on NZ-sourced income.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is the Foreign Investment Fund (FIF) rule in NZ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>The FIF regime applies to NZ tax residents who hold offshore shares or funds costing over NZD $50,000 in total. Rather than taxing actual dividends received, FIF rules calculate taxable income using prescribed methods—most commonly the Fair Dividend Rate (FDR, 5% of opening market value) or Comparative Value (CV, actual annual gain).</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Are UK pension transfers to New Zealand subject to IRD tax?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>If you transfer an eligible UK pension to a Qualifying Recognised Overseas Pension Scheme (QROPS) in NZ within your first 4 years of NZ tax residency (the 48-month transitional residency exemption period), the transfer is completely tax-free. If transferred after the 4-year exemption, a percentage of the transfer amount is treated as taxable income under IRD schedule rules.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is PIE tax in New Zealand?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>A Portfolio Investment Entity (PIE) is an NZ-managed investment fund where investment earnings are taxed at your Prescribed Investor Rate (PIR)—capped at a maximum of 28%, compared to the top personal tax rate of 39%.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How is foreign dividend withholding tax handled in NZ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Foreign dividends paid to NZ tax residents may have foreign tax withheld at source. NZ allows a Foreign Tax Credit (FTC) on your IR3 return for foreign tax paid, up to the amount of NZ tax payable on that income, under Double Tax Agreements (DTAs).</p>"
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="18 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <p class="text-lg leading-relaxed">
+      Understanding <strong>tax on overseas income in NZ</strong> is essential for migrants, returning Kiwis, expat workers, and foreign investors. New Zealand operates a worldwide tax system for residents, meaning offshore income—including foreign salary, international shares, dividends, and <strong>uk pension transfers to nz ird</strong>—must be declared and taxed under IRD regulations.
+    </p>
+
+    <!-- Exemption Badge Banner -->
+    <div class="rounded-2xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary font-bold text-sm">✈️</span>
+        <h2 class="text-xl font-bold text-ink dark:text-on-primary">4-Year Transitional Exemption for New Migrants</h2>
+      </div>
+      <p class="text-sm leading-relaxed">
+        If you are moving to New Zealand or returning after a 10-year absence, you may qualify for a <strong>4-year (48-month) transitional tax exemption</strong> on most foreign-sourced passive income (such as foreign bank interest, offshore dividends, rental income, and pension transfers).
+      </p>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Table of Contents</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#worldwide-taxation" class="text-link hover:underline">1. Worldwide Income & NZ Tax Residency</a></li>
+        <li><a href="#fif-rules" class="text-link hover:underline">2. Foreign Investment Fund (FIF) Rules & $50k Limit</a></li>
+        <li><a href="#fdr-vs-cv" class="text-link hover:underline">3. FDR vs CV Calculation Methods for Offshore Shares</a></li>
+        <li><a href="#uk-pension-transfers" class="text-link hover:underline">4. UK Pension Transfers to NZ (QROPS & IRD Tax Rules)</a></li>
+        <li><a href="#pie-tax-pir" class="text-link hover:underline">5. Portfolio Investment Entity (PIE) Tax & PIR Rates</a></li>
+        <li><a href="#foreign-dividends-dta" class="text-link hover:underline">6. Foreign Dividend Withholding Tax & Tax Credits</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">7. Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <!-- Section 1 -->
+    <h2 id="worldwide-taxation" class="text-2xl font-semibold text-ink dark:text-on-primary">1. Worldwide Income & NZ Tax Residency</h2>
+    <p>
+      If you satisfy the IRD tax residency test (being physically present in NZ for <strong>183 days or more</strong> in any 12-month period or maintaining a Permanent Place of Abode in NZ), you are classified as an NZ tax resident.
+    </p>
+    <p>
+      NZ tax residents must declare all foreign-sourced income on their annual IR3 return, including overseas employment wages, foreign sole-trader revenue, offshore rental income, and overseas investment yields.
+    </p>
+
+    <!-- Section 2 -->
+    <h2 id="fif-rules" class="text-2xl font-semibold text-ink dark:text-on-primary">2. Foreign Investment Fund (FIF) Rules & $50k Limit</h2>
+    <p>
+      The <strong>Foreign Investment Fund (FIF) income nz</strong> regime regulates tax on foreign equity investments. If your total cost of foreign shares (e.g. US stocks, UK equities, international ETFs) exceeds <strong>NZD $50,000</strong> at any point in the tax year, the FIF rules apply.
+    </p>
+
+    <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface text-sm space-y-3 my-4">
+      <h3 class="font-bold text-ink dark:text-on-primary">The $50,000 Cost De Minimis Exemption:</h3>
+      <p>
+        If your total cost of foreign shares is <strong>below $50,000</strong>, you are exempt from FIF rules. You only pay tax on actual dividend distributions received during the tax year. Australian listed companies included on the ASX exemption list are also excluded from FIF rules regardless of value.
+      </p>
+    </div>
+
+    <!-- Section 3 -->
+    <h2 id="fdr-vs-cv" class="text-2xl font-semibold text-ink dark:text-on-primary">3. FDR vs CV Calculation Methods for Offshore Shares</h2>
+    <p>
+      When FIF rules apply, taxpayers calculate taxable foreign income using one of two primary IRD calculation methods:
+    </p>
+
+    <div class="overflow-x-auto my-6">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Method</th>
+            <th class="border p-3">Calculation Formula</th>
+            <th class="border p-3">Best Used When</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 font-bold text-primary">Fair Dividend Rate (FDR)</td>
+            <td class="p-3">Taxable Income = 5% of opening market value of foreign portfolio.</td>
+            <td class="p-3">Portfolio has high capital gains (&gt;5% growth). Capped at 5% maximum taxable return.</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-bold text-primary">Comparative Value (CV)</td>
+            <td class="p-3">Taxable Income = (Closing Value + Sales Proceeds) - (Opening Value + Purchases).</td>
+            <td class="p-3">Portfolio experiences negative or minimal growth (&lt;5% growth). Cannot result in negative taxable income for individuals.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      Estimate your personal tax rate on foreign investment returns using our free <a href="/countries/new-zealand/income-tax/income-tax-calculator/" class="text-link hover:underline font-semibold">New Zealand Income Tax Calculator</a>.
+    </p>
+
+    <!-- Section 4 -->
+    <h2 id="uk-pension-transfers" class="text-2xl font-semibold text-ink dark:text-on-primary">4. UK Pension Transfers to NZ (QROPS & IRD Tax Rules)</h2>
+    <p>
+      Transferring a UK pension (NHS, private pension, or corporate scheme) to a New Zealand Qualifying Recognised Overseas Pension Scheme (QROPS) involves specific IRD rules under the <strong>foreign superannuation scheme rules</strong>.
+    </p>
+
+    <!-- Pension Transfer Tax Scale Card -->
+    <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface text-sm space-y-4 my-6">
+      <h3 class="text-base font-bold text-ink dark:text-on-primary">Taxable Percentage Scale Based on Residency Duration:</h3>
+      <p class="text-xs text-muted">The percentage of transferred UK pension lump sum treated as taxable income increases the longer you have been an NZ tax resident:</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-center">
+        <div class="p-3 rounded border border-hairline bg-canvas-soft">
+          <div class="font-bold text-primary text-lg">0% Tax</div>
+          <div class="text-xs text-muted">Years 1 – 4 (Exemption)</div>
+        </div>
+        <div class="p-3 rounded border border-hairline bg-canvas-soft">
+          <div class="font-bold text-ink dark:text-on-primary text-lg">4.76% Taxable</div>
+          <div class="text-xs text-muted">Year 5</div>
+        </div>
+        <div class="p-3 rounded border border-hairline bg-canvas-soft">
+          <div class="font-bold text-ink dark:text-on-primary text-lg">18.44% Taxable</div>
+          <div class="text-xs text-muted">Year 10</div>
+        </div>
+        <div class="p-3 rounded border border-hairline bg-canvas-soft">
+          <div class="font-bold text-red-600 dark:text-red-400 text-lg">100% Taxable</div>
+          <div class="text-xs text-muted">Year 26+</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 5 -->
+    <h2 id="pie-tax-pir" class="text-2xl font-semibold text-ink dark:text-on-primary">5. Portfolio Investment Entity (PIE) Tax & PIR Rates</h2>
+    <p>
+      A <strong>Portfolio Investment Entity (PIE)</strong> is an NZ-domiciled investment structure (such as KiwiSaver funds or managed index funds) that offers significant tax advantages for high-income earners.
+    </p>
+    <p>
+      While the top personal income tax rate is 39%, PIE investment returns are taxed at your <strong>Prescribed Investor Rate (PIR)</strong>, which is capped at a maximum of <strong>28%</strong>.
+    </p>
+
+    <!-- PIR Rates Table -->
+    <div class="overflow-x-auto my-6">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Prescribed Investor Rate (PIR)</th>
+            <th class="border p-3">Taxable Income Threshold (Prior 2 Years)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr><td class="p-3 font-bold text-primary">10.5% PIR</td><td class="p-3">Income &lt;$14,000 and total income including PIE &lt;$48,000</td></tr>
+          <tr><td class="p-3 font-bold text-primary">17.5% PIR</td><td class="p-3">Income &lt;$48,000 and total income including PIE &lt;$70,000</td></tr>
+          <tr><td class="p-3 font-bold text-primary">28.0% PIR (Maximum)</td><td class="p-3">Income &gt;$48,000 or total income &gt;$70,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Section 6 -->
+    <h2 id="foreign-dividends-dta" class="text-2xl font-semibold text-ink dark:text-on-primary">6. Foreign Dividend Withholding Tax & Tax Credits</h2>
+    <p>
+      When receiving international dividends (e.g. from US companies paying 15% US withholding tax under W-8BEN), New Zealand provides a <strong>Foreign Tax Credit (FTC)</strong> on your IR3 return. This credit prevents double taxation by reducing your NZ tax payable by the amount of eligible foreign tax already paid overseas.
+    </p>
+
+    <!-- Section 7 FAQs -->
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">7. Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-base font-semibold text-ink dark:text-on-primary">How does New Zealand tax overseas and foreign income?</h3>
+        <p class="mt-1 text-sm">NZ residents are taxed on worldwide income, while non-residents pay tax only on NZ-sourced income.</p>
+      </div>
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-base font-semibold text-ink dark:text-on-primary">What is the Foreign Investment Fund (FIF) rule in NZ?</h3>
+        <p class="mt-1 text-sm">FIF rules tax offshore equities costing over $50k using FDR (5% opening value) or CV methods rather than cash dividends.</p>
+      </div>
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-base font-semibold text-ink dark:text-on-primary">Are UK pension transfers to New Zealand subject to IRD tax?</h3>
+        <p class="mt-1 text-sm">Transfers within your first 4 years of NZ tax residency are tax-free. Later transfers are partially taxed on a sliding scale.</p>
+      </div>
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-base font-semibold text-ink dark:text-on-primary">What is PIE tax in New Zealand?</h3>
+        <p class="mt-1 text-sm">PIE funds tax investment earnings at your PIR rate (capped at 28%), providing tax savings over the 39% top income tax bracket.</p>
+      </div>
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-base font-semibold text-ink dark:text-on-primary">How is foreign dividend withholding tax handled in NZ?</h3>
+        <p class="mt-1 text-sm">Foreign tax paid overseas can be claimed as a Foreign Tax Credit (FTC) against your NZ tax liability under DTAs.</p>
+      </div>
+    </div>
+
+    <!-- Suggested Content Section -->
+    <div class="mt-12 rounded-2xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-4 dark:text-on-primary">Suggested Content & Tools</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/countries/new-zealand/income-tax/income-tax-calculator/" class="p-3 rounded-lg bg-canvas border border-hairline hover:border-primary transition dark:bg-surface dark:border-overlay-lighter text-link font-medium">
+          NZ Income Tax Calculator →
+        </a>
+        <a href="/blogs/new-zealand-tax-treaties-us-australia-uk-canada-comparison/" class="p-3 rounded-lg bg-canvas border border-hairline hover:border-primary transition dark:bg-surface dark:border-overlay-lighter text-link font-medium">
+          NZ Tax Treaties & Global Comparison →
+        </a>
+        <a href="/blogs/is-new-zealand-tax-free-haven-worldwide-tax-explained/" class="p-3 rounded-lg bg-canvas border border-hairline hover:border-primary transition dark:bg-surface dark:border-overlay-lighter text-link font-medium">
+          Is NZ a Tax Haven? Guide →
+        </a>
+        <a href="/blogs/new-zealand-income-tax-for-expats-foreigners-non-residents/" class="p-3 rounded-lg bg-canvas border border-hairline hover:border-primary transition dark:bg-surface dark:border-overlay-lighter text-link font-medium">
+          NZ Expat & Foreigner Tax Guide →
+        </a>
+        <a href="/blogs/how-to-file-new-zealand-income-tax-return-ird-guide/" class="p-3 rounded-lg bg-canvas border border-hairline hover:border-primary transition dark:bg-surface dark:border-overlay-lighter text-link font-medium">
+          Filing IR3 Tax Return Guide →
+        </a>
+        <a href="/countries/new-zealand/" class="p-3 rounded-lg bg-canvas border border-hairline hover:border-primary transition dark:bg-surface dark:border-overlay-lighter text-link font-medium">
+          Finsiva New Zealand Tax Hub →
+        </a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>

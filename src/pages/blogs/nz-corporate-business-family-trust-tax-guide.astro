@@ -1,0 +1,247 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "New Zealand Corporate & Family Trust Tax Guide: Company Tax Rates, Beneficiary Distributions & FBT";
+const description = "Complete IRD guide to corporate income tax in New Zealand (28%), company tax structures, Family Trust tax rate increases (39%), allocating trust income to beneficiaries, Fringe Benefit Tax (FBT) thresholds, and GST turnover limits.";
+const image = "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80";
+const author = "Caleb Thorne, Senior Tax Advisory Lead";
+const authorBio = "Public accountant and corporate tax strategist advising company directors, SMEs, trust trustees, and business owners on IRD corporate taxation, imputation credits, FBT compliance, and trust income distributions.";
+const canonical = "https://finsiva.com/blogs/nz-corporate-business-family-trust-tax-guide";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is the corporate tax rate in New Zealand?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>The corporate income tax rate in New Zealand is a flat 28% on taxable business net profit. Unlike personal income tax, there are no progressive tax brackets for companies in NZ.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is the family trust tax rate in New Zealand?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Effective April 1, 2024, the default trustee tax rate in New Zealand increased from 33% to 39% to align with the top personal marginal income tax rate. De minimis exemptions exist for trusts with net annual income under $10,000, which retain a 33% trustee tax rate.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How is trust income allocated to beneficiaries in NZ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Trustees can allocate trust income to beneficiaries before or within 6 months after the end of the tax year. Income allocated to a beneficiary is taxed as beneficiary income at the beneficiary's individual marginal tax rate (10.5%–39%), rather than at the 39% trustee tax rate.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is the GST registration threshold in NZ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>The mandatory GST registration threshold in New Zealand is NZD $60,000 in gross taxable turnover over any 12-month period. Once registered, businesses charge 15% GST on sales and claim back GST on business purchases.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is Fringe Benefit Tax (FBT) in New Zealand?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Fringe Benefit Tax (FBT) is paid by employers on non-cash benefits provided to employees or shareholder-employees, such as company cars, subsidized transport, low-interest loans, and free gym memberships. FBT rates vary based on employee remuneration (up to 63.93%).</p>"
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="17 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <p class="text-lg leading-relaxed">
+      Managing business and wealth structures in New Zealand requires an understanding of <strong>company income tax rates in NZ</strong>, the revised 39% <strong>family trust tax rate</strong>, and strategic distributions of trust income. Whether operating as a limited liability company, a sole trader, or a discretionary family trust, navigating IRD tax laws ensures maximum tax efficiency and compliance.
+    </p>
+
+    <!-- Key Metrics Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
+      <div class="rounded-2xl border border-hairline bg-canvas-soft p-5 dark:border-overlay-light dark:bg-surface">
+        <div class="text-xs font-semibold text-muted uppercase tracking-wider">Company Tax Rate</div>
+        <div class="text-3xl font-extrabold text-ink dark:text-on-primary my-1">28%</div>
+        <p class="text-xs text-muted">Flat corporate tax rate on all net taxable company profits.</p>
+      </div>
+      <div class="rounded-2xl border border-hairline bg-canvas-soft p-5 dark:border-overlay-light dark:bg-surface">
+        <div class="text-xs font-semibold text-muted uppercase tracking-wider">Trustee Tax Rate</div>
+        <div class="text-3xl font-extrabold text-red-600 dark:text-red-400 my-1">39%</div>
+        <p class="text-xs text-muted">Default trustee rate for retained trust income (from April 1, 2024).</p>
+      </div>
+      <div class="rounded-2xl border border-hairline bg-canvas-soft p-5 dark:border-overlay-light dark:bg-surface">
+        <div class="text-xs font-semibold text-muted uppercase tracking-wider">GST Limit</div>
+        <div class="text-3xl font-extrabold text-primary my-1">$60,000</div>
+        <p class="text-xs text-muted">Mandatory turnover threshold for GST registration.</p>
+      </div>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Table of Contents</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#corporate-tax-rates" class="text-link hover:underline">1. New Zealand Corporate Tax Rates & Structure</a></li>
+        <li><a href="#imputation-credits" class="text-link hover:underline">2. Imputation Credits System & Dividends</a></li>
+        <li><a href="#family-trusts-39" class="text-link hover:underline">3. Family Trust Tax Rate Increase (39% Rule)</a></li>
+        <li><a href="#trust-distributions" class="text-link hover:underline">4. Allocating Trust Income to Beneficiaries</a></li>
+        <li><a href="#fbt-thresholds" class="text-link hover:underline">5. Fringe Benefit Tax (FBT) Rules & Thresholds</a></li>
+        <li><a href="#gst-threshold" class="text-link hover:underline">6. NZ GST Registration Threshold & Compliance</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">7. Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <!-- Section 1 -->
+    <h2 id="corporate-tax-rates" class="text-2xl font-semibold text-ink dark:text-on-primary">1. New Zealand Corporate Tax Rates & Structure</h2>
+    <p>
+      The <strong>company income tax rate in NZ</strong> is a flat <strong>28%</strong>. Registered companies file an annual IR4 corporate tax return with the Inland Revenue Department.
+    </p>
+    <p>
+      Corporate tax is calculated on net profit after deducting all allowable business operating expenses, staff wages, depreciation on capital assets, and commercial lease costs.
+    </p>
+
+    <!-- Section 2 -->
+    <h2 id="imputation-credits" class="text-2xl font-semibold text-ink dark:text-on-primary">2. Imputation Credits System & Dividends</h2>
+    <p>
+      New Zealand uses an <strong>imputation credit system</strong> to eliminate double taxation of company profits.
+    </p>
+    <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface text-sm space-y-3 my-4">
+      <h3 class="font-bold text-ink dark:text-on-primary">How Imputation Works:</h3>
+      <p>
+        When a company pays 28% tax on its profits, it attaches "imputation credits" to dividend payments made to shareholders. Shareholders report the gross dividend on their personal tax return and claim the 28% imputation credit. If their personal marginal rate is higher than 28% (e.g. 33% or 39%), they pay only the top-up difference.
+      </p>
+      <p class="text-xs text-muted">
+        Estimate personal top-up tax on company dividends using our free <a href="/countries/new-zealand/income-tax/income-tax-calculator/" class="text-link hover:underline font-medium">NZ Income Tax Calculator</a>.
+      </p>
+    </div>
+
+    <!-- Section 3 -->
+    <h2 id="family-trusts-39" class="text-2xl font-semibold text-ink dark:text-on-primary">3. Family Trust Tax Rate Increase (39% Rule)</h2>
+    <p>
+      A major update in the <strong>nz tax system</strong> is the increase in the trustee tax rate for <strong>family trusts in NZ</strong> from 33% to <strong>39%</strong>, effective 1 April 2024.
+    </p>
+    <p>
+      This change ensures trust retention rates match the top individual marginal tax rate (39% on income over $180,000), preventing high earners from funneling earnings into trusts purely for tax shelter purposes.
+    </p>
+
+    <!-- De Minimis Exemption Callout -->
+    <div class="p-4 rounded-lg bg-canvas-soft border border-hairline text-sm my-4">
+      <strong>Trustee Tax De Minimis Exception:</strong> Trusts earning <strong>$10,000 or less</strong> in net annual income retain the lower 33% trustee tax rate, providing tax relief for small family trusts holding modest assets.
+    </div>
+
+    <!-- Section 4 -->
+    <h2 id="trust-distributions" class="text-2xl font-semibold text-ink dark:text-on-primary">4. Allocating Trust Income to Beneficiaries</h2>
+    <p>
+      To manage tax exposure legally under the 39% trustee tax regime, trustees frequently utilize <strong>beneficiary income allocations</strong>.
+    </p>
+
+    <div class="overflow-x-auto my-6">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Income Classification</th>
+            <th class="border p-3">Tax Rate Applied</th>
+            <th class="border p-3">Distribution Rules</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 font-medium">Retained Trustee Income</td>
+            <td class="p-3 font-bold text-red-600 dark:text-red-400">39% (or 33% if &lt;$10k)</td>
+            <td class="p-3">Income retained by trust and not distributed to beneficiaries.</td>
+          </tr>
+          <tr class="bg-primary/5">
+            <td class="p-3 font-medium text-primary">Allocated Beneficiary Income</td>
+            <td class="p-3 font-bold text-primary font-mono">10.5% – 39% (Beneficiary Rate)</td>
+            <td class="p-3">Income distributed to adult beneficiaries within 6 months of tax year end. Taxed at beneficiary's personal rate.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Section 5 -->
+    <h2 id="fbt-thresholds" class="text-2xl font-semibold text-ink dark:text-on-primary">5. Fringe Benefit Tax (FBT) Rules & Thresholds</h2>
+    <p>
+      Employers offering perks (such as motor vehicles, health insurance, or interest-free staff loans) must pay <strong>Fringe Benefit Tax (FBT)</strong> on Form IR420.
+    </p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li><strong>FBT De Minimis Exemption:</strong> Unsubsidized minor benefits under <strong>$300 per employee per quarter</strong> (up to a maximum of $22,500 total across all staff per year) are exempt from FBT.</li>
+      <li><strong>Company Cars:</strong> Motor vehicle FBT is calculated based on either 20% of the vehicle's cost price or 36% of its GST-inclusive book value.</li>
+    </ul>
+
+    <!-- Section 6 -->
+    <h2 id="gst-threshold" class="text-2xl font-semibold text-ink dark:text-on-primary">6. NZ GST Registration Threshold & Compliance</h2>
+    <p>
+      Every business whose turnover exceeds the <strong>$60,000 NZ GST threshold</strong> must register for GST. Businesses charge 15% GST on domestic goods and services while claiming GST inputs on commercial expenses.
+    </p>
+    <p>
+      Calculate GST amounts easily with our free <a href="/countries/new-zealand/gst/gst-calculator/" class="text-link hover:underline font-semibold">NZ GST Calculator (15%)</a>.
+    </p>
+
+    <!-- Section 7 FAQs -->
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">7. Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-base font-semibold text-ink dark:text-on-primary">What is the corporate tax rate in New Zealand?</h3>
+        <p class="mt-1 text-sm">New Zealand corporate income tax is a flat 28% rate on company net profits.</p>
+      </div>
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-base font-semibold text-ink dark:text-on-primary">What is the family trust tax rate in New Zealand?</h3>
+        <p class="mt-1 text-sm">The default trustee tax rate is 39% for retained income (33% for trusts earning under $10,000).</p>
+      </div>
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-base font-semibold text-ink dark:text-on-primary">How is trust income allocated to beneficiaries in NZ?</h3>
+        <p class="mt-1 text-sm">Income allocated to beneficiaries within 6 months of year-end is taxed at the beneficiary's lower personal marginal rate.</p>
+      </div>
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-base font-semibold text-ink dark:text-on-primary">What is the GST registration threshold in NZ?</h3>
+        <p class="mt-1 text-sm">Mandatory GST registration applies when annual gross business turnover exceeds NZD $60,000.</p>
+      </div>
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-base font-semibold text-ink dark:text-on-primary">What is Fringe Benefit Tax (FBT) in New Zealand?</h3>
+        <p class="mt-1 text-sm">FBT is paid by employers on non-cash benefits (e.g. company cars, medical insurance) provided to employees.</p>
+      </div>
+    </div>
+
+    <!-- Suggested Content Section -->
+    <div class="mt-12 rounded-2xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-4 dark:text-on-primary">Suggested Content & Tools</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/countries/new-zealand/gst/gst-calculator/" class="p-3 rounded-lg bg-canvas border border-hairline hover:border-primary transition dark:bg-surface dark:border-overlay-lighter text-link font-medium">
+          NZ GST Calculator (15%) →
+        </a>
+        <a href="/countries/new-zealand/income-tax/income-tax-calculator/" class="p-3 rounded-lg bg-canvas border border-hairline hover:border-primary transition dark:bg-surface dark:border-overlay-lighter text-link font-medium">
+          NZ Income Tax Calculator →
+        </a>
+        <a href="/blogs/new-zealand-income-tax-act-2007-corporate-property-rental-tax/" class="p-3 rounded-lg bg-canvas border border-hairline hover:border-primary transition dark:bg-surface dark:border-overlay-lighter text-link font-medium">
+          Income Tax Act 2007 Guide →
+        </a>
+        <a href="/blogs/how-to-file-new-zealand-income-tax-return-ird-guide/" class="p-3 rounded-lg bg-canvas border border-hairline hover:border-primary transition dark:bg-surface dark:border-overlay-lighter text-link font-medium">
+          Filing IR3 & IR4 Returns →
+        </a>
+        <a href="/blogs/nz-rental-property-airbnb-income-tax-guide/" class="p-3 rounded-lg bg-canvas border border-hairline hover:border-primary transition dark:bg-surface dark:border-overlay-lighter text-link font-medium">
+          NZ Rental Property Tax Guide →
+        </a>
+        <a href="/countries/new-zealand/" class="p-3 rounded-lg bg-canvas border border-hairline hover:border-primary transition dark:bg-surface dark:border-overlay-lighter text-link font-medium">
+          Finsiva New Zealand Tax Hub →
+        </a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>

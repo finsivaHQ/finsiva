@@ -1,0 +1,275 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "New Zealand Secondary Income & Side Hustle Tax Guide: Uber, Freelancing, Tax Codes & Rates";
+const description = "Complete guide to paying tax on secondary income, Uber, Uber Eats, and side hustles in New Zealand. Explains IRD tax codes (IR330), secondary tax rate myths, self-employed write-offs, and end-of-year tax wash-ups.";
+const image = "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1200&q=80";
+const author = "Caleb Thorne, Senior Tax Advisory Lead";
+const authorBio = "Public accountant and tax technology advisor assisting freelancers, ride-share drivers, contractors, and dual-income earners with IRD tax codes, provisional tax, and side-hustle expense deductions.";
+const canonical = "https://finsiva.com/blogs/nz-secondary-income-uber-side-hustle-tax-guide";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Is secondary income taxed at a higher rate in New Zealand?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>No, it is a common myth that secondary income is taxed at a higher penalty rate in NZ. Under New Zealand's progressive tax system, your total annual income from all sources (primary job plus secondary jobs or side hustles) is combined at the end of the tax year. Secondary tax codes (such as S, SH, ST, SA) simply ensure that PAYE is withheld at your higher marginal rate so that you do not face a large tax bill at year-end.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How do I pay tax on Uber or Uber Eats income in NZ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>As an Uber or Uber Eats driver in NZ, you are considered an independent self-employed contractor rather than an employee. Uber does not deduct PAYE tax from your earnings. You must declare your gross fare earnings on an IR3 tax return, pay ACC levies, and deduct vehicle and operating expenses. If your gross turnover exceeds $60,000, you must also register for GST.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What tax code should I use for a second job in New Zealand?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>You choose your secondary tax code on Form IR330 based on your estimated total annual income from all jobs: use 'SB' if total income is under $14,000 (10.5%), 'S' for $14,001–$48,000 (17.5%), 'SH' for $48,001–$70,000 (30%), 'ST' for $70,001–$180,000 (33%), and 'SA' for income above $180,000 (39%).</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Can I deduct mileage and vehicle expenses for Uber driving in NZ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Yes, self-employed ride-share drivers can deduct vehicle expenses incurred while driving for Uber. You can use either the IRD tier-1 and tier-2 per-kilometer rate method or keep an accurate logbook of actual expenses (fuel, maintenance, insurance, depreciation) apportioned for business use.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What happens if I overpay secondary tax in NZ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>If too much tax was withheld from your paychecks due to selecting a higher secondary tax code, IRD will automatically calculate your final tax liability during the end-of-year automatic assessment (May–June) and issue a direct-credit tax refund to your bank account.</p>"
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="15 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <p class="text-lg leading-relaxed">
+      Earning a <strong>secondary income in NZ</strong> through a second job, freelancing, or gig economy platforms like Uber and Uber Eats is an increasingly popular way to boost earnings. However, many workers are confused by <strong>secondary income tax rates in NZ</strong>, tax code declarations on Form IR330, and how self-employed side hustle income is assessed by the Inland Revenue Department (IRD).
+    </p>
+
+    <!-- Myth vs Fact Alert Card -->
+    <div class="rounded-2xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-amber-500/10 text-amber-600 font-bold text-sm">💡</span>
+        <h2 class="text-xl font-bold text-ink dark:text-on-primary">The Secondary Tax Myth Debunked</h2>
+      </div>
+      <p class="text-sm leading-relaxed">
+        <strong>Myth:</strong> "Secondary income in NZ is taxed at a penalizing extra tax rate of 33% or 39%."<br/>
+        <strong>Fact:</strong> Secondary tax is <em>not</em> an additional tax. New Zealand has a single progressive tax scale. Secondary tax codes simply ensure your second employer withholds PAYE at your top marginal bracket so you don't face a tax bill at year-end.
+      </p>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Table of Contents</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#how-secondary-tax-works" class="text-link hover:underline">1. How Secondary Income Tax NZ Works</a></li>
+        <li><a href="#tax-codes-ir330" class="text-link hover:underline">2. IR330 Tax Codes Breakdown (M vs S, SH, ST, SA)</a></li>
+        <li><a href="#paying-tax-uber" class="text-link hover:underline">3. Paying Tax on Uber & Uber Eats Income NZ</a></li>
+        <li><a href="#self-employed-hustles" class="text-link hover:underline">4. Self-Employed Side Hustles & Freelance Tax</a></li>
+        <li><a href="#vehicle-mileage-deductions" class="text-link hover:underline">5. Vehicle & Expense Deductions for Ride-Share Drivers</a></li>
+        <li><a href="#year-end-washup" class="text-link hover:underline">6. End-of-Year Tax Assessments & Refunds</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">7. Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <!-- Section 1 -->
+    <h2 id="how-secondary-tax-works" class="text-2xl font-semibold text-ink dark:text-on-primary">1. How Secondary Income Tax NZ Works</h2>
+    <p>
+      In New Zealand, every taxpayer has a single progressive scale of income tax rates. When you work two PAYE jobs, your main job uses your primary tax code (usually <code>M</code> or <code>M ME</code>), which applies lower tax brackets (10.5% and 17.5%) starting from $0.
+    </p>
+    <p>
+      If your second employer also used code <code>M</code>, both employers would assume you earn $0–$14,000 at 10.5%, resulting in significant underpayment of PAYE tax. To prevent this, IRD requires you to select a <strong>secondary tax code</strong> for your secondary job, instructing your second employer to deduct tax at your top expected marginal rate.
+    </p>
+
+    <!-- Tax Code Selection Table -->
+    <h2 id="tax-codes-ir330" class="text-2xl font-semibold text-ink dark:text-on-primary">2. IR330 Tax Codes Breakdown (M vs S, SH, ST, SA)</h2>
+    <p>
+      When starting a secondary job, you complete IRD Form <strong>IR330 (Tax Code Declaration)</strong>. The table below outlines which secondary tax code to select based on your total annual income from all sources:
+    </p>
+
+    <div class="overflow-x-auto my-6">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Tax Code</th>
+            <th class="border p-3">Total Estimated Income Range (All Jobs)</th>
+            <th class="border p-3">PAYE Withholding Rate</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 font-mono font-bold text-primary">SB</td>
+            <td class="p-3">$0 – $14,000</td>
+            <td class="p-3 font-semibold">10.5%</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-mono font-bold text-primary">S</td>
+            <td class="p-3">$14,001 – $48,000</td>
+            <td class="p-3 font-semibold">17.5%</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-mono font-bold text-primary">SH</td>
+            <td class="p-3">$48,001 – $70,000</td>
+            <td class="p-3 font-semibold">30.0%</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-mono font-bold text-primary">ST</td>
+            <td class="p-3">$70,001 – $180,000</td>
+            <td class="p-3 font-semibold">33.0%</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-mono font-bold text-primary">SA</td>
+            <td class="p-3">Above $180,000</td>
+            <td class="p-3 font-semibold">39.0%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      Calculate your overall tax liability across combined jobs with our <a href="/countries/new-zealand/income-tax/income-tax-calculator/" class="text-link hover:underline font-semibold">New Zealand Income Tax Calculator</a>.
+    </p>
+
+    <!-- Section 3 -->
+    <h2 id="paying-tax-uber" class="text-2xl font-semibold text-ink dark:text-on-primary">3. Paying Tax on Uber & Uber Eats Income NZ</h2>
+    <p>
+      If you operate as a driver or delivery partner for <strong>Uber or Uber Eats in NZ</strong>, your tax status is fundamentally different from a secondary PAYE job.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface text-sm space-y-2">
+        <h3 class="font-bold text-ink dark:text-on-primary text-base">Uber Income Classification</h3>
+        <p>Uber drivers are independent sole traders. Uber payouts represent gross revenue without PAYE or ACC levy deductions. You are responsible for filing an annual <strong>IR3 return</strong>.</p>
+      </div>
+
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface text-sm space-y-2">
+        <h3 class="font-bold text-ink dark:text-on-primary text-base">GST Threshold ($60,000)</h3>
+        <p>If your gross earnings from ride-share driving plus any other sole-trader business turnover exceed $60,000 in a 12-month period, GST registration is compulsory.</p>
+      </div>
+    </div>
+
+    <!-- Section 4 -->
+    <h2 id="self-employed-hustles" class="text-2xl font-semibold text-ink dark:text-on-primary">4. Self-Employed Side Hustles & Freelance Tax</h2>
+    <p>
+      For freelancers, graphic designers, tutors, tradespeople, or e-commerce sellers, self-employed income is declared alongside your primary salary.
+    </p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li><strong>Provisional Tax Threshold:</strong> If your total tax liability on untaxed income (Residual Income Tax) exceeds <strong>$5,000</strong>, you will enter the IRD provisional tax regime, requiring advance tax payments in three annual installments.</li>
+      <li><strong>ACC Earner & Work Levies:</strong> ACC invoices self-employed individuals separately for earners' levy and work safety cover based on your declared self-employed earnings.</li>
+    </ul>
+
+    <!-- Section 5 -->
+    <h2 id="vehicle-mileage-deductions" class="text-2xl font-semibold text-ink dark:text-on-primary">5. Vehicle & Expense Deductions for Ride-Share Drivers</h2>
+    <p>
+      Self-employed drivers and side-hustlers can claim legitimate business expenses to lower their net taxable income:
+    </p>
+
+    <div class="overflow-x-auto my-6">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Deduction Method</th>
+            <th class="border p-3">How It Works</th>
+            <th class="border p-3">Required Record Keeping</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 font-medium">Kilometer Rate Method</td>
+            <td class="p-3">Claim IRD approved per-km rate (Tier 1 for first 14,000 km, Tier 2 thereafter).</td>
+            <td class="p-3">Logbook tracking business kilometers vs personal kilometers.</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Actual Cost Method</td>
+            <td class="p-3">Deduct exact percentage of fuel, repairs, maintenance, insurance, and vehicle depreciation.</td>
+            <td class="p-3">Full receipts for all vehicle costs + 90-day logbook ratio.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Section 6 -->
+    <h2 id="year-end-washup" class="text-2xl font-semibold text-ink dark:text-on-primary">6. End-of-Year Tax Assessments & Refunds</h2>
+    <p>
+      At the end of the tax year (March 31), IRD performs an automatic end-of-year wash-up between May and June. If you used a secondary tax code that was slightly too high, IRD calculates your exact tax liability based on total annual earnings and automatically refunds any excess tax paid directly into your bank account.
+    </p>
+
+    <!-- Section 7 FAQs -->
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">7. Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-base font-semibold text-ink dark:text-on-primary">Is secondary income taxed at a higher rate in New Zealand?</h3>
+        <p class="mt-1 text-sm">No. All income is combined at year-end. Secondary tax codes simply withhold PAYE at your top marginal tax bracket during the year.</p>
+      </div>
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-base font-semibold text-ink dark:text-on-primary">How do I pay tax on Uber or Uber Eats income in NZ?</h3>
+        <p class="mt-1 text-sm">Uber driver earnings are untaxed business income. Declare your net profits on Form IR3 and pay tax and ACC levies annually.</p>
+      </div>
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-base font-semibold text-ink dark:text-on-primary">What tax code should I use for a second job in New Zealand?</h3>
+        <p class="mt-1 text-sm">Select secondary code SB, S, SH, ST, or SA on Form IR330 depending on your total expected annual earnings from all jobs.</p>
+      </div>
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-base font-semibold text-ink dark:text-on-primary">Can I deduct mileage and vehicle expenses for Uber driving in NZ?</h3>
+        <p class="mt-1 text-sm">Yes, using either the IRD per-km rate method or actual expenses apportioned by business logbook usage.</p>
+      </div>
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-base font-semibold text-ink dark:text-on-primary">What happens if I overpay secondary tax in NZ?</h3>
+        <p class="mt-1 text-sm">IRD automatically reconciles your tax account in May-June and sends a direct credit refund for any overpaid PAYE tax.</p>
+      </div>
+    </div>
+
+    <!-- Suggested Content Section -->
+    <div class="mt-12 rounded-2xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-4 dark:text-on-primary">Suggested Content & Tools</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/countries/new-zealand/income-tax/income-tax-calculator/" class="p-3 rounded-lg bg-canvas border border-hairline hover:border-primary transition dark:bg-surface dark:border-overlay-lighter text-link font-medium">
+          NZ Income Tax Calculator →
+        </a>
+        <a href="/blogs/how-to-file-new-zealand-income-tax-return-ird-guide/" class="p-3 rounded-lg bg-canvas border border-hairline hover:border-primary transition dark:bg-surface dark:border-overlay-lighter text-link font-medium">
+          Filing IR3 & myIR Guide →
+        </a>
+        <a href="/blogs/nz-rental-property-airbnb-income-tax-guide/" class="p-3 rounded-lg bg-canvas border border-hairline hover:border-primary transition dark:bg-surface dark:border-overlay-lighter text-link font-medium">
+          NZ Rental Property Tax Guide →
+        </a>
+        <a href="/blogs/new-zealand-income-tax-rates-brackets-2025-2026/" class="p-3 rounded-lg bg-canvas border border-hairline hover:border-primary transition dark:bg-surface dark:border-overlay-lighter text-link font-medium">
+          NZ Income Tax Brackets 2025–2026 →
+        </a>
+        <a href="/countries/new-zealand/gst/gst-calculator/" class="p-3 rounded-lg bg-canvas border border-hairline hover:border-primary transition dark:bg-surface dark:border-overlay-lighter text-link font-medium">
+          NZ GST Calculator (15%) →
+        </a>
+        <a href="/countries/new-zealand/" class="p-3 rounded-lg bg-canvas border border-hairline hover:border-primary transition dark:bg-surface dark:border-overlay-lighter text-link font-medium">
+          Finsiva New Zealand Tax Hub →
+        </a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>

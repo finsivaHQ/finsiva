@@ -1,0 +1,258 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "New Zealand Take-Home Pay & PAYE Salary Tax Guide: Net Pay Calculations, Deductions & Write-Offs";
+const description = "Complete guide to working out your take-home pay and net salary after tax in New Zealand. Explains PAYE tax deductions, ACC earners levy, KiwiSaver options, student loan repayments, and step-by-step calculation examples for a $90,000 salary.";
+const image = "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&q=80";
+const author = "Caleb Thorne, Senior Tax Advisory Lead";
+const authorBio = "Public accountant and payroll advisor assisting employees, job seekers, and employers across Auckland, Christchurch, and Wellington with PAYE deductions, net salary conversions, KiwiSaver, and IRD online payments.";
+const canonical = "https://finsiva.com/blogs/nz-take-home-pay-paye-salary-tax-calculator-guide";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How do I calculate my take-home pay in New Zealand?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Your take-home pay (net salary) is calculated by taking your gross annual salary and deducting PAYE income tax (based on NZ's progressive tax brackets), the mandatory ACC Earners' Levy (1.60%), your KiwiSaver employee contribution (3%, 4%, 6%, 8%, or 10%), and any student loan repayments (12% of earnings above the repayment threshold).</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How much tax do I pay on a $90,000 salary in New Zealand?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>On a gross salary of $90,000 NZD in the 2024–2025 tax year, income tax is approximately $19,630, plus an ACC earners levy of $1,440. If contributing 3% to KiwiSaver ($2,700), your annual net take-home pay is approximately $66,230 (or roughly $1,273 per week).</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is the ACC Earners' Levy in NZ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>The ACC Earners' Levy is a mandatory statutory levy deducted alongside PAYE tax from all employment income. It funds accident compensation cover for non-work injuries. For the 2024–2025 tax year, the rate is 1.60% capped at a maximum earnings limit of $142,283.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is non-taxable income in New Zealand?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Non-taxable income in NZ includes tax-free employer reimbursements for genuine work expenses, certain tax-exempt allowances (such as relocation costs), gift inheritances, capital gains on primary residence sales, and approved tax-free employee meal allowances.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What does Residual Income Tax (RIT) mean in NZ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "<p>Residual Income Tax (RIT) is the final amount of tax you owe to the IRD after subtracting all PAYE tax withheld, tax credits, and foreign tax credits from your total tax liability. If your RIT exceeds $5,000, you are required to pay provisional tax in the following tax year.</p>"
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="August 2026"
+  readTime="18 min read"
+  canonical={canonical}
+  schema={faqSchema}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <p class="text-lg leading-relaxed">
+      Calculating your exact <strong>take home pay in NZ</strong> can be tricky given the combination of progressive <strong>paye tax rates</strong>, ACC levies, KiwiSaver contributions, and student loan deductions. Whether you live in <strong>Auckland</strong>, <strong>Christchurch</strong>, or Wellington, knowing your true <strong>net salary in New Zealand</strong> allows you to plan your budget, negotiate job offers, and maximize tax write-offs.
+    </p>
+
+    <!-- Quick Net Pay Summary Card -->
+    <div class="rounded-2xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary font-bold text-sm">💰</span>
+        <h2 class="text-xl font-bold text-ink dark:text-on-primary">Gross to Net Salary Formula</h2>
+      </div>
+      <div class="p-4 rounded-xl border border-hairline bg-canvas font-mono text-sm text-center text-ink dark:text-on-primary">
+        Net Pay = Gross Salary - (PAYE Income Tax + ACC Levy + KiwiSaver + Student Loan)
+      </div>
+      <p class="text-xs text-muted text-center mt-3">
+        Calculate your exact weekly, fortnightly, or monthly net pay using our free <a href="/countries/new-zealand/income-tax/income-tax-calculator/" class="text-link hover:underline font-semibold">New Zealand Income Tax Calculator</a>.
+      </p>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h2 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Table of Contents</h2>
+      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+        <li><a href="#how-paye-works" class="text-link hover:underline">1. How PAYE & Salary Tax Works in NZ</a></li>
+        <li><a href="#paye-statutory-deductions" class="text-link hover:underline">2. Statutory Deductions (ACC Levy, KiwiSaver, Student Loan)</a></li>
+        <li><a href="#salary-example-90k" class="text-link hover:underline">3. Detailed Walkthrough: Tax on $90,000 Salary</a></li>
+        <li><a href="#tax-writeoffs-non-taxable" class="text-link hover:underline">4. Tax Write-Offs & Non-Taxable Allowances</a></li>
+        <li><a href="#tax-credits-ietc" class="text-link hover:underline">5. Independent Earner Credit & Low Income Relief</a></li>
+        <li><a href="#residual-income-tax" class="text-link hover:underline">6. Residual Income Tax (RIT) & myIR Online Portal</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">7. Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <!-- Section 1 -->
+    <h2 id="how-paye-works" class="text-2xl font-semibold text-ink dark:text-on-primary">1. How PAYE & Salary Tax Works in NZ</h2>
+    <p>
+      In New Zealand, employers automatically withhold tax from your salary every pay cycle through the <strong>Pay As You Earn (PAYE)</strong> system. Your tax liability is determined by progressive tax brackets:
+    </p>
+
+    <!-- Tax Brackets Table -->
+    <div class="overflow-x-auto my-6">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Income Bracket (NZD)</th>
+            <th class="border p-3">PAYE Tax Rate</th>
+            <th class="border p-3">Notes</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr><td class="p-3 font-medium">$0 – $14,000</td><td class="p-3 font-semibold text-primary">10.5%</td><td class="p-3">Lowest tax tier</td></tr>
+          <tr><td class="p-3 font-medium">$14,001 – $48,000</td><td class="p-3 font-semibold text-primary">17.5%</td><td class="p-3">Middle earner band</td></tr>
+          <tr><td class="p-3 font-medium">$48,001 – $70,000</td><td class="p-3 font-semibold text-primary">30.0%</td><td class="p-3">Average full-time worker tier</td></tr>
+          <tr><td class="p-3 font-medium">$70,001 – $180,000</td><td class="p-3 font-semibold text-primary">33.0%</td><td class="p-3">Higher earnings band</td></tr>
+          <tr><td class="p-3 font-medium">Above $180,000</td><td class="p-3 font-semibold text-red-600 dark:text-red-400">39.0%</td><td class="p-3">Top marginal tax tier</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Section 2 -->
+    <h2 id="paye-statutory-deductions" class="text-2xl font-semibold text-ink dark:text-on-primary">2. Statutory Deductions (ACC Levy, KiwiSaver, Student Loan)</h2>
+    <p>
+      In addition to PAYE income tax, standard salary paychecks include several statutory items:
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6 text-sm">
+      <div class="rounded-xl border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="font-bold text-ink dark:text-on-primary mb-1">ACC Earners' Levy</h3>
+        <p class="text-xs text-muted mb-2">Mandatory 1.60% levy for non-work injury compensation cover (capped at $142,283 max earnings).</p>
+        <span class="inline-block rounded bg-canvas-soft px-2 py-1 text-xs font-mono">1.60%</span>
+      </div>
+      <div class="rounded-xl border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="font-bold text-ink dark:text-on-primary mb-1">KiwiSaver</h3>
+        <p class="text-xs text-muted mb-2">Employee retirement saving deduction of 3%, 4%, 6%, 8%, or 10% (employer matches 3%).</p>
+        <span class="inline-block rounded bg-canvas-soft px-2 py-1 text-xs font-mono">3% – 10%</span>
+      </div>
+      <div class="rounded-xl border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="font-bold text-ink dark:text-on-primary mb-1">Student Loan</h3>
+        <p class="text-xs text-muted mb-2">12% repayment on earnings above the annual repayment threshold ($24,128/year).</p>
+        <span class="inline-block rounded bg-canvas-soft px-2 py-1 text-xs font-mono">12% over limit</span>
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <h2 id="salary-example-90k" class="text-2xl font-semibold text-ink dark:text-on-primary">3. Detailed Walkthrough: Tax on $90,000 Salary</h2>
+    <p>
+      Let's examine a complete breakdown of <strong>tax on a $90,000 salary in NZ</strong> (assuming standard 3% KiwiSaver and no student loan):
+    </p>
+
+    <div class="overflow-x-auto my-6">
+      <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
+        <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
+          <tr>
+            <th class="border p-3">Calculation Item</th>
+            <th class="border p-3">Annual Amount (NZD)</th>
+            <th class="border p-3">Monthly Amount</th>
+            <th class="border p-3">Weekly Amount</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr><td class="p-3 font-bold">Gross Salary</td><td class="p-3 font-bold">$90,000</td><td class="p-3">$7,500</td><td class="p-3">$1,731</td></tr>
+          <tr><td class="p-3 text-red-600 dark:text-red-400">PAYE Income Tax</td><td class="p-3 text-red-600 dark:text-red-400">-$19,630</td><td class="p-3">-$1,636</td><td class="p-3">-$377 text-red-600</td></tr>
+          <tr><td class="p-3 text-red-600 dark:text-red-400">ACC Earners Levy (1.60%)</td><td class="p-3 text-red-600 dark:text-red-400">-$1,440</td><td class="p-3">-$120</td><td class="p-3">-$28</td></tr>
+          <tr><td class="p-3 text-amber-600 dark:text-amber-400">KiwiSaver Employee (3%)</td><td class="p-3 text-amber-600 dark:text-amber-400">-$2,700</td><td class="p-3">-$225</td><td class="p-3">-$52</td></tr>
+          <tr class="bg-green-500/10 font-bold">
+            <td class="p-3 text-green-700 dark:text-green-300">Net Take-Home Pay</td>
+            <td class="p-3 text-green-700 dark:text-green-300">$66,230</td>
+            <td class="p-3 text-green-700 dark:text-green-300">$5,519</td>
+            <td class="p-3 text-green-700 dark:text-green-300">$1,273</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Section 4 -->
+    <h2 id="tax-writeoffs-non-taxable" class="text-2xl font-semibold text-ink dark:text-on-primary">4. Tax Write-Offs & Non-Taxable Allowances</h2>
+    <p>
+      Employees can maximize non-taxable earnings through employer allowances under IRD guidelines:
+    </p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li><strong>Work From Home Allowance:</strong> Employers can pay up to $5/week for telecommunication and $15–$20/week for home utilities tax-free.</li>
+      <li><strong>Uniform & Tool Allowances:</strong> Reimbursed expenses for specialized safety equipment or uniform laundering are tax-exempt.</li>
+    </ul>
+
+    <!-- Section 5 -->
+    <h2 id="tax-credits-ietc" class="text-2xl font-semibold text-ink dark:text-on-primary">5. Independent Earner Credit & Low Income Relief</h2>
+    <p>
+      The <strong>Independent Earner Tax Credit (IETC)</strong> provides a tax credit of <strong>$10 per week ($520/year)</strong> for individuals earning between $24,000 and $48,000 who do not receive Working for Families or government benefits.
+    </p>
+
+    <!-- Section 6 -->
+    <h2 id="residual-income-tax" class="text-2xl font-semibold text-ink dark:text-on-primary">6. Residual Income Tax (RIT) & myIR Online Portal</h2>
+    <p>
+      If you have additional untaxed income, your end-of-year tax liability is calculated as <strong>Residual Income Tax (RIT)</strong>. You can view your tax summary, check PAYE deductions, and pay tax online by logging into <strong>myIR</strong> at <code>ird.govt.nz</code> or visiting IRD customer services in Auckland or Christchurch.
+    </p>
+
+    <!-- Section 7 FAQs -->
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">7. Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-base font-semibold text-ink dark:text-on-primary">How do I calculate my take-home pay in New Zealand?</h3>
+        <p class="mt-1 text-sm">Deduct PAYE income tax, ACC levy (1.60%), KiwiSaver (3%-10%), and student loans from gross annual salary.</p>
+      </div>
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-base font-semibold text-ink dark:text-on-primary">How much tax do I pay on a $90,000 salary in New Zealand?</h3>
+        <p class="mt-1 text-sm">Approx $19,630 in PAYE tax and $1,440 in ACC levy, leaving around $66,230 net pay (with 3% KiwiSaver).</p>
+      </div>
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-base font-semibold text-ink dark:text-on-primary">What is the ACC Earners' Levy in NZ?</h3>
+        <p class="mt-1 text-sm">A statutory 1.60% deduction from employment wages to cover non-work accident injury insurance.</p>
+      </div>
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-base font-semibold text-ink dark:text-on-primary">What is non-taxable income in New Zealand?</h3>
+        <p class="mt-1 text-sm">Tax-exempt employer reimbursements, work allowances, inheritances, and main home capital gains.</p>
+      </div>
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h3 class="text-base font-semibold text-ink dark:text-on-primary">What does Residual Income Tax (RIT) mean in NZ?</h3>
+        <p class="mt-1 text-sm">The remaining tax balance owed to IRD after subtracting all tax withheld and tax credits.</p>
+      </div>
+    </div>
+
+    <!-- Suggested Content Section -->
+    <div class="mt-12 rounded-2xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-4 dark:text-on-primary">Suggested Content & Tools</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/countries/new-zealand/income-tax/income-tax-calculator/" class="p-3 rounded-lg bg-canvas border border-hairline hover:border-primary transition dark:bg-surface dark:border-overlay-lighter text-link font-medium">
+          NZ Income Tax Calculator →
+        </a>
+        <a href="/blogs/new-zealand-income-tax-rates-brackets-2025-2026/" class="p-3 rounded-lg bg-canvas border border-hairline hover:border-primary transition dark:bg-surface dark:border-overlay-lighter text-link font-medium">
+          NZ Income Tax Rates & Brackets →
+        </a>
+        <a href="/blogs/nz-secondary-income-uber-side-hustle-tax-guide/" class="p-3 rounded-lg bg-canvas border border-hairline hover:border-primary transition dark:bg-surface dark:border-overlay-lighter text-link font-medium">
+          Secondary Income & Uber Tax Guide →
+        </a>
+        <a href="/blogs/how-to-file-new-zealand-income-tax-return-ird-guide/" class="p-3 rounded-lg bg-canvas border border-hairline hover:border-primary transition dark:bg-surface dark:border-overlay-lighter text-link font-medium">
+          Filing IR3 & myIR Returns →
+        </a>
+        <a href="/countries/new-zealand/gst/gst-calculator/" class="p-3 rounded-lg bg-canvas border border-hairline hover:border-primary transition dark:bg-surface dark:border-overlay-lighter text-link font-medium">
+          NZ GST Calculator (15%) →
+        </a>
+        <a href="/countries/new-zealand/" class="p-3 rounded-lg bg-canvas border border-hairline hover:border-primary transition dark:bg-surface dark:border-overlay-lighter text-link font-medium">
+          Finsiva New Zealand Tax Hub →
+        </a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>
