@@ -29,3 +29,4 @@ Prior to 1 April 2025, zero-emission electric vehicles were exempt from annual V
 ## See Also
 
 - [Benefit-in-Kind Electric Company Car Tax](/knowledge/glossary/uk-bik-company-car-tax/)
+- [UK Electric Vehicle Tax Guide](/blogs/uk-electric-vehicle-tax-guide/)

@@ -32,3 +32,4 @@ The taxable benefit amount equals the car's official P11D price multiplied by th
 ## See Also
 
 - [UK Electric Vehicle Road Tax (VED)](/knowledge/glossary/uk-ev-road-tax/)
+- [UK Electric Vehicle Tax Guide](/blogs/uk-electric-vehicle-tax-guide/)
