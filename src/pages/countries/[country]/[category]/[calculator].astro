@@ -317,13 +317,27 @@ const pageDescription = ruleId === 'pakistan-sales-tax-sales-tax-calculator'
   : ruleId === 'malaysia-sst-sst-calculator'
   ? "Calculate Malaysia Sales and Service Tax (SST). Compute applicable service tax and sales tax rates, including 6% and 8% service tax and 5%/10% sales tax where applicable."
   : `Calculate your ${country.name} ${calculator.name.toLowerCase()} for the ${country.taxYear} tax year. ${calculator.description}`;
-
+const calcCanonical = (() => {
+  if (country.slug === 'hong-kong' && category.slug === 'stamp-duty' && calculator.slug === 'hk-property-stamp-duty-calculator') {
+    return `https://finsiva.com/countries/${country.slug}/${category.slug}/${calculator.slug}/`;
+  }
+  if (country.slug === 'pakistan' && category.slug === 'income-tax' && calculator.slug === 'salary-tax-calculator') {
+    return `https://finsiva.com/countries/${country.slug}/${category.slug}/${calculator.slug}/`;
+  }
+  if (country.slug === 'malaysia' && category.slug === 'rental-income' && calculator.slug === 'rental-income-calculator') {
+    return `https://finsiva.com/countries/${country.slug}/${category.slug}/${calculator.slug}`;
+  }
+  if (country.slug === 'hong-kong' && category.slug === 'salaries-tax' && calculator.slug === 'hk-net-salary-calculator') {
+    return `https://finsiva.com/countries/${country.slug}/${category.slug}/${calculator.slug}`;
+  }
+  return `https://finsiva.com/countries/${country.slug}/${category.slug}/${calculator.slug}/`;
+})();
 ---
 
 <CountryLayout
   title={pageTitle}
   description={pageDescription}
-  canonical={`https://finsiva.com/countries/${country.slug}/${category.slug}/${calculator.slug}`}
+  canonical={calcCanonical}
   robots={isThinContent ? "noindex, follow" : undefined}
   breadcrumbs={[
     { label: "Countries", href: "/countries" },
