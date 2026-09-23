@@ -57,8 +57,9 @@ const faqSchema = {
   authorBio={authorBio} 
   lastUpdated={lastUpdated} 
   readTime={readTime}
-  schema={faqSchema}
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <div class="space-y-8 text-body dark:text-muted">
     <!-- Introduction Section -->
     <section>

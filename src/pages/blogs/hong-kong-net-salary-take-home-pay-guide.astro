@@ -65,6 +65,8 @@ const faqSchema = {
   lastUpdated="August 2026" 
   readTime="12 min read"
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <div class="space-y-8 text-body dark:text-muted leading-relaxed">
             <section>
               <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">Understanding Gross vs Net Salary in Hong Kong</h2>
@@ -185,4 +187,16 @@ const faqSchema = {
           </div>
         </div>
       <StickyToc />
+
+          <!-- Hub Calculator CTA (MachaRule) -->
+          <div class="my-8 rounded-xl border border-hairline bg-canvas-soft p-6 shadow-sm dark:border-overlay-lighter dark:bg-surface flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <h3 class="font-bold text-ink dark:text-on-primary">Need Exact Figures?</h3>
+              <p class="text-sm text-muted mt-1">Use our free interactive calculators to estimate your taxes.</p>
+            </div>
+            <a href="/countries/hong-kong/" class="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primary/90 whitespace-nowrap">
+              Go to Calculators &rarr;
+            </a>
+          </div>
+
 </BlogLayout>

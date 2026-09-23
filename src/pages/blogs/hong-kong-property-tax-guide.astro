@@ -56,6 +56,8 @@ const faqSchema = {
 ---
 
 <BlogLayout title={title} description={description} image={image} canonical={canonical} author="Sarah Lee" authorBio="Sarah Lee is a property tax advisor with deep expertise in Hong Kong real estate taxation. She helps landlords and property investors optimize their tax positions." lastUpdated="August 2026" readTime="10 min read">
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
             <p>Hong Kong Property Tax is charged under Part 2 of the <em>Inland Revenue Ordinance</em> on owners of land or buildings situated in Hong Kong. Unlike jurisdictions with progressive municipal property taxes, Hong Kong imposes a flat standard rate on rental earnings while exempting owner-occupied residential properties from rental income tax.</p>
 
@@ -126,6 +128,18 @@ const faqSchema = {
                 <p class="text-sm text-body dark:text-muted mt-1 leading-relaxed">{faq.acceptedAnswer.text}</p>
               </div>
             ))}
+          </div>
+
+          
+          <!-- Hub Calculator CTA (MachaRule) -->
+          <div class="my-8 rounded-xl border border-hairline bg-canvas-soft p-6 shadow-sm dark:border-overlay-lighter dark:bg-surface flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <h3 class="font-bold text-ink dark:text-on-primary">Need Exact Figures?</h3>
+              <p class="text-sm text-muted mt-1">Use our free interactive calculators to estimate your taxes.</p>
+            </div>
+            <a href="/countries/hong-kong/" class="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primary/90 whitespace-nowrap">
+              Go to Calculators &rarr;
+            </a>
           </div>
 
           <!-- Internal Resource Linking Grid -->

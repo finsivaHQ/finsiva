@@ -56,6 +56,8 @@ const faqSchema = {
 ---
 
 <BlogLayout title={title} description={description} image={image} canonical={canonical} author="David Chan" authorBio="David Chan is a tax professional specializing in property and rental income taxation in Hong Kong. He assists landlords with IRD compliance, statutory deductions, and tax optimization." lastUpdated="August 2026" readTime="10 min read">
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
             <p>Rental income derived from Hong Kong real estate is subject to <strong>Property Tax</strong> under the <em>Inland Revenue Ordinance (Cap. 112)</em>. Whether you own a single residential flat or a portfolio of commercial properties, understanding how the Inland Revenue Department (IRD) assesses rental income, what deductions apply, and how Personal Assessment can lower your tax bill is essential for financial efficiency.</p>
 
@@ -113,6 +115,18 @@ const faqSchema = {
                 <p class="text-sm text-body dark:text-muted mt-1 leading-relaxed">{faq.acceptedAnswer.text}</p>
               </div>
             ))}
+          </div>
+
+          
+          <!-- Hub Calculator CTA (MachaRule) -->
+          <div class="my-8 rounded-xl border border-hairline bg-canvas-soft p-6 shadow-sm dark:border-overlay-lighter dark:bg-surface flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <h3 class="font-bold text-ink dark:text-on-primary">Need Exact Figures?</h3>
+              <p class="text-sm text-muted mt-1">Use our free interactive calculators to estimate your taxes.</p>
+            </div>
+            <a href="/countries/hong-kong/" class="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primary/90 whitespace-nowrap">
+              Go to Calculators &rarr;
+            </a>
           </div>
 
           <!-- Internal Resource Linking Grid -->

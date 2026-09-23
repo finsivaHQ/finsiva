@@ -47,6 +47,8 @@ const faqSchema = {
 ---
 
 <BlogLayout title={title} description={description} image={image} canonical={canonical} author="Andrew Ho" authorBio="Andrew Ho is a tax attorney specializing in Hong Kong real estate conveyancing, stamp duty planning, and IRD regulatory compliance." lastUpdated="August 2026" readTime="11 min read">
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
             <p>Hong Kong <strong>Stamp Duty</strong> is a statutory transaction duty governed by the <em>Stamp Duty Ordinance (Cap. 117)</em> and administered by the <strong>Stamp Office</strong> of the Inland Revenue Department. Stamp duty applies to conveyances on sale of residential and commercial property, agreements for sale, and tenancy agreements (leases).</p>
 
@@ -97,6 +99,18 @@ const faqSchema = {
                 <p class="text-sm text-body dark:text-muted mt-1 leading-relaxed">{faq.acceptedAnswer.text}</p>
               </div>
             ))}
+          </div>
+
+          
+          <!-- Hub Calculator CTA (MachaRule) -->
+          <div class="my-8 rounded-xl border border-hairline bg-canvas-soft p-6 shadow-sm dark:border-overlay-lighter dark:bg-surface flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <h3 class="font-bold text-ink dark:text-on-primary">Need Exact Figures?</h3>
+              <p class="text-sm text-muted mt-1">Use our free interactive calculators to estimate your taxes.</p>
+            </div>
+            <a href="/countries/hong-kong/" class="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primary/90 whitespace-nowrap">
+              Go to Calculators &rarr;
+            </a>
           </div>
 
           <!-- Internal Resource Linking Grid -->

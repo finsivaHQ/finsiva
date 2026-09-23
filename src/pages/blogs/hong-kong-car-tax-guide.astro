@@ -47,6 +47,8 @@ const faqSchema = {
 ---
 
 <BlogLayout title={title} description={description} image={image} canonical={canonical} author="David Chan" authorBio="David Chan is a transport duty specialist covering Hong Kong First Registration Tax, vehicle licensing, and Transport Department regulations." lastUpdated="August 2026" readTime="10 min read">
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
             <p>Vehicle ownership in Hong Kong involves substantial upfront duties and ongoing licensing fees designed to manage road traffic density. For an overview of all Hong Kong tax categories and financial tools, visit our <a href="/countries/hong-kong/" class="text-link hover:underline dark:text-link">Hong Kong Country Hub</a>. The primary vehicle duties administered by the <strong>Transport Department</strong> under the <em>Motor Vehicles (First Registration Tax) Ordinance (Cap. 330)</em> are <strong>First Registration Tax (FRT)</strong> and annual <strong>Vehicle License Fees</strong>.</p>
 
