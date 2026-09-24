@@ -55,7 +55,7 @@ const faqSchema = {
 };
 ---
 
-<BlogLayout robots="noindex, follow" 
+<BlogLayout 
   title={title} 
   description={description} 
   image={image} 
@@ -68,135 +68,242 @@ const faqSchema = {
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
   <div class="space-y-8 text-body dark:text-muted leading-relaxed">
-            <section>
-              <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">Understanding Gross vs Net Salary in Hong Kong</h2>
-              <p>
-                When negotiating job offers or budgeting monthly living expenses in Hong Kong, understanding your <strong>Net Take-Home Salary</strong> (salary after tax and mandatory deductions) is crucial. Unlike countries with monthly pay-as-you-earn (PAYE) tax withholding, Hong Kong employers pay gross salary monthly without withholding Salaries Tax. Tax is billed annually directly by the Inland Revenue Department (IRD).
-              </p>
-              <p class="mt-3">
-                However, mandatory <strong>MPF (Mandatory Provident Fund)</strong> contributions of 5% (capped at HK$1,500/month) ARE deducted directly from your monthly paycheck by your employer.
-              </p>
-            </section>
+    <section>
+      <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">The Complete Guide to Hong Kong Net Salary & Take-Home Pay</h2>
+      <p>
+        Hong Kong consistently ranks as having one of the world's most favorable and straightforward tax regimes. For professionals relocating to Hong Kong or locals negotiating job offers, fully grasping how gross salary translates into net take-home pay is vital. Unlike jurisdictions that utilize a strict "Pay As You Earn" (PAYE) model where tax is deducted monthly at the source, Hong Kong takes a different approach. Your employer pays your gross salary monthly, minus only one statutory deduction, and you are responsible for paying your income tax (Salaries Tax) annually directly to the Inland Revenue Department (IRD).
+      </p>
+      <p class="mt-3">
+        In this comprehensive guide, we dissect the components of your Hong Kong paycheck. We will delve into Mandatory Provident Fund (MPF) deductions, contrast progressive vs. standard tax rates, explore valuable tax allowances, and provide step-by-step examples so you can forecast your actual net take-home salary with total precision.
+      </p>
+    </section>
 
-            <section>
-              <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">Hong Kong Net Take-Home Salary Formula</h2>
-              <div class="my-6 p-6 rounded-2xl border border-hairline bg-canvas-soft dark:border-overlay-lighter dark:bg-surface">
-                <p class="font-mono text-sm sm:text-base font-bold text-primary dark:text-on-primary leading-relaxed">
-                  Monthly Gross Salary = Base Salary + Monthly Allowances<br/>
-                  Monthly MPF Employee Deduction = MIN( 5% × Gross Salary, HK$1,500 )<br/>
-                  Monthly Cash Paycheck = Monthly Gross Salary − Monthly MPF Deduction<br/><br/>
-                  Net Take-Home Pay = Annual Gross Salary − MPF Contributions − HK Salaries Tax
-                </p>
-              </div>
-            </section>
+    <section>
+      <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">Understanding Gross vs. Net Salary in Hong Kong</h2>
+      <p>
+        Your <strong>Gross Salary</strong> is the total remuneration package agreed upon with your employer. This includes your base salary, guaranteed bonuses, commissions, and various cash allowances (such as travel or meal allowances). 
+      </p>
+      <p class="mt-3">
+        Your <strong>Net Take-Home Pay</strong> is what actually lands in your bank account, minus any deductions. In Hong Kong, there is a fundamental distinction between your <em>monthly cash flow</em> and your <em>true net salary</em>.
+      </p>
+      <ul class="list-disc ml-6 mt-3 space-y-2">
+        <li><strong>Monthly Cash Paycheck:</strong> Gross Salary minus your mandatory MPF contribution. Because the employer does not deduct income tax, your monthly cash received feels deceptively high.</li>
+        <li><strong>True Net Salary:</strong> Gross Salary minus your MPF contribution and your annualized Salaries Tax obligation. It is heavily advised that employees save a portion of their monthly paycheck to prepare for their annual or bi-annual IRD tax bill.</li>
+      </ul>
+    </section>
 
-            <section>
-              <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">Monthly Net Take-Home Pay Reference Table (2026/27)</h2>
-              <p>
-                The table below illustrates monthly take-home salary for a single taxpayer in Hong Kong receiving standard basic allowance (HK$132,000):
-              </p>
+    <section>
+      <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">In-Depth Look at MPF Deductions</h2>
+      <p>
+        The Mandatory Provident Fund (MPF) is Hong Kong's compulsory retirement savings scheme. By law, both employers and employees are required to make regular contributions to an MPF scheme, calculated as a percentage of the employee's "relevant income."
+      </p>
+      <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6 mb-3">How MPF Contributions Work</h3>
+      <p>
+        The standard contribution rate is <strong>5% from the employer and 5% from the employee</strong>. However, there are strict income thresholds and caps that make this highly predictable:
+      </p>
+      <ul class="list-disc ml-6 mt-3 space-y-2">
+        <li><strong>Minimum Income Level:</strong> If your monthly relevant income is less than HK$7,100, you (the employee) are not required to contribute, though your employer must still contribute their 5%.</li>
+        <li><strong>Maximum Income Level:</strong> For incomes exceeding HK$30,000 per month, the mandatory employee contribution is capped at a maximum of <strong>HK$1,500 per month</strong>. The employer's contribution is also capped at HK$1,500.</li>
+      </ul>
+      <p class="mt-3">
+        For high earners (anyone making over HK$30k/month), the MPF deduction effectively becomes a flat HK$1,500 monthly (or HK$18,000 annually). Notably, your mandatory MPF contributions are completely tax-deductible. They are subtracted from your gross income before your assessable income for Salaries Tax is even calculated, naturally lowering your tax burden.
+      </p>
+      <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6 mb-3">Exemptions for Expatriates</h3>
+      <p>
+        If you are an expatriate working in Hong Kong on an employment visa, you might be exempt from joining an MPF scheme for the first 13 months of your stay, provided you are either covered by an overseas retirement scheme or you will be in Hong Kong for less than 13 months. If exempt, your take-home pay equals your full gross salary during that period (before annual taxes).
+      </p>
+    </section>
 
-              <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
-                <table class="w-full text-left text-sm">
-                  <thead class="bg-canvas-soft border-b border-hairline dark:bg-surface/80 dark:border-overlay-lighter text-ink dark:text-on-primary">
-                    <tr>
-                      <th class="p-3.5 font-bold">Gross Monthly Salary</th>
-                      <th class="p-3.5 font-bold">Monthly MPF (5%)</th>
-                      <th class="p-3.5 font-bold">Est. Monthly Tax</th>
-                      <th class="p-3.5 font-bold">Est. Monthly Net Take-Home</th>
-                      <th class="p-3.5 font-bold">Take-Home %</th>
-                    </tr>
-                  </thead>
-                  <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
-                    <tr>
-                      <td class="p-3.5 font-semibold">HK$20,000/mo (HK$240k/yr)</td>
-                      <td class="p-3.5">HK$1,000</td>
-                      <td class="p-3.5 font-medium text-emerald-600 dark:text-emerald-400">HK$317</td>
-                      <td class="p-3.5 font-bold text-primary dark:text-on-primary">HK$18,683</td>
-                      <td class="p-3.5 font-bold">93.4%</td>
-                    </tr>
-                    <tr>
-                      <td class="p-3.5 font-semibold">HK$30,000/mo (HK$360k/yr)</td>
-                      <td class="p-3.5">HK$1,500</td>
-                      <td class="p-3.5 font-medium text-emerald-600 dark:text-emerald-400">HK$1,475</td>
-                      <td class="p-3.5 font-bold text-primary dark:text-on-primary">HK$27,025</td>
-                      <td class="p-3.5 font-bold">90.1%</td>
-                    </tr>
-                    <tr>
-                      <td class="p-3.5 font-semibold">HK$50,000/mo (HK$600k/yr)</td>
-                      <td class="p-3.5">HK$1,500</td>
-                      <td class="p-3.5 font-medium text-emerald-600 dark:text-emerald-400">HK$4,508</td>
-                      <td class="p-3.5 font-bold text-primary dark:text-on-primary">HK$43,992</td>
-                      <td class="p-3.5 font-bold">88.0%</td>
-                    </tr>
-                    <tr>
-                      <td class="p-3.5 font-semibold">HK$80,000/mo (HK$960k/yr)</td>
-                      <td class="p-3.5">HK$1,500</td>
-                      <td class="p-3.5 font-medium text-emerald-600 dark:text-emerald-400">HK$8,758</td>
-                      <td class="p-3.5 font-bold text-primary dark:text-on-primary">HK$69,742</td>
-                      <td class="p-3.5 font-bold">87.2%</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </section>
+    <section>
+      <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">Salaries Tax: Progressive Rates vs. Standard Rate</h2>
+      <p>
+        The Hong Kong IRD evaluates your tax liability using two different methods and will automatically charge you the <strong>lower</strong> amount. This dual-system ensures that low-to-middle income earners benefit from allowances, while high earners enjoy a maximum tax ceiling.
+      </p>
 
-            <!-- FAQs -->
-            <section>
-              <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-6">Frequently Asked Questions</h2>
-              <div class="space-y-4">
-                {faqSchema.mainEntity.map(faq => (
-                  <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
-                    <h3 class="text-base font-bold text-ink dark:text-on-primary">{faq.name}</h3>
-                    <p class="text-sm text-body dark:text-muted mt-2 leading-relaxed">{faq.acceptedAnswer.text}</p>
-                  </div>
-                ))}
-              </div>
-            </section>
-<!-- Calculator Launch Banner -->
-          <div class="my-12 rounded-2xl border border-hairline bg-canvas-soft p-8 dark:border-overlay-lighter dark:bg-surface text-center shadow-sm">
-            <h3 class="text-2xl font-bold text-ink dark:text-on-primary mb-2">Calculate Your Net Salary Now</h3>
-            <p class="text-body dark:text-muted max-w-2xl mx-auto mb-6">
-              Use our interactive online calculator to see your exact net monthly take-home salary after tax and MPF deductions.
-            </p>
-            <a 
-              href="/countries/hong-kong/salaries-tax/hk-net-salary-calculator"
-              class="inline-flex items-center justify-center rounded-pill bg-primary px-6 py-3 text-base font-semibold text-on-primary transition hover:opacity-90 dark:bg-on-primary dark:text-primary"
-            >
-              Launch Net Salary Calculator &rarr;
-            </a>
+      <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6 mb-3">1. The Progressive Rate System</h3>
+      <p>
+        Under this method, your "Net Chargeable Income" (Gross Income - Deductions - Allowances) is taxed in progressive brackets. The current brackets for the 2026/27 year are structured as follows:
+      </p>
+      <ul class="list-disc ml-6 mt-3 space-y-2">
+        <li>First HK$50,000 at <strong>2%</strong></li>
+        <li>Next HK$50,000 at <strong>6%</strong></li>
+        <li>Next HK$50,000 at <strong>10%</strong></li>
+        <li>Next HK$50,000 at <strong>14%</strong></li>
+        <li>Remainder at <strong>17%</strong></li>
+      </ul>
+      <p class="mt-3">
+        Because this method permits the deduction of generous personal allowances (e.g., HK$132,000 basic allowance for a single person), it is the most advantageous calculation for the vast majority of Hong Kong employees.
+      </p>
+
+      <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6 mb-3">2. The Standard Rate System</h3>
+      <p>
+        To prevent high-income earners from facing punitive tax rates on their entire income in the highest progressive bracket (17%), the IRD offers the Standard Rate. Under this method, tax is calculated simply on your Net Income (Gross Income - Deductions, but <strong>WITHOUT</strong> any personal allowances). 
+      </p>
+      <p class="mt-3">
+        Starting recently, a two-tiered standard rate was introduced for very high earners:
+      </p>
+      <ul class="list-disc ml-6 mt-3 space-y-2">
+        <li>First HK$5,000,000 of Net Income at <strong>15%</strong></li>
+        <li>Remainder above HK$5,000,000 at <strong>16%</strong></li>
+      </ul>
+      <p class="mt-3">
+        The IRD automatically applies the method that results in the lower tax bill. For a single individual, the "break-even" point where the Standard Rate becomes more favorable is typically around an annual income of HK$2,050,000.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">Tax Allowances & Deductions: Optimizing Your Net Pay</h2>
+      <p>
+        Maximizing your allowable deductions is the best strategy to increase your net take-home salary. The Hong Kong government offers a wide array of allowances that reduce your chargeable income under the Progressive Rate system.
+      </p>
+      <ul class="list-disc ml-6 mt-3 space-y-2">
+        <li><strong>Basic Allowance:</strong> HK$132,000 for every single taxpayer.</li>
+        <li><strong>Married Person's Allowance:</strong> HK$264,000 if your spouse has no assessable income.</li>
+        <li><strong>Child Allowance:</strong> HK$130,000 per child (plus an additional HK$130,000 in the year of birth).</li>
+        <li><strong>Dependent Parent Allowance:</strong> Up to HK$50,000 per parent (plus an additional HK$50,000 if they reside with you).</li>
+      </ul>
+      <p class="mt-3">
+        In addition to allowances, you can claim deductions for self-education expenses, approved charitable donations, Voluntary Health Insurance Scheme (VHIS) premiums, and Tax Deductible Voluntary Contributions (TVC) to your MPF.
+      </p>
+    </section>
+    
+    <section>
+      <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">The Impact of Housing Allowance (Rental Reimbursement)</h2>
+      <p>
+        One of the most powerful ways to enhance your net salary in Hong Kong is through employer-provided housing assistance, structured specifically as a "Rental Reimbursement" program. If your employer provides you with a cash housing allowance, it is fully taxable as normal income. However, if the employer pays your landlord directly, or refunds your rent upon presentation of valid receipts, the IRD treats this entirely differently.
+      </p>
+      <p class="mt-3">
+        Instead of taxing the rent amount, the IRD only taxes the <strong>Rental Value (RV)</strong>, which is typically calculated at 10% of your net income (after deducting outgoings but before MPF deductions). For high-income earners spending a significant portion of their salary on rent, structuring their compensation to include rental reimbursement can result in tax savings of tens of thousands of dollars annually, drastically boosting their net take-home pay.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">Hong Kong Net Take-Home Salary Formula</h2>
+      <div class="my-6 p-6 rounded-2xl border border-hairline bg-canvas-soft dark:border-overlay-lighter dark:bg-surface">
+        <p class="font-mono text-sm sm:text-base font-bold text-primary dark:text-on-primary leading-relaxed">
+          Monthly Gross Salary = Base Salary + Monthly Allowances<br/>
+          Monthly MPF Employee Deduction = MIN( 5% × Gross Salary, HK$1,500 )<br/>
+          Monthly Cash Paycheck = Monthly Gross Salary − Monthly MPF Deduction<br/><br/>
+          Net Take-Home Pay = Annual Gross Salary − MPF Contributions − HK Salaries Tax
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">Monthly Net Take-Home Pay Reference Table (2026/27)</h2>
+      <p>
+        The table below illustrates monthly take-home salary for a single taxpayer in Hong Kong receiving standard basic allowance (HK$132,000). Note how the take-home percentage remains extraordinarily high compared to global averages, even as income rises.
+      </p>
+
+      <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+        <table class="w-full text-left text-sm">
+          <thead class="bg-canvas-soft border-b border-hairline dark:bg-surface/80 dark:border-overlay-lighter text-ink dark:text-on-primary">
+            <tr>
+              <th class="p-3.5 font-bold">Gross Monthly Salary</th>
+              <th class="p-3.5 font-bold">Monthly MPF (5%)</th>
+              <th class="p-3.5 font-bold">Est. Monthly Tax</th>
+              <th class="p-3.5 font-bold">Est. Monthly Net Take-Home</th>
+              <th class="p-3.5 font-bold">Take-Home %</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+            <tr>
+              <td class="p-3.5 font-semibold">HK$20,000/mo (HK$240k/yr)</td>
+              <td class="p-3.5">HK$1,000</td>
+              <td class="p-3.5 font-medium text-emerald-600 dark:text-emerald-400">HK$317</td>
+              <td class="p-3.5 font-bold text-primary dark:text-on-primary">HK$18,683</td>
+              <td class="p-3.5 font-bold">93.4%</td>
+            </tr>
+            <tr>
+              <td class="p-3.5 font-semibold">HK$30,000/mo (HK$360k/yr)</td>
+              <td class="p-3.5">HK$1,500</td>
+              <td class="p-3.5 font-medium text-emerald-600 dark:text-emerald-400">HK$1,475</td>
+              <td class="p-3.5 font-bold text-primary dark:text-on-primary">HK$27,025</td>
+              <td class="p-3.5 font-bold">90.1%</td>
+            </tr>
+            <tr>
+              <td class="p-3.5 font-semibold">HK$50,000/mo (HK$600k/yr)</td>
+              <td class="p-3.5">HK$1,500</td>
+              <td class="p-3.5 font-medium text-emerald-600 dark:text-emerald-400">HK$4,508</td>
+              <td class="p-3.5 font-bold text-primary dark:text-on-primary">HK$43,992</td>
+              <td class="p-3.5 font-bold">88.0%</td>
+            </tr>
+            <tr>
+              <td class="p-3.5 font-semibold">HK$80,000/mo (HK$960k/yr)</td>
+              <td class="p-3.5">HK$1,500</td>
+              <td class="p-3.5 font-medium text-emerald-600 dark:text-emerald-400">HK$8,758</td>
+              <td class="p-3.5 font-bold text-primary dark:text-on-primary">HK$69,742</td>
+              <td class="p-3.5 font-bold">87.2%</td>
+            </tr>
+            <tr>
+              <td class="p-3.5 font-semibold">HK$120,000/mo (HK$1.44m/yr)</td>
+              <td class="p-3.5">HK$1,500</td>
+              <td class="p-3.5 font-medium text-emerald-600 dark:text-emerald-400">HK$14,425</td>
+              <td class="p-3.5 font-bold text-primary dark:text-on-primary">HK$104,075</td>
+              <td class="p-3.5 font-bold">86.7%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section>
+      <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-6">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        {faqSchema.mainEntity.map(faq => (
+          <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="text-base font-bold text-ink dark:text-on-primary">{faq.name}</h3>
+            <p class="text-sm text-body dark:text-muted mt-2 leading-relaxed">{faq.acceptedAnswer.text}</p>
           </div>
+        ))}
+      </div>
+    </section>
 
-          <!-- Internal Links -->
-          <div class="mt-12 pt-8 border-t border-hairline dark:border-overlay-lighter">
-            <h3 class="text-xl font-bold text-ink dark:text-on-primary mb-4">Related Calculators & Guides</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              <a href="/countries/hong-kong/salaries-tax/salaries-tax-calculator/" class="card p-4 hover:border-primary transition border border-hairline rounded-xl bg-canvas dark:border-overlay-lighter dark:bg-surface">
-                <h4 class="font-semibold text-ink dark:text-on-primary text-sm">HK Salaries Tax Calculator</h4>
-                <p class="text-xs text-muted mt-1">Official IRD tax estimator for 2026/27.</p>
-              </a>
-              <a href="/blogs/hong-kong-salaries-tax-guide/" class="card p-4 hover:border-primary transition border border-hairline rounded-xl bg-canvas dark:border-overlay-lighter dark:bg-surface">
-                <h4 class="font-semibold text-ink dark:text-on-primary text-sm">Ultimate HK Salaries Tax Guide</h4>
-                <p class="text-xs text-muted mt-1">Complete breakdown of rates, brackets, and rules.</p>
-              </a>
-              <a href="/blogs/hong-kong-tax-allowances-deductions/" class="card p-4 hover:border-primary transition border border-hairline rounded-xl bg-canvas dark:border-overlay-lighter dark:bg-surface">
-                <h4 class="font-semibold text-ink dark:text-on-primary text-sm">Tax Allowances & Deductions</h4>
-                <p class="text-xs text-muted mt-1">Personal allowances and relief details.</p>
-              </a>
-            </div>
-          </div>
-        </div>
-      <StickyToc />
+    <!-- Calculator Launch Banner -->
+    <div class="my-12 rounded-2xl border border-hairline bg-canvas-soft p-8 dark:border-overlay-lighter dark:bg-surface text-center shadow-sm">
+      <h3 class="text-2xl font-bold text-ink dark:text-on-primary mb-2">Calculate Your Net Salary Now</h3>
+      <p class="text-body dark:text-muted max-w-2xl mx-auto mb-6">
+        Use our interactive online calculator to see your exact net monthly take-home salary after tax and MPF deductions.
+      </p>
+      <a 
+        href="/countries/hong-kong/salaries-tax/hk-net-salary-calculator"
+        class="inline-flex items-center justify-center rounded-pill bg-primary px-6 py-3 text-base font-semibold text-on-primary transition hover:opacity-90 dark:bg-on-primary dark:text-primary"
+      >
+        Launch Net Salary Calculator &rarr;
+      </a>
+    </div>
 
-          <!-- Hub Calculator CTA (MachaRule) -->
-          <div class="my-8 rounded-xl border border-hairline bg-canvas-soft p-6 shadow-sm dark:border-overlay-lighter dark:bg-surface flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>
-              <h3 class="font-bold text-ink dark:text-on-primary">Need Exact Figures?</h3>
-              <p class="text-sm text-muted mt-1">Use our free interactive calculators to estimate your taxes.</p>
-            </div>
-            <a href="/countries/hong-kong/" class="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primary/90 whitespace-nowrap">
-              Go to Calculators &rarr;
-            </a>
-          </div>
+    <!-- Internal Links -->
+    <div class="mt-12 pt-8 border-t border-hairline dark:border-overlay-lighter">
+      <h3 class="text-xl font-bold text-ink dark:text-on-primary mb-4">Related Calculators & Guides</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="/countries/hong-kong/salaries-tax/salaries-tax-calculator/" class="card p-4 hover:border-primary transition border border-hairline rounded-xl bg-canvas dark:border-overlay-lighter dark:bg-surface">
+          <h4 class="font-semibold text-ink dark:text-on-primary text-sm">HK Salaries Tax Calculator</h4>
+          <p class="text-xs text-muted mt-1">Official IRD tax estimator for 2026/27.</p>
+        </a>
+        <a href="/blogs/hong-kong-salaries-tax-guide/" class="card p-4 hover:border-primary transition border border-hairline rounded-xl bg-canvas dark:border-overlay-lighter dark:bg-surface">
+          <h4 class="font-semibold text-ink dark:text-on-primary text-sm">Ultimate HK Salaries Tax Guide</h4>
+          <p class="text-xs text-muted mt-1">Complete breakdown of rates, brackets, and rules.</p>
+        </a>
+        <a href="/blogs/hong-kong-tax-allowances-deductions/" class="card p-4 hover:border-primary transition border border-hairline rounded-xl bg-canvas dark:border-overlay-lighter dark:bg-surface">
+          <h4 class="font-semibold text-ink dark:text-on-primary text-sm">Tax Allowances & Deductions</h4>
+          <p class="text-xs text-muted mt-1">Personal allowances and relief details.</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  <StickyToc />
+
+  <!-- Hub Calculator CTA (MachaRule) -->
+  <div class="my-8 rounded-xl border border-hairline bg-canvas-soft p-6 shadow-sm dark:border-overlay-lighter dark:bg-surface flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div>
+      <h3 class="font-bold text-ink dark:text-on-primary">Need Exact Figures?</h3>
+      <p class="text-sm text-muted mt-1">Use our free interactive calculators to estimate your taxes.</p>
+    </div>
+    <a href="/countries/hong-kong/" class="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primary/90 whitespace-nowrap">
+      Go to Calculators &rarr;
+    </a>
+  </div>
 
 </BlogLayout>

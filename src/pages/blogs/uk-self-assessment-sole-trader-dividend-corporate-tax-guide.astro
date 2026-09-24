@@ -85,78 +85,133 @@ const articleSchema = {
 >
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
-  
-    
-    <p class="lead">
-      Running a business in the UK—whether as a freelance sole trader, an e-commerce Amazon seller, or an incorporated Limited Company director—demands absolute clarity on tax deadlines, allowable expenses, dividend tax rates, and **HMRC Self Assessment** procedures.
-    </p>
+  <p class="lead">
+    Running a business in the United Kingdom—whether you operate as a freelance sole trader, an e-commerce seller on platforms like Amazon and Etsy, or a director of an incorporated Limited Company—requires an unwavering grip on tax obligations, statutory deadlines, allowable expenses, dividend tax rates, and the extensive <strong>HMRC Self Assessment</strong> procedures. Navigating the complexity of the UK tax system is paramount not only to ensure full compliance and avoid punitive penalties but also to legally optimize your take-home pay and reinvestment capital.
+  </p>
 
-    <img src={image} alt="UK Self Assessment & Sole Trader Tax Timeline" class="my-8 w-full rounded-xl border border-hairline shadow-md dark:border-overlay-lighter" loading="lazy" />
+  <img src={image} alt="UK Self Assessment & Sole Trader Tax Timeline" class="my-8 w-full rounded-xl border border-hairline shadow-md dark:border-overlay-lighter" loading="lazy" />
 
-    <nav class="my-8 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
-      <h2 class="text-xl font-bold text-ink dark:text-on-primary mt-0 mb-4">Table of Contents</h2>
-      <ul class="space-y-2 text-sm text-body dark:text-muted">
-        <li><a href="#self-assessment-deadlines" class="hover:underline text-link dark:text-link">1. Self Assessment Deadlines & Payments on Account</a></li>
-        <li><a href="#sole-trader-ni" class="hover:underline text-link dark:text-link">2. Sole Trader Taxes & Class 4 National Insurance</a></li>
-        <li><a href="#ltd-dividend-tax" class="hover:underline text-link dark:text-link">3. Limited Company Corporation Tax & Dividend Tax Rates</a></li>
-        <li><a href="#allowable-expenses" class="hover:underline text-link dark:text-link">4. Allowable Expenses & Pension Relief Strategies</a></li>
-        <li><a href="#faqs" class="hover:underline text-link dark:text-link">5. Frequently Asked Questions (FAQs)</a></li>
-      </ul>
-    </nav>
-    <h2 id="self-assessment-deadlines">1. Self Assessment Deadlines & Payments on Account</h2>
-    <p>
-      Register for <a href="/knowledge/glossary/uk-self-assessment/" class="text-link hover:underline dark:text-link">Self Assessment</a> by 5 October following your first business year.
-    </p>
-    <ul>
-      <li><strong>31 January:</strong> Online tax return submission, final tax bill payment, and 1st Payment on Account (50%).</li>
-      <li><strong>31 July:</strong> 2nd Payment on Account (50%).</li>
+  <p>
+    The 2025/2026 tax year brings with it numerous thresholds, evolving legislative tweaks, and a sharper focus on digital reporting. As an experienced tax advisor, I regularly guide small business owners through the labyrinth of HMRC regulations. This comprehensive guide has been meticulously crafted to provide authoritative, actionable insights into exactly what you need to declare, how much you will pay, and when your filings are due. 
+  </p>
+
+  <nav class="my-8 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+    <h2 class="text-xl font-bold text-ink dark:text-on-primary mt-0 mb-4">Table of Contents</h2>
+    <ul class="space-y-2 text-sm text-body dark:text-muted">
+      <li><a href="#self-assessment-deadlines" class="hover:underline text-link dark:text-link">1. Essential Self Assessment Deadlines & Payments on Account</a></li>
+      <li><a href="#sole-trader-ni" class="hover:underline text-link dark:text-link">2. Deep Dive: Sole Trader Taxes & Class 4 National Insurance</a></li>
+      <li><a href="#ltd-dividend-tax" class="hover:underline text-link dark:text-link">3. Limited Company Nuances: Corporation Tax & Dividend Strategies</a></li>
+      <li><a href="#allowable-expenses" class="hover:underline text-link dark:text-link">4. Maximizing Allowable Expenses & Pension Relief</a></li>
+      <li><a href="#faqs" class="hover:underline text-link dark:text-link">5. Frequently Asked Questions (FAQs)</a></li>
     </ul>
+  </nav>
 
-    <h2 id="sole-trader-ni">2. Sole Trader Taxes & Class 4 National Insurance</h2>
-    <p>
-      Sole traders receive the £1,000 Trading Allowance. Profits above £12,570 attract 20% Income Tax and 6% Class 4 National Insurance.
-    </p>
+  <h2 id="self-assessment-deadlines">1. Essential Self Assessment Deadlines & Payments on Account</h2>
+  <p>
+    Ignorance of HMRC deadlines is no defense, and late filing penalties accumulate rapidly. Anyone required to file a tax return must adhere strictly to the statutory timetable. If you have commenced self-employment or received untaxed income exceeding £1,000 (the Trading Allowance), you must formally register for <a href="/knowledge/glossary/uk-self-assessment/" class="text-link hover:underline dark:text-link">Self Assessment</a> by <strong>5 October</strong> following the end of the tax year in which you started.
+  </p>
+  <ul>
+    <li><strong>31 October:</strong> The deadline for submitting paper tax returns. Generally, electronic filing is strongly advised due to its immediacy and reduced margin for arithmetic error.</li>
+    <li><strong>31 January (Midnight):</strong> The absolute deadline for online tax return submission. Crucially, this is also the deadline for paying your final balancing tax bill for the previous tax year, alongside your <strong>1st Payment on Account</strong>.</li>
+    <li><strong>31 July:</strong> The deadline for your <strong>2nd Payment on Account</strong>.</li>
+  </ul>
+  <h3>Understanding Payments on Account</h3>
+  <p>
+    A persistent point of friction for newly self-employed individuals is the "Payments on Account" system. If your previous year's tax bill exceeded £1,000, HMRC requires you to make advance payments towards your current year's estimated tax. These are split into two installments (January and July), each representing 50% of your prior year's tax liability. Failure to budget for these advanced payments is a leading cause of cash flow crises for small enterprises.
+  </p>
 
-    <h2 id="ltd-dividend-tax">3. Limited Company Corporation Tax & Dividend Tax Rates</h2>
-    <p>
-      Small companies pay 19% Corporation Tax up to £50k profit. Directors taking dividends benefit from a £500 <a href="/knowledge/glossary/uk-dividend-allowance/" class="text-link hover:underline dark:text-link">Dividend Allowance</a>, with remaining dividends taxed at 8.75% (Basic), 33.75% (Higher), or 39.35% (Additional).
-    </p>
+  <h2 id="sole-trader-ni">2. Deep Dive: Sole Trader Taxes & Class 4 National Insurance</h2>
+  <p>
+    For sole traders, freelancers, and unincorporated gig economy workers, tax is calculated on your net business profits (income minus allowable expenses). You are entitled to the standard Personal Allowance (frozen at £12,570 until 2028). Profits falling within this band are free from Income Tax.
+  </p>
+  <p>
+    For the 2025/2026 tax year, the Income Tax brackets on profits above the Personal Allowance stand as follows:
+  </p>
+  <ul>
+    <li><strong>Basic Rate (20%):</strong> On profits between £12,571 and £50,270.</li>
+    <li><strong>Higher Rate (40%):</strong> On profits between £50,271 and £125,140.</li>
+    <li><strong>Additional Rate (45%):</strong> On profits exceeding £125,140.</li>
+  </ul>
+  <p>
+    In addition to Income Tax, sole traders must contribute to the National Insurance system. Recent fiscal changes have reformed this landscape. Class 2 National Insurance (previously a flat weekly rate) has seen abolition/reclassification for many, but <strong>Class 4 National Insurance</strong> remains a significant levy. For 2025/2026, Class 4 NI is charged at <strong>6%</strong> on profits between £12,570 and £50,270, and <strong>2%</strong> on any profits above the £50,270 Upper Profits Limit. 
+  </p>
 
-    <h2 id="allowable-expenses">4. Allowable Expenses & Pension Relief Strategies</h2>
-    <p>
-      Deduct qualifying business costs (software, equipment, travel, office space) and executive pension contributions to legally minimize taxable profits.
-    </p>
+  <h2 id="ltd-dividend-tax">3. Limited Company Nuances: Corporation Tax & Dividend Strategies</h2>
+  <p>
+    Incorporating a business fundamentally shifts the tax architecture. A Limited Company is a distinct legal entity, meaning profits are subject to <strong>Corporation Tax</strong> before any money can be distributed to shareholders.
+  </p>
+  <h3>Corporation Tax Rates</h3>
+  <p>
+    The Corporation Tax regime is tiered based on company profitability:
+  </p>
+  <ul>
+    <li><strong>Small Profits Rate (19%):</strong> Applies to companies with taxable profits under £50,000.</li>
+    <li><strong>Main Rate (25%):</strong> Applies to companies with taxable profits exceeding £250,000.</li>
+    <li><strong>Marginal Relief:</strong> For profits between £50,000 and £250,000, a sliding scale applies, creating an effective tax rate that gradually increases from 19% to 25%.</li>
+  </ul>
+  <h3>Dividend Extraction and Allowances</h3>
+  <p>
+    Directors typically extract wealth via a highly tax-efficient mix of a low base salary (to preserve state pension entitlement without triggering personal National Insurance) and dividends. The <a href="/knowledge/glossary/uk-dividend-allowance/" class="text-link hover:underline dark:text-link">Dividend Allowance</a> has been severely curtailed in recent years and sits at just <strong>£500</strong> for 2025/2026.
+  </p>
+  <p>
+    Once the £500 tax-free allowance is exhausted, dividend income is taxed at specialized, albeit lower, rates compared to standard income:
+  </p>
+  <ul>
+    <li><strong>Basic Rate:</strong> 8.75%</li>
+    <li><strong>Higher Rate:</strong> 33.75%</li>
+    <li><strong>Additional Rate:</strong> 39.35%</li>
+  </ul>
+  <p>
+    Strategic planning is required to determine the exact optimal salary-dividend split. Drawing dividends beyond the £50,270 Higher Rate threshold results in a substantial jump in personal tax liability (33.75%), making surplus profit retention or pension contributions highly attractive alternatives.
+  </p>
 
-    <h2 id="faqs">5. Frequently Asked Questions (FAQs)</h2>
-    <div class="space-y-4 my-6">
-      {faqSchema.mainEntity.map(faq => (
-        <div class="rounded-xl border border-hairline p-5 dark:border-overlay-lighter bg-canvas dark:bg-surface">
-          <h3 class="text-lg font-bold text-ink dark:text-on-primary m-0">{faq.name}</h3>
-          <p class="text-body dark:text-muted mt-2 mb-0">{faq.acceptedAnswer.text}</p>
-        </div>
-      ))}
+  <h2 id="allowable-expenses">4. Maximizing Allowable Expenses & Pension Relief</h2>
+  <p>
+    The fundamental rule of business taxation is simple: you are taxed on profit, not revenue. Therefore, meticulously tracking and claiming "allowable expenses"—costs incurred <em>wholly and exclusively</em> for the purposes of the trade—is the most effective legal method to reduce your tax burden.
+  </p>
+  <h3>Common Allowable Expenses</h3>
+  <ul>
+    <li><strong>Office Costs:</strong> Stationery, dedicated business phone lines, broadband, and software subscriptions (e.g., accounting software, Adobe, Microsoft 365).</li>
+    <li><strong>Travel Costs:</strong> Fuel, parking, train fares, and hotel rooms for business trips. (Commuting from your home to a permanent workplace does not qualify).</li>
+    <li><strong>Use of Home as Office:</strong> If you work from home, you can claim a proportion of your heating, electricity, Council Tax, and mortgage interest/rent. Alternatively, HMRC allows a flat-rate simplified expense based on hours worked.</li>
+    <li><strong>Professional Fees:</strong> Accountancy fees, legal costs, and professional indemnity insurance.</li>
+    <li><strong>Capital Allowances:</strong> Purchases of substantial equipment (laptops, machinery, commercial vehicles) qualify for Capital Allowances. The Annual Investment Allowance (AIA) often allows 100% of the cost to be deducted in the year of purchase up to £1 million.</li>
+  </ul>
+  <h3>Pension Contributions</h3>
+  <p>
+    For Limited Company directors, making employer pension contributions directly from the company to a SIPP (Self-Invested Personal Pension) is one of the most powerful tax mitigations available. Employer contributions are generally treated as an allowable business expense, directly reducing the company's Corporation Tax liability. Furthermore, they are not treated as a taxable Benefit in Kind for the director, meaning funds are extracted entirely free of Income Tax and National Insurance, growing tax-free within the pension wrapper until retirement.
+  </p>
+
+  <h2 id="faqs">5. Frequently Asked Questions (FAQs)</h2>
+  <div class="space-y-4 my-6">
+    {faqSchema.mainEntity.map(faq => (
+      <div class="rounded-xl border border-hairline p-5 dark:border-overlay-lighter bg-canvas dark:bg-surface">
+        <h3 class="text-lg font-bold text-ink dark:text-on-primary m-0">{faq.name}</h3>
+        <p class="text-body dark:text-muted mt-2 mb-0">{faq.acceptedAnswer.text}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+    <h3 class="text-xl font-bold text-ink dark:text-on-primary mt-0 mb-3">Explore Related Self-Employed Tax Resources</h3>
+    <ul class="space-y-2 mb-0">
+      <li><a href="/countries/united-kingdom/income-tax/income-tax-calculator/" class="text-link hover:underline dark:text-link font-semibold">UK Income Tax Calculator</a></li>
+      <li><a href="/countries/united-kingdom/national-insurance/ni-calculator/" class="text-link hover:underline dark:text-link font-semibold">UK National Insurance Calculator</a></li>
+      <li><a href="/knowledge/uk-self-assessment-freelancer-dividend-tax-guide/" class="text-link hover:underline dark:text-link">UK Self Assessment & Freelancer Guide</a></li>
+      <li><a href="/knowledge/glossary/uk-self-assessment/" class="text-link hover:underline dark:text-link">Glossary: UK Self Assessment</a></li>
+      <li><a href="/knowledge/glossary/uk-dividend-allowance/" class="text-link hover:underline dark:text-link">Glossary: UK Dividend Allowance</a></li>
+    </ul>
+  </div>
+
+  <!-- Hub Calculator CTA (MachaRule) -->
+  <div class="my-8 rounded-xl border border-hairline bg-canvas-soft p-6 shadow-sm dark:border-overlay-lighter dark:bg-surface flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div>
+      <h3 class="font-bold text-ink dark:text-on-primary">Need Exact Figures?</h3>
+      <p class="text-sm text-muted mt-1">Use our free interactive calculators to estimate your taxes.</p>
     </div>
-
-    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
-      <h3 class="text-xl font-bold text-ink dark:text-on-primary mt-0 mb-3">Explore Related Self-Employed Tax Resources</h3>
-      <ul class="space-y-2 mb-0">
-        <li><a href="/countries/united-kingdom/income-tax/income-tax-calculator/" class="text-link hover:underline dark:text-link font-semibold">UK Income Tax Calculator</a></li>
-        <li><a href="/countries/united-kingdom/national-insurance/ni-calculator/" class="text-link hover:underline dark:text-link font-semibold">UK National Insurance Calculator</a></li>
-        <li><a href="/knowledge/uk-self-assessment-freelancer-dividend-tax-guide/" class="text-link hover:underline dark:text-link">UK Self Assessment & Freelancer Guide</a></li>
-        <li><a href="/knowledge/glossary/uk-self-assessment/" class="text-link hover:underline dark:text-link">Glossary: UK Self Assessment</a></li>
-        <li><a href="/knowledge/glossary/uk-dividend-allowance/" class="text-link hover:underline dark:text-link">Glossary: UK Dividend Allowance</a></li>
-      </ul>
-    </div>
-  
-          <!-- Hub Calculator CTA (MachaRule) -->
-          <div class="my-8 rounded-xl border border-hairline bg-canvas-soft p-6 shadow-sm dark:border-overlay-lighter dark:bg-surface flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>
-              <h3 class="font-bold text-ink dark:text-on-primary">Need Exact Figures?</h3>
-              <p class="text-sm text-muted mt-1">Use our free interactive calculators to estimate your taxes.</p>
-            </div>
-            <a href="/countries/united-kingdom/" class="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primary/90 whitespace-nowrap">
-              Go to Calculators &rarr;
-            </a>
-          </div>
+    <a href="/countries/united-kingdom/" class="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primary/90 whitespace-nowrap">
+      Go to Calculators &rarr;
+    </a>
+  </div>
 
 </BlogLayout>

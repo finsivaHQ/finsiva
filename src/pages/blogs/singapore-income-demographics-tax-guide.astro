@@ -41,7 +41,7 @@ const faqSchema = {
       name: "What percentage of taxpayers pay individual income tax in Singapore?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Due to the S$20,000 tax-free threshold and personal reliefs, approximately top 40% of resident earners contribute over 80% of total personal income tax revenue, maintaining strong progressive tax equity."
+        text: "Due to the S$20,000 tax-free threshold and personal reliefs, approximately the top 40% of resident earners contribute over 80% of total personal income tax revenue, maintaining strong progressive tax equity."
       }
     }
   ]
@@ -63,6 +63,10 @@ const faqSchema = {
 
     <p class="text-lg leading-relaxed font-sans">
       Understanding wage trends, household earnings, demographic stats (including <strong>Singapore income by ethnicity</strong>), and computing your <strong>effective income tax rate</strong> provides critical context for financial planning, salary negotiations, and policy evaluation in Singapore. Administered by the <a href="https://www.singstat.gov.sg" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">Department of Statistics Singapore (SingStat)</a> and Ministry of Manpower (MOM), Singapore's economic data highlights a high-income workforce operating within a progressive fiscal structure.
+    </p>
+
+    <p class="text-md leading-relaxed font-sans mt-4">
+      As a leading global financial hub, Singapore boasts some of the most competitive compensation packages in Asia. However, raw gross salary figures only tell part of the story. To truly comprehend the financial health and purchasing power of Singapore residents, one must analyze median household incomes, account for mandatory Central Provident Fund (CPF) contributions, and understand the nuances of the progressive income tax system. This comprehensive guide delves deep into the statistical realities of earning, saving, and paying taxes in the Lion City, offering expert insights into the dynamics of income distribution across different demographics and income tiers.
     </p>
 
     <div class="my-8 rounded-2xl border border-hairline bg-canvas-soft p-6 shadow-sm dark:border-overlay-light dark:bg-surface">
@@ -87,30 +91,35 @@ const faqSchema = {
       <h2 class="text-xl font-bold text-ink mb-3 dark:text-on-primary">Table of Contents</h2>
       <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
         <li><a href="#household-income-stats" class="text-link hover:underline">1. Median Household Income Statistics</a></li>
-        <li><a href="#income-by-ethnicity" class="text-link hover:underline">2. Household Income Distribution by Ethnicity</a></li>
-        <li><a href="#effective-tax-rates" class="text-link hover:underline">3. Marginal vs Effective Tax Rate Breakdown</a></li>
-        <li><a href="#ginie-coefficient" class="text-link hover:underline">4. Income Inequality & Redistribution Policy</a></li>
-        <li><a href="#faqs" class="text-link hover:underline">5. Frequently Asked Questions</a></li>
+        <li><a href="#understanding-cpf" class="text-link hover:underline">2. The Crucial Role of CPF Contributions</a></li>
+        <li><a href="#income-by-ethnicity" class="text-link hover:underline">3. Household Income Distribution by Ethnicity</a></li>
+        <li><a href="#tax-brackets" class="text-link hover:underline">4. Singapore's Progressive Tax Brackets</a></li>
+        <li><a href="#effective-tax-rates" class="text-link hover:underline">5. Marginal vs Effective Tax Rate Breakdown</a></li>
+        <li><a href="#ginie-coefficient" class="text-link hover:underline">6. Income Inequality & Redistribution Policy</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">7. Frequently Asked Questions</a></li>
       </ul>
     </div>
 
     <h2 id="household-income-stats" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">1. Median Household Income Statistics</h2>
-    <p>
-      Data from the <a href="https://www.mom.gov.sg" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">Ministry of Manpower (MOM)</a> and SingStat demonstrates steady real wage growth for resident households:
+    <p class="mt-4 mb-4">
+      Data sourced from the <a href="https://www.mom.gov.sg" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">Ministry of Manpower (MOM)</a> and the Department of Statistics (SingStat) demonstrates a trajectory of steady real wage growth for resident households over the past decade. The median monthly household income from work (including employer CPF contributions) is a critical indicator of economic well-being, as it reflects the combined earning power of a family unit rather than just individual wages.
+    </p>
+    <p class="mb-6">
+      Recent figures place the median monthly household income among resident employed households at approximately <strong>S$10,869</strong>. When adjusting for household size, the median monthly income per household member stands at roughly <strong>S$3,500</strong>. This per capita measurement is often more reflective of actual living standards, as it accounts for the number of dependents (children and elderly) supported by the working adults. Over the last five years, real income growth (after adjusting for inflation) has remained positive for the majority of deciles, although inflationary pressures in recent times have required active government intervention to preserve purchasing power.
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
-      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface text-center">
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface text-center shadow-sm">
         <span class="text-xs text-muted uppercase font-bold">Median Monthly Household Income</span>
         <p class="mt-2 text-2xl font-extrabold text-primary">S$10,869</p>
         <span class="text-xs text-muted">Including employer CPF</span>
       </div>
-      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface text-center">
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface text-center shadow-sm">
         <span class="text-xs text-muted uppercase font-bold">Median Monthly Individual Wage</span>
         <p class="mt-2 text-2xl font-extrabold text-primary">S$5,197</p>
         <span class="text-xs text-muted">Employed resident full-time</span>
       </div>
-      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface text-center">
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface text-center shadow-sm">
         <span class="text-xs text-muted uppercase font-bold">Per Household Member Income</span>
         <p class="mt-2 text-2xl font-extrabold text-primary">S$3,500</p>
         <span class="text-xs text-muted">Per capita monthly average</span>
@@ -119,9 +128,25 @@ const faqSchema = {
 
     <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80" alt="Financial graph charts and statistics data visualization" class="my-8 w-full rounded-xl object-cover max-h-96 shadow-md" loading="lazy" />
 
-    <h2 id="income-by-ethnicity" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">2. Household Income Distribution by Ethnicity</h2>
-    <p>
-      According to SingStat Population & Census reports, median monthly household income from work across major resident ethnic communities reflects the multi-ethnic demographic profile of Singapore:
+    <h2 id="understanding-cpf" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary mt-8">2. The Crucial Role of CPF Contributions</h2>
+    <p class="mt-4 mb-4">
+      When discussing income in Singapore, it is impossible to ignore the Central Provident Fund (CPF). As a mandatory social security savings scheme funded by contributions from both employers and employees, the CPF serves as the foundation for retirement, healthcare, and home ownership financing for Singapore Citizens and Permanent Residents (PRs).
+    </p>
+    <p class="mb-4">
+      For workers aged 55 and below, the total CPF contribution rate typically stands at <strong>37% of the employee's monthly wage</strong>. This is split into an employer contribution of 17% and an employee contribution of 20% (deducted from gross salary). The contributions are distributed across three accounts:
+    </p>
+    <ul class="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Ordinary Account (OA):</strong> Primarily used for housing payments (HDB or private property), approved investments, and education.</li>
+      <li><strong>Special Account (SA):</strong> Dedicated to old age retirement and investment in retirement-related financial products.</li>
+      <li><strong>MediSave Account (MA):</strong> Reserved for healthcare expenses, hospitalization, and approved medical insurance premiums.</li>
+    </ul>
+    <p class="mb-6">
+      Because employee CPF contributions are automatically deducted from the monthly paycheck, an individual's "take-home" pay is notably lower than their gross salary. However, it is essential to recognize that employee CPF contributions are <strong>tax-exempt</strong>. This significantly lowers the chargeable income used to calculate personal income tax, providing a substantial tax relief for resident earners.
+    </p>
+
+    <h2 id="income-by-ethnicity" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary mt-8">3. Household Income Distribution by Ethnicity</h2>
+    <p class="mt-4 mb-4">
+      According to SingStat Population & Census reports, analyzing median monthly household income from work across major resident ethnic communities provides insight into the multi-ethnic demographic profile of Singapore. It is important to note that variations in income among these groups do not stem from discriminatory wage policies, but rather reflect underlying differences in age demographics, historical educational attainment, occupational sectors, and average household size.
     </p>
 
     <div class="overflow-x-auto my-6">
@@ -130,21 +155,62 @@ const faqSchema = {
           <tr>
             <th class="border p-3">Ethnic Group</th>
             <th class="border p-3">Median Monthly Household Income (SGD)</th>
-            <th class="border p-3">Key Sector Drivers</th>
+            <th class="border p-3">Key Sector Drivers & Context</th>
           </tr>
         </thead>
         <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
-          <tr><td class="p-3 font-semibold">Indian Households</td><td class="p-3 font-bold text-emerald-600">S$12,500+</td><td class="p-3">Technology, Finance, Legal, Medicine</td></tr>
-          <tr><td class="p-3 font-semibold">Chinese Households</td><td class="p-3 font-bold text-emerald-600">S$10,800+</td><td class="p-3">Banking, Real Estate, Commerce, Manufacturing</td></tr>
-          <tr><td class="p-3 font-semibold">Malay Households</td><td class="p-3 font-bold text-emerald-600">S$6,600+</td><td class="p-3">Public Services, Healthcare, Aviation, Transport</td></tr>
-          <tr><td class="p-3 font-semibold">Others (Eurasian / Caucasian PRs)</td><td class="p-3 font-bold text-emerald-600">S$14,000+</td><td class="p-3">MNC Regional HQs, Energy, Maritime</td></tr>
+          <tr>
+            <td class="p-3 font-semibold">Indian Households</td>
+            <td class="p-3 font-bold text-emerald-600">S$12,500+</td>
+            <td class="p-3">High representation in Technology, Finance, Legal, and Medical professions. A significant proportion of highly skilled naturalized citizens and PRs elevates the median.</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-semibold">Chinese Households</td>
+            <td class="p-3 font-bold text-emerald-600">S$10,800+</td>
+            <td class="p-3">Broadly represented across all sectors including Banking, Real Estate, Commerce, and Manufacturing. Reflects the national average closely due to majority demographic status.</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-semibold">Malay Households</td>
+            <td class="p-3 font-bold text-emerald-600">S$6,600+</td>
+            <td class="p-3">Strong presence in Public Services, Healthcare, Aviation, and Transport. Trend shows rapid educational upgrading among younger generations driving future income mobility.</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-semibold">Others (Eurasian / Caucasian PRs)</td>
+            <td class="p-3 font-bold text-emerald-600">S$14,000+</td>
+            <td class="p-3">MNC Regional HQs, Energy, Maritime. Often comprises senior expatriates who have converted to Permanent Resident status.</td>
+          </tr>
         </tbody>
       </table>
     </div>
 
-    <h2 id="effective-tax-rates" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">3. Marginal vs Effective Tax Rate Breakdown</h2>
-    <p>
-      A common misconception is equating marginal tax rates with effective tax burdens. Because Singapore applies progressive tax brackets, your <strong>effective tax rate</strong> is always substantially lower than your highest tax bracket:
+    <h2 id="tax-brackets" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary mt-8">4. Singapore's Progressive Tax Brackets</h2>
+    <p class="mt-4 mb-4">
+      Singapore employs a highly progressive personal income tax system. This means that higher income earners pay a proportionately higher percentage of tax. The system is designed to be competitive globally to attract top talent while ensuring a fair distribution of the tax burden. The first S$20,000 of chargeable income is completely tax-free, establishing a generous threshold before any tax is levied.
+    </p>
+    <p class="mb-4">
+      From Year of Assessment (YA) 2024 onwards, the top marginal tax rate has been increased to <strong>24%</strong> for chargeable income exceeding S$1,000,000. Here is a simplified look at the progressive tiers:
+    </p>
+    <ul class="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>First S$20,000:</strong> 0%</li>
+      <li><strong>Next S$10,000:</strong> 2%</li>
+      <li><strong>Next S$10,000:</strong> 3.5%</li>
+      <li><strong>Next S$40,000:</strong> 7%</li>
+      <li><strong>Next S$40,000:</strong> 11.5%</li>
+      <li><strong>Next S$40,000:</strong> 15%</li>
+      <li><strong>Next S$40,000:</strong> 18%</li>
+      <li><strong>Next S$40,000:</strong> 19%</li>
+      <li><strong>Next S$40,000:</strong> 19.5%</li>
+      <li><strong>Next S$220,000:</strong> 20%</li>
+      <li><strong>Next S$500,000:</strong> 22%</li>
+      <li><strong>In excess of S$1,000,000:</strong> 24%</li>
+    </ul>
+
+    <h2 id="effective-tax-rates" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary mt-8">5. Marginal vs Effective Tax Rate Breakdown</h2>
+    <p class="mt-4 mb-4">
+      A common misconception in personal finance is equating <em>marginal tax rates</em> with <em>effective tax burdens</em>. Your marginal tax rate is the tax rate applied to your last dollar earned (the highest bracket you fall into). However, because Singapore applies progressive tax brackets, your <strong>effective tax rate</strong>—the total tax you pay as a percentage of your total gross income—is always substantially lower than your highest marginal rate.
+    </p>
+    <p class="mb-6">
+      Furthermore, resident taxpayers benefit from various personal reliefs, such as Earned Income Relief, Spouse/Child Relief, Parent Relief, and CPF contributions. These deductions reduce your Gross Assessable Income to a lower Net Chargeable Income. Even before factoring in substantial deductions like CPF, the baseline effective tax rates are highly competitive:
     </p>
 
     <div class="overflow-x-auto my-6">
@@ -153,7 +219,7 @@ const faqSchema = {
           <tr>
             <th class="border p-3">Gross Salary (SGD)</th>
             <th class="border p-3">Top Marginal Bracket</th>
-            <th class="border p-3">Total Tax Payable (with S$1k relief)</th>
+            <th class="border p-3">Total Tax Payable (assuming standard S$1k relief)</th>
             <th class="border p-3">Effective Tax Rate (%)</th>
           </tr>
         </thead>
@@ -164,17 +230,28 @@ const faqSchema = {
           <tr><td class="p-3">S$150,000</td><td class="p-3">15%</td><td class="p-3">S$12,450</td><td class="p-3 text-emerald-600 font-bold">8.30%</td></tr>
           <tr><td class="p-3">S$250,000</td><td class="p-3">19.5%</td><td class="p-3">S$30,700</td><td class="p-3 text-emerald-600 font-bold">12.28%</td></tr>
           <tr><td class="p-3">S$500,000</td><td class="p-3">22%</td><td class="p-3">S$83,930</td><td class="p-3 text-emerald-600 font-bold">16.78%</td></tr>
+          <tr><td class="p-3">S$1,000,000</td><td class="p-3">22%</td><td class="p-3">S$193,930</td><td class="p-3 text-emerald-600 font-bold">19.39%</td></tr>
         </tbody>
       </table>
     </div>
+    
+    <p class="mb-4">
+      Because of the S$20,000 tax-free threshold and various personal reliefs, a significant portion of the workforce pays zero or minimal income tax. In fact, approximately the top 40% of resident earners contribute over 80% of the total personal income tax revenue collected, reinforcing the strongly progressive nature of Singapore's fiscal system.
+    </p>
 
-    <h2 id="ginie-coefficient" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">4. Income Inequality & Redistribution Policy</h2>
-    <p>
-      Singapore maintains fiscal equity by combining progressive income tax at the top end with targeted government transfers (such as GST Vouchers, Workfare Income Supplement, and Assurance Package payouts) for lower-income households.
+    <h2 id="ginie-coefficient" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary mt-8">6. Income Inequality & Redistribution Policy</h2>
+    <p class="mt-4 mb-4">
+      Like many global cities, Singapore faces challenges related to income inequality. The primary metric used to measure this is the Gini coefficient, where 0 represents perfect equality and 1 represents maximal inequality. Over the past decade, Singapore's Gini coefficient based on household income from work has hovered around the 0.43 to 0.45 range before accounting for government taxes and transfers.
+    </p>
+    <p class="mb-4">
+      However, Singapore maintains fiscal equity by combining progressive income taxes at the top end with targeted government transfers for lower- and middle-income households. The impact of these redistribution policies is profound. Once government transfers (such as GST Vouchers, U-Save rebates, Workfare Income Supplement for lower-wage workers, MediFund, and Assurance Package payouts) and taxes are factored in, the Gini coefficient consistently drops to below 0.38.
+    </p>
+    <p class="mb-6">
+      This substantial reduction highlights the effectiveness of the government's approach: maintaining a low-tax, pro-business environment to generate wealth and high-value jobs, while utilizing targeted subsidies and progressive taxation to redistribute resources and support vulnerable demographics. This pragmatic balance aims to foster inclusive economic growth without disincentivizing enterprise and individual achievement.
     </p>
 
     <!-- Related Links -->
-    <div class="my-8 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+    <div class="my-8 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface shadow-sm">
       <h3 class="text-lg font-bold text-ink mb-3 dark:text-on-primary">Related Statistical & Tax Tools</h3>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
         <a href="/countries/singapore/income-tax/income-tax-calculator/" class="text-link hover:underline font-medium">&rarr; Effective Tax Rate Calculator</a>
@@ -184,10 +261,10 @@ const faqSchema = {
       </div>
     </div>
 
-    <h2 id="faqs" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary">5. Frequently Asked Questions</h2>
+    <h2 id="faqs" class="text-2xl font-bold tracking-tight text-ink dark:text-on-primary mt-8">7. Frequently Asked Questions</h2>
     <div class="space-y-4 my-6">
       {faqSchema.mainEntity.map(faq => (
-        <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+        <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface shadow-sm transition-shadow hover:shadow-md">
           <h3 class="font-bold text-ink dark:text-on-primary text-base mb-2">{faq.name}</h3>
           <p class="text-sm leading-relaxed text-body dark:text-muted">{faq.acceptedAnswer.text}</p>
         </div>
