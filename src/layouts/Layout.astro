@@ -47,7 +47,7 @@ setLang(initialLang);
 const initialDir = initialLang === 'ar' ? 'rtl' : 'auto';
 const rawPath = Astro.url.pathname;
 const cleanPath = rawPath.replace(/\/+$/, '') || '';
-const pageUrl = canonical ? canonical : `https://finsiva.com${cleanPath}/`;
+const pageUrl = canonical ? (canonical.replace(/\/+$/, '') + '/') : `https://finsiva.com${cleanPath}/`;
 const ogImageUrl = image.startsWith('http') ? image : `https://finsiva.com${image.startsWith('/') ? '' : '/'}${image}`;
 
 const organizationSchema = {
