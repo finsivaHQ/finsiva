@@ -9,78 +9,214 @@ import Layout from "../layouts/Layout.astro";
   <div class="min-h-screen bg-canvas dark:bg-canvas">
     <main class="min-h-screen">
       <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-        <h1 class="text-4xl font-bold text-ink mb-6 dark:text-on-primary">Calculation Methodology & Research Process</h1>
+        <h1 class="text-5xl font-bold text-ink mb-8 dark:text-on-primary tracking-tight">Calculation Methodology & Research Process</h1>
         
-        <p class="text-lg text-body mb-10 dark:text-muted">
-          At Finsiva, trust is built through technical transparency, statutory alignment, and mathematical rigor. We explain our tax research pipeline, calculation modeling, assumptions, and limitations below.
-        </p>
-
-        <div class="prose max-w-none space-y-8 text-body dark:text-muted">
+        <div class="prose max-w-none space-y-10 text-body dark:text-muted text-lg leading-relaxed">
+          
           <section>
-            <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">1. Primary Government Source Prioritization</h2>
-            <p>
-              Finsiva relies exclusively on official, statutory revenue guidance and enacted tax legislation for every supported jurisdiction. We do not base calculator logic on unverified news reporting or third-party blog posts. Primary sources include:
+            <p class="text-xl font-medium text-ink dark:text-on-primary">
+              Taxes are, without a doubt, one of the most universally frustrating aspects of adulting. You work hard, you earn your money, and then you're faced with a labyrinth of jargon, forms, and constantly changing rules just to figure out what you owe—or what you get to keep. At Finsiva, we get it. We've been there. Staring blankly at a government portal at 11 PM on a Sunday, wondering if a simple typo might summon an audit. 
             </p>
-            <ul class="list-disc pl-6 space-y-2 mt-3">
-              <li><strong>United States:</strong> Internal Revenue Service (IRS) Code, Publications, and Form Instructions.</li>
-              <li><strong>United Kingdom:</strong> HM Revenue & Customs (HMRC) manuals and Finance Act provisions.</li>
-              <li><strong>India:</strong> Income Tax Department, CBDT circulars, CBIC GST portal releases, and annual Finance Acts.</li>
-              <li><strong>Hong Kong:</strong> Inland Revenue Department (IRD) Departmental Interpretation and Practice Notes (DIPNs).</li>
-              <li><strong>Singapore:</strong> Inland Revenue Authority of Singapore (IRAS) tax guides and statutory e-Tax guides.</li>
-              <li><strong>Pakistan:</strong> Federal Board of Revenue (FBR) Income Tax Ordinance, Sales Tax Act, and statutory circulars.</li>
-              <li><strong>Australia:</strong> Australian Taxation Office (ATO) legal database and public rulings.</li>
-              <li><strong>Canada:</strong> Canada Revenue Agency (CRA) tax packages and bulletins.</li>
-              <li><strong>Indonesia:</strong> Direktorat Jenderal Pajak (DJP) regulations and Minister of Finance decrees.</li>
-              <li><strong>New Zealand:</strong> Inland Revenue Department (IRD NZ) tax guides and tax tables.</li>
+            <p class="mt-4">
+              That shared human experience of tax-related anxiety is exactly why we built Finsiva. But providing a calculator isn't just about throwing a few lines of code together and hoping for the best. It's an immense responsibility. When you type your hard-earned salary into one of our tools, you are trusting us to give you a number that reflects reality. Trust isn't just handed over; it has to be earned through technical transparency, statutory alignment, and uncompromising mathematical rigor. 
+            </p>
+            <p class="mt-4">
+              We want you to know exactly how the sausage is made. In this document, we are going to walk you through our entire research pipeline, our calculation modeling process, the assumptions we have to make, and the limitations of our tools. We believe that if you understand our methodology, you'll feel that much more confident in the results you see on your screen.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-3xl font-bold text-ink mb-6 dark:text-on-primary mt-12">1. Our North Star: Primary Government Sources</h2>
+            <p>
+              Imagine trying to bake a cake using a recipe that was passed down through a game of telephone. By the time it reaches you, the sugar is salt, and the baking powder is baking soda. That's what happens when financial tools rely on secondary sources like blogs, forums, or news articles. A well-meaning journalist might summarize a new tax law, but in simplifying it for a headline, they often omit the crucial exemptions, phase-outs, and edge cases that determine your actual tax bill.
+            </p>
+            <p class="mt-4">
+              At Finsiva, we have a strict, non-negotiable rule: <strong>We only use official, statutory revenue guidance and enacted tax legislation.</strong> We do not base our calculator logic on unverified news reporting, op-eds, or third-party blog posts. If a tax rule isn't codified by the relevant national or regional revenue authority, it doesn't make it into our codebase. Period.
+            </p>
+            <p class="mt-4">
+              Here is a look at the exact primary sources we monitor and integrate for the jurisdictions we support:
+            </p>
+            <ul class="list-none space-y-4 mt-6 bg-surface p-6 rounded-xl border border-divider shadow-sm dark:bg-surface dark:border-divider">
+              <li class="flex items-start">
+                <span class="text-primary mr-3 text-xl">🇺🇸</span>
+                <div><strong>United States:</strong> We dive deep into the Internal Revenue Service (IRS) Code, official Publications, and Form Instructions. We monitor the Federal Register for final rulings and phase-outs.</div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary mr-3 text-xl">🇬🇧</span>
+                <div><strong>United Kingdom:</strong> We rely on HM Revenue & Customs (HMRC) internal manuals, Autumn/Spring Budget releases, and the specific provisions of the annual Finance Act.</div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary mr-3 text-xl">🇮🇳</span>
+                <div><strong>India:</strong> Our models are built on the Income Tax Department's official guidelines, CBDT circulars, CBIC GST portal releases, and the precise language of the annual Finance Acts presented in Parliament.</div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary mr-3 text-xl">🇭🇰</span>
+                <div><strong>Hong Kong:</strong> We track the Inland Revenue Department (IRD) Departmental Interpretation and Practice Notes (DIPNs) for exact calculation mechanics.</div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary mr-3 text-xl">🇸🇬</span>
+                <div><strong>Singapore:</strong> We utilize Inland Revenue Authority of Singapore (IRAS) tax guides, e-Tax guides, and statutory budget announcements.</div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary mr-3 text-xl">🇵🇰</span>
+                <div><strong>Pakistan:</strong> Calculations are strictly tied to the Federal Board of Revenue (FBR) Income Tax Ordinance, Sales Tax Act, and statutory SROs (Statutory Regulatory Orders).</div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary mr-3 text-xl">🇦🇺</span>
+                <div><strong>Australia:</strong> We monitor the Australian Taxation Office (ATO) legal database, public rulings, and legislative instruments.</div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary mr-3 text-xl">🇨🇦</span>
+                <div><strong>Canada:</strong> We map our math to Canada Revenue Agency (CRA) tax packages, bulletins, and provincial budget decrees.</div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary mr-3 text-xl">🇮🇩</span>
+                <div><strong>Indonesia:</strong> We follow Direktorat Jenderal Pajak (DJP) regulations and Minister of Finance decrees down to the letter.</div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary mr-3 text-xl">🇳🇿</span>
+                <div><strong>New Zealand:</strong> Inland Revenue Department (IRD NZ) tax guides and official PAYE tax tables govern our New Zealand tools.</div>
+              </li>
             </ul>
           </section>
 
           <section>
-            <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">2. Rule & Formula Implementation</h2>
+            <h2 class="text-3xl font-bold text-ink mb-6 dark:text-on-primary mt-12">2. The Anatomy of a Calculation: Rule & Formula Implementation</h2>
             <p>
-              Each statutory tax structure is converted into deterministic code algorithms:
+              Once we have the official statutory text, the real work begins. Reading tax law is like reading stereo instructions translated from another language. Our job is to take these dense paragraphs of legislative text and convert them into clean, fast, deterministic code algorithms.
             </p>
-            <ul class="list-disc pl-6 space-y-2 mt-3">
-              <li><strong>Progressive Tax Slabs:</strong> Marginal tax rates are applied tier-by-tier across applicable thresholds.</li>
-              <li><strong>Statutory Deductions:</strong> Standard deductions, personal allowances, and non-refundable tax credits are applied in strict legal sequence.</li>
-              <li><strong>Regime Comparison:</strong> Dual-regime jurisdictions (e.g. India Old vs. New Regime) calculate parallel outputs using regime-specific exemption rules.</li>
-            </ul>
+            <p class="mt-4">
+              Let's look at how we handle different structural elements of tax systems globally:
+            </p>
+            
+            <div class="mt-6 space-y-8">
+              <div>
+                <h3 class="text-2xl font-semibold text-ink dark:text-on-primary">A. Progressive Tax Slabs (The "Bucket" System)</h3>
+                <p class="mt-2">
+                  One of the biggest misconceptions about taxes is the idea that moving into a higher tax bracket means all your income is taxed at that higher rate. People often say, "I don't want that raise, it'll put me in a higher tax bracket and I'll take home less!" This is a myth. Almost all modern tax systems are progressive, which works like a series of buckets. 
+                </p>
+                <p class="mt-3">
+                  For example, let's say the first bucket holds $10,000 and is taxed at 0%. The second bucket holds the next $40,000 and is taxed at 10%. If you earn $11,000, only that final $1,000 spills into the second bucket. Our algorithms slice your income into these exact tranches, calculating the marginal tax rate tier-by-tier across applicable thresholds, and then summing them up to find your true effective tax rate.
+                </p>
+              </div>
+
+              <div>
+                <h3 class="text-2xl font-semibold text-ink dark:text-on-primary">B. The Strict Sequence of Statutory Deductions</h3>
+                <p class="mt-2">
+                  Order of operations matters. In math, you learn PEMDAS. In taxes, you learn that deductions, allowances, and credits must be applied in a very specific, legally mandated sequence. Standard deductions reduce your taxable income first. Then, personal allowances might apply. Finally, after the tax liability is calculated, non-refundable tax credits are applied to reduce the final bill. If a calculator applies a credit before a deduction, the math breaks. We meticulously map these sequences to ensure your final number is compliant with the law.
+                </p>
+              </div>
+
+              <div>
+                <h3 class="text-2xl font-semibold text-ink dark:text-on-primary">C. Regime Comparisons (Navigating the Matrix)</h3>
+                <p class="mt-2">
+                  Some jurisdictions have introduced parallel tax systems. India, for instance, has a dual-regime system where taxpayers can choose between the "Old Regime" (higher rates, but lots of allowable deductions like housing loan interest and investments) and the "New Regime" (lower rates, but almost no deductions allowed). 
+                </p>
+                <p class="mt-3">
+                  For these scenarios, our calculators run parallel processes. In milliseconds, the tool calculates your taxes under Regime A, calculates them again under Regime B factoring in the different exemption rules, compares the two outputs, and highlights the exact amount you would save by choosing the optimal path.
+                </p>
+              </div>
+            </div>
           </section>
 
           <section>
-            <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">3. Assumptions & Default Inputs</h2>
+            <h2 class="text-3xl font-bold text-ink mb-6 dark:text-on-primary mt-12">3. The Necessity of Assumptions (And How You Control Them)</h2>
             <p>
-              Calculators provide rapid estimates by establishing clear default assumptions (such as standard filing status, full-year residency, or standard deduction caps). Where user inputs vary—such as itemized deductions, dependents, or foreign tax credits—inputs must be specified in the tool controls.
+              When you first land on a Finsiva calculator and type in a single number—say, your annual salary—the tool instantly spits out a detailed breakdown. How does it do that without knowing your life story? 
+            </p>
+            <p class="mt-4">
+              It uses <strong>baseline assumptions</strong>. To provide a rapid, frictionless estimate, we have to establish clear defaults. We typically assume you are a single filer, under retirement age, residing in the country for the full tax year, taking the standard deduction, and not claiming complex foreign tax credits. 
+            </p>
+            <p class="mt-4">
+              However, we know you aren't a baseline assumption. You are a human being with a unique financial situation. You might be married filing jointly, you might have three dependents, you might contribute heavily to a pre-tax retirement account, or you might have significant capital gains. 
+            </p>
+            <p class="mt-4">
+              That is why our tools are built with extensive control panels. Every time you toggle a switch, add a dependent, or input an itemized deduction, the calculator throws out the baseline assumption and recalculates your entire profile in real-time based on your specific reality. We use assumptions to get you started, but we give you the tools to finish the picture.
             </p>
           </section>
 
           <section>
-            <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">4. Local Browser Execution & Privacy</h2>
+            <h2 class="text-3xl font-bold text-ink mb-6 dark:text-on-primary mt-12">4. Your Data Stays Yours: Local Browser Execution</h2>
             <p>
-              All mathematical calculations run client-side inside your web browser using vanilla JavaScript. No salary figures, tax deductions, or financial entries are transmitted to external servers or stored in databases.
+              Let's talk about privacy, because in the financial tech world, it's the elephant in the room. When you are typing in your salary, your bonuses, your deductions, and your investment income, you are inputting deeply personal, highly sensitive information.
+            </p>
+            <p class="mt-4">
+              Many financial tools on the internet send your data back to a central server to perform the calculation, and occasionally, they store that data to build an advertising profile on you. We despise that practice. 
+            </p>
+            <p class="mt-4">
+              <strong>Finsiva runs entirely in your browser.</strong> All the mathematical heavy lifting, the tax slab slicing, the deduction sequencing—it all happens client-side using vanilla JavaScript right on your device (your phone, your tablet, your laptop). When you hit calculate, no salary figures, no tax deductions, and no financial entries are ever transmitted to our servers. We don't have a database storing your income. We couldn't look at your numbers even if we wanted to. When you close the tab, your data vanishes into the ether.
             </p>
           </section>
 
           <section>
-            <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">5. Maintenance & Rate Updates</h2>
+            <h2 class="text-3xl font-bold text-ink mb-6 dark:text-on-primary mt-12">5. Maintenance, Updates, and Our Error Correction Policy</h2>
             <p>
-              Tax laws change with annual budget announcements, legislative updates, and inflation index adjustments. When official tax authority updates take effect, our statutory rules and calculator configs are updated accordingly.
+              Tax codes are living documents. They change constantly due to annual budget announcements, emergency legislative sessions, shifting political winds, and inflation-based index adjustments. A tax calculator is only as good as its last update.
+            </p>
+            <p class="mt-4">
+              Our editorial and engineering teams treat tax season like a rolling marathon. When a government announces a new budget, we are reading the draft legislation. When official tax authority updates take effect, our statutory rules and JSON configuration files are patched and deployed. 
+            </p>
+            <p class="mt-4">
+              But what happens if we get it wrong? We are human, and tax law is extraordinarily complex. If a statutory rate change is missed or a calculation discrepancy is identified, our error correction policy kicks in immediately. We investigate the claim against the official revenue publications, trace the logic in our codebase, and issue immediate, transparent corrections across all affected calculators. 
+            </p>
+            <p class="mt-4">
+              If you ever spot a number that looks off, or if you know of a hyper-specific local levy that we missed, we want to hear from you. You can report potential discrepancies directly to our engineering team via our <a href="/contact/" class="text-link hover:underline dark:text-link font-medium">Contact Page</a>. We read every single message.
             </p>
           </section>
 
           <section>
-            <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">6. Error Correction Policy</h2>
-            <p>
-              If a statutory rate change or calculation discrepancy is identified, our editorial team investigates against official revenue publications and issues immediate corrections across affected calculator rules. Users can report potential discrepancies via our <a href="/contact/" class="text-link hover:underline dark:text-link">Contact Page</a>.
+            <h2 class="text-3xl font-bold text-ink mb-6 dark:text-on-primary mt-12">6. Frequently Asked Questions (FAQs)</h2>
+            <p class="mb-6">
+              To further clarify our process, we've compiled some of the most common questions we get regarding our methodology and calculation accuracy.
             </p>
+            
+            <div class="space-y-6">
+              <div class="bg-surface p-6 rounded-xl border border-divider dark:bg-surface dark:border-divider">
+                <h4 class="text-xl font-semibold text-ink dark:text-on-primary mb-2">How quickly do you update calculators after a new tax law is passed?</h4>
+                <p class="text-body dark:text-muted">
+                  We aim to have calculators updated within 48 to 72 hours of the official, finalized statutory guidelines being published by the respective government body. We do not update based on "proposed" bills, as they often change drastically before becoming law. We wait for the ink to dry on the legislation to ensure you aren't planning your finances around a rumor.
+                </p>
+              </div>
+
+              <div class="bg-surface p-6 rounded-xl border border-divider dark:bg-surface dark:border-divider">
+                <h4 class="text-xl font-semibold text-ink dark:text-on-primary mb-2">Do you factor in inflation adjustments?</h4>
+                <p class="text-body dark:text-muted">
+                  Yes. Many countries (like the US) adjust their tax brackets, standard deductions, and contribution limits annually to account for inflation. As soon as the revenue authority releases the official inflation-adjusted figures for the upcoming tax year, our databases are updated.
+                </p>
+              </div>
+
+              <div class="bg-surface p-6 rounded-xl border border-divider dark:bg-surface dark:border-divider">
+                <h4 class="text-xl font-semibold text-ink dark:text-on-primary mb-2">Why does your calculator result differ slightly from my official tax return?</h4>
+                <p class="text-body dark:text-muted">
+                  Finsiva is designed for rapid, highly accurate estimations and financial planning. However, an actual tax return often involves micro-variables—such as specific carry-forward losses from previous years, hyper-local municipal taxes, exact dates of property sales affecting short/long term capital gains formulas, or specialized business depreciation schedules. A difference of a few dollars is usually the result of these microscopic, highly individualized variables that a generalized planning tool cannot capture.
+                </p>
+              </div>
+
+              <div class="bg-surface p-6 rounded-xl border border-divider dark:bg-surface dark:border-divider">
+                <h4 class="text-xl font-semibold text-ink dark:text-on-primary mb-2">Can I use your calculators for past tax years?</h4>
+                <p class="text-body dark:text-muted">
+                  Currently, we focus on the current tax year and, when applicable, the upcoming tax year (once rates are announced) to help you plan ahead. We maintain historical rates in our databases, and we are working on introducing a "Tax Year" toggle for retroactive calculations in the near future.
+                </p>
+              </div>
+            </div>
           </section>
 
           <section>
-            <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">7. Limitations of Automated Estimates</h2>
+            <h2 class="text-3xl font-bold text-ink mb-6 dark:text-on-primary mt-12">7. The Limits of Automation (Our Disclaimer)</h2>
             <p>
-              Finsiva tools provide generalized financial estimates for planning purposes. They do not account for complex individual edge cases (such as bankruptcy tax claims, treaty non-domiciles, complex corporate restructuring, or specialized litigation refunds). For binding tax filings, users should verify figures with official tax authority portals or a qualified Chartered Accountant / Certified Public Accountant.
+              We are incredibly proud of the accuracy and depth of the calculators we build. We use them ourselves. But it is vital that we are honest about what software can and cannot do.
+            </p>
+            <p class="mt-4">
+              Finsiva tools provide generalized financial estimates meant for educational, comparative, and planning purposes. They are phenomenal for answering questions like, "Can I afford this mortgage if taxes go up?" or "Should I switch to the new tax regime this year?" 
+            </p>
+            <p class="mt-4">
+              However, they do not—and cannot—account for immensely complex individual edge cases. If you are dealing with bankruptcy tax claims, treaty non-domicile status, cross-border corporate restructuring, navigating inheritance taxes across multiple jurisdictions, or seeking specialized litigation refunds, a web calculator is not the right tool for the job. 
+            </p>
+            <p class="mt-4">
+              Our tools are a compass, not a binding legal contract. When it comes time to file your official, legally binding tax returns, you should always verify your final figures directly with your government's official tax authority portal, or better yet, sit down with a qualified Chartered Accountant (CA), Enrolled Agent (EA), or Certified Public Accountant (CPA). They can look at the full tapestry of your life and find nuances that even the best algorithms might miss.
             </p>
           </section>
+
         </div>
       </div>
     </main>

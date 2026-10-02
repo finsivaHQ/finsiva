@@ -6,192 +6,249 @@ import Layout from "../layouts/Layout.astro";
   <div class="min-h-screen">
     <section class="border-t border-hairline dark:border-overlay-light">
       <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <h1 class="text-4xl font-bold text-ink dark:text-on-primary">About Finsiva</h1>
-        <p class="mt-4 max-w-3xl text-lg text-body dark:text-muted">
-          Finsiva is a comprehensive international tax platform dedicated to making tax information accessible, accurate, and actionable for individuals and businesses worldwide.
+        <h1 class="text-4xl font-bold text-ink dark:text-on-primary">About Finsiva: Making Taxes Human Again</h1>
+        <p class="mt-6 max-w-4xl text-xl text-body dark:text-muted leading-relaxed">
+          Let’s be honest—nobody wakes up excited to do their taxes. For most of us, the very word "tax" brings a knot of anxiety to our stomachs. It feels like navigating a maze blindfolded, where one wrong turn could cost you thousands of dollars or land you in legal trouble. At Finsiva, we believe that managing your financial obligations shouldn't feel like a punishment. We’re here to take the fear out of filing, providing comprehensive, accurate, and truly accessible tax calculators and guides for individuals and businesses around the world.
         </p>
-        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&q=80" alt="Team working together in a modern office" class="mt-8 mb-6 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&q=80" alt="Team working together in a modern office" class="mt-10 mb-8 w-full rounded-2xl object-cover max-h-[500px] shadow-lg" loading="lazy" />
       </div>
     </section>
 
-    <section class="border-t border-hairline dark:border-overlay-light">
-      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 gap-12 lg:grid-cols-2">
+    <!-- The Story Section -->
+    <section class="border-t border-hairline bg-canvas-soft dark:border-overlay-light dark:bg-canvas py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-semibold text-ink dark:text-on-primary mb-6">Our Story: Born from Frustration</h2>
+        <div class="prose prose-lg dark:prose-invert max-w-none text-body dark:text-muted">
+          <p>
+            The idea for Finsiva didn't start in a corporate boardroom. It started at a kitchen table at 2:00 AM, surrounded by receipts, complex government PDFs, and a looming deadline. Our founders—a mix of software engineers and freelance professionals—were trying to figure out a seemingly simple question: <em>"How much money do I actually get to keep this year?"</em>
+          </p>
+          <p>
+            What they found was a broken system. The available tools were either overly simplistic and dangerously inaccurate, or they were locked behind expensive subscriptions aimed at enterprise accountants. Worse, many "free" calculators required you to hand over your email address, phone number, and sensitive financial data just to see your results—effectively holding your own numbers hostage.
+          </p>
+          <p>
+            We realized that millions of people—freelancers in Mumbai, digital nomads in Bali, small business owners in London, and everyday employees in New York—were struggling with the exact same anxiety. The rules were changing constantly. Cross-border tax implications were dizzying. We knew there had to be a better way. So, we built Finsiva: a platform that treats you with respect, keeps your data private, and translates bureaucratic legalese into plain, actionable human language.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="border-t border-hairline dark:border-overlay-light py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-16 lg:grid-cols-2">
           <div>
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Our Mission</h2>
-            <p class="mt-4 text-body leading-relaxed dark:text-muted">
-              To make international tax information accessible, understandable, and actionable for everyone. We believe that navigating complex tax systems should not be a barrier to financial well-being, whether you are a local resident, an expatriate, or a global business owner.
+            <h2 class="text-3xl font-semibold text-ink dark:text-on-primary mb-4">Our Mission</h2>
+            <p class="text-lg text-body leading-relaxed dark:text-muted">
+              Our mission is simple: to democratize financial knowledge. We are determined to make international tax information accessible, understandable, and actionable for everyone. We believe that understanding your tax liability is a fundamental right, not a privilege reserved for those who can afford expensive corporate CPAs. Whether you're a first-time freelancer trying to understand self-employment tax or an expatriate navigating dual-country compliance, we are here to provide the clarity you deserve.
             </p>
           </div>
           <div>
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Our Vision</h2>
-            <p class="mt-4 text-body leading-relaxed dark:text-muted">
-              A world where anyone can confidently understand and comply with tax obligations in any country, regardless of their background or expertise. We envision a future where tax planning is democratized and everyone has access to professional-grade tools.
+            <h2 class="text-3xl font-semibold text-ink dark:text-on-primary mb-4">Our Vision</h2>
+            <p class="text-lg text-body leading-relaxed dark:text-muted">
+              We envision a world where the anxiety of tax season is a thing of the past. A world where anyone can confidently understand and comply with their tax obligations in any country, regardless of their background, language, or technical expertise. We are building a future where global tax planning is transparent, tools are genuinely free, and financial empowerment is available to everyone with an internet connection.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="border-t border-hairline bg-canvas-soft dark:border-overlay-light dark:bg-canvas">
-      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <h2 class="text-2xl font-semibold text-ink mb-8 dark:text-on-primary">Why Choose Finsiva</h2>
+    <!-- Scenarios -->
+    <section class="border-t border-hairline bg-canvas-soft dark:border-overlay-light dark:bg-canvas py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-semibold text-ink mb-8 dark:text-on-primary">Real People, Real Financial Clarity</h2>
+        <p class="text-lg text-body dark:text-muted mb-10 max-w-3xl">
+          Taxes aren't just numbers on a spreadsheet; they represent your hard work, your livelihood, and your family's future. Here are a few examples of how Finsiva's calculators bring peace of mind to real-world scenarios:
+        </p>
+
+        <div class="grid grid-cols-1 gap-10 lg:grid-cols-3">
+          <div class="bg-surface border border-hairline dark:border-overlay-lighter rounded-xl p-8 shadow-sm">
+            <h3 class="text-xl font-bold text-ink dark:text-on-primary mb-3">Sarah: The Digital Nomad</h3>
+            <p class="text-body dark:text-muted mb-4">
+              <strong>The Situation:</strong> Sarah is a US citizen working remotely as a graphic designer while living in Singapore. She was terrified of double taxation and didn't know how the Foreign Earned Income Exclusion (FEIE) applied to her freelance income.
+            </p>
+            <p class="text-body dark:text-muted">
+              <strong>How Finsiva Helped:</strong> Using our US Expat and Singapore tax calculators side-by-side, Sarah was able to instantly estimate her local tax liability in Singapore and understand exactly how much of her income was shielded from US taxes. She planned her quarterly estimated payments without spending $500 on a consultation.
+            </p>
+          </div>
+
+          <div class="bg-surface border border-hairline dark:border-overlay-lighter rounded-xl p-8 shadow-sm">
+            <h3 class="text-xl font-bold text-ink dark:text-on-primary mb-3">Rahul: The Growing Agency</h3>
+            <p class="text-body dark:text-muted mb-4">
+              <strong>The Situation:</strong> Rahul runs a growing marketing agency in Mumbai. He recently crossed the threshold requiring GST registration and started hiring contractors, meaning he had to navigate both GST compliance and TDS (Tax Deducted at Source) deductions.
+            </p>
+            <p class="text-body dark:text-muted">
+              <strong>How Finsiva Helped:</strong> Rahul used our Indian GST and TDS calculators to quickly figure out exactly how much to invoice his clients and how much to withhold from his contractors. The plain-English explanations next to the calculators helped him understand the <em>why</em> behind the rules, preventing costly compliance penalties.
+            </p>
+          </div>
+
+          <div class="bg-surface border border-hairline dark:border-overlay-lighter rounded-xl p-8 shadow-sm">
+            <h3 class="text-xl font-bold text-ink dark:text-on-primary mb-3">Emma: The First-Time Investor</h3>
+            <p class="text-body dark:text-muted mb-4">
+              <strong>The Situation:</strong> Emma, based in the UK, just sold her first rental property. She knew Capital Gains Tax (CGT) was involved, but the government websites were dense and confusing regarding deductions, allowances, and residential property rates.
+            </p>
+            <p class="text-body dark:text-muted">
+              <strong>How Finsiva Helped:</strong> Our UK Capital Gains calculator walked Emma through the process step-by-step. It automatically factored in her annual exempt amount and applied the correct residential surcharge, giving her a crystal-clear estimate of what she owed before she even contacted her accountant.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Finsiva -->
+    <section class="border-t border-hairline dark:border-overlay-light py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-semibold text-ink mb-12 dark:text-on-primary text-center">Why Millions Trust Finsiva</h2>
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
-            <h3 class="font-semibold text-ink dark:text-on-primary">Global Coverage</h3>
-            <p class="mt-2 text-sm text-body leading-relaxed dark:text-muted">Comprehensive tax data and calculators for 10 countries and growing, spanning North America, Asia, Europe, and Oceania.</p>
+          <div class="p-6">
+            <div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-4 text-2xl font-bold">1</div>
+            <h3 class="text-xl font-semibold text-ink dark:text-on-primary mb-2">Absolute Privacy (By Design)</h3>
+            <p class="text-body leading-relaxed dark:text-muted">
+              We believe your financial data is yours alone. Unlike other platforms, our calculators run entirely in your web browser. When you type in your salary or profits, that data never touches our servers. No tracking, no saving, no selling your data. When you close the tab, your numbers vanish.
+            </p>
           </div>
-          <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
-            <h3 class="font-semibold text-ink dark:text-on-primary">Accurate Calculations</h3>
-            <p class="mt-2 text-sm text-body leading-relaxed dark:text-muted">Instant calculation results based on official tax rules, brackets, and statutory parameters.</p>
+          <div class="p-6">
+            <div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-4 text-2xl font-bold">2</div>
+            <h3 class="text-xl font-semibold text-ink dark:text-on-primary mb-2">Obsessive Accuracy</h3>
+            <p class="text-body leading-relaxed dark:text-muted">
+              Tax math leaves no room for "close enough." Our engineering and research teams trace every single tax bracket, deduction rule, and phase-out threshold directly back to primary government legislation. If the IRS, HMRC, or IRAS updates a rule, our algorithms are updated to match.
+            </p>
           </div>
-          <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
-            <h3 class="font-semibold text-ink dark:text-on-primary">Free Access</h3>
-            <p class="mt-2 text-sm text-body leading-relaxed dark:text-muted">All basic tools and guides are completely free to use. No subscriptions, no hidden fees.</p>
+          <div class="p-6">
+            <div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-4 text-2xl font-bold">3</div>
+            <h3 class="text-xl font-semibold text-ink dark:text-on-primary mb-2">100% Free to Use</h3>
+            <p class="text-body leading-relaxed dark:text-muted">
+              No paywalls. No hidden "premium" tiers to see your final results. We built Finsiva to be a public utility for the internet age. Every calculator, guide, and article on our platform is completely free to access, ensuring that financial literacy isn't gated by your ability to pay.
+            </p>
           </div>
-          <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
-            <h3 class="font-semibold text-ink dark:text-on-primary">Privacy First</h3>
-            <p class="mt-2 text-sm text-body leading-relaxed dark:text-muted">No personal data is required or collected. All calculations are performed locally in your browser.</p>
+          <div class="p-6">
+            <div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-4 text-2xl font-bold">4</div>
+            <h3 class="text-xl font-semibold text-ink dark:text-on-primary mb-2">Global & Growing</h3>
+            <p class="text-body leading-relaxed dark:text-muted">
+              We currently support deep, localized tax data for 10 countries across North America, Europe, Asia, and Oceania, and we are constantly expanding. Whether you're in Manila, London, or Los Angeles, we respect the nuances of your local tax regime.
+            </p>
           </div>
-          <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
-            <h3 class="font-semibold text-ink dark:text-on-primary">Statutory Revisions</h3>
-            <p class="mt-2 text-sm text-body leading-relaxed dark:text-muted">Tax information is reviewed and updated when applicable statutory rules, rates, and parameters change.</p>
+          <div class="p-6">
+            <div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-4 text-2xl font-bold">5</div>
+            <h3 class="text-xl font-semibold text-ink dark:text-on-primary mb-2">Human-Centric Language</h3>
+            <p class="text-body leading-relaxed dark:text-muted">
+              Governments love acronyms and dense paragraphs. We love plain English. We translate complex statutory requirements into conversational, easy-to-digest guides. We don't just give you a number; we explain exactly how we arrived at it.
+            </p>
           </div>
-          <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
-            <h3 class="font-semibold text-ink dark:text-on-primary">Statutory Research</h3>
-            <p class="mt-2 text-sm text-body leading-relaxed dark:text-muted">All content, calculators, and guides are built from published statutory tax legislation and official government revenue documentation.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="border-t border-hairline dark:border-overlay-light">
-      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <h2 class="text-2xl font-semibold text-ink mb-8 dark:text-on-primary">Our Commitment to Quality</h2>
-        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
-          <div>
-            <h3 class="font-semibold text-ink dark:text-on-primary">Accuracy</h3>
-            <p class="mt-2 text-body leading-relaxed dark:text-muted">We strive to provide the most accurate and up-to-date tax information possible, sourced directly from official government resources and verified by tax professionals.</p>
-          </div>
-          <div>
-            <h3 class="font-semibold text-ink dark:text-on-primary">Accessibility</h3>
-            <p class="mt-2 text-body leading-relaxed dark:text-muted">We are committed to making tax information accessible to everyone, regardless of background or technical expertise. Our tools are designed to be intuitive and easy to use.</p>
-          </div>
-          <div>
-            <h3 class="font-semibold text-ink dark:text-on-primary">Privacy</h3>
-            <p class="mt-2 text-body leading-relaxed dark:text-muted">We do not collect or store personal information. All calculations are performed locally in your browser, ensuring your financial data stays private.</p>
-          </div>
-          <div>
-            <h3 class="font-semibold text-ink dark:text-on-primary">Innovation</h3>
-            <p class="mt-2 text-body leading-relaxed dark:text-muted">We continuously improve our platform with new calculators, features, and educational content. Our development roadmap is driven by user feedback and emerging tax compliance needs across supported countries.</p>
-          </div>
-          <div>
-            <h3 class="font-semibold text-ink dark:text-on-primary">Transparency</h3>
-            <p class="mt-2 text-body leading-relaxed dark:text-muted">We clearly indicate when information is illustrative and should be verified with a qualified tax professional. We never hide our limitations or overstate the accuracy of our tools.</p>
+          <div class="p-6">
+            <div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-4 text-2xl font-bold">6</div>
+            <h3 class="text-xl font-semibold text-ink dark:text-on-primary mb-2">Rapid Updates</h3>
+            <p class="text-body leading-relaxed dark:text-muted">
+              Tax codes are living documents. When a government announces a new budget or emergency tax relief measure, our editorial board and development team work around the clock to implement the changes, ensuring you are never calculating with outdated rules.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="border-t border-hairline bg-canvas-soft dark:border-overlay-light dark:bg-canvas">
-      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <h2 class="text-2xl font-semibold text-ink mb-8 dark:text-on-primary">Our Team</h2>
-        <p class="text-body leading-relaxed dark:text-muted max-w-3xl">
-          Finsiva is built by a distributed team of tax professionals, software engineers, financial analysts, and content specialists who share a passion for simplifying international tax complexity. Our leadership includes certified public accountants from the United States, chartered accountants from India, and tax advisors from Singapore and Hong Kong. This diversity allows us to produce content and calculators that respect regional nuances rather than applying a one-size-fits-all approach.
-        </p>
-        <p class="mt-4 text-body leading-relaxed dark:text-muted max-w-3xl">
-          Every team member brings hands-on experience with local tax filing, corporate compliance, or cross-border payroll. Many contributors have worked in government tax agencies or Big Four accounting firms, giving them insight into how rules are written, enforced, and interpreted in practice. We believe that real-world experience produces better guidance than theoretical knowledge alone.
-        </p>
-        <p class="mt-4 text-body leading-relaxed dark:text-muted max-w-3xl">
-          Our editorial board meets weekly to review new country coverage, assess changes to existing calculators, and prioritize feature requests from users around the world. Because tax laws change monthly in some jurisdictions, staying current requires constant attention and rapid response.
-        </p>
-      </div>
-    </section>
-
-    <section class="border-t border-hairline dark:border-overlay-light">
-      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <h2 class="text-2xl font-semibold text-ink mb-8 dark:text-on-primary">How We Work</h2>
-        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+    <!-- Team and Methodology -->
+    <section class="border-t border-hairline bg-canvas-soft dark:border-overlay-light dark:bg-canvas py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
-            <h3 class="font-semibold text-ink dark:text-on-primary">Research First</h3>
-            <p class="mt-2 text-body leading-relaxed dark:text-muted">Before any calculator goes live, our research team downloads the latest official tax tables, legislation, and guidance documents from government portals. We do not rely on secondary summaries or news articles for rule definitions. Every bracket, threshold, and deduction is traced to a primary source.</p>
+            <h2 class="text-3xl font-semibold text-ink mb-6 dark:text-on-primary">The People Behind the Platform</h2>
+            <p class="text-lg text-body leading-relaxed dark:text-muted mb-4">
+              Finsiva isn't run by faceless algorithms; it’s built by a deeply passionate, distributed team of tax professionals, software engineers, financial analysts, and empathetic content creators. Our leadership includes Certified Public Accountants (CPAs) from the US, Chartered Accountants (CAs) from India, and seasoned tax advisors from Singapore, the UK, and Hong Kong.
+            </p>
+            <p class="text-lg text-body leading-relaxed dark:text-muted mb-4">
+              Every team member brings real-world trenches experience. We have former Big Four auditors who know how corporate taxes work at a granular level, and former freelancers who know the sheer terror of a surprise tax bill. We combine rigorous legal understanding with cutting-edge web development to build tools that actually work for everyday people.
+            </p>
           </div>
           <div>
-            <h3 class="font-semibold text-ink dark:text-on-primary">Development and Testing</h3>
-            <p class="mt-2 text-body leading-relaxed dark:text-muted">Our engineers build calculations in pure JavaScript so they run instantly in any modern browser without server calls. Each calculator is tested against sample data, edge cases, and historical tax years to ensure consistent behavior. We use automated regression tests whenever tax rules are updated.</p>
-          </div>
-          <div>
-            <h3 class="font-semibold text-ink dark:text-on-primary">Review and Publication</h3>
-            <p class="mt-2 text-body leading-relaxed dark:text-muted">Draft content and calculator logic undergo a mandatory peer review by a second qualified tax professional. Only after both reviewers sign off do we publish. This double-check process is our primary defense against errors that could mislead users.</p>
-          </div>
-          <div>
-            <h3 class="font-semibold text-ink dark:text-on-primary">Continuous Monitoring</h3>
-            <p class="mt-2 text-body leading-relaxed dark:text-muted">After publication, we monitor tax authority bulletins, budget announcements, and regulatory updates for each supported country. When a change is announced, we estimate its effective date and update the affected calculators and guides before the rule takes effect.</p>
+            <h2 class="text-3xl font-semibold text-ink mb-6 dark:text-on-primary">Our Rigorous Methodology</h2>
+            <p class="text-lg text-body leading-relaxed dark:text-muted mb-4">
+              You might wonder how you can trust a free tool with something as critical as your taxes. The answer is our obsessive editorial and development process:
+            </p>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-primary flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="ml-3 text-body dark:text-muted"><strong>Primary Sources Only:</strong> We never rely on secondary blogs. We read the raw legislation, government revenue bulletins, and official statutory guidelines.</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-primary flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="ml-3 text-body dark:text-muted"><strong>Peer Review:</strong> Every calculator's logic is audited by at least two independent tax professionals before it ever goes live on our site.</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-primary flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="ml-3 text-body dark:text-muted"><strong>Automated Testing:</strong> We run thousands of automated tests every time we update a rule to ensure that edge cases are handled correctly and old rules still apply accurately to previous tax years.</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="border-t border-hairline bg-canvas-soft dark:border-overlay-light dark:bg-canvas">
-      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <h2 class="text-2xl font-semibold text-ink mb-8 dark:text-on-primary">Our Technology</h2>
-        <p class="text-body leading-relaxed dark:text-muted max-w-3xl">
-          Finsiva is built on modern web standards to deliver fast, reliable, and private tax calculations. Our platform runs entirely in the browser using client-side JavaScript, which means no tax data ever leaves your device. This architecture choice is deliberate: we believe that financial privacy is non-negotiable, especially when users are calculating sensitive income, deductions, and liabilities.
-        </p>
-        <p class="mt-4 text-body leading-relaxed dark:text-muted max-w-3xl">
-          We use a static-site architecture served over HTTPS, ensuring that every page load is encrypted and every script is verified. Calculators are implemented as inline, dependency-free JavaScript functions that execute in milliseconds. By avoiding server-side computation, we eliminate the need for database storage, session handling, and the associated security risks.
-        </p>
-        <p class="mt-4 text-body leading-relaxed dark:text-muted max-w-3xl">
-          Our content management workflow separates data from presentation. Tax rules for each country are maintained in structured configuration files, which are version-controlled and reviewed through the same process as application code. This means changes to tax rates or brackets go through code review, automated testing, and staged deployment just like any software feature.
-        </p>
-        <p class="mt-4 text-body leading-relaxed dark:text-muted max-w-3xl">
-          Looking ahead, we are investing in improved accessibility features, multilingual support, and offline capability so users can run calculators even without an internet connection. We are also exploring integration with open tax data standards to make importing real-world figures easier for users who keep records in spreadsheets or accounting software.
-        </p>
+    <!-- Comprehensive FAQ -->
+    <section class="border-t border-hairline dark:border-overlay-light py-16">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-semibold text-ink mb-10 dark:text-on-primary text-center">Frequently Asked Questions</h2>
+        
+        <div class="space-y-8">
+          <div>
+            <h3 class="text-xl font-bold text-ink dark:text-on-primary mb-2">1. Are Finsiva's calculators really 100% free? What's the catch?</h3>
+            <p class="text-body dark:text-muted leading-relaxed">
+              Yes, they are entirely free. There is no catch, no trial period, and no paywall hiding your final results. We believe basic tax computation is a public good. We support the platform through unintrusive, relevant advertising and selective partnerships with trusted financial services, allowing us to keep the core tools free for everyone.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-ink dark:text-on-primary mb-2">2. How do you protect my financial data?</h3>
+            <p class="text-body dark:text-muted leading-relaxed">
+              By never taking it in the first place. All Finsiva calculators are built using client-side JavaScript. This means the math happens directly inside your web browser (on your phone or computer). Your salary, profit, or deductions are never transmitted to our servers, stored in any database, or shared with third parties. When you refresh the page, your data is gone forever.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-ink dark:text-on-primary mb-2">3. Can I use Finsiva to file my official tax return?</h3>
+            <p class="text-body dark:text-muted leading-relaxed">
+              No. Finsiva provides highly accurate <em>estimations</em> and planning tools, but we are not a tax filing software. You cannot submit your return directly to the IRS, HMRC, or any other tax authority through our platform. Our tools are designed to help you plan, forecast, and understand your liability so you can confidently file yourself or work with an accountant.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-ink dark:text-on-primary mb-2">4. How often do you update the tax rates?</h3>
+            <p class="text-body dark:text-muted leading-relaxed">
+              We monitor government budgets and tax authority announcements year-round. Whenever a new tax law is passed or annual brackets are adjusted for inflation, our team immediately begins updating our configuration files. We aim to have calculators updated well before the new tax year begins, clearly labeling which tax year you are currently calculating.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-ink dark:text-on-primary mb-2">5. What should I do if my specific tax situation is highly complex?</h3>
+            <p class="text-body dark:text-muted leading-relaxed">
+              While our calculators handle a vast majority of common scenarios (including standard deductions, basic capital gains, and self-employment), extremely complex situations—like intricate corporate restructuring, multi-country inheritance, or massive international corporate holdings—require bespoke advice. We always recommend consulting a certified tax professional or attorney for highly specific, complex legal matters. Finsiva is your starting point, not your legal counsel.
+            </p>
+          </div>
+          
+          <div>
+            <h3 class="text-xl font-bold text-ink dark:text-on-primary mb-2">6. Are you planning to add support for my country?</h3>
+            <p class="text-body dark:text-muted leading-relaxed">
+              Most likely, yes! We are continuously expanding our global footprint. Our current roadmap includes deep dives into the tax codes of Canada, Australia, Germany, and the UAE. Developing a new country requires weeks of translating laws, validating algorithms, and testing. If you have an urgent need for a specific jurisdiction, please drop us a message—user demand directly influences our roadmap.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="border-t border-hairline dark:border-overlay-light">
-      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <h2 class="text-2xl font-semibold text-ink mb-8 dark:text-on-primary">Community Impact</h2>
-        <p class="text-body leading-relaxed dark:text-muted max-w-3xl">
-          Finsiva was created to solve a real problem: high-quality tax information was locked behind expensive software subscriptions or dense government publications that are difficult for non-specialists to interpret. By making calculators free and open, we have helped freelancers, small business owners, expatriates, and students estimate their tax obligations with confidence.
+    <!-- Call to Action -->
+    <section class="border-t border-hairline bg-primary/5 dark:border-overlay-light py-16 text-center">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-semibold text-ink dark:text-on-primary mb-6">Ready to take control of your taxes?</h2>
+        <p class="text-xl text-body dark:text-muted mb-8">
+          Stop guessing. Start planning. Explore our free calculators and let us help you find the clarity you've been looking for.
         </p>
-        <p class="mt-4 text-body leading-relaxed dark:text-muted max-w-3xl">
-          Our users frequently tell us that Finsiva helped them avoid overpaying, catch missed deductions, or simply understand a tax notice they received. These stories drive our roadmap and remind us that accuracy and clarity have real financial consequences for real people. We take that responsibility seriously and treat every error report as a priority.
-        </p>
-        <p class="mt-4 text-body leading-relaxed dark:text-muted max-w-3xl">
-          We also collaborate with educational institutions and financial literacy nonprofits to provide tax education workshops using Finsiva calculators and guides. If you represent an organization interested in partnering with us for outreach, please reach out through our contact page.
-        </p>
-      </div>
-    </section>
-
-    <section class="border-t border-hairline bg-canvas-soft dark:border-overlay-light dark:bg-canvas">
-      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <h2 class="text-2xl font-semibold text-ink mb-8 dark:text-on-primary">Global Reach</h2>
-        <p class="text-body leading-relaxed dark:text-muted max-w-3xl">
-          Finsiva currently supports tax calculators and guides for ten countries across four continents: the United States, India, Hong Kong, Singapore, Indonesia, Malaysia, New Zealand, Pakistan, the Philippines, and the United Kingdom. Each jurisdiction was chosen because it has a substantial user base, publicly available tax data, and rules that benefit from clear, structured explanation.
-        </p>
-        <p class="mt-4 text-body leading-relaxed dark:text-muted max-w-3xl">
-          Our global users rely on Finsiva for a wide range of scenarios: estimating federal and state income tax in the US, calculating GST and TDS liabilities in India, planning property stamp duties in Hong Kong, or comparing old versus new tax regimes for salaried employees. The breadth of use cases means our platform must remain flexible enough to handle progressive tax systems, flat-rate regimes, hybrid models, and territorial taxation rules.
-        </p>
-        <p class="mt-4 text-body leading-relaxed dark:text-muted max-w-3xl">
-          We are actively expanding to additional countries, with research underway for Canada, Australia, Germany, and the United Arab Emirates. Expanding to a new jurisdiction typically takes four to eight weeks and involves translating legislation, validating formulas with local professionals, designing the user interface, and testing against official examples. If your country is not yet supported, we encourage you to contact us with a request.
-        </p>
-      </div>
-    </section>
-
-    <section class="border-t border-hairline dark:border-overlay-light">
-      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <h2 class="text-2xl font-semibold text-ink mb-8 dark:text-on-primary">Tax Automation and Privacy</h2>
-        <p class="text-body leading-relaxed dark:text-muted max-w-3xl">
-          One of the core principles that sets Finsiva apart is our commitment to browser-based tax automation. Unlike desktop software or cloud-based tools that require account creation, our calculators automate the arithmetic of tax computation without collecting any personal identifiers. You enter numbers, the tool computes results, and you make decisions. There is no database entry, no tracking pixel, and no session cookie storing your inputs.
-        </p>
-        <p class="mt-4 text-body leading-relaxed dark:text-muted max-w-3xl">
-          We believe this model is the future of consumer tax tools. Users increasingly demand transparency about where their data goes, and regulators worldwide are tightening requirements around financial data handling. By building privacy into our architecture from day one, we avoid retrofitting consent banners, data-retention policies, and breach-notification procedures that add cost and complexity for users.
-        </p>
-        <p class="mt-4 text-body leading-relaxed dark:text-muted max-w-3xl">
-          If you are evaluating tax tools for personal or business use, we encourage you to compare Finsiva against alternatives by asking one simple question: does the tool require my email, phone number, or government ID before showing results? Finsiva never will.
-        </p>
+        <a href="/" class="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-lg text-white bg-primary hover:bg-primary-dark transition-colors shadow-md">
+          Explore Our Calculators
+        </a>
       </div>
     </section>
   </div>
