@@ -178,5 +178,5 @@ export const india: Country = {
   ],
   educationalDisclaimer: "The tax information and calculators on this page are for educational and informational purposes only. They do not constitute professional tax advice. Tax laws are subject to change. Always consult a qualified tax professional for advice specific to your situation.",
   dataSources: ["Central Board of Direct Taxes (CBDT)", "Ministry of Finance, Government of India", "Income Tax Department Official Portal"],
-  calculationMethodology: "Tax calculations follow the official Indian Income Tax Act, 1961 and Finance Act provisions. Brackets and rates are sourced from the latest CBDT notifications. The new regime rates are applied as per the Finance Act 2024-25. Deductions and exemptions are calculated based on the applicable regime selected by the taxpayer."
+  calculationMethodology: "Tax calculations follow the official Indian Income Tax Act, 1961 and Finance Act provisions. Brackets and rates are sourced from the latest CBDT notifications. The new regime rates are applied as per the Finance Act applicable for FY 2025-26. Deductions and exemptions are calculated based on the applicable regime selected by the taxpayer."
 };

@@ -1601,13 +1601,13 @@ export const taxRules: TaxRule[] = [
       { id: "takeHomePay", label: "Take-Home Pay", format: "currency", description: "Gross income minus total tax" },
     ],
     formulas: [
-      { id: "new_regime", name: "New Regime (Default)", formula: "Slab: 0% up to ₹4L | 5% ₹4-8L | 10% ₹8-12L | 15% ₹12-16L | 20% ₹16-20L | 25% ₹20-24L | 30% above | Std Ded ₹75k | Cess 4%", description: "FY 2024-25 new tax regime slabs with standard deduction for salaried" },
-      { id: "old_regime", name: "Old Regime", formula: "Slab: 0% up to ₹2.5L | 5% ₹2.5-5L | 20% ₹5-10L | 30% above | Std Ded ₹50k | Cess 4% | Plus 80C/80D deductions", description: "FY 2024-25 old tax regime with standard deductions" },
+      { id: "new_regime", name: "New Regime (Default)", formula: "Slab: 0% up to ₹4L | 5% ₹4-8L | 10% ₹8-12L | 15% ₹12-16L | 20% ₹16-20L | 25% ₹20-24L | 30% above | Std Ded ₹75k | Cess 4%", description: "FY 2025-26 new tax regime slabs with standard deduction for salaried" },
+      { id: "old_regime", name: "Old Regime", formula: "Slab: 0% up to ₹2.5L | 5% ₹2.5-5L | 20% ₹5-10L | 30% above | Std Ded ₹50k | Cess 4% | Plus 80C/80D deductions", description: "FY 2025-26 old tax regime with standard deductions" },
     ],
     examples: [
       {
-        title: "New Regime, ₹10,00,000 Salary, ₹50,000 Other, Age <60, AY 2024-25",
-        inputs: { regime: "new", ageGroup: "below_60", annualSalary: 1000000, otherIncome: 50000, hraReceived: 0, section80C: 0, section80D: 0, homeLoanInterest: 0, taxYear: "2024-25" },
+        title: "New Regime, ₹10,00,000 Salary, ₹50,000 Other, Age <60, AY 2026-27",
+        inputs: { regime: "new", ageGroup: "below_60", annualSalary: 1000000, otherIncome: 50000, hraReceived: 0, section80C: 0, section80D: 0, homeLoanInterest: 0, taxYear: "2025-26" },
         outputs: { grossIncome: 1050000, totalDeductions: 75000, taxableIncome: 975000, incomeTax: 87000, cess: 3480, totalTax: 90480, effectiveRate: 8.6, takeHomePay: 959520 },
         explanation: "New regime: gross ₹10.5L - std ded ₹75k = ₹9.75L. Tax: ₹60k + ₹15k + ₹25k + ₹13.5k = ₹87k. Cess: ₹87k x 4% = ₹3.48k."
       },
