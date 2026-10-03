@@ -18,6 +18,8 @@
   --color-border-light: #f1f5f9;
   --color-border-dark: rgba(255, 255, 255, 0.15);
   --color-overlay: rgba(255, 255, 255, 0.1);
+  --color-overlay-light: rgba(255, 255, 255, 0.1);
+  --color-overlay-lighter: rgba(255, 255, 255, 0.05);
   --color-link: #2563eb;
   --color-success: #22C55E;
   --color-warning: #F59E0B;
@@ -42,6 +44,8 @@
   --color-border-light: #21262D;
   --color-border-dark: rgba(255, 255, 255, 0.15);
   --color-overlay: rgba(255, 255, 255, 0.1);
+  --color-overlay-light: rgba(255, 255, 255, 0.1);
+  --color-overlay-lighter: rgba(255, 255, 255, 0.05);
   --color-link: #58A6FF;
   --color-success: #22C55E;
   --color-warning: #F59E0B;
@@ -306,7 +310,7 @@ p {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-lg);
   padding: 0.625rem 1.5rem;
   font-size: 0.875rem;
   font-weight: 600;
@@ -396,7 +400,7 @@ p {
 
 /* -- Card Standardization -- */
 .card {
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   border: 1px solid var(--color-border, #e2e8f0);
   background-color: var(--color-canvas, #ffffff);
   padding: 1.5rem;
