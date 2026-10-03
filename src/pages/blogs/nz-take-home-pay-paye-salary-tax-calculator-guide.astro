@@ -71,7 +71,7 @@ const faqSchema = {
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
     <p class="text-lg leading-relaxed">
-      Calculating your exact <strong>take home pay in NZ</strong> can be tricky given the combination of progressive <strong>paye tax rates</strong>, ACC levies, KiwiSaver contributions, and student loan deductions. Whether you live in <strong>Auckland</strong>, <strong>Christchurch</strong>, or Wellington, knowing your true <strong>net salary in New Zealand</strong> allows you to plan your budget, negotiate job offers, and maximize tax write-offs.
+      Calculating your exact <strong>take home pay in NZ</strong> can be tricky given the complex combination of progressive <strong>PAYE tax rates</strong>, mandatory ACC levies, KiwiSaver contributions, and potential student loan deductions. As the cost of living continues to rise across the country—whether you live in <strong>Auckland</strong>, <strong>Christchurch</strong>, Wellington, or a regional hub—knowing your true <strong>net salary in New Zealand</strong> is absolutely essential. It allows you to accurately plan your household budget, confidently negotiate job offers, understand your monthly cash flow, and ensure you are taking full advantage of allowable tax write-offs and government credits.
     </p>
 
     <!-- Quick Net Pay Summary Card -->
@@ -98,14 +98,18 @@ const faqSchema = {
         <li><a href="#tax-writeoffs-non-taxable" class="text-link hover:underline">4. Tax Write-Offs & Non-Taxable Allowances</a></li>
         <li><a href="#tax-credits-ietc" class="text-link hover:underline">5. Independent Earner Credit & Low Income Relief</a></li>
         <li><a href="#residual-income-tax" class="text-link hover:underline">6. Residual Income Tax (RIT) & myIR Online Portal</a></li>
-        <li><a href="#faqs" class="text-link hover:underline">7. Frequently Asked Questions</a></li>
+        <li><a href="#secondary-tax" class="text-link hover:underline">7. Managing Secondary Tax Codes for Side Hustles</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">8. Frequently Asked Questions</a></li>
       </ul>
     </div>
 
     <!-- Section 1 -->
     <h2 id="how-paye-works" class="text-2xl font-semibold text-ink dark:text-on-primary">1. How PAYE & Salary Tax Works in NZ</h2>
     <p>
-      In New Zealand, employers automatically withhold tax from your salary every pay cycle through the <strong>Pay As You Earn (PAYE)</strong> system. Your tax liability is determined by progressive tax brackets:
+      In New Zealand, the tax system for salary and wage earners is remarkably streamlined compared to many other countries, thanks to the <strong>Pay As You Earn (PAYE)</strong> system. Your employer automatically calculates and withholds the correct amount of income tax from your salary every pay cycle—whether you are paid weekly, fortnightly, or monthly. 
+    </p>
+    <p>
+      Your tax liability is determined by progressive tax brackets. This means you do not pay a flat rate on all your income. Instead, your income is divided into slices, and each slice is taxed at a specific rate. This is known as your <em>marginal tax rate</em>. It is a common misconception that moving into a higher tax bracket reduces your overall take-home pay. In reality, you only pay the higher rate on the earnings that fall within that specific top bracket, meaning earning a raise always results in more money in your pocket.
     </p>
 
     <!-- Tax Brackets Table -->
@@ -131,31 +135,34 @@ const faqSchema = {
     <!-- Section 2 -->
     <h2 id="paye-statutory-deductions" class="text-2xl font-semibold text-ink dark:text-on-primary">2. Statutory Deductions (ACC Levy, KiwiSaver, Student Loan)</h2>
     <p>
-      In addition to PAYE income tax, standard salary paychecks include several statutory items:
+      In addition to PAYE income tax, standard salary paychecks in New Zealand include several statutory deductions. It is critical to understand these because they significantly bridge the gap between your gross salary and your net take-home pay. 
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6 text-sm">
       <div class="rounded-xl border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
         <h3 class="font-bold text-ink dark:text-on-primary mb-1">ACC Earners' Levy</h3>
-        <p class="text-xs text-muted mb-2">Mandatory 1.60% levy for non-work injury compensation cover (capped at $142,283 max earnings).</p>
+        <p class="text-xs text-muted mb-2">Mandatory 1.60% levy for non-work injury compensation cover (capped at $142,283 max earnings). This is flat across all wage earners regardless of tax code.</p>
         <span class="inline-block rounded bg-canvas-soft px-2 py-1 text-xs font-mono">1.60%</span>
       </div>
       <div class="rounded-xl border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
         <h3 class="font-bold text-ink dark:text-on-primary mb-1">KiwiSaver</h3>
-        <p class="text-xs text-muted mb-2">Employee retirement saving deduction of 3%, 4%, 6%, 8%, or 10% (employer matches 3%).</p>
+        <p class="text-xs text-muted mb-2">Employee retirement saving deduction. You can choose to contribute 3%, 4%, 6%, 8%, or 10% of your gross pay. Employers are mandated to match a minimum of 3%.</p>
         <span class="inline-block rounded bg-canvas-soft px-2 py-1 text-xs font-mono">3% – 10%</span>
       </div>
       <div class="rounded-xl border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
         <h3 class="font-bold text-ink dark:text-on-primary mb-1">Student Loan</h3>
-        <p class="text-xs text-muted mb-2">12% repayment on earnings above the annual repayment threshold ($24,128/year).</p>
+        <p class="text-xs text-muted mb-2">If you have a New Zealand student loan, deductions are made at 12% on every dollar earned above the annual repayment threshold ($24,128/year).</p>
         <span class="inline-block rounded bg-canvas-soft px-2 py-1 text-xs font-mono">12% over limit</span>
       </div>
     </div>
+    <p>
+      <strong>Tip on KiwiSaver:</strong> Choosing the right KiwiSaver rate is a balancing act. While a 3% contribution maximizes your immediate take-home pay, opting for 4%, 6%, 8%, or 10% leverages compound interest for a more secure retirement. Furthermore, if you are saving for your first home, maximizing your KiwiSaver contributions early on can significantly boost your deposit through the First Home Grant and savings withdrawals.
+    </p>
 
     <!-- Section 3 -->
     <h2 id="salary-example-90k" class="text-2xl font-semibold text-ink dark:text-on-primary">3. Detailed Walkthrough: Tax on $90,000 Salary</h2>
     <p>
-      Let's examine a complete breakdown of <strong>tax on a $90,000 salary in NZ</strong> (assuming standard 3% KiwiSaver and no student loan):
+      Theory is great, but applying it to real numbers brings clarity. Let's examine a complete breakdown of <strong>tax on a $90,000 salary in NZ</strong>. In this example, we assume the individual has opted for the standard 3% KiwiSaver contribution and has already paid off their student loan (so no 12% deduction applies).
     </p>
 
     <div class="overflow-x-auto my-6">
@@ -170,7 +177,7 @@ const faqSchema = {
         </thead>
         <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
           <tr><td class="p-3 font-bold">Gross Salary</td><td class="p-3 font-bold">$90,000</td><td class="p-3">$7,500</td><td class="p-3">$1,731</td></tr>
-          <tr><td class="p-3 text-red-600 dark:text-red-400">PAYE Income Tax</td><td class="p-3 text-red-600 dark:text-red-400">-$19,630</td><td class="p-3">-$1,636</td><td class="p-3">-$377 text-red-600</td></tr>
+          <tr><td class="p-3 text-red-600 dark:text-red-400">PAYE Income Tax</td><td class="p-3 text-red-600 dark:text-red-400">-$19,630</td><td class="p-3">-$1,636</td><td class="p-3">-$377</td></tr>
           <tr><td class="p-3 text-red-600 dark:text-red-400">ACC Earners Levy (1.60%)</td><td class="p-3 text-red-600 dark:text-red-400">-$1,440</td><td class="p-3">-$120</td><td class="p-3">-$28</td></tr>
           <tr><td class="p-3 text-amber-600 dark:text-amber-400">KiwiSaver Employee (3%)</td><td class="p-3 text-amber-600 dark:text-amber-400">-$2,700</td><td class="p-3">-$225</td><td class="p-3">-$52</td></tr>
           <tr class="bg-green-500/10 font-bold">
@@ -182,51 +189,76 @@ const faqSchema = {
         </tbody>
       </table>
     </div>
+    <p>
+      As you can see, on a $90,000 gross salary, the effective tax rate (including ACC) is around 23.4%. By understanding these exact figures, employees can make highly informed decisions regarding their personal budgets, housing affordability, and discretionary spending.
+    </p>
 
     <!-- Section 4 -->
     <h2 id="tax-writeoffs-non-taxable" class="text-2xl font-semibold text-ink dark:text-on-primary">4. Tax Write-Offs & Non-Taxable Allowances</h2>
     <p>
-      Employees can maximize non-taxable earnings through employer allowances under IRD guidelines:
+      One of the best ways to legally enhance your take-home pay in New Zealand is through employer allowances. While standard salaried employees cannot generally claim personal tax deductions for work-related expenses directly on their tax returns like independent contractors can, employers can provide tax-free reimbursements and allowances under IRD guidelines:
     </p>
-    <ul class="list-disc pl-6 space-y-2">
-      <li><strong>Work From Home Allowance:</strong> Employers can pay up to $5/week for telecommunication and $15–$20/week for home utilities tax-free.</li>
-      <li><strong>Uniform & Tool Allowances:</strong> Reimbursed expenses for specialized safety equipment or uniform laundering are tax-exempt.</li>
+    <ul class="list-disc pl-6 space-y-2 mt-4">
+      <li><strong>Work From Home (WFH) Allowance:</strong> Post-pandemic, the IRD introduced simplified rules for WFH expenses. Employers can pay an allowance of up to $5 per week for telecommunications and $15 to $20 per week for home utilities/furniture entirely tax-free, without requiring receipts. This is a mutually beneficial arrangement that increases your net income without raising the employer's PAYE obligations.</li>
+      <li><strong>Mileage Reimbursements:</strong> If you use your personal vehicle for business purposes (excluding your regular commute from home to work), your employer can reimburse you using the IRD's standard mileage rates. This reimbursement is not subject to tax.</li>
+      <li><strong>Uniform, Tools, and Safety Gear:</strong> If your job requires specific safety gear, a distinctive uniform, or specialized tools, any employer reimbursement for the purchase or laundering of these items is typically exempt from PAYE tax.</li>
+      <li><strong>Relocation Expenses:</strong> If you are required to relocate for work (e.g., moving from Auckland to Christchurch), eligible relocation expenses paid for by your employer are usually considered non-taxable, providing a massive financial relief during a stressful transition.</li>
     </ul>
 
     <!-- Section 5 -->
     <h2 id="tax-credits-ietc" class="text-2xl font-semibold text-ink dark:text-on-primary">5. Independent Earner Credit & Low Income Relief</h2>
     <p>
-      The <strong>Independent Earner Tax Credit (IETC)</strong> provides a tax credit of <strong>$10 per week ($520/year)</strong> for individuals earning between $24,000 and $48,000 who do not receive Working for Families or government benefits.
+      New Zealand offers several targeted tax credits designed to ease the financial burden on lower and middle-income earners, effectively increasing their take-home pay:
     </p>
+    <ul class="list-disc pl-6 space-y-2 mt-4">
+      <li><strong>Independent Earner Tax Credit (IETC):</strong> The IETC provides a direct tax credit of <strong>$10 per week ($520 per year)</strong> for individuals earning between $24,000 and $48,000 annually. To qualify, you must not be receiving an income-tested benefit, Working for Families Tax Credits, or New Zealand Superannuation. This credit is often applied directly to your tax code (e.g., "ME" tax code), meaning you receive the benefit incrementally in every paycheck.</li>
+      <li><strong>Working for Families Tax Credits:</strong> Aimed at low-to-middle income families with dependent children, these credits can significantly augment household income. The amount depends on your combined family income, the number of children you have, and their ages.</li>
+      <li><strong>Best Start Tax Credit:</strong> Available to all families in the first year of a child's life, providing a weekly payment regardless of household income.</li>
+    </ul>
 
     <!-- Section 6 -->
     <h2 id="residual-income-tax" class="text-2xl font-semibold text-ink dark:text-on-primary">6. Residual Income Tax (RIT) & myIR Online Portal</h2>
     <p>
-      If you have additional untaxed income, your end-of-year tax liability is calculated as <strong>Residual Income Tax (RIT)</strong>. You can view your tax summary, check PAYE deductions, and pay tax online by logging into <strong>myIR</strong> at <code>ird.govt.nz</code> or visiting IRD customer services in Auckland or Christchurch.
+      At the end of the financial year (which runs from 1 April to 31 March), the IRD conducts a final reconciliation of the tax you have paid versus the tax you actually owe. The final amount of tax liability, after deducting all PAYE withheld and any tax credits, is known as your <strong>Residual Income Tax (RIT)</strong>.
+    </p>
+    <p>
+      If your PAYE deductions were completely accurate and you had no other income sources, your RIT should be close to zero. However, if you have additional untaxed income—such as interest from bank accounts, dividends, rental income, or a side hustle—you might end up with a tax bill. Conversely, if you were over-taxed (perhaps you worked part of the year or your income fluctuated heavily), you may receive a tax refund. 
+    </p>
+    <p>
+      The easiest way to manage your taxes, view your end-of-year tax summary, check your real-time PAYE deductions, and securely pay any tax owed is by registering for a <strong>myIR</strong> account via the Inland Revenue website (<code>ird.govt.nz</code>). The platform provides complete transparency, allowing you to track exactly where your hard-earned money is going.
     </p>
 
-    <!-- Section 7 FAQs -->
-    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">7. Frequently Asked Questions</h2>
-    <div class="space-y-4">
+    <!-- Section 7 -->
+    <h2 id="secondary-tax" class="text-2xl font-semibold text-ink dark:text-on-primary">7. Managing Secondary Tax Codes for Side Hustles</h2>
+    <p>
+      In today's economy, many New Zealanders maintain a side hustle or a second part-time job. It is a persistent myth that secondary income is penalized with a "higher" tax rate. In truth, New Zealand taxes total global income. 
+    </p>
+    <p>
+      When you have a second job, you must use a secondary tax code (such as SB, S, SH, or ST) based on your estimated total annual income from all sources. This ensures the correct marginal rate is applied to your secondary earnings, preventing you from receiving a massive, unexpected tax bill at the end of the financial year. If you accidentally overpay during the year because of an incorrect secondary code, the IRD's automatic end-of-year assessment process will calculate your RIT and issue a refund.
+    </p>
+
+    <!-- Section 8 FAQs -->
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">8. Frequently Asked Questions</h2>
+    <div class="space-y-4 mt-6">
       <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
         <h3 class="text-base font-semibold text-ink dark:text-on-primary">How do I calculate my take-home pay in New Zealand?</h3>
-        <p class="mt-1 text-sm">Deduct PAYE income tax, ACC levy (1.60%), KiwiSaver (3%-10%), and student loans from gross annual salary.</p>
+        <p class="mt-1 text-sm">Your take-home pay (net salary) is calculated by taking your gross annual salary and deducting PAYE income tax, the mandatory ACC Earners' Levy (1.60%), your KiwiSaver employee contribution (3%, 4%, 6%, 8%, or 10%), and any student loan repayments (12% of earnings above the repayment threshold).</p>
       </div>
       <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
         <h3 class="text-base font-semibold text-ink dark:text-on-primary">How much tax do I pay on a $90,000 salary in New Zealand?</h3>
-        <p class="mt-1 text-sm">Approx $19,630 in PAYE tax and $1,440 in ACC levy, leaving around $66,230 net pay (with 3% KiwiSaver).</p>
+        <p class="mt-1 text-sm">On a gross salary of $90,000 NZD, income tax is approximately $19,630, plus an ACC earners levy of $1,440. If contributing 3% to KiwiSaver ($2,700), your annual net take-home pay is approximately $66,230 (or roughly $1,273 per week).</p>
       </div>
       <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
         <h3 class="text-base font-semibold text-ink dark:text-on-primary">What is the ACC Earners' Levy in NZ?</h3>
-        <p class="mt-1 text-sm">A statutory 1.60% deduction from employment wages to cover non-work accident injury insurance.</p>
+        <p class="mt-1 text-sm">A statutory 1.60% deduction from employment wages to cover non-work accident injury insurance. It is mandatory for all wage earners and is capped at a maximum earnings limit of $142,283 per year.</p>
       </div>
       <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
         <h3 class="text-base font-semibold text-ink dark:text-on-primary">What is non-taxable income in New Zealand?</h3>
-        <p class="mt-1 text-sm">Tax-exempt employer reimbursements, work allowances, inheritances, and main home capital gains.</p>
+        <p class="mt-1 text-sm">Non-taxable income includes tax-exempt employer reimbursements for genuine work expenses (like specific home office costs), certain relocation allowances, gift inheritances, and capital gains on primary residence sales.</p>
       </div>
       <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
         <h3 class="text-base font-semibold text-ink dark:text-on-primary">What does Residual Income Tax (RIT) mean in NZ?</h3>
-        <p class="mt-1 text-sm">The remaining tax balance owed to IRD after subtracting all tax withheld and tax credits.</p>
+        <p class="mt-1 text-sm">Residual Income Tax (RIT) is the final tax balance owed to IRD after subtracting all tax withheld and tax credits. If you owe more than $5,000 in RIT, you will generally be required to pay provisional tax in the following year.</p>
       </div>
     </div>
 
@@ -259,34 +291,34 @@ const faqSchema = {
 <div class="mt-12 space-y-6 text-body dark:text-muted leading-relaxed">
   <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">The Psychology Behind Navigating New Zealand Take-Home Pay & PAYE Salary Tax : Net Pay Calculations, Deductions & Write-Offs</h2>
   <p>
-    Let's be incredibly honest for a moment. When you're trying to understand <strong>New Zealand Take-Home Pay & PAYE Salary Tax : Net Pay Calculations, Deductions & Write-Offs</strong>, the sheer volume of bureaucratic jargon can feel entirely overwhelming. It’s not just about the numbers or the compliance—it's about the psychological weight of getting it right. Fear of penalties, the stress of audits, and the anxiety of misinterpreting complex regulations are universal pain points.
+    Let's be incredibly honest for a moment. When you're trying to fundamentally understand <strong>New Zealand Take-Home Pay & PAYE Salary Tax : Net Pay Calculations, Deductions & Write-Offs</strong>, the sheer volume of bureaucratic jargon can feel entirely overwhelming. It’s not just about the numbers or the compliance—it's about the psychological weight of getting it right. Fear of penalties, the stress of audits, and the anxiety of misinterpreting complex regulations are universal pain points experienced by wage earners across the country.
   </p>
   <p>
-    Many taxpayers and business owners experience what financial psychologists call "compliance fatigue." You are expected to be an expert in everything from withholding rules to obscure deduction clauses. The truth is, mastering New Zealand Take-Home Pay & PAYE Salary Tax : Net Pay Calculations, Deductions & Write-Offs requires a shift in mindset: from reactive compliance to proactive wealth preservation.
+    Many taxpayers and business owners experience what financial psychologists call "compliance fatigue." You are expected to be an expert in everything from withholding rules to obscure deduction clauses, all while managing your actual day-to-day life and career. The truth is, mastering New Zealand Take-Home Pay & PAYE Salary Tax : Net Pay Calculations, Deductions & Write-Offs requires a shift in mindset: from reactive compliance to proactive wealth preservation. Understanding your payslip is the very first step toward total financial empowerment.
   </p>
 
-  <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Advanced Strategies for Minimizing Risk</h3>
+  <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Advanced Strategies for Minimizing Risk & Maximizing Income</h3>
   <p>
-    Beyond the basic rules, the most successful individuals and corporations employ advanced, legally sound strategies. Here is how you can move from surviving to thriving:
+    Beyond the basic rules, the most financially successful individuals employ advanced, legally sound strategies. Here is how you can move from surviving to thriving within the New Zealand tax system:
   </p>
   <ul class="list-disc pl-6 space-y-2 mt-4">
-    <li><strong>Documentation is Your Shield:</strong> Never rely on memory. Maintain granular, digitized records of all expenses, receipts, and correspondence. A well-organized ledger is your best defense against arbitrary assessments.</li>
-    <li><strong>Strategic Timing:</strong> The timing of income recognition and expense realization can drastically alter your tax footprint. Accelerating deductions or deferring income into the next fiscal period is a cornerstone of intelligent planning.</li>
-    <li><strong>Professional Consultation over DIY:</strong> The cost of an expert is almost always lower than the cost of a compliance error. Navigating New Zealand Take-Home Pay & PAYE Salary Tax : Net Pay Calculations, Deductions & Write-Offs without professional counsel is an unnecessary risk.</li>
+    <li><strong>Documentation is Your Absolute Shield:</strong> Never rely on memory. Maintain granular, digitized records of all work-related expenses, receipts, and correspondence with your employer regarding allowances. A well-organized digital ledger is your best defense against arbitrary assessments or disputes.</li>
+    <li><strong>Strategic Timing of Allowances:</strong> The timing of income recognition and expense realization can drastically alter your tax footprint. Understanding when to claim allowances or negotiate reimbursements as part of your salary package is a cornerstone of intelligent financial planning.</li>
+    <li><strong>Professional Consultation over DIY:</strong> The cost of an expert is almost always lower than the cost of a compliance error. Navigating complex edge cases in New Zealand Take-Home Pay & PAYE Salary Tax without professional counsel is an unnecessary risk, particularly if your income structure becomes complicated through investments or side businesses.</li>
   </ul>
 
   <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Troubleshooting Common Edge-Case Scenarios</h3>
   <p>
-    What happens when things don't go according to plan? Let's address some edge cases that frequently trip up even seasoned professionals when dealing with New Zealand Take-Home Pay & PAYE Salary Tax : Net Pay Calculations, Deductions & Write-Offs:
+    What happens when things don't go according to plan? Let's proactively address some edge cases that frequently trip up even seasoned professionals when dealing with their paychecks and the IRD:
   </p>
   <ol class="list-decimal pl-6 space-y-2 mt-4">
-    <li><strong>Discrepancies in Source Documents:</strong> If a withholding certificate or an income statement contains errors, do not adjust your return to match the error. Request a formal correction from the issuer immediately.</li>
-    <li><strong>Multi-Jurisdictional Conflicts:</strong> If your income crosses borders, you may face double taxation. Always invoke the relevant Double Taxation Avoidance Agreements (DTAA) and ensure you have the necessary tax residency certificates on hand.</li>
-    <li><strong>Late Filing Repercussions:</strong> If you miss a deadline, the worst action is inaction. File as soon as possible and proactively request a waiver of penalties citing reasonable cause, if applicable.</li>
+    <li><strong>Discrepancies in Source Documents (Payslips):</strong> If your payslip or end-of-year income statement contains errors, do not adjust your return to match the error. Request a formal correction from your employer's payroll department immediately to ensure your myIR records reflect reality.</li>
+    <li><strong>Multi-Jurisdictional Conflicts (Working Remotely):</strong> If your income crosses borders—for instance, if you live in New Zealand but work remotely for an Australian company—you may face double taxation complexities. Always invoke the relevant Double Taxation Avoidance Agreements (DTAA) and seek specialist advice.</li>
+    <li><strong>Late Filing Repercussions:</strong> If you miss a deadline for filing a return or paying an RIT bill, the worst action is inaction. Engage with the IRD as soon as possible. They are often willing to arrange installment plans and proactively request a waiver of penalties if you cite reasonable cause and communicate early.</li>
   </ol>
 
   <p class="mt-6 font-medium">
-    Ultimately, navigating these regulations is a marathon, not a sprint. By prioritizing structured planning and mental clarity, you can turn a compliance burden into a strategic advantage.
+    Ultimately, navigating these regulations is a marathon, not a sprint. By prioritizing structured planning, utilizing accurate calculators, and maintaining mental clarity, you can turn a basic understanding of your take-home pay into a lifelong strategic advantage.
   </p>
 </div>
 

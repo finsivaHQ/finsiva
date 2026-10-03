@@ -53,6 +53,14 @@ const faqSchema = {
         "@type": "Answer",
         text: "Sole proprietors pay business income tax under non-salaried individual slabs. The first PKR 600,000 is tax-free (0%), with marginal rates up to 35% on income exceeding PKR 3.2 million."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "When is the deadline for filing corporate tax returns in Pakistan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "For companies with a financial year ending June 30, the tax return deadline is typically December 31. For entities like AOPs and sole proprietors, it is generally September 30."
+      }
     }
   ]
 };
@@ -62,139 +70,171 @@ const faqSchema = {
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
   <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
-            <p>
-              Navigating <strong>corporate tax in Pakistan</strong> and understanding business taxation structures is essential for company directors, sole proprietors, distributors, and partnership firms.
-            </p>
-            <p>
-              The Federal Board of Revenue (FBR) enforces tax obligations under the <em>Income Tax Ordinance, 2001</em> based on business legal entity classification: Private Limited Companies, Small Companies (SMEs), Associations of Persons (AOPs), and Sole Proprietorships.
-            </p>
+    <p>
+      Navigating <strong>corporate tax in Pakistan</strong> and understanding complex business taxation structures is absolutely essential for company directors, sole proprietors, distributors, and partnership firms. Doing business in Pakistan offers incredible opportunities, but it also comes with stringent regulatory expectations. If you are operating a business in Pakistan in 2026, understanding your precise tax obligations is no longer optional—it is critical for your survival, profitability, and legal compliance.
+    </p>
+    <p>
+      The Federal Board of Revenue (FBR) enforces tax obligations under the <em>Income Tax Ordinance, 2001</em>. The tax rate you pay, the exemptions you qualify for, and your filing deadlines depend entirely on your legal entity classification. Whether you are scaling a Private Limited Company, managing a rapidly growing Small and Medium Enterprise (SME), sharing profits through an Association of Persons (AOP), or grinding it out as a Sole Proprietorship, this comprehensive guide provides the authoritative depth and clarity you need to navigate the FBR's ecosystem.
+    </p>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">1. Corporate Tax Rates in Pakistan (2026)</h2>
-            <p>
-              Corporate tax rates apply to net taxable profits after allowable business expenses and depreciation:
-            </p>
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">1. Corporate Tax Rates for Companies in Pakistan (2026)</h2>
+    <p>
+      For incorporated businesses, corporate tax rates apply to net taxable profits—that is, your gross revenue minus allowable business expenses, operating costs, payroll, and statutory depreciation. One of the most common pitfalls for new founders is confusing gross turnover with net taxable profit. FBR allows you to deduct legitimate business expenses, which is where proper accounting and tax planning become invaluable.
+    </p>
 
-            <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
-              <table class="w-full text-left text-sm">
-                <thead class="bg-canvas-soft border-b border-hairline dark:bg-surface/80 dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
-                  <tr>
-                    <th class="p-3">Business Entity Type</th>
-                    <th class="p-3">FBR Corporate Income Tax Rate</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
-                  <tr>
-                    <td class="p-3 font-medium">Standard Companies (Public & Private Ltd)</td>
-                    <td class="p-3 font-bold text-primary dark:text-on-primary">29% Flat Corporate Tax</td>
-                  </tr>
-                  <tr>
-                    <td class="p-3 font-medium">Small Companies (Qualified SMEs)</td>
-                    <td class="p-3 font-bold text-emerald-600">22% Reduced Tax Rate</td>
-                  </tr>
-                  <tr>
-                    <td class="p-3 font-medium">Banking Companies</td>
-                    <td class="p-3 font-bold text-rose-600">35% Corporate Tax + Super Tax</td>
-                  </tr>
-                  <tr>
-                    <td class="p-3 font-medium">Sole Proprietors / Unincorporated Traders</td>
-                    <td class="p-3">Progressive Business Slabs (0% to 35%)</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+    <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+      <table class="w-full text-left text-sm">
+        <thead class="bg-canvas-soft border-b border-hairline dark:bg-surface/80 dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+          <tr>
+            <th class="p-3">Business Entity Type</th>
+            <th class="p-3">FBR Corporate Income Tax Rate (2026)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 font-medium">Standard Companies (Public & Private Ltd)</td>
+            <td class="p-3 font-bold text-primary dark:text-on-primary">29% Flat Corporate Tax</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Small Companies (Qualified SMEs)</td>
+            <td class="p-3 font-bold text-emerald-600">22% Reduced Tax Rate</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Banking Companies</td>
+            <td class="p-3 font-bold text-rose-600">35% Corporate Tax + Super Tax</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Sole Proprietors / Unincorporated Traders</td>
+            <td class="p-3">Progressive Business Slabs (0% to 35%)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">2. Association of Persons (AOP) & Partnership Taxation</h2>
-            <p>
-              An <strong>Association of Persons (AOP)</strong> or registered partnership firm is treated as a separate taxable entity under FBR rules. The AOP calculates net business profit and pays tax under non-salaried business slabs. Once the AOP clears its tax liability, profit distributions received by individual partners are <strong>exempt from further income tax</strong> in their personal returns.
-            </p>
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">A Deeper Look at Small Companies (SMEs)</h3>
+    <p>
+      The FBR explicitly incentivizes small businesses through a reduced tax rate of <strong>22%</strong> instead of the standard 29%. To qualify as a "Small Company," your business must meet very specific criteria under Section 2(59A) of the Income Tax Ordinance. Generally, your paid-up capital plus undistributed reserves must not exceed PKR 50 million, your annual turnover must not exceed PKR 250 million, and you cannot be formed by splitting up or reconstituting an already existing business.
+    </p>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">3. Minimum Turnover Tax under Section 113</h2>
-            <p>
-              Under <strong>Section 113</strong>, if a company or specified business entity incurs a net loss or pays normal income tax below 1.25% of gross turnover, it is required to pay a minimum turnover tax of <strong>1.25%</strong> on gross revenue. Excess turnover tax paid can be carried forward for adjustment against future tax liabilities for up to 5 tax years.
-            </p>
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">2. Association of Persons (AOP) & Partnership Taxation</h2>
+    <p>
+      Many businesses in Pakistan operate as partnerships or joint ventures. In the eyes of the FBR, these are categorized as an <strong>Association of Persons (AOP)</strong>. An AOP is treated as a completely separate, distinct taxable entity from its constituent partners. 
+    </p>
+    <p>
+      Here is how it works: The AOP calculates its total net business profit and pays tax under the non-salaried business tax slabs (ranging from 0% up to 35%). The critical benefit of an AOP structure is that once the AOP has cleared its tax liability and paid what is owed to the FBR, any subsequent profit distributions received by the individual partners are <strong>exempt from further income tax</strong> in their personal tax returns. This prevents double taxation and makes AOPs an attractive model for professional service firms, traders, and family-owned enterprises.
+    </p>
+    <ul class="list-disc pl-6 space-y-2 mt-4">
+      <li><strong>Filing Requirements:</strong> An AOP must file its own separate tax return and obtain its own National Tax Number (NTN).</li>
+      <li><strong>Withholding Agent Status:</strong> Registered AOPs are often required to act as withholding agents, deducting tax when paying suppliers, vendors, or rent.</li>
+    </ul>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">4. Super Tax under Section 4C</h2>
-            <p>
-              The FBR levies a progressive <strong>Super Tax under Section 4C</strong> on high-earning entities and companies whose annual income exceeds specified thresholds:
-            </p>
-            <ul>
-              <li><strong>Income PKR 150M – 200M</strong>: 1% Super Tax</li>
-              <li><strong>Income PKR 200M – 250M</strong>: 2% Super Tax</li>
-              <li><strong>Income PKR 250M – 300M</strong>: 3% Super Tax</li>
-              <li><strong>Income PKR 300M – 350M</strong>: 4% Super Tax</li>
-              <li><strong>Income Above PKR 500M</strong>: Up to 10% Super Tax for specified sectors</li>
-            </ul>
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">3. Minimum Turnover Tax under Section 113</h2>
+    <p>
+      One of the most misunderstood aspects of Pakistan's corporate tax code is the Minimum Tax under <strong>Section 113</strong>. The FBR implemented this section to ensure that companies cannot perpetually declare accounting losses to avoid paying any tax whatsoever. 
+    </p>
+    <p>
+      If your company, AOP, or specified business entity incurs a net loss for the year, or if your normal corporate tax payable calculated at 29% turns out to be less than the minimum threshold based on your turnover, you are legally required to pay a minimum turnover tax. For most standard businesses, this is set at <strong>1.25% of gross revenue</strong> (though certain sectors like oil marketing, FMCG distributors, and specialized retailers have reduced rates).
+    </p>
+    <p>
+      <strong>Strategic Tip:</strong> If you are forced to pay the 1.25% turnover tax because it exceeds your normal tax liability, you don't necessarily lose that money forever. The excess turnover tax paid can be carried forward for adjustment against normal tax liabilities for up to <strong>5 consecutive tax years</strong>.
+    </p>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">5. Withholding Tax on Distributors & Suppliers</h2>
-            <p>
-              Businesses acting as distributors, wholesalers, or suppliers face advance withholding tax under Section 153 and Section 236G/236H. Active filers receive lower withholding rates on commercial invoices, while non-filers incur penal withholding deductions up to 200% higher.
-            </p>
-            <p>
-              Calculate commercial tax obligations on our <a href="/countries/pakistan/income-tax/business-income-tax-calculator/" class="text-link hover:underline">Business Tax Calculator</a> or explore our main <a href="/knowledge/pakistan-income-tax/" class="text-link hover:underline">Pakistan Income Tax Knowledge Hub</a>.
-            </p>
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">4. Super Tax under Section 4C</h2>
+    <p>
+      Introduced to generate revenue for poverty alleviation and macroeconomic stabilization, the <strong>Super Tax under Section 4C</strong> acts as an additional levy on highly profitable entities and high-net-worth individuals. If your company's income exceeds PKR 150 million, you must calculate and remit Super Tax in addition to your standard 29% corporate tax.
+    </p>
+    <ul class="list-disc pl-6 space-y-2 mt-4">
+      <li><strong>Income PKR 150M – 200M:</strong> 1% Super Tax</li>
+      <li><strong>Income PKR 200M – 250M:</strong> 2% Super Tax</li>
+      <li><strong>Income PKR 250M – 300M:</strong> 3% Super Tax</li>
+      <li><strong>Income PKR 300M – 350M:</strong> 4% Super Tax</li>
+      <li><strong>Income Above PKR 500M:</strong> Up to 10% Super Tax (especially enforced for specified sectors like banking, cement, steel, airlines, and automobiles).</li>
+    </ul>
+    <p>
+      Proper financial forecasting is crucial here. Breaching a threshold by just a few thousand rupees can trigger a higher Super Tax bracket on your entire income, heavily impacting your post-tax cash flow.
+    </p>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Frequently Asked Questions</h2>
-          </div>
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">5. Withholding Tax on Distributors, Wholesalers & Suppliers</h2>
+    <p>
+      The withholding tax (WHT) regime is the backbone of FBR's tax collection infrastructure. Businesses acting as distributors, wholesalers, or suppliers face advance withholding tax deductions on their commercial invoices under Section 153 (payments for goods and services) and Sections 236G/236H (sales to distributors and retailers).
+    </p>
+    <p>
+      Remaining on the <strong>Active Taxpayer List (ATL)</strong> is absolutely mandatory for business survival. Active filers receive the standard, lower withholding rates. If your business drops off the ATL (usually due to late filing), you instantly become a "non-filer" in the eyes of the FBR system. Non-filers incur penal withholding deductions that are often up to <strong>200% higher</strong> than standard rates. This aggressively eats into your working capital and profit margins.
+    </p>
+    <p>
+      Calculate commercial tax obligations and simulate withholding impacts on our <a href="/countries/pakistan/income-tax/business-income-tax-calculator/" class="text-link hover:underline font-medium text-primary">Business Tax Calculator</a> or explore our main <a href="/knowledge/pakistan-income-tax/" class="text-link hover:underline font-medium text-primary">Pakistan Income Tax Knowledge Hub</a> for deeper insights into the ATL.
+    </p>
 
-          <div class="mt-8 space-y-4">
-            {faqSchema.mainEntity.map(faq => (
-              <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
-                <h3 class="text-lg font-semibold text-ink dark:text-on-primary">{faq.name}</h3>
-                <p class="mt-2 text-sm text-body dark:text-muted leading-relaxed">{faq.acceptedAnswer.text}</p>
-              </div>
-            ))}
-          </div>
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">The Psychology Behind Navigating Corporate Compliance</h2>
+    <p>
+      Let's be incredibly honest for a moment. When you're trying to understand <strong>Pakistan Corporate & Business Tax</strong>, the sheer volume of bureaucratic jargon, statutory regulatory orders (SROs), and shifting finance bills can feel entirely overwhelming. It’s not just about crunching the numbers—it's about the psychological weight of getting it right. Fear of arbitrary FBR notices, the stress of intensive audits, and the anxiety of misinterpreting complex regulations are universal pain points shared by thousands of founders across the country.
+    </p>
+    <p>
+      Many taxpayers and business owners experience what financial psychologists call "compliance fatigue." You are expected to be an expert in everything from withholding rules to obscure deduction clauses. The truth is, mastering your corporate tax obligations requires a shift in mindset: from reactive compliance (panic-filing in December) to proactive wealth preservation and strategic structuring.
+    </p>
 
-          <div class="mt-12 p-6 rounded-2xl bg-canvas-soft border border-hairline dark:border-overlay-lighter dark:bg-surface">
-            <h3 class="text-xl font-bold text-ink dark:text-on-primary">About the Author</h3>
-            <p class="mt-2 text-sm font-semibold text-primary dark:text-on-primary">{author}</p>
-            <p class="mt-1 text-sm text-body dark:text-muted">{authorBio}</p>
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Advanced Strategies for Minimizing Audit Risk</h3>
+    <p>
+      Beyond the basic rates, the most successful corporations employ advanced, legally sound compliance strategies. Here is how you can move from merely surviving the FBR to thriving:
+    </p>
+    <ul class="list-disc pl-6 space-y-2 mt-4">
+      <li><strong>Documentation is Your Absolute Shield:</strong> Never rely on memory or verbal agreements. Maintain granular, digitized records of all expenses, withholding challans, receipts, and FBR correspondence. A well-organized, thoroughly reconciled ledger is your best defense against arbitrary assessments during a tax audit.</li>
+      <li><strong>Strategic Timing of Capital Expenditure:</strong> The timing of income recognition and expense realization can drastically alter your tax footprint. Accelerating deductions through strategic asset purchases (leveraging initial depreciation allowances) or carefully timing inventory write-offs is a cornerstone of intelligent corporate planning.</li>
+      <li><strong>Professional Consultation over DIY:</strong> The financial cost of hiring a seasoned corporate tax expert is almost always lower than the compounding cost of a compliance error, penalty, and default surcharge. Navigating Pakistan's dynamic tax landscape without professional counsel is an unnecessary, high-stakes risk.</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Troubleshooting Common Edge-Case Scenarios</h3>
+    <p>
+      What happens when things don't go according to plan? Let's address some edge cases that frequently trip up even seasoned finance professionals in Pakistan:
+    </p>
+    <ol class="list-decimal pl-6 space-y-3 mt-4">
+      <li><strong>Discrepancies in CPRs and Withholding Certificates:</strong> If a client's withholding certificate (CPR) or a bank's deduction statement contains errors, do not blindly adjust your return to match the error. Request a formal correction from the withholding agent immediately to ensure your tax credits align perfectly with the FBR's IRIS system.</li>
+      <li><strong>Multi-Jurisdictional Conflicts for Tech Exporters:</strong> If your IT or software export income crosses borders, you may face complex remittance rules. Always invoke the relevant IT export exemptions under Section 65F (if compliant with Pakistan Software Export Board rules) and ensure you have the necessary PRC (Proceeds Realization Certificates) on hand.</li>
+      <li><strong>Late Filing Repercussions:</strong> If you miss the September 30th or December 31st deadlines, the worst action is inaction. File as soon as possible. Prolonged delays result in ejection from the Active Taxpayer List (ATL), compounding default surcharges under Section 205, and severe penalty notices under Section 182.</li>
+    </ol>
+    <p class="mt-6 font-medium text-lg border-l-4 border-primary pl-4 py-1">
+      Ultimately, navigating Pakistan's corporate tax regulations is a marathon, not a sprint. By prioritizing structured financial planning and mental clarity, you can turn a heavy compliance burden into a strategic, competitive advantage for your business.
+    </p>
   </div>
 
-          
-<div class="mt-12 space-y-6 text-body dark:text-muted leading-relaxed">
-  <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">The Psychology Behind Navigating Pakistan Corporate & Business Tax  : Company  & Slabs</h2>
-  <p>
-    Let's be incredibly honest for a moment. When you're trying to understand <strong>Pakistan Corporate & Business Tax  : Company  & Slabs</strong>, the sheer volume of bureaucratic jargon can feel entirely overwhelming. It’s not just about the numbers or the compliance—it's about the psychological weight of getting it right. Fear of penalties, the stress of audits, and the anxiety of misinterpreting complex regulations are universal pain points.
-  </p>
-  <p>
-    Many taxpayers and business owners experience what financial psychologists call "compliance fatigue." You are expected to be an expert in everything from withholding rules to obscure deduction clauses. The truth is, mastering Pakistan Corporate & Business Tax  : Company  & Slabs requires a shift in mindset: from reactive compliance to proactive wealth preservation.
-  </p>
+  <div class="mt-12">
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mb-6">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      {faqSchema.mainEntity.map(faq => (
+        <div class="rounded-xl border border-hairline bg-canvas p-6 shadow-sm dark:border-overlay-lighter dark:bg-surface transition-all hover:border-primary/30">
+          <h3 class="text-lg font-semibold text-ink dark:text-on-primary">{faq.name}</h3>
+          <p class="mt-3 text-sm text-body dark:text-muted leading-relaxed">{faq.acceptedAnswer.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
 
-  <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Advanced Strategies for Minimizing Risk</h3>
-  <p>
-    Beyond the basic rules, the most successful individuals and corporations employ advanced, legally sound strategies. Here is how you can move from surviving to thriving:
-  </p>
-  <ul class="list-disc pl-6 space-y-2 mt-4">
-    <li><strong>Documentation is Your Shield:</strong> Never rely on memory. Maintain granular, digitized records of all expenses, receipts, and correspondence. A well-organized ledger is your best defense against arbitrary assessments.</li>
-    <li><strong>Strategic Timing:</strong> The timing of income recognition and expense realization can drastically alter your tax footprint. Accelerating deductions or deferring income into the next fiscal period is a cornerstone of intelligent planning.</li>
-    <li><strong>Professional Consultation over DIY:</strong> The cost of an expert is almost always lower than the cost of a compliance error. Navigating Pakistan Corporate & Business Tax  : Company  & Slabs without professional counsel is an unnecessary risk.</li>
-  </ul>
+  <!-- Hub Calculator CTA (MachaRule) -->
+  <div class="my-10 rounded-2xl border-2 border-primary/20 bg-primary/5 p-8 shadow-sm dark:border-primary/30 dark:bg-primary/10 flex flex-col sm:flex-row items-center justify-between gap-6 relative overflow-hidden">
+    <div class="absolute -right-10 -top-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
+    <div class="relative z-10">
+      <h3 class="text-xl font-bold text-ink dark:text-on-primary">Need Exact Figures for Your Business?</h3>
+      <p class="text-sm text-body dark:text-muted mt-2 max-w-lg">Don't rely on guesswork. Use our free, updated interactive calculators to estimate your corporate taxes, AOP slabs, and turnover liabilities instantly.</p>
+    </div>
+    <a href="/countries/pakistan/" class="relative z-10 inline-flex items-center justify-center rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:bg-primary/90 hover:shadow-lg hover:-translate-y-0.5 whitespace-nowrap">
+      Go to Calculators
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+      </svg>
+    </a>
+  </div>
 
-  <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Troubleshooting Common Edge-Case Scenarios</h3>
-  <p>
-    What happens when things don't go according to plan? Let's address some edge cases that frequently trip up even seasoned professionals when dealing with Pakistan Corporate & Business Tax  : Company  & Slabs:
-  </p>
-  <ol class="list-decimal pl-6 space-y-2 mt-4">
-    <li><strong>Discrepancies in Source Documents:</strong> If a withholding certificate or an income statement contains errors, do not adjust your return to match the error. Request a formal correction from the issuer immediately.</li>
-    <li><strong>Multi-Jurisdictional Conflicts:</strong> If your income crosses borders, you may face double taxation. Always invoke the relevant Double Taxation Avoidance Agreements (DTAA) and ensure you have the necessary tax residency certificates on hand.</li>
-    <li><strong>Late Filing Repercussions:</strong> If you miss a deadline, the worst action is inaction. File as soon as possible and proactively request a waiver of penalties citing reasonable cause, if applicable.</li>
-  </ol>
-
-  <p class="mt-6 font-medium">
-    Ultimately, navigating these regulations is a marathon, not a sprint. By prioritizing structured planning and mental clarity, you can turn a compliance burden into a strategic advantage.
-  </p>
-</div>
-
-<!-- Hub Calculator CTA (MachaRule) -->
-          <div class="my-8 rounded-xl border border-hairline bg-canvas-soft p-6 shadow-sm dark:border-overlay-lighter dark:bg-surface flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>
-              <h3 class="font-bold text-ink dark:text-on-primary">Need Exact Figures?</h3>
-              <p class="text-sm text-muted mt-1">Use our free interactive calculators to estimate your taxes.</p>
-            </div>
-            <a href="/countries/pakistan/" class="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primary/90 whitespace-nowrap">
-              Go to Calculators &rarr;
-            </a>
-          </div>
+  <div class="mt-12 p-8 rounded-2xl bg-canvas-soft border border-hairline dark:border-overlay-lighter dark:bg-surface flex items-start gap-4">
+    <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-xl shrink-0">
+      {author.charAt(0)}
+    </div>
+    <div>
+      <h3 class="text-xl font-bold text-ink dark:text-on-primary">About the Author: {author}</h3>
+      <p class="mt-2 text-sm text-body dark:text-muted leading-relaxed">{authorBio}</p>
+      <div class="mt-3 text-xs text-muted font-medium uppercase tracking-wider">
+        Last Updated: {lastUpdated} &bull; {readTime}
+      </div>
+    </div>
+  </div>
 
 </BlogLayout>
