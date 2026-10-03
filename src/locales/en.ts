@@ -33,7 +33,7 @@ export const translations: Record<string, string> = {
   "breadcrumb.home": "Home",
   "breadcrumb.countries": "Countries",
   "breadcrumb.about_us": "About Us",
-  "footer.disclaimer": "TaxPortal. For informational purposes only. Consult a tax professional for advice.",
+  "footer.disclaimer": "Finsiva provides tax calculators and educational information for informational purposes only. Consult a qualified tax professional for advice specific to your situation.",
   "footer.rights": "All rights reserved.",
   "countries.page_title": "Countries",
   "countries.description": "Explore tax information for countries worldwide. Find income tax, VAT, corporate tax, and more.",
