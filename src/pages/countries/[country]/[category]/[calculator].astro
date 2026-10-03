@@ -367,13 +367,8 @@ const calcCanonical = (() => {
     lastChecked={country.taxYear}
   />
 
-  <div class="rounded-lg border border-hairline bg-canvas p-8 dark:border-overlay-lighter dark:bg-surface">
-    <div id="calc-overview" class="mb-8">
-      <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary" set:html={mergedContent.overview.title}></h2>
-      <div class="prose max-w-none text-body dark:text-muted space-y-4" set:html={mergedContent.overview.html}></div>
-    </div>
-
-    <div class="mb-8">
+  <div class="rounded-lg border border-hairline bg-canvas p-4 sm:p-8 dark:border-overlay-lighter dark:bg-surface">
+    <div class="mb-2">
       <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary" data-i18n="calculator.input_heading">Calculator Input</h2>
       
       {rule ? (
@@ -530,6 +525,13 @@ const calcCanonical = (() => {
       </div>
     </div>
   </div>
+
+  <section id="calc-overview" class="mt-12" aria-labelledby="overview-heading">
+    <h2 id="overview-heading" class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary" set:html={mergedContent.overview.title}></h2>
+    <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+      <div class="prose max-w-none text-body dark:text-muted space-y-4" set:html={mergedContent.overview.html}></div>
+    </div>
+  </section>
 
   {rule && rule.examples && rule.examples.length > 0 && (
     <div class="mt-12">
