@@ -8,141 +8,226 @@ const author = "Maya Lin";
 const lastUpdated = "July 2026";
 const readTime = "14 min read";
 const authorBio = "Tax planning specialist with 8+ years of experience in Indian personal taxation and investment advisory.";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I claim 80C under the new tax regime?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, Section 80C deductions are not available if you opt for the new tax regime. You must stick to the old regime to claim these benefits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the ₹1.5 lakh limit apply individually to each investment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, the ₹1.5 lakh limit is the cumulative cap for all your investments combined under Sections 80C, 80CCC, and 80CCD(1)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I claim tuition fees for my third child?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, Section 80C allows deduction for tuition fees paid for a maximum of two children per taxpayer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I sell my ELSS before 3 years?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You cannot sell or redeem ELSS units before the 3-year lock-in period ends. The lock-in is mandatory."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my EPF contribution automatically counted under 80C?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, your (employee) share of the EPF contribution is automatically eligible for deduction under Section 80C. Your employer's share is not part of 80C."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I claim both HRA and Home Loan Principal under 80C?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, if you meet the specific conditions for both, you can claim HRA (Section 10(13A)) and Home Loan Principal (Section 80C) simultaneously."
+      }
+    }
+  ]
+};
 ---
 
 <BlogLayout title={title} description={description} image={image} author={author} authorBio={authorBio} lastUpdated={lastUpdated} readTime={readTime}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <div class="mt-8 space-y-6 text-body dark:text-muted">
-            <p>Section 80C of the Income Tax Act is the most popular and widely used tax-saving provision for Indian taxpayers. It allows individuals and Hindu Undivided Families (HUFs) to claim deductions of up to <strong>₹1.5 lakh</strong> in a financial year for specified investments and expenses. This comprehensive guide covers every aspect of Section 80C deductions, helping you maximize your tax savings while building long-term wealth.</p>
+    <p>Let's be honest for a second. Every year, around late February or March, a familiar panic sets in. Human Resources sends out that final reminder for \"investment proofs,\" and suddenly you're scrambling. You're calling your insurance agent, logging into your mutual fund portal, and asking friends, <em>\"What should I buy to save tax right now?\"</em></p>
 
-            <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
-              <h3 class="font-semibold text-ink mb-2 dark:text-on-primary">Quick Reference: Section 80C at a Glance</h3>
-              <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
-                <li><strong>Maximum Deduction:</strong> ₹1,50,000 per financial year</li>
-                <li><strong>Who Can Claim:</strong> Individuals and HUFs</li>
-                <li><strong>Applicable Years:</strong> FY 2024-25 (AY 2025-26)</li>
-                <li><strong>Combined Limit:</strong> ₹1.5 lakh across Section 80C, 80CCC, and 80CCD(1)</li>
-              </ul>
-            </div>
+    <p>This last-minute rush is the number one reason salaried individuals and freelancers make terrible investment decisions. Section 80C of the Income Tax Act is arguably the most generous and popular tax-saving provision for Indian taxpayers, allowing individuals and Hindu Undivided Families (HUFs) to claim deductions of up to <strong>₹1.5 lakh</strong> in a financial year. But when treated as a frantic chore rather than a wealth-building strategy, you end up locking your hard-earned money into low-yield, illiquid products that do nothing for your financial future.</p>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">What is Section 80C?</h2>
-            <p>Section 80C of the Indian Income Tax Act provides a deduction for specified investments and expenses made during a financial year. The total deduction available under Section 80C, 80CCC, and 80CCD(1) combined cannot exceed ₹1.5 lakh in a single financial year. This means you can invest in multiple instruments under these sections, but the aggregate deduction is capped at ₹1.5 lakh.</p>
-            <p>The purpose of Section 80C is dual: it encourages savings and investments while providing tax relief to taxpayers. By channeling a portion of your income into designated savings instruments, you reduce your taxable income and lower your overall tax bill.</p>
+    <p>In this comprehensive guide, we're not just going to list the options. We're going to dive deep into the psychology, advanced strategies, and edge cases of Section 80C so you can maximize your tax savings while genuinely building long-term wealth.</p>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Investments Eligible Under Section 80C</h2>
-            <p>The following investments and expenses qualify for deduction under Section 80C:</p>
-            <ul class="list-disc pl-6 space-y-2">
-              <li><strong>Employee Provident Fund (EPF):</strong> Your mandatory contribution to the provident fund qualifies automatically.</li>
-              <li><strong>Public Provident Fund (PPF):</strong>A government-backed savings scheme with a 15-year lock-in period and tax-free maturity.</li>
-              <li><strong>Equity Linked Savings Scheme (ELSS):</strong>Mutual funds with a 3-year lock-in that invest primarily in equity markets.</li>
-              <li><strong>National Savings Certificate (NSC):</strong>A fixed-income investment offered by India Post with a 5-year lock-in.</li>
-              <li><strong>5-year Fixed Deposits:</strong>Tax-saving FDs with scheduled banks, locked in for 5 years.</li>
-              <li><strong>Life Insurance Premiums:</strong>Premiums paid for yourself, spouse, or dependent children qualify.</li>
-              <li><strong>Sukanya Samriddhi Yojana (SSY):</strong>A government scheme for the girl child with a 21-year lock-in.</li>
-              <li><strong>Home Loan Principal Repayment:</strong>The principal portion of your home loan EMI qualifies.</li>
-              <li><strong>Tuition Fees:</strong>Fees paid for up to two children for full-time education in India.</li>
-              <li><strong>National Pension System (NPS):</strong>Contributions qualify under 80CCD(1), subject to the ₹1.5 lakh cap.</li>
-            </ul>
+    <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface my-8">
+      <h3 class="font-semibold text-ink mb-4 dark:text-on-primary">Quick Reference: Section 80C at a Glance</h3>
+      <ul class="grid grid-cols-1 gap-4 sm:grid-cols-2 text-sm">
+        <li class="flex flex-col"><strong>Maximum Deduction:</strong> <span>₹1,50,000 per financial year</span></li>
+        <li class="flex flex-col"><strong>Who Can Claim:</strong> <span>Individuals and HUFs</span></li>
+        <li class="flex flex-col"><strong>Applicable Years:</strong> <span>FY 2024-25 (AY 2025-26)</span></li>
+        <li class="flex flex-col"><strong>Combined Limit:</strong> <span>Applies across 80C, 80CCC, and 80CCD(1)</span></li>
+      </ul>
+    </div>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Best Section 80C Investments by Risk Profile</h2>
-            <p><strong>For conservative investors:</strong> PPF, NSC, 5-year fixed deposits, and life insurance are ideal choices. PPF offers guaranteed returns that are completely tax-free upon maturity, making it one of the most tax-efficient instruments available. NSC provides fixed, predictable returns with the added benefit of interest being eligible for 80C deduction.</p>
-            <p><strong>For moderate risk investors:</strong> ELSS funds offer the potential for market-linked returns with a relatively short lock-in period of 3 years. Historically, ELSS funds have delivered returns of 12–15% annually over long periods, making them an attractive option for wealth creation with a tax benefit.</p>
-            <p><strong>For aggressive investors:</strong> NPS with higher equity allocation can deliver market-linked returns. Additionally, NPS offers an <strong>extra ₹50,000 deduction</strong> under Section 80CCD(1B), which is over and above the ₹1.5 lakh Section 80C limit.</p>
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">The Psychology of Tax Saving: Why We Get It Wrong</h2>
+    <p>Behavioral economics tells us a lot about why we mishandle our 80C limit. We suffer from <em>loss aversion</em>—the pain of paying taxes feels worse than the joy of earning returns. Because our primary goal becomes \"avoid the tax penalty,\" we stop looking at the actual quality of the investment. We buy a traditional endowment life insurance policy that yields a meager 4-5% return just to get the tax receipt by Friday.</p>
+    <p><strong>The Fix:</strong> Decouple \"tax saving\" from \"investing.\" Your 80C investments are just investments that happen to have a tax perk. If you wouldn't buy a product without the tax benefit, you probably shouldn't buy it at all.</p>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Section 80C Deduction Planning Tips</h2>
-            <ul class="list-disc pl-6 space-y-2">
-              <li><strong>Start early:</strong> Invest at the beginning of the financial year to benefit from compounding and avoid last-minute rushes.</li>
-              <li><strong>Diversify:</strong> Spread your investments across multiple instruments to balance risk and return.</li>
-              <li><strong>Use ELSS for wealth creation:</strong> ELSS is the only Section 80C instrument with equity exposure, offering inflation-beating returns over the long term.</li>
-              <li><strong>Claim home loan principal:</strong> If you have a home loan, the principal repayment is an excellent way to utilize your 80C limit.</li>
-              <li><strong>Don't forget EPF:</strong> Your employer's EPF contribution and your own employee contribution both count toward the 80C limit automatically.</li>
-              <li><strong>Claim tuition fees:</strong> Many taxpayers overlook the tuition fee deduction for their children's education.</li>
-              <li><strong>Track annual limits:</strong> The ₹1.5 lakh limit applies across all 80C instruments combined, so plan your investments accordingly.</li>
-            </ul>
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Deep Dive: The Best 80C Investments Compared</h2>
+    
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">1. Equity Linked Savings Scheme (ELSS)</h3>
+    <p>ELSS mutual funds invest heavily in equity markets. They have the shortest lock-in period among all 80C options (just 3 years). Let me be clear: for anyone with a moderate-to-high risk appetite and a time horizon of 5+ years, this is arguably the best wealth-creation tool in the 80C basket.</p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li><strong>Returns:</strong> Market-linked (Historically 12-15% over long terms)</li>
+      <li><strong>Lock-in:</strong> 3 years (the lowest of all options)</li>
+      <li><strong>Tax on maturity:</strong> Long Term Capital Gains (LTCG) tax of 12.5% applies on gains above ₹1.25 lakh.</li>
+    </ul>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Common Mistakes to Avoid</h2>
-            <ul class="list-disc pl-6 space-y-2">
-              <li>Investing in 80C instruments at the last minute without proper planning.</li>
-              <li>Choosing ELSS solely for tax saving without evaluating fund performance and portfolio fit.</li>
-              <li>Forgetting that EPF contributions automatically qualify and counting them twice.</li>
-              <li>Not claiming tuition fees for children's education.</li>
-              <li>Investing only in low-yield instruments for tax saving alone, missing the opportunity for wealth creation.</li>
-              <li>Exceeding the ₹1.5 lakh limit and not being aware that the excess deduction is disallowed.</li>
-            </ul>
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">2. Public Provident Fund (PPF)</h3>
+    <p>The undisputed king of conservative tax saving. Backed by the Government of India, the PPF offers guaranteed, tax-free returns. It falls under the coveted 'Exempt-Exempt-Exempt' (EEE) category: the investment is tax-deductible, the interest earned is tax-free, and the maturity amount is tax-free.</p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li><strong>Returns:</strong> Fixed by the government quarterly (usually around 7.1%)</li>
+      <li><strong>Lock-in:</strong> 15 years (Partial withdrawals allowed after 7th year)</li>
+      <li><strong>Pro Tip:</strong> Invest before the 5th of every month to earn interest for that month.</li>
+    </ul>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Section 80C and the New Tax Regime</h2>
-            <p>Under the new tax regime (which is now the default for salaried individuals), Section 80C deductions are <strong>not available</strong>. The new regime offers a standard deduction of ₹75,000 for salaried individuals and concessional slab rates in exchange for forgoing most deductions, including those under Section 80C. However, you can still opt for the old regime at any time if you have significant deductible investments.</p>
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">3. Employee Provident Fund (EPF) & Voluntary Provident Fund (VPF)</h3>
+    <p>If you're salaried, 12% of your basic pay is already going into your EPF. This is your baseline 80C investment. Many people forget to factor this in and end up over-investing in other instruments. VPF allows you to contribute beyond the mandatory 12% to earn the same high EPF interest rate.</p>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Conclusion</h2>
-            <p>Section 80C offers a powerful combination of tax savings and wealth creation. By choosing the right mix of instruments based on your risk profile, investment horizon, and financial goals, you can save up to ₹46,800 in taxes (for those in the 30% bracket) while building a strong financial foundation. Use our <a href="/countries/india/income-tax/income-tax-calculator/">Indian income tax calculator</a> to estimate your tax savings under Section 80C. For additional planning, explore our <a href="/countries/india/income-tax/">India Income Tax guide</a> and <a href="/blogs/how-to-save-income-tax-india-2024-25/">tax-saving strategies guide</a>.</p>
-          </div>
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">4. Life Insurance Premiums</h3>
+    <p>Premiums paid for yourself, your spouse, or your dependent children qualify. But beware the trap of mixing insurance with investment (like ULIPs or endowment plans). A pure term insurance plan is the best way to utilize this deduction while adequately securing your family's financial future.</p>
 
-        <img src="https://images.unsplash.com/photo-1562564055-71e051d33c19?w=1200&q=80" alt="Indian rupee and tax savings" class="mb-6 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Advanced Strategies: Maximizing 80C Without "Investing"</h2>
+    <p>What if you don't have the cash flow to invest ₹1.5 lakh this year? You might already be maxing out your limit through everyday expenses. Here are the "hidden" deductions:</p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li><strong>Home Loan Principal Repayment:</strong> The EMI you pay every month has two components: interest and principal. The principal component is fully deductible under 80C. (Note: The property must not be sold within 5 years of possession, or the deduction will be reversed).</li>
+      <li><strong>Children's Tuition Fees:</strong> The tuition fee component (excluding development fees, transport, etc.) paid to any school, college, or university in India for up to two children qualifies for 80C. </li>
+      <li><strong>Stamp Duty and Registration Charges:</strong> The expenses incurred for transferring the property to your name are deductible under 80C in the year you make the payment.</li>
+    </ul>
 
-        <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Interesting Facts</h2>
-        <ul class="list-disc pl-6 space-y-2 text-body dark:text-muted">
-          <li>Section 80C was introduced in the Finance Act of 1961 and has undergone multiple revisions over the decades.</li>
-          <li>ELSS is the only Section 80C instrument that offers market-linked returns with the shortest lock-in period of just 3 years.</li>
-          <li>The ₹1.5 lakh limit under Section 80C combined with the additional ₹50,000 under NPS can result in total deductions of up to ₹2 lakh.</li>
-          <li>Tuition fees for up to two children can be claimed under Section 80C, making it one of the most underutilized deductions.</li>
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Edge Cases and Troubleshooting</h2>
+    <p>Tax laws are full of gray areas. Let's look at a few specific scenarios:</p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li><em>"I have three kids. Can my spouse and I both claim tuition fees?"</em> Yes! You can claim for two children, and your spouse can claim for the third child from their income, effectively covering all three.</li>
+      <li><em>"I bought an under-construction property and am paying EMIs. Can I claim 80C?"</em> No. The deduction for home loan principal repayment is only allowed AFTER you receive possession of the property. You cannot claim it during the pre-construction phase.</li>
+      <li><em>"Can I claim my parents' life insurance premium?"</em> No. Section 80C only allows deductions for premiums paid for yourself, your spouse, and your children. Parents are excluded from this specific sub-section (though health insurance for parents is covered under Section 80D).</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Section 80C vs. The New Tax Regime</h2>
+    <p>Under the new tax regime, which is the default for all taxpayers starting FY 2023-24, Section 80C deductions are <strong>entirely disallowed</strong>. If you want to claim the ₹1.5 lakh 80C deduction, you must explicitly opt for the old tax regime when filing your returns (or declaring to your employer).</p>
+    <p>Does it make sense to stick to the old regime just for 80C? It depends mathematically on your income level and total eligible deductions. Generally, if your total deductions (including 80C, 80D, HRA, and Home Loan Interest) exceed ₹3.75 lakh, the old regime might still be more beneficial. Use our calculator linked below to run your exact numbers.</p>
+
+    <img src="https://images.unsplash.com/photo-1562564055-71e051d33c19?w=1200&q=80" alt="Indian rupee and tax savings" class="my-8 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Massive FAQ: Answering Your Burning 80C Questions</h2>
+    <div class="space-y-4 my-6">
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h4 class="font-bold text-ink dark:text-on-primary">Can I claim 80C under the new tax regime?</h4>
+        <p class="mt-2 text-sm text-body dark:text-muted">No, Section 80C deductions are not available if you opt for the new tax regime. You must stick to the old regime to claim these benefits.</p>
+      </div>
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h4 class="font-bold text-ink dark:text-on-primary">Does the ₹1.5 lakh limit apply individually to each investment?</h4>
+        <p class="mt-2 text-sm text-body dark:text-muted">No, the ₹1.5 lakh limit is the cumulative cap for all your investments combined under Sections 80C, 80CCC, and 80CCD(1).</p>
+      </div>
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h4 class="font-bold text-ink dark:text-on-primary">Can I claim tuition fees for my third child?</h4>
+        <p class="mt-2 text-sm text-body dark:text-muted">No, Section 80C allows deduction for tuition fees paid for a maximum of two children per taxpayer.</p>
+      </div>
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h4 class="font-bold text-ink dark:text-on-primary">What happens if I sell my ELSS before 3 years?</h4>
+        <p class="mt-2 text-sm text-body dark:text-muted">You cannot sell or redeem ELSS units before the 3-year lock-in period ends. The lock-in is mandatory and strictly enforced by the fund houses.</p>
+      </div>
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h4 class="font-bold text-ink dark:text-on-primary">Is my EPF contribution automatically counted under 80C?</h4>
+        <p class="mt-2 text-sm text-body dark:text-muted">Yes, your (employee) share of the EPF contribution is automatically eligible for deduction under Section 80C. Your employer's share is not part of 80C.</p>
+      </div>
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h4 class="font-bold text-ink dark:text-on-primary">Can I claim both HRA and Home Loan Principal under 80C?</h4>
+        <p class="mt-2 text-sm text-body dark:text-muted">Yes, if you meet the specific conditions for both, you can claim HRA (Section 10(13A)) and Home Loan Principal (Section 80C) simultaneously.</p>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Interesting Facts</h2>
+    <ul class="list-disc pl-6 space-y-2 text-body dark:text-muted">
+      <li>Section 80C was introduced in the Finance Act of 1961 and has undergone multiple revisions over the decades to reflect inflation.</li>
+      <li>ELSS is the only Section 80C instrument that offers market-linked returns with a lock-in period of just 3 years.</li>
+      <li>The ₹1.5 lakh limit under Section 80C combined with the additional ₹50,000 under NPS (Section 80CCD(1B)) can result in total deductions of up to ₹2 lakh.</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Quick Quiz</h2>
+    <div class="space-y-4">
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <p class="font-medium text-ink dark:text-on-primary">1. What is the maximum deduction available under Section 80C?</p>
+        <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
+          <li>₹1 lakh</li>
+          <li>₹1.5 lakh</li>
+          <li>₹2 lakh</li>
+          <li>₹2.5 lakh</li>
         </ul>
-
-        <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Quick Quiz</h2>
-        <div class="space-y-4">
-          <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
-            <p class="font-medium text-ink dark:text-on-primary">1. What is the maximum deduction available under Section 80C?</p>
-            <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
-              <li>₹1 lakh</li>
-              <li>₹1.5 lakh</li>
-              <li>₹2 lakh</li>
-              <li>₹2.5 lakh</li>
-            </ul>
-          </div>
-          <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
-            <p class="font-medium text-ink dark:text-on-primary">2. Which 80C instrument has the shortest lock-in period?</p>
-            <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
-              <li>PPF (15 years)</li>
-              <li>ELSS (3 years)</li>
-              <li>NSC (5 years)</li>
-              <li>5-year Fixed Deposit (5 years)</li>
-            </ul>
-          </div>
-          <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
-            <p class="font-medium text-ink dark:text-on-primary">3. Which of the following is NOT eligible under Section 80C?</p>
-            <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
-              <li>EPF contribution</li>
-              <li>Health insurance premium</li>
-              <li>Tuition fees for children</li>
-              <li>Home loan principal repayment</li>
-            </ul>
-          </div>
-        </div>
-
-        <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Further Reading</h2>
-        <ul class="list-disc pl-6 space-y-2 text-body dark:text-muted">
-          <li><a href="https://www.incometax.gov.in" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Income Tax Department of India – Official Portal</a></li>
-          <li><a href="https://en.wikipedia.org/wiki/Section_80C" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Wikipedia: Section 80C of the Income Tax Act</a></li>
-          <li><a href="https://cleartax.in/s/80c-80-deductions" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">ClearTax: Complete Guide to Section 80C Deductions</a></li>
+      </div>
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <p class="font-medium text-ink dark:text-on-primary">2. Which 80C instrument has the shortest lock-in period?</p>
+        <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
+          <li>PPF (15 years)</li>
+          <li>ELSS (3 years)</li>
+          <li>NSC (5 years)</li>
+          <li>5-year Fixed Deposit (5 years)</li>
         </ul>
+      </div>
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <p class="font-medium text-ink dark:text-on-primary">3. Which of the following is NOT eligible under Section 80C?</p>
+        <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
+          <li>EPF contribution</li>
+          <li>Health insurance premium</li>
+          <li>Tuition fees for children</li>
+          <li>Home loan principal repayment</li>
+        </ul>
+      </div>
+    </div>
 
-        <aside class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-lighter dark:bg-surface" aria-label="Related calculators">
-          <h3 class="text-lg font-semibold text-ink mb-4 dark:text-on-primary">Related Calculators</h3>
-          <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
-            <a href="/countries/india/income-tax/income-tax-calculator/" class="text-link hover:underline dark:text-link">India Income Tax Calculator</a>
-            <a href="/countries/india/gst/gst-calculator/" class="text-link hover:underline dark:text-link">India GST Calculator</a>
-            <a href="/countries/india/tds/tds-calculator/" class="text-link hover:underline dark:text-link">India TDS Calculator</a>
-            <a href="/blogs/how-to-save-income-tax-india-2024-25/" class="text-link hover:underline dark:text-link">How to Save Income Tax in India</a>
-          </div>
-        </aside>
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Further Reading</h2>
+    <ul class="list-disc pl-6 space-y-2 text-body dark:text-muted">
+      <li><a href="https://www.incometax.gov.in" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Income Tax Department of India – Official Portal</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Section_80C" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Wikipedia: Section 80C of the Income Tax Act</a></li>
+      <li><a href="https://cleartax.in/s/80c-80-deductions" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">ClearTax: Complete Guide to Section 80C Deductions</a></li>
+    </ul>
 
-          <!-- Hub Calculator CTA (MachaRule) -->
-          <div class="my-8 rounded-xl border border-hairline bg-canvas-soft p-6 shadow-sm dark:border-overlay-lighter dark:bg-surface flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>
-              <h3 class="font-bold text-ink dark:text-on-primary">Need Exact Figures?</h3>
-              <p class="text-sm text-muted mt-1">Use our free interactive calculators to estimate your taxes.</p>
-            </div>
-            <a href="/countries/hong-kong/" class="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primary/90 whitespace-nowrap">
-              Go to Calculators &rarr;
-            </a>
-          </div>
+    <aside class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-lighter dark:bg-surface" aria-label="Related calculators">
+      <h3 class="text-lg font-semibold text-ink mb-4 dark:text-on-primary">Related Calculators</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+        <a href="/countries/india/income-tax/income-tax-calculator/" class="text-link hover:underline dark:text-link">India Income Tax Calculator</a>
+        <a href="/countries/india/gst/gst-calculator/" class="text-link hover:underline dark:text-link">India GST Calculator</a>
+        <a href="/countries/india/tds/tds-calculator/" class="text-link hover:underline dark:text-link">India TDS Calculator</a>
+        <a href="/blogs/how-to-save-income-tax-india-2024-25/" class="text-link hover:underline dark:text-link">How to Save Income Tax in India</a>
+      </div>
+    </aside>
 
+    <!-- Hub Calculator CTA (MachaRule) -->
+    <div class="my-8 rounded-xl border border-hairline bg-canvas-soft p-6 shadow-sm dark:border-overlay-lighter dark:bg-surface flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        <h3 class="font-bold text-ink dark:text-on-primary">Need Exact Figures?</h3>
+        <p class="text-sm text-muted mt-1">Use our free interactive calculators to estimate your taxes.</p>
+      </div>
+      <a href="/countries/hong-kong/" class="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primary/90 whitespace-nowrap">
+        Go to Calculators &rarr;
+      </a>
+    </div>
+
+  </div>
 </BlogLayout>

@@ -8,65 +8,187 @@ const author = "Kira Tanaka";
 const lastUpdated = "July 2026";
 const readTime = "15 min read";
 const authorBio = "GST compliance consultant helping businesses navigate India's indirect tax regime with practical solutions.";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What happens if I miss the GST filing deadline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Missing a GST deadline triggers automatic late fees (₹50/day or ₹20/day for nil returns) and an 18% annual interest charge on outstanding tax. Crucially, it also blocks your buyers from claiming ITC, which can severely damage business relationships."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I claim ITC on employee gifts or office parties?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generally, no. ITC is strictly blocked under Section 17(5) for personal consumption, food and beverages, and gifts to employees. However, if food is provided due to a statutory obligation (like under the Factories Act), ITC might be available."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does GST work for freelancers and consultants?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Freelancers must register if their annual turnover exceeds ₹20 lakh (₹10 lakh in special states). Notably, if you provide services to international clients (zero-rated supply), you often need to register regardless of turnover to claim refunds."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between GSTR-2A and GSTR-2B?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GSTR-2A is a dynamic, ever-changing statement of your supplier's filings. GSTR-2B is a static statement generated on the 14th of every month. You must base your ITC claims solely on GSTR-2B, not GSTR-2A."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I handle a GST notice for ITC mismatch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Don't panic. First, reconcile your purchase register with GSTR-2B. Identify the supplier who failed to file or filed incorrectly. You must then reply to the notice with supporting invoices and e-way bills, and follow up with your defaulting supplier."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the GST composition scheme and who can opt for it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The composition scheme is for small businesses (turnover up to ₹1.5 crore, or ₹75 lakh in some states) to reduce compliance. You pay a fixed percentage (1% to 6%) on turnover and file quarterly, but you cannot claim ITC or issue tax invoices."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there criminal penalties for GST evasion?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, severe evasion involving fake invoices, wrongful ITC claims, or failure to deposit collected tax can lead to prosecution, hefty fines, and imprisonment for up to 5 years under Section 132."
+      }
+    }
+  ]
+};
 ---
 
 <BlogLayout title={title} description={description} image={image} author={author} authorBio={authorBio} lastUpdated={lastUpdated} readTime={readTime}>
+  <!-- Injecting FAQ Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  
   <div class="mt-8 space-y-6 text-body dark:text-muted"><div class="mt-8 space-y-6 text-body dark:text-muted">
-            <p>Goods and Services Tax (GST) is a comprehensive, multi-stage, destination-based indirect tax levied on every value addition. Implemented in India on July 1, 2017, GST replaced multiple indirect taxes including Value Added Tax (VAT), Service Tax, Excise Duty, and Octroi. This unified tax system has simplified indirect taxation and created a common national market.</p>
+            <p>Let's be honest for a second: nobody starts a business because they love dealing with taxes, complicated ledgers, and constant government portals. You started your agency, your e-commerce store, or your manufacturing unit to solve a problem and make money. You want to focus on your customers, your products, and your team. But the undeniable reality in India is that if you ignore or mishandle Goods and Services Tax (GST), it won't just eat into your hard-earned margins—it can completely derail your business operations, freeze your bank accounts, and destroy your reputation with vendors and clients.</p>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">What is GST?</h2>
-            <p>GST is a single indirect tax on the supply of goods and services, right from the manufacturer to the consumer. It is a destination-based tax, meaning the tax is collected by the state where the goods or services are consumed. GST follows a dual model: Central GST (CGST) levied by the Central Government and State GST (SGST) levied by State Governments on intra-state supplies. For inter-state supplies, Integrated GST (IGST) is collected by the Central Government.</p>
+            <p>Since its chaotic implementation on July 1, 2017, GST has evolved from a confusing transition period into a highly sophisticated, data-driven, strict compliance machine. Gone are the days when you could adjust invoices at the end of the year or casually misclassify an expense. Today, the GST portal cross-matches your data with your supplier's data in real-time, utilizing artificial intelligence and advanced analytics. If there is a mismatch, the notices are swift and ruthless. This guide isn't just a dry, boring list of tax rules copied from a government website; it is a strategic, actionable playbook to help you protect your working capital, avoid devastating penalties, and maintain perfect, stress-free compliance.</p>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">GST Rate Structure</h2>
-            <p>GST in India is structured into four main tax slabs, with special rates for certain categories:</p>
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">The Psychology of GST Compliance: Why It Terrifies Small Businesses</h2>
+            <p>Most business owners experience a profound sense of anxiety around the 11th and 20th of every month. The fear isn't just about paying the tax; it is about the dreaded "matching concept." If your supplier fails to upload an invoice, or types your GSTIN incorrectly, you lose your Input Tax Credit (ITC). You end up paying tax twice out of your own pocket. This brilliant (but stressful) system has effectively shifted the burden of tax enforcement from the government directly to the buyer. You are now essentially policing your own vendors. </p>
+            <p>Understanding this psychological dynamic is crucial for survival. You must stop viewing GST as an "end of the month accounting problem" and start viewing it as a core component of your procurement and vendor management strategy. If a vendor offers a lower price but has a history of not filing GST, they are actually costing you 18% more. This shift in mindset separates the businesses that thrive from those that constantly drown in cash flow crises and departmental notices.</p>
+
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">What Exactly is GST? The Destination-Based Reality</h2>
+            <p>Goods and Services Tax (GST) is a comprehensive, multi-stage, destination-based indirect tax levied on every value addition. It replaced a tangled, corrupt, and cascading web of indirect taxes like Value Added Tax (VAT), Service Tax, Excise Duty, and Octroi. It unified India into a single market.</p>
+            <p>But what does "destination-based" actually mean for your daily operations? It means the tax revenue ultimately belongs to the state where the product is consumed, not where it is manufactured. This is why GST follows a dual model, which you must get right on every single invoice:</p>
             <ul class="list-disc pl-6 space-y-2">
-              <li><strong>0% Rate:</strong> Essential items including fresh food grains, milk, eggs, fruits, vegetables, salt, and educational services.</li>
-              <li><strong>5% Rate:</strong> Common-use items such as sugar, tea, coffee, edible oils, spices, and processed food items.</li>
-              <li><strong>12% Rate:</strong> Items including processed foods, mobile phones, computers, and certain business services.</li>
-              <li><strong>18% Rate:</strong> The most common rate, applied to electronics, furniture, personal care products, and professional services.</li>
-              <li><strong>28% Rate:</strong> Luxury items and sin goods including cars, tobacco products, aerated drinks, and high-end electronics.</li>
-            </ul>
-            <p>A special rate of 3% applies to gold and precious stones. Additionally, cesses such as the compensation cess apply on top of the 28% rate for certain goods like tobacco products.</p>
-
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Input Tax Credit (ITC)</h2>
-            <p>Input Tax Credit is one of the most important features of GST, allowing businesses to claim credit for the GST paid on inputs used in the supply of goods or services. This eliminates the cascading effect of taxes that existed under the pre-GST regime.</p>
-            <p>To claim ITC, the following conditions must be met:</p>
-            <ul class="list-disc pl-6 space-y-2">
-              <li>The supplier must have filed their GST returns.</li>
-              <li>The recipient must have received the goods or services.</li>
-              <li>The tax invoice, debit note, or other taxable document must be available.</li>
-              <li>The supplier must have paid the tax to the government.</li>
-              <li>The recipient must file their return on or before the due date.</li>
+              <li><strong>Intra-State (Same State):</strong> You charge Central GST (CGST) and State GST (SGST) equally. For example, if a seller in Maharashtra sells to a buyer in Maharashtra, the tax is split 50/50 between the Center and Maharashtra.</li>
+              <li><strong>Inter-State (Different States):</strong> You charge Integrated GST (IGST), which the central government collects and later distributes to the consuming state. For example, if a seller in Maharashtra sells to a buyer in Gujarat, you charge IGST.</li>
             </ul>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">GST Compliance and Filing</h2>
-            <p>GST compliance involves several periodic returns that businesses must file:</p>
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">The 2024 GST Rate Structure: A Strategic Breakdown</h2>
+            <p>Navigating the GST slabs requires strategic pricing and constant vigilance. You need to know exactly where your goods or services fall, as a misclassification (using a lower rate to be more competitive) can lead to massive retroactive tax liabilities, interest, and penalties that can bankrupt a small firm.</p>
             <ul class="list-disc pl-6 space-y-2">
-              <li><strong>GSTR-1:</strong> Monthly return for outward supplies (sales). Due on the 11th of the following month.</li>
-              <li><strong>GSTR-2A:</strong> Auto-generated statement for inward supplies (purchases), automatically populated from supplier filings.</li>
-              <li><strong>GSTR-3B:</strong> Monthly summary return summarizing outward supplies, inward supplies, and tax payment. Due on the 20th of the following month.</li>
-              <li><strong>GSTR-9:</strong> Annual return, due on December 31 of the following financial year.</li>
-              <li><strong>GSTR-9C:</strong> Annual reconciliation statement, due by December 31, mandatory for taxpayers with turnover exceeding ₹2 crore.</li>
+              <li><strong>0% Rate (Exempt):</strong> Essential items to protect the vulnerable. This includes fresh food grains, milk, eggs, fruits, unbranded flour, and educational services. <em>Strategy note: If you deal entirely in exempt goods, you don't need GST registration, but you also cannot claim ITC on your expenses, meaning you absorb the GST on rent and utilities as a cost.</em></li>
+              <li><strong>5% Rate:</strong> Common-use items. Think sugar, tea, coffee, edible oils, spices, basic footwear, and life-saving drugs.</li>
+              <li><strong>12% Rate:</strong> Processed foods, basic mobile phones, computers, umbrellas, and certain specific business/consulting services.</li>
+              <li><strong>18% Rate:</strong> The "Standard" Rate. If you are a freelancer, consultant, software developer, digital marketer, or agency, this is almost certainly your bracket. It also covers electronics, furniture, and personal care products.</li>
+              <li><strong>28% Rate:</strong> Luxury and "Sin" goods. High-end cars, aerated drinks, tobacco products, and gambling. These often attract an additional compensation cess that pushes the effective rate much higher.</li>
             </ul>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">GST Interest and Late Fees</h2>
-            <p>Late payment of GST attracts interest at 18% per annum from the due date of payment. Late filing of GSTR-3B attracts a late fee of ₹50 per day (₹20 per day for nil returns) for each state or union territory. Late filing of GSTR-1 attracts the same late fee structure. Taxpayers should ensure timely compliance to avoid accumulating interest and penalties.</p>
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Mastering Input Tax Credit (ITC): Your Working Capital Lifeline</h2>
+            <p>Input Tax Credit is the beating heart of GST. It prevents the cascading effect of taxes (tax on tax). Simply put: if you pay GST on your business purchases (laptops, office rent, software subscriptions), you can subtract that amount from the GST you owe on your sales. If you fail to claim ITC correctly, your profit margins shrink instantly.</p>
+            
+            <h3 class="text-xl font-medium text-ink mt-4 dark:text-on-primary">The 5 Golden Rules for Claiming ITC in 2024</h3>
+            <p>The rules have tightened significantly over the last few years. You can no longer claim ITC based merely on your own purchase invoices in your drawer. You must satisfy all these conditions flawlessly:</p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>The Invoice is in Hand:</strong> You possess a valid tax invoice or debit note with your correct GSTIN.</li>
+              <li><strong>Goods/Services Received:</strong> You have actually received the goods or services. (Paying a 100% advance doesn't count for ITC until the delivery happens).</li>
+              <li><strong>Tax Paid to Government:</strong> Your supplier has actually paid the tax to the government. (This is the scariest part—you suffer if they default).</li>
+              <li><strong>Returns Filed:</strong> You have filed your GSTR-3B return.</li>
+              <li><strong>The GSTR-2B Match (Critical):</strong> The invoice MUST reflect in your auto-generated GSTR-2B statement. If your supplier hasn't uploaded the invoice in their GSTR-1, you cannot claim the credit. Period. No exceptions. No provisional credit.</li>
+            </ul>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Who Should Register for GST?</h2>
-            <p>GST registration is mandatory for businesses with an annual turnover exceeding the threshold limits: ₹20 lakh for regular states and ₹10 lakh for special category states (northeastern states and Jammu & Kashmir). Even if your turnover is below the threshold, voluntary registration is available and offers benefits such as input tax credit eligibility and the ability to sell across state lines.</p>
+            <h3 class="text-xl font-medium text-ink mt-4 dark:text-on-primary">Troubleshooting Blocked ITC (Section 17(5))</h3>
+            <p>Many ambitious business owners make the mistake of telling their accountant to "claim ITC on everything with a GST bill." The automated system will catch you. Section 17(5) explicitly blocks ITC on certain items, even if they are genuinely used for business purposes. Do not mess with these:</p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Motor vehicles (unless you run a driving school, transport business, or courier service). You cannot claim ITC on the CEO's new luxury SUV.</li>
+              <li>Food, beverages, and outdoor catering for employees or clients. (That expensive client dinner is an expense, but you lose the ITC).</li>
+              <li>Health insurance or life insurance for employees (unless mandated by a specific law for your industry).</li>
+              <li>Gifts given to clients or employees, or free samples.</li>
+              <li>Construction, renovation, or repair of an immovable property on your own account (like building a new office).</li>
+            </ul>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Conclusion</h2>
-            <p>GST has fundamentally transformed India's indirect tax landscape, creating a unified national market and simplifying compliance. Understanding GST rates, calculation methods, and filing requirements is essential for any business operating in India. Use our <a href="/countries/india/gst/gst-calculator/">GST calculator</a> to compute GST amounts accurately and stay updated with the latest rates and council decisions. For more details, explore our <a href="/countries/india/">India tax overview</a> and other educational resources.</p>
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">GST Compliance, Filing, and Deadlines: The Monthly Rhythm</h2>
+            <p>Compliance is a relentless monthly rhythm. If you miss a beat, the penalties compound rapidly and automatically. There is no manual intervention or "forgiveness" from an officer.</p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>GSTR-1 (Due 11th):</strong> This is your sales register. You upload every single B2B and B2C invoice you generated. This dictates your buyer's ability to claim ITC. Delay this, and you will lose enterprise clients immediately.</li>
+              <li><strong>GSTR-2B (Generated 14th):</strong> This is your static, unchangeable purchase register, auto-populated based on what your suppliers filed by the 11th. You use this to calculate your eligible ITC. If an invoice isn't here, you don't claim it.</li>
+              <li><strong>GSTR-3B (Due 20th):</strong> The main summary return. You summarize your sales, summarize your eligible ITC from GSTR-2B, and pay the net tax difference to the government in cash. This completes the cycle.</li>
+              <li><strong>GSTR-9 & 9C:</strong> Annual returns and reconciliation statements, typically due by December 31st of the following financial year, mandatory for taxpayers crossing specific turnover thresholds (e.g., ₹2 crore for GSTR-9).</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">The Harsh Reality of Late Fees, Interest, and Department Notices</h2>
+            <p>Let's talk about the pain points that keep accountants awake. Late filing of GSTR-3B or GSTR-1 attracts a late fee of ₹50 per day (₹20 per day for nil returns). This caps out eventually, but the real killer is interest. If you delay tax payment, you are hit with an 18% annual interest rate, calculated daily.</p>
+            <p><strong>Advanced Edge-Case & Troubleshooting:</strong> What if you accidentally claim excess ITC? If you realize the mistake and reverse it before utilizing it to pay output tax, you might escape the interest burden. But if you utilized the wrongly claimed ITC to offset your liability, prepare to pay heavy interest (up to 24% in some scenarios of fraud) along with severe penalties under Section 73 or 74. If you receive an ASMT-10 scrutiny notice for a mismatch, do not ignore it. Reconcile your books, identify the specific invoice, and reply within 30 days.</p>
+
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Who Actually Needs to Register? (And Who Should Voluntarily Register)</h2>
+            <p>Mandatory registration kicks in when your aggregate annual turnover exceeds ₹20 lakh (₹10 lakh for special category states like northeastern states). For businesses dealing exclusively in goods (not services), the threshold has been increased to ₹40 lakh in many states to support small traders.</p>
+            <p>However, <strong>voluntary registration</strong> is often a brilliant strategic move for many early-stage startups and B2B service providers. Why? Because corporate clients will outright refuse to work with you if you cannot provide a GST invoice. They want to claim ITC on your services to lower their own tax burden. Without a GSTIN, you look amateur. Furthermore, if you are engaging in inter-state supply, or if you sell your goods via e-commerce operators (like Amazon, Flipkart, or Swiggy), GST registration is legally mandatory from day one, regardless of your turnover.</p>
+
+            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Conclusion: Stop Surviving, Start Optimizing</h2>
+            <p>GST is not a temporary phase; it is the permanent backbone of the Indian digital economy. By deeply understanding the matching concept, strictly monitoring your vendors for compliance, avoiding blocked credits, and adhering strictly to the 11th and 20th deadlines, you transform GST from a terrifying liability into a smooth, invisible operational process. Don't let compliance fears or departmental notices hold back your business growth. Adopt good software, educate your procurement team, and stay vigilant. Use our <a href="/countries/india/gst/gst-calculator/">GST calculator</a> to ensure your pricing is always on point and your margins are protected, and regularly review your vendors' filing status. </p>
+
           </div>
         <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80" alt="Tax forms and financial documents" class="mb-6 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
 
-        <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Interesting Facts</h2>
+        <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Interesting Facts You Probably Didn't Know</h2>
         <ul class="list-disc pl-6 space-y-2 text-body dark:text-muted">
-          <li>GST was implemented in India on July 1, 2017, replacing 17 different indirect taxes and 23 cesses.</li>
-          <li>India's GST is one of the few dual-GST models in the world, with both Central and State governments levying tax on the same transaction.</li>
-          <li>The GST network processes over 1.2 crore invoices every month, making it one of the largest tax IT systems globally.</li>
-          <li>GSTR-3B is a monthly summary return that must be filed even if there are no transactions, making compliance crucial for all registered businesses.</li>
+          <li>GST was implemented in India at midnight on July 1, 2017, completely overhauling an archaic system of 17 different indirect taxes and 23 cesses in a historic parliamentary session.</li>
+          <li>India's GST is one of the very few complex dual-GST models in the world, largely necessitated by its federal structure, with both Central and State governments simultaneously levying tax on a single transaction.</li>
+          <li>The GST Network (GSTN) processes billions of complex transactions and over 1.2 crore invoices every single month, representing one of the largest and most sophisticated tax IT systems ever built by any government globally.</li>
+          <li>Filing a GSTR-3B is legally mandatory even if your business was shut and had zero transactions in a month. Failure to file a simple "Nil Return" still results in accumulating late fees and can lead to the cancellation of your GSTIN.</li>
         </ul>
+
+        <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Massive GST FAQ Section: Your Most Pressing Questions Answered</h2>
+        <div class="space-y-4">
+          <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+            <p class="font-bold text-ink dark:text-on-primary">What happens if I miss the GST filing deadline?</p>
+            <p class="mt-2 text-sm text-body dark:text-muted">Missing a GST deadline triggers automatic late fees (₹50/day or ₹20/day for nil returns) and an 18% annual interest charge on outstanding tax. Crucially, it also blocks your buyers from claiming ITC, which can severely damage business relationships.</p>
+          </div>
+          <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+            <p class="font-bold text-ink dark:text-on-primary">Can I claim ITC on employee gifts or office parties?</p>
+            <p class="mt-2 text-sm text-body dark:text-muted">Generally, no. ITC is strictly blocked under Section 17(5) for personal consumption, food and beverages, and gifts to employees. However, if food is provided due to a statutory obligation (like under the Factories Act), ITC might be available.</p>
+          </div>
+          <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+            <p class="font-bold text-ink dark:text-on-primary">How does GST work for freelancers and consultants?</p>
+            <p class="mt-2 text-sm text-body dark:text-muted">Freelancers must register if their annual turnover exceeds ₹20 lakh (₹10 lakh in special states). Notably, if you provide services to international clients (zero-rated supply), you often need to register regardless of turnover to claim refunds or provide Letter of Undertakings (LUT).</p>
+          </div>
+          <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+            <p class="font-bold text-ink dark:text-on-primary">What is the difference between GSTR-2A and GSTR-2B?</p>
+            <p class="mt-2 text-sm text-body dark:text-muted">GSTR-2A is a dynamic, ever-changing statement of your supplier's filings. GSTR-2B is a static, frozen statement generated on the 14th of every month. You must base your ITC claims solely on GSTR-2B, not GSTR-2A.</p>
+          </div>
+          <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+            <p class="font-bold text-ink dark:text-on-primary">How do I handle a GST notice for ITC mismatch?</p>
+            <p class="mt-2 text-sm text-body dark:text-muted">Don't panic. First, reconcile your purchase register with GSTR-2B. Identify the supplier who failed to file or filed incorrectly. You must then reply to the notice promptly with supporting invoices, payment proofs, and e-way bills, while following up with your defaulting supplier.</p>
+          </div>
+          <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+            <p class="font-bold text-ink dark:text-on-primary">What is the GST composition scheme and who can opt for it?</p>
+            <p class="mt-2 text-sm text-body dark:text-muted">The composition scheme is for small businesses (turnover up to ₹1.5 crore, or ₹75 lakh in some states) to reduce compliance. You pay a fixed percentage (1% to 6%) on turnover and file quarterly, but you cannot claim ITC or issue tax invoices.</p>
+          </div>
+          <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+            <p class="font-bold text-ink dark:text-on-primary">Are there criminal penalties for GST evasion?</p>
+            <p class="mt-2 text-sm text-body dark:text-muted">Yes, severe evasion involving fake invoices, wrongful ITC claims, or failure to deposit collected tax can lead to prosecution, hefty fines, and imprisonment for up to 5 years under Section 132 of the CGST Act.</p>
+          </div>
+        </div>
 
         <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">Quick Quiz</h2>
         <div class="space-y-4">
@@ -89,12 +211,12 @@ const authorBio = "GST compliance consultant helping businesses navigate India's
             </ul>
           </div>
           <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
-            <p class="font-medium text-ink dark:text-on-primary">3. Which GST rate applies to gold and precious stones?</p>
+            <p class="font-medium text-ink dark:text-on-primary">3. Which GST rate applies to most consulting and professional services?</p>
             <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
-              <li>0%</li>
-              <li>3%</li>
               <li>5%</li>
+              <li>12%</li>
               <li>18%</li>
+              <li>28%</li>
             </ul>
           </div>
         </div>
