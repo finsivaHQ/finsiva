@@ -62,7 +62,11 @@ const faqSchema = {
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
     <p class="text-lg leading-relaxed">
-      Singapore's headline corporate tax rate of <strong>17%</strong>, single-tier territorial framework, generous startup exemptions, and extensive international network of tax treaties make it a preferred headquarters location for multinational corporations and high-growth startups alike.
+      Singapore has long been heralded as a premier global hub for business, and a significant part of that reputation is built upon its incredibly competitive, transparent, and straightforward tax regime. At the heart of this framework is the headline corporate tax rate of <strong>17%</strong>. Coupled with a single-tier territorial framework, generous startup exemptions, and an extensive international network of tax treaties, Singapore continues to be the preferred headquarters location for multinational corporations and ambitious high-growth startups alike.
+    </p>
+
+    <p class="text-lg leading-relaxed">
+      As corporate tax advisors who have guided hundreds of founders through their expansion into Southeast Asia, we understand that corporate taxation is rarely just a numbers game. It's about predictability, cash flow management, and ultimately, peace of mind. Founders and finance teams often approach us feeling overwhelmed by compliance deadlines—from ECI to Form C-S. In this comprehensive 2026 guide, we break down every facet of Singapore’s corporate tax system with deep empathy for the operational realities of running a business, giving you actionable strategies to optimize your tax position legally and efficiently.
     </p>
 
     <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
@@ -74,17 +78,38 @@ const faqSchema = {
         <li><a href="#cit-rebates" class="text-link hover:underline">4. Corporate Income Tax (CIT) Rebates</a></li>
         <li><a href="#eci-filing" class="text-link hover:underline">5. ECI & Form C-S / Form C Filing Deadlines</a></li>
         <li><a href="#single-tier-dividends" class="text-link hover:underline">6. Single-Tier Corporate Dividend System</a></li>
-        <li><a href="#faqs" class="text-link hover:underline">7. Frequently Asked Questions</a></li>
+        <li><a href="#tax-planning" class="text-link hover:underline">7. Strategic Tax Planning & Edge Cases</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">8. Frequently Asked Questions</a></li>
       </ul>
     </div>
 
-    <h2 id="corporate-rate" class="text-2xl font-semibold text-ink dark:text-on-primary">1. Singapore Corporate Tax Overview</h2>
-    <p>Administered by the <a href="https://www.iras.gov.sg" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">IRAS</a>, corporate income tax applies to all income accruing in or derived from Singapore, or foreign income remitted into Singapore. However, due to partial tax exemptions, effective corporate tax rates for companies with taxable profits up to S$200,000 often fall below 8% to 10%.</p>
+    <h2 id="corporate-rate" class="text-2xl font-semibold text-ink dark:text-on-primary">1. Singapore Corporate Tax Overview: The Power of 17%</h2>
+    <p>Administered by the Inland Revenue Authority of Singapore (<a href="https://www.iras.gov.sg" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">IRAS</a>), corporate income tax in Singapore is levied on a territorial basis. This means that tax applies to all income accruing in or derived from Singapore, as well as foreign-sourced income that is remitted into Singapore.</p>
+    
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Why the Territorial System Matters</h3>
+    <p>Unlike countries that tax worldwide income regardless of where it is earned, Singapore’s territorial system offers a massive advantage for international businesses. If your Singapore company earns revenue from operations overseas and that income is never remitted into Singapore (meaning it is kept in foreign bank accounts and used for foreign expenses), it may not be subject to Singapore tax at all.</p>
+    
+    <p>Furthermore, even if you do remit foreign-sourced income (such as branch profits, foreign dividends, or foreign service income) into Singapore, you may still be exempt from tax under Section 13(8) of the Income Tax Act, provided that the foreign jurisdiction has a headline tax rate of at least 15% and the income has already been subjected to some form of tax overseas. This practically eliminates double taxation.</p>
+
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Effective Tax Rates vs. Headline Tax Rates</h3>
+    <p>While the headline rate is 17%, the reality for most Small and Medium Enterprises (SMEs) is entirely different. Due to partial tax exemptions and various schemes, the <em>effective corporate tax rate</em> for companies with taxable profits up to S$200,000 often falls below 8% to 10%. This distinction is critical for business planning. Don't base your cash flow projections on a flat 17% if you qualify for these exemptions.</p>
 
     <h2 id="startup-exemption" class="text-2xl font-semibold text-ink dark:text-on-primary">2. Startup Tax Exemption (SOTE) Scheme</h2>
-    <p>To support entrepreneurship, qualifying new Singapore private limited companies enjoy the <em>Startup Tax Exemption Scheme</em> during their first three consecutive Years of Assessment (YA):</p>
+    <p>Starting a new business is inherently risky, and capital preservation in the early years is crucial to survival. To fiercely support entrepreneurship and attract global talent, the Singapore government introduced the <em>Startup Tax Exemption Scheme (SOTE)</em>. This scheme provides significant tax relief for qualifying new Singapore private limited companies during their first three consecutive Years of Assessment (YA).</p>
 
-    <div class="overflow-x-auto">
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Qualifying Conditions for SOTE</h3>
+    <p>We often have clients assume they automatically get this exemption just by incorporating. However, you must meet three strict criteria:</p>
+    <ul class="list-disc pl-6 space-y-2 mt-4 mb-4">
+      <li><strong>Incorporation:</strong> The company must be incorporated in Singapore.</li>
+      <li><strong>Tax Residency:</strong> The company must be a tax resident in Singapore for that Year of Assessment.</li>
+      <li><strong>Shareholding Structure:</strong> The total share capital is beneficially held directly by no more than 20 shareholders throughout the basis period. Furthermore, all shareholders must be individuals, OR at least one shareholder must be an individual holding at least 10% of the issued ordinary shares.</li>
+    </ul>
+    <p><em>Note: Investment holding companies and companies that undertake property development for sale or investment are explicitly excluded from the SOTE scheme.</em></p>
+
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">How the SOTE Exemption is Calculated</h3>
+    <p>The exemptions are applied in tiers against the company's normal chargeable income:</p>
+
+    <div class="overflow-x-auto mt-4">
       <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
         <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
           <tr>
@@ -120,37 +145,94 @@ const faqSchema = {
         </tbody>
       </table>
     </div>
+    <p class="mt-4">As illustrated above, a startup earning S$200,000 in net taxable profit will only pay S$12,750 in taxes. This translates to an incredibly low effective tax rate of approximately 6.38%, leaving you with S$187,250 to reinvest into product development, hiring, and scaling.</p>
 
     <h2 id="partial-exemption" class="text-2xl font-semibold text-ink dark:text-on-primary">3. Partial Tax Exemption (PTE) for All Companies</h2>
-    <p>From their 4th Year of Assessment onward (and for companies that do not qualify for SOTE), all Singapore companies enjoy the standard <em>Partial Tax Exemption (PTE)</em>:</p>
-    <ul>
-      <li><strong>75% exemption</strong> on the first S$10,000 of chargeable income; and</li>
-      <li><strong>50% exemption</strong> on the next S$190,000 of chargeable income.</li>
+    <p>What happens when your startup outgrows its first three years? Or what if your company’s shareholding structure is 100% corporate-owned, rendering it ineligible for the startup exemption? This is where the standard <em>Partial Tax Exemption (PTE)</em> comes in.</p>
+    
+    <p>From their 4th Year of Assessment onward (and for any companies that do not qualify for SOTE), all Singapore companies enjoy this standard relief, which still drastically lowers the tax burden compared to other developed economies.</p>
+    
+    <ul class="list-disc pl-6 space-y-2 mt-4">
+      <li><strong>75% exemption</strong> on the first S$10,000 of normal chargeable income; and</li>
+      <li><strong>50% exemption</strong> on the next S$190,000 of normal chargeable income.</li>
     </ul>
-    <p>This results in a total tax exemption of S$102,500 on the first S$200,000 of chargeable income, giving an effective tax rate of just 8.29%.</p>
+    
+    <p class="mt-4">For a company making S$200,000 in profit, the total tax exemption amounts to S$102,500. You will only pay tax on the remaining S$97,500. At the 17% rate, this equals a tax bill of S$16,575, resulting in an effective tax rate of just 8.29%.</p>
 
     <h2 id="cit-rebates" class="text-2xl font-semibold text-ink dark:text-on-primary">4. Corporate Income Tax (CIT) Rebates</h2>
-    <p>The Singapore Budget regularly introduces Corporate Income Tax (CIT) Rebates (e.g., a 50% rebate capped at S$40,000 with cash components for qualifying companies with local employees).</p>
+    <p>Beyond the structural exemptions, the Ministry of Finance often uses the annual Singapore Budget as an economic lever to ease business costs, particularly during inflationary periods or economic downturns.</p>
+    
+    <p>Corporate Income Tax (CIT) Rebates are a direct reduction of your final tax payable. Historically, these have ranged from 20% to 50% of the corporate tax payable, usually capped at a specific amount (e.g., S$40,000). Recently, the government has even introduced cash payouts alongside rebates for companies that employ local workers, ensuring that even loss-making businesses receive some form of financial support.</p>
+    
+    <p><strong>Expert Tip:</strong> Never build CIT rebates into your long-term multi-year financial forecasting. Because they are subject to annual Budget announcements, they are a bonus, not a guarantee. Plan your liabilities based on standard PTE, and treat any rebates as a welcome cash injection when they occur.</p>
 
     <h2 id="eci-filing" class="text-2xl font-semibold text-ink dark:text-on-primary">5. ECI & Form C-S / Form C Filing Deadlines</h2>
-    <p>Singapore companies must comply with two annual corporate tax filing requirements:</p>
-    <ol class="list-decimal pl-6 space-y-2">
-      <li><strong>Estimated Chargeable Income (ECI):</strong> Must be e-filed within 3 months of the financial year end. Companies with annual revenue under S$5 million and nil ECI are exempt.</li>
-      <li><strong>Form C-S / Form C-S (Lite) / Form C:</strong> Annual corporate tax return due by <strong>November 30</strong>. Small companies with annual revenue up to S$5 million file the simplified Form C-S.</li>
-    </ol>
+    <p>Compliance is the cornerstone of enjoying Singapore’s favorable tax rates. Failing to meet deadlines not only incurs financial penalties but can also flag your company for increased scrutiny by IRAS. Singapore companies generally face two major annual tax filing milestones:</p>
+
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Step 1: Estimated Chargeable Income (ECI)</h3>
+    <p>ECI is precisely what it sounds like—an estimate of your company's taxable profits (after deducting tax-allowable expenses) for the Year of Assessment. You are required to file your ECI within <strong>3 months</strong> from the end of your financial year.</p>
+    
+    <p>Why does IRAS want this early? It helps the government assess macroeconomic health and project revenues. As an incentive, companies that file their ECI early and via GIRO can qualify to pay their estimated taxes in interest-free installments.</p>
+    
+    <p><strong>Waiver Condition:</strong> You do NOT need to file ECI if your annual revenue is not more than S$5 million AND your ECI is nil (zero or in a loss position).</p>
+
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Step 2: Form C-S, Form C-S (Lite), or Form C</h3>
+    <p>This is the actual, finalized corporate tax return. The deadline for filing this return is <strong>November 30</strong> every year.</p>
+    <ul class="list-disc pl-6 space-y-2 mt-4">
+      <li><strong>Form C-S (Lite):</strong> Introduced to help ultra-small businesses, this is a vastly simplified form for companies with an annual revenue of S$200,000 or less.</li>
+      <li><strong>Form C-S:</strong> A simplified 3-page return for qualifying small companies with an annual revenue of S$5 million or less. You are not required to attach financial statements and tax computations with Form C-S, though you must retain them.</li>
+      <li><strong>Form C:</strong> Required for larger companies (revenue > S$5 million) or those claiming complex incentives like investment allowances or foreign tax credits. You must submit audited or unaudited financial statements alongside Form C.</li>
+    </ul>
 
     <h2 id="single-tier-dividends" class="text-2xl font-semibold text-ink dark:text-on-primary">6. Single-Tier Corporate Dividend System</h2>
-    <p>Under Singapore's single-tier corporate tax framework, tax paid by a company on its profits is final. Dividends distributed to corporate or individual shareholders are completely exempt from taxation. For full foreign income tax treatment, see our guide on <a href="/blogs/singapore-foreign-income-dividends-capital-gains-tax/" class="text-link hover:underline">Foreign Income & Capital Gains Tax in Singapore</a>.</p>
+    <p>One of the most profound benefits of incorporating in Singapore is the Single-Tier Corporate Tax System, implemented way back in 2003. This system fundamentally simplifies wealth distribution for founders and investors.</p>
+    
+    <p>In many jurisdictions (like the United States), corporate profits face double taxation: first at the corporate level, and then again at the personal level when those after-tax profits are distributed to shareholders as dividends.</p>
+    
+    <p>In Singapore, the tax paid by a company on its chargeable income is the final tax. Therefore, all dividends paid by Singapore-resident companies are entirely <strong>tax-exempt in the hands of the shareholders</strong>, regardless of whether the shareholder is an individual or a corporation, and regardless of their nationality.</p>
+    <p>For more details on cross-border tax implications, we recommend reading our deep-dive guide on <a href="/blogs/singapore-foreign-income-dividends-capital-gains-tax/" class="text-link hover:underline">Foreign Income & Capital Gains Tax in Singapore</a>.</p>
 
-    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">7. Frequently Asked Questions</h2>
-    <div class="space-y-4">
-      <div>
-        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is the corporate tax rate in Singapore?</h3>
-        <p>The flat corporate tax rate is 17%. Partial tax exemptions lower the effective rate significantly for profits up to S$200,000.</p>
+    <h2 id="tax-planning" class="text-2xl font-semibold text-ink dark:text-on-primary">7. Strategic Tax Planning: Empathy, Anxiety, and The Psychology of Compliance</h2>
+    <p>Let's be incredibly honest for a moment. When you're trying to understand Singapore's corporate tax rules, the sheer volume of bureaucratic jargon can feel entirely overwhelming. It’s not just about the numbers or the compliance—it's about the psychological weight of getting it right.</p>
+    
+    <p>We see it all the time: Founders lying awake at night worrying if they miscalculated their ECI, fear of late penalties, the stress of unexpected audits, and the anxiety of misinterpreting complex regulations. These are universal pain points. Many taxpayers and business owners experience what financial psychologists call "compliance fatigue." You are expected to be an expert in everything from product development to obscure tax deduction clauses.</p>
+    
+    <p>The truth is, mastering your corporate tax strategy requires a shift in mindset: moving from reactive, panicked compliance to proactive, confident wealth preservation.</p>
+
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Advanced Strategies for Minimizing Risk</h3>
+    <p>Beyond the basic rules, the most successful individuals and corporations employ advanced, legally sound strategies. Here is how you can move from surviving to thriving:</p>
+    <ul class="list-disc pl-6 space-y-2 mt-4">
+      <li><strong>Documentation is Your Shield:</strong> Never rely on memory or scattered emails. Maintain granular, digitized records of all expenses, invoices, and director resolutions. A well-organized, cloud-based accounting ledger is your absolute best defense against arbitrary assessments or IRAS queries.</li>
+      <li><strong>Strategic Timing of Expenses:</strong> The timing of income recognition and expense realization can drastically alter your tax footprint. For instance, purchasing capital equipment right before the financial year end can allow you to claim capital allowances immediately, deferring your tax burden.</li>
+      <li><strong>Professional Consultation over DIY:</strong> The cost of an expert advisor is almost always lower than the cost of a compliance error, a missed exemption, or late penalties. Navigating this landscape without professional counsel is an unnecessary risk that drains your mental energy.</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Troubleshooting Common Edge-Case Scenarios</h3>
+    <p>What happens when things don't go according to plan? Here are some edge cases that frequently trip up even seasoned professionals:</p>
+    <ol class="list-decimal pl-6 space-y-2 mt-4">
+      <li><strong>Discrepancies in Tax Forms:</strong> If you realize you made a mistake on your filed ECI or Form C-S, do not panic. IRAS has a voluntary disclosure program. Proactively amending your returns before IRAS audits you can often result in waived or significantly reduced penalties.</li>
+      <li><strong>Multi-Jurisdictional Conflicts:</strong> If your company's income crosses borders, you may face the threat of double taxation. Always invoke the relevant Double Taxation Avoidance Agreements (DTAA). Singapore has over 90 such treaties. Ensure you apply for a Certificate of Residence (COR) from IRAS to prove to foreign tax authorities that you are a Singapore tax resident.</li>
+      <li><strong>Late Filing Repercussions:</strong> If you miss a filing deadline due to an administrative oversight, the worst action is inaction. File as soon as humanly possible. Proactively write an appeal to IRAS requesting a waiver of late penalties, clearly citing reasonable cause (such as a medical emergency or a sudden change in accounting staff). IRAS is known to be reasonable for first-time genuine offenses.</li>
+    </ol>
+    <p class="mt-6 font-medium">Ultimately, navigating these regulations is a marathon, not a sprint. By prioritizing structured planning and mental clarity, you can turn a compliance burden into a distinct strategic advantage for your business.</p>
+
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">8. Frequently Asked Questions</h2>
+    <div class="space-y-6 mt-6">
+      <div class="border-b border-hairline pb-4 dark:border-overlay-lighter">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary mb-2">What is the corporate tax rate in Singapore?</h3>
+        <p>Singapore levies a flat corporate income tax rate of 17% on normal chargeable income. However, due to partial tax exemptions and startup schemes, the effective tax rate for most SMEs with profits under S$200,000 is between 6% and 8.5%.</p>
       </div>
-      <div>
-        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">How does the Startup Tax Exemption (SOTE) work?</h3>
-        <p>New startups get 75% exemption on the first S$100,000 and 50% on the next S$100,000 of chargeable income for their first 3 Assessment Years.</p>
+      <div class="border-b border-hairline pb-4 dark:border-overlay-lighter">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary mb-2">How does the Startup Tax Exemption (SOTE) work in Singapore?</h3>
+        <p>Qualifying new Singapore private limited startup companies enjoy a massive 75% tax exemption on the first S$100,000 of normal chargeable income, and a 50% exemption on the next S$100,000. This applies for their first three consecutive Years of Assessment, severely reducing initial tax burdens.</p>
+      </div>
+      <div class="border-b border-hairline pb-4 dark:border-overlay-lighter">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary mb-2">When is Estimated Chargeable Income (ECI) due in Singapore?</h3>
+        <p>Companies must file their Estimated Chargeable Income (ECI) with IRAS within 3 months from the end of their financial year. Filing early allows companies to pay their taxes in interest-free GIRO installments.</p>
+      </div>
+      <div class="border-b border-hairline pb-4 dark:border-overlay-lighter">
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary mb-2">Are corporate dividends taxable to shareholders in Singapore?</h3>
+        <p>No. Singapore operates a single-tier corporate tax framework where the tax paid on corporate profits is considered final. Any dividends distributed from those after-tax profits to shareholders are completely tax-exempt, meaning no double taxation occurs.</p>
       </div>
     </div>
 
@@ -165,52 +247,17 @@ const faqSchema = {
         <a href="/countries/singapore/" class="text-link hover:underline font-medium">Finsiva Singapore Portal</a>
       </div>
     </div>
+
+    <!-- Hub Calculator CTA (MachaRule) -->
+    <div class="my-8 rounded-xl border border-hairline bg-canvas-soft p-6 shadow-sm dark:border-overlay-lighter dark:bg-surface flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        <h3 class="font-bold text-ink dark:text-on-primary">Need Exact Figures?</h3>
+        <p class="text-sm text-muted mt-1">Use our free interactive calculators to estimate your corporate taxes, startup exemptions, and net profits accurately.</p>
+      </div>
+      <a href="/countries/singapore/" class="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primary/90 whitespace-nowrap">
+        Go to Calculators &rarr;
+      </a>
+    </div>
+
   </div>
-
-          
-<div class="mt-12 space-y-6 text-body dark:text-muted leading-relaxed">
-  <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">The Psychology Behind Navigating Singapore Corporate Tax  : 17% Rate, Startup Exemptions & ECI</h2>
-  <p>
-    Let's be incredibly honest for a moment. When you're trying to understand <strong>Singapore Corporate Tax  : 17% Rate, Startup Exemptions & ECI</strong>, the sheer volume of bureaucratic jargon can feel entirely overwhelming. It’s not just about the numbers or the compliance—it's about the psychological weight of getting it right. Fear of penalties, the stress of audits, and the anxiety of misinterpreting complex regulations are universal pain points.
-  </p>
-  <p>
-    Many taxpayers and business owners experience what financial psychologists call "compliance fatigue." You are expected to be an expert in everything from withholding rules to obscure deduction clauses. The truth is, mastering Singapore Corporate Tax  : 17% Rate, Startup Exemptions & ECI requires a shift in mindset: from reactive compliance to proactive wealth preservation.
-  </p>
-
-  <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Advanced Strategies for Minimizing Risk</h3>
-  <p>
-    Beyond the basic rules, the most successful individuals and corporations employ advanced, legally sound strategies. Here is how you can move from surviving to thriving:
-  </p>
-  <ul class="list-disc pl-6 space-y-2 mt-4">
-    <li><strong>Documentation is Your Shield:</strong> Never rely on memory. Maintain granular, digitized records of all expenses, receipts, and correspondence. A well-organized ledger is your best defense against arbitrary assessments.</li>
-    <li><strong>Strategic Timing:</strong> The timing of income recognition and expense realization can drastically alter your tax footprint. Accelerating deductions or deferring income into the next fiscal period is a cornerstone of intelligent planning.</li>
-    <li><strong>Professional Consultation over DIY:</strong> The cost of an expert is almost always lower than the cost of a compliance error. Navigating Singapore Corporate Tax  : 17% Rate, Startup Exemptions & ECI without professional counsel is an unnecessary risk.</li>
-  </ul>
-
-  <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Troubleshooting Common Edge-Case Scenarios</h3>
-  <p>
-    What happens when things don't go according to plan? Let's address some edge cases that frequently trip up even seasoned professionals when dealing with Singapore Corporate Tax  : 17% Rate, Startup Exemptions & ECI:
-  </p>
-  <ol class="list-decimal pl-6 space-y-2 mt-4">
-    <li><strong>Discrepancies in Source Documents:</strong> If a withholding certificate or an income statement contains errors, do not adjust your return to match the error. Request a formal correction from the issuer immediately.</li>
-    <li><strong>Multi-Jurisdictional Conflicts:</strong> If your income crosses borders, you may face double taxation. Always invoke the relevant Double Taxation Avoidance Agreements (DTAA) and ensure you have the necessary tax residency certificates on hand.</li>
-    <li><strong>Late Filing Repercussions:</strong> If you miss a deadline, the worst action is inaction. File as soon as possible and proactively request a waiver of penalties citing reasonable cause, if applicable.</li>
-  </ol>
-
-  <p class="mt-6 font-medium">
-    Ultimately, navigating these regulations is a marathon, not a sprint. By prioritizing structured planning and mental clarity, you can turn a compliance burden into a strategic advantage.
-  </p>
-</div>
-
-<!-- Hub Calculator CTA (MachaRule) -->
-          <div class="my-8 rounded-xl border border-hairline bg-canvas-soft p-6 shadow-sm dark:border-overlay-lighter dark:bg-surface flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>
-              <h3 class="font-bold text-ink dark:text-on-primary">Need Exact Figures?</h3>
-              <p class="text-sm text-muted mt-1">Use our free interactive calculators to estimate your taxes.</p>
-            </div>
-            <a href="/countries/singapore/" class="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primary/90 whitespace-nowrap">
-              Go to Calculators &rarr;
-            </a>
-          </div>
-
 </BlogLayout>

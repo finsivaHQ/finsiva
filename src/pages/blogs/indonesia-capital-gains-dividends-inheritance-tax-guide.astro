@@ -2,7 +2,7 @@
 import BlogLayout from "../../layouts/BlogLayout.astro";
 
 const title = "Indonesia Capital Gains, Dividend & Inheritance Tax Guide 2026";
-const description = "Complete guide to capital gains tax in Indonesia, 10% final dividend tax exemptions, zero inheritance tax rules, and real estate property sale final taxes.";
+const description = "Complete 2026 guide to capital gains tax in Indonesia, 10% final dividend tax exemptions, zero inheritance tax rules, and real estate property sale final taxes.";
 const image = "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1200&q=80";
 const author = "Dewi Lestari, International Expat Tax Advisory Lead";
 const authorBio = "Senior International Tax Specialist advising investors, private clients, and corporate shareholders on Indonesian capital gains, dividend exemptions, and asset transfers.";
@@ -33,7 +33,7 @@ const faqSchema = {
       name: "Is there inheritance tax in Indonesia?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. Indonesia does not levy an inheritance tax or gift tax on assets transferred to direct family heirs."
+        text: "No. Indonesia does not levy an inheritance tax or gift tax on assets transferred to direct family heirs (parents, spouses, biological children) provided the transfer is not related to a business or employment relationship."
       }
     },
     {
@@ -41,7 +41,23 @@ const faqSchema = {
       name: "What is the tax on real estate property sales in Indonesia?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Property sellers pay a 2.5% final income tax (PPh Final) on the gross transfer value of land and buildings."
+        text: "Property sellers pay a 2.5% final income tax (PPh Final) on the gross transfer value of land and buildings, or the Tax Object Sale Value (NJOP), whichever is higher."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How are crypto gains taxed in Indonesia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Crypto transactions on registered exchanges are subject to a 0.1% Final Income Tax and 0.11% VAT. Unregistered exchanges incur higher rates."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Do expats pay capital gains tax in Indonesia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, expat tax residents in Indonesia are subject to the same progressive rates (5%-35%) on worldwide income, including global capital gains, unless a relevant Double Tax Agreement applies."
       }
     }
   ]
@@ -62,111 +78,235 @@ const faqSchema = {
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
     <p class="text-lg leading-relaxed">
-      Understanding <strong>capital gains tax, dividend tax exemptions, zero inheritance tax status, and real estate transaction taxes in Indonesia</strong> is vital for investors, property owners, and business founders operating under regulations set by the <a href="https://www.pajak.go.id" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">Direktorat Jenderal Pajak (DJP)</a>.
+      Understanding <strong>capital gains tax, dividend tax exemptions, zero inheritance tax status, and real estate transaction taxes in Indonesia</strong> is vital for investors, property owners, and business founders. Navigating the regulatory landscape established by the <a href="https://www.pajak.go.id" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">Direktorat Jenderal Pajak (DJP)</a> can feel incredibly overwhelming, especially when the sheer volume of bureaucratic jargon stands between you and your wealth preservation goals.
+    </p>
+    
+    <p class="text-lg leading-relaxed">
+      Whether you are an expatriate retiring in Bali, a foreign investor setting up a PT PMA (foreign-owned company) in Jakarta, or a local entrepreneur planning your legacy, getting the tax right isn't just about compliance—it's about the psychological weight of knowing your assets are protected. In this comprehensive guide, we dissect the nuances of Indonesian tax law for 2026 to help you move from reactive compliance to proactive strategy, empowering you to make informed decisions that safeguard your financial future.
     </p>
 
-    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
-      <h2 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Table of Contents</h2>
-      <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
-        <li><a href="#capital-gains" class="text-link hover:underline">1. Capital Gains Tax Treatment in Indonesia</a></li>
-        <li><a href="#dividend-tax" class="text-link hover:underline">2. 10% Final Dividend Tax & Reinvestment Exemption</a></li>
-        <li><a href="#inheritance-gift-tax" class="text-link hover:underline">3. 0% Inheritance Tax & Family Gift Rules</a></li>
-        <li><a href="#real-estate-sales" class="text-link hover:underline">4. Property Sales & 2.5% PPh Final Tax</a></li>
-        <li><a href="#stock-exchange-sales" class="text-link hover:underline">5. Indonesian Stock Exchange (IDX) Share Sales Tax</a></li>
-        <li><a href="#faqs" class="text-link hover:underline">6. Frequently Asked Questions</a></li>
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface shadow-sm">
+      <h2 class="text-xl font-semibold text-ink mb-4 dark:text-on-primary">Table of Contents</h2>
+      <ul class="grid grid-cols-1 gap-3 sm:grid-cols-2 text-sm">
+        <li><a href="#capital-gains" class="text-link hover:underline font-medium">1. Capital Gains Tax Treatment in Indonesia</a></li>
+        <li><a href="#dividend-tax" class="text-link hover:underline font-medium">2. 10% Final Dividend Tax & Reinvestment Exemption</a></li>
+        <li><a href="#inheritance-gift-tax" class="text-link hover:underline font-medium">3. 0% Inheritance Tax & Family Gift Rules</a></li>
+        <li><a href="#real-estate-sales" class="text-link hover:underline font-medium">4. Property Sales & 2.5% PPh Final Tax</a></li>
+        <li><a href="#stock-exchange-sales" class="text-link hover:underline font-medium">5. Indonesian Stock Exchange (IDX) Share Sales Tax</a></li>
+        <li><a href="#crypto-tax" class="text-link hover:underline font-medium">6. Cryptocurrency & Digital Asset Taxation</a></li>
+        <li><a href="#psychology-strategy" class="text-link hover:underline font-medium">7. The Psychology & Strategy of Indonesian Tax</a></li>
+        <li><a href="#faqs" class="text-link hover:underline font-medium">8. Frequently Asked Questions</a></li>
       </ul>
     </div>
 
-    <h2 id="capital-gains" class="text-2xl font-semibold text-ink dark:text-on-primary">1. Capital Gains Tax Treatment in Indonesia</h2>
-    <p>Indonesia does not maintain a separate capital gains tax system. Gains derived from the sale of investments, private business shares, or capital assets are combined with gross annual income and taxed at general progressive personal rates (5% to 35%) for individuals or 22% for corporations.</p>
+    <h2 id="capital-gains" class="text-2xl font-semibold text-ink dark:text-on-primary mt-10">1. Capital Gains Tax Treatment in Indonesia</h2>
+    <p>
+      One of the most common misconceptions among foreign investors and expats is the search for a dedicated "capital gains tax rate" in Indonesia. The truth is, <strong>Indonesia does not maintain a separate capital gains tax system</strong>. Instead, gains derived from the sale of investments, private business shares, or capital assets are simply aggregated with your gross annual income. This distinction is crucial for accurate financial forecasting.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">How Capital Gains Are Calculated and Taxed</h3>
+    <p>
+      If you sell an asset (like privately held company shares or offshore properties) for a profit, the gain is taxed at the general progressive personal income tax rates for individuals. In 2026, these rates range from 5% up to 35%, depending on your total income bracket. For corporate entities, capital gains are taxed at the flat corporate rate of 22%.
+    </p>
+    
+    <ul class="list-disc pl-6 space-y-2 mt-4">
+      <li><strong>Individual Residents:</strong> 5% to 35% progressive rates on net gains. If your ordinary income pushes you into the top tier, your capital gains will also be taxed at 35%.</li>
+      <li><strong>Corporate Entities:</strong> 22% flat rate on net gains, treated as standard business income.</li>
+      <li><strong>Non-Residents:</strong> Subject to a 20% final withholding tax (WHT) on the estimated net income from the sale of Indonesian assets (often calculated as a percentage of the gross sales price, e.g., 5% of gross for unlisted shares), unless protected by a Double Tax Agreement (DTA).</li>
+    </ul>
 
-    <h2 id="dividend-tax" class="text-2xl font-semibold text-ink dark:text-on-primary">2. 10% Final Dividend Tax & Reinvestment Exemption</h2>
-    <p>Dividends distributed by Indonesian companies to resident individual shareholders are subject to a 10% final withholding tax. However, under the <em>Job Creation Law (UU Cipta Kerja)</em>, dividends are <strong>100% tax-exempt</strong> if reinvested in qualifying Indonesian financial instruments or business activities within statutory timelines.</p>
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Example Calculation: Unlisted Company Shares</h3>
+    <p>
+      Imagine you are an Indonesian tax resident who invested IDR 500 million in a local startup (PT). Three years later, you sell your shares for IDR 2.5 billion. Your net capital gain is IDR 2 billion. This IDR 2 billion will be added to your salary and other income for the year, and taxed at the progressive rates (up to 35%). Proper tax planning here might involve structuring the payout over multiple tax years to avoid hitting the 35% bracket in a single year.
+    </p>
 
-    <h2 id="inheritance-gift-tax" class="text-2xl font-semibold text-ink dark:text-on-primary">3. 0% Inheritance Tax & Family Gift Rules</h2>
-    <p>Indonesia does not impose inheritance tax or gift tax on assets (cash, real estate, company shares) transferred to direct lineage heirs (parents, spouses, children), provided the transfer is documented and non-business related.</p>
+    <p class="mt-4 border-l-4 border-primary pl-4 italic bg-canvas-soft p-4 rounded-r-lg">
+      <em>Strategic Insight:</em> Because capital gains are taxed at progressive rates, timing the realization of your gains is critical. If you anticipate a year with lower ordinary income, realizing a capital gain in that year could keep you in a lower tax bracket, optimizing your overall liability.
+    </p>
 
-    <h2 id="real-estate-sales" class="text-2xl font-semibold text-ink dark:text-on-primary">4. Property Sales & 2.5% PPh Final Tax</h2>
-    <p>Sellers of land and buildings in Indonesia pay a <strong>2.5% final income tax (PPh Final)</strong> on the gross sale price or Tax Object Sale Value (NJOP), whichever is higher.</p>
+    <h2 id="dividend-tax" class="text-2xl font-semibold text-ink dark:text-on-primary mt-10">2. 10% Final Dividend Tax & Reinvestment Exemption</h2>
+    <p>
+      For business owners, shareholders, and passive investors, the taxation of dividends is a central concern. Historically, dividends were a point of double taxation. However, the regulatory landscape shifted dramatically with the implementation of the <em>Job Creation Law (UU Cipta Kerja)</em>, introducing incredibly favorable conditions for those willing to reinvest in the Indonesian economy.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">The 100% Tax Exemption Rule</h3>
+    <p>
+      By default, dividends distributed by Indonesian companies to resident individual shareholders are subject to a <strong>10% final withholding tax</strong>. However, these dividends are <strong>100% tax-exempt</strong> if they are reinvested in qualifying Indonesian financial instruments or business activities within strict statutory timelines (usually within three years from the date the dividend is received).
+    </p>
+    
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Qualifying Reinvestments</h3>
+    <p>To legally claim this exemption, the dividends must be channeled into recognized investment vehicles. The DJP allows reinvestment in a variety of asset classes, providing excellent flexibility:</p>
+    <ul class="list-disc pl-6 space-y-2 mt-4">
+      <li><strong>Government Debt:</strong> Indonesian Government Bonds (SBN) and Retail Sukuk.</li>
+      <li><strong>Corporate Debt:</strong> Bonds issued by State-Owned Enterprises (BUMN).</li>
+      <li><strong>Public Equities:</strong> Shares traded on the Indonesia Stock Exchange (IDX).</li>
+      <li><strong>Private Equities:</strong> Direct equity investments in newly established or existing Indonesian companies (PT).</li>
+      <li><strong>Physical Assets:</strong> Gold bars (minimum 99.99% purity) stored in Indonesia.</li>
+    </ul>
+    
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">The Expat Dividend Trap</h3>
+    <p>
+      Foreign nationals who are <em>non-residents</em> for tax purposes face a different regime. Non-residents face a 20% withholding tax on dividends unless reduced by a Double Tax Agreement (DTA), and they <strong>cannot</strong> utilize the reinvestment exemption. If you are an expat living in Indonesia (and thus a tax resident), you can use the exemption, but you must ensure your tax residency status is rock-solid and properly registered with the DJP.
+    </p>
 
-    <h2 id="stock-exchange-sales" class="text-2xl font-semibold text-ink dark:text-on-primary">5. Indonesian Stock Exchange (IDX) Share Sales Tax</h2>
-    <p>Share sales executed on the Indonesian Stock Exchange (IDX) are subject to a flat final tax of <strong>0.1% of gross transaction value</strong>, providing simplicity for stock market investors.</p>
+    <p class="mt-4 font-semibold text-red-600 dark:text-red-400">
+      Compliance Warning: To benefit from this exemption, you must meticulously report the reinvestment on your annual tax return (SPT Tahunan) using the specific dividend reinvestment schedules (ePHTB/e-Reporting). Failure to submit the report by the deadline, even if the reinvestment was actually made, gives the DJP grounds to revoke the exemption and demand the 10% tax plus severe late payment penalties. We see "compliance fatigue" hit taxpayers hard here—do not let paperwork stand in the way of a zero-tax dividend.
+    </p>
 
-    <p>Calculate your personal tax position with our <a href="/countries/indonesia/income-tax/income-tax-calculator/" class="text-link hover:underline">Indonesia Personal Income Tax Calculator</a>.</p>
+    <h2 id="inheritance-gift-tax" class="text-2xl font-semibold text-ink dark:text-on-primary mt-10">3. 0% Inheritance Tax & Family Gift Rules</h2>
+    <p>
+      Legacy planning in Indonesia is remarkably straightforward from a tax perspective. This is a massive structural advantage compared to jurisdictions like the United States, the United Kingdom, or Japan, where inheritance taxes can devastate generational wealth and force the liquidation of family businesses.
+    </p>
 
-    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">6. Frequently Asked Questions</h2>
-    <div class="space-y-4">
-      <div>
-        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Is there capital gains tax in Indonesia?</h3>
-        <p>Gains are treated as general taxable income and taxed at progressive personal or corporate rates.</p>
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">The Zero Tax Inheritance Concept</h3>
+    <p>
+      <strong>Indonesia does not impose an inheritance tax, nor does it have an estate tax.</strong> Furthermore, gifts transferred between direct lineage family members are completely tax-exempt. This applies to cash, real estate, vehicles, and company shares. Passing the torch to the next generation in Indonesia does not trigger a taxable event, allowing families to build compounded, multi-generational wealth.
+    </p>
+
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Crucial Conditions for Exemption</h3>
+    <p>While the transfer is tax-free, strict conditions apply to ensure it isn't a disguised commercial transaction:</p>
+    <ol class="list-decimal pl-6 space-y-3 mt-4">
+      <li><strong>Direct Lineage Only:</strong> The exemption applies only to transfers in a straight line (one degree up or down), such as parent-to-child or grandparent-to-grandchild, as well as between spouses. Transfers to siblings, cousins, nieces, nephews, or friends do not qualify. Gifts to these non-direct relatives are taxed as regular income to the recipient.</li>
+      <li><strong>No Commercial Relationship:</strong> The parties involved cannot have a business, employment, or ownership relationship that suggests the "gift" is actually compensation for services rendered.</li>
+      <li><strong>The Prerequisite of Prior Reporting:</strong> This is the most critical hurdle. The asset being inherited or gifted <em>must have been properly reported on the deceased/donor’s previous tax returns (SPT)</em>. If a father gifts an unreported offshore bank account or undeclared Bali property to his daughter, the DJP will view it as newly discovered, un-taxed income. The estate or the donor will be subject to back taxes and penalties before the gift is recognized as tax-free.</li>
+    </ol>
+
+    <h2 id="real-estate-sales" class="text-2xl font-semibold text-ink dark:text-on-primary mt-10">4. Property Sales & 2.5% PPh Final Tax</h2>
+    <p>
+      Real estate remains one of the most popular asset classes in Indonesia, particularly in hotspots like Bali, Jakarta, and Lombok. The taxation on real estate transactions is handled through a final withholding mechanism, completely separate from the progressive income tax rates discussed in the capital gains section.
+    </p>
+
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">The 2.5% Final Tax for Sellers (PPh Final)</h3>
+    <p>
+      When selling land and buildings, the seller is obligated to pay a <strong>2.5% final income tax (PPh Final)</strong>. This rate is applied to the gross transfer value—specifically, the actual transaction price or the Tax Object Sale Value (NJOP) set by the regional government, whichever is higher.
+    </p>
+    <p>
+      Because it is a "final tax," you do not need to pay further income tax on the profit margin of the sale, regardless of how massive your gain might be. 
+    </p>
+    <p class="mt-2 bg-canvas-soft p-4 rounded-lg">
+      <strong>Example:</strong> If you bought a villa in Canggu five years ago for IDR 3 Billion and sell it today for IDR 12 Billion, you pay 2.5% on the IDR 12 Billion (IDR 300 million). The IDR 9 Billion capital gain is yours to keep, entirely tax-clear from a domestic income perspective. (Expats must still consider their home country reporting rules).
+    </p>
+
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Buyer Obligations (BPHTB)</h3>
+    <p>
+      It is also vital to note that the buyer is responsible for the Acquisition Tax on Land and Building (BPHTB). This regional tax is typically <strong>5% of the transaction value</strong> (after deducting a small non-taxable threshold, NPOPTKP, which varies by region). This dual-tax structure ensures that both sides of the transaction contribute to local and national revenue.
+    </p>
+
+    <h2 id="stock-exchange-sales" class="text-2xl font-semibold text-ink dark:text-on-primary mt-10">5. Indonesian Stock Exchange (IDX) Share Sales Tax</h2>
+    <p>
+      To encourage participation in the local capital markets and provide liquidity, Indonesia applies a highly simplified tax regime for publicly traded stocks. 
+    </p>
+    <p>
+      Sales of shares executed on the Indonesian Stock Exchange (IDX) are subject to a flat final tax of <strong>0.1% of the gross transaction value</strong>. This tax is automatically withheld by your broker at the time of the sale. Because it is a final tax, stock market investors do not need to calculate their specific buy-and-sell margins for tax purposes; the withholding clears their liability entirely. 
+    </p>
+    <p class="mt-4">
+      <em>Note for Founders and IPOs:</em> If you are a founder selling "founder shares" during an Initial Public Offering (IPO), an additional 0.5% final tax applies to the share value at the time of the offering, bringing the total to 0.6%.
+    </p>
+    
+    <h2 id="crypto-tax" class="text-2xl font-semibold text-ink dark:text-on-primary mt-10">6. Cryptocurrency & Digital Asset Taxation</h2>
+    <p>
+      With Indonesia being a major hub for cryptocurrency adoption, the Ministry of Finance introduced specific rules for digital assets to capture revenue while maintaining an attractive environment for traders. Crypto is recognized legally as a commodity, not a currency, in Indonesia.
+    </p>
+    <ul class="list-disc pl-6 space-y-3 mt-4">
+      <li><strong>Registered Exchanges (Bappebti-approved):</strong> Transactions on local, regulated exchanges (like Indodax or Tokocrypto) are subject to a highly favorable <strong>0.1% Final Income Tax and 0.11% VAT</strong>. This is withheld automatically by the exchange, making compliance effortless.</li>
+      <li><strong>Unregistered Exchanges (Global platforms):</strong> If you trade on non-local platforms (like Binance, Kraken, or decentralized exchanges), the rates double to <strong>0.2% Final Income Tax and 0.22% VAT</strong>. More importantly, you are entirely responsible for tracking, self-reporting, and remitting this tax monthly—a massive administrative burden.</li>
+    </ul>
+
+    <div class="mt-12 space-y-6 text-body dark:text-muted leading-relaxed">
+      <h2 id="psychology-strategy" class="text-2xl font-semibold text-ink dark:text-on-primary">7. The Psychology & Strategy of Indonesian Tax</h2>
+      <p>
+        Let's be incredibly honest for a moment. When you're trying to understand <strong>Indonesia Capital Gains, Dividend & Inheritance Tax</strong>, the sheer volume of bureaucratic jargon can feel entirely overwhelming. It’s not just about the numbers or the compliance—it's about the psychological weight of getting it right. Fear of penalties, the stress of unexpected audits, and the anxiety of misinterpreting complex regulations are universal pain points shared by locals and expats alike.
+      </p>
+      <p>
+        Many taxpayers and business owners experience what financial psychologists call "compliance fatigue." You are expected to be an expert in everything from final withholding rules to obscure deduction clauses. The truth is, mastering your tax position requires a shift in mindset: from reactive compliance (putting out fires) to proactive wealth preservation (building a fortress).
+      </p>
+
+      <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Advanced Strategies for Minimizing Risk</h3>
+      <p>
+        Beyond the basic rules, the most successful individuals and corporations employ advanced, legally sound strategies. Here is how you can move from surviving to thriving:
+      </p>
+      <ul class="list-disc pl-6 space-y-3 mt-4">
+        <li><strong>Documentation is Your Shield:</strong> Never rely on memory or informal agreements. Maintain granular, digitized records of all expenses, receipts, reinvestment proofs, and correspondence. A well-organized ledger is your best defense against arbitrary DJP assessments.</li>
+        <li><strong>Strategic Timing & Structuring:</strong> The timing of income recognition and asset realization can drastically alter your tax footprint. Accelerating deductions or deferring income into a subsequent fiscal period is a cornerstone of intelligent planning. Furthermore, holding real estate in a PT PMA versus an individual name completely changes the tax profile (corporate tax vs final tax).</li>
+        <li><strong>Professional Consultation over DIY:</strong> The cost of an expert is almost always lower than the cost of a compliance error. Navigating Indonesian taxes without professional counsel is an unnecessary emotional and financial risk. The peace of mind alone is worth the investment.</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Troubleshooting Common Edge-Case Scenarios</h3>
+      <p>
+        What happens when things don't go according to plan? Let's address some edge cases that frequently trip up even seasoned professionals:
+      </p>
+      <ol class="list-decimal pl-6 space-y-3 mt-4">
+        <li><strong>Discrepancies in Source Documents:</strong> If a withholding certificate (Bukti Potong) contains errors from your employer or broker, do not adjust your return to match the error. Request a formal correction from the issuer immediately to avoid a mismatch in the DJP system.</li>
+        <li><strong>Multi-Jurisdictional Conflicts & CRS:</strong> If your income crosses borders, you may face double taxation. Always invoke the relevant Double Taxation Avoidance Agreements (DTAA) and ensure you have the necessary tax residency certificates (DGT forms) ready. Furthermore, with the Common Reporting Standard (CRS) now active, the DJP receives data on your offshore bank accounts automatically. Transparency is mandatory.</li>
+        <li><strong>Late Filing Repercussions:</strong> If you miss a deadline, the worst action is inaction. File as soon as possible and proactively request a waiver of penalties citing reasonable cause, if applicable.</li>
+      </ol>
+
+      <p class="mt-6 font-medium text-lg">
+        Ultimately, navigating these regulations is a marathon, not a sprint. By prioritizing structured planning and mental clarity, you can turn a compliance burden into a strategic advantage, securing your assets for generations to come.
+      </p>
+    </div>
+
+    <!-- Hub Calculator CTA (MachaRule) -->
+    <div class="my-12 rounded-2xl border border-hairline bg-gradient-to-br from-canvas-soft to-surface p-8 shadow-md dark:border-overlay-lighter dark:from-surface dark:to-surface-hover flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex-1">
+        <h3 class="text-2xl font-bold text-ink dark:text-on-primary">Need Exact Figures for Your Taxes?</h3>
+        <p class="text-base text-muted mt-2 max-w-xl">Stop guessing. Use our free interactive calculators to estimate your capital gains, property transfer taxes, and net dividend income in seconds.</p>
       </div>
-      <div>
-        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Are dividends tax-exempt in Indonesia?</h3>
-        <p>Dividends are 100% tax-exempt if reinvested in qualifying Indonesian assets within 3 years.</p>
+      <a href="/countries/indonesia/" class="inline-flex items-center justify-center rounded-xl bg-primary px-8 py-4 text-base font-bold text-white transition-transform hover:scale-105 hover:bg-primary/90 whitespace-nowrap shadow-sm">
+        Go to Calculators &rarr;
+      </a>
+    </div>
+
+    <h2 id="faqs" class="text-3xl font-semibold text-ink dark:text-on-primary mt-16 mb-8">8. Frequently Asked Questions</h2>
+    <div class="space-y-6">
+      <div class="border-b border-hairline pb-6 dark:border-overlay">
+        <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Is there a separate capital gains tax in Indonesia?</h3>
+        <p class="mt-3 text-lg">No. Indonesia does not have a separate capital gains tax regime. Capital gains from the sale of unlisted shares or other assets are treated as general income and taxed at progressive personal rates (5%-35%) for individuals, or the corporate tax rate (22%) for businesses.</p>
       </div>
-      <div>
-        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Is there an inheritance tax in Indonesia?</h3>
-        <p>No. Direct family asset transfers and inheritances are non-taxable.</p>
+      <div class="border-b border-hairline pb-6 dark:border-overlay">
+        <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Are corporate dividends taxable in Indonesia?</h3>
+        <p class="mt-3 text-lg">Dividends paid by Indonesian companies to resident individuals are normally subject to a 10% final withholding tax. However, they are 100% tax-exempt if reinvested in qualifying Indonesian assets within 3 years and properly reported on the annual tax return.</p>
+      </div>
+      <div class="border-b border-hairline pb-6 dark:border-overlay">
+        <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Is there inheritance tax in Indonesia?</h3>
+        <p class="mt-3 text-lg">No. Indonesia does not levy an inheritance tax or gift tax on assets transferred to direct family heirs (parents, spouses, biological children). This exemption only applies if the transfer is documented, not related to a business relationship, and the assets were previously reported to the DJP.</p>
+      </div>
+      <div class="border-b border-hairline pb-6 dark:border-overlay">
+        <h3 class="text-xl font-semibold text-ink dark:text-on-primary">What is the tax on real estate property sales in Indonesia?</h3>
+        <p class="mt-3 text-lg">Property sellers pay a 2.5% final income tax (PPh Final) on the gross transfer value of the land and buildings, or the NJOP (taxable value set by the government), whichever is higher. Buyers pay a 5% acquisition tax (BPHTB).</p>
+      </div>
+      <div class="border-b border-hairline pb-6 dark:border-overlay">
+        <h3 class="text-xl font-semibold text-ink dark:text-on-primary">How are crypto gains taxed in Indonesia?</h3>
+        <p class="mt-3 text-lg">Crypto transactions on registered domestic exchanges are subject to a 0.1% Final Income Tax and 0.11% VAT. Trading on unregistered global exchanges incurs higher rates of 0.2% Final Tax and 0.22% VAT, which must be self-reported.</p>
+      </div>
+      <div class="border-b border-hairline pb-6 dark:border-overlay">
+        <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Do expats pay capital gains tax in Indonesia?</h3>
+        <p class="mt-3 text-lg">Yes, expat tax residents in Indonesia are subject to the same progressive rates (5%-35%) on worldwide income, including global capital gains, unless a relevant Double Tax Agreement applies and limits Indonesia's taxing rights.</p>
       </div>
     </div>
 
-    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
-      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Related Indonesia Tax Links</h3>
-      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
-        <a href="/knowledge/indonesia-income-tax/" class="text-link hover:underline font-medium">Indonesia Tax Knowledge Hub</a>
-        <a href="/blogs/indonesia-income-tax-rates-brackets-2026/" class="text-link hover:underline font-medium">Personal Tax Rates 2026</a>
-        <a href="/blogs/indonesia-corporate-tax-guide-2026/" class="text-link hover:underline font-medium">Corporate Tax Guide 2026</a>
-        <a href="/countries/indonesia/income-tax/income-tax-calculator/" class="text-link hover:underline font-medium">Indonesia Tax Calculator</a>
-        <a href="/blogs/indonesia-tax-for-expats-foreigners-bali-guide/" class="text-link hover:underline font-medium">Expat & Bali Tax Guide</a>
-        <a href="/countries/indonesia/" class="text-link hover:underline font-medium">Finsiva Indonesia Portal</a>
+    <div class="mt-16 rounded-2xl border border-hairline bg-canvas-soft p-8 dark:border-overlay-light dark:bg-surface shadow-sm">
+      <h3 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Related Indonesia Tax Links</h3>
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 text-base">
+        <a href="/knowledge/indonesia-income-tax/" class="text-link hover:underline font-medium flex items-center">
+          <span class="mr-2">📚</span> Indonesia Tax Knowledge Hub
+        </a>
+        <a href="/blogs/indonesia-income-tax-rates-brackets-2026/" class="text-link hover:underline font-medium flex items-center">
+          <span class="mr-2">📊</span> Personal Tax Rates 2026
+        </a>
+        <a href="/blogs/indonesia-corporate-tax-guide-2026/" class="text-link hover:underline font-medium flex items-center">
+          <span class="mr-2">🏢</span> Corporate Tax Guide 2026
+        </a>
+        <a href="/countries/indonesia/income-tax/income-tax-calculator/" class="text-link hover:underline font-medium flex items-center">
+          <span class="mr-2">🧮</span> Indonesia Tax Calculator
+        </a>
+        <a href="/blogs/indonesia-tax-for-expats-foreigners-bali-guide/" class="text-link hover:underline font-medium flex items-center">
+          <span class="mr-2">🌴</span> Expat & Bali Tax Guide
+        </a>
+        <a href="/countries/indonesia/" class="text-link hover:underline font-medium flex items-center">
+          <span class="mr-2">🌐</span> Finsiva Indonesia Portal
+        </a>
       </div>
     </div>
   </div>
-
-          
-<div class="mt-12 space-y-6 text-body dark:text-muted leading-relaxed">
-  <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">The Psychology Behind Navigating Indonesia Capital Gains, Dividend & Inheritance Tax</h2>
-  <p>
-    Let's be incredibly honest for a moment. When you're trying to understand <strong>Indonesia Capital Gains, Dividend & Inheritance Tax</strong>, the sheer volume of bureaucratic jargon can feel entirely overwhelming. It’s not just about the numbers or the compliance—it's about the psychological weight of getting it right. Fear of penalties, the stress of audits, and the anxiety of misinterpreting complex regulations are universal pain points.
-  </p>
-  <p>
-    Many taxpayers and business owners experience what financial psychologists call "compliance fatigue." You are expected to be an expert in everything from withholding rules to obscure deduction clauses. The truth is, mastering Indonesia Capital Gains, Dividend & Inheritance Tax requires a shift in mindset: from reactive compliance to proactive wealth preservation.
-  </p>
-
-  <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Advanced Strategies for Minimizing Risk</h3>
-  <p>
-    Beyond the basic rules, the most successful individuals and corporations employ advanced, legally sound strategies. Here is how you can move from surviving to thriving:
-  </p>
-  <ul class="list-disc pl-6 space-y-2 mt-4">
-    <li><strong>Documentation is Your Shield:</strong> Never rely on memory. Maintain granular, digitized records of all expenses, receipts, and correspondence. A well-organized ledger is your best defense against arbitrary assessments.</li>
-    <li><strong>Strategic Timing:</strong> The timing of income recognition and expense realization can drastically alter your tax footprint. Accelerating deductions or deferring income into the next fiscal period is a cornerstone of intelligent planning.</li>
-    <li><strong>Professional Consultation over DIY:</strong> The cost of an expert is almost always lower than the cost of a compliance error. Navigating Indonesia Capital Gains, Dividend & Inheritance Tax without professional counsel is an unnecessary risk.</li>
-  </ul>
-
-  <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Troubleshooting Common Edge-Case Scenarios</h3>
-  <p>
-    What happens when things don't go according to plan? Let's address some edge cases that frequently trip up even seasoned professionals when dealing with Indonesia Capital Gains, Dividend & Inheritance Tax:
-  </p>
-  <ol class="list-decimal pl-6 space-y-2 mt-4">
-    <li><strong>Discrepancies in Source Documents:</strong> If a withholding certificate or an income statement contains errors, do not adjust your return to match the error. Request a formal correction from the issuer immediately.</li>
-    <li><strong>Multi-Jurisdictional Conflicts:</strong> If your income crosses borders, you may face double taxation. Always invoke the relevant Double Taxation Avoidance Agreements (DTAA) and ensure you have the necessary tax residency certificates on hand.</li>
-    <li><strong>Late Filing Repercussions:</strong> If you miss a deadline, the worst action is inaction. File as soon as possible and proactively request a waiver of penalties citing reasonable cause, if applicable.</li>
-  </ol>
-
-  <p class="mt-6 font-medium">
-    Ultimately, navigating these regulations is a marathon, not a sprint. By prioritizing structured planning and mental clarity, you can turn a compliance burden into a strategic advantage.
-  </p>
-</div>
-
-<!-- Hub Calculator CTA (MachaRule) -->
-          <div class="my-8 rounded-xl border border-hairline bg-canvas-soft p-6 shadow-sm dark:border-overlay-lighter dark:bg-surface flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>
-              <h3 class="font-bold text-ink dark:text-on-primary">Need Exact Figures?</h3>
-              <p class="text-sm text-muted mt-1">Use our free interactive calculators to estimate your taxes.</p>
-            </div>
-            <a href="/countries/indonesia/" class="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primary/90 whitespace-nowrap">
-              Go to Calculators &rarr;
-            </a>
-          </div>
-
 </BlogLayout>

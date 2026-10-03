@@ -14,34 +14,42 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What is the corporate income tax rate in Indonesia?",
+      name: "What is the standard corporate income tax rate in Indonesia for 2026?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The headline corporate income tax rate in Indonesia is 22% on net taxable profit."
+        text: "The standard corporate income tax rate in Indonesia is a flat 22% applied to the net taxable income of domestic companies and permanent establishments (BUT)."
       }
     },
     {
       "@type": "Question",
-      name: "How does the Article 31E SME corporate tax discount work?",
+      name: "How does the Article 31E SME tax discount work?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Domestic companies with annual turnover up to IDR 50 billion receive a 50% reduction in the corporate tax rate (effective 11% rate) on taxable income derived from turnover up to IDR 4.8 billion."
+        text: "Domestic corporate taxpayers with an annual gross turnover up to IDR 50 billion are eligible for a 50% reduction on the standard 22% rate. This effective 11% rate applies proportionally to the taxable income attributed to the first IDR 4.8 billion of gross turnover."
       }
     },
     {
       "@type": "Question",
-      name: "What is the 0.5% final turnover tax for small businesses?",
+      name: "Who qualifies for the 0.5% final turnover tax?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Under Government Regulation PP 55/2022, small businesses with annual gross turnover under IDR 4.8 billion can elect to pay a 0.5% final tax on gross monthly turnover instead of standard 22% corporate tax."
+        text: "Micro, small, and medium enterprises (MSMEs) with an annual gross turnover not exceeding IDR 4.8 billion can elect to pay a 0.5% final income tax on their monthly gross turnover under PP 55/2022. This applies for up to 3 years for limited liability companies (PT) and 4 years for cooperatives, CVs, or firms."
       }
     },
     {
       "@type": "Question",
-      name: "What is the annual corporate tax filing deadline in Indonesia?",
+      name: "What is the deadline for filing the annual corporate tax return (SPT Tahunan 1771)?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Corporate taxpayers must submit their annual tax return (SPT Tahunan 1771) online via DJP Online by April 30."
+        text: "The annual corporate tax return (SPT Tahunan PPh Badan 1771) must be filed electronically via DJP Online by April 30, which is the end of the fourth month after the close of the financial year. Late filing incurs an administrative penalty of IDR 1,000,000."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What are the common withholding taxes for corporations in Indonesia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Corporations must act as withholding agents for various transactions. Key withholding taxes include PPh 23 (2% on services and rent of assets, 15% on dividends/interest/royalties), PPh 4(2) (10% final tax on land/building rent), and PPh 26 (20% on payments to foreign entities, subject to tax treaty reductions)."
       }
     }
   ]
@@ -62,28 +70,51 @@ const faqSchema = {
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
     <p class="text-lg leading-relaxed">
-      Operating a domestic company (PT) or foreign direct investment company (PT PMA) in Indonesia requires a thorough understanding of <strong>Indonesian corporate income tax (PPh Badan) rates, small business tax incentives, withholding obligations, and DJP reporting rules</strong>.
+      Operating a domestic company (PT) or a foreign direct investment company (PT PMA) in Indonesia requires a thorough and sophisticated understanding of the evolving tax landscape. The <strong>Indonesian corporate income tax (PPh Badan)</strong> system can be complex, blending a standard flat rate with highly beneficial incentives for smaller enterprises and strict withholding and reporting mechanisms. As the Indonesian Directorate General of Taxes (DJP) continues to digitalize and tighten enforcement in 2026, corporate tax compliance is no longer just a year-end administrative task—it is a critical pillar of your company's financial health and operational viability.
+    </p>
+    
+    <p class="text-lg leading-relaxed">
+      This comprehensive guide explores everything you need to know about navigating the corporate tax regime in Indonesia. Whether you are scaling an emerging startup, managing a well-established manufacturing entity, or setting up a new foreign subsidiary in Jakarta, understanding the nuances of the <strong>22% standard rate, the Article 31E SME discounts, the 0.5% micro-business turnover tax</strong>, and your obligations as a withholding agent is vital. We will also dive into the psychological aspects of tax compliance, offering strategic insights to mitigate audit anxiety and optimize your corporate structure for maximum tax efficiency.
     </p>
 
     <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
       <h2 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Table of Contents</h2>
       <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
-        <li><a href="#headline-rate" class="text-link hover:underline">1. Headline 22% Corporate Tax Rate</a></li>
-        <li><a href="#article-31e" class="text-link hover:underline">2. Article 31E 50% Tax Reduction for SMEs</a></li>
+        <li><a href="#headline-rate" class="text-link hover:underline">1. The Standard 22% Corporate Tax Rate</a></li>
+        <li><a href="#article-31e" class="text-link hover:underline">2. Article 31E: 50% Tax Reduction for SMEs</a></li>
         <li><a href="#final-turnover-tax" class="text-link hover:underline">3. 0.5% Final Micro-Business Turnover Tax (PP 55/2022)</a></li>
-        <li><a href="#corporate-withholding" class="text-link hover:underline">4. Corporate Withholding Taxes (PPh 23, PPh 4(2))</a></li>
-        <li><a href="#spt-1771-deadlines" class="text-link hover:underline">5. Corporate SPT 1771 e-Filing & Deadlines</a></li>
-        <li><a href="#faqs" class="text-link hover:underline">6. Frequently Asked Questions</a></li>
+        <li><a href="#corporate-withholding" class="text-link hover:underline">4. Understanding Corporate Withholding Taxes</a></li>
+        <li><a href="#taxable-income" class="text-link hover:underline">5. Calculating Taxable Income and Deductible Expenses</a></li>
+        <li><a href="#spt-1771-deadlines" class="text-link hover:underline">6. Corporate SPT 1771 e-Filing & Deadlines</a></li>
+        <li><a href="#tax-planning" class="text-link hover:underline">7. Tax Planning & Audit Defense Psychology</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">8. Frequently Asked Questions (FAQ)</a></li>
       </ul>
     </div>
 
-    <h2 id="headline-rate" class="text-2xl font-semibold text-ink dark:text-on-primary">1. Headline 22% Corporate Tax Rate</h2>
-    <p>Administered by the <a href="https://www.pajak.go.id" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">Direktorat Jenderal Pajak (DJP)</a>, domestic corporations and Permanent Establishments (BUT) are subject to a flat <strong>22% headline corporate income tax rate</strong> on net taxable income.</p>
+    <h2 id="headline-rate" class="text-2xl font-semibold text-ink dark:text-on-primary">1. The Standard 22% Corporate Tax Rate</h2>
+    <p>
+      Administered by the <a href="https://www.pajak.go.id" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">Direktorat Jenderal Pajak (DJP)</a>, domestic corporations and Permanent Establishments (Bentuk Usaha Tetap, or BUT) in Indonesia are subject to a flat <strong>22% headline corporate income tax rate</strong> on their net taxable income.
+    </p>
+    <p>
+      The 22% rate was introduced and solidified through recent tax harmonization laws, bringing Indonesia's corporate tax burden closer to the ASEAN regional average and making the country a highly competitive destination for foreign direct investment (FDI). It applies to the net profits of the company—calculated as gross revenue minus allowable deductions, operating expenses, and previous years' tax losses.
+    </p>
+    <h3 class="text-xl font-semibold text-ink mt-6 dark:text-on-primary">Public Company Discount</h3>
+    <p>
+      To encourage capital market participation, domestic publicly listed companies (Perseroan Terbuka or Tbk) that meet specific criteria are granted a <strong>3% reduction</strong> off the standard corporate tax rate, resulting in an effective rate of <strong>19%</strong>. To qualify, the company must have at least 40% of its paid-up shares traded on the Indonesia Stock Exchange (IDX), and these shares must be held by at least 300 parties, with no single party holding 5% or more. This criteria must be maintained for at least 183 days within a tax year.
+    </p>
 
-    <h2 id="article-31e" class="text-2xl font-semibold text-ink dark:text-on-primary">2. Article 31E 50% Tax Reduction for SMEs</h2>
-    <p>Under Article 31E of the Income Tax Law, domestic corporations with annual gross turnover up to IDR 50 billion enjoy a <strong>50% tax rate reduction</strong> (resulting in an effective <strong>11% corporate tax rate</strong>) on taxable income derived from turnover up to IDR 4.8 billion.</p>
-
-    <div class="overflow-x-auto my-4">
+    <h2 id="article-31e" class="text-2xl font-semibold text-ink dark:text-on-primary">2. Article 31E: 50% Tax Reduction for SMEs</h2>
+    <p>
+      One of the most powerful tax planning tools available to mid-sized businesses in Indonesia is the incentive provided under <strong>Article 31E of the Income Tax Law</strong>. Designed to stimulate growth among small and medium enterprises (SMEs), this provision offers a substantial <strong>50% reduction in the corporate tax rate</strong>. 
+    </p>
+    <p>
+      Domestic corporate taxpayers with an annual gross turnover of up to <strong>IDR 50 billion</strong> (approximately USD 3.2 million) are eligible. The 50% discount (resulting in an effective tax rate of <strong>11%</strong> instead of 22%) applies proportionally to the taxable income attributed to the first <strong>IDR 4.8 billion</strong> of gross turnover.
+    </p>
+    <p>
+      It is crucial to understand that the 11% rate does not apply to the entire taxable income if your turnover exceeds IDR 4.8 billion. The calculation requires splitting the taxable income into two portions: the portion attributable to the first IDR 4.8 billion (taxed at 11%) and the remaining portion (taxed at the standard 22%).
+    </p>
+    
+    <div class="overflow-x-auto my-6">
       <table class="min-w-full border border-hairline text-left text-sm dark:border-overlay-lighter">
         <thead class="bg-canvas-soft font-semibold text-ink dark:bg-surface dark:text-on-primary">
           <tr>
@@ -95,48 +126,135 @@ const faqSchema = {
         <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
           <tr>
             <td class="p-3 font-medium">Up to IDR 4.8 Billion</td>
-            <td class="p-3">Full Article 31E 50% Discount (or 0.5% PP 55)</td>
-            <td class="p-3 font-semibold text-emerald-600">11% (or 0.5% of Gross Turnover)</td>
+            <td class="p-3">Full Article 31E 50% Discount (or optional 0.5% PP 55)</td>
+            <td class="p-3 font-semibold text-emerald-600">11% on Net Profit (or 0.5% of Gross Turnover)</td>
           </tr>
           <tr>
             <td class="p-3 font-medium">IDR 4.8 Billion – IDR 50 Billion</td>
             <td class="p-3">Proportional Article 31E 50% Discount</td>
-            <td class="p-3 font-semibold text-emerald-600">Proportional between 11% and 22%</td>
+            <td class="p-3 font-semibold text-emerald-600">Proportional mix of 11% and 22%</td>
           </tr>
           <tr>
             <td class="p-3 font-medium">Exceeding IDR 50 Billion</td>
-            <td class="p-3">Standard Headline Corporate Rate</td>
-            <td class="p-3 font-semibold">22% Flat Rate</td>
+            <td class="p-3">No SME Incentives Applicable</td>
+            <td class="p-3 font-semibold">22% Flat Rate on all Net Profit</td>
           </tr>
         </tbody>
       </table>
     </div>
 
     <h2 id="final-turnover-tax" class="text-2xl font-semibold text-ink dark:text-on-primary">3. 0.5% Final Micro-Business Turnover Tax (PP 55/2022)</h2>
-    <p>Small businesses with annual turnover under IDR 4.8 billion can elect to pay a flat <strong>0.5% final tax on gross monthly turnover</strong> for up to 3 years (for PT companies) or 4 years (for CV partnerships) to simplify early tax compliance.</p>
+    <p>
+      For micro and small businesses that are just starting out, dealing with complex profit-and-loss accounting and claiming deductible expenses can be overwhelmingly burdensome. To simplify compliance and encourage formalization, the Indonesian government enacted Government Regulation PP 55/2022 (replacing the older PP 23/2018).
+    </p>
+    <p>
+      Under this regime, taxpayers with an annual gross turnover under <strong>IDR 4.8 billion</strong> can elect to pay a flat <strong>0.5% final income tax on their gross monthly turnover</strong>. This completely bypasses the need to calculate net taxable income at the end of the year. You simply tally up your monthly sales, multiply by 0.5%, and pay the tax by the 15th of the following month.
+    </p>
+    <h3 class="text-xl font-semibold text-ink mt-6 dark:text-on-primary">Time Limits for the 0.5% Regime</h3>
+    <p>
+      The 0.5% final tax is a temporary stepping stone, designed to help businesses transition to standard accounting practices. It is not permanent. The maximum duration a taxpayer can utilize this scheme is:
+    </p>
+    <ul class="list-disc pl-6 space-y-2 mt-4">
+      <li><strong>3 years</strong> for Limited Liability Companies (PT).</li>
+      <li><strong>4 years</strong> for Cooperatives, CVs, and Firms.</li>
+      <li><strong>7 years</strong> for Individual Taxpayers (Sole Proprietorships).</li>
+    </ul>
+    <p>
+      Once the period expires, or if turnover exceeds IDR 4.8 billion in a given year, the company must automatically transition to the normal corporate tax regime (subject to the 22% rate or the 11% Article 31E rate) starting the following tax year.
+    </p>
 
-    <h2 id="corporate-withholding" class="text-2xl font-semibold text-ink dark:text-on-primary">4. Corporate Withholding Taxes</h2>
-    <p>Indonesian companies act as withholding agents for DJP:</p>
-    <ul>
-      <li><strong>PPh 23:</strong> 2% withholding tax on domestic services and rental of assets (other than land/buildings), and 15% on dividends/interest paid to resident entities without NPWP penalty.</li>
-      <li><strong>PPh 4(2) Final Tax:</strong> 10% final withholding on land/building rental and 2.5% on construction services.</li>
+    <h2 id="corporate-withholding" class="text-2xl font-semibold text-ink dark:text-on-primary">4. Understanding Corporate Withholding Taxes</h2>
+    <p>
+      A significant portion of tax collection in Indonesia is achieved through the withholding tax (WHT) system. If your company is registered in Indonesia, you are mandated by the DJP to act as a withholding tax agent. This means when you make payments to suppliers, service providers, or landlords, you must deduct the applicable tax at source, remit it to the state treasury, and provide a withholding tax slip (Bukti Potong) to the vendor.
+    </p>
+    <p>
+      Failure to withhold taxes correctly can result in the DJP demanding the unwithheld tax directly from your company, along with severe monthly interest penalties. The key corporate withholding taxes include:
+    </p>
+    <ul class="list-disc pl-6 space-y-3 mt-4">
+      <li><strong>PPh Article 23 (Domestic Payments):</strong> A 2% withholding tax applies to payments for services (e.g., consulting, management, technical services) and the rental of assets (excluding land and buildings). A 15% rate applies to domestic dividends (if taxable), interest, and royalties. <em>Note: If the vendor does not have a Tax ID (NPWP), the withholding rate is increased by 100% (e.g., 2% becomes 4%).</em></li>
+      <li><strong>PPh Article 4(2) (Final Tax):</strong> A 10% final withholding tax must be deducted from payments for the rental of land and/or buildings. Construction services are also subject to final tax rates ranging from 1.75% to 2.65%, depending on the contractor's certification.</li>
+      <li><strong>PPh Article 26 (International Payments):</strong> A flat 20% withholding tax is applied to payments of services, royalties, interest, and dividends made to foreign tax residents. This rate can be significantly reduced (often to 10% or 0%) if a Double Taxation Avoidance Agreement (DTAA / Tax Treaty) is in place, provided the foreign vendor supplies a valid Certificate of Domicile (DGT Form).</li>
+      <li><strong>PPh Article 21 (Payroll Tax):</strong> Employers must withhold monthly income tax from their employees' salaries based on progressive individual income tax rates (TER framework).</li>
     </ul>
 
-    <h2 id="spt-1771-deadlines" class="text-2xl font-semibold text-ink dark:text-on-primary">5. Corporate SPT 1771 e-Filing & Deadlines</h2>
-    <p>Corporate taxpayers must submit their annual tax return (SPT Tahunan 1771) online via DJP Online by <strong>April 30</strong>. Failure to file on time triggers a statutory penalty of IDR 1,000,000.</p>
+    <h2 id="taxable-income" class="text-2xl font-semibold text-ink dark:text-on-primary">5. Calculating Taxable Income and Deductible Expenses</h2>
+    <p>
+      Corporate tax is calculated on net taxable income. However, accounting profit does not always equal tax profit. At the end of the year, companies must perform a <strong>fiscal reconciliation</strong> (koreksi fiskal) to adjust their commercial financial statements in accordance with Indonesian tax laws.
+    </p>
+    <h3 class="text-xl font-semibold text-ink mt-6 dark:text-on-primary">Deductible Expenses (Fiscal Deductions)</h3>
+    <p>
+      Generally, expenses incurred to earn, collect, and maintain taxable income are fully deductible. This includes raw materials, wages, interest on business loans, royalties, travel expenses, insurance premiums, and standard depreciation.
+    </p>
+    <h3 class="text-xl font-semibold text-ink mt-6 dark:text-on-primary">Non-Deductible Expenses (Positive Fiscal Corrections)</h3>
+    <p>
+      The DJP strictly prohibits certain expenses from being deducted against corporate income. Common non-deductible expenses include:
+    </p>
+    <ul class="list-disc pl-6 space-y-2 mt-4">
+      <li>Benefits-in-kind (natura) provided to employees, unless they are necessary for job execution (like safety gear) or provided in remote areas. (Note: recent regulations have shifted some benefits-in-kind to be taxable to the employee and deductible for the employer, so careful review is required).</li>
+      <li>Donations and charitable contributions (except for specific government-approved national disasters or R&D facilities).</li>
+      <li>Income tax payments and tax penalties/fines.</li>
+      <li>Expenses related to income that is subject to final tax (e.g., expenses incurred to manage rental properties).</li>
+      <li>Personal expenses of shareholders or directors.</li>
+    </ul>
 
-    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">6. Frequently Asked Questions</h2>
-    <div class="space-y-4">
+    <h2 id="spt-1771-deadlines" class="text-2xl font-semibold text-ink dark:text-on-primary">6. Corporate SPT 1771 e-Filing & Deadlines</h2>
+    <p>
+      In Indonesia, the tax year generally follows the calendar year (January 1 to December 31), though companies can apply for a different fiscal year if required by their global parent company. The core filing obligation is the Annual Corporate Income Tax Return, known as <strong>SPT Tahunan PPh Badan 1771</strong>.
+    </p>
+    <p>
+      The filing deadline is the end of the fourth month following the close of the fiscal year. For companies using the standard calendar year, the absolute deadline to file and pay any outstanding tax is <strong>April 30</strong>.
+    </p>
+    <p>
+      All filings must be done electronically through the DJP Online portal using the e-Filing or e-Form system. The SPT 1771 must be accompanied by detailed attachments, including commercial financial statements, depreciation schedules, fiscal reconciliation worksheets, and a recap of withholding taxes. For companies with gross turnover exceeding IDR 50 billion, the financial statements must be audited by a registered Indonesian public accountant.
+    </p>
+    <p>
+      Failure to file by the deadline results in an automatic administrative penalty of <strong>IDR 1,000,000</strong>, and any late payment of the tax due incurs a monthly interest charge based on the Ministry of Finance's fluctuating benchmark rate.
+    </p>
+
+    <h2 id="tax-planning" class="text-2xl font-semibold text-ink dark:text-on-primary">7. Tax Planning & Audit Defense Psychology</h2>
+    <p>
+      Let's be incredibly honest for a moment. When you're trying to understand <strong>Indonesia Corporate Income Tax : 22% Rate & SME Discounts</strong>, the sheer volume of bureaucratic jargon can feel entirely overwhelming. It’s not just about the numbers or the compliance—it's about the psychological weight of getting it right. Fear of penalties, the stress of DJP audits, and the anxiety of misinterpreting complex tax treaties are universal pain points for CFOs and business owners alike.
+    </p>
+    <p>
+      Many corporate taxpayers experience what financial psychologists call "compliance fatigue." You are expected to be an expert in everything from multi-tiered withholding rules to obscure deduction clauses and transfer pricing documentation. The truth is, mastering your corporate tax obligations requires a profound shift in mindset: from reactive, fear-based compliance to proactive, strategic wealth preservation.
+    </p>
+
+    <h3 class="text-xl font-semibold text-ink mt-6 dark:text-on-primary">Advanced Strategies for Minimizing Audit Risk</h3>
+    <p>
+      Beyond calculating the basic 22% rate, the most successful domestic and multinational corporations employ advanced, legally sound strategies. Here is how you can move from surviving to thriving in Indonesia's tax ecosystem:
+    </p>
+    <ul class="list-disc pl-6 space-y-2 mt-4">
+      <li><strong>Immaculate Documentation is Your Armor:</strong> Never rely on memory or verbal agreements. The DJP operates on a basis of documentary evidence. Maintain granular, digitized records of all expenses, invoices, withholding slips (Bukti Potong), and email correspondence. A meticulously organized fiscal ledger is your absolute best defense against arbitrary tax assessments during an audit.</li>
+      <li><strong>Mastering the Art of Strategic Timing:</strong> The timing of income recognition and expense realization can drastically alter your tax footprint. Accelerating legitimate deductions (such as asset purchases for depreciation) or deferring income into the next fiscal period is a cornerstone of intelligent corporate tax planning.</li>
+      <li><strong>Embrace Professional Consultation over DIY Risk:</strong> The financial cost of a certified tax consultant is almost always exponentially lower than the compounded cost of a compliance error, audit penalties, and wasted executive time. Navigating Indonesia's Corporate Income Tax without professional counsel is an unnecessary and dangerous risk.</li>
+      <li><strong>Proactive Transfer Pricing Documentation:</strong> If you are a PT PMA dealing with related parties overseas, do not wait for an audit to prepare your TP Doc (Master File, Local File, CbCR). Have it ready concurrently with your SPT 1771 filing to signal total transparency and compliance to the tax authorities.</li>
+    </ul>
+
+    <h2 id="faqs" class="text-2xl font-semibold text-ink dark:text-on-primary">8. Frequently Asked Questions (FAQ)</h2>
+    <div class="space-y-6 mt-6">
       <div>
-        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is the corporate tax rate in Indonesia?</h3>
-        <p>The headline rate is 22%. SMEs get 50% rate discounts under Article 31E or 0.5% final turnover tax options.</p>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is the standard corporate income tax rate in Indonesia for 2026?</h3>
+        <p>The standard corporate income tax rate in Indonesia is a flat 22% applied to the net taxable income of domestic companies and permanent establishments (BUT). Publicly listed companies meeting certain criteria can enjoy a reduced rate of 19%.</p>
       </div>
       <div>
-        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">When is corporate SPT 1771 due?</h3>
-        <p>Annual corporate tax returns must be filed electronically by April 30.</p>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">How does the Article 31E SME tax discount work?</h3>
+        <p>Domestic corporate taxpayers with an annual gross turnover up to IDR 50 billion are eligible for a 50% reduction on the standard 22% rate. This effective 11% rate applies proportionally to the taxable income attributed to the first IDR 4.8 billion of gross turnover, significantly reducing the tax burden for growing businesses.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Who qualifies for the 0.5% final turnover tax?</h3>
+        <p>Micro, small, and medium enterprises (MSMEs) with an annual gross turnover not exceeding IDR 4.8 billion can elect to pay a 0.5% final income tax on their monthly gross turnover under PP 55/2022. This simplified scheme applies for up to 3 years for limited liability companies (PT) and 4 years for CVs or firms.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is the deadline for filing the annual corporate tax return (SPT Tahunan 1771)?</h3>
+        <p>The annual corporate tax return (SPT Tahunan PPh Badan 1771) must be filed electronically via DJP Online by April 30, which represents the end of the fourth month after the close of the standard calendar financial year. Late filing incurs a direct administrative penalty of IDR 1,000,000.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What are the common withholding taxes for corporations in Indonesia?</h3>
+        <p>Corporations must act as withholding agents for various transactions. Key withholding taxes include PPh 23 (2% on services and rent of assets, 15% on dividends/interest/royalties), PPh 4(2) (10% final tax on land/building rent), and PPh 26 (20% on payments to foreign entities, which can be reduced by applicable tax treaties).</p>
       </div>
     </div>
 
+    <!-- Internal Linking Section -->
     <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
       <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Related Indonesia Corporate & Tax Links</h3>
       <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
@@ -150,50 +268,15 @@ const faqSchema = {
     </div>
   </div>
 
-          
-<div class="mt-12 space-y-6 text-body dark:text-muted leading-relaxed">
-  <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">The Psychology Behind Navigating Indonesia Corporate Income Tax  : 22% Rate & SME Discounts</h2>
-  <p>
-    Let's be incredibly honest for a moment. When you're trying to understand <strong>Indonesia Corporate Income Tax  : 22% Rate & SME Discounts</strong>, the sheer volume of bureaucratic jargon can feel entirely overwhelming. It’s not just about the numbers or the compliance—it's about the psychological weight of getting it right. Fear of penalties, the stress of audits, and the anxiety of misinterpreting complex regulations are universal pain points.
-  </p>
-  <p>
-    Many taxpayers and business owners experience what financial psychologists call "compliance fatigue." You are expected to be an expert in everything from withholding rules to obscure deduction clauses. The truth is, mastering Indonesia Corporate Income Tax  : 22% Rate & SME Discounts requires a shift in mindset: from reactive compliance to proactive wealth preservation.
-  </p>
-
-  <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Advanced Strategies for Minimizing Risk</h3>
-  <p>
-    Beyond the basic rules, the most successful individuals and corporations employ advanced, legally sound strategies. Here is how you can move from surviving to thriving:
-  </p>
-  <ul class="list-disc pl-6 space-y-2 mt-4">
-    <li><strong>Documentation is Your Shield:</strong> Never rely on memory. Maintain granular, digitized records of all expenses, receipts, and correspondence. A well-organized ledger is your best defense against arbitrary assessments.</li>
-    <li><strong>Strategic Timing:</strong> The timing of income recognition and expense realization can drastically alter your tax footprint. Accelerating deductions or deferring income into the next fiscal period is a cornerstone of intelligent planning.</li>
-    <li><strong>Professional Consultation over DIY:</strong> The cost of an expert is almost always lower than the cost of a compliance error. Navigating Indonesia Corporate Income Tax  : 22% Rate & SME Discounts without professional counsel is an unnecessary risk.</li>
-  </ul>
-
-  <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Troubleshooting Common Edge-Case Scenarios</h3>
-  <p>
-    What happens when things don't go according to plan? Let's address some edge cases that frequently trip up even seasoned professionals when dealing with Indonesia Corporate Income Tax  : 22% Rate & SME Discounts:
-  </p>
-  <ol class="list-decimal pl-6 space-y-2 mt-4">
-    <li><strong>Discrepancies in Source Documents:</strong> If a withholding certificate or an income statement contains errors, do not adjust your return to match the error. Request a formal correction from the issuer immediately.</li>
-    <li><strong>Multi-Jurisdictional Conflicts:</strong> If your income crosses borders, you may face double taxation. Always invoke the relevant Double Taxation Avoidance Agreements (DTAA) and ensure you have the necessary tax residency certificates on hand.</li>
-    <li><strong>Late Filing Repercussions:</strong> If you miss a deadline, the worst action is inaction. File as soon as possible and proactively request a waiver of penalties citing reasonable cause, if applicable.</li>
-  </ol>
-
-  <p class="mt-6 font-medium">
-    Ultimately, navigating these regulations is a marathon, not a sprint. By prioritizing structured planning and mental clarity, you can turn a compliance burden into a strategic advantage.
-  </p>
-</div>
-
-<!-- Hub Calculator CTA (MachaRule) -->
-          <div class="my-8 rounded-xl border border-hairline bg-canvas-soft p-6 shadow-sm dark:border-overlay-lighter dark:bg-surface flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>
-              <h3 class="font-bold text-ink dark:text-on-primary">Need Exact Figures?</h3>
-              <p class="text-sm text-muted mt-1">Use our free interactive calculators to estimate your taxes.</p>
-            </div>
-            <a href="/countries/indonesia/" class="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primary/90 whitespace-nowrap">
-              Go to Calculators &rarr;
-            </a>
-          </div>
+  <!-- Hub Calculator CTA (MachaRule) -->
+  <div class="my-8 rounded-xl border border-hairline bg-canvas-soft p-6 shadow-sm dark:border-overlay-lighter dark:bg-surface flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div>
+      <h3 class="font-bold text-ink dark:text-on-primary">Need Exact Figures?</h3>
+      <p class="text-sm text-muted mt-1">Use our free interactive calculators to estimate your taxes.</p>
+    </div>
+    <a href="/countries/indonesia/" class="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primary/90 whitespace-nowrap">
+      Go to Calculators &rarr;
+    </a>
+  </div>
 
 </BlogLayout>
