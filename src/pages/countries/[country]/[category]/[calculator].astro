@@ -367,7 +367,8 @@ const calcCanonical = (() => {
     lastChecked={country.taxYear}
   />
 
-  <div class="rounded-lg border border-hairline bg-canvas p-4 sm:p-8 dark:border-overlay-lighter dark:bg-surface">
+  <div class="mx-auto max-w-4xl">
+  <div class="rounded-xl border border-hairline bg-canvas p-4 sm:p-8 dark:border-overlay-lighter dark:bg-surface">
     <div class="mb-2">
       <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary" data-i18n="calculator.input_heading">Calculator Input</h2>
       
@@ -525,10 +526,11 @@ const calcCanonical = (() => {
       </div>
     </div>
   </div>
+</div>
 
   <section id="calc-overview" class="mt-12" aria-labelledby="overview-heading">
     <h2 id="overview-heading" class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary" set:html={mergedContent.overview.title}></h2>
-    <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+    <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
       <div class="prose max-w-none text-body dark:text-muted space-y-4" set:html={mergedContent.overview.html}></div>
     </div>
   </section>
@@ -536,7 +538,7 @@ const calcCanonical = (() => {
   {rule && rule.examples && rule.examples.length > 0 && (
     <div class="mt-12">
       <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary" set:html={mergedContent.workedExample?.title || "Example Calculation"}></h2>
-      <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+      <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
         <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
           <div>
             <h3 class="text-lg font-semibold text-ink mb-4 dark:text-on-primary" set:html={rule.examples[0].title}></h3>
@@ -580,7 +582,7 @@ const calcCanonical = (() => {
   {rule && rule.formulas && rule.formulas.length > 0 && (
     <div class="mt-12">
       <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary" data-i18n="methodology.title">Calculation Methodology</h2>
-      <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+      <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
         <div class="space-y-6">
           {rule.formulas.map((formula) => (
             <div>
@@ -1828,56 +1830,56 @@ const calcCanonical = (() => {
   {content && (
     <>
       <section class="mt-12" aria-labelledby="howto-heading">
-        <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+        <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
           <h2 id="howto-heading" class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary" set:html={mergedContent.howToUse?.title}></h2>
           <div class="prose max-w-none text-body dark:text-muted space-y-4" set:html={mergedContent.howToUse?.html}></div>
         </div>
       </section>
 
       <section class="mt-12" aria-labelledby="understanding-heading">
-        <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+        <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
           <h2 id="understanding-heading" class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary" set:html={mergedContent.understandingResults?.title}></h2>
           <div class="prose max-w-none text-body dark:text-muted space-y-4" set:html={mergedContent.understandingResults?.html}></div>
         </div>
       </section>
 
       <section class="mt-12" aria-labelledby="formula-heading">
-        <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+        <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
           <h2 id="formula-heading" class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary" set:html={mergedContent.formula?.title}></h2>
           <div class="prose max-w-none text-body dark:text-muted space-y-4" set:html={mergedContent.formula?.html}></div>
         </div>
       </section>
 
       <section class="mt-12" aria-labelledby="worked-heading">
-        <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+        <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
           <h2 id="worked-heading" class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary" set:html={mergedContent.workedExample?.title}></h2>
           <div class="prose max-w-none text-body dark:text-muted space-y-4" set:html={mergedContent.workedExample?.html}></div>
         </div>
       </section>
 
       <section class="mt-12" aria-labelledby="benefits-heading">
-        <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+        <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
           <h2 id="benefits-heading" class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary" set:html={mergedContent.benefits?.title}></h2>
           <div class="prose max-w-none text-body dark:text-muted space-y-4" set:html={mergedContent.benefits?.html}></div>
         </div>
       </section>
 
       <section class="mt-12" aria-labelledby="limitations-heading">
-        <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+        <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
           <h2 id="limitations-heading" class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary" set:html={mergedContent.limitations?.title}></h2>
           <div class="prose max-w-none text-body dark:text-muted space-y-4" set:html={mergedContent.limitations?.html}></div>
         </div>
       </section>
 
       <section class="mt-12" aria-labelledby="slabs-heading">
-        <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+        <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
           <h2 id="slabs-heading" class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary" set:html={mergedContent.taxSlabs?.title}></h2>
           <div class="prose max-w-none text-body dark:text-muted space-y-4" set:html={mergedContent.taxSlabs?.html}></div>
         </div>
       </section>
 
       <section class="mt-12" aria-labelledby="mistakes-heading">
-        <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+        <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
           <h2 id="mistakes-heading" class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary" set:html={mergedContent.commonMistakes?.title}></h2>
           <div class="prose max-w-none text-body dark:text-muted space-y-4" set:html={mergedContent.commonMistakes?.html}></div>
         </div>
@@ -1885,7 +1887,7 @@ const calcCanonical = (() => {
 
       {mergedContent.faq && mergedContent.faq.length > 0 && (
         <section class="mt-12" aria-labelledby="faq-heading">
-          <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+          <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
             
 <div class="mt-12 space-y-6 text-body dark:text-muted leading-relaxed">
   <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">The Psychology Behind Navigating your tax obligations</h2>
@@ -1941,7 +1943,7 @@ const calcCanonical = (() => {
         <h2 id="related-calculators-heading" class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Related Calculators</h2>
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {relatedCalculators.map(rc => (
-            <a href={`/countries/${country.slug}/${rc.categorySlug}/${rc.slug}`} class="rounded-lg border border-hairline bg-canvas p-4 hover:border-primary transition dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+            <a href={`/countries/${country.slug}/${rc.categorySlug}/${rc.slug}`} class="rounded-xl border border-hairline bg-canvas p-4 hover:border-primary transition dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
               <h3 class="font-semibold text-ink dark:text-on-primary">{rc.name}</h3>
               <p class="text-sm text-muted mt-1 dark:text-muted">{category.name} - {country.name}</p>
             </a>
@@ -1953,7 +1955,7 @@ const calcCanonical = (() => {
         <h2 id="suggested-articles-heading" class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Suggested Articles</h2>
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {suggestedArticles.map(article => (
-            <a href={article.slug.startsWith('/') ? article.slug : `/blogs/${article.slug}`} class="rounded-lg border border-hairline bg-canvas p-4 hover:border-primary transition dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+            <a href={article.slug.startsWith('/') ? article.slug : `/blogs/${article.slug}`} class="rounded-xl border border-hairline bg-canvas p-4 hover:border-primary transition dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
               <h3 class="font-semibold text-ink dark:text-on-primary">{article.title}</h3>
             </a>
           ))}
@@ -1973,7 +1975,7 @@ const calcCanonical = (() => {
       </section>
 
       <section class="mt-12" aria-labelledby="official-heading">
-        <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+        <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
           <h2 id="official-heading" class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary" set:html={mergedContent.officialResources?.title}></h2>
           <div class="prose max-w-none text-body dark:text-muted space-y-4" set:html={mergedContent.officialResources?.html}></div>
         </div>
@@ -1981,7 +1983,7 @@ const calcCanonical = (() => {
 
       {mergedContent.educationalDisclaimer && (
         <section class="mt-12" aria-labelledby="disclaimer-heading">
-          <div class="rounded-lg border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+          <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
             <h2 id="disclaimer-heading" class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary" set:html={mergedContent.educationalDisclaimer?.title}></h2>
             <p class="text-sm text-muted dark:text-muted" set:html={mergedContent.educationalDisclaimer?.text}></p>
           </div>
