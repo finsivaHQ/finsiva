@@ -125,7 +125,13 @@ const homepageSchema = {
           Estimate income tax, salary tax, and take-home pay for any country in seconds. No registration, no data collection — just accurate, privacy-first results powered by official tax rules.
         </p>
         <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row animate-slide-up" style="animation-fill-mode: both; animation-delay: 0.4s;">
-          <a href="/countries/" class="inline-flex items-center justify-center gap-2 rounded-pill bg-primary px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-primary/20 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:bg-primary-dark hover:shadow-xl hover:shadow-primary/30 active:translate-y-0 active:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">Start Calculating Taxes</a>
+          <a href="/countries/" class="group relative overflow-hidden inline-flex items-center justify-center rounded-pill bg-transparent px-8 py-3.5 text-base font-medium text-white shadow-[0_8px_20px_rgba(37,99,235,0.15)] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(37,99,235,0.3)] active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-canvas">
+            <!-- Creative inner gradient that blends vibrant blue perfectly into the background -->
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-800/90 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
+            <!-- Subtle top highlight for a 3D glass edge -->
+            <div class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+            <span class="relative z-10 tracking-wide">Start Calculating Taxes</span>
+          </a>
           <a href="#how-it-works" class="inline-flex items-center justify-center gap-2 rounded-pill border border-white/20 bg-white/5 px-8 py-3.5 text-base font-semibold text-white transition-all duration-200 ease-out hover:bg-white/10 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 backdrop-blur-sm">See How It Works</a>
         </div>
       </div>
