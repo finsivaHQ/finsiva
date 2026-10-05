@@ -109,21 +109,28 @@ const homepageSchema = {
 >
   <article id="main-content" class="min-h-screen bg-canvas dark:bg-canvas">
     <section class="relative overflow-hidden">
-      <div class="pointer-events-none absolute inset-0" style="background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 40%, #1E40AF 100%);" aria-hidden="true"></div>
-      <div class="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[600px] rounded-full bg-white/10 blur-3xl" aria-hidden="true"></div>
-      <div class="relative mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-8">
-         <span class="section-label !text-white animate-slide-up" style="animation-fill-mode: both; animation-delay: 0.1s;">Tax Tools Built for Clarity</span>
-        <h1 class="hero-title text-4xl font-extrabold tracking-tight text-white sm:text-5xl animate-slide-up" style="line-height:1.05; max-width: 56rem; margin-left: auto; margin-right: auto; animation-fill-mode: both; animation-delay: 0.2s;">Tax Hub — Free, Accurate & Private</h1>
-        <p class="hero-description mt-4 max-w-2xl mx-auto text-lg text-white/90 sm:text-xl animate-slide-up" style="line-height:1.6; animation-fill-mode: both; animation-delay: 0.3s;">
+      <!-- Elegant natural dark slate fading smoothly into the canvas background -->
+      <div class="pointer-events-none absolute inset-0" style="background: linear-gradient(180deg, #1e293b 0%, var(--color-canvas) 100%);" aria-hidden="true"></div>
+      
+      <!-- Subtle glow in the center to provide depth -->
+      <div class="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-[500px] w-[800px] rounded-full bg-primary/10 blur-3xl" aria-hidden="true"></div>
+
+      <div class="relative mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 sm:py-24 lg:px-8">
+         <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm font-medium text-white/90 backdrop-blur-sm animate-slide-up" style="animation-fill-mode: both; animation-delay: 0.1s;">
+           <span class="h-2 w-2 rounded-full bg-primary"></span>
+           Tax Tools Built for Clarity
+         </span>
+        <h1 class="hero-title mt-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl animate-slide-up" style="line-height:1.1; max-width: 56rem; margin-left: auto; margin-right: auto; animation-fill-mode: both; animation-delay: 0.2s;">Tax Hub — Free, Accurate & Private</h1>
+        <p class="hero-description mt-6 max-w-2xl mx-auto text-lg text-white/70 sm:text-xl animate-slide-up" style="line-height:1.6; animation-fill-mode: both; animation-delay: 0.3s;">
           Estimate income tax, salary tax, and take-home pay for any country in seconds. No registration, no data collection — just accurate, privacy-first results powered by official tax rules.
         </p>
-        <div class="mt-10 flex flex-col items-center justify-center gap-6 sm:flex-row animate-slide-up" style="animation-fill-mode: both; animation-delay: 0.4s;">
-          <a href="/countries/" class="hero-btn-primary inline-flex items-center justify-center gap-2 rounded-pill bg-[#111827] px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-black/20 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#1F2937] hover:shadow-xl hover:shadow-black/30 active:translate-y-0 active:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2">Start Calculating Taxes</a>
-          <a href="#how-it-works" class="hero-btn-secondary inline-flex items-center justify-center gap-2 rounded-pill border border-white/40 px-8 py-3.5 text-base font-semibold text-white transition-all duration-200 ease-out hover:bg-white/10 hover:border-white active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2">See How It Works</a>
+        <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row animate-slide-up" style="animation-fill-mode: both; animation-delay: 0.4s;">
+          <a href="/countries/" class="inline-flex items-center justify-center gap-2 rounded-pill bg-primary px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-primary/20 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:bg-primary-dark hover:shadow-xl hover:shadow-primary/30 active:translate-y-0 active:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">Start Calculating Taxes</a>
+          <a href="#how-it-works" class="inline-flex items-center justify-center gap-2 rounded-pill border border-white/20 bg-white/5 px-8 py-3.5 text-base font-semibold text-white transition-all duration-200 ease-out hover:bg-white/10 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 backdrop-blur-sm">See How It Works</a>
         </div>
       </div>
     </section>
-    <section id="countries-supported" class="border-t border-hairline bg-canvas-soft dark:border-overlay-light dark:bg-canvas" aria-labelledby="countries-heading">
+    <section id="countries-supported" class="bg-canvas-soft dark:bg-canvas relative z-10" aria-labelledby="countries-heading">
       <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <h2 id="countries-heading" class="text-3xl font-semibold text-ink mb-4 dark:text-on-primary">Countries Supported</h2>
         <p class="max-w-3xl text-lg text-body mb-10 dark:text-muted">Explore tax calculators tailored to the rules of each country. Select your country to view income tax slabs, payroll deductions, GST, VAT, and more.</p>
@@ -140,7 +147,7 @@ const homepageSchema = {
         </div>
       </div>
     </section>
-    <section id="popular-calculators" class="border-t border-hairline dark:border-overlay-light" aria-labelledby="calculators-heading">
+    <section id="popular-calculators" class="relative z-10" aria-labelledby="calculators-heading">
       <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <h2 id="calculators-heading" class="text-3xl font-semibold text-ink mb-4 dark:text-on-primary">Popular Tax Calculators</h2>
         <p class="max-w-3xl text-lg text-body mb-10 dark:text-muted">Choose from a growing library of calculator categories. Each tool is designed around the tax structure of the country you select.</p>
@@ -231,7 +238,7 @@ const homepageSchema = {
         </div>
         </div>
     </section>
-    <section id="why-choose-finsiva" class="border-t border-hairline dark:border-overlay-light" aria-labelledby="why-choose-heading">
+    <section id="why-choose-finsiva" class="relative z-10" aria-labelledby="why-choose-heading">
       <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <h2 id="why-choose-heading" class="text-3xl font-semibold text-ink mb-12 text-center dark:text-on-primary">Why Choose Finsiva</h2>
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -266,7 +273,7 @@ const homepageSchema = {
         </div>
       </div>
     </section>
-    <section id="how-it-works" class="border-t border-hairline dark:border-overlay-light" aria-labelledby="how-heading">
+    <section id="how-it-works" class="relative z-10" aria-labelledby="how-heading">
       <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <h2 id="how-heading" class="text-3xl font-semibold text-ink mb-12 text-center dark:text-on-primary">How It Works</h2>
         <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80" alt="Finance professional analyzing tax documents on a laptop" class="mx-auto mb-12 w-full max-w-3xl rounded-xl object-cover max-h-80 sm:max-h-96" loading="lazy" />
@@ -289,7 +296,7 @@ const homepageSchema = {
         </div>
       </div>
     </section>
-    <section id="why-millions-use" class="border-t border-hairline bg-canvas-soft dark:border-overlay-light dark:bg-canvas" aria-labelledby="millions-heading">
+    <section id="why-millions-use" class="bg-canvas-soft dark:bg-canvas relative z-10" aria-labelledby="millions-heading">
       <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <h2 id="millions-heading" class="text-3xl font-semibold text-ink mb-12 text-center dark:text-on-primary">Why Use Tax Calculators?</h2>
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
@@ -316,7 +323,7 @@ const homepageSchema = {
         </div>
       </div>
     </section>
-    <section id="key-features" class="border-t border-hairline dark:border-overlay-light" aria-labelledby="features-heading">
+    <section id="key-features" class="relative z-10" aria-labelledby="features-heading">
       <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <h2 id="features-heading" class="text-3xl font-semibold text-ink mb-12 text-center dark:text-on-primary">Features</h2>
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -355,7 +362,7 @@ const homepageSchema = {
         </div>
       </div>
     </section>
-    <section id="benefits" class="border-t border-hairline bg-canvas-soft dark:border-overlay-light dark:bg-canvas" aria-labelledby="benefits-heading">
+    <section id="benefits" class="bg-canvas-soft dark:bg-canvas relative z-10" aria-labelledby="benefits-heading">
       <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <h2 id="benefits-heading" class="text-3xl font-semibold text-ink mb-12 text-center dark:text-on-primary">Benefits</h2>
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -392,7 +399,7 @@ const homepageSchema = {
         </div>
       </div>
     </section>
-    <section id="why-trust-finsiva" class="border-t border-hairline dark:border-overlay-light" aria-labelledby="trust-heading">
+    <section id="why-trust-finsiva" class="relative z-10" aria-labelledby="trust-heading">
       <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <h2 id="trust-heading" class="text-3xl font-semibold text-ink mb-12 text-center dark:text-on-primary">Why Trust Finsiva</h2>
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
@@ -453,7 +460,7 @@ const homepageSchema = {
         </div>
       </div>
     </section>
-    <section id="tax-planning-tips" class="border-t border-hairline bg-canvas-soft dark:border-overlay-light dark:bg-canvas" aria-labelledby="planning-heading">
+    <section id="tax-planning-tips" class="bg-canvas-soft dark:bg-canvas relative z-10" aria-labelledby="planning-heading">
       <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <h2 id="planning-heading" class="text-3xl font-semibold text-ink mb-12 text-center dark:text-on-primary">Tax Planning Tips</h2>
         <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=1200&q=80" alt="Financial documents with calculator and planning notes" class="mx-auto mb-12 w-full max-w-3xl rounded-xl object-cover max-h-80 sm:max-h-96" loading="lazy" />
@@ -501,7 +508,7 @@ const homepageSchema = {
         </div>
       </div>
     </section>
-    <section id="popular-resources" class="border-t border-hairline bg-canvas-soft dark:border-overlay-light dark:bg-canvas" aria-labelledby="resources-heading">
+    <section id="popular-resources" class="bg-canvas-soft dark:bg-canvas relative z-10" aria-labelledby="resources-heading">
       <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <h2 id="resources-heading" class="text-3xl font-semibold text-ink mb-4 dark:text-on-primary">Popular Resources</h2>
         <p class="max-w-3xl text-lg text-body mb-10 dark:text-muted">Deepen your understanding of tax systems worldwide with our guides, tutorials, and explanatory articles.</p>
@@ -541,7 +548,7 @@ const homepageSchema = {
         </div>
       </div>
     </section>
-    <section id="faq" class="border-t border-hairline py-16 dark:border-overlay-light" aria-labelledby="faq-heading">
+    <section id="faq" class="py-16 relative z-10" aria-labelledby="faq-heading">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 id="faq-heading" class="mb-12 text-center text-3xl font-semibold text-ink dark:text-on-primary">Frequently Asked Questions</h2>
         
@@ -693,7 +700,7 @@ const homepageSchema = {
         </div>
       </div>
     </section>
-    <section id="conclusion" class="border-t border-hairline dark:border-overlay-light" aria-labelledby="conclusion-heading">
+    <section id="conclusion" class="relative z-10" aria-labelledby="conclusion-heading">
       <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div class="mx-auto max-w-3xl text-center">
           <h2 id="conclusion-heading" class="text-3xl font-semibold text-ink mb-6 dark:text-on-primary">Start Calculating Your Taxes Today</h2>
