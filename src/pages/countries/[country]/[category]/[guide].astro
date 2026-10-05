@@ -149,7 +149,7 @@ const articleSchema = {
       <h3 class="text-lg font-semibold text-ink mb-4 dark:text-on-primary">Related Calculators</h3>
       <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
         {category.calculators.map(calc => (
-          <a href={`/countries/${country.slug}/${category.slug}/${calc.slug}`} class="text-link hover:underline dark:text-link">{calc.name}</a>
+          <a href={`/countries/${country.slug}/${category.slug}/${calc.slug}/`} class="text-link hover:underline dark:text-link">{calc.name}</a>
         ))}
       </div>
     </aside>
@@ -220,11 +220,11 @@ const articleSchema = {
           <h3 class="font-semibold text-ink dark:text-on-primary">{country.officialTaxAuthority}</h3>
           <p class="text-sm text-muted mt-2 dark:text-muted">Official tax authority website for forms, rates, and guidance.</p>
         </a>
-        <a href={`/countries/${country.slug}`} class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface">
+        <a href={`/countries/${country.slug}/`} class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface">
           <h3 class="font-semibold text-ink dark:text-on-primary">{country.name} Tax Overview</h3>
           <p class="text-sm text-muted mt-2 dark:text-muted">Comprehensive overview of all tax categories and calculators for {country.name}.</p>
         </a>
-        <a href={`/countries/${country.slug}/${category.slug}`} class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface">
+        <a href={`/countries/${country.slug}/${category.slug}/`} class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface">
           <h3 class="font-semibold text-ink dark:text-on-primary">{category.name} Calculators</h3>
           <p class="text-sm text-muted mt-2 dark:text-muted">Interactive tools to estimate your {category.name.toLowerCase()} liability.</p>
         </a>

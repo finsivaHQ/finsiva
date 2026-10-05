@@ -1228,7 +1228,7 @@ const calcCanonical = (() => {
         var incomeTax = 0;
         if (regime === 'new') {
           incomeTax = pTax(taxableIncome, [[400000,0],[800000,0.05],[1200000,0.10],[1600000,0.15],[2000000,0.20],[2400000,0.25],[100000000,0.30]]);
-          if (taxableIncome <= 700000) {
+          if (taxableIncome <= 1200000) {
             incomeTax = 0; // Section 87A rebate
           }
         } else {
@@ -1729,7 +1729,7 @@ const calcCanonical = (() => {
           else if (ruleId === 'united-states-corporate-tax-corporate-tax-calculator') calcCorporate();
           else if (ruleId === 'united-states-capital-gains-tax-capital-gains-calculator') calcCapitalGains();
           else if (ruleId === 'india-income-tax-income-tax-calculator') calcIndiaIncomeTax();
-          else if (ruleId === 'india-gst-gst-calculator') calcGenericVATorGST(getInput('gstRate') || '18', getInput('calculationType') || 'exclusive');
+          else if (ruleId === 'india-gst-gst-calculator') calcGenericVATorGST(getInput('gstRate') || '0.18', getInput('calculationType') || 'exclusive');
           else if (ruleId === 'india-tds-tds-calculator') calcTDS();
           else if (ruleId === 'malaysia-income-tax-income-tax-calculator') calcMYIncomeTax();
           else if (ruleId === 'malaysia-sst-sst-calculator') calcSST();
@@ -1740,12 +1740,12 @@ const calcCanonical = (() => {
           else if (ruleId === 'philippines-income-tax-income-tax-calculator') calcPHIncomeTax();
           else if (ruleId === 'philippines-vat-vat-calculator') calcGenericVATorGST(0.12, getInput('calculationType') || 'exclusive');
           else if (ruleId === 'united-kingdom-income-tax-income-tax-calculator') calcUKIncomeTax();
-          else if (ruleId === 'united-kingdom-vat-vat-calculator') calcGenericVATorGST(getInput('vatRate') || '20', getInput('calculationType') || 'exclusive');
+          else if (ruleId === 'united-kingdom-vat-vat-calculator') calcGenericVATorGST(getInput('vatRate') || '0.20', getInput('calculationType') || 'exclusive');
           else if (ruleId === 'united-kingdom-national-insurance-ni-calculator') calcNIContributions();
           else if (ruleId === 'united-kingdom-vehicle-tax-ev-tax-calculator') calcUKEVTax();
           else if (ruleId === 'hong-kong-salaries-tax-salaries-tax-calculator') calcHKSalariesTax();
           else if (ruleId === 'singapore-income-tax-income-tax-calculator') calcSGIncomeTax();
-          else if (ruleId === 'singapore-gst-gst-calculator') calcGenericVATorGST(0.09, getInput('calculationType') || 'exclusive');
+          else if (ruleId === 'singapore-gst-gst-calculator') calcGenericVATorGST(getInput('gstRate') || '0.09', getInput('calculationType') || 'exclusive');
           else if (ruleId === 'singapore-stamp-duty-stamp-duty-calculator') calcStampDuty();
           else if (ruleId === 'indonesia-income-tax-income-tax-calculator') calcIDIncomeTax();
           else if (ruleId === 'indonesia-vat-vat-calculator') calcGenericVATorGST(0.11, getInput('calculationType') || 'exclusive');
@@ -1958,7 +1958,7 @@ const calcCanonical = (() => {
         <h2 id="related-calculators-heading" class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Related Calculators</h2>
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {relatedCalculators.map(rc => (
-            <a href={`/countries/${country.slug}/${rc.categorySlug}/${rc.slug}`} class="rounded-xl border border-hairline bg-canvas p-4 hover:border-primary transition dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+            <a href={`/countries/${country.slug}/${rc.categorySlug}/${rc.slug}/`} class="rounded-xl border border-hairline bg-canvas p-4 hover:border-primary transition dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
               <h3 class="font-semibold text-ink dark:text-on-primary">{rc.name}</h3>
               <p class="text-sm text-muted mt-1 dark:text-muted">{category.name} - {country.name}</p>
             </a>
@@ -1982,7 +1982,7 @@ const calcCanonical = (() => {
         {mergedContent.relatedCountry ? (
           <div set:html={mergedContent.relatedCountry.html}></div>
         ) : (
-          <a href={`/countries/${country.slug}`} class="block rounded-lg border border-hairline bg-canvas p-6 hover:border-primary transition dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+          <a href={`/countries/${country.slug}/`} class="block rounded-lg border border-hairline bg-canvas p-6 hover:border-primary transition dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
             <h3 class="text-lg font-semibold text-ink dark:text-on-primary">{country.name} Tax Overview</h3>
             <p class="text-sm text-muted mt-1 dark:text-muted">Browse all {country.name} tax calculators and guides.</p>
           </a>

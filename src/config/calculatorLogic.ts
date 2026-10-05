@@ -145,7 +145,7 @@ export function calcIndiaIncomeTax(inputs: Record<string, any>) {
   let incomeTax = 0;
   if (regime === "new") {
     incomeTax = pTax(taxableIncome, [[400000, 0], [800000, 0.05], [1200000, 0.10], [1600000, 0.15], [2000000, 0.20], [2400000, 0.25], [100000000, 0.30]]);
-    if (taxableIncome <= 700000) {
+    if (taxableIncome <= 1200000) {
       incomeTax = 0;
     }
   } else {

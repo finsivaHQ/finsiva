@@ -63,7 +63,7 @@ const glossaryIndexSchema = {
                <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
                 {glossary.filter(t => t.data.category === cat).map(term => (
                   <li>
-                    <a href={`/knowledge/glossary/${term.id}`} class="group flex items-center gap-2 text-sm text-link hover:underline dark:text-link">
+                    <a href={`/knowledge/glossary/${term.id}/`} class="group flex items-center gap-2 text-sm text-link hover:underline dark:text-link">
                       <span class="font-medium text-ink dark:text-on-primary">{term.data.term}</span>
                     </a>
                   </li>

@@ -65,7 +65,7 @@ const schema = {
       <!-- Comparison Cards Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         {comparisonPages.map(page => (
-          <a href={`/compare/${page.slug}`} class="group rounded-2xl border border-hairline bg-canvas p-6 shadow-sm transition-all hover:border-primary hover:shadow-lg dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary flex flex-col justify-between">
+          <a href={`/compare/${page.slug}/`} class="group rounded-2xl border border-hairline bg-canvas p-6 shadow-sm transition-all hover:border-primary hover:shadow-lg dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary flex flex-col justify-between">
             <div>
               <div class="flex items-center justify-between mb-3">
                 <span class="text-xs font-semibold uppercase tracking-wider text-primary">{page.category}</span>

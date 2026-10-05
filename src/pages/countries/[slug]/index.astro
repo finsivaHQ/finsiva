@@ -153,7 +153,7 @@ const govOrgSchema = {
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
       {country.taxCategories.map(cat => (
         <a 
-          href={`/countries/${country.slug}/${cat.slug}`} 
+          href={`/countries/${country.slug}/${cat.slug}/`} 
           class="group card relative flex flex-col justify-between p-6 border border-hairline rounded-2xl bg-canvas transition-all duration-200 hover:-translate-y-1 hover:border-primary hover:shadow-md dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary"
         >
           <div>
@@ -207,7 +207,7 @@ const govOrgSchema = {
           const isPop = calc.isPopular || popularCalcs.some(p => p.slug === calc.slug);
           return (
             <a 
-              href={`/countries/${country.slug}/${calc.categorySlug}/${calc.slug}`}
+              href={`/countries/${country.slug}/${calc.categorySlug}/${calc.slug}/`}
               data-category={calc.categorySlug}
               class="calc-item flex flex-col justify-between p-4 rounded-xl border border-hairline bg-canvas-soft hover:border-primary hover:bg-canvas transition-all duration-200 dark:border-overlay-lighter dark:bg-canvas dark:hover:bg-surface group"
             >
@@ -509,7 +509,7 @@ const govOrgSchema = {
 
       {!['hong-kong', 'pakistan', 'malaysia', 'indonesia', 'singapore'].includes(country.slug) && (
         <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <a href={`/countries/${country.slug}`} class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+          <a href={`/countries/${country.slug}/`} class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
             <h4 class="font-semibold text-ink dark:text-on-primary">{country.name} Calculators</h4>
             <p class="text-sm text-muted mt-2 dark:text-muted">All interactive tax estimators for {country.name} in one place.</p>
           </a>

@@ -57,7 +57,7 @@ if (!country || !category) {
       <span class="text-xs font-semibold uppercase tracking-wider text-muted dark:text-muted mr-1">{country.name} Tax Categories:</span>
       {country.taxCategories.map(cat => (
         <a 
-          href={`/countries/${country.slug}/${cat.slug}`}
+          href={`/countries/${country.slug}/${cat.slug}/`}
           class={`px-3 py-1.5 rounded-full text-xs font-semibold transition ${cat.slug === category.slug ? 'bg-primary text-on-primary shadow-sm dark:bg-on-primary dark:text-primary' : 'bg-canvas border border-hairline text-ink hover:border-primary dark:bg-surface dark:text-on-primary dark:border-overlay-lighter'}`}
         >
           {cat.name}
@@ -84,7 +84,7 @@ if (!country || !category) {
           const isPop = calc.isPopular || country.popularCalculators?.some(p => p.slug === calc.slug);
           return (
             <a
-              href={`/countries/${country.slug}/${category.slug}/${calc.slug}`}
+              href={`/countries/${country.slug}/${category.slug}/${calc.slug}/`}
               class="group relative flex flex-col justify-between p-6 border border-hairline rounded-2xl bg-canvas shadow-sm hover:border-primary hover:shadow-md hover:-translate-y-0.5 transition-all dark:border-overlay-lighter dark:bg-surface"
             >
               <div>
@@ -125,7 +125,7 @@ if (!country || !category) {
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
         {category.guides.map(guide => (
           <a
-            href={`/countries/${country.slug}/${category.slug}/${guide.slug}`}
+            href={`/countries/${country.slug}/${category.slug}/${guide.slug}/`}
             class="group rounded-2xl border border-hairline bg-canvas p-6 shadow-sm transition-all hover:border-primary hover:shadow-md hover:-translate-y-0.5 dark:border-overlay-lighter dark:bg-surface flex flex-col justify-between"
           >
             <div>
@@ -161,7 +161,7 @@ if (!country || !category) {
             <div>
               <h3 class="font-bold text-base text-ink dark:text-on-primary flex items-start gap-2.5">
                 <span class="text-primary font-extrabold text-base shrink-0">Q.</span>
-                <a href={`/countries/${country.slug}/${category.slug}/faqs/faq-${idx}`} class="hover:text-primary transition-colors">
+                <a href={`/countries/${country.slug}/${category.slug}/faqs/faq-${idx}/`} class="hover:text-primary transition-colors">
                   <span data-i18n="faq.question">{faq.question}</span>
                 </a>
               </h3>
@@ -170,7 +170,7 @@ if (!country || !category) {
               </p>
             </div>
             <div class="mt-4 pl-6">
-              <a href={`/countries/${country.slug}/${category.slug}/faqs/faq-${idx}`} class="text-xs font-semibold text-primary hover:underline">
+              <a href={`/countries/${country.slug}/${category.slug}/faqs/faq-${idx}/`} class="text-xs font-semibold text-primary hover:underline">
                 View Full Answer & Related FAQs →
               </a>
             </div>
@@ -191,7 +191,7 @@ if (!country || !category) {
         .slice(0, 6)
         .map(related => (
           <a
-            href={`/countries/${country.slug}/${related.slug}`}
+            href={`/countries/${country.slug}/${related.slug}/`}
             class="group rounded-2xl border border-hairline bg-canvas p-5 shadow-sm hover:border-primary hover:shadow-md hover:-translate-y-0.5 transition-all dark:border-overlay-lighter dark:bg-surface flex flex-col justify-between"
           >
             <div>
@@ -256,7 +256,7 @@ if (!country || !category) {
         <h3 class="font-bold text-base text-ink group-hover:text-primary transition-colors dark:text-on-primary">{country.officialTaxAuthority}</h3>
         <p class="text-xs text-muted mt-2 leading-relaxed dark:text-muted">Official forms, rates, guidance, and filing portals.</p>
       </a>
-      <a href={`/countries/${country.slug}`} class="group rounded-2xl border border-hairline bg-canvas p-5 shadow-sm hover:border-primary hover:shadow-md hover:-translate-y-0.5 transition-all dark:border-overlay-lighter dark:bg-surface">
+      <a href={`/countries/${country.slug}/`} class="group rounded-2xl border border-hairline bg-canvas p-5 shadow-sm hover:border-primary hover:shadow-md hover:-translate-y-0.5 transition-all dark:border-overlay-lighter dark:bg-surface">
         <h3 class="font-bold text-base text-ink group-hover:text-primary transition-colors dark:text-on-primary">{country.name} Overview</h3>
         <p class="text-xs text-muted mt-2 leading-relaxed dark:text-muted">All tax categories, calculators, and guides for {country.name}.</p>
       </a>

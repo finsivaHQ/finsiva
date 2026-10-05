@@ -12,7 +12,7 @@ const { categories, title = "Browse by Category" } = Astro.props;
     <h2 id="categories-heading" class="text-3xl font-semibold text-ink mb-12 text-center dark:text-on-primary">{title}</h2>
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {categories.map((cat) => (
-        <a href={`/knowledge/category/${cat.slug}`} class="group rounded-xl border border-hairline bg-canvas p-6 transition hover:border-primary hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+        <a href={`/knowledge/category/${cat.slug}/`} class="group rounded-xl border border-hairline bg-canvas p-6 transition hover:border-primary hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
           <h3 class="text-lg font-semibold text-ink dark:text-on-primary">{cat.name}</h3>
           <p class="mt-2 text-sm text-body dark:text-muted">{cat.description}</p>
           <span class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-link dark:text-link">

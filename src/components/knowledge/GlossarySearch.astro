@@ -21,7 +21,7 @@ const { terms } = Astro.props;
   </div>
   <div id="glossary-results" class="space-y-3">
     {terms.map((term) => (
-      <a href={`/knowledge/glossary/${term.slug}`} class="glossary-term-item block rounded-lg border border-hairline bg-canvas p-4 transition hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary" data-term={term.term.toLowerCase()} data-category={term.category.toLowerCase()}>
+      <a href={`/knowledge/glossary/${term.slug}/`} class="glossary-term-item block rounded-lg border border-hairline bg-canvas p-4 transition hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary" data-term={term.term.toLowerCase()} data-category={term.category.toLowerCase()}>
         <div class="flex items-center justify-between">
           <span class="font-semibold text-ink dark:text-on-primary">{term.term}</span>
           <span class="text-xs text-muted dark:text-muted">{term.category}</span>
