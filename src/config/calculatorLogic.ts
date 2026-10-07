@@ -267,7 +267,8 @@ export function calcHKSalariesTax(inputs: Record<string, any>) {
 
   const netChargeableIncome = Math.max(0, income - mpf - totalAllowances);
   const progressive = pTax(netChargeableIncome, [[50000, 0.02], [100000, 0.06], [150000, 0.10], [200000, 0.14], [100000000, 0.17]]);
-  const standard = Math.max(0, income - mpf) * 0.15;
+  const netIncome = Math.max(0, income - mpf);
+  const standard = Math.min(netIncome, 5000000) * 0.15 + Math.max(0, netIncome - 5000000) * 0.16;
   let salariesTax = Math.min(progressive, standard);
   salariesTax = Math.max(0, salariesTax - 3000); // IRD 100% Tax reduction capped at HK$3,000
 
@@ -313,8 +314,10 @@ export function calcSGIncomeTax(inputs: Record<string, any>) {
       [160000, 0.15],
       [200000, 0.18],
       [240000, 0.19],
-      [280000, 0.205],
-      [320000, 0.22],
+      [280000, 0.195],
+      [320000, 0.20],
+      [500000, 0.22],
+      [1000000, 0.23],
       [100000000, 0.24]
     ]);
     // IRAS 50% Tax Rebate capped at S$200
@@ -500,5 +503,6 @@ export const calculatorLogic = {
 };
 
 export type CalculatorFunction = keyof typeof calculatorLogic;
+
 
 
