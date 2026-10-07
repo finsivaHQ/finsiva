@@ -2661,12 +2661,6 @@ details[open] .faq-chevron {
   }
 }
 
-@media (min-width: 1024px) {
-  .premium-summary-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
 .premium-card {
   display: flex;
   align-items: flex-start;
@@ -2798,8 +2792,12 @@ details[open] .faq-chevron {
   color: var(--color-ink, #0f172a);
   letter-spacing: -0.02em;
   line-height: 1.2;
-  overflow-wrap: break-word;
-  word-break: break-word;
+  white-space: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.premium-card-value::-webkit-scrollbar {
+  display: none;
 }
 
 @media (min-width: 640px) {
@@ -2866,6 +2864,13 @@ details[open] .faq-chevron {
   font-size: 1.125rem;
   font-weight: 700;
   color: var(--color-ink, #0f172a);
+  white-space: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  max-width: 100%;
+}
+.premium-frequency-value::-webkit-scrollbar {
+  display: none;
 }
 
 .dark .premium-frequency-value {
@@ -2929,6 +2934,13 @@ details[open] .faq-chevron {
   font-size: 1.125rem;
   font-weight: 700;
   color: var(--color-ink, #0f172a);
+  white-space: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  max-width: 100%;
+}
+.premium-additional-value::-webkit-scrollbar {
+  display: none;
 }
 
 .dark .premium-additional-value {
