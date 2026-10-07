@@ -685,7 +685,7 @@ const calcCanonical = (() => {
       function showError() {
         if (errorDiv) errorDiv.classList.remove('hidden');
         if (resultDiv) resultDiv.classList.add('hidden');
-        if (resultEmpty) resultEmpty.classList.remove('hidden');
+        if (resultEmpty) resultEmpty.style.display = 'flex';
       }
 
       function hideError() {
@@ -694,7 +694,7 @@ const calcCanonical = (() => {
 
       function showResults() {
         if (resultDiv) resultDiv.classList.remove('hidden');
-        if (resultEmpty) resultEmpty.classList.add('hidden');
+        if (resultEmpty) resultEmpty.style.display = 'none';
         if (errorDiv) errorDiv.classList.add('hidden');
         updatePremiumDashboard();
       }
@@ -1805,7 +1805,7 @@ const calcCanonical = (() => {
       function reset() {
         form.reset();
         if (resultDiv) resultDiv.classList.add('hidden');
-        if (resultEmpty) resultEmpty.classList.remove('hidden');
+        if (resultEmpty) resultEmpty.style.display = 'flex';
         if (errorDiv) errorDiv.classList.add('hidden');
         var premiumWrapper = document.getElementById('premium-dashboard-wrapper');
         if (premiumWrapper) premiumWrapper.classList.add('hidden');
