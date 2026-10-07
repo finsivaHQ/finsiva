@@ -44,7 +44,7 @@ const schema = {
   "@type": "WebPage",
   name: `${country.name} Tax Guide`,
   description: country.overview,
-  url: `${baseUrl}/countries/${country.slug}`,
+  url: `${baseUrl}/countries/${country.slug}/`,
   about: {
     "@type": "Country",
     name: country.name,
@@ -56,7 +56,7 @@ const faqSchema = (country.countryFAQs || []).length > 0 ? {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   name: `${country.name} Tax FAQs`,
-  url: `${baseUrl}/countries/${country.slug}`,
+  url: `${baseUrl}/countries/${country.slug}/`,
   mainEntity: country.countryFAQs.map(faq => ({
     "@type": "Question",
     name: faq.question,
@@ -82,9 +82,9 @@ const govOrgSchema = {
   keywords={`${country.name} tax, ${country.name} tax calculator, ${country.name} tax brackets, ${country.name} income tax, ${country.name} tax rates, ${country.name} tax deductions, ${country.name} tax credits, ${country.name} filing deadline, ${country.name} tax authority, ${country.name} tax guide`}
   breadcrumbs={[
     { label: "Countries", href: "/countries" },
-    { label: country.name, href: `/countries/${country.slug}` }
+    { label: country.name, href: `/countries/${country.slug}/` }
   ]}
-  canonical={`${baseUrl}/countries/${country.slug}`}
+  canonical={`${baseUrl}/countries/${country.slug}/`}
   schema={schema}
   image={country.flag}
   imageAlt={`${country.name} tax guide - ${country.taxYear} tax brackets, rates, deductions, and credits`}

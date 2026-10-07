@@ -67,13 +67,13 @@ const articleSchema = {
 <CountryLayout
   title={`${guide.title} | ${country.name}`}
   description={guide.description}
-  canonical={`https://finsiva.com/countries/${country.slug}/${category.slug}/${guide.slug}`}
+  canonical={`https://finsiva.com/countries/${country.slug}/${category.slug}/${guide.slug}/`}
   robots={isThinContent ? "noindex, follow" : undefined}
   schema={articleSchema}
   breadcrumbs={[
     { label: "Countries", href: "/countries" },
-    { label: country.name, href: `/countries/${country.slug}` },
-    { label: category.name, href: `/countries/${country.slug}/${category.slug}` },
+    { label: country.name, href: `/countries/${country.slug}/` },
+    { label: category.name, href: `/countries/${country.slug}/${category.slug}/` },
     { label: guide.title }
   ]}
 >

@@ -119,38 +119,38 @@ const pkGuideMap: Record<string, Array<{ title: string; slug: string }>> = {
 
 const myGuideMap: Record<string, Array<{ title: string; slug: string }>> = {
   "income-tax": [
-    { title: "Malaysia Income Tax Guide", slug: "/countries/malaysia/income-tax" },
-    { title: "LHDN Tax Reliefs Guide", slug: "/countries/malaysia/tax-reliefs" },
-    { title: "MyTax e-Filing Guide", slug: "/countries/malaysia/tax-filing" }
+    { title: "Malaysia Income Tax Guide", slug: "/countries/malaysia/income-tax/" },
+    { title: "LHDN Tax Reliefs Guide", slug: "/countries/malaysia/tax-reliefs/" },
+    { title: "MyTax e-Filing Guide", slug: "/countries/malaysia/tax-filing/" }
   ],
   "tax-reliefs": [
-    { title: "LHDN Tax Reliefs & Deductions", slug: "/countries/malaysia/tax-reliefs" },
-    { title: "Malaysia Income Tax Guide", slug: "/countries/malaysia/income-tax" },
-    { title: "MyTax e-Filing Guide", slug: "/countries/malaysia/tax-filing" }
+    { title: "LHDN Tax Reliefs & Deductions", slug: "/countries/malaysia/tax-reliefs/" },
+    { title: "Malaysia Income Tax Guide", slug: "/countries/malaysia/income-tax/" },
+    { title: "MyTax e-Filing Guide", slug: "/countries/malaysia/tax-filing/" }
   ],
   "sst": [
-    { title: "Malaysia SST Guide (10% & 8%)", slug: "/countries/malaysia/sst" },
-    { title: "Business Tax Guide", slug: "/countries/malaysia/business-income" },
-    { title: "Malaysia Income Tax Guide", slug: "/countries/malaysia/income-tax" }
+    { title: "Malaysia SST Guide (10% & 8%)", slug: "/countries/malaysia/sst/" },
+    { title: "Business Tax Guide", slug: "/countries/malaysia/business-income/" },
+    { title: "Malaysia Income Tax Guide", slug: "/countries/malaysia/income-tax/" }
   ],
   "rental-income": [
-    { title: "Rental Income & Property Tax Guide", slug: "/countries/malaysia/rental-income" },
-    { title: "LHDN Tax Reliefs Guide", slug: "/countries/malaysia/tax-reliefs" },
-    { title: "Malaysia Income Tax Guide", slug: "/countries/malaysia/income-tax" }
+    { title: "Rental Income & Property Tax Guide", slug: "/countries/malaysia/rental-income/" },
+    { title: "LHDN Tax Reliefs Guide", slug: "/countries/malaysia/tax-reliefs/" },
+    { title: "Malaysia Income Tax Guide", slug: "/countries/malaysia/income-tax/" }
   ],
   "business-income": [
-    { title: "Business & SME Tax Guide", slug: "/countries/malaysia/business-income" },
-    { title: "Malaysia SST Guide", slug: "/countries/malaysia/sst" },
-    { title: "MyTax e-Filing Guide", slug: "/countries/malaysia/tax-filing" }
+    { title: "Business & SME Tax Guide", slug: "/countries/malaysia/business-income/" },
+    { title: "Malaysia SST Guide", slug: "/countries/malaysia/sst/" },
+    { title: "MyTax e-Filing Guide", slug: "/countries/malaysia/tax-filing/" }
   ],
   "tax-filing": [
-    { title: "MyTax e-Filing Form BE/B Guide", slug: "/countries/malaysia/tax-filing" },
-    { title: "LHDN Tax Reliefs Guide", slug: "/countries/malaysia/tax-reliefs" },
-    { title: "Malaysia Income Tax Guide", slug: "/countries/malaysia/income-tax" }
+    { title: "MyTax e-Filing Form BE/B Guide", slug: "/countries/malaysia/tax-filing/" },
+    { title: "LHDN Tax Reliefs Guide", slug: "/countries/malaysia/tax-reliefs/" },
+    { title: "Malaysia Income Tax Guide", slug: "/countries/malaysia/income-tax/" }
   ],
   "foreign-income": [
-    { title: "Foreign-Sourced Income Guide", slug: "/countries/malaysia/foreign-income" },
-    { title: "Tax Residency Guide", slug: "/countries/malaysia/income-tax" }
+    { title: "Foreign-Sourced Income Guide", slug: "/countries/malaysia/foreign-income/" },
+    { title: "Tax Residency Guide", slug: "/countries/malaysia/income-tax/" }
   ]
 };
 
@@ -161,9 +161,9 @@ const idGuideMap: Record<string, Array<{ title: string; slug: string }>> = {
     { title: "Indonesia Corporate Tax Guide", slug: "/blogs/indonesia-corporate-tax-guide-2026" }
   ],
   "vat": [
-    { title: "Indonesia VAT (PPN 11%) Guide", slug: "/countries/indonesia/vat" },
+    { title: "Indonesia VAT (PPN 11%) Guide", slug: "/countries/indonesia/vat/" },
     { title: "Indonesia PPh 21 Rates & Brackets Guide", slug: "/blogs/indonesia-income-tax-rates-brackets-2026" },
-    { title: "Indonesia Tax Overview", slug: "/countries/indonesia" }
+    { title: "Indonesia Tax Overview", slug: "/countries/indonesia/" }
   ]
 };
 
@@ -179,7 +179,7 @@ const sgGuideMap: Record<string, Array<{ title: string; slug: string }>> = {
     { title: "Singapore Foreign Income Guide", slug: "/blogs/singapore-foreign-income-dividends-capital-gains-tax" }
   ],
   "gst": [
-    { title: "Singapore GST Registration & Filing Guide", slug: "/countries/singapore/gst" },
+    { title: "Singapore GST Registration & Filing Guide", slug: "/countries/singapore/gst/" },
     { title: "Singapore Income Tax Guide", slug: "/blogs/singapore-income-tax-rates-brackets-2026" },
     { title: "Singapore Corporate Income Tax Guide", slug: "/blogs/singapore-corporate-tax-guide-2026" }
   ],
@@ -208,7 +208,7 @@ const suggestedArticles = country.slug === 'hong-kong' && hkGuideMap[category.sl
         slug: '/countries/' + country.slug + '/' + cat.slug
       }));
 
-const today = new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+const today = new Date().toLocaleDateString(/"en-US", { year: "numeric", month: "long", day: "numeric" });
 
 function buildDefaultContent() {
   return {
@@ -255,11 +255,11 @@ function buildDefaultContent() {
     ],
     relatedCalculators: {
       title: "Related Calculators",
-      html: `<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">\n    <a href="/countries/${country.slug}" class="block rounded border p-4 hover:border-primary transition">More ${country.name} Calculators</a>\n    <a href="/countries/" class="block rounded border p-4 hover:border-primary transition">All Countries</a>\n    <a href="/" class="block rounded border p-4 hover:border-primary transition">Home</a>\n  </div>`
+      html: `<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">\n    <a href="/countries/${country.slug}/" class="block rounded border p-4 hover:border-primary transition">More ${country.name} Calculators</a>\n    <a href="/countries/" class="block rounded border p-4 hover:border-primary transition">All Countries</a>\n    <a href="/" class="block rounded border p-4 hover:border-primary transition">Home</a>\n  </div>`
     },
     suggestedArticles: {
       title: "Suggested Articles",
-      html: `<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">\n    <a href="/countries/${country.slug}/${category.slug}" class="block rounded border p-4 hover:border-primary transition">${category.name} Guide</a>\n    <a href="/countries/${country.slug}" class="block rounded border p-4 hover:border-primary transition">${country.name} Tax Overview</a>\n    <a href="/" class="block rounded border p-4 hover:border-primary transition">All Calculators</a>\n  </div>`
+      html: `<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">\n    <a href="/countries/${country.slug}/${category.slug}/" class="block rounded border p-4 hover:border-primary transition">${category.name} Guide</a>\n    <a href="/countries/${country.slug}/" class="block rounded border p-4 hover:border-primary transition">${country.name} Tax Overview</a>\n    <a href="/" class="block rounded border p-4 hover:border-primary transition">All Calculators</a>\n  </div>`
     },
     officialResources: {
       title: "Official Government Resources",
@@ -271,7 +271,7 @@ function buildDefaultContent() {
     },
     relatedCountry: {
       title: "Related Country",
-      html: `<a href="/countries/${country.slug}" class="block rounded-lg border border-hairline bg-canvas p-6 hover:border-primary transition dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary"><h3 class="text-lg font-semibold text-ink dark:text-on-primary">${country.name} Tax Overview</h3><p class="text-sm text-muted mt-1 dark:text-muted">Browse all ${country.name} tax calculators and guides.</p></a>`
+      html: `<a href="/countries/${country.slug}/" class="block rounded-lg border border-hairline bg-canvas p-6 hover:border-primary transition dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary"><h3 class="text-lg font-semibold text-ink dark:text-on-primary">${country.name} Tax Overview</h3><p class="text-sm text-muted mt-1 dark:text-muted">Browse all ${country.name} tax calculators and guides.</p></a>`
     },
     faqSchema: {
       "What is the standard tax rate?": "Tax rates vary by country and type of income. Check the latest official guidelines.",
@@ -325,10 +325,10 @@ const calcCanonical = (() => {
     return `https://finsiva.com/countries/${country.slug}/${category.slug}/${calculator.slug}/`;
   }
   if (country.slug === 'malaysia' && category.slug === 'rental-income' && calculator.slug === 'rental-income-calculator') {
-    return `https://finsiva.com/countries/${country.slug}/${category.slug}/${calculator.slug}`;
+    return `https://finsiva.com/countries/${country.slug}/${category.slug}/${calculator.slug}/`;
   }
   if (country.slug === 'hong-kong' && category.slug === 'salaries-tax' && calculator.slug === 'hk-net-salary-calculator') {
-    return `https://finsiva.com/countries/${country.slug}/${category.slug}/${calculator.slug}`;
+    return `https://finsiva.com/countries/${country.slug}/${category.slug}/${calculator.slug}/`;
   }
   return `https://finsiva.com/countries/${country.slug}/${category.slug}/${calculator.slug}/`;
 })();
@@ -341,8 +341,8 @@ const calcCanonical = (() => {
   robots={isThinContent ? "noindex, follow" : undefined}
   breadcrumbs={[
     { label: "Countries", href: "/countries" },
-    { label: country.name, href: `/countries/${country.slug}` },
-    { label: category.name, href: `/countries/${country.slug}/${category.slug}` },
+    { label: country.name, href: `/countries/${country.slug}/` },
+    { label: category.name, href: `/countries/${country.slug}/${category.slug}/` },
     { label: calculator.name }
   ]}
 >

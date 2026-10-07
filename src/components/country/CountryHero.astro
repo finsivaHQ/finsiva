@@ -25,8 +25,8 @@ const mainSalaryCalc = salaryCalculators.length > 0
   : popularCalculators.find(c => c.category === "salaries-tax" || c.category === "income-tax") || popularCalculators[0];
 
 const primaryHref = mainSalaryCalc
-  ? `/countries/${country.slug}/${mainSalaryCalc.category}/${mainSalaryCalc.slug}`
-  : `/countries/${country.slug}/salaries-tax`;
+  ? `/countries/${country.slug}/${mainSalaryCalc.category}/${mainSalaryCalc.slug}/`
+  : `/countries/${country.slug}/salaries-tax/`;
 
 const secondaryHref = `#tax-calculators`;
 ---
