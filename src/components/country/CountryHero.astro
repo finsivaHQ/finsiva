@@ -31,58 +31,78 @@ const primaryHref = mainSalaryCalc
 const secondaryHref = `#tax-calculators`;
 ---
 
-<section class="country-section compact-hero" aria-labelledby={`${country.slug}-hero`}>
-  <div class="mb-3">
-    <a href="/countries/" class="inline-flex items-center gap-1.5 text-sm font-medium text-white/90 hover:underline">
-      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-      Back to Countries
-    </a>
+<section class="relative overflow-hidden rounded-2xl border border-hairline dark:border-overlay-lighter bg-surface dark:bg-surface/30 px-6 py-12 sm:px-10 sm:py-16 mb-8" aria-labelledby={`${country.slug}-hero`}>
+  
+  <!-- Subtle Grid Pattern & Glow (Matching KnowledgeHero) -->
+  <div class="absolute inset-0 bg-[linear-gradient(to_right,#8080801a_1px,transparent_1px),linear-gradient(to_bottom,#8080801a_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+  <div class="pointer-events-none absolute inset-0 flex justify-center" aria-hidden="true">
+    <div class="absolute top-[-20%] left-[10%] h-[300px] w-[300px] rounded-full bg-primary/10 blur-[80px]"></div>
+    <div class="absolute top-[10%] right-[10%] h-[250px] w-[250px] rounded-full bg-indigo-500/10 blur-[80px]"></div>
   </div>
-  <div class="flex items-start gap-3 sm:gap-4">
-    <img
-      src={country.flag}
-      alt={`Flag of ${country.name}`}
-      class="h-10 w-auto sm:h-12 object-contain flex-shrink-0 mt-0.5"
-      loading="lazy"
-      width="64"
-      height="48"
-    />
-    <div>
-      <h1 id={`${country.slug}-hero`} class="hero-title">{country.name}</h1>
-      <p class="text-sm sm:text-base text-white/80 mt-0.5">{country.continent}</p>
+
+  <div class="relative z-10">
+    <div class="mb-6">
+      <a href="/countries/" class="inline-flex items-center gap-1.5 text-sm font-medium text-link hover:underline dark:text-link">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Back to Countries
+      </a>
     </div>
-  </div>
-  <p class="hero-description mt-4 text-sm sm:text-base leading-relaxed max-w-4xl text-white/90">{country.taxSystemSummary}</p>
-  <div class="hero-stats">
-    <div class="hero-stat-card">
-      <span class="stat-label">Currency</span>
-      <span class="stat-value">{country.currency}</span>
+
+    <div class="flex items-start gap-4 sm:gap-5">
+      <img
+        src={country.flag}
+        alt={`Flag of ${country.name}`}
+        class="h-12 w-auto sm:h-16 object-contain flex-shrink-0 drop-shadow-sm"
+        loading="lazy"
+        width="64"
+        height="48"
+      />
+      <div>
+        <h1 id={`${country.slug}-hero`} class="text-3xl font-extrabold tracking-tight text-ink dark:text-on-primary sm:text-5xl">{country.name}</h1>
+        <p class="text-base font-medium text-primary dark:text-primary-light mt-1">{country.continent}</p>
+      </div>
     </div>
-    <div class="hero-stat-card">
-      <span class="stat-label">Capital</span>
-      <span class="stat-value">{country.capital}</span>
+    
+    <p class="mt-6 text-base sm:text-lg leading-relaxed max-w-4xl text-body dark:text-muted">
+      {country.taxSystemSummary}
+    </p>
+
+    <!-- Stats Grid -->
+    <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div class="flex flex-col items-center justify-center rounded-xl border border-hairline bg-canvas/50 p-4 text-center backdrop-blur-sm dark:border-overlay-lighter dark:bg-canvas/20">
+        <span class="text-xs font-semibold uppercase tracking-wider text-body dark:text-muted">Currency</span>
+        <span class="mt-1 text-lg font-bold text-ink dark:text-on-primary">{country.currency}</span>
+      </div>
+      <div class="flex flex-col items-center justify-center rounded-xl border border-hairline bg-canvas/50 p-4 text-center backdrop-blur-sm dark:border-overlay-lighter dark:bg-canvas/20">
+        <span class="text-xs font-semibold uppercase tracking-wider text-body dark:text-muted">Capital</span>
+        <span class="mt-1 text-lg font-bold text-ink dark:text-on-primary">{country.capital}</span>
+      </div>
+      <div class="flex flex-col items-center justify-center rounded-xl border border-hairline bg-canvas/50 p-4 text-center backdrop-blur-sm dark:border-overlay-lighter dark:bg-canvas/20">
+        <span class="text-xs font-semibold uppercase tracking-wider text-body dark:text-muted">Tax Year</span>
+        <span class="mt-1 text-lg font-bold text-ink dark:text-on-primary">{country.taxYear}</span>
+      </div>
     </div>
-    <div class="hero-stat-card">
-      <span class="stat-label">Tax Year</span>
-      <span class="stat-value">{country.taxYear}</span>
+
+    <!-- Meta Info -->
+    <div class="mt-6 flex flex-wrap items-center gap-4 text-sm font-medium text-body dark:text-muted">
+      <div class="flex items-center gap-1.5">
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <span>Updated {country.lastUpdated}</span>
+      </div>
+      <div class="flex items-center gap-1.5">
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+        <span>{country.officialTaxAuthority}</span>
+      </div>
     </div>
-  </div>
-  <div class="hero-meta mt-3">
-    <span class="hero-meta-item">
-      <svg class="hero-meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-      <span>Updated {country.lastUpdated}</span>
-    </span>
-    <span class="hero-meta-item">
-      <svg class="hero-meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
-      <span>{country.officialTaxAuthority}</span>
-    </span>
-  </div>
-  <div class="hero-ctas mt-4 flex flex-wrap gap-3">
-    <a href={primaryHref} class="inline-flex items-center justify-center rounded-pill bg-white px-5 py-2.5 text-sm font-semibold text-primary shadow-sm transition hover:-translate-y-0.5 hover:shadow-md active:translate-y-0">
-      Calculate {country.slug === 'hong-kong' ? 'Salaries Tax' : 'Income Tax'} &rarr;
-    </a>
-    <a href={secondaryHref} class="inline-flex items-center justify-center rounded-pill border border-white/40 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white/10 active:bg-white/20">
-      Browse All Calculators
-    </a>
+
+    <!-- Actions -->
+    <div class="mt-8 flex flex-wrap gap-4">
+      <a href={primaryHref} class="inline-flex items-center justify-center gap-2 rounded-pill bg-primary px-6 py-3 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
+        Calculate {country.slug === 'hong-kong' ? 'Salaries Tax' : 'Income Tax'} &rarr;
+      </a>
+      <a href={secondaryHref} class="inline-flex items-center justify-center gap-2 rounded-pill border border-hairline dark:border-overlay-light px-6 py-3 text-sm font-semibold text-ink dark:text-on-primary shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-canvas-soft dark:hover:bg-overlay-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
+        Browse All Calculators
+      </a>
+    </div>
   </div>
 </section>
