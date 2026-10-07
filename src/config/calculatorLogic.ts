@@ -144,8 +144,8 @@ export function calcIndiaIncomeTax(inputs: Record<string, any>) {
 
   let incomeTax = 0;
   if (regime === "new") {
-    incomeTax = pTax(taxableIncome, [[400000, 0], [800000, 0.05], [1200000, 0.10], [1600000, 0.15], [2000000, 0.20], [2400000, 0.25], [100000000, 0.30]]);
-    if (taxableIncome <= 1200000) {
+    incomeTax = pTax(taxableIncome, [[300000, 0], [700000, 0.05], [1000000, 0.10], [1200000, 0.15], [1500000, 0.20], [100000000, 0.30]]);
+    if (taxableIncome <= 700000) {
       incomeTax = 0;
     }
   } else {
@@ -226,7 +226,7 @@ export function calcUKIncomeTax(inputs: Record<string, any>) {
   const taxableIncome = Math.max(0, income - personalAllowance);
   const basic = Math.min(taxableIncome, 37700) * 0.20;
   const higher = Math.min(Math.max(taxableIncome - 37700, 0), 87440) * 0.40;
-  const additional = Math.max(0, taxableIncome - 125140 + personalAllowance) * 0.45;
+  const additional = Math.max(0, taxableIncome - 125140) * 0.45;
   const incomeTax = basic + higher + additional;
 
   const effectiveRate = income > 0 ? (incomeTax / income) * 100 : 0;
@@ -500,3 +500,5 @@ export const calculatorLogic = {
 };
 
 export type CalculatorFunction = keyof typeof calculatorLogic;
+
+
