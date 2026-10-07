@@ -12,28 +12,16 @@ const baseUrl = getBaseUrl();
   description="Explore tax information for countries worldwide. Find income tax, VAT, corporate tax, and more."
   breadcrumbs={[{ label: "Countries" }]}
 >
+
    <div class="mb-8">
      <h1 class="text-4xl font-bold text-ink dark:text-on-primary"><span data-i18n="countries.heading">Countries</span></h1>
      <p class="mt-2 text-lg text-body dark:text-muted" data-i18n="countries.comprehensive_tax_info" data-i18n-vars={JSON.stringify({ count: countries.length })}>
        Explore comprehensive tax information for {countries.length} countries.
      </p>
    </div>
-   <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80" alt="Global tax documents and financial planning on a desk" class="mb-8 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
 
-   <div class="mb-12">
-     <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">Why Tax Information Matters</h2>
-     <p class="text-body leading-relaxed dark:text-muted">
-       Understanding tax obligations is one of the most important aspects of personal and business finance. Whether you are a local resident, an expatriate, a freelancer, or a business owner, knowing how much you owe, when payments are due, and what deductions you can claim helps you avoid penalties, maximize refunds, and plan for the future.
-     </p>
-     <p class="mt-4 text-body leading-relaxed dark:text-muted">
-       Tax systems vary significantly from country to country. Progressive income tax in one nation may contrast sharply with a flat-rate regime in another. Value-added tax thresholds, property tax assessments, and capital gains treatment all differ based on local laws. Our goal is to present these differences clearly so you can make informed decisions wherever you live or work.
-     </p>
-     <p class="mt-4 text-body leading-relaxed dark:text-muted">
-       Accurate tax information also supports compliance. Missing a filing deadline or misunderstanding residency rules can lead to avoidable interest charges or audits. By providing up-to-date calculators and guides, we help you stay on top of obligations without needing expensive software or professional consultations for basic scenarios.
-     </p>
-   </div>
-
-   <div class="mb-8">
+<!-- Search and Grid moved to the top -->
+<div class="mb-8">
      <div class="relative">
          <input
            type="text"
@@ -41,7 +29,7 @@ const baseUrl = getBaseUrl();
            placeholder="Search countries..."
            aria-label="Search countries"
            data-i18n-placeholder="countries.search_countries"
-           class="form-input"
+           class="form-input !pl-10"
          />
          <svg class="absolute left-3 top-1/2 h-5 w-5 text-muted -translate-y-1/2 dark:text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -184,5 +172,22 @@ const baseUrl = getBaseUrl();
     Ultimately, navigating these regulations is a marathon, not a sprint. By prioritizing structured planning and mental clarity, you can turn a compliance burden into a strategic advantage.
   </p>
 </div>
+
+<!-- SEO Content moved to the bottom -->
+<div class="mt-16 pt-12 border-t border-hairline dark:border-overlay-lighter">
+  <div class="mb-12">
+     <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">Why Tax Information Matters</h2>
+     <p class="text-body leading-relaxed dark:text-muted">
+       Understanding tax obligations is one of the most important aspects of personal and business finance. Whether you are a local resident, an expatriate, a freelancer, or a business owner, knowing how much you owe, when payments are due, and what deductions you can claim helps you avoid penalties, maximize refunds, and plan for the future.
+     </p>
+     <p class="mt-4 text-body leading-relaxed dark:text-muted">
+       Tax systems vary significantly from country to country. Progressive income tax in one nation may contrast sharply with a flat-rate regime in another. Value-added tax thresholds, property tax assessments, and capital gains treatment all differ based on local laws. Our goal is to present these differences clearly so you can make informed decisions wherever you live or work.
+     </p>
+     <p class="mt-4 text-body leading-relaxed dark:text-muted">
+       Accurate tax information also supports compliance. Missing a filing deadline or misunderstanding residency rules can lead to avoidable interest charges or audits. By providing up-to-date calculators and guides, we help you stay on top of obligations without needing expensive software or professional consultations for basic scenarios.
+     </p>
+   </div>
+</div>
+
 
 </CountryLayout>
