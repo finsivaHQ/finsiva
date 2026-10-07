@@ -9,7 +9,7 @@
   --color-accent: #3B82F6;
   --color-canvas: #ffffff;
   --color-canvas-soft: #f8fafc;
-  --color-surface: #161B22;
+  --color-surface: #ffffff;
   --color-ink: #0f172a;
   --color-muted: #64748b;
   --color-body: #475569;
@@ -35,7 +35,7 @@
 .dark {
   --color-canvas: #0B0B0F;
   --color-canvas-soft: #111827;
-  --color-surface: #161B22;
+  --color-surface: #ffffff;
   --color-ink: #FFFFFF;
   --color-muted: #8B949E;
   --color-body: #C9D1D9;
@@ -3555,3 +3555,4 @@ details[open] .faq-chevron {
 .search-result-badge {
   flex-shrink: 0;
 }
+
