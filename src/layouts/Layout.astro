@@ -153,11 +153,10 @@ const financialProductSchema = {
       (function() {
         try {
           var s = localStorage.getItem('theme');
-          var p = window.matchMedia('(prefers-color-scheme: dark)').matches;
-          if (s === 'dark' || (!s && p)) {
-            document.documentElement.classList.add('dark');
-          } else {
+          if (s === 'light') {
             document.documentElement.classList.remove('dark');
+          } else {
+            document.documentElement.classList.add('dark');
           }
         } catch (e) {}
       })();
