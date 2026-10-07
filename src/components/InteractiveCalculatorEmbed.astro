@@ -138,7 +138,7 @@ const currency = getCurrency(currencyCode);
           {rule.outputs.map((output) => (
             <div class="rounded-lg border border-hairline bg-canvas p-3.5 dark:border-overlay-lighter dark:bg-surface/80">
               <p class="text-xs font-medium text-muted dark:text-muted">{output.label}</p>
-              <p class="mt-1 text-lg font-bold text-ink dark:text-on-primary" id={`output-${output.id}-${instanceId}`}>
+              <p class="mt-1 text-lg font-bold text-ink dark:text-on-primary overflow-x-auto whitespace-nowrap [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" id={`output-${output.id}-${instanceId}`}>
                 {output.format === "currency" ? formatCurrency(0, currencyCode) : output.format === "percentage" ? "0%" : "0"}
               </p>
               <p class="mt-0.5 text-xs text-muted dark:text-muted">{output.description}</p>
