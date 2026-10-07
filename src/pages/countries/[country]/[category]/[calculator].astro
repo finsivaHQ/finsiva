@@ -777,25 +777,25 @@ const calcCanonical = (() => {
               '<h2 class="premium-dashboard-title">Results Dashboard</h2>' +
               '<p class="premium-dashboard-subtitle">Your estimated tax breakdown at a glance</p>' +
             '</div>' +
-            '<div class="premium-summary-grid">' +
+            '<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">' +
               '<div class="premium-card premium-card--highlight">' +
                 '<div class="premium-card-icon"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>' +
-                '<div class="premium-card-content"><span class="premium-card-label">Gross Income</span><span class="premium-card-value">' + (grossText || 'N/A') + '</span></div>' +
+                '<div class="premium-card-content overflow-hidden"><span class="premium-card-label">Gross Income</span><span class="premium-card-value">' + (grossText || 'N/A') + '</span></div>' +
               '</div>' +
               '<div class="premium-card premium-card--tax">' +
                 '<div class="premium-card-icon"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z"/></svg></div>' +
-                '<div class="premium-card-content"><span class="premium-card-label">Total Tax</span><span class="premium-card-value">' + (taxText || 'N/A') + '</span></div>' +
+                '<div class="premium-card-content overflow-hidden"><span class="premium-card-label">Total Tax</span><span class="premium-card-value">' + (taxText || 'N/A') + '</span></div>' +
               '</div>' +
               '<div class="premium-card premium-card--success">' +
                 '<div class="premium-card-icon"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/></svg></div>' +
-                '<div class="premium-card-content"><span class="premium-card-label">Net Income</span><span class="premium-card-value">' + (netText || 'N/A') + '</span></div>' +
+                '<div class="premium-card-content overflow-hidden"><span class="premium-card-label">Net Income</span><span class="premium-card-value">' + (netText || 'N/A') + '</span></div>' +
               '</div>' +
               '<div class="premium-card premium-card--rate">' +
                 '<div class="premium-card-icon"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg></div>' +
-                '<div class="premium-card-content"><span class="premium-card-label">Effective Tax Rate</span><span class="premium-card-value">' + (effectiveText || 'N/A') + '</span></div>' +
+                '<div class="premium-card-content overflow-hidden"><span class="premium-card-label">Effective Tax Rate</span><span class="premium-card-value">' + (effectiveText || 'N/A') + '</span></div>' +
               '</div>' +
             '</div>' +
-            (net > 0 ? '<div class="premium-frequency-grid">' +
+            (net > 0 ? '<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">' +
               '<div class="premium-frequency-card"><span class="premium-frequency-label">Monthly Take-home</span><span class="premium-frequency-value">' + sym + monthly.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + '</span></div>' +
               '<div class="premium-frequency-card"><span class="premium-frequency-label">Weekly Take-home</span><span class="premium-frequency-value">' + sym + weekly.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + '</span></div>' +
               '<div class="premium-frequency-card"><span class="premium-frequency-label">Daily Take-home</span><span class="premium-frequency-value">' + sym + daily.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + '</span></div>' +
@@ -812,7 +812,7 @@ const calcCanonical = (() => {
                 (netText ? '<div class="tax-breakdown-step tax-breakdown-step--highlight"><span>' + netText + '</span><span class="text-xs text-muted ml-1">Net Income</span></div>' : '') +
               '</div>' +
             '</div>' : '') +
-            (additionalCards ? '<div class="premium-additional-grid">' + additionalCards + '</div>' : '') +
+            (additionalCards ? '<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">' + additionalCards + '</div>' : '') +
           '</div>' +
         '</div>';
 

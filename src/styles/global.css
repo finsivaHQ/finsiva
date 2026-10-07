@@ -2787,6 +2787,7 @@ details[open] .faq-chevron {
 }
 
 .premium-card-value {
+  display: block;
   font-size: 1.5rem;
   font-weight: 800;
   color: var(--color-ink, #0f172a);
@@ -2795,6 +2796,7 @@ details[open] .faq-chevron {
   white-space: nowrap;
   overflow-x: auto;
   scrollbar-width: none;
+  max-width: 100%;
 }
 .premium-card-value::-webkit-scrollbar {
   display: none;
@@ -2861,6 +2863,7 @@ details[open] .faq-chevron {
 }
 
 .premium-frequency-value {
+  display: block;
   font-size: 1.125rem;
   font-weight: 700;
   color: var(--color-ink, #0f172a);
@@ -2931,6 +2934,7 @@ details[open] .faq-chevron {
 }
 
 .premium-additional-value {
+  display: block;
   font-size: 1.125rem;
   font-weight: 700;
   color: var(--color-ink, #0f172a);
