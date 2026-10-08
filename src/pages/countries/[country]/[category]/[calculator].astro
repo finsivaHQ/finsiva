@@ -1275,6 +1275,7 @@ const calcCanonical = (() => {
           totalAmount = amount * (1 + rate);
         }
         setOutput('vatAmount', vatAmount, 'currency');
+        setOutput('gstAmount', vatAmount, 'currency');
         setOutput('totalAmount', totalAmount, 'currency');
         setOutput('netAmount', netAmount, 'currency');
       }
