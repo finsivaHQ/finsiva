@@ -1,14 +1,12 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
 
-const title = "Pakistan FBR Tax Slabs 2026: Salaried & Non-Salaried Income Rates";
-const description = "Complete guide to official FBR income tax slabs in Pakistan for 2026. Compare salaried vs non-salaried tax slabs, calculate your tax, and understand marginal rates.";
+const title = "Pakistan Income Tax Slabs & Calculator (2026–27)";
+const description = "Complete guide to the FBR pakistan income tax slabs for 2026-27. Compare salaried and non-salaried tax slabs, calculate your take-home pay, and view the latest amendments.";
 const image = "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&q=80";
 const canonical = "https://finsiva.com/blogs/pakistan-fbr-tax-slabs";
-const author = "Ayesha Malik";
-const authorBio = "Chartered accountant specializing in FBR tax legislation, statutory income tax slabs, and compliance audits.";
-const lastUpdated = "August 2026";
-const readTime = "14 min read";
+const author = "Ayesha Malik, Senior Tax Advisor";
+const authorBio = "Chartered accountant specializing in FBR tax legislation, statutory income tax slabs, and compliance audits in Pakistan.";
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -16,218 +14,153 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What are the official FBR tax slabs for salaried individuals in 2026?",
-      acceptedAnswer: {
+      "name": "What are the income tax slabs in Pakistan?",
+      "acceptedAnswer": {
         "@type": "Answer",
-        text: "FBR salaried income tax slabs for 2026 range from 0% (up to PKR 600,000), 5% (PKR 600k-1.2M), 15% (PKR 1.2M-2.2M), 25% (PKR 2.2M-3.2M), 30% (PKR 3.2M-4.1M), to 35% on taxable income exceeding PKR 4.1 million per year."
+        "text": "The income tax slabs in Pakistan are progressive tiers set by the FBR. For salaried individuals, income up to Rs. 600,000 is tax-free. Earnings above this are taxed at progressively higher rates ranging from 2.5% to 35%."
       }
     },
     {
       "@type": "Question",
-      "name": "What is the difference between salaried and non-salaried FBR tax slabs?",
-      acceptedAnswer: {
+      "name": "How is monthly salary tax calculated under FBR guidelines?",
+      "acceptedAnswer": {
         "@type": "Answer",
-        text: "Salaried individuals pay lower marginal tax rates across mid-tier brackets compared to non-salaried individuals and business sole proprietors, although both share a PKR 600,000 tax-free limit."
+        "text": "Monthly salary tax is calculated by estimating your annual gross salary, applying the relevant FBR tax slab to find your annual tax liability, and then dividing that amount by 12 to determine your monthly withholding tax."
       }
     },
     {
       "@type": "Question",
-      "name": "How does progressive tax slab calculation work in Pakistan?",
-      acceptedAnswer: {
+      "name": "What is the fbr tax exemption limit pakistan?",
+      "acceptedAnswer": {
         "@type": "Answer",
-        text: "Under FBR progressive taxation, a higher tax rate applies only to the portion of income that exceeds each bracket threshold, rather than taxing your entire income at the highest rate."
+        "text": "The fundamental fbr tax exemption limit pakistan is Rs. 600,000 per year for both salaried and non-salaried individuals. Income below this threshold is not subject to income tax."
       }
     },
     {
       "@type": "Question",
-      "name": "When do new FBR tax slabs take effect in Pakistan?",
-      acceptedAnswer: {
+      "name": "How much tax on 70k salary in Pakistan?",
+      "acceptedAnswer": {
         "@type": "Answer",
-        text: "New income tax slabs approved in the annual Federal Finance Act take effect on July 1 at the start of the Pakistani tax year."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How is the 75% salary rule determined for tax purposes?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "To be classified as 'salaried' for tax purposes, your salary income must constitute at least 75% of your total taxable income. If your salary is less than 75% of your total income, you are treated as a non-salaried individual."
+        "text": "An annual salary of Rs. 840,000 (which is 70k per month) exceeds the 600,000 exemption limit by 240,000. At a 2.5% rate on the excess, the annual tax is Rs. 6,000, which means a monthly deduction of Rs. 500."
       }
     }
   ]
 };
 ---
 
-<BlogLayout title={title} description={description} image={image} canonical={canonical} author={author} authorBio={authorBio} lastUpdated={lastUpdated} readTime={readTime}>
-  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
-
-  <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
-    <p>
-      The statutory rate structure for personal and business income in Pakistan is established by the Federal Government through annual Finance Acts enacted by Parliament. The <strong>Federal Board of Revenue (FBR)</strong> enforces these statutory <strong>Pakistan FBR tax slabs</strong> under the First Schedule of the <em>Income Tax Ordinance, 2001</em>. Keeping up with these updates is a critical component of financial planning for millions of Pakistanis.
-    </p>
-    <p>
-      Understanding the <strong>slab rate of income tax in Pakistan</strong> and identifying your specific <strong>income tax bracket Pakistan</strong> allows taxpayers to forecast annual tax liabilities, verify employer Section 149 deductions, and plan tax-saving investments legally. Every year, changes to these brackets can mean the difference between significant savings and an unexpected tax bill.
+<BlogLayout title={title} description={description} image={image} author={author} authorBio={authorBio} canonical={canonical} structuredData={faqSchema}>
+  
+  <div class="prose prose-lg max-w-none dark:prose-invert">
+    <h1 class="text-4xl font-extrabold mt-6 mb-8 text-ink dark:text-on-primary">Pakistan Income Tax Slabs & Calculator (2026–27)</h1>
+    
+    <p class="lead text-xl text-muted font-medium mb-8">
+      Let’s be completely honest for a moment. Every time the Federal Board of Revenue (FBR) announces the new federal budget, the immediate reaction for most taxpayers is overwhelming anxiety. Trying to decipher the new <strong>income tax slabs 2026-27</strong>, understanding exactly how much your take-home pay will shrink, and navigating the endless bureaucratic jargon can feel deeply frustrating.
     </p>
 
-    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">1. Official FBR Salaried Tax Slabs (2026)</h2>
     <p>
-      For individuals deriving 75% or more of their total taxable income from salary, progressive tax slabs apply. The FBR structures these slabs to provide relief to lower-income earners while progressively increasing the tax burden on higher-income brackets. This system is designed to ensure a fair distribution of the tax load across the population.
+      Whether you are an employee looking at your monthly payslip, a freelancer trying to stay compliant, or a business owner managing payroll, getting the math wrong has real consequences. In this comprehensive, deeply researched guide, we are going to cut through the noise. We will break down the exact <strong>pakistan income tax slabs</strong>, highlight the critical <strong>finance bill pakistan amendments</strong>, and give you the tools to optimize your tax footprint.
     </p>
 
-    <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
-      <table class="w-full text-left text-sm">
-        <thead class="bg-canvas-soft border-b border-hairline dark:bg-surface/80 dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
-          <tr>
-            <th class="p-3">Annual Taxable Income (PKR)</th>
-            <th class="p-3">FBR Statutory Income Tax Rate</th>
-          </tr>
-        </thead>
-        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
-          <tr><td class="p-3 font-medium">Up to PKR 600,000</td><td class="p-3 font-bold text-primary dark:text-on-primary">0% (Tax-Free Threshold)</td></tr>
-          <tr><td class="p-3 font-medium">PKR 600,001 – 1,200,000</td><td class="p-3">5% of excess over PKR 600,000</td></tr>
-          <tr><td class="p-3 font-medium">PKR 1,200,001 – 2,200,000</td><td class="p-3">PKR 30,000 + 15% of excess over PKR 1.2M</td></tr>
-          <tr><td class="p-3 font-medium">PKR 2,200,001 – 3,200,000</td><td class="p-3">PKR 180,000 + 25% of excess over PKR 2.2M</td></tr>
-          <tr><td class="p-3 font-medium">PKR 3,200,001 – 4,100,000</td><td class="p-3">PKR 430,000 + 30% of excess over PKR 3.2M</td></tr>
-          <tr><td class="p-3 font-medium">Above PKR 4,100,000</td><td class="p-3 font-bold text-primary dark:text-on-primary">PKR 700,000 + 35% of excess over PKR 4.1M</td></tr>
-        </tbody>
-      </table>
+    <!-- Hub Calculator CTA (MachaRule) -->
+    <div class="my-10 rounded-xl border-2 border-primary/20 bg-primary/5 p-8 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div>
+        <h3 class="text-2xl font-bold text-ink dark:text-on-primary m-0">Need Exact Figures Instantly?</h3>
+        <p class="text-body text-muted mt-2 mb-0">Stop doing manual math. Use our official <strong>income tax pakistan calculator</strong> to forecast your exact monthly take-home pay in seconds.</p>
+      </div>
+      <a href="/countries/pakistan/income-tax/income-tax-calculator/" class="inline-flex items-center justify-center rounded-lg bg-primary px-8 py-4 text-lg font-bold text-white transition hover:bg-primary/90 whitespace-nowrap shadow-md">
+        Open Tax Calculator Pakistan 2026 &rarr;
+      </a>
     </div>
 
+    <h2 class="text-3xl font-bold mt-12 mb-6">Salaried Person Tax Slabs (FBR Rates)</h2>
     <p>
-      The tax-free threshold of PKR 600,000 remains a crucial relief for low-income families. However, as inflation impacts the cost of living, understanding your effective tax rate beyond this threshold is essential. Your employer will typically calculate these deductions and withhold them at the source each month. To double-check their calculations, or to forecast your take-home pay, use our <a href="/countries/pakistan/income-tax/salary-tax-calculator/" class="text-link hover:underline">Pakistan Salary Tax Calculator</a>.
+      For the vast majority of the workforce, the <strong>salary tax slabs</strong> dictate your financial reality. To qualify as a "salaried person" under FBR rules, your salary must constitute more than 75% of your total taxable income for the year.
     </p>
 
-    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">2. Official FBR Non-Salaried & Business Tax Slabs</h2>
+    <h3 class="text-2xl font-semibold mt-8 mb-4">Breakdown of Tax Brackets</h3>
     <p>
-      If your salary constitutes less than 75% of your total income, you fall under the non-salaried category. This includes sole proprietors, freelancers, and independent contractors. The FBR applies a steeper progressive tax structure to these individuals, reflecting the different nature of their income generation and potential deductions.
+      The <strong>tax slab for salaried person 2026-27</strong> is highly progressive. This means you do not pay a flat percentage on your entire income; rather, you pay higher rates only on the portion of your income that falls into higher brackets. (Note: These brackets also supersede the older <strong>tax slab 25 26</strong> structures).
     </p>
 
-    <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
-      <table class="w-full text-left text-sm">
-        <thead class="bg-canvas-soft border-b border-hairline dark:bg-surface/80 dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
-          <tr>
-            <th class="p-3">Annual Business/Non-Salaried Income (PKR)</th>
-            <th class="p-3">FBR Non-Salaried Tax Rate</th>
-          </tr>
-        </thead>
-        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
-          <tr><td class="p-3 font-medium">Up to PKR 600,000</td><td class="p-3 font-bold text-primary dark:text-on-primary">0% (Tax-Free Minimum)</td></tr>
-          <tr><td class="p-3 font-medium">PKR 600,001 – 1,200,000</td><td class="p-3">15% of excess over PKR 600,000</td></tr>
-          <tr><td class="p-3 font-medium">PKR 1,200,001 – 1,600,000</td><td class="p-3">PKR 90,000 + 20% of excess over PKR 1.2M</td></tr>
-          <tr><td class="p-3 font-medium">PKR 1,600,001 – 3,200,000</td><td class="p-3">PKR 170,000 + 30% of excess over PKR 1.6M</td></tr>
-          <tr><td class="p-3 font-medium">Above PKR 3,200,000</td><td class="p-3 font-bold text-primary dark:text-on-primary">PKR 650,000 + 35% of excess over PKR 3.2M</td></tr>
-        </tbody>
-      </table>
-    </div>
-
     <p>
-      Notice how the initial taxable bracket jumps immediately to 15% compared to the 5% for salaried individuals. This underscores the importance of proper tax planning, expense tracking, and claiming all legitimate business deductions for the non-salaried class. Calculate your commercial tax dues on our <a href="/countries/pakistan/income-tax/business-income-tax-calculator/" class="text-link hover:underline">Business Tax Calculator</a> or explore our <a href="/blogs/pakistan-corporate-tax-guide/" class="text-link hover:underline">Pakistan Corporate Tax Guide</a> for deeper insights into corporate structuring.
+      Here is the simplified breakdown of the <strong>fbr tax rates salaried person</strong>:
     </p>
-
-    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">3. Understanding Progressive Marginal Taxation</h2>
-    <p>
-      A common misconception in Pakistan is that entering a higher tax bracket means your <em>entire</em> income is taxed at that higher rate. This is false. Pakistan utilizes a progressive marginal tax system. This means that a higher tax rate applies <strong>only to the portion of income that falls within that specific bracket</strong>.
-    </p>
-    <p>
-      Let's look at a detailed step-by-step calculation example to illustrate this mechanics clearly.
-    </p>
-
-    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-4">Progressive Calculation Example</h3>
-    <ul class="list-disc pl-6 space-y-2 mt-4 mb-6">
-      <li>Suppose your annual taxable salary is exactly <strong>PKR 1,800,000</strong>.</li>
-      <li><strong>Bracket 1 (0 - 600k):</strong> The first PKR 600,000 is safely within the tax-free threshold. Tax = PKR 0.</li>
-      <li><strong>Bracket 2 (600k - 1.2M):</strong> The next PKR 600,000 is taxed at the 5% rate. 5% of 600,000 = PKR 30,000.</li>
-      <li><strong>Bracket 3 (1.2M - 2.2M):</strong> The remaining income is PKR 600,000 (1.8M total - 1.2M accounted for). This falls into the 15% bracket. 15% of 600,000 = PKR 90,000.</li>
-      <li><strong>Total Annual Tax Liability:</strong> PKR 30,000 + PKR 90,000 = <strong>PKR 120,000</strong>.</li>
-      <li><strong>Monthly Deduction:</strong> This equals a monthly tax deduction of approximately PKR 10,000 by your employer.</li>
+    <ul class="list-disc pl-6 space-y-2 mt-4 text-lg">
+      <li><strong>Up to Rs. 600,000:</strong> 0% (Fully Exempt)</li>
+      <li><strong>Rs. 600,001 to Rs. 1,200,000:</strong> 2.5% of the amount exceeding Rs. 600k</li>
+      <li><strong>Rs. 1,200,001 to Rs. 2,200,000:</strong> Rs. 15,000 + 12.5% of the amount exceeding Rs. 1.2M</li>
+      <li><strong>Rs. 2,200,001 to Rs. 3,200,000:</strong> Rs. 140,000 + 22.5% of the amount exceeding Rs. 2.2M</li>
+      <li><strong>Rs. 3,200,001 to Rs. 4,100,000:</strong> Rs. 365,000 + 27.5% of the amount exceeding Rs. 3.2M</li>
+      <li><strong>Above Rs. 4,100,000:</strong> Rs. 612,500 + 35% of the amount exceeding Rs. 4.1M</li>
     </ul>
 
-    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">4. Key Deductions and Tax Credits</h2>
+    <h3 class="text-2xl font-semibold mt-8 mb-4">Common Salary Bracket Breakdown (Examples)</h3>
     <p>
-      Knowing your slab is only half the battle. To optimize your financial position, you must be aware of the tax credits and deductible allowances provided under the Income Tax Ordinance. These can significantly lower your taxable income before the slab rates are even applied.
+      Let’s apply this to real-world scenarios to alleviate the confusion. When people search for specific salary impacts, they usually want to know exactly what leaves their bank account.
     </p>
-    <ul class="list-disc pl-6 space-y-2 mt-4 mb-6">
-      <li><strong>Zakat Contributions:</strong> Zakat paid under the Zakat and Ushr Ordinance is fully deductible from your total taxable income.</li>
-      <li><strong>Charitable Donations:</strong> Donations to approved non-profit organizations (listed under Clause 61 of Part I of the Second Schedule) can earn you substantial tax credits.</li>
-      <li><strong>Investment in Shares & Insurance:</strong> Historically, investments in mutual funds, life insurance premiums, and approved pension funds have offered tax credits, subject to holding periods and upper limits. Always consult the latest Finance Act to confirm current eligibility.</li>
-      <li><strong>Profit on Debt (Mortgage Interest):</strong> If you have taken a loan to build or buy a house, a portion of the interest paid may be deductible.</li>
+
+    <div class="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 p-6 my-8 rounded-r-lg">
+      <ul class="space-y-4">
+        <li><strong>Income tax on 50000 salary in pakistan:</strong><br/> An annual gross salary of Rs. 600,000 (50k × 12) falls perfectly within the <strong>fbr tax exemption limit pakistan</strong>. Therefore, your tax liability is absolutely zero.</li>
+        <li><strong>How much tax on 70k salary in pakistan:</strong><br/> An annual salary of Rs. 840,000 exceeds the exemption limit by Rs. 240,000. Under the 2.5% bracket, your annual tax is Rs. 6,000. That breaks down to a mere Rs. 500 deducted per month.</li>
+        <li><strong>Income tax on 100000 salary in pakistan:</strong><br/> Earning 100k per month equals Rs. 1,200,000 annually. You fall into the top edge of the second tier. Your total annual tax is Rs. 15,000, meaning your employer will deduct Rs. 1,250 every month.</li>
+      </ul>
+    </div>
+
+    <h2 class="text-3xl font-bold mt-12 mb-6">Non-Salaried & Business Income Tax Slabs</h2>
+    <p>
+      The rules change significantly if you are self-employed, a freelancer, or running a business entity. If your salary makes up less than 75% of your total income, you fall into the <strong>non salaried tax slabs pakistan</strong> category. 
+    </p>
+    <p>
+      The <strong>business income tax slabs pakistan</strong> are notoriously steeper in the middle tiers compared to salaried individuals. While the initial exemption limit of Rs. 600,000 remains the same, the marginal tax rates ramp up much faster, reaching 15% and 20% at much lower income thresholds than salaried employees.
+    </p>
+
+    <h3 class="text-2xl font-semibold mt-8 mb-4">The Corporate Landscape</h3>
+    <p>
+      For registered companies, the mechanics are different altogether. The standard <strong>corporate tax rate pakistan</strong> currently hovers around 29%, though this is subject to super taxes and varying industry-specific rebates depending on the latest <strong>finance bill pakistan amendments</strong>. Small companies enjoy a slightly reduced rate, but the compliance burden is heavy.
+    </p>
+    <p>
+      Additionally, businesses must navigate the <strong>sales tax in pakistan</strong> (typically 18% GST on goods, though provincial taxes on services vary widely) and rigorous withholding tax requirements.
+    </p>
+
+    <h2 class="text-3xl font-bold mt-12 mb-6">Key Exemptions and Thresholds</h2>
+    <p>
+      Navigating your tax liability isn't just about knowing what you owe; it's about utilizing the legal frameworks to minimize your exposure. 
+    </p>
+    <ul class="list-disc pl-6 space-y-2 mt-4 text-lg">
+      <li><strong>The Ultimate Baseline:</strong> The absolute foundational <strong>fbr tax exemption limit pakistan</strong> remains Rs. 600,000. If your taxable income is below this, you are outside the tax net for income tax (though still liable for indirect taxes).</li>
+      <li><strong>Withholding Tax Mastery:</strong> Every business owner and high-earner must be intimately familiar with the <strong>fbr withholding tax rate card</strong>. Withholding tax is deducted at the source—on bank transactions, vehicle registrations, and property transfers. However, if you are an "Active Taxpayer" (filer), the withholding rates applied to you are drastically reduced compared to non-filers. Filing your returns effectively slashes your indirect tax burden in half.</li>
     </ul>
 
-    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">5. Compliance, Filing, and The FBR IRIS Portal</h2>
+    <h2 class="text-3xl font-bold mt-12 mb-6">The Psychological Burden of Tax Compliance</h2>
     <p>
-      Filing your income tax return is a mandatory legal obligation for anyone earning above the PKR 600,000 threshold, regardless of whether your employer has already deducted the tax at source. Filing correctly ensures you are officially listed as an Active Taxpayer (ATL), which grants you significant benefits like lower withholding tax rates on banking transactions, vehicle purchases, and property transfers.
+      Let's address the elephant in the room. The real challenge of dealing with FBR regulations isn't just the math; it's the profound psychological stress of uncertainty. Fear of audits, the penalty of being placed on the non-filer list, and the sheer fatigue of deciphering legal notifications take a massive toll on business owners and salaried professionals alike.
     </p>
     <p>
-      The filing process is conducted online via the <a href="https://iris.fbr.gov.pk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline">FBR IRIS Portal</a>. The standard deadline for individuals is typically <strong>September 30</strong> following the end of the tax year on June 30.
+      You must transition your mindset from reactive anxiety to proactive control. Keep impeccable digitized records. Become an Active Taxpayer immediately to leverage lower withholding rates. And above all, do not rely on guesswork—use an accurate <strong>tax calculator pakistan 2026</strong> to forecast your exact liabilities well in advance of the June 30th fiscal year-end.
     </p>
-    <p>
-      For step-by-step guidance on how to navigate the IRIS system, visit our main <a href="/knowledge/pakistan-income-tax/" class="text-link hover:underline">Pakistan Income Tax Hub</a> or read our comprehensive <a href="/blogs/pakistan-tax-filing-guide/" class="text-link hover:underline">Pakistan Tax Filing Guide</a>.
-    </p>
+
   </div>
 
-  <div class="mt-12 space-y-6 text-body dark:text-muted leading-relaxed border-t border-hairline dark:border-overlay-lighter pt-8">
-    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">The Psychology Behind Navigating Pakistan FBR Tax Slabs</h2>
-    <p>
-      Let's be incredibly honest for a moment. When you're trying to understand <strong>Pakistan FBR Tax Slabs</strong>, the sheer volume of bureaucratic jargon can feel entirely overwhelming. It’s not just about the numbers or the compliance—it's about the psychological weight of getting it right. Fear of penalties, the stress of audits, and the anxiety of misinterpreting complex regulations are universal pain points shared by taxpayers nationwide.
-    </p>
-    <p>
-      Many salaried individuals, freelancers, and business owners experience what financial psychologists term "compliance fatigue." You are expected to be an expert in everything from withholding rules to obscure deduction clauses, all while managing your actual career or business. The truth is, mastering your tax obligations requires a shift in mindset: from reactive compliance and fear, to proactive wealth preservation and financial empowerment.
-    </p>
-
-    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Advanced Strategies for Minimizing Risk and Anxiety</h3>
-    <p>
-      Beyond knowing the basic rates, the most financially secure individuals employ structured, legally sound strategies. Here is how you can move from surviving tax season to thriving through it:
-    </p>
-    <ul class="list-disc pl-6 space-y-2 mt-4">
-      <li><strong>Documentation is Your Psychological Shield:</strong> Never rely on memory. Maintain granular, digitized records of all expenses, utility bills, salary slips, and FBR correspondence. A well-organized digital ledger is your absolute best defense against arbitrary assessments and the anxiety they bring.</li>
-      <li><strong>Embrace the ATL Advantage:</strong> Getting onto the Active Taxpayers List (ATL) isn't just a chore; it's a financial strategy. The halving of withholding taxes on mundane activities (like cash withdrawals or buying a car) provides immediate positive reinforcement for compliance.</li>
-      <li><strong>Strategic Timing of Income and Expenses:</strong> The timing of when you recognize income and realize expenses can drastically alter your tax footprint. Accelerating deductible expenses into the current year or deferring a large bonus into the next fiscal period (if legally permissible) is a cornerstone of intelligent planning.</li>
-      <li><strong>Professional Consultation over DIY Stress:</strong> The financial cost of an expert is almost always lower than the compounding cost of a compliance error and the sleep lost over it. Navigating complex FBR regulations without professional counsel is an unnecessary emotional and financial risk.</li>
-    </ul>
-
-    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Troubleshooting Common Edge-Case Scenarios</h3>
-    <p>
-      What happens when things don't go according to plan? Let's address some edge cases that frequently trip up even seasoned professionals, causing undue stress:
-    </p>
-    <ol class="list-decimal pl-6 space-y-2 mt-4">
-      <li><strong>Discrepancies in Source Documents (Section 149):</strong> If your employer's withholding certificate contains errors compared to your actual bank deposits, do not blindly adjust your return to match the error. Request a formal, written correction from HR immediately to avoid discrepancies during an FBR audit.</li>
-      <li><strong>Freelance and Foreign Remittances:</strong> Many IT professionals and freelancers receive foreign remittances. While often tax-exempt under specific IT export clauses (provided conditions are met, like registering with PSEB), they must be declared meticulously. Failing to declare them because they are "exempt" is a major red flag for the FBR.</li>
-      <li><strong>Multi-Jurisdictional Conflicts:</strong> If your income crosses borders (e.g., you work remotely for an overseas company), you may face double taxation. Always invoke the relevant Double Taxation Avoidance Agreements (DTAA) that Pakistan has signed, and ensure you have the necessary tax residency certificates on hand.</li>
-      <li><strong>Late Filing Repercussions:</strong> If you miss the September 30 deadline, the worst action is inaction. File as soon as possible. The system will accept late returns, though you may face a surcharge to get on the ATL. Proactively filing late is always better than being flagged as a non-filer.</li>
-    </ol>
-
-    <p class="mt-6 font-medium text-ink dark:text-on-primary">
-      Ultimately, navigating FBR tax slabs is a marathon, not a sprint. By prioritizing structured financial planning, maintaining meticulous records, and seeking help when needed, you can transform an annual compliance burden into a strategic, stress-free advantage.
-    </p>
-  </div>
-
-  <div class="mt-12">
-    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mb-6">Frequently Asked Questions</h2>
-    <div class="space-y-4">
-      {faqSchema.mainEntity.map(faq => (
-        <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
-          <h3 class="text-lg font-semibold text-ink dark:text-on-primary">{faq.name}</h3>
-          <p class="mt-2 text-sm text-body dark:text-muted leading-relaxed">{faq.acceptedAnswer.text}</p>
-        </div>
-      ))}
+  <div class="mt-16 pt-8 border-t border-hairline dark:border-overlay-light">
+    <h2 class="text-2xl font-bold mb-6">Frequently Asked Questions (FAQs)</h2>
+    <div class="space-y-6">
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What are the income tax slabs in Pakistan?</h3>
+        <p class="text-body mt-2">The income tax slabs in Pakistan are progressive tiers set by the FBR. For salaried individuals, income up to Rs. 600,000 is tax-free. Earnings above this are taxed at progressively higher rates ranging from 2.5% to 35%.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">How is monthly salary tax calculated under FBR guidelines?</h3>
+        <p class="text-body mt-2">Monthly salary tax is calculated by estimating your annual gross salary, applying the relevant FBR tax slab to find your annual tax liability, and then dividing that amount by 12 to determine your monthly withholding tax.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is the FBR tax exemption limit for Pakistan?</h3>
+        <p class="text-body mt-2">The fundamental FBR tax exemption limit is Rs. 600,000 per year for both salaried and non-salaried individuals. Income below this threshold is not subject to income tax.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-ink dark:text-on-primary">How much tax is deducted on a 70k salary in Pakistan?</h3>
+        <p class="text-body mt-2">An annual salary of Rs. 840,000 (which is 70k per month) exceeds the 600,000 exemption limit by 240,000. At a 2.5% rate on the excess, the annual tax is Rs. 6,000, which means a monthly deduction of just Rs. 500.</p>
+      </div>
     </div>
   </div>
-
-  <div class="mt-12 p-6 rounded-2xl bg-canvas-soft border border-hairline dark:border-overlay-lighter dark:bg-surface">
-    <h3 class="text-xl font-bold text-ink dark:text-on-primary">About the Author</h3>
-    <p class="mt-2 text-sm font-semibold text-primary dark:text-on-primary">{author}</p>
-    <p class="mt-1 text-sm text-body dark:text-muted">{authorBio}</p>
-  </div>
-
-  <!-- Hub Calculator CTA (MachaRule) -->
-  <div class="my-8 rounded-xl border border-hairline bg-canvas-soft p-6 shadow-sm dark:border-overlay-lighter dark:bg-surface flex flex-col sm:flex-row items-center justify-between gap-4">
-    <div>
-      <h3 class="font-bold text-ink dark:text-on-primary">Need Exact Figures?</h3>
-      <p class="text-sm text-muted mt-1">Use our free interactive calculators to estimate your taxes.</p>
-    </div>
-    <a href="/countries/pakistan/" class="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primary/90 whitespace-nowrap">
-      Go to Calculators &rarr;
-    </a>
-  </div>
-
 </BlogLayout>
