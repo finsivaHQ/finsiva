@@ -21,17 +21,27 @@ export default defineConfig({
     }
   })],
     redirects: {
-    '/blogs/hong-kong-tax-residency/': {
-      status: 301,
-      destination: '/knowledge/hong-kong-tax-residency/'
-    },
+    '/blogs/pakistan-salary-tax-guide/': { status: 301, destination: '/blogs/pakistan-fbr-tax-slabs/' },
+    '/blogs/pakistan-income-tax-guide/': { status: 301, destination: '/blogs/pakistan-fbr-tax-slabs/' },
+    '/blogs/pakistan-foreign-income-remittance-tax-guide/': { status: 301, destination: '/blogs/pakistan-freelancer-tax-guide/' },
+    '/blogs/pakistan-capital-gain-tax-guide/': { status: 301, destination: '/blogs/pakistan-property-tax-guide/' },
+    '/blogs/pakistan-token-tax-guide/': { status: 301, destination: '/blogs/pakistan-vehicle-tax-guide/' },
+    '/blogs/singapore-gst-registration-accounting-compliance-guide/': { status: 301, destination: '/blogs/singapore-gst-rate-2026-guide/' },
+    '/blogs/singapore-zero-gst-warehouse-wgst-customs-guide/': { status: 301, destination: '/blogs/singapore-gst-rate-2026-guide/' },
+    '/blogs/nz-income-tax-brackets-rates-history-guide/': { status: 301, destination: '/blogs/new-zealand-income-tax-rates-brackets-2025-2026/' },
+    '/blogs/is-new-zealand-tax-free-haven-worldwide-tax-explained/': { status: 301, destination: '/blogs/new-zealand-income-tax-for-expats-foreigners-non-residents/' },
+    '/blogs/nz-overseas-income-fif-uk-pension-transfer-tax-guide/': { status: 301, destination: '/blogs/new-zealand-income-tax-for-expats-foreigners-non-residents/' },
+    '/blogs/new-zealand-income-tax-act-2007-corporate-property-rental-tax/': { status: 301, destination: '/blogs/nz-corporate-business-family-trust-tax-guide/' },
+    '/blogs/nz-rental-property-airbnb-income-tax-guide/': { status: 301, destination: '/blogs/nz-corporate-business-family-trust-tax-guide/' },
+
+    '/knowledge/hong-kong-tax-residency/': { status: 301, destination: '/blogs/hong-kong-tax-residency/' },
     '/blogs/singapore-tax-for-malaysian-indian-expats-guide/': {
       status: 301,
       destination: '/blogs/singapore-tax-for-foreigners-expats-guide/'
     },
     '/blogs/pakistan-salary-income-tax-slabs-evolution-guide-2026/': {
       status: 301,
-      destination: '/blogs/pakistan-salary-tax-guide/'
+      destination: '/blogs/pakistan-fbr-tax-slabs/'
     },
     '/blogs/pakistan-business-tax-slabs-corporate-aop-withholding-guide-2026/': {
       status: 301,
@@ -39,7 +49,7 @@ export default defineConfig({
     },
     '/blogs/pakistan-foreign-income-remittance-freelancer-tax-guide-2026/': {
       status: 301,
-      destination: '/blogs/pakistan-foreign-income-remittance-tax-guide/'
+      destination: '/blogs/pakistan-freelancer-tax-guide/'
     },
     '/blogs/pakistan-property-sale-tax-capital-gain-inherited-property-guide-2026/': {
       status: 301,
