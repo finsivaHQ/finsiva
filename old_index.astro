@@ -1,0 +1,724 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { countries } from "../data/countries";
+import { getBaseUrl } from "../utils/routing";
+
+const baseUrl = getBaseUrl();
+const homepageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": baseUrl }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much tax will I pay?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Your tax depends on your total income, deductions, filing status, and jurisdiction. Our tax estimator uses current tax slabs and rules to provide an accurate estimate. Select your country, enter your income details, and review the instant breakdown." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate my tax liability?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Start with your total income from all sources, subtract allowable deductions and exemptions to arrive at taxable income, then apply the relevant tax slab rates. Our income tax calculator automates this using the latest official rates and rules." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is an income tax calculator?",
+      "acceptedAnswer": { "@type": "Answer", "text": "An income tax calculator is an online tool that estimates tax owed based on income, deductions, and applicable tax laws. It helps you understand take-home pay, effective tax rate, and potential refund. Finsiva supports multiple countries and tax types." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a tax calculator free to use?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. All core tax calculators on Finsiva are completely free with no paywalls, subscriptions, or hidden charges. Calculations run locally in your browser with no registration required." }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate are online tax calculators?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Online tax calculators provide estimates based on official tax rules and slab rates. They are accurate for planning purposes but may differ from final liability due to jurisdiction-specific nuances. Always verify important tax decisions with local tax authorities or a qualified professional." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate income tax online?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Select your country, enter your annual income, choose your filing status and tax year, then input applicable deductions. Our tax estimator instantly computes your tax liability and take-home pay. All calculations run locally in your browser." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate tax on salary?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Enter your gross salary into the salary tax calculator along with allowances, bonuses, and deductions. The tool applies relevant PAYE, Social Security, and local tax rules for your country. Use the monthly calculator for detailed breakdowns of earnings after tax." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use a tax calculator for multiple countries?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Finsiva supports income tax, salary tax, payroll tax, GST, VAT, and more across 10+ countries. Each calculator is tailored to the specific tax rules of the country you select, so you get accurate estimates for every jurisdiction." }
+    },
+    {
+      "@type": "Question",
+      "name": "Which is better: old tax regime or new tax regime?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The choice depends on your deductions and income level. Taxpayers with significant deductions like home loan interest, retirement contributions, and insurance often benefit from the old regime. Those with fewer deductions may prefer the new regime lower slab rates." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I legally reduce my tax using deductions?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Claim all eligible deductions and credits such as retirement contributions, mortgage interest, charitable donations, education expenses, and business costs. Our tax estimator shows how each deduction lowers your tax base and increases your take-home pay." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate my net salary after tax?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Our net salary calculator takes your gross salary and subtracts income tax, Social Security contributions, and other deductions to show your take-home pay. It provides a detailed breakdown of every deduction so you understand where your money goes." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are online tax calculators secure and private?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Finsiva is built with privacy by design. All calculations run entirely in your browser. We do not collect, store, or transmit your income, deduction, or any financial data to any server. Your information stays on your device." }
+    },
+    {
+      "@type": "Question",
+      "name": "How often are tax rates updated on Finsiva?",
+      "acceptedAnswer": { "@type": "Answer", "text": "We update our calculators whenever tax rules, slabs, thresholds, or regulations change. Our platform is actively maintained to reflect the latest official rates from government tax authorities across all supported countries." }
+    },
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "Finsiva Tax Hub -- Free Online Tax Estimator for Global Taxes",
+      "description": "Use our free tax hub to estimate income tax, salary tax, and take-home pay across multiple countries. Accurate, privacy-first, and always free.",
+      "url": baseUrl,
+      "mainEntityOfPage": { "@type": "WebPage", "@id": baseUrl },
+      "author": { "@type": "Organization", "name": "Finsiva" },
+      "publisher": { "@type": "Organization", "name": "Finsiva", "logo": { "@type": "ImageObject", "url": baseUrl + "/logo.png" } },
+      "datePublished": "2025-01-01",
+      "dateModified": "2026-01-01"
+    }
+  ]
+};
+---
+
+<Layout
+  title="Tax Hub | Free Online Tax Estimator | Finsiva"
+  description="Free tax calculator to estimate income tax, salary tax, and take-home pay. Accurate, privacy-first results for 10+ countries. Try Finsiva now."
+  canonical={baseUrl}
+  robots="index,follow"
+  schema={homepageSchema}
+  image="/og-image.svg"
+  imageAlt="Finsiva tax calculator dashboard showing income tax estimates across multiple countries"
+>
+  <article id="main-content" class="min-h-screen bg-canvas dark:bg-canvas">
+    <section class="relative overflow-hidden">
+      <!-- Elegant natural dark slate fading smoothly into the canvas background -->
+      <div class="pointer-events-none absolute inset-0" style="background: linear-gradient(180deg, #1e293b 0%, var(--color-canvas) 100%);" aria-hidden="true"></div>
+      
+      <!-- Subtle glow in the center to provide depth -->
+      <div class="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-[500px] w-[800px] rounded-full bg-primary/10 blur-3xl" aria-hidden="true"></div>
+
+      <div class="relative mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 sm:py-24 lg:px-8">
+         <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm font-medium text-white/90 backdrop-blur-sm animate-slide-up" style="animation-fill-mode: both; animation-delay: 0.1s;">
+           <span class="h-2 w-2 rounded-full bg-primary"></span>
+           Tax Tools Built for Clarity
+         </span>
+        <h1 class="hero-title mt-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl animate-slide-up" style="line-height:1.1; max-width: 56rem; margin-left: auto; margin-right: auto; animation-fill-mode: both; animation-delay: 0.2s;">Tax Hub — Free, Accurate & Private</h1>
+        <p class="hero-description mt-6 max-w-2xl mx-auto text-lg text-white/70 sm:text-xl animate-slide-up" style="line-height:1.6; animation-fill-mode: both; animation-delay: 0.3s;">
+          Estimate income tax, salary tax, and take-home pay for any country in seconds. No registration, no data collection — just accurate, privacy-first results powered by official tax rules.
+        </p>
+        <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row animate-slide-up" style="animation-fill-mode: both; animation-delay: 0.4s;">
+          <a href="/countries/" class="group relative overflow-hidden inline-flex items-center justify-center rounded-pill bg-transparent px-8 py-3.5 text-base font-medium text-white shadow-[0_8px_20px_rgba(37,99,235,0.15)] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(37,99,235,0.3)] active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-canvas">
+            <!-- Creative inner gradient that blends vibrant blue perfectly into the background -->
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-800/90 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
+            <!-- Subtle top highlight for a 3D glass edge -->
+            <div class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+            <span class="relative z-10 tracking-wide">Start Calculating Taxes</span>
+          </a>
+          <a href="#how-it-works" class="inline-flex items-center justify-center gap-2 rounded-pill border border-white/20 bg-white/5 px-8 py-3.5 text-base font-semibold text-white transition-all duration-200 ease-out hover:bg-white/10 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 backdrop-blur-sm">See How It Works</a>
+        </div>
+      </div>
+    </section>
+    <section id="countries-supported" class="bg-canvas-soft dark:bg-canvas relative z-10" aria-labelledby="countries-heading">
+      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <h2 id="countries-heading" class="text-3xl font-semibold text-ink mb-4 dark:text-on-primary">Countries Supported</h2>
+        <p class="max-w-3xl text-lg text-body mb-10 dark:text-muted">Explore tax calculators tailored to the rules of each country. Select your country to view income tax slabs, payroll deductions, GST, VAT, and more.</p>
+        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+          {countries.map(country => (
+            <a href={`/countries/${country.slug}/`} class="flex items-center gap-3 rounded-xl border border-hairline bg-canvas p-4 transition hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary" aria-label={`View tax calculators for ${country.name}`}>
+              <img src={country.flag} alt={`${country.name} flag`} width="32" height="24" loading="lazy" class="h-8 w-auto object-contain" title={country.name} />
+              <span class="min-w-0 font-medium text-ink dark:text-on-primary">{country.name}</span>
+            </a>
+          ))}
+        </div>
+        <div class="mt-6">
+          <a href="/countries/" class="inline-flex items-center gap-2 text-sm font-medium text-link hover:underline dark:text-link">View all countries</a>
+        </div>
+      </div>
+    </section>
+    <section id="popular-calculators" class="relative z-10" aria-labelledby="calculators-heading">
+      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <h2 id="calculators-heading" class="text-3xl font-semibold text-ink mb-4 dark:text-on-primary">Popular Tax Calculators</h2>
+        <p class="max-w-3xl text-lg text-body mb-10 dark:text-muted">Choose from a growing library of calculator categories. Each tool is designed around the tax structure of the country you select.</p>
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="card dark:border-overlay-lighter dark:bg-surface flex flex-col h-full">
+            <h3 class="text-xl font-semibold text-ink mb-2 dark:text-on-primary">Income Tax Calculator</h3>
+            <p class="text-sm text-body dark:text-muted mb-4 flex-grow">Estimate income tax across multiple countries with up-to-date slab rates, deductions, and filing status options.</p>
+            <div class="mt-auto pt-3 border-t border-hairline dark:border-overlay-lighter">
+              <span class="text-xs font-semibold text-muted block mb-2 uppercase tracking-wider">Select Country:</span>
+              <div class="flex flex-wrap gap-2">
+                <a href="/countries/united-states/income-tax" class="px-2 py-1 bg-canvas-soft border border-hairline rounded text-xs font-medium text-ink hover:border-primary hover:text-primary transition-colors dark:bg-surface dark:border-overlay-lighter dark:text-on-primary">US</a>
+                <a href="/countries/united-kingdom/income-tax" class="px-2 py-1 bg-canvas-soft border border-hairline rounded text-xs font-medium text-ink hover:border-primary hover:text-primary transition-colors dark:bg-surface dark:border-overlay-lighter dark:text-on-primary">UK</a>
+                <a href="/countries/india/income-tax" class="px-2 py-1 bg-canvas-soft border border-hairline rounded text-xs font-medium text-ink hover:border-primary hover:text-primary transition-colors dark:bg-surface dark:border-overlay-lighter dark:text-on-primary">India</a>
+                <a href="/countries/" class="px-2 py-1 text-xs font-medium text-link hover:underline">More &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card dark:border-overlay-lighter dark:bg-surface flex flex-col h-full">
+            <h3 class="text-xl font-semibold text-ink mb-2 dark:text-on-primary">Salary Tax Calculator</h3>
+            <p class="text-sm text-body dark:text-muted mb-4 flex-grow">Calculate tax on salary including allowances, bonuses, and employer contributions with detailed breakdowns.</p>
+            <div class="mt-auto pt-3 border-t border-hairline dark:border-overlay-lighter">
+              <span class="text-xs font-semibold text-muted block mb-2 uppercase tracking-wider">Select Country:</span>
+              <div class="flex flex-wrap gap-2">
+                <a href="/countries/hong-kong/salaries-tax" class="px-2 py-1 bg-canvas-soft border border-hairline rounded text-xs font-medium text-ink hover:border-primary hover:text-primary transition-colors dark:bg-surface dark:border-overlay-lighter dark:text-on-primary">Hong Kong</a>
+                <a href="/countries/singapore/income-tax" class="px-2 py-1 bg-canvas-soft border border-hairline rounded text-xs font-medium text-ink hover:border-primary hover:text-primary transition-colors dark:bg-surface dark:border-overlay-lighter dark:text-on-primary">Singapore</a>
+                <a href="/countries/malaysia/income-tax" class="px-2 py-1 bg-canvas-soft border border-hairline rounded text-xs font-medium text-ink hover:border-primary hover:text-primary transition-colors dark:bg-surface dark:border-overlay-lighter dark:text-on-primary">Malaysia</a>
+                <a href="/countries/" class="px-2 py-1 text-xs font-medium text-link hover:underline">More &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card dark:border-overlay-lighter dark:bg-surface flex flex-col h-full">
+            <h3 class="text-xl font-semibold text-ink mb-2 dark:text-on-primary">GST Calculator</h3>
+            <p class="text-sm text-body dark:text-muted mb-4 flex-grow">Calculate GST inclusive and exclusive amounts quickly and accurately for regional businesses.</p>
+            <div class="mt-auto pt-3 border-t border-hairline dark:border-overlay-lighter">
+              <span class="text-xs font-semibold text-muted block mb-2 uppercase tracking-wider">Select Country:</span>
+              <div class="flex flex-wrap gap-2">
+                <a href="/countries/india/gst" class="px-2 py-1 bg-canvas-soft border border-hairline rounded text-xs font-medium text-ink hover:border-primary hover:text-primary transition-colors dark:bg-surface dark:border-overlay-lighter dark:text-on-primary">India</a>
+                <a href="/countries/singapore/gst" class="px-2 py-1 bg-canvas-soft border border-hairline rounded text-xs font-medium text-ink hover:border-primary hover:text-primary transition-colors dark:bg-surface dark:border-overlay-lighter dark:text-on-primary">Singapore</a>
+                <a href="/countries/new-zealand/gst" class="px-2 py-1 bg-canvas-soft border border-hairline rounded text-xs font-medium text-ink hover:border-primary hover:text-primary transition-colors dark:bg-surface dark:border-overlay-lighter dark:text-on-primary">New Zealand</a>
+                <a href="/countries/" class="px-2 py-1 text-xs font-medium text-link hover:underline">More &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card dark:border-overlay-lighter dark:bg-surface flex flex-col h-full">
+            <h3 class="text-xl font-semibold text-ink mb-2 dark:text-on-primary">Capital Gains Tax</h3>
+            <p class="text-sm text-body dark:text-muted mb-4 flex-grow">Estimate capital gains tax on stocks, real estate, and other investments for short and long-term gains.</p>
+            <div class="mt-auto pt-3 border-t border-hairline dark:border-overlay-lighter">
+              <span class="text-xs font-semibold text-muted block mb-2 uppercase tracking-wider">Select Country:</span>
+              <div class="flex flex-wrap gap-2">
+                <a href="/countries/united-states/capital-gains-tax" class="px-2 py-1 bg-canvas-soft border border-hairline rounded text-xs font-medium text-ink hover:border-primary hover:text-primary transition-colors dark:bg-surface dark:border-overlay-lighter dark:text-on-primary">US</a>
+                <a href="/countries/united-kingdom/capital-gains-tax" class="px-2 py-1 bg-canvas-soft border border-hairline rounded text-xs font-medium text-ink hover:border-primary hover:text-primary transition-colors dark:bg-surface dark:border-overlay-lighter dark:text-on-primary">UK</a>
+                <a href="/countries/india/capital-gains-tax" class="px-2 py-1 bg-canvas-soft border border-hairline rounded text-xs font-medium text-ink hover:border-primary hover:text-primary transition-colors dark:bg-surface dark:border-overlay-lighter dark:text-on-primary">India</a>
+                <a href="/countries/" class="px-2 py-1 text-xs font-medium text-link hover:underline">More &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card dark:border-overlay-lighter dark:bg-surface flex flex-col h-full">
+            <h3 class="text-xl font-semibold text-ink mb-2 dark:text-on-primary">Property Tax</h3>
+            <p class="text-sm text-body dark:text-muted mb-4 flex-grow">Estimate property tax, stamp duty, and related costs for residential and commercial real estate.</p>
+            <div class="mt-auto pt-3 border-t border-hairline dark:border-overlay-lighter">
+              <span class="text-xs font-semibold text-muted block mb-2 uppercase tracking-wider">Select Country:</span>
+              <div class="flex flex-wrap gap-2">
+                <a href="/countries/hong-kong/property-tax" class="px-2 py-1 bg-canvas-soft border border-hairline rounded text-xs font-medium text-ink hover:border-primary hover:text-primary transition-colors dark:bg-surface dark:border-overlay-lighter dark:text-on-primary">Hong Kong</a>
+                <a href="/countries/united-kingdom/property-tax" class="px-2 py-1 bg-canvas-soft border border-hairline rounded text-xs font-medium text-ink hover:border-primary hover:text-primary transition-colors dark:bg-surface dark:border-overlay-lighter dark:text-on-primary">UK</a>
+                <a href="/countries/pakistan/property-tax" class="px-2 py-1 bg-canvas-soft border border-hairline rounded text-xs font-medium text-ink hover:border-primary hover:text-primary transition-colors dark:bg-surface dark:border-overlay-lighter dark:text-on-primary">Pakistan</a>
+                <a href="/countries/" class="px-2 py-1 text-xs font-medium text-link hover:underline">More &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card dark:border-overlay-lighter dark:bg-surface flex flex-col h-full">
+            <h3 class="text-xl font-semibold text-ink mb-2 dark:text-on-primary">VAT & Sales Tax</h3>
+            <p class="text-sm text-body dark:text-muted mb-4 flex-grow">Estimate VAT or Sales Tax on domestic and cross-border transactions for retail and everyday purchases.</p>
+            <div class="mt-auto pt-3 border-t border-hairline dark:border-overlay-lighter">
+              <span class="text-xs font-semibold text-muted block mb-2 uppercase tracking-wider">Select Country:</span>
+              <div class="flex flex-wrap gap-2">
+                <a href="/countries/united-kingdom/vat" class="px-2 py-1 bg-canvas-soft border border-hairline rounded text-xs font-medium text-ink hover:border-primary hover:text-primary transition-colors dark:bg-surface dark:border-overlay-lighter dark:text-on-primary">UK (VAT)</a>
+                <a href="/countries/philippines/vat" class="px-2 py-1 bg-canvas-soft border border-hairline rounded text-xs font-medium text-ink hover:border-primary hover:text-primary transition-colors dark:bg-surface dark:border-overlay-lighter dark:text-on-primary">Philippines</a>
+                <a href="/countries/pakistan/sales-tax" class="px-2 py-1 bg-canvas-soft border border-hairline rounded text-xs font-medium text-ink hover:border-primary hover:text-primary transition-colors dark:bg-surface dark:border-overlay-lighter dark:text-on-primary">Pakistan (Sales)</a>
+                <a href="/countries/" class="px-2 py-1 text-xs font-medium text-link hover:underline">More &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+    </section>
+    <section id="why-choose-finsiva" class="relative z-10" aria-labelledby="why-choose-heading">
+      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <h2 id="why-choose-heading" class="text-3xl font-semibold text-ink mb-12 text-center dark:text-on-primary">Why Choose Finsiva</h2>
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="card text-center dark:border-overlay-lighter dark:bg-surface">
+            <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 dark:bg-surface/20">
+              <svg class="h-6 w-6 text-primary dark:text-link" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 12h20" /></svg>
+            </div>
+            <h3 class="mt-4 text-lg font-semibold text-ink dark:text-on-primary">10+ Countries</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">Income tax, salary tax, payroll, GST, VAT, and more across India, the US, the UK, Australia, Canada, Singapore, and beyond — all in one platform.</p>
+          </div>
+          <div class="card text-center dark:border-overlay-lighter dark:bg-surface">
+            <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 dark:bg-surface/20">
+              <svg class="h-6 w-6 text-primary dark:text-link" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 12 2 2 4-4" /></svg>
+            </div>
+            <h3 class="mt-4 text-lg font-semibold text-ink dark:text-on-primary">Privacy First</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">Every calculation runs exclusively in your browser. Your financial data is never collected, stored, or transmitted to any server.</p>
+          </div>
+          <div class="card text-center dark:border-overlay-lighter dark:bg-surface">
+            <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 dark:bg-surface/20">
+              <svg class="h-6 w-6 text-primary dark:text-link" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z" /></svg>
+            </div>
+            <h3 class="mt-4 text-lg font-semibold text-ink dark:text-on-primary">Instant Results</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">Get detailed tax estimates in seconds with no registration, no waiting, and no complicated forms to fill out.</p>
+          </div>
+          <div class="card text-center dark:border-overlay-lighter dark:bg-surface">
+            <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 dark:bg-surface/20">
+              <svg class="h-6 w-6 text-primary dark:text-link" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 3v5h-5" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H3v5" /></svg>
+            </div>
+            <h3 class="mt-4 text-lg font-semibold text-ink dark:text-on-primary">Statutory Revisions</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">Tax rules change. Our calculators are updated when applicable statutory rules, slabs, or official tax parameters change.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="how-it-works" class="relative z-10" aria-labelledby="how-heading">
+      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <h2 id="how-heading" class="text-3xl font-semibold text-ink mb-12 text-center dark:text-on-primary">How It Works</h2>
+        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80" alt="Finance professional analyzing tax documents on a laptop" class="mx-auto mb-12 w-full max-w-3xl rounded-xl object-cover max-h-80 sm:max-h-96" loading="lazy" />
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div class="text-center">
+            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-hairline bg-canvas text-lg font-bold text-ink dark:border-overlay-lighter dark:bg-surface dark:text-on-primary" aria-hidden="true">1</span>
+            <h3 class="mt-4 text-lg font-semibold text-ink dark:text-on-primary">Choose Your Country</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">Select the country whose tax rules apply to your situation. Each country has dedicated tax categories and calculators prepared for local requirements.</p>
+          </div>
+          <div class="text-center">
+            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-hairline bg-canvas text-lg font-bold text-ink dark:border-overlay-lighter dark:bg-surface dark:text-on-primary" aria-hidden="true">2</span>
+            <h3 class="mt-4 text-lg font-semibold text-ink dark:text-on-primary">Enter Your Details</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">Provide your income, deductions, filing status, and other relevant details. No sensitive personal data is required — all inputs stay on your device.</p>
+          </div>
+          <div class="text-center">
+            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-hairline bg-canvas text-lg font-bold text-ink dark:border-overlay-lighter dark:bg-surface dark:text-on-primary" aria-hidden="true">3</span>
+            <h3 class="mt-4 text-lg font-semibold text-ink dark:text-on-primary">Review Your Estimate</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">See your tax liability, effective rate, and take-home pay instantly. Use the results to plan your finances or prepare for filing with confidence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="why-millions-use" class="bg-canvas-soft dark:bg-canvas relative z-10" aria-labelledby="millions-heading">
+      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <h2 id="millions-heading" class="text-3xl font-semibold text-ink mb-12 text-center dark:text-on-primary">Why Use Tax Calculators?</h2>
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <div class="flex flex-col md:flex-row gap-6">
+            <div class="flex-shrink-0 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 dark:bg-surface/30">
+              <svg class="h-8 w-8 text-primary dark:text-link" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Understand Your Tax Position</h3>
+              <p class="mt-2 text-body dark:text-muted">Tax systems vary dramatically across countries. A tax calculator helps you understand how much of your income goes to taxes and what factors most affect your bill — whether you are a salaried employee, freelancer, or business owner.</p>
+              <p class="mt-2 text-body dark:text-muted">Knowing your tax position before receiving a paycheck or signing a contract gives you a realistic picture of your financial future and helps you negotiate compensation with confidence.</p>
+            </div>
+          </div>
+          <div class="flex flex-col md:flex-row gap-6">
+            <div class="flex-shrink-0 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 dark:bg-surface/30">
+              <svg class="h-8 w-8 text-primary dark:text-link" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" /></svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Plan Deductions and Save</h3>
+              <p class="mt-2 text-body dark:text-muted">Most taxpayers leave money on the table by missing deductions they are entitled to. A calculator helps you model different scenarios — adjusting income thresholds, claiming specific credits, or comparing old versus new regimes — so you can optimize your tax strategy.</p>
+              <p class="mt-2 text-body dark:text-muted">Try different scenarios to see how retirement contributions, mortgage interest, or charitable giving lower your taxable income. This kind of proactive planning is impossible with paper-based estimation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="key-features" class="relative z-10" aria-labelledby="features-heading">
+      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <h2 id="features-heading" class="text-3xl font-semibold text-ink mb-12 text-center dark:text-on-primary">Features</h2>
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="card dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="font-semibold text-ink dark:text-on-primary">Instant Calculations</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">Get results in milliseconds with optimized algorithms built for speed and accuracy.</p>
+          </div>
+          <div class="card dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="font-semibold text-ink dark:text-on-primary">Accurate Estimates</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">Calculations based on official tax slabs, statutory rates, and regulatory guidelines from government sources.</p>
+          </div>
+          <div class="card dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="font-semibold text-ink dark:text-on-primary">Multiple Countries</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">One platform for income tax, GST, VAT, payroll, and more across different jurisdictions worldwide.</p>
+          </div>
+          <div class="card dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="font-semibold text-ink dark:text-on-primary">Multiple Tax Types</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">From income tax to capital gains, property tax to payroll — all calculator types in one place.</p>
+          </div>
+          <div class="card dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="font-semibold text-ink dark:text-on-primary">Easy to Use</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">Clean interfaces with guided inputs so anyone can estimate their taxes in minutes.</p>
+          </div>
+          <div class="card dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="font-semibold text-ink dark:text-on-primary">Mobile Friendly</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">Responsive design that works on desktop, tablet, and mobile without any app download.</p>
+          </div>
+          <div class="card dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="font-semibold text-ink dark:text-on-primary">Statutory Revisions</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">We update our calculators whenever statutory tax rules, slabs, or thresholds change.</p>
+          </div>
+          <div class="card dark:border-overlay-lighter dark:bg-surface">
+            <h3 class="font-semibold text-ink dark:text-on-primary">Secure & Private</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">No accounts, no tracking, no data collection. Your financial data stays entirely on your device.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="benefits" class="bg-canvas-soft dark:bg-canvas relative z-10" aria-labelledby="benefits-heading">
+      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <h2 id="benefits-heading" class="text-3xl font-semibold text-ink mb-12 text-center dark:text-on-primary">Benefits</h2>
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="card bg-canvas dark:bg-surface dark:border-overlay-lighter rounded-xl p-6 shadow-sm">
+            <svg class="h-8 w-8 text-primary mb-4 dark:text-link" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <h3 class="font-semibold text-ink dark:text-on-primary">Save Time</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">Automate complex tax computations with instant, accurate results instead of manual spreadsheets or outdated formulas.</p>
+          </div>
+          <div class="card bg-canvas dark:bg-surface dark:border-overlay-lighter rounded-xl p-6 shadow-sm">
+            <svg class="h-8 w-8 text-primary mb-4 dark:text-link" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <h3 class="font-semibold text-ink dark:text-on-primary">Reduce Errors</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">Built-in logic follows official rules so you avoid common calculation mistakes that can trigger audits or missed refunds.</p>
+          </div>
+          <div class="card bg-canvas dark:bg-surface dark:border-overlay-lighter rounded-xl p-6 shadow-sm">
+            <svg class="h-8 w-8 text-primary mb-4 dark:text-link" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+            <h3 class="font-semibold text-ink dark:text-on-primary">Compare Scenarios</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">Test different incomes, deductions, and regimes side by side to make informed financial decisions with confidence.</p>
+          </div>
+          <div class="card bg-canvas dark:bg-surface dark:border-overlay-lighter rounded-xl p-6 shadow-sm">
+            <svg class="h-8 w-8 text-primary mb-4 dark:text-link" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+            <h3 class="font-semibold text-ink dark:text-on-primary">Plan Ahead</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">Use quarterly and annual estimates to forecast payments, avoid surprises at tax time, and set aside the right amount.</p>
+          </div>
+          <div class="card bg-canvas dark:bg-surface dark:border-overlay-lighter rounded-xl p-6 shadow-sm">
+            <svg class="h-8 w-8 text-primary mb-4 dark:text-link" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <h3 class="font-semibold text-ink dark:text-on-primary">Understand Your Taxes</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">Detailed breakdowns explain exactly where your money goes and how deductions and credits affect your final liability.</p>
+          </div>
+          <div class="card bg-canvas dark:bg-surface dark:border-overlay-lighter rounded-xl p-6 shadow-sm">
+            <svg class="h-8 w-8 text-primary mb-4 dark:text-link" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <h3 class="font-semibold text-ink dark:text-on-primary">Free Forever</h3>
+            <p class="mt-2 text-sm text-body dark:text-muted">Core calculators remain free with no paywalls, subscriptions, or hidden charges. We believe tax information should be accessible to everyone.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="why-trust-finsiva" class="relative z-10" aria-labelledby="trust-heading">
+      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <h2 id="trust-heading" class="text-3xl font-semibold text-ink mb-12 text-center dark:text-on-primary">Why Trust Finsiva</h2>
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <div class="flex gap-4">
+            <svg class="h-6 w-6 text-primary flex-shrink-0 mt-1 dark:text-link" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+            <div>
+              <h3 class="font-semibold text-ink dark:text-on-primary">Expert-Reviewed Content</h3>
+              <p class="mt-2 text-sm text-body leading-relaxed dark:text-muted">All calculators, guides, and answers are reviewed for accuracy and clarity. We source our tax rules from official government and tax authority publications, and our content is updated whenever legislation changes.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <svg class="h-6 w-6 text-primary flex-shrink-0 mt-1 dark:text-link" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+            <div>
+              <h3 class="font-semibold text-ink dark:text-on-primary">Transparent Methodology</h3>
+              <p class="mt-2 text-sm text-body leading-relaxed dark:text-muted">We clearly explain the assumptions and formulas behind every estimate. If a limitation or caveat applies — such as rounding differences or jurisdiction-specific edge cases — we say so upfront instead of hiding it.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <svg class="h-6 w-6 text-primary flex-shrink-0 mt-1 dark:text-link" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+            <div>
+              <h3 class="font-semibold text-ink dark:text-on-primary">Privacy by Design</h3>
+              <p class="mt-2 text-sm text-body leading-relaxed dark:text-muted">Calculations run entirely in your browser. We do not collect, store, or transmit your income, deduction, or any other financial data to any server. Your information never leaves your device.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <svg class="h-6 w-6 text-primary flex-shrink-0 mt-1 dark:text-link" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>
+            <div>
+              <h3 class="font-semibold text-ink dark:text-on-primary">Regular Updates</h3>
+              <p class="mt-2 text-sm text-body leading-relaxed dark:text-muted">Tax laws change every year. Our platform is actively maintained and updated to reflect new slabs, thresholds, and regulations across all supported countries so you always calculate with current rules.</p>
+            </div>
+          </div>
+          <div class="lg:col-span-2 mt-4">
+            <div class="flex gap-4">
+              <svg class="h-6 w-6 text-primary flex-shrink-0 mt-1 dark:text-link" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              <div>
+                <h3 class="font-semibold text-ink dark:text-on-primary">Global Coverage, Local Accuracy</h3>
+                <p class="mt-2 text-sm text-body leading-relaxed dark:text-muted">From income tax in India and the US to VAT in Europe and GST in Southeast Asia, every calculator is built with country-specific rules, deductions, and filing requirements. Finsiva uses official tax information and transparent calculation methods to help you understand your taxes.</p>
+              </div>
+            </div>
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&q=80" alt="Financial charts showing tax planning and investment growth" class="mt-8 mb-8 w-full rounded-xl object-cover max-h-80 sm:max-h-96" loading="lazy" />
+            <div class="flex gap-4">
+              <svg class="h-6 w-6 text-primary flex-shrink-0 mt-1 dark:text-link" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              <div>
+                <h3 class="font-semibold text-ink dark:text-on-primary">Transparent, No-Nonsense Results</h3>
+                <p class="mt-2 text-sm text-body leading-relaxed dark:text-muted">We show you the full breakdown — gross income, taxable amount, effective rate, and take-home pay. No hidden assumptions, no fine print. If a rule does not apply to your situation, we tell you why so you can plan with confidence.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+          <div class="flex items-start gap-4">
+            <svg class="h-6 w-6 text-muted flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <div>
+              <h3 class="font-semibold text-ink dark:text-on-primary">Calculation Disclaimer</h3>
+              <p class="mt-2 text-sm text-body leading-relaxed dark:text-muted">All calculations provided by Finsiva are estimates based on available tax rules and statutory rates. They are intended for planning and educational purposes only and do not constitute professional tax advice. For important financial decisions, including tax filings, we strongly recommend verifying your results with your local tax authority or a qualified tax professional.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="tax-planning-tips" class="bg-canvas-soft dark:bg-canvas relative z-10" aria-labelledby="planning-heading">
+      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <h2 id="planning-heading" class="text-3xl font-semibold text-ink mb-12 text-center dark:text-on-primary">Tax Planning Tips</h2>
+        <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=1200&q=80" alt="Financial documents with calculator and planning notes" class="mx-auto mb-12 w-full max-w-3xl rounded-xl object-cover max-h-80 sm:max-h-96" loading="lazy" />
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <div class="flex flex-col sm:flex-row gap-6">
+            <div class="flex-shrink-0 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 dark:bg-surface/30">
+              <svg class="h-8 w-8 text-primary dark:text-link" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Maximize Eligible Deductions</h3>
+              <p class="mt-2 text-body dark:text-muted">Review every deduction you qualify for — retirement contributions, mortgage interest, education expenses, and charitable donations can significantly reduce your taxable income. Our calculators let you model these line items instantly.</p>
+              <p class="mt-2 text-body dark:text-muted">Keep records organized and file on time to claim every benefit you are entitled to.</p>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-6">
+            <div class="flex-shrink-0 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 dark:bg-surface/30">
+              <svg class="h-8 w-8 text-primary dark:text-link" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Plan Around Filing Deadlines</h3>
+              <p class="mt-2 text-body dark:text-muted">Know your country-specific filing deadlines and estimated payment schedules. Missing a deadline can trigger penalties and interest that compound quickly. Use our country guides to stay ahead of critical dates.</p>
+              <p class="mt-2 text-body dark:text-muted">Set calendar reminders well in advance so you have time to gather documents and verify calculations.</p>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-6">
+            <div class="flex-shrink-0 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 dark:bg-surface/30">
+              <svg class="h-8 w-8 text-primary dark:text-link" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Compare Tax Regimes</h3>
+              <p class="mt-2 text-body dark:text-muted">Some countries offer multiple tax regimes. Compare old versus new slab structures to see which saves you more. Your optimal choice may change as your income or deductions evolve.</p>
+              <p class="mt-2 text-body dark:text-muted">Run side-by-side estimates at different income levels to make an informed decision.</p>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-6">
+            <div class="flex-shrink-0 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 dark:bg-surface/30">
+              <svg class="h-8 w-8 text-primary dark:text-link" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" /></svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-ink dark:text-on-primary">Use Calculators Before Major Decisions</h3>
+              <p class="mt-2 text-body dark:text-muted">Before accepting a job offer, changing careers, or making a large purchase, run the numbers. A salary increase may place you in a higher tax bracket, and the net benefit may be smaller than it appears.</p>
+              <p class="mt-2 text-body dark:text-muted">Our tools help you understand the real take-home impact of life changes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="popular-resources" class="bg-canvas-soft dark:bg-canvas relative z-10" aria-labelledby="resources-heading">
+      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <h2 id="resources-heading" class="text-3xl font-semibold text-ink mb-4 dark:text-on-primary">Popular Resources</h2>
+        <p class="max-w-3xl text-lg text-body mb-10 dark:text-muted">Deepen your understanding of tax systems worldwide with our guides, tutorials, and explanatory articles.</p>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <a href="/blogs/" class="card group dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+            <h3 class="font-semibold text-ink dark:text-on-primary">Tax Guides</h3>
+            <p class="mt-1 text-sm text-body dark:text-muted">Comprehensive walkthroughs of tax systems across 10+ countries.</p>
+          </a>
+          <a href="/blogs/" class="card group dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+            <h3 class="font-semibold text-ink dark:text-on-primary">Tax Slabs & Rates</h3>
+            <p class="mt-1 text-sm text-body dark:text-muted">Current income tax slabs, GST rates, VAT percentages, and payroll thresholds by country.</p>
+          </a>
+          <a href="/blogs/old-vs-new-tax-regime-calculator/" class="card group dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+            <h3 class="font-semibold text-ink dark:text-on-primary">Old vs New Tax Regime</h3>
+            <p class="mt-1 text-sm text-body dark:text-muted">Compare India old and new tax regimes side by side with practical examples.</p>
+          </a>
+          <a href="/blogs/" class="card group dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+            <h3 class="font-semibold text-ink dark:text-on-primary">Tax Saving Tips</h3>
+            <p class="mt-1 text-sm text-body dark:text-muted">Actionable strategies to legally reduce your tax liability through deductions and credits.</p>
+          </a>
+          <a href="/blogs/capital-gains-tax-guide-india/" class="card group dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+            <h3 class="font-semibold text-ink dark:text-on-primary">Capital Gains Guide</h3>
+            <p class="mt-1 text-sm text-body dark:text-muted">Understand long-term and short-term capital gains tax on investments in India.</p>
+          </a>
+          <a href="/blogs/hong-kong-salaries-tax-guide/" class="card group dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+            <h3 class="font-semibold text-ink dark:text-on-primary">Hong Kong Salaries Tax</h3>
+            <p class="mt-1 text-sm text-body dark:text-muted">Complete guide to HK salaries tax including allowances and deductions.</p>
+          </a>
+          <a href="/blogs/pakistan-income-tax-guide/" class="card group dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+            <h3 class="font-semibold text-ink dark:text-on-primary">Pakistan Income Tax</h3>
+            <p class="mt-1 text-sm text-body dark:text-muted">Navigate Pakistan income tax slabs, filing requirements, and tax credits.</p>
+          </a>
+          <a href="/blogs/" class="card group dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+            <h3 class="font-semibold text-ink dark:text-on-primary">All Guides</h3>
+            <p class="mt-1 text-sm text-body dark:text-muted">Browse the full library of tax guides, calculators, and educational resources.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="faq" class="py-16 relative z-10" aria-labelledby="faq-heading">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 id="faq-heading" class="mb-12 text-center text-3xl font-semibold text-ink dark:text-on-primary">Frequently Asked Questions</h2>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          <!-- Left Column: FAQ Accordion -->
+          <div class="lg:col-span-7 space-y-4" id="faq-accordion">
+            <details class="group rounded-xl border border-hairline bg-canvas p-5 transition hover:border-primary focus-within:border-primary dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+              <summary class="flex cursor-pointer list-none items-center justify-between text-left" aria-label="Toggle answer for How much tax will I pay?">
+                <h3 class="text-lg font-semibold text-ink dark:text-on-primary">How much tax will I pay?</h3>
+                <svg class="h-5 w-5 shrink-0 text-ink transition-transform duration-200 group-open:rotate-180 dark:text-on-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <p class="mt-3 text-sm text-body dark:text-muted">Your tax depends on your total income, deductions, filing status, and jurisdiction. Our tax estimator uses current tax slabs and rules to provide an accurate estimate. Select your country, enter your income details, and review the instant breakdown.</p>
+            </details>
+            <details class="group rounded-xl border border-hairline bg-canvas p-5 transition hover:border-primary focus-within:border-primary dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+              <summary class="flex cursor-pointer list-none items-center justify-between text-left" aria-label="Toggle answer for How do I calculate my tax liability?">
+                <h3 class="text-lg font-semibold text-ink dark:text-on-primary">How do I calculate my tax liability?</h3>
+                <svg class="h-5 w-5 shrink-0 text-ink transition-transform duration-200 group-open:rotate-180 dark:text-on-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <p class="mt-3 text-sm text-body dark:text-muted">Start with your total income from all sources, subtract allowable deductions and exemptions to arrive at taxable income, then apply the relevant tax slab rates. Our income tax calculator automates this using the latest official rates and rules.</p>
+            </details>
+            <details class="group rounded-xl border border-hairline bg-canvas p-5 transition hover:border-primary focus-within:border-primary dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+              <summary class="flex cursor-pointer list-none items-center justify-between text-left" aria-label="Toggle answer for What is an income tax calculator?">
+                <h3 class="text-lg font-semibold text-ink dark:text-on-primary">What is an income tax calculator?</h3>
+                <svg class="h-5 w-5 shrink-0 text-ink transition-transform duration-200 group-open:rotate-180 dark:text-on-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <p class="mt-3 text-sm text-body dark:text-muted">An income tax calculator is an online tool that estimates tax owed based on income, deductions, and applicable tax laws. It helps you understand take-home pay, effective tax rate, and potential refund. Finsiva supports multiple countries and tax types.</p>
+            </details>
+            <details class="group rounded-xl border border-hairline bg-canvas p-5 transition hover:border-primary focus-within:border-primary dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+              <summary class="flex cursor-pointer list-none items-center justify-between text-left" aria-label="Toggle answer for Is a tax calculator free to use?">
+                <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Is a tax calculator free to use?</h3>
+                <svg class="h-5 w-5 shrink-0 text-ink transition-transform duration-200 group-open:rotate-180 dark:text-on-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <p class="mt-3 text-sm text-body dark:text-muted">Yes. All core tax calculators on Finsiva are completely free with no paywalls, subscriptions, or hidden charges. Calculations run locally in your browser with no registration required.</p>
+            </details>
+            <details class="group rounded-xl border border-hairline bg-canvas p-5 transition hover:border-primary focus-within:border-primary dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+              <summary class="flex cursor-pointer list-none items-center justify-between text-left" aria-label="Toggle answer for How accurate are online tax calculators?">
+                <h3 class="text-lg font-semibold text-ink dark:text-on-primary">How accurate are online tax calculators?</h3>
+                <svg class="h-5 w-5 shrink-0 text-ink transition-transform duration-200 group-open:rotate-180 dark:text-on-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <p class="mt-3 text-sm text-body dark:text-muted">Online tax calculators provide estimates based on official tax rules and slab rates. They are accurate for planning purposes but may differ from final liability due to jurisdiction-specific nuances. Always verify important tax decisions with local tax authorities or a qualified professional.</p>
+            </details>
+                        <div id="more-faqs" class="hidden space-y-4 mt-4">
+              <details class="group rounded-xl border border-hairline bg-canvas p-5 transition hover:border-primary focus-within:border-primary dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+              <summary class="flex cursor-pointer list-none items-center justify-between text-left" aria-label="Toggle answer for How do I calculate income tax online?">
+                <h3 class="text-lg font-semibold text-ink dark:text-on-primary">How do I calculate income tax online?</h3>
+                <svg class="h-5 w-5 shrink-0 text-ink transition-transform duration-200 group-open:rotate-180 dark:text-on-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <p class="mt-3 text-sm text-body dark:text-muted">Select your country, enter your annual income, choose your filing status and tax year, then input applicable deductions. Our tax estimator instantly computes your tax liability and take-home pay. All calculations run locally in your browser.</p>
+            </details>
+                          <details class="group rounded-xl border border-hairline bg-canvas p-5 transition hover:border-primary focus-within:border-primary dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+              <summary class="flex cursor-pointer list-none items-center justify-between text-left" aria-label="Toggle answer for How do I calculate tax on salary?">
+                <h3 class="text-lg font-semibold text-ink dark:text-on-primary">How do I calculate tax on salary?</h3>
+                <svg class="h-5 w-5 shrink-0 text-ink transition-transform duration-200 group-open:rotate-180 dark:text-on-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <p class="mt-3 text-sm text-body dark:text-muted">Enter your gross salary into the salary tax calculator along with allowances, bonuses, and deductions. The tool applies relevant PAYE, Social Security, and local tax rules for your country. Use the monthly calculator for detailed breakdowns of earnings after tax.</p>
+            </details>
+                          <details class="group rounded-xl border border-hairline bg-canvas p-5 transition hover:border-primary focus-within:border-primary dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+              <summary class="flex cursor-pointer list-none items-center justify-between text-left" aria-label="Toggle answer for Can I use a tax calculator for multiple countries?">
+                <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Can I use a tax calculator for multiple countries?</h3>
+                <svg class="h-5 w-5 shrink-0 text-ink transition-transform duration-200 group-open:rotate-180 dark:text-on-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <p class="mt-3 text-sm text-body dark:text-muted">Yes. Finsiva supports income tax, salary tax, payroll tax, GST, VAT, and more across 10+ countries. Each calculator is tailored to the specific tax rules of the country you select, so you get accurate estimates for every jurisdiction.</p>
+            </details>
+                          <details class="group rounded-xl border border-hairline bg-canvas p-5 transition hover:border-primary focus-within:border-primary dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+              <summary class="flex cursor-pointer list-none items-center justify-between text-left" aria-label="Toggle answer for Which is better: old tax regime or new tax regime?">
+                <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Which is better: old tax regime or new tax regime?</h3>
+                <svg class="h-5 w-5 shrink-0 text-ink transition-transform duration-200 group-open:rotate-180 dark:text-on-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <p class="mt-3 text-sm text-body dark:text-muted">The choice depends on your deductions and income level. Taxpayers with significant deductions like home loan interest, retirement contributions, and insurance often benefit from the old regime. Those with fewer deductions may prefer the new regime lower slab rates.</p>
+            </details>
+                          <details class="group rounded-xl border border-hairline bg-canvas p-5 transition hover:border-primary focus-within:border-primary dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+              <summary class="flex cursor-pointer list-none items-center justify-between text-left" aria-label="Toggle answer for How do I legally reduce my tax using deductions?">
+                <h3 class="text-lg font-semibold text-ink dark:text-on-primary">How do I legally reduce my tax using deductions?</h3>
+                <svg class="h-5 w-5 shrink-0 text-ink transition-transform duration-200 group-open:rotate-180 dark:text-on-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <p class="mt-3 text-sm text-body dark:text-muted">Claim all eligible deductions and credits such as retirement contributions, mortgage interest, charitable donations, education expenses, and business costs. Our tax estimator shows how each deduction lowers your tax base and increases your take-home pay.</p>
+            </details>
+                          <details class="group rounded-xl border border-hairline bg-canvas p-5 transition hover:border-primary focus-within:border-primary dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+              <summary class="flex cursor-pointer list-none items-center justify-between text-left" aria-label="Toggle answer for How do I calculate my net salary after tax?">
+                <h3 class="text-lg font-semibold text-ink dark:text-on-primary">How do I calculate my net salary after tax?</h3>
+                <svg class="h-5 w-5 shrink-0 text-ink transition-transform duration-200 group-open:rotate-180 dark:text-on-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <p class="mt-3 text-sm text-body dark:text-muted">Our net salary calculator takes your gross salary and subtracts income tax, Social Security contributions, and other deductions to show your take-home pay. It provides a detailed breakdown of every deduction so you understand where your money goes.</p>
+            </details>
+                          <details class="group rounded-xl border border-hairline bg-canvas p-5 transition hover:border-primary focus-within:border-primary dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+              <summary class="flex cursor-pointer list-none items-center justify-between text-left" aria-label="Toggle answer for Are online tax calculators secure and private?">
+                <h3 class="text-lg font-semibold text-ink dark:text-on-primary">Are online tax calculators secure and private?</h3>
+                <svg class="h-5 w-5 shrink-0 text-ink transition-transform duration-200 group-open:rotate-180 dark:text-on-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <p class="mt-3 text-sm text-body dark:text-muted">Finsiva is built with privacy by design. All calculations run entirely in your browser. We do not collect, store, or transmit your income, deduction, or any financial data to any server. Your information stays on your device.</p>
+            </details>
+                          <details class="group rounded-xl border border-hairline bg-canvas p-5 transition hover:border-primary focus-within:border-primary dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+              <summary class="flex cursor-pointer list-none items-center justify-between text-left" aria-label="Toggle answer for How often are tax rates updated on Finsiva?">
+                <h3 class="text-lg font-semibold text-ink dark:text-on-primary">How often are tax rates updated on Finsiva?</h3>
+                <svg class="h-5 w-5 shrink-0 text-ink transition-transform duration-200 group-open:rotate-180 dark:text-on-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <p class="mt-3 text-sm text-body dark:text-muted">We update our calculators whenever tax rules, slabs, thresholds, or regulations change. Our platform is actively maintained to reflect the latest official rates from government tax authorities across all supported countries.</p>
+            </details>
+            </div>
+            <div class="mt-6 text-center lg:text-left">
+              <button type="button" id="toggle-faqs-btn" class="btn btn-secondary" aria-expanded="false" aria-controls="more-faqs" onclick="const content = document.getElementById('more-faqs'); const isHidden = content.classList.toggle('hidden'); this.setAttribute('aria-expanded', !isHidden); this.textContent = isHidden ? 'View More FAQs' : 'Show Less';">View More FAQs</button>
+            </div>
+          </div>
+
+          <!-- Right Column: Visual Image & Callout Box -->
+          <div class="lg:col-span-5 lg:sticky lg:top-24 space-y-6">
+            <div class="overflow-hidden rounded-2xl border border-hairline bg-canvas shadow-lg dark:border-overlay-lighter dark:bg-surface">
+              <img 
+                src="/images/faq-support.jpg" 
+                alt="Finsiva Tax Support & Financial Guidance" 
+                class="w-full h-auto object-cover max-h-[360px] hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-ink dark:text-on-primary">Still Have Questions?</h3>
+                <p class="mt-2 text-sm text-body leading-relaxed dark:text-muted">
+                  Explore our comprehensive country guides, tax calculators, and knowledge center to get clear, step-by-step answers tailored to your financial situation.
+                </p>
+                <div class="mt-5 flex flex-wrap gap-3">
+                  <a 
+                    href="/knowledge/" 
+                    class="inline-flex items-center justify-center px-4 py-2 rounded-lg text-xs font-semibold bg-primary text-on-primary hover:bg-primary-hover transition dark:bg-on-primary dark:text-primary"
+                  >
+                    Knowledge Center &rarr;
+                  </a>
+                  <a 
+                    href="/countries/" 
+                    class="inline-flex items-center justify-center px-4 py-2 rounded-lg text-xs font-semibold bg-canvas-soft border border-hairline text-ink hover:border-primary transition dark:bg-canvas dark:text-on-primary dark:border-overlay-lighter"
+                  >
+                    Browse All Countries
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Helpful Tip Card -->
+            <div class="rounded-xl border border-hairline bg-primary/5 p-5 dark:border-overlay-lighter dark:bg-surface/50">
+              <div class="flex items-start gap-3">
+                <span class="text-xl">💡</span>
+                <div>
+                  <h4 class="text-sm font-semibold text-ink dark:text-on-primary">Privacy & Accuracy Guarantee</h4>
+                  <p class="text-xs text-body mt-1 leading-relaxed dark:text-muted">All calculations on Finsiva are performed locally in your web browser. No personal income data is saved or sent to any remote server.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="conclusion" class="relative z-10" aria-labelledby="conclusion-heading">
+      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl text-center">
+          <h2 id="conclusion-heading" class="text-3xl font-semibold text-ink mb-6 dark:text-on-primary">Start Calculating Your Taxes Today</h2>
+          <p class="text-lg text-body mb-8 dark:text-muted">
+            Whether you need a simple income tax estimator or a comprehensive suite of tools for salary tax, payroll, and capital gains, Finsiva has you covered. Explore our country-specific calculators and get accurate, private estimates in seconds.
+          </p>
+          <a href="/countries/" class="inline-flex items-center gap-2 rounded-pill bg-primary px-8 py-3 text-base font-medium text-on-primary transition hover:opacity-90 dark:bg-on-primary dark:text-primary">Browse All Tax Calculators</a>
+          <p class="mt-6 text-sm text-muted dark:text-muted">
+            <strong class="font-medium text-ink dark:text-on-primary">Important:</strong> All calculations are estimates based on available tax rules. Please verify critical financial decisions with your local tax authority or a qualified tax professional.
+          </p>
+        </div>
+      </div>
+    </section>
+  </article>
+</Layout>
