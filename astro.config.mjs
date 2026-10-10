@@ -21,10 +21,14 @@ export default defineConfig({
     }
   })],
     redirects: {
-    '/knowledge/singapore-tax-residency/': { status: 301, destination: '/knowledge/singapore-tax-residency/' },
-    '/blogs/singapore-income-tax-rates-brackets-2026/': { status: 301, destination: '/knowledge/singapore-income-tax/' },
-    '/blogs/indonesia-tax-for-expats-foreigners-bali-guide/': { status: 301, destination: '/knowledge/indonesia-tax-residency/' },
-    '/blogs/indonesia-income-tax-rates-brackets-2026/': { status: 301, destination: '/knowledge/indonesia-income-tax/' },
+    '/blogs/hong-kong-corporate-tax-rate/': { status: 301, destination: '/countries/hong-kong/' },
+    '/blogs/hong-kong-net-salary-take-home-pay-guide/': { status: 301, destination: '/countries/hong-kong/' },
+    '/blogs/uk-ev-company-car-tax-bik-guide/': { status: 301, destination: '/knowledge/glossary/uk-bik-company-car-tax/' },
+
+    
+    
+    
+    
 
     '/blogs/pakistan-salary-tax-guide/': { status: 301, destination: '/blogs/pakistan-fbr-tax-slabs/' },
     '/blogs/pakistan-income-tax-guide/': { status: 301, destination: '/blogs/pakistan-fbr-tax-slabs/' },
