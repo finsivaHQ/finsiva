@@ -80,10 +80,39 @@ const faqSchema = {
       The <strong>tax rate in Singapore for individuals</strong> operates on a highly competitive progressive scale. This means the more you earn, the higher your percentage, but it is capped at a ceiling that is remarkably low compared to Western nations. To understand your liability, you must first understand the <strong>Singapore tax year</strong>, which runs from January 1 to December 31, with taxes filed and assessed in the following year (the Year of Assessment, or YA).
     </p>
 
-    <h3 class="text-2xl font-semibold mt-8 mb-4">Resident Tax Brackets</h3>
+    
+    <h3 class="text-2xl font-semibold mt-8 mb-4">Resident Tax Brackets (2026 Table)</h3>
     <p>
-      For tax residents, the progressive tax brackets currently range from 0% to a maximum of 24% (for those earning over $1,000,000 SGD). The first $20,000 of your income is completely tax-free. This progressive system is exactly why so many people search for a reliable <strong>singapore income tax calculator</strong>—the math changes at every tier.
+      For tax residents, the progressive tax brackets currently range from 0% to a maximum of 24% (for those earning over $1,000,000 SGD). The first $20,000 of your income is completely tax-free. Here is the exact breakdown side-by-side:
     </p>
+
+    <!-- Custom Tailwind Table -->
+    <div class="overflow-x-auto my-8 rounded-xl border border-hairline shadow-sm bg-canvas-soft/10 dark:bg-surface/50">
+      <table class="w-full text-left border-collapse min-w-[600px]">
+        <thead>
+          <tr class="bg-canvas-soft dark:bg-surface border-b border-hairline">
+            <th class="p-4 font-semibold text-ink dark:text-on-primary">Chargeable Income (SGD)</th>
+            <th class="p-4 font-semibold text-ink dark:text-on-primary">Income Tax Rate (%)</th>
+            <th class="p-4 font-semibold text-ink dark:text-on-primary">Gross Tax Payable (SGD)</th>
+          </tr>
+        </thead>
+        <tbody class="text-body text-sm sm:text-base">
+          <tr class="border-b border-hairline/50"><td class="p-4">First $20,000</td><td class="p-4 font-bold text-primary">0%</td><td class="p-4">$0</td></tr>
+          <tr class="border-b border-hairline/50 bg-black/5 dark:bg-white/5"><td class="p-4">Next $10,000</td><td class="p-4 font-bold text-primary">2%</td><td class="p-4">$200</td></tr>
+          <tr class="border-b border-hairline/50"><td class="p-4">Next $10,000</td><td class="p-4 font-bold text-primary">3.50%</td><td class="p-4">$350</td></tr>
+          <tr class="border-b border-hairline/50 bg-black/5 dark:bg-white/5"><td class="p-4">Next $40,000</td><td class="p-4 font-bold text-primary">7%</td><td class="p-4">$2,800</td></tr>
+          <tr class="border-b border-hairline/50"><td class="p-4">Next $40,000</td><td class="p-4 font-bold text-primary">11.5%</td><td class="p-4">$4,600</td></tr>
+          <tr class="border-b border-hairline/50 bg-black/5 dark:bg-white/5"><td class="p-4">Next $40,000</td><td class="p-4 font-bold text-primary">15%</td><td class="p-4">$6,000</td></tr>
+          <tr class="border-b border-hairline/50"><td class="p-4">Next $40,000</td><td class="p-4 font-bold text-primary">18%</td><td class="p-4">$7,200</td></tr>
+          <tr class="border-b border-hairline/50 bg-black/5 dark:bg-white/5"><td class="p-4">Next $40,000</td><td class="p-4 font-bold text-primary">19%</td><td class="p-4">$7,600</td></tr>
+          <tr class="border-b border-hairline/50"><td class="p-4">Next $40,000</td><td class="p-4 font-bold text-primary">19.5%</td><td class="p-4">$7,800</td></tr>
+          <tr class="border-b border-hairline/50 bg-black/5 dark:bg-white/5"><td class="p-4">Next $220,000</td><td class="p-4 font-bold text-primary">20%</td><td class="p-4">$44,000</td></tr>
+          <tr class="border-b border-hairline/50"><td class="p-4">Next $500,000</td><td class="p-4 font-bold text-primary">22%</td><td class="p-4">$110,000</td></tr>
+          <tr class="bg-black/5 dark:bg-white/5"><td class="p-4">In excess of $1,000,000</td><td class="p-4 font-bold text-primary">24%</td><td class="p-4">--</td></tr>
+        </tbody>
+      </table>
+    </div>
+
 
     <div class="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 p-6 my-8 rounded-r-lg">
       <h4 class="font-bold text-lg mb-2">Real-World Salary Scenarios</h4>
@@ -114,9 +143,32 @@ const faqSchema = {
     </p>
 
     <h3 class="text-2xl font-semibold mt-8 mb-4">The Non-Resident Trap</h3>
+
+    <h3 class="text-2xl font-semibold mt-8 mb-4">The 183-Day Rule Decision Tree</h3>
     <p>
-      If you are in Singapore for 183 days or more in the year, you are a tax resident and enjoy the 0-24% progressive rates. However, if you stay for 61 to 182 days, you are classified as a non-resident. 
+      If you are in Singapore for 183 days or more in the year, you are a tax resident and enjoy the 0-24% progressive rates. However, if you stay for 61 to 182 days, you are classified as a non-resident. Here is exactly how IRAS determines your status visually:
     </p>
+
+    <!-- Custom Mermaid Diagram -->
+    <div class="my-8 p-6 bg-white dark:bg-slate-800 rounded-xl border border-hairline shadow-sm overflow-x-auto flex justify-center">
+      <pre class="mermaid text-sm">
+        graph TD
+          A[Start: Foreigner in Singapore] --> B{How many days <br> employed in a year?}
+          B -->|60 days or less| C[Non-Resident: Tax Exempt]
+          B -->|61 to 182 days| D[Non-Resident]
+          B -->|183 days or more| E[Tax Resident]
+          C --> F(Exception: Directors & Entertainers are taxed)
+          D --> G[Taxed at 15% flat OR <br> progressive rates, whichever is higher]
+          E --> H[Taxed at 0-24% progressive rates <br> + Eligible for personal tax reliefs]
+          
+          style A fill:#4f46e5,stroke:#312e81,stroke-width:2px,color:#fff
+          style B fill:#f59e0b,stroke:#b45309,stroke-width:2px,color:#fff
+          style C fill:#10b981,stroke:#047857,stroke-width:2px,color:#fff
+          style D fill:#ef4444,stroke:#b91c1c,stroke-width:2px,color:#fff
+          style E fill:#10b981,stroke:#047857,stroke-width:2px,color:#fff
+      </pre>
+    </div>
+
     <p>
       The <strong>non resident tax rate Singapore</strong> imposes a flat 15% tax on your employment income, OR the progressive resident rates—whichever results in a <em>higher</em> tax amount. Furthermore, non-residents are not entitled to personal tax reliefs. Expats negotiating short-term contracts should always utilize a <strong>singapore income tax for foreigners calculator</strong> to ensure they aren't caught off guard by this flat-rate penalty.
     </p>
@@ -190,4 +242,10 @@ const faqSchema = {
       </div>
     </div>
   </div>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true, theme: 'base', themeVariables: { primaryColor: '#f1f5f9', primaryTextColor: '#1e293b', primaryBorderColor: '#cbd5e1', lineColor: '#94a3b8', secondaryColor: '#e2e8f0', tertiaryColor: '#f8fafc' } });
+  </script>
 </BlogLayout>
+
