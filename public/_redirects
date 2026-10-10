@@ -1,58 +1,12 @@
-# Host Normalization (www -> non-www)
-https://www.finsiva.com/*  https://finsiva.com/:splat  301
-
-# 405 error handling
-/405  /404.html  405
-
-# Country Shortcuts
-/malaysia          /countries/malaysia          301
-/singapore         /countries/singapore         301
-/hong-kong         /countries/hong-kong         301
-/india             /countries/india             301
-/united-states     /countries/united-states     301
-/united-kingdom    /countries/united-kingdom    301
-/pakistan          /countries/pakistan          301
-/philippines       /countries/philippines       301
-/indonesia         /countries/indonesia         301
-/new-zealand        /countries/new-zealand        301
-
-# Legacy & Alias Routes
-/blog              /blogs                       301
-/blog/*            /blogs/:splat                301
-/guide             /blogs                       301
-/guides            /blogs                       301
-/calculator        /countries                   301
-/calculators       /countries                   301
-/tax-calculator    /countries                   301
-/search            /countries                   301
-/knowledge-center  /knowledge                   301
-/knowledge/category/hong-kong-income-tax /knowledge/hong-kong-income-tax 301
-/faq               /knowledge                   301
-/faqs              /knowledge                   301
-/about-us          /about                       301
-/contact-us        /contact                     301
-
-# Old legacy calculator paths
-/countries/hong-kong/property/* /countries/hong-kong/property-tax/:splat 301
-/countries/pakistan/property/*  /countries/pakistan/property-tax/:splat  301
-/countries/pakistan/vehicle/*   /countries/pakistan/vehicle-tax/:splat   301
-/countries/pakistan/business/*  /countries/pakistan/income-tax/:splat    301
-
-# Auto-generated redirects for historically deleted pages
-/malaysia/ /countries/malaysia/ 301
-/calculators/hong-kong/salaries-tax/ /countries/ 301
-/home/ / 301
-/about-test/ / 301
-/blog/ /blogs/ 301
-/faq/ /about/ 301
-/guide/ /blogs/ 301
-/personality-dimensions/ / 301
-/personality-guide/ /blogs/ 301
-/personality-test/ / 301
-/personality-test/results/ / 301
-/personality-types/ /knowledge/ 301
-/premium/ / 301
-/profile/ / 301
-/shop/ / 301
-/team-dynamics-quiz/ / 301
-/tools/ / 301
+/blogs/hong-kong-tax-calculator-expats-guide/ /countries/hong-kong/income-tax/income-tax-calculator/ 301
+/blogs/nz-take-home-pay-paye-salary-tax-calculator-guide/ /countries/new-zealand/income-tax/income-tax-calculator/ 301
+/blogs/old-vs-new-tax-regime-calculator/ /countries/india/income-tax/income-tax-calculator/ 301
+/blogs/singapore-corporate-income-tax-calculator-guide/ /countries/singapore/corporate-tax/income-tax-calculator/ 301
+/blogs/singapore-expat-employment-pass-tax-calculator-guide/ /countries/singapore/income-tax/income-tax-calculator/ 301
+/blogs/singapore-hdb-rental-income-tax-calculator-guide/ /countries/singapore/income-tax/income-tax-calculator/ 301
+/blogs/singapore-income-tax-calculator-take-home-pay-guide/ /countries/singapore/income-tax/income-tax-calculator/ 301
+/blogs/singapore-income-tax-cpf-calculator-guide/ /countries/singapore/income-tax/income-tax-calculator/ 301
+/knowledge/hong-kong-tax-calculators/ /countries/hong-kong/ 301
+/knowledge/indonesia-tax-calculators/ /countries/indonesia/ 301
+/knowledge/pakistan-tax-calculators/ /countries/pakistan/ 301
+/knowledge/singapore-tax-calculators/ /countries/singapore/ 301
