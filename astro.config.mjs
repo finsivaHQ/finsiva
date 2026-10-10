@@ -21,6 +21,42 @@ export default defineConfig({
     }
   })],
     redirects: {
+    '/blogs/hong-kong-tax-residency/': {
+      status: 301,
+      destination: '/knowledge/hong-kong-tax-residency/'
+    },
+    '/blogs/singapore-tax-for-malaysian-indian-expats-guide/': {
+      status: 301,
+      destination: '/blogs/singapore-tax-for-foreigners-expats-guide/'
+    },
+    '/blogs/pakistan-salary-income-tax-slabs-evolution-guide-2026/': {
+      status: 301,
+      destination: '/blogs/pakistan-salary-tax-guide/'
+    },
+    '/blogs/pakistan-business-tax-slabs-corporate-aop-withholding-guide-2026/': {
+      status: 301,
+      destination: '/blogs/pakistan-corporate-tax-guide/'
+    },
+    '/blogs/pakistan-foreign-income-remittance-freelancer-tax-guide-2026/': {
+      status: 301,
+      destination: '/blogs/pakistan-foreign-income-remittance-tax-guide/'
+    },
+    '/blogs/pakistan-property-sale-tax-capital-gain-inherited-property-guide-2026/': {
+      status: 301,
+      destination: '/blogs/pakistan-property-tax-guide/'
+    },
+    '/blogs/pakistan-rental-property-income-agricultural-tax-guide-2026/': {
+      status: 301,
+      destination: '/blogs/pakistan-property-tax-guide/'
+    },
+    '/blogs/pakistan-sales-tax-gst-rate-exemptions-retailer-guide-2026/': {
+      status: 301,
+      destination: '/blogs/pakistan-sales-tax-guide/'
+    },
+    '/blogs/pakistan-services-sales-tax-it-software-sindh-islamabad-guide-2026/': {
+      status: 301,
+      destination: '/blogs/pakistan-sales-tax-guide/'
+    },
     '/blogs/hong-kong-tax-calculator-expats-guide/': {
       status: 301,
       destination: '/countries/hong-kong/income-tax/income-tax-calculator/'
@@ -74,4 +110,5 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 });
+
 
