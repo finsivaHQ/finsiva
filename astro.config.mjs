@@ -21,6 +21,11 @@ export default defineConfig({
     }
   })],
     redirects: {
+    '/knowledge/singapore-tax-residency/': { status: 301, destination: '/knowledge/singapore-tax-residency/' },
+    '/blogs/singapore-income-tax-rates-brackets-2026/': { status: 301, destination: '/knowledge/singapore-income-tax/' },
+    '/blogs/indonesia-tax-for-expats-foreigners-bali-guide/': { status: 301, destination: '/knowledge/indonesia-tax-residency/' },
+    '/blogs/indonesia-income-tax-rates-brackets-2026/': { status: 301, destination: '/knowledge/indonesia-income-tax/' },
+
     '/blogs/pakistan-salary-tax-guide/': { status: 301, destination: '/blogs/pakistan-fbr-tax-slabs/' },
     '/blogs/pakistan-income-tax-guide/': { status: 301, destination: '/blogs/pakistan-fbr-tax-slabs/' },
     '/blogs/pakistan-foreign-income-remittance-tax-guide/': { status: 301, destination: '/blogs/pakistan-freelancer-tax-guide/' },
@@ -37,7 +42,7 @@ export default defineConfig({
     '/knowledge/hong-kong-tax-residency/': { status: 301, destination: '/blogs/hong-kong-tax-residency/' },
     '/blogs/singapore-tax-for-malaysian-indian-expats-guide/': {
       status: 301,
-      destination: '/blogs/singapore-tax-for-foreigners-expats-guide/'
+      destination: '/knowledge/singapore-tax-residency/'
     },
     '/blogs/pakistan-salary-income-tax-slabs-evolution-guide-2026/': {
       status: 301,
