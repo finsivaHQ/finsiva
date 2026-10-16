@@ -13,6 +13,7 @@ export interface TaxCategory {
       slug: string;
       title: string;
       description: string;
+      url?: string;
       image?: string;
       sections?: Array<{
         title: string;

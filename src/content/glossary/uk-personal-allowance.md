@@ -7,7 +7,7 @@ examples:
   - "If you earn an annual salary of £30,000, your first £12,570 is tax-free under your Personal Allowance, leaving £17,430 subject to the 20% Basic Rate of UK Income Tax."
   - "Taxpayers earning over £100,000 experience a reduction in their Personal Allowance by £1 for every £2 of adjusted net income above £100,000, resulting in zero allowance at £125,140."
 relatedGuides:
-  - "uk-income-tax-rates-brackets-guide"
+  - "tax-deductions-explained"
 relatedCalculators:
   - "united-kingdom-income-tax-income-tax-calculator"
 relatedGlossary:

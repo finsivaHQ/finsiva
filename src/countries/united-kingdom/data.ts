@@ -11,10 +11,10 @@ const taxCategories: TaxCategory[] = [
     ],
     guides: [
       { slug: "tax-residency-guide", title: "Tax Residency Guide", description: "Understanding UK tax residency and domicile rules." },
-      { slug: "uk-income-tax-rates-brackets-guide", title: "UK Income Tax Rates & Brackets Guide", description: "Complete breakdown of UK tax bands, personal allowance, and PAYE tax calculation." },
-      { slug: "uk-expat-foreign-income-tax-guide", title: "UK Expat & Foreign Income Tax Guide", description: "Tax rules for US expats, foreign income, double tax treaties, and non-residents." },
-      { slug: "uk-capital-gains-rental-property-tax-guide", title: "UK Capital Gains & Rental Property Guide", description: "Tax rules for property sales, buy-to-let mortgage relief, and rental income." },
-      { slug: "uk-self-assessment-freelancer-dividend-tax-guide", title: "UK Self Assessment & Freelancer Guide", description: "Tax guide for sole traders, freelancers, company directors, and dividend tax." }
+      { slug: "uk-income-tax-rates-brackets-guide", title: "UK Income Tax Rates & Brackets Guide", description: "Complete breakdown of UK tax bands, personal allowance, and PAYE tax calculation.", url: "/blogs/uk-income-tax-rates-brackets-salary-take-home-guide/" },
+      { slug: "uk-expat-foreign-income-tax-guide", title: "UK Expat & Foreign Income Tax Guide", description: "Tax rules for US expats, foreign income, double tax treaties, and non-residents.", url: "/blogs/uk-expat-tax-guide-foreigners-non-residents-us-expats/" },
+      { slug: "uk-capital-gains-rental-property-tax-guide", title: "UK Capital Gains & Rental Property Guide", description: "Tax rules for property sales, buy-to-let mortgage relief, and rental income.", url: "/blogs/uk-capital-gains-tax-rental-income-property-guide/" },
+      { slug: "uk-self-assessment-freelancer-dividend-tax-guide", title: "UK Self Assessment & Freelancer Guide", description: "Tax guide for sole traders, freelancers, company directors, and dividend tax.", url: "/blogs/uk-self-assessment-sole-trader-dividend-corporate-tax-guide/" }
     ],
     faqs: [
       { question: "What is the personal allowance?", answer: "£12,570 for 2024/25 - income below this is tax-free." }

@@ -6,7 +6,7 @@ definition: "Pay As You Earn (PAYE) is the official HMRC system used by UK emplo
 examples:
   - "Under PAYE, your monthly pay slip shows your gross pay, tax code (e.g. 1257L), PAYE Income Tax deducted, National Insurance deducted, and net take-home salary."
 relatedGuides:
-  - "uk-income-tax-rates-brackets-guide"
+  - "payroll-tax-basics"
 relatedCalculators:
   - "united-kingdom-income-tax-income-tax-calculator"
   - "united-kingdom-national-insurance-ni-calculator"

@@ -44,10 +44,15 @@ export default defineConfig({
     '/blogs/nz-rental-property-airbnb-income-tax-guide/': { status: 301, destination: '/blogs/nz-corporate-business-family-trust-tax-guide/' },
 
     '/knowledge/hong-kong-tax-residency/': { status: 301, destination: '/blogs/hong-kong-tax-residency/' },
+    '/knowledge/singapore-tax-residency/': { status: 301, destination: '/blogs/singapore-tax-for-foreigners-expats-guide/' },
     '/blogs/singapore-tax-for-malaysian-indian-expats-guide/': {
       status: 301,
-      destination: '/knowledge/singapore-tax-residency/'
+      destination: '/blogs/singapore-tax-for-foreigners-expats-guide/'
     },
+    '/knowledge/uk-income-tax-rates-brackets-guide/': { status: 301, destination: '/blogs/uk-income-tax-rates-brackets-salary-take-home-guide/' },
+    '/knowledge/uk-expat-foreign-income-tax-guide/': { status: 301, destination: '/blogs/uk-expat-tax-guide-foreigners-non-residents-us-expats/' },
+    '/knowledge/uk-capital-gains-rental-property-tax-guide/': { status: 301, destination: '/blogs/uk-capital-gains-tax-rental-income-property-guide/' },
+    '/knowledge/uk-self-assessment-freelancer-dividend-tax-guide/': { status: 301, destination: '/blogs/uk-self-assessment-sole-trader-dividend-corporate-tax-guide/' },
     '/blogs/pakistan-salary-income-tax-slabs-evolution-guide-2026/': {
       status: 301,
       destination: '/blogs/pakistan-fbr-tax-slabs/'

@@ -6,7 +6,7 @@ definition: "The Remittance Basis is an alternative tax arrangement in the UK fo
 examples:
   - "If an expat earns interest on an overseas bank account and keeps that money abroad without bringing it into the UK, it is not taxed under the Remittance Basis."
 relatedGuides:
-  - "uk-expat-foreign-income-tax-guide"
+  - "tax-residency-explained"
 relatedCalculators:
   - "united-kingdom-income-tax-income-tax-calculator"
 relatedGlossary:

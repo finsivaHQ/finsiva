@@ -6,7 +6,7 @@ definition: "The UK Capital Gains Tax Allowance (Annual Exempt Amount) is the ma
 examples:
   - "For the 2025/2026 tax year, the Annual Exempt Amount for individuals is £3,000. Capital gains above £3,000 are taxed at 10%/20% for standard assets or 18%/24% for residential property."
 relatedGuides:
-  - "uk-capital-gains-rental-property-tax-guide"
+  - "capital-gains-tax-basics"
 relatedCalculators:
   - "united-kingdom-income-tax-income-tax-calculator"
 relatedGlossary:

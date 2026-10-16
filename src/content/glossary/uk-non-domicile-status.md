@@ -6,7 +6,7 @@ definition: "Non-domiciled status is a tax classification for UK residents whose
 examples:
   - "Historically, non-doms could claim the Remittance Basis of taxation, paying UK tax only on UK-source income and foreign income remitted into the UK."
 relatedGuides:
-  - "uk-expat-foreign-income-tax-guide"
+  - "tax-residency-explained"
 relatedCalculators:
   - "united-kingdom-income-tax-income-tax-calculator"
 relatedGlossary:

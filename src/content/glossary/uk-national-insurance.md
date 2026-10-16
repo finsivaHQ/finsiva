@@ -7,7 +7,7 @@ examples:
   - "Employees pay Class 1 NI at 8% on weekly earnings between £242 and £967 (£12,570 to £50,270 annually), and 2% on earnings above £967 per week."
   - "Sole traders pay Class 4 NI on self-employed profits exceeding £12,570."
 relatedGuides:
-  - "uk-income-tax-rates-brackets-guide"
+  - "payroll-tax-basics"
 relatedCalculators:
   - "united-kingdom-national-insurance-ni-calculator"
 relatedGlossary:

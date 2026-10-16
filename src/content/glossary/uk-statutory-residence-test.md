@@ -6,7 +6,7 @@ definition: "The Statutory Residence Test (SRT) is the legal framework used by H
 examples:
   - "If you spend 183 days or more in the UK during a tax year, you are automatically classified as a UK tax resident under the SRT."
 relatedGuides:
-  - "uk-expat-foreign-income-tax-guide"
+  - "tax-residency-explained"
 relatedCalculators:
   - "united-kingdom-income-tax-income-tax-calculator"
 relatedGlossary:

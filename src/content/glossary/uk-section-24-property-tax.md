@@ -6,7 +6,7 @@ definition: "Section 24 of the Finance (No. 2) Act 2015 restricts individual UK 
 examples:
   - "Higher rate (40%) taxpayers can no longer deduct mortgage interest at their marginal tax rate; instead, they receive a tax credit equal to 20% of their finance costs."
 relatedGuides:
-  - "uk-capital-gains-rental-property-tax-guide"
+  - "capital-gains-tax-basics"
 relatedCalculators:
   - "united-kingdom-income-tax-income-tax-calculator"
 relatedGlossary:

@@ -6,7 +6,7 @@ definition: "The UK Dividend Allowance is the amount of dividend income an indiv
 examples:
   - "For the 2025/2026 tax year, the Dividend Allowance is £500. Dividend income above £500 is taxed according to your Income Tax band."
 relatedGuides:
-  - "uk-self-assessment-freelancer-dividend-tax-guide"
+  - "tax-planning-basics"
 relatedCalculators:
   - "united-kingdom-income-tax-income-tax-calculator"
 relatedGlossary:

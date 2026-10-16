@@ -7,7 +7,7 @@ examples:
   - "Sole traders and freelancers must file an annual Self Assessment tax return by 31 January following the end of the tax year."
   - "If your total annual income exceeds £150,000 or you receive dividend/rental income above allowances, HMRC requires you to register for Self Assessment."
 relatedGuides:
-  - "uk-self-assessment-freelancer-dividend-tax-guide"
+  - "tax-planning-basics"
 relatedCalculators:
   - "united-kingdom-income-tax-income-tax-calculator"
 relatedGlossary:
