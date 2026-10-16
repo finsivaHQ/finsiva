@@ -27,7 +27,7 @@ const baseUrl = "https://finsiva.com";
 <Layout
   title={`${category} Guides | Finsiva Knowledge Center`}
   description={`Explore our collection of educational guides on ${category}. Clear, expert-written explanations to help you understand tax concepts.`}
-  canonical={`${baseUrl}/knowledge/category/${category.toLowerCase().replace(/[\/\s]+/g, '-').replace(/-+/g, '-')}`}
+  canonical={`${baseUrl}/knowledge/category/${category.toLowerCase().replace(/[\/\s]+/g, '-').replace(/-+/g, '-')}/`}
   robots="index,follow"
   image="/og-image.svg"
   imageAlt={`${category} guides — Finsiva Knowledge Center`}
@@ -36,7 +36,7 @@ const baseUrl = "https://finsiva.com";
     <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
       <Breadcrumbs items={[
         { label: "Home", href: "/" },
-        { label: "Knowledge Center", href: "/knowledge" },
+        { label: "Knowledge Center", href: "/knowledge/" },
         { label: category }
       ]} />
 

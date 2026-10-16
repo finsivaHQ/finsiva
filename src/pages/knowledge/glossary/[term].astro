@@ -26,7 +26,7 @@ const prev = currentIndex > 0 ? allGlossary[currentIndex - 1] : null;
 const next = currentIndex < allGlossary.length - 1 ? allGlossary[currentIndex + 1] : null;
 
 const baseUrl = "https://finsiva.com";
-const currentUrl = `${baseUrl}/knowledge/glossary/${term.id}`;
+const currentUrl = `${baseUrl}/knowledge/glossary/${term.id}/`;
 
 const termSchema = {
   "@context": "https://schema.org",
@@ -37,7 +37,7 @@ const termSchema = {
   inDefinedTermSet: {
     "@type": "DefinedTermSet",
     name: "Finsiva Tax Glossary",
-    url: `${baseUrl}/knowledge/glossary`
+    url: `${baseUrl}/knowledge/glossary/`
   }
 };
 ---
@@ -55,8 +55,8 @@ const termSchema = {
     <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
       <Breadcrumbs items={[
         { label: "Home", href: "/" },
-        { label: "Knowledge Center", href: "/knowledge" },
-        { label: "Glossary", href: "/knowledge/glossary" },
+        { label: "Knowledge Center", href: "/knowledge/" },
+        { label: "Glossary", href: "/knowledge/glossary/" },
         { label: term.data.term }
       ]} />
 
@@ -93,11 +93,16 @@ const termSchema = {
           <section class="mt-10" aria-labelledby="related-guides-heading">
             <h3 id="related-guides-heading" class="text-xl font-semibold text-ink mb-4 dark:text-on-primary">Related Guides</h3>
             <ul class="space-y-2">
-              {term.data.relatedGuides.map(rel => (
-                <li>
-                  <a href={rel.startsWith('/') ? rel : `/knowledge/${rel}`} class="text-link hover:underline dark:text-link">{rel}</a>
-                </li>
-              ))}
+              {term.data.relatedGuides.map(rel => {
+                const guideHref = rel.startsWith('/')
+                  ? (rel.endsWith('/') ? rel : `${rel}/`)
+                  : `/knowledge/${rel}/`;
+                return (
+                  <li>
+                    <a href={guideHref} class="text-link hover:underline dark:text-link">{rel}</a>
+                  </li>
+                );
+              })}
             </ul>
           </section>
         )}

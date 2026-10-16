@@ -2,7 +2,6 @@
 import Layout from "../../layouts/Layout.astro";
 import fs from "fs";
 import path from "path";
-import { fileURLToPath } from "url";
 import EditorialStandardsCard from "../../components/EditorialStandardsCard.astro";
 
 interface BlogPost {
@@ -33,8 +32,8 @@ if (fs.existsSync(currentDir)) {
       posts.push({
         title: titleMatch[1],
         description: descMatch[1],
-        slug: `/blogs/${file.replace(/\.astro$/, '')}`,
-        date: dateMatch ? (dateMatch[1] ? dateMatch[1].trim() : 'July 2026') : 'July 2026',
+        slug: `/blogs/${file.replace(/\.astro$/, '')}/`,
+        date: dateMatch ? (dateMatch[1] ? dateMatch[1].trim() : 'August 2026') : 'August 2026',
         readTime: readTimeMatch ? `${readTimeMatch[1]} min read` : '10 min read',
         author: authorMatch ? authorMatch[1] : 'Finsiva Research & Methodology'
       });
@@ -43,58 +42,223 @@ if (fs.existsSync(currentDir)) {
 }
 
 posts.sort((a, b) => a.title.localeCompare(b.title));
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How frequently are Finsiva tax guides and calculation methodologies updated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All Finsiva tax guides and underlying computational models are reviewed immediately upon official budget gazette releases and statutory tax updates across our supported jurisdictions (including IRS, HMRC, IRAS, FBR, IRD, and LHDN). Articles reflect the active 2025/2026 and 2026/2027 assessment years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are the tax strategies and calculations in Finsiva guides verified by professionals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every guide published on Finsiva undergoes a multi-tier editorial and verification process: primary source verification against official statutory acts, cross-checking by certified tax and financial researchers, and peer verification before publication."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use Finsiva calculators and guides for expat and cross-border tax planning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Finsiva specializes in global and expat taxation, including territorial tax regimes (Hong Kong, Singapore), non-resident tax rules, foreign earned income exclusions (US FEIE), and Double Taxation Avoidance Agreements (DTAA)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do Double Taxation Avoidance Agreements (DTAAs) protect cross-border income?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "DTAAs are bilateral treaties between countries designed to prevent the same income stream from being taxed twice. They assign taxing rights between the country of source and the country of residence, offering either tax exemption in one jurisdiction or foreign tax credits (FTCs) to offset domestic liability against taxes paid abroad."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a statutory marginal tax rate and an effective tax rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The statutory marginal rate is the highest percentage bracket applied to your last dollar of taxable income. The effective tax rate is your actual total tax paid divided by your total gross income, factoring in tax-free allowances, progressive lower brackets, and deductions. Finsiva calculators compute both figures automatically."
+      }
+    }
+  ]
+};
 ---
 
-<Layout title="Tax Blog - Latest Tax Tips, Guides & Updates | TaxPortal" description="Read the latest tax tips, guides, and updates from TaxPortal. Learn about income tax, GST, TDS, capital gains, and tax saving strategies.">
+<Layout 
+  title="Tax Guides, Expat Insights & Global Tax Analysis | Finsiva" 
+  description="Explore comprehensive tax guides, statutory slab updates, salary take-home analyses, and cross-border expat strategies across 10+ countries written by Finsiva."
+  schema={faqSchema}
+>
   <div class="min-h-screen bg-canvas dark:bg-canvas">
     <main class="min-h-screen">
       <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <h1 class="text-4xl font-bold text-ink mb-8 dark:text-on-primary">Tax Blog</h1>
-        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80" alt="Tax blog header with financial news" class="mb-6 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
-        <p class="text-lg text-body dark:text-muted mb-12">Latest tax tips, guides, and updates to help you stay informed and save taxes.</p>
-        
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {posts.map(post => (
-            <article class="rounded-xl border border-hairline bg-canvas p-6 transition hover:border-primary hover:shadow-lg dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
-              <h2 class="text-xl font-semibold text-ink mb-2 dark:text-on-primary">
-                <a href={post.slug} class="hover:text-primary dark:hover:text-link">{post.title}</a>
-              </h2>
-              <p class="text-sm text-muted mb-4 dark:text-muted">{post.description}</p>
-              <div class="flex items-center gap-4 text-sm text-muted dark:text-muted">
-                <span>By {post.author}</span>
-                <span aria-hidden="true">·</span>
-                <span>{post.date}</span>
-                <span>{post.readTime}</span>
-              </div>
-            </article>
-          ))}
-        </div>
+        <!-- Breadcrumbs -->
+        <nav aria-label="Breadcrumb" class="mb-6 text-sm">
+          <ol class="flex items-center gap-2">
+            <li><a href="/" class="text-link hover:underline dark:text-link">Home</a></li>
+            <li><span class="text-muted" aria-hidden="true">/</span></li>
+            <li class="font-medium text-ink dark:text-on-primary" aria-current="page">Tax Guides & Articles</li>
+          </ol>
+        </nav>
 
-        <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
-          <h2 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">About Our Blog</h2>
-          <p class="text-body dark:text-muted">TaxPortal's blog features expert analysis from tax professionals and financial analysts. Our team of contributors includes Maya Lin (US tax), Kira Tanaka (India GST/TDS), Nora Chen (capital gains), Hana Patel (TDS deductions), Lena Park (Indian tax calculations), and Sora Vance (old vs new tax regimes). Browse our guides for actionable tax strategies and calculators for every tax scenario.</p>
-          <p class="mt-3 text-body dark:text-muted">Every article follows a strict editorial process: initial research against official government sources, professional review by at least one qualified contributor, fact-checking before publication, and a post-publication review cycle when tax laws change. We clearly mark content as informational and encourage readers to consult a tax professional for personalized advice.</p>
-          <p class="mt-3 text-body dark:text-muted">Our blog covers a wide range of topics, from basic tax filing tips to advanced strategies for investors and business owners. We publish new articles weekly, with special focus on tax season deadlines, budget announcements, and regulatory updates that affect our supported countries.</p>
-          <p class="mt-3 text-body dark:text-muted">Whether you are filing your first tax return or managing a portfolio of international investments, our blog provides context and clarity that generic financial news often lacks. We explain not just what changed, but why it changed and how it affects real people.</p>
-          <p class="mt-3 text-body dark:text-muted"><a href="/about/" class="text-link hover:underline dark:text-link">Learn more about our team</a>.</p>
-        </div>
+        <header class="mb-12">
+          <h1 class="text-4xl font-extrabold text-ink mb-4 sm:text-5xl dark:text-on-primary">Global Tax Guides & Technical Insights</h1>
+          <p class="text-xl text-body dark:text-muted max-w-3xl leading-relaxed">
+            Rigorous, statutory-grounded tax intelligence, expat residency breakdowns, and take-home pay analyses across major global economies.
+          </p>
+        </header>
 
-        <EditorialStandardsCard class="mt-12" />
+        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80" alt="Finsiva global tax research and analysis library" class="mb-12 w-full rounded-2xl object-cover max-h-80 sm:max-h-96 shadow-sm border border-hairline dark:border-overlay-lighter" loading="lazy" />
 
-        <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
-          <h2 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Newsletter Signup</h2>
-          <p class="text-body dark:text-muted mb-4">Stay up to date with the latest tax tips, calculator releases, and policy changes. Our newsletter is sent once a month and includes curated articles, upcoming deadline reminders, and exclusive guides for our subscribers.</p>
-          <form action="https://formspree.io/f/xpqvelrz" method="POST" class="space-y-4">
-            <div>
-              <label for="newsletter-email" class="block text-sm font-medium text-ink mb-1 dark:text-on-primary">Email address</label>
-              <input type="email" id="newsletter-email" name="email" required class="w-full rounded-lg border border-hairline bg-canvas px-4 py-2 text-ink focus:border-primary focus:outline-none dark:border-overlay-lighter dark:bg-surface dark:text-on-primary" />
+        <!-- Category Overview Cards -->
+        <section class="mb-16">
+          <h2 class="text-2xl font-bold text-ink mb-6 dark:text-on-primary">Browse Guides by Tax Domain</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="rounded-xl border border-hairline bg-canvas p-5 shadow-sm dark:border-overlay-lighter dark:bg-surface">
+              <span class="text-xs font-bold text-primary uppercase tracking-wider block mb-1">Personal Finance</span>
+              <h3 class="font-bold text-ink dark:text-on-primary text-base">Income & Salaries Tax</h3>
+              <p class="text-xs text-muted mt-2">Progressive tax slabs, personal allowances, standard deductions, and net take-home salary calculations.</p>
             </div>
-            <button type="submit" class="btn btn-primary">Subscribe</button>
+            <div class="rounded-xl border border-hairline bg-canvas p-5 shadow-sm dark:border-overlay-lighter dark:bg-surface">
+              <span class="text-xs font-bold text-primary uppercase tracking-wider block mb-1">Cross-Border</span>
+              <h3 class="font-bold text-ink dark:text-on-primary text-base">Expats & Non-Residents</h3>
+              <p class="text-xs text-muted mt-2">183-day residency tests, foreign income exemptions, DTAA tax credits, and remittance protections.</p>
+            </div>
+            <div class="rounded-xl border border-hairline bg-canvas p-5 shadow-sm dark:border-overlay-lighter dark:bg-surface">
+              <span class="text-xs font-bold text-primary uppercase tracking-wider block mb-1">Commercial</span>
+              <h3 class="font-bold text-ink dark:text-on-primary text-base">Corporate & Business Tax</h3>
+              <p class="text-xs text-muted mt-2">Two-tier profits tax, corporate headline rates, allowable business deductions, and small business incentives.</p>
+            </div>
+            <div class="rounded-xl border border-hairline bg-canvas p-5 shadow-sm dark:border-overlay-lighter dark:bg-surface">
+              <span class="text-xs font-bold text-primary uppercase tracking-wider block mb-1">Indirect & Assets</span>
+              <h3 class="font-bold text-ink dark:text-on-primary text-base">Property, VAT & GST</h3>
+              <p class="text-xs text-muted mt-2">Real estate stamp duty, capital gains exemptions, goods and services tax compliance, and rental yield tax.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Articles Grid -->
+        <section class="mb-16">
+          <div class="flex items-center justify-between mb-8">
+            <h2 class="text-2xl font-bold text-ink dark:text-on-primary">All Published Articles ({posts.length})</h2>
+            <span class="text-xs font-semibold text-muted uppercase tracking-wider">Alphabetically Indexed</span>
+          </div>
+          
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {posts.map(post => (
+              <article class="flex flex-col justify-between rounded-xl border border-hairline bg-canvas p-6 transition-all hover:border-primary hover:shadow-lg dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
+                <div>
+                  <h3 class="text-lg font-bold text-ink mb-2.5 leading-snug dark:text-on-primary">
+                    <a href={post.slug} class="hover:text-primary transition-colors dark:hover:text-link">{post.title}</a>
+                  </h3>
+                  <p class="text-sm text-muted mb-4 leading-relaxed line-clamp-3">{post.description}</p>
+                </div>
+                <div class="pt-4 border-t border-hairline dark:border-overlay-lighter flex items-center justify-between text-xs text-muted">
+                  <span>{post.date}</span>
+                  <span class="font-medium text-primary flex items-center gap-1">Read Guide &rarr;</span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <!-- Deep E-E-A-T Editorial Standards & Methodology Section -->
+        <section class="mb-16 rounded-2xl border border-hairline bg-canvas-soft p-8 dark:border-overlay-light dark:bg-surface">
+          <h2 class="text-2xl font-bold text-ink mb-4 dark:text-on-primary">About Finsiva Editorial Standards & Research Methodology</h2>
+          <div class="prose max-w-none text-body dark:text-muted space-y-4 leading-relaxed">
+            <p>
+              At <strong>Finsiva</strong>, our mission is to eliminate financial confusion by transforming dense, bureaucratic tax legislation into clear, actionable guides and high-precision interactive calculators. Navigating statutory tax laws—whether you are an expatriate relocating to Hong Kong, an NRI investing in Indian mutual funds, a sole trader filing UK Self Assessment, or a digital nomad managing worldwide tax residency—requires reliable, authoritative clarity without hidden commercial bias.
+            </p>
+            <p>
+              Every article published in our library adheres to a rigorous four-stage verification protocol:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>Primary Source Grounding:</strong> We calculate and cross-reference all figures directly against official government publications, statutory acts, and published revenue department circulars, including the IRS (United States), HMRC (United Kingdom), IRAS (Singapore), FBR (Pakistan), IRD (Hong Kong & New Zealand), and LHDN (Malaysia).</li>
+              <li><strong>Independent Mathematical Verification:</strong> Every tax formula, threshold bracket, and deduction rule presented in our articles is mathematically mirrored in our corresponding interactive calculators to ensure absolute numerical harmony between written prose and computational tools.</li>
+              <li><strong>Plain-Language Architectural Clarity:</strong> We avoid impenetrable bureaucratic jargon without sacrificing statutory accuracy. Concepts such as territorial source rules, deemed remittances, standard vs progressive tax rates, and double taxation treaty relief are explained with clear illustrative examples and practical step-by-step guidance.</li>
+              <li><strong>Continuous Statutory Maintenance:</strong> National budgets and annual fiscal amendments regularly alter tax thresholds and allowances. Our editorial research team systematically audits and updates each guide whenever statutory changes take effect.</li>
+            </ul>
+            <p>
+              Finsiva's guides and tools are designed for educational and preliminary estimation purposes. Because individual financial circumstances, residency histories, and asset structures vary, we always encourage readers to consult a certified tax advisor or accountant for formal statutory filings.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-hairline dark:border-overlay-lighter">
+            <a href="/about/" class="text-sm font-semibold text-primary hover:underline">Learn more about our methodology and research team &rarr;</a>
+          </div>
+        </section>
+
+        <!-- Comprehensive Tax Frameworks & Coverage Section -->
+        <section class="mb-16 rounded-2xl border border-hairline bg-canvas p-8 dark:border-overlay-lighter dark:bg-surface">
+          <h2 class="text-2xl font-bold text-ink mb-6 dark:text-on-primary">Core Tax Jurisdictions & Statutory Frameworks We Cover</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-body dark:text-muted leading-relaxed">
+            <div>
+              <h3 class="text-base font-bold text-ink dark:text-on-primary mb-2">1. Asian Financial Centers (Hong Kong, Singapore, Malaysia, Indonesia)</h3>
+              <p>
+                Asian hubs operate sophisticated, highly competitive tax frameworks. Hong Kong's strict territorial system taxes only salaries, profits, and property income derived within the territory, entirely exempting offshore income, dividends, and capital gains. Singapore combines progressive personal rates capped at 24% with the foreign source income exemption regime (FSIE) and targeted tax incentives. Malaysia enforces single-tier corporate distributions and specific Foreign Source Income (FSI) tax rules, while Indonesia’s progressive PPh 21 slabs apply to worldwide income for tax residents.
+              </p>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-ink dark:text-on-primary mb-2">2. Western Anglo-Saxon Economies (United States, United Kingdom, New Zealand)</h3>
+              <p>
+                The United States is one of only two nations enforcing citizenship-based taxation, requiring expatriates to report global income under the Foreign Earned Income Exclusion (FEIE) or Foreign Tax Credit (FTC) mechanisms. The United Kingdom transitioned its classic non-domiciled regime to a residency-based 4-year foreign income and gains (FIG) model, alongside National Insurance Contributions (NIC). New Zealand’s Inland Revenue Department (IRD) levies PAYE with zero capital gains tax on most shares, governed by the Bright-Line test for residential property.
+              </p>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-ink dark:text-on-primary mb-2">3. South Asian Regimes (India, Pakistan)</h3>
+              <p>
+                India’s dual-regime system contrasts the default New Tax Regime (Section 115BAC) offering lower concessional slabs with the Old Regime allowing extensive deductions under Section 80C, 80D, and HRA. Pakistan’s Federal Board of Revenue (FBR) enforces progressive salary and non-salary slabs, maintaining an Active Taxpayer List (ATL) with punitive withholding tax penalties for non-filers and legal exemptions for foreign remittances under Section 111(4).
+              </p>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-ink dark:text-on-primary mb-2">4. Indirect Consumption Duties (GST, VAT, Sales & Service Tax)</h3>
+              <p>
+                Indirect consumption taxes vary widely: UK standard VAT at 20%, Singapore GST at 9%, Indian multi-tier GST rates (5%, 12%, 18%, 28%), and Malaysia's dual Sales and Service Tax (SST) model (6% and 8%). Our dedicated indirect tax guides explain threshold registrations, reverse charges on imported digital services, zero-rating, and input tax credit claims.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <EditorialStandardsCard class="mb-16" />
+
+        <!-- FAQ Section -->
+        <section class="mb-16 rounded-2xl border border-hairline bg-canvas p-8 dark:border-overlay-lighter dark:bg-surface">
+          <h2 class="text-2xl font-bold text-ink mb-3 dark:text-on-primary">Frequently Asked Questions</h2>
+          <p class="text-sm text-body dark:text-muted mb-6 leading-relaxed">
+            Essential answers on international tax residency, Double Taxation Avoidance Agreements (DTAAs), statutory update cycles, and computational methodology across Finsiva guides.
+          </p>
+          <div class="space-y-6">
+            {faqSchema.mainEntity.map(faq => (
+              <div class="border-b border-hairline pb-4 last:border-b-0 dark:border-overlay-lighter">
+                <h3 class="text-lg font-semibold text-ink dark:text-on-primary mb-2">{faq.name}</h3>
+                <p class="text-sm text-body dark:text-muted leading-relaxed">{faq.acceptedAnswer.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="rounded-2xl border border-hairline bg-canvas-soft p-8 dark:border-overlay-light dark:bg-surface">
+          <h2 class="text-2xl font-bold text-ink mb-3 dark:text-on-primary">Stay Updated on Statutory Tax Changes</h2>
+          <p class="text-body dark:text-muted mb-6 max-w-2xl">
+            Receive monthly updates on newly published international tax guides, budget announcements, deadline alerts, and fresh interactive calculators from the Finsiva editorial team.
+          </p>
+          <form action="https://formspree.io/f/xpqvelrz" method="POST" class="max-w-md space-y-4">
+            <div>
+              <label for="newsletter-email" class="block text-sm font-medium text-ink mb-1.5 dark:text-on-primary">Email address</label>
+              <input type="email" id="newsletter-email" name="email" required placeholder="name@example.com" class="w-full rounded-xl border border-hairline bg-canvas px-4 py-2.5 text-ink focus:border-primary focus:outline-none dark:border-overlay-lighter dark:bg-surface dark:text-on-primary text-sm" />
+            </div>
+            <button type="submit" class="btn btn-primary px-6 py-2.5 rounded-xl text-sm font-semibold">Subscribe to Updates</button>
           </form>
-          <p class="mt-3 text-sm text-muted dark:text-muted">We respect your privacy. Unsubscribe at any time. No spam, ever.</p>
-        </div>
+          <p class="mt-3 text-xs text-muted dark:text-muted">We respect your privacy. Zero spam. Unsubscribe anytime with a single click.</p>
+        </section>
       </div>
     </main>
   </div>
 </Layout>
-

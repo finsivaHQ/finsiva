@@ -29,7 +29,7 @@ if (!country || !category) {
   description={`Comprehensive guide to ${country.name} ${category.name} for ${country.taxYear}. ${category.description}`}
   canonical={`https://finsiva.com/countries/${country.slug}/${category.slug}/`}
   breadcrumbs={[
-    { label: "Countries", href: "/countries" },
+    { label: "Countries", href: "/countries/" },
     { label: country.name, href: `/countries/${country.slug}/` },
     { label: category.name }
   ]}

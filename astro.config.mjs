@@ -83,7 +83,7 @@ export default defineConfig({
     },
     '/blogs/hong-kong-tax-calculator-expats-guide/': {
       status: 301,
-      destination: '/countries/hong-kong/income-tax/income-tax-calculator/'
+      destination: '/countries/hong-kong/salaries-tax/hong-kong-tax-calculator-for-expats/'
     },
     '/blogs/nz-take-home-pay-paye-salary-tax-calculator-guide/': {
       status: 301,

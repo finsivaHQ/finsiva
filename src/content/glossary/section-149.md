@@ -6,7 +6,7 @@ examples:
   - "Under Section 149, an employer calculates annual gross taxable salary, applies FBR tax slabs, and deducts 1/12th of the total tax each month."
   - "Exempt allowances like medical allowance up to 10% of basic pay reduce the taxable salary base under Section 149."
 relatedGuides:
-  - "/blogs/pakistan-salary-tax-guide"
+  - "/blogs/pakistan-fbr-tax-slabs/"
   - "/blogs/pakistan-fbr-tax-slabs"
 relatedCalculators:
   - "salary-tax-calculator"

@@ -81,7 +81,7 @@ const govOrgSchema = {
   description={`${country.name} tax guide: ${country.taxYear} tax brackets, rates, deductions, credits, filing deadlines, and official government resources. Calculate your tax with our free ${country.name} tax calculators.`}
   keywords={`${country.name} tax, ${country.name} tax calculator, ${country.name} tax brackets, ${country.name} income tax, ${country.name} tax rates, ${country.name} tax deductions, ${country.name} tax credits, ${country.name} filing deadline, ${country.name} tax authority, ${country.name} tax guide`}
   breadcrumbs={[
-    { label: "Countries", href: "/countries" },
+    { label: "Countries", href: "/countries/" },
     { label: country.name, href: `/countries/${country.slug}/` }
   ]}
   canonical={`${baseUrl}/countries/${country.slug}/`}
@@ -360,7 +360,7 @@ const govOrgSchema = {
             <h4 class="font-semibold text-ink dark:text-on-primary text-base">Hong Kong Property Tax Guide</h4>
             <p class="text-xs text-muted mt-1 dark:text-muted">Understand 15% standard rate on Net Assessable Value & statutory repair allowance.</p>
           </a>
-          <a href="/blogs/hong-kong-rental-income-tax-guide/" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+          <a href="/blogs/hong-kong-property-tax-guide/" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
             <h4 class="font-semibold text-ink dark:text-on-primary text-base">Rental Income Tax Guide</h4>
             <p class="text-xs text-muted mt-1 dark:text-muted">Landlord tax rules, 20% repair allowance, and NAV calculations.</p>
           </a>
@@ -385,11 +385,11 @@ const govOrgSchema = {
 
       {country.slug === 'pakistan' && (
         <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <a href="/blogs/pakistan-income-tax-guide/" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+          <a href="/blogs/pakistan-fbr-tax-slabs/" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
             <h4 class="font-semibold text-ink dark:text-on-primary text-base">Pakistan Income Tax Guide</h4>
             <p class="text-xs text-muted mt-1 dark:text-muted">Complete guide to FBR income tax slabs for individuals and businesses.</p>
           </a>
-          <a href="/blogs/pakistan-salary-tax-guide/" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+          <a href="/blogs/pakistan-fbr-tax-slabs/" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
             <h4 class="font-semibold text-ink dark:text-on-primary text-base">Pakistan Salary Tax Guide</h4>
             <p class="text-xs text-muted mt-1 dark:text-muted">How monthly salary tax is calculated under FBR active taxpayer rules.</p>
           </a>
@@ -405,7 +405,7 @@ const govOrgSchema = {
             <h4 class="font-semibold text-ink dark:text-on-primary text-base">Pakistan Property Tax Guide</h4>
             <p class="text-xs text-muted mt-1 dark:text-muted">Provincial property tax rates, capital gains tax, and token charges.</p>
           </a>
-          <a href="/blogs/pakistan-token-tax-guide/" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+          <a href="/blogs/pakistan-vehicle-tax-guide/" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
             <h4 class="font-semibold text-ink dark:text-on-primary text-base">Pakistan Token Tax Guide</h4>
             <p class="text-xs text-muted mt-1 dark:text-muted">Detailed token tax rates by engine capacity and filer status.</p>
           </a>
@@ -480,7 +480,7 @@ const govOrgSchema = {
             <h4 class="font-semibold text-ink dark:text-on-primary text-base">Singapore IRAS myTax Portal Guide</h4>
             <p class="text-xs text-muted mt-1 dark:text-muted">Learn how to file and pay Singapore personal income tax through myTax Portal.</p>
           </a>
-          <a href="/blogs/singapore-expat-employment-pass-tax-calculator-guide/" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
+          <a href="/countries/singapore/income-tax/income-tax-calculator/" class="card hover:border-primary transition dark:border-overlay-lighter dark:bg-surface p-4 border border-hairline rounded-xl">
             <h4 class="font-semibold text-ink dark:text-on-primary text-base">Singapore Expat Tax Guide</h4>
             <p class="text-xs text-muted mt-1 dark:text-muted">Tax guidance for Employment Pass, S Pass, and Work Permit holders.</p>
           </a>

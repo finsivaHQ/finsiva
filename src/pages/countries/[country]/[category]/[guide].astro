@@ -73,7 +73,7 @@ const articleSchema = {
   robots={isThinContent ? "noindex, follow" : undefined}
   schema={articleSchema}
   breadcrumbs={[
-    { label: "Countries", href: "/countries" },
+    { label: "Countries", href: "/countries/" },
     { label: country.name, href: `/countries/${country.slug}/` },
     { label: category.name, href: `/countries/${country.slug}/${category.slug}/` },
     { label: guide.title }

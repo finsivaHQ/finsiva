@@ -31,7 +31,8 @@ const breadcrumbSchema = breadcrumbs && breadcrumbs.length > 0 ? {
     };
     if (b.href) {
       const cleanHref = b.href === '/' ? '' : b.href.replace(/\/+$/, '');
-      item["item"] = b.href.startsWith("http") ? b.href : `${siteUrl}${cleanHref.startsWith("/") ? "" : "/"}${cleanHref}`;
+      const fullUrl = b.href.startsWith("http") ? b.href : `${siteUrl}${cleanHref.startsWith("/") ? "" : "/"}${cleanHref}`;
+      item["item"] = fullUrl.endsWith('/') ? fullUrl : `${fullUrl}/`;
     }
     return item;
   })

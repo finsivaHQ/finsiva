@@ -6,7 +6,7 @@ examples:
   - "Appearing on the FBR ATL grants a 50% discount on withholding tax when purchasing real estate property."
   - "Active tax filers on the ATL pay 0% withholding tax on daily cash withdrawals from Pakistani commercial banks."
 relatedGuides:
-  - "/blogs/pakistan-income-tax-guide"
+  - "/blogs/pakistan-fbr-tax-slabs/"
   - "/blogs/pakistan-tax-filing-guide"
 relatedCalculators:
   - "income-tax-calculator"

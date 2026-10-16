@@ -7,7 +7,7 @@ examples:
   - "IRIS automatically generates 17-digit PSID numbers for online tax payments via mobile banking."
 relatedGuides:
   - "/blogs/pakistan-tax-filing-guide"
-  - "/blogs/pakistan-income-tax-guide"
+  - "/blogs/pakistan-fbr-tax-slabs/"
 relatedCalculators:
   - "income-tax-calculator"
   - "salary-tax-calculator"

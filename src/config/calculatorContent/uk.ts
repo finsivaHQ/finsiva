@@ -50,11 +50,11 @@ export const ukContent: Record<string, RichCalculatorContent> = {
     ],
     "relatedCalculators": {
       "title": "Related Calculators",
-      "html": "<p>Explore complementary tools: <a href=\"/countries/united-kingdom\" class=\"text-primary font-semibold hover:underline\">United Kingdom Tax Overview</a>.</p>"
+      "html": "<p>Explore complementary tools: <a href=\"/countries/united-kingdom/\" class=\"text-primary font-semibold hover:underline\">United Kingdom Tax Overview</a>.</p>"
     },
     "suggestedArticles": {
       "title": "Educational Tax Guides",
-      "html": "<p>Read comprehensive guides: <a href=\"/countries/united-kingdom\" class=\"text-primary font-semibold hover:underline\">United Kingdom Tax Guide</a>.</p>"
+      "html": "<p>Read comprehensive guides: <a href=\"/countries/united-kingdom/\" class=\"text-primary font-semibold hover:underline\">United Kingdom Tax Guide</a>.</p>"
     },
     "officialResources": {
       "title": "Official Government Resources",
@@ -62,7 +62,7 @@ export const ukContent: Record<string, RichCalculatorContent> = {
     },
     "relatedCountry": {
       "title": "International Tax Hubs",
-      "html": "<p>Compare with other global jurisdictions: <a href=\"/countries\" class=\"text-primary font-semibold hover:underline\">All Countries Overview</a>.</p>"
+      "html": "<p>Compare with other global jurisdictions: <a href=\"/countries/\" class=\"text-primary font-semibold hover:underline\">All Countries Overview</a>.</p>"
     },
     "educationalDisclaimer": {
       "title": "Educational & Accuracy Disclaimer",
@@ -122,11 +122,11 @@ export const ukContent: Record<string, RichCalculatorContent> = {
     ],
     "relatedCalculators": {
       "title": "Related Calculators",
-      "html": "<p>Explore complementary tools: <a href=\"/countries/united-kingdom\" class=\"text-primary font-semibold hover:underline\">United Kingdom Tax Overview</a>.</p>"
+      "html": "<p>Explore complementary tools: <a href=\"/countries/united-kingdom/\" class=\"text-primary font-semibold hover:underline\">United Kingdom Tax Overview</a>.</p>"
     },
     "suggestedArticles": {
       "title": "Educational Tax Guides",
-      "html": "<p>Read comprehensive guides: <a href=\"/countries/united-kingdom\" class=\"text-primary font-semibold hover:underline\">United Kingdom Tax Guide</a>.</p>"
+      "html": "<p>Read comprehensive guides: <a href=\"/countries/united-kingdom/\" class=\"text-primary font-semibold hover:underline\">United Kingdom Tax Guide</a>.</p>"
     },
     "officialResources": {
       "title": "Official Government Resources",
@@ -134,7 +134,7 @@ export const ukContent: Record<string, RichCalculatorContent> = {
     },
     "relatedCountry": {
       "title": "International Tax Hubs",
-      "html": "<p>Compare with other global jurisdictions: <a href=\"/countries\" class=\"text-primary font-semibold hover:underline\">All Countries Overview</a>.</p>"
+      "html": "<p>Compare with other global jurisdictions: <a href=\"/countries/\" class=\"text-primary font-semibold hover:underline\">All Countries Overview</a>.</p>"
     },
     "educationalDisclaimer": {
       "title": "Educational & Accuracy Disclaimer",
@@ -194,11 +194,11 @@ export const ukContent: Record<string, RichCalculatorContent> = {
     ],
     "relatedCalculators": {
       "title": "Related Calculators",
-      "html": "<p>Explore complementary tools: <a href=\"/countries/united-kingdom\" class=\"text-primary font-semibold hover:underline\">United Kingdom Tax Overview</a>.</p>"
+      "html": "<p>Explore complementary tools: <a href=\"/countries/united-kingdom/\" class=\"text-primary font-semibold hover:underline\">United Kingdom Tax Overview</a>.</p>"
     },
     "suggestedArticles": {
       "title": "Educational Tax Guides",
-      "html": "<p>Read comprehensive guides: <a href=\"/countries/united-kingdom\" class=\"text-primary font-semibold hover:underline\">United Kingdom Tax Guide</a>.</p>"
+      "html": "<p>Read comprehensive guides: <a href=\"/countries/united-kingdom/\" class=\"text-primary font-semibold hover:underline\">United Kingdom Tax Guide</a>.</p>"
     },
     "officialResources": {
       "title": "Official Government Resources",
@@ -206,7 +206,7 @@ export const ukContent: Record<string, RichCalculatorContent> = {
     },
     "relatedCountry": {
       "title": "International Tax Hubs",
-      "html": "<p>Compare with other global jurisdictions: <a href=\"/countries\" class=\"text-primary font-semibold hover:underline\">All Countries Overview</a>.</p>"
+      "html": "<p>Compare with other global jurisdictions: <a href=\"/countries/\" class=\"text-primary font-semibold hover:underline\">All Countries Overview</a>.</p>"
     },
     "educationalDisclaimer": {
       "title": "Educational & Accuracy Disclaimer",
@@ -266,11 +266,11 @@ export const ukContent: Record<string, RichCalculatorContent> = {
     ],
     "relatedCalculators": {
       "title": "Related Calculators",
-      "html": "<p>Explore complementary tools: <a href=\"/countries/united-kingdom\" class=\"text-primary font-semibold hover:underline\">United Kingdom Tax Overview</a>.</p>"
+      "html": "<p>Explore complementary tools: <a href=\"/countries/united-kingdom/\" class=\"text-primary font-semibold hover:underline\">United Kingdom Tax Overview</a>.</p>"
     },
     "suggestedArticles": {
       "title": "Educational Tax Guides",
-      "html": "<p>Read comprehensive guides: <a href=\"/countries/united-kingdom\" class=\"text-primary font-semibold hover:underline\">United Kingdom Tax Guide</a>.</p>"
+      "html": "<p>Read comprehensive guides: <a href=\"/countries/united-kingdom/\" class=\"text-primary font-semibold hover:underline\">United Kingdom Tax Guide</a>.</p>"
     },
     "officialResources": {
       "title": "Official Government Resources",
@@ -278,7 +278,7 @@ export const ukContent: Record<string, RichCalculatorContent> = {
     },
     "relatedCountry": {
       "title": "International Tax Hubs",
-      "html": "<p>Compare with other global jurisdictions: <a href=\"/countries\" class=\"text-primary font-semibold hover:underline\">All Countries Overview</a>.</p>"
+      "html": "<p>Compare with other global jurisdictions: <a href=\"/countries/\" class=\"text-primary font-semibold hover:underline\">All Countries Overview</a>.</p>"
     },
     "educationalDisclaimer": {
       "title": "Educational & Accuracy Disclaimer",

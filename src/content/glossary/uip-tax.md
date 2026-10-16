@@ -7,7 +7,7 @@ examples:
   - "ePay Punjab and e-Payment Sindh allow online UIPT property tax payments using 17-digit PSID numbers."
 relatedGuides:
   - "/blogs/pakistan-property-tax-guide"
-  - "/blogs/pakistan-capital-gain-tax-guide"
+  - "/blogs/pakistan-property-tax-guide/"
 relatedCalculators:
   - "property-tax-calculator"
   - "rental-income-tax-calculator"
