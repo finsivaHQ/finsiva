@@ -170,7 +170,18 @@ const guideSchema = {
       )}
 
       {guide.data.relatedCalculators && guide.data.relatedCalculators.length > 0 && (
-        <RelatedCalculators calculators={guide.data.relatedCalculators.map(c => ({ title: c, href: `/countries` }))} />
+        <RelatedCalculators calculators={guide.data.relatedCalculators.map(c => {
+          const calcUrlMap: Record<string, string> = {
+            "Income Tax Calculator": "/countries/united-states/income-tax/federal-income-tax/",
+            "Salary Tax Calculator": "/countries/hong-kong/salaries-tax/salaries-tax-calculator/",
+            "GST Calculator": "/countries/india/gst/gst-calculator/",
+            "VAT Calculator": "/countries/united-kingdom/vat/vat-calculator/",
+            "Capital Gains Tax Calculator": "/countries/united-states/capital-gains-tax/capital-gains-calculator/",
+            "Payroll Tax Calculator": "/countries/united-states/payroll-tax/payroll-tax-calculator/",
+            "Tax Savings Calculator": "/countries/united-states/tax-planning/tax-savings-estimator/",
+          };
+          return { title: c, href: calcUrlMap[c] || "/countries/" };
+        })} />
       )}
 
       {guide.data.relatedCountries && guide.data.relatedCountries.length > 0 && (

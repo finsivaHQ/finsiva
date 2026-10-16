@@ -1937,7 +1937,7 @@ const calcCanonical = (() => {
           {relatedCalculators.map(rc => (
             <a href={`/countries/${country.slug}/${rc.categorySlug}/${rc.slug}/`} class="rounded-xl border border-hairline bg-canvas p-4 hover:border-primary transition dark:border-overlay-lighter dark:bg-surface dark:hover:border-primary">
               <h3 class="font-semibold text-ink dark:text-on-primary">{rc.name}</h3>
-              <p class="text-sm text-muted mt-1 dark:text-muted">{category.name} - {country.name}</p>
+              <p class="text-sm text-muted mt-1 dark:text-muted">{country.taxCategories.find(c => c.slug === rc.categorySlug)?.name || category.name} — {country.name}</p>
             </a>
           ))}
         </div>
