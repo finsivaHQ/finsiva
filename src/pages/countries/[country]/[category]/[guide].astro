@@ -70,7 +70,6 @@ const articleSchema = {
   title={`${guide.title} | ${country.name}`}
   description={guide.description}
   canonical={`https://finsiva.com/countries/${country.slug}/${category.slug}/${guide.slug}/`}
-  robots={isThinContent ? "noindex, follow" : undefined}
   schema={articleSchema}
   breadcrumbs={[
     { label: "Countries", href: "/countries/" },
