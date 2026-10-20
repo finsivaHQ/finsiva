@@ -4,8 +4,8 @@ import Breadcrumbs from "../components/Breadcrumbs.astro";
 import FactCheckedBadge from "../components/FactCheckedBadge.astro";
 import AuthorBioCard from "../components/AuthorBioCard.astro";
 
-const pageTitle = "Dave Ramsey Retirement Calculator | Free Nest Egg & 15% Rule Tool | Finsiva";
-const pageDescription = "Calculate your retirement nest egg using the Dave Ramsey retirement calculator. Estimate compound growth with the 15% rule, compare 10-12% returns, and test 8% vs 4% withdrawal rates.";
+const pageTitle = "Dave Ramsey Retirement Calculator | Free 15% Rule Tool";
+const pageDescription = "Free Dave Ramsey Retirement Calculator. Project your nest egg using the 15% rule (Baby Step 4), test 10-12% returns, and compare 8% vs 4% withdrawals.";
 const canonicalUrl = "https://finsiva.com/dave-ramsey-retirement-calculator/";
 
 const faqList = [
@@ -68,7 +68,7 @@ const webAppSchema = {
   title={pageTitle}
   description={pageDescription}
   canonical={canonicalUrl}
-  schema={webAppSchema}
+  schema={faqSchema}
 >
   <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
     <Breadcrumbs
