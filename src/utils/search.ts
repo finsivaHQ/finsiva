@@ -58,6 +58,15 @@ export function buildSearchItems(
     });
   }
 
+  items.push({
+    id: "calc-dave-ramsey-retirement",
+    title: "Dave Ramsey Retirement Calculator",
+    category: "Calculator",
+    description: "Calculate your retirement nest egg using Dave Ramsey's 15% rule (Baby Step 4), compound interest projections, and safe withdrawal rates.",
+    url: "/dave-ramsey-retirement-calculator/",
+    keywords: ["dave ramsey", "retirement", "compound interest", "15% rule", "nest egg", "money guy", "investment chart", "401k", "roth ira"],
+  });
+
   for (const country of countries) {
     items.push({
       id: `country-${country.slug}`,

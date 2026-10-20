@@ -1,0 +1,972 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import FactCheckedBadge from "../components/FactCheckedBadge.astro";
+import AuthorBioCard from "../components/AuthorBioCard.astro";
+
+const pageTitle = "Dave Ramsey Retirement Calculator | Free Nest Egg & 15% Rule Tool | Finsiva";
+const pageDescription = "Calculate your retirement nest egg using the Dave Ramsey retirement calculator. Estimate compound growth with the 15% rule, compare 10-12% returns, and test 8% vs 4% withdrawal rates.";
+const canonicalUrl = "https://finsiva.com/dave-ramsey-retirement-calculator/";
+
+const faqList = [
+  {
+    question: "What is Dave Ramsey's 15% retirement rule?",
+    answer: "Dave Ramsey's 15% rule (Baby Step 4) advises investing 15% of your gross annual household income into tax-advantaged retirement accounts before saving for children's college (Step 5) or paying off your home early (Step 6). This 15% should come from your own contributions, ignoring any employer match as extra icing on the cake."
+  },
+  {
+    question: "Why does Dave Ramsey use 10% to 12% annual return rates?",
+    answer: "Dave cites the long-term historical average annual return of the S&P 500, which has averaged approximately 10% to 12% since 1926 before adjusting for inflation. While realistic financial planners often use 7% to 8% to account for inflation and fund fees, Dave's figures illustrate nominal compound growth."
+  },
+  {
+    question: "What is Dave Ramsey's 8% withdrawal rate controversy?",
+    answer: "Dave argues that retirees can safely withdraw 8% of their nest egg annually if their portfolio earns 12% and inflation is 4%. However, the widely accepted Trinity Study and modern CFPs recommend a 4% to 5% withdrawal rate to protect against sequence of returns risk and market downturns. Our calculator lets you compare both methodologies side-by-side."
+  },
+  {
+    question: "What mutual funds does Dave Ramsey recommend?",
+    answer: "Ramsey recommends dividing your retirement investments equally (25% each) across four categories of equity mutual funds: Growth and Income (large-cap value), Growth (large/mid-cap blend), Aggressive Growth (small-cap/emerging), and International (foreign markets)."
+  },
+  {
+    question: "In what order should I fund my retirement accounts according to Dave?",
+    answer: "Dave recommends: (1) Invest in your employer 401(k) up to the company match; (2) Fully fund a Roth IRA; (3) If you still have not reached 15% of your gross income, return to your 401(k) or a Health Savings Account (HSA) to fulfill the remaining balance."
+  },
+  {
+    question: "How does this tool compare to a realistic retirement calculator?",
+    answer: "A simple retirement calculator often locks you into one rigid assumption. This tool gives you full control: you can calculate with Dave Ramsey's optimistic 10-12% returns and 8% withdrawal rate, or toggle instant realistic presets (7-8% inflation-adjusted returns and a 4% safe withdrawal rate) to see your conservative safety margin."
+  }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqList.map(item => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.answer
+    }
+  }))
+};
+
+const webAppSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Dave Ramsey Retirement Calculator",
+  "url": canonicalUrl,
+  "description": pageDescription,
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+};
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={canonicalUrl}
+  schema={webAppSchema}
+>
+  <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+    <Breadcrumbs
+      items={[
+        { label: "Home", href: "/" },
+        { label: "Resources", href: "/knowledge/" },
+        { label: "Dave Ramsey Retirement Calculator" }
+      ]}
+    />
+
+    <!-- Hero Header -->
+    <div class="relative overflow-hidden rounded-2xl bg-canvas p-6 sm:p-10 mb-8 border border-hairline shadow-sm dark:bg-surface dark:border-overlay-lighter mt-4">
+      <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+      <div class="absolute left-0 right-0 top-0 -z-10 m-auto h-[260px] w-[260px] rounded-full bg-primary/20 opacity-50 blur-[90px] dark:bg-primary/10"></div>
+      <div class="relative z-10 max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold mb-3">
+          <span>✨ 2026 Financial Planning Engine</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-ink dark:text-on-primary">
+          Dave Ramsey Retirement Calculator
+        </h1>
+        <p class="mt-3 text-base sm:text-lg text-body dark:text-muted leading-relaxed">
+          Plan your financial freedom with Dave Ramsey's signature 15% rule (Baby Step 4), test 10%–12% historical compound growth, and compare Ramsey's 8% withdrawal rate against the conservative 4% rule.
+        </p>
+      </div>
+    </div>
+
+    <!-- Fact Check Badge & Metadata -->
+    <div class="mb-6 flex flex-wrap items-center justify-between gap-4">
+      <FactCheckedBadge
+        reviewerName="Finsiva Financial Engineering"
+        reviewerTitle="Quantitative Modeling & Retirement Analytics"
+        sourceName="Historical S&P 500 Data & Trinity Study"
+        sourceUrl="https://finsiva.com/methodology/"
+        lastChecked="October 2026"
+      />
+      <div class="flex items-center gap-2 text-xs text-muted">
+        <span class="inline-block h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span>Real-Time Client-Side Engine • Zero Data Stored</span>
+      </div>
+    </div>
+
+    <!-- MAIN CALCULATOR INTERFACE (ABOVE THE FOLD) -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
+      
+      <!-- LEFT: Inputs & Controls -->
+      <div class="lg:col-span-5 rounded-2xl border border-hairline bg-canvas p-6 shadow-sm dark:border-overlay-lighter dark:bg-surface/60 backdrop-blur-sm">
+        <div class="flex items-center justify-between border-b border-hairline dark:border-overlay-lighter pb-4 mb-6">
+          <h2 class="text-lg font-bold text-ink dark:text-on-primary flex items-center gap-2">
+            <svg class="h-5 w-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+            </svg>
+            Your Retirement Inputs
+          </h2>
+          <button id="calc-reset-btn" type="button" class="text-xs font-semibold text-muted hover:text-primary transition-colors">
+            Reset Defaults
+          </button>
+        </div>
+
+        <form id="retirement-form" class="space-y-5" onsubmit="event.preventDefault()">
+          
+          <!-- Ages Row -->
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label for="current-age" class="block text-xs font-semibold text-ink dark:text-on-primary mb-1">
+                Current Age
+              </label>
+              <div class="relative">
+                <input
+                  type="number"
+                  id="current-age"
+                  min="18"
+                  max="80"
+                  value="30"
+                  class="w-full rounded-xl border border-hairline bg-canvas-soft px-3.5 py-2.5 text-sm font-semibold text-ink shadow-sm transition focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary dark:border-overlay-light dark:bg-surface dark:text-on-primary"
+                  required
+                />
+                <span class="absolute right-3 top-2.5 text-xs text-muted">yrs</span>
+              </div>
+            </div>
+
+            <div>
+              <label for="retire-age" class="block text-xs font-semibold text-ink dark:text-on-primary mb-1">
+                Retirement Age
+              </label>
+              <div class="relative">
+                <input
+                  type="number"
+                  id="retire-age"
+                  min="30"
+                  max="95"
+                  value="65"
+                  class="w-full rounded-xl border border-hairline bg-canvas-soft px-3.5 py-2.5 text-sm font-semibold text-ink shadow-sm transition focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary dark:border-overlay-light dark:bg-surface dark:text-on-primary"
+                  required
+                />
+                <span class="absolute right-3 top-2.5 text-xs text-muted">yrs</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Current Savings -->
+          <div>
+            <label for="current-savings" class="block text-xs font-semibold text-ink dark:text-on-primary mb-1">
+              Current Retirement Savings ($)
+            </label>
+            <div class="relative">
+              <span class="absolute left-3.5 top-2.5 text-sm font-medium text-muted">$</span>
+              <input
+                type="number"
+                id="current-savings"
+                min="0"
+                step="500"
+                value="25000"
+                class="w-full rounded-xl border border-hairline bg-canvas-soft pl-8 pr-3.5 py-2.5 text-sm font-semibold text-ink shadow-sm transition focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary dark:border-overlay-light dark:bg-surface dark:text-on-primary"
+                required
+              />
+            </div>
+            <p class="text-[11px] text-muted mt-1">Total in 401(k), IRA, Roth IRA, and brokerage accounts.</p>
+          </div>
+
+          <!-- Monthly Contribution -->
+          <div>
+            <div class="flex items-center justify-between mb-1">
+              <label for="monthly-contrib" class="block text-xs font-semibold text-ink dark:text-on-primary">
+                Monthly Contribution ($)
+              </label>
+              <span id="contrib-annual-display" class="text-[11px] font-medium text-primary">
+                $7,800 / year
+              </span>
+            </div>
+            <div class="relative">
+              <span class="absolute left-3.5 top-2.5 text-sm font-medium text-muted">$</span>
+              <input
+                type="number"
+                id="monthly-contrib"
+                min="0"
+                step="50"
+                value="650"
+                class="w-full rounded-xl border border-hairline bg-canvas-soft pl-8 pr-3.5 py-2.5 text-sm font-semibold text-ink shadow-sm transition focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary dark:border-overlay-light dark:bg-surface dark:text-on-primary"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Dave's 15% Rule Helper (Household Income) -->
+          <div class="rounded-xl border border-dashed border-primary/40 bg-primary/5 p-3.5">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-xs font-bold text-ink dark:text-on-primary flex items-center gap-1.5">
+                <span>🛡️</span> Dave's 15% Rule Check
+              </span>
+              <span class="text-[10px] uppercase font-bold tracking-wider text-primary">Baby Step 4</span>
+            </div>
+            <p class="text-[11px] text-body dark:text-muted mb-2">
+              Enter annual gross income to auto-calculate your recommended 15% contribution:
+            </p>
+            <div class="flex items-center gap-2">
+              <div class="relative flex-1">
+                <span class="absolute left-3 top-2 text-xs font-medium text-muted">$</span>
+                <input
+                  type="number"
+                  id="annual-income"
+                  min="0"
+                  step="1000"
+                  value="60000"
+                  placeholder="Annual Income"
+                  class="w-full rounded-lg border border-hairline bg-canvas px-2.5 pl-6 py-1.5 text-xs font-medium text-ink shadow-sm focus:border-primary focus:outline-none dark:border-overlay-light dark:bg-surface dark:text-on-primary"
+                />
+              </div>
+              <button
+                type="button"
+                id="apply-15-btn"
+                class="rounded-lg bg-primary px-3 py-1.5 text-xs font-semibold text-on-primary hover:bg-primary-hover transition shadow-sm whitespace-nowrap"
+              >
+                Set 15% ($750/mo)
+              </button>
+            </div>
+          </div>
+
+          <!-- Expected Annual Return -->
+          <div>
+            <div class="flex items-center justify-between mb-1.5">
+              <label for="return-rate" class="block text-xs font-semibold text-ink dark:text-on-primary">
+                Annual Return Rate: <span id="return-rate-val" class="text-primary font-bold">10%</span>
+              </label>
+              <span class="text-[11px] text-muted">Compounded Monthly</span>
+            </div>
+            <input
+              type="range"
+              id="return-rate"
+              min="3"
+              max="14"
+              step="0.5"
+              value="10"
+              class="w-full accent-primary cursor-pointer mb-2"
+            />
+            <!-- Rate Presets -->
+            <div class="grid grid-cols-3 gap-1.5">
+              <button type="button" class="rate-preset-btn rounded-lg border border-hairline bg-canvas-soft px-2 py-1 text-[11px] font-medium text-ink hover:border-primary dark:border-overlay-light dark:bg-surface dark:text-on-primary" data-rate="11">
+                Dave (11%)
+              </button>
+              <button type="button" class="rate-preset-btn active-preset rounded-lg border border-primary bg-primary/10 px-2 py-1 text-[11px] font-bold text-primary dark:border-primary" data-rate="10">
+                S&P 500 (10%)
+              </button>
+              <button type="button" class="rate-preset-btn rounded-lg border border-hairline bg-canvas-soft px-2 py-1 text-[11px] font-medium text-ink hover:border-primary dark:border-overlay-light dark:bg-surface dark:text-on-primary" data-rate="7">
+                Realistic (7%)
+              </button>
+            </div>
+          </div>
+
+          <!-- Safe Withdrawal Rate -->
+          <div>
+            <div class="flex items-center justify-between mb-1.5">
+              <label for="withdrawal-rate" class="block text-xs font-semibold text-ink dark:text-on-primary">
+                Retirement Withdrawal Rate: <span id="withdrawal-rate-val" class="text-primary font-bold">8%</span>
+              </label>
+              <span class="text-[11px] text-muted">Annual Drawdown</span>
+            </div>
+            <input
+              type="range"
+              id="withdrawal-rate"
+              min="2"
+              max="10"
+              step="0.5"
+              value="8"
+              class="w-full accent-primary cursor-pointer mb-2"
+            />
+            <!-- Withdrawal Presets -->
+            <div class="grid grid-cols-3 gap-1.5">
+              <button type="button" class="withdrawal-preset-btn active-withdrawal rounded-lg border border-primary bg-primary/10 px-2 py-1 text-[11px] font-bold text-primary dark:border-primary" data-rate="8">
+                Dave Ramsey (8%)
+              </button>
+              <button type="button" class="withdrawal-preset-btn rounded-lg border border-hairline bg-canvas-soft px-2 py-1 text-[11px] font-medium text-ink hover:border-primary dark:border-overlay-light dark:bg-surface dark:text-on-primary" data-rate="5">
+                Money Guy (5%)
+              </button>
+              <button type="button" class="withdrawal-preset-btn rounded-lg border border-hairline bg-canvas-soft px-2 py-1 text-[11px] font-medium text-ink hover:border-primary dark:border-overlay-light dark:bg-surface dark:text-on-primary" data-rate="4">
+                Trinity 4% Rule
+              </button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- RIGHT: Interactive Results Dashboard -->
+      <div class="lg:col-span-7 space-y-6">
+        
+        <!-- Primary Result Card -->
+        <div class="rounded-2xl border border-hairline bg-gradient-to-br from-canvas to-canvas-soft p-6 sm:p-8 shadow-sm dark:border-overlay-lighter dark:from-surface dark:to-surface/70">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-muted">
+              Estimated Nest Egg At Age <span id="summary-retire-age" class="text-ink dark:text-on-primary font-extrabold">65</span>
+            </span>
+            <span id="years-to-invest" class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
+              35 Years of Compounding
+            </span>
+          </div>
+
+          <!-- Big Total Number -->
+          <div class="my-4">
+            <div id="total-nest-egg" class="text-4xl sm:text-5xl md:text-6xl font-black text-ink dark:text-on-primary tracking-tight">
+              $2,829,350
+            </div>
+            <p class="text-xs text-muted mt-1">Total projected balance across all investment accounts.</p>
+          </div>
+
+          <!-- Monthly & Annual Drawdown Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 pt-6 border-t border-hairline dark:border-overlay-lighter">
+            <div class="rounded-xl bg-canvas p-4 border border-hairline dark:bg-surface/80 dark:border-overlay-light">
+              <div class="text-xs text-muted font-medium mb-1 flex items-center justify-between">
+                <span>Monthly Retirement Income</span>
+                <span id="label-monthly-rate" class="text-[10px] font-bold text-primary">at 8% draw</span>
+              </div>
+              <div id="monthly-income-val" class="text-2xl sm:text-3xl font-extrabold text-primary">
+                $18,862 / mo
+              </div>
+              <p class="text-[11px] text-muted mt-1">Safe monthly spending budget</p>
+            </div>
+
+            <div class="rounded-xl bg-canvas p-4 border border-hairline dark:bg-surface/80 dark:border-overlay-light">
+              <div class="text-xs text-muted font-medium mb-1 flex items-center justify-between">
+                <span>Annual Retirement Income</span>
+                <span id="label-annual-rate" class="text-[10px] font-bold text-primary">at 8% draw</span>
+              </div>
+              <div id="annual-income-val" class="text-2xl sm:text-3xl font-extrabold text-ink dark:text-on-primary">
+                $226,348 / yr
+              </div>
+              <p class="text-[11px] text-muted mt-1">Pre-tax annual withdrawal</p>
+            </div>
+          </div>
+
+          <!-- Compound Growth Breakdown (Progress Bar) -->
+          <div class="mt-6 pt-6 border-t border-hairline dark:border-overlay-lighter">
+            <div class="flex items-center justify-between text-xs font-semibold mb-2">
+              <span class="text-ink dark:text-on-primary">Principal Contributed vs Compound Growth</span>
+              <span id="growth-percentage" class="text-emerald-600 dark:text-emerald-400 font-bold">89.5% Free Growth</span>
+            </div>
+
+            <!-- Dual Bar -->
+            <div class="h-4 w-full rounded-full bg-canvas-soft dark:bg-surface overflow-hidden flex border border-hairline dark:border-overlay-light">
+              <div id="bar-contributions" class="bg-primary transition-all duration-300" style="width: 10.5%;" title="Principal Contributed"></div>
+              <div id="bar-growth" class="bg-emerald-500 transition-all duration-300" style="width: 89.5%;" title="Compound Growth"></div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 mt-3 text-xs">
+              <div class="flex items-center gap-2">
+                <span class="h-3 w-3 rounded-full bg-primary flex-shrink-0"></span>
+                <span class="text-muted">Total Contributed:</span>
+                <span id="total-contributed" class="font-bold text-ink dark:text-on-primary">$298,000</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="h-3 w-3 rounded-full bg-emerald-500 flex-shrink-0"></span>
+                <span class="text-muted">Compound Growth:</span>
+                <span id="total-growth" class="font-bold text-emerald-600 dark:text-emerald-400">$2,531,350</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="mt-6 pt-6 border-t border-hairline dark:border-overlay-lighter flex flex-wrap items-center justify-between gap-3">
+            <button
+              id="copy-summary-btn"
+              type="button"
+              class="inline-flex items-center gap-2 rounded-xl border border-hairline bg-canvas px-4 py-2 text-xs font-semibold text-ink hover:bg-canvas-soft dark:border-overlay-light dark:bg-surface dark:text-on-primary dark:hover:bg-overlay-light transition"
+            >
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+              <span id="copy-btn-text">Copy Retirement Summary</span>
+            </button>
+            <button
+              id="print-btn"
+              type="button"
+              onclick="window.print()"
+              class="inline-flex items-center gap-2 rounded-xl border border-hairline bg-canvas px-4 py-2 text-xs font-semibold text-ink hover:bg-canvas-soft dark:border-overlay-light dark:bg-surface dark:text-on-primary dark:hover:bg-overlay-light transition"
+            >
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zM9 9h6v2H9V9z"></path></svg>
+              <span>Print Plan</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Realistic Comparison Card: Dave's 8% vs The 4% Rule -->
+        <div class="rounded-2xl border border-hairline bg-canvas p-6 shadow-sm dark:border-overlay-lighter dark:bg-surface/50">
+          <h3 class="text-base font-bold text-ink dark:text-on-primary mb-3 flex items-center gap-2">
+            <span>⚖️</span> Reality Check: Dave Ramsey's 8% vs The 4% Rule
+          </h3>
+          <p class="text-xs text-body dark:text-muted mb-4 leading-relaxed">
+            Dave Ramsey controversially recommends withdrawing 8% per year in retirement, assuming 12% returns minus 4% inflation. In contrast, financial researchers and The Money Guy advise a 4% to 5% safe withdrawal rate to guard against sequence-of-returns risk. Here is how your retirement income looks under each philosophy:
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+            <!-- Dave Ramsey Method -->
+            <div class="rounded-xl border border-emerald-500/30 bg-emerald-500/5 p-4">
+              <div class="font-bold text-emerald-600 dark:text-emerald-400 mb-1 flex items-center justify-between">
+                <span>Dave Ramsey 8% Rule</span>
+                <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/10">High Income</span>
+              </div>
+              <div id="comp-dave-monthly" class="text-xl font-black text-ink dark:text-on-primary my-1">
+                $18,862 / mo
+              </div>
+              <div id="comp-dave-annual" class="text-xs font-semibold text-muted">
+                $226,348 / year
+              </div>
+              <p class="text-[11px] text-muted mt-2">Relies on continuous stock market outperformance without sustained bear markets.</p>
+            </div>
+
+            <!-- Trinity 4% Rule -->
+            <div class="rounded-xl border border-primary/30 bg-primary/5 p-4">
+              <div class="font-bold text-primary mb-1 flex items-center justify-between">
+                <span>Trinity Study 4% Rule</span>
+                <span class="text-[10px] px-1.5 py-0.5 rounded bg-primary/10">Ultra-Safe</span>
+              </div>
+              <div id="comp-trinity-monthly" class="text-xl font-black text-ink dark:text-on-primary my-1">
+                $9,431 / mo
+              </div>
+              <div id="comp-trinity-annual" class="text-xs font-semibold text-muted">
+                $113,174 / year
+              </div>
+              <p class="text-[11px] text-muted mt-2">Tested to survive 95%+ of historical 30-year retirement windows, including 1929 and 2008.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- DAVE RAMSEY INVESTMENT CHART / MILESTONE TABLE -->
+    <section class="rounded-2xl border border-hairline bg-canvas p-6 sm:p-8 shadow-sm dark:border-overlay-lighter dark:bg-surface mb-16" aria-labelledby="milestone-chart-heading">
+      <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+        <div>
+          <h2 id="milestone-chart-heading" class="text-2xl font-bold text-ink dark:text-on-primary flex items-center gap-2">
+            <span>📈</span> Dave Ramsey Investment Chart & Milestones
+          </h2>
+          <p class="text-sm text-body dark:text-muted mt-1">
+            See the exact trajectory of your nest egg every 5 years as compound interest overtakes your out-of-pocket contributions.
+          </p>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="inline-flex items-center gap-1.5 text-xs font-medium text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-3 py-1.5 rounded-full">
+            <span>🚀</span> Compound Interest Snowball
+          </span>
+        </div>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm border-collapse">
+          <thead>
+            <tr class="border-b border-hairline dark:border-overlay-lighter text-xs uppercase tracking-wider text-muted bg-canvas-soft/50 dark:bg-surface/50">
+              <th class="py-3 px-4 font-semibold">Age</th>
+              <th class="py-3 px-4 font-semibold">Timeline</th>
+              <th class="py-3 px-4 font-semibold">Total Contributed</th>
+              <th class="py-3 px-4 font-semibold">Compound Growth</th>
+              <th class="py-3 px-4 font-semibold">Total Nest Egg</th>
+              <th class="py-3 px-4 font-semibold">Monthly Income (8%)</th>
+            </tr>
+          </thead>
+          <tbody id="milestones-table-body" class="divide-y divide-hairline dark:divide-overlay-lighter">
+            <!-- Dynamically populated via client-side script -->
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-muted mt-4">
+        *Assumes contributions made monthly and interest compounded monthly. Projected returns are nominal and do not deduct fund management expense ratios or income taxes on non-Roth withdrawals.
+      </p>
+    </section>
+
+    <!-- HUB-AND-SPOKE CTA BANNER -->
+    <div class="rounded-2xl bg-gradient-to-r from-primary/10 via-primary/5 to-transparent border border-primary/20 p-6 sm:p-8 mb-16 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="space-y-2 max-w-2xl">
+        <div class="inline-flex items-center gap-2 text-xs font-bold text-primary uppercase tracking-wider">
+          <span>📖 Deep-Dive Editorial Guide</span>
+        </div>
+        <h3 class="text-xl sm:text-2xl font-bold text-ink dark:text-on-primary">
+          Want the Real Math Behind Dave's Retirement Plan?
+        </h3>
+        <p class="text-sm text-body dark:text-muted leading-relaxed">
+          Read our comprehensive 2,000-word analysis exploring the 15% rule, S&P 500 mutual fund allocations, the 8% vs 4% withdrawal debate, and comparisons with The Money Guy and simple retirement calculators.
+        </p>
+      </div>
+      <a
+        href="/blogs/dave-ramsey-retirement-calculator-guide/"
+        class="flex-shrink-0 inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-sm font-bold text-on-primary shadow-md hover:bg-primary-hover transition"
+      >
+        <span>Read the Complete Guide</span>
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+      </a>
+    </div>
+
+    <!-- IN-DEPTH E-E-A-T EDUCATIONAL GUIDE (BELOW THE TOOL) -->
+    <div class="space-y-12 max-w-4xl mx-auto mb-16">
+      
+      <!-- Section 1: The 15% Rule Explained -->
+      <section class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-bold text-ink dark:text-on-primary">
+          How Dave Ramsey's Retirement Philosophy Works (Baby Step 4)
+        </h2>
+        <p class="text-body dark:text-muted leading-relaxed">
+          Dave Ramsey's personal finance framework revolves around the famous <strong>7 Baby Steps</strong>. Before you invest a single dollar into retirement, Dave requires completing Baby Steps 1, 2, and 3: saving a starter $1,000 emergency fund, eliminating all non-mortgage debt using the debt snowball method, and building a fully funded emergency reserve of 3 to 6 months of expenses.
+        </p>
+        <p class="text-body dark:text-muted leading-relaxed">
+          Once you are debt-free (except the house), you reach <strong>Baby Step 4: Invest 15% of your gross household income into tax-advantaged retirement accounts</strong>. Why exactly 15%? Because contributing less fails to harness the compound interest necessary to build a dignified nest egg, while contributing more limits your cash flow to fund Baby Step 5 (children's college savings) and Baby Step 6 (paying off your home mortgage early).
+        </p>
+
+        <div class="rounded-xl border border-hairline bg-canvas-soft p-5 dark:border-overlay-lighter dark:bg-surface">
+          <h3 class="text-base font-bold text-ink dark:text-on-primary mb-2">Dave's Priority Order of Investing:</h3>
+          <ol class="list-decimal pl-5 space-y-2 text-sm text-body dark:text-muted">
+            <li><strong>401(k) / 403(b) Match:</strong> Invest in your employer plan up to the exact percentage matched (e.g., if the company matches 4%, contribute 4%). An employer match represents an immediate 100% guaranteed return.</li>
+            <li><strong>Roth IRA:</strong> Fund a Roth IRA outside your workplace up to the annual IRS limit ($7,000 for 2024–2026, or $8,000 if age 50+). Roth growth and withdrawals in retirement are 100% tax-free.</li>
+            <li><strong>Back to 401(k) / HSA:</strong> If maxing your Roth IRA does not yet equal 15% of your gross annual household income, return to your workplace 401(k) or a Health Savings Account (HSA) to fulfill the remaining dollar amount.</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Section 2: The 4 Mutual Fund Types -->
+      <section class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-bold text-ink dark:text-on-primary">
+          Dave Ramsey's 4 Mutual Fund Asset Allocation
+        </h2>
+        <p class="text-body dark:text-muted leading-relaxed">
+          Unlike target-date funds or index fund bogleheads who favor simple total-market portfolios, Dave Ramsey recommends dividing your retirement investments evenly across four distinct categories of equities (25% each):
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+            <div class="font-bold text-primary text-sm mb-1">25% Growth & Income</div>
+            <p class="text-xs text-body dark:text-muted leading-relaxed">
+              Consists of large-cap value and dividend-paying blue-chip companies (comparable to the S&P 500). Provides solid dividends, lower relative volatility, and consistent long-term stability.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+            <div class="font-bold text-primary text-sm mb-1">25% Growth</div>
+            <p class="text-xs text-body dark:text-muted leading-relaxed">
+              Comprises mid-cap and large-cap blend equities. Companies with robust earnings momentum that reinvest capital for sustained appreciation rather than paying high dividend yields.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+            <div class="font-bold text-primary text-sm mb-1">25% Aggressive Growth</div>
+            <p class="text-xs text-body dark:text-muted leading-relaxed">
+              Focused on small-cap companies, emerging technology, and high-beta growth stocks. These funds experience steep drawdowns during bear markets but offer tremendous upside during bull cycles.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface">
+            <div class="font-bold text-primary text-sm mb-1">25% International</div>
+            <p class="text-xs text-body dark:text-muted leading-relaxed">
+              Invests in publicly traded equities outside the United States across developed and emerging economies. Protects your nest egg against single-currency exposure and captures foreign GDP expansion.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: The 8% vs 4% Safe Withdrawal Controversy -->
+      <section class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-bold text-ink dark:text-on-primary">
+          The Withdrawal Rate Debate: Dave's 8% vs The 4% Rule
+        </h2>
+        <p class="text-body dark:text-muted leading-relaxed">
+          One of the most fierce debates in modern wealth management centers on Dave Ramsey's claim that retirees can safely withdraw <strong>8% per year</strong> from their nest egg. Dave's mathematical logic is straightforward:
+        </p>
+        <blockquote class="border-l-4 border-primary pl-4 py-2 italic text-sm text-body dark:text-muted bg-canvas-soft dark:bg-surface rounded-r-xl">
+          "If the stock market averages 12% per year and inflation averages 4%, you leave 4% in the account to preserve your principal and spend the remaining 8% without ever touching your nest egg."
+        </blockquote>
+        <p class="text-body dark:text-muted leading-relaxed">
+          While this simple arithmetic sounds compelling, certified financial planners (CFPs) point out a critical mathematical flaw known as <strong>Sequence of Returns Risk (SRR)</strong>. The stock market does not deliver a smooth 12% return every year; it experiences severe cyclical downturns (e.g., -37% in 2008 or -22% in 2002).
+        </p>
+        <p class="text-body dark:text-muted leading-relaxed">
+          If a retiree withdraws 8% during a bear market year when their portfolio has declined 20%, the combined depletion will permanently impair the portfolio's compounding capacity. This is why the famous <strong>Trinity Study</strong> established the <strong>4% Safe Withdrawal Rate</strong>, proving that withdrawing 4% (adjusted annually for inflation) survives over 95% of all historical 30-year retirement windows.
+        </p>
+      </section>
+
+      <!-- Section 4: Worked Comparison Table -->
+      <section class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-bold text-ink dark:text-on-primary">
+          The Cost of Waiting: Starting at Age 25 vs 35 vs 45
+        </h2>
+        <p class="text-body dark:text-muted leading-relaxed">
+          Compound interest does the heavy lifting in retirement planning. Consider three individuals who each invest <strong>$600 per month</strong> at a 10% annual compound return until retiring at age 65:
+        </p>
+
+        <div class="overflow-x-auto rounded-xl border border-hairline dark:border-overlay-lighter">
+          <table class="w-full text-left text-sm">
+            <thead class="bg-canvas-soft dark:bg-surface text-xs uppercase tracking-wider text-muted border-b border-hairline dark:border-overlay-lighter">
+              <tr>
+                <th class="py-3 px-4 font-semibold">Investor</th>
+                <th class="py-3 px-4 font-semibold">Starting Age</th>
+                <th class="py-3 px-4 font-semibold">Years Investing</th>
+                <th class="py-3 px-4 font-semibold">Out-of-Pocket</th>
+                <th class="py-3 px-4 font-semibold">Total Nest Egg at 65</th>
+                <th class="py-3 px-4 font-semibold">Monthly Income (8%)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+              <tr>
+                <td class="py-3.5 px-4 font-bold text-emerald-600 dark:text-emerald-400">Sarah (Early Bird)</td>
+                <td class="py-3.5 px-4">Age 25</td>
+                <td class="py-3.5 px-4">40 Years</td>
+                <td class="py-3.5 px-4 font-medium">$288,000</td>
+                <td class="py-3.5 px-4 font-extrabold text-ink dark:text-on-primary">$3,794,400</td>
+                <td class="py-3.5 px-4 font-bold text-primary">$25,296 / mo</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 font-bold text-ink dark:text-on-primary">Marcus (Mid-Career)</td>
+                <td class="py-3.5 px-4">Age 35</td>
+                <td class="py-3.5 px-4">30 Years</td>
+                <td class="py-3.5 px-4 font-medium">$216,000</td>
+                <td class="py-3.5 px-4 font-extrabold text-ink dark:text-on-primary">$1,356,200</td>
+                <td class="py-3.5 px-4 font-bold text-primary">$9,041 / mo</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 font-bold text-muted">David (Late Starter)</td>
+                <td class="py-3.5 px-4">Age 45</td>
+                <td class="py-3.5 px-4">20 Years</td>
+                <td class="py-3.5 px-4 font-medium">$144,000</td>
+                <td class="py-3.5 px-4 font-extrabold text-ink dark:text-on-primary">$455,600</td>
+                <td class="py-3.5 px-4 font-bold text-primary">$3,037 / mo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-muted">
+          Sarah invested only $72,000 more than Marcus out of pocket, yet ended up with nearly <strong>$2.4 million more</strong> in her nest egg due to the exponential compounding curve of that extra decade.
+        </p>
+      </section>
+
+      <!-- Section 5: Author Bio -->
+      <div class="pt-6 border-t border-hairline dark:border-overlay-lighter">
+        <AuthorBioCard />
+      </div>
+
+      <!-- Section 6: FAQ Section -->
+      <section class="space-y-6 pt-6 border-t border-hairline dark:border-overlay-lighter" aria-labelledby="faq-heading">
+        <h2 id="faq-heading" class="text-2xl sm:text-3xl font-bold text-ink dark:text-on-primary flex items-center gap-2">
+          <span>❓</span> Frequently Asked Questions
+        </h2>
+
+        <div class="space-y-4">
+          {faqList.map(item => (
+            <div class="rounded-xl border border-hairline bg-canvas p-5 shadow-sm dark:border-overlay-lighter dark:bg-surface">
+              <h3 class="text-base font-bold text-ink dark:text-on-primary mb-2">
+                {item.question}
+              </h3>
+              <p class="text-sm text-body dark:text-muted leading-relaxed">
+                {item.answer}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+    </div>
+
+  </div>
+
+  <!-- Client-Side Reactive Script -->
+  <script is:inline>
+    (function initDaveRamseyCalculator() {
+      // Inputs
+      var curAgeInput = document.getElementById('current-age');
+      var retAgeInput = document.getElementById('retire-age');
+      var savingsInput = document.getElementById('current-savings');
+      var contribInput = document.getElementById('monthly-contrib');
+      var incomeInput = document.getElementById('annual-income');
+      var returnRateSlider = document.getElementById('return-rate');
+      var returnRateVal = document.getElementById('return-rate-val');
+      var withdrawalSlider = document.getElementById('withdrawal-rate');
+      var withdrawalVal = document.getElementById('withdrawal-rate-val');
+      var resetBtn = document.getElementById('calc-reset-btn');
+      var apply15Btn = document.getElementById('apply-15-btn');
+
+      // Outputs
+      var totalNestEggEl = document.getElementById('total-nest-egg');
+      var summaryRetireAgeEl = document.getElementById('summary-retire-age');
+      var yearsToInvestEl = document.getElementById('years-to-invest');
+      var monthlyIncomeEl = document.getElementById('monthly-income-val');
+      var annualIncomeEl = document.getElementById('annual-income-val');
+      var labelMonthlyRate = document.getElementById('label-monthly-rate');
+      var labelAnnualRate = document.getElementById('label-annual-rate');
+      var totalContribEl = document.getElementById('total-contributed');
+      var totalGrowthEl = document.getElementById('total-growth');
+      var growthPercentEl = document.getElementById('growth-percentage');
+      var barContributions = document.getElementById('bar-contributions');
+      var barGrowth = document.getElementById('bar-growth');
+      var contribAnnualDisplay = document.getElementById('contrib-annual-display');
+      var tableBody = document.getElementById('milestones-table-body');
+
+      // Comparison Elements
+      var compDaveMonthly = document.getElementById('comp-dave-monthly');
+      var compDaveAnnual = document.getElementById('comp-dave-annual');
+      var compTrinityMonthly = document.getElementById('comp-trinity-monthly');
+      var compTrinityAnnual = document.getElementById('comp-trinity-annual');
+
+      // Presets
+      var ratePresetBtns = document.querySelectorAll('.rate-preset-btn');
+      var withdrawalPresetBtns = document.querySelectorAll('.withdrawal-preset-btn');
+
+      function formatMoney(num) {
+        return '$' + Math.round(num).toLocaleString('en-US');
+      }
+
+      function calculate() {
+        var curAge = parseInt(curAgeInput.value, 10) || 30;
+        var retAge = parseInt(retAgeInput.value, 10) || 65;
+        if (retAge <= curAge) {
+          retAge = curAge + 1;
+          retAgeInput.value = retAge;
+        }
+
+        var curSavings = parseFloat(savingsInput.value) || 0;
+        var monthlyContrib = parseFloat(contribInput.value) || 0;
+        var annualRate = (parseFloat(returnRateSlider.value) || 10) / 100;
+        var withdrawalRate = (parseFloat(withdrawalSlider.value) || 8) / 100;
+
+        var years = retAge - curAge;
+        var months = years * 12;
+        var monthlyRate = annualRate / 12;
+
+        // Future Value Formula
+        var fvLumpSum = curSavings * Math.pow(1 + monthlyRate, months);
+        var fvAnnuity = 0;
+        if (monthlyRate > 0) {
+          fvAnnuity = monthlyContrib * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate);
+        } else {
+          fvAnnuity = monthlyContrib * months;
+        }
+
+        var totalNestEgg = fvLumpSum + fvAnnuity;
+        var totalContributed = curSavings + (monthlyContrib * months);
+        var totalGrowth = Math.max(0, totalNestEgg - totalContributed);
+
+        var annualIncome = totalNestEgg * withdrawalRate;
+        var monthlyIncome = annualIncome / 12;
+
+        var growthRatio = totalNestEgg > 0 ? (totalGrowth / totalNestEgg) * 100 : 0;
+        var contribRatio = totalNestEgg > 0 ? (totalContributed / totalNestEgg) * 100 : 0;
+
+        // Update DOM
+        totalNestEggEl.textContent = formatMoney(totalNestEgg);
+        summaryRetireAgeEl.textContent = retAge;
+        yearsToInvestEl.textContent = years + ' Years of Compounding';
+        monthlyIncomeEl.textContent = formatMoney(monthlyIncome) + ' / mo';
+        annualIncomeEl.textContent = formatMoney(annualIncome) + ' / yr';
+        labelMonthlyRate.textContent = 'at ' + (withdrawalRate * 100).toFixed(1) + '% draw';
+        labelAnnualRate.textContent = 'at ' + (withdrawalRate * 100).toFixed(1) + '% draw';
+
+        totalContribEl.textContent = formatMoney(totalContributed);
+        totalGrowthEl.textContent = formatMoney(totalGrowth);
+        growthPercentEl.textContent = growthRatio.toFixed(1) + '% Free Growth';
+
+        barContributions.style.width = Math.min(100, Math.max(2, contribRatio)) + '%';
+        barGrowth.style.width = Math.min(100, Math.max(2, growthRatio)) + '%';
+
+        contribAnnualDisplay.textContent = formatMoney(monthlyContrib * 12) + ' / year';
+
+        // Update Reality Check Comparison
+        var daveAnnualDraw = totalNestEgg * 0.08;
+        var daveMonthlyDraw = daveAnnualDraw / 12;
+        var trinityAnnualDraw = totalNestEgg * 0.04;
+        var trinityMonthlyDraw = trinityAnnualDraw / 12;
+
+        compDaveMonthly.textContent = formatMoney(daveMonthlyDraw) + ' / mo';
+        compDaveAnnual.textContent = formatMoney(daveAnnualDraw) + ' / year';
+        compTrinityMonthly.textContent = formatMoney(trinityMonthlyDraw) + ' / mo';
+        compTrinityAnnual.textContent = formatMoney(trinityAnnualDraw) + ' / year';
+
+        // Build Milestones Table (5-year intervals)
+        var tableHtml = '';
+        var stepYears = 5;
+        for (var y = stepYears; y <= years; y += stepYears) {
+          var m = y * 12;
+          var subLump = curSavings * Math.pow(1 + monthlyRate, m);
+          var subAnnuity = monthlyRate > 0 ? monthlyContrib * ((Math.pow(1 + monthlyRate, m) - 1) / monthlyRate) : monthlyContrib * m;
+          var subTotal = subLump + subAnnuity;
+          var subContrib = curSavings + (monthlyContrib * m);
+          var subGrowth = Math.max(0, subTotal - subContrib);
+          var subMonthlyInc = (subTotal * withdrawalRate) / 12;
+
+          tableHtml += '<tr class="hover:bg-canvas-soft/40 dark:hover:bg-overlay-light/30 transition-colors">';
+          tableHtml += '<td class="py-3 px-4 font-bold text-ink dark:text-on-primary">Age ' + (curAge + y) + '</td>';
+          tableHtml += '<td class="py-3 px-4 text-muted">' + y + ' Years In</td>';
+          tableHtml += '<td class="py-3 px-4 font-medium text-ink dark:text-on-primary">' + formatMoney(subContrib) + '</td>';
+          tableHtml += '<td class="py-3 px-4 font-semibold text-emerald-600 dark:text-emerald-400">+' + formatMoney(subGrowth) + '</td>';
+          tableHtml += '<td class="py-3 px-4 font-extrabold text-ink dark:text-on-primary">' + formatMoney(subTotal) + '</td>';
+          tableHtml += '<td class="py-3 px-4 font-bold text-primary">' + formatMoney(subMonthlyInc) + '/mo</td>';
+          tableHtml += '</tr>';
+        }
+
+        // Final row if years not multiple of 5
+        if (years % stepYears !== 0) {
+          tableHtml += '<tr class="bg-primary/5 hover:bg-primary/10 transition-colors font-bold">';
+          tableHtml += '<td class="py-3 px-4 font-black text-primary">Age ' + retAge + ' (Target)</td>';
+          tableHtml += '<td class="py-3 px-4 text-muted">' + years + ' Years (Final)</td>';
+          tableHtml += '<td class="py-3 px-4">' + formatMoney(totalContributed) + '</td>';
+          tableHtml += '<td class="py-3 px-4 text-emerald-600 dark:text-emerald-400">+' + formatMoney(totalGrowth) + '</td>';
+          tableHtml += '<td class="py-3 px-4 font-black text-ink dark:text-on-primary">' + formatMoney(totalNestEgg) + '</td>';
+          tableHtml += '<td class="py-3 px-4 text-primary">' + formatMoney(monthlyIncome) + '/mo</td>';
+          tableHtml += '</tr>';
+        }
+
+        tableBody.innerHTML = tableHtml;
+      }
+
+      // Event Listeners
+      [curAgeInput, retAgeInput, savingsInput, contribInput].forEach(function(el) {
+        el.addEventListener('input', calculate);
+      });
+
+      returnRateSlider.addEventListener('input', function() {
+        returnRateVal.textContent = returnRateSlider.value + '%';
+        ratePresetBtns.forEach(function(b) {
+          b.classList.remove('active-preset', 'border-primary', 'bg-primary/10', 'text-primary', 'font-bold');
+          b.classList.add('border-hairline', 'bg-canvas-soft', 'text-ink');
+          if (parseFloat(b.getAttribute('data-rate')) === parseFloat(returnRateSlider.value)) {
+            b.classList.add('active-preset', 'border-primary', 'bg-primary/10', 'text-primary', 'font-bold');
+            b.classList.remove('border-hairline', 'bg-canvas-soft', 'text-ink');
+          }
+        });
+        calculate();
+      });
+
+      withdrawalSlider.addEventListener('input', function() {
+        withdrawalVal.textContent = withdrawalSlider.value + '%';
+        withdrawalPresetBtns.forEach(function(b) {
+          b.classList.remove('active-withdrawal', 'border-primary', 'bg-primary/10', 'text-primary', 'font-bold');
+          b.classList.add('border-hairline', 'bg-canvas-soft', 'text-ink');
+          if (parseFloat(b.getAttribute('data-rate')) === parseFloat(withdrawalSlider.value)) {
+            b.classList.add('active-withdrawal', 'border-primary', 'bg-primary/10', 'text-primary', 'font-bold');
+            b.classList.remove('border-hairline', 'bg-canvas-soft', 'text-ink');
+          }
+        });
+        calculate();
+      });
+
+      // Rate Presets Click
+      ratePresetBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var rate = this.getAttribute('data-rate');
+          returnRateSlider.value = rate;
+          returnRateVal.textContent = rate + '%';
+          ratePresetBtns.forEach(function(b) {
+            b.classList.remove('active-preset', 'border-primary', 'bg-primary/10', 'text-primary', 'font-bold');
+            b.classList.add('border-hairline', 'bg-canvas-soft', 'text-ink');
+          });
+          this.classList.add('active-preset', 'border-primary', 'bg-primary/10', 'text-primary', 'font-bold');
+          this.classList.remove('border-hairline', 'bg-canvas-soft', 'text-ink');
+          calculate();
+        });
+      });
+
+      // Withdrawal Presets Click
+      withdrawalPresetBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var rate = this.getAttribute('data-rate');
+          withdrawalSlider.value = rate;
+          withdrawalVal.textContent = rate + '%';
+          withdrawalPresetBtns.forEach(function(b) {
+            b.classList.remove('active-withdrawal', 'border-primary', 'bg-primary/10', 'text-primary', 'font-bold');
+            b.classList.add('border-hairline', 'bg-canvas-soft', 'text-ink');
+          });
+          this.classList.add('active-withdrawal', 'border-primary', 'bg-primary/10', 'text-primary', 'font-bold');
+          this.classList.remove('border-hairline', 'bg-canvas-soft', 'text-ink');
+          calculate();
+        });
+      });
+
+      // 15% Rule Helper Button
+      apply15Btn.addEventListener('click', function() {
+        var inc = parseFloat(incomeInput.value) || 0;
+        if (inc > 0) {
+          var monthly15 = Math.round((inc * 0.15) / 12);
+          contribInput.value = monthly15;
+          calculate();
+        }
+      });
+
+      incomeInput.addEventListener('input', function() {
+        var inc = parseFloat(incomeInput.value) || 0;
+        if (inc > 0) {
+          var monthly15 = Math.round((inc * 0.15) / 12);
+          apply15Btn.textContent = 'Set 15% ($' + monthly15 + '/mo)';
+        }
+      });
+
+      // Reset
+      resetBtn.addEventListener('click', function() {
+        curAgeInput.value = '30';
+        retAgeInput.value = '65';
+        savingsInput.value = '25000';
+        contribInput.value = '650';
+        incomeInput.value = '60000';
+        apply15Btn.textContent = 'Set 15% ($750/mo)';
+        returnRateSlider.value = '10';
+        returnRateVal.textContent = '10%';
+        withdrawalSlider.value = '8';
+        withdrawalVal.textContent = '8%';
+
+        ratePresetBtns.forEach(function(b) {
+          b.classList.remove('active-preset', 'border-primary', 'bg-primary/10', 'text-primary', 'font-bold');
+          b.classList.add('border-hairline', 'bg-canvas-soft', 'text-ink');
+          if (b.getAttribute('data-rate') === '10') {
+            b.classList.add('active-preset', 'border-primary', 'bg-primary/10', 'text-primary', 'font-bold');
+          }
+        });
+
+        withdrawalPresetBtns.forEach(function(b) {
+          b.classList.remove('active-withdrawal', 'border-primary', 'bg-primary/10', 'text-primary', 'font-bold');
+          b.classList.add('border-hairline', 'bg-canvas-soft', 'text-ink');
+          if (b.getAttribute('data-rate') === '8') {
+            b.classList.add('active-withdrawal', 'border-primary', 'bg-primary/10', 'text-primary', 'font-bold');
+          }
+        });
+
+        calculate();
+      });
+
+      // Copy Summary
+      var copyBtn = document.getElementById('copy-summary-btn');
+      var copyBtnText = document.getElementById('copy-btn-text');
+      copyBtn.addEventListener('click', function() {
+        var text = 'Dave Ramsey Retirement Projection (via Finsiva):\n' +
+          '• Current Age: ' + curAgeInput.value + ' | Target Age: ' + retAgeInput.value + '\n' +
+          '• Current Savings: $' + savingsInput.value + '\n' +
+          '• Monthly Contribution: $' + contribInput.value + ' ($' + (parseFloat(contribInput.value) * 12) + '/year)\n' +
+          '• Projected Nest Egg: ' + totalNestEggEl.textContent + '\n' +
+          '• Annual Income (' + withdrawalSlider.value + '% draw): ' + annualIncomeEl.textContent + '\n' +
+          '• Monthly Income: ' + monthlyIncomeEl.textContent + '\n' +
+          '• Contributed: ' + totalContribEl.textContent + ' | Compound Growth: ' + totalGrowthEl.textContent + '\n' +
+          'Calculate yours at: ' + window.location.href;
+
+        navigator.clipboard.writeText(text).then(function() {
+          copyBtnText.textContent = 'Copied to Clipboard! ✓';
+          setTimeout(function() {
+            copyBtnText.textContent = 'Copy Retirement Summary';
+          }, 2500);
+        });
+      });
+
+      // Initial run
+      calculate();
+    })();
+  </script>
+</Layout>
