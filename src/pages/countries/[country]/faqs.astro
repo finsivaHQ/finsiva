@@ -1,6 +1,7 @@
 ---
 import CountryLayout from "../../../layouts/CountryLayout.astro";
 import { countries, getCountryBySlug } from "../../../data/countries";
+import { countryFaqHubs } from "../../../data/countryFaqHubData";
 import FactCheckedBadge from "../../../components/FactCheckedBadge.astro";
 import AuthorBioCard from "../../../components/AuthorBioCard.astro";
 
@@ -10,63 +11,41 @@ export function getStaticPaths() {
   }));
 }
 
-const country = getCountryBySlug(Astro.params.country!);
+const countrySlug = Astro.params.country!;
+const country = getCountryBySlug(countrySlug);
+const hub = countryFaqHubs[countrySlug];
 
-if (!country) {
+if (!country || !hub) {
   return Astro.redirect("/countries");
 }
 
-// Collect all FAQs for schema and count
-const allFaqEntities: Array<{ question: string; answer: string; category?: string }> = [];
-
-if (country.countryFAQs && country.countryFAQs.length > 0) {
-  country.countryFAQs.forEach(faq => {
-    allFaqEntities.push({
-      question: faq.question,
-      answer: faq.answer,
-      category: "General & Overview"
-    });
-  });
-}
-
-country.taxCategories.forEach(category => {
-  if (category.faqs && category.faqs.length > 0) {
-    category.faqs.forEach(faq => {
-      allFaqEntities.push({
-        question: faq.question,
-        answer: faq.answer,
-        category: category.name
-      });
-    });
-  }
-});
+// Flatten all questions for schema
+const allFaqs = hub.sections.flatMap(s => s.faqs);
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "name": `${country.name} Tax Frequently Asked Questions (${country.taxYear})`,
-  "url": `https://finsiva.com/countries/${country.slug}/faqs/`,
-  "description": `Comprehensive, expert-verified answers to common tax questions in ${country.name} for tax year ${country.taxYear}.`,
-  "mainEntity": allFaqEntities.map(f => ({
+  "name": hub.metaTitle,
+  "description": hub.metaDescription,
+  "url": `https://finsiva.com/countries/${hub.countrySlug}/faqs/`,
+  "mainEntity": allFaqs.map(f => ({
     "@type": "Question",
     "name": f.question,
     "acceptedAnswer": {
       "@type": "Answer",
-      "text": f.answer
+      "text": `${f.answer} ${f.keyPoints ? f.keyPoints.join(' ') : ''}`
     }
   }))
 };
-
-const categoriesWithFaqs = country.taxCategories.filter(c => c.faqs && c.faqs.length > 0);
 ---
 
 <CountryLayout
-  title={`${country.name} Tax FAQs (${country.taxYear}): Expert Answers & Calculations`}
-  description={`Official tax FAQ hub for ${country.name} (${country.taxYear}). Authoritative answers on income tax brackets, filing deadlines, deductions, business tax, and calculator guides.`}
-  canonical={`https://finsiva.com/countries/${country.slug}/faqs/`}
+  title={hub.metaTitle}
+  description={hub.metaDescription}
+  canonical={`https://finsiva.com/countries/${hub.countrySlug}/faqs/`}
   breadcrumbs={[
     { label: "Countries", href: "/countries/" },
-    { label: country.name, href: `/countries/${country.slug}/` },
+    { label: hub.countryName, href: `/countries/${hub.countrySlug}/` },
     { label: "Tax FAQs" }
   ]}
   schema={faqSchema}
@@ -75,21 +54,21 @@ const categoriesWithFaqs = country.taxCategories.filter(c => c.faqs && c.faqs.le
   <!-- HERO HEADER -->
   <header class="mb-10">
     <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-primary/10 text-primary dark:bg-primary/20 dark:text-link border border-primary/20 mb-4">
-      <span class="text-base leading-none">{country.flag}</span>
-      <span>{country.name} Tax Intelligence Hub</span>
+      <span class="text-base leading-none">{hub.flag}</span>
+      <span>{hub.countryName} Statutory Tax Intelligence</span>
     </div>
     
     <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-ink dark:text-on-primary tracking-tight leading-tight">
-      {country.name} Tax FAQs &amp; Expert Answers
+      {hub.countryName} Tax FAQs &amp; Expert Guidance ({hub.taxYear})
     </h1>
     
     <p class="mt-4 text-base sm:text-lg text-body dark:text-muted max-w-3xl leading-relaxed">
-      Navigating {country.name} tax compliance, progressive brackets, and statutory filing guidelines requires clear, definitive guidance. Below is our consolidated reference answering {allFaqEntities.length} frequently asked tax questions across all {country.name} tax categories for the {country.taxYear} fiscal year.
+      {hub.executiveSummary}
     </p>
 
     <div class="mt-4">
       <FactCheckedBadge
-        lastChecked={`Tax Year ${country.taxYear}`}
+        lastChecked={`Tax Year ${hub.taxYear}`}
         reviewerName="Finsiva Statutory Research"
         reviewerRole="International Tax Desk"
       />
@@ -99,58 +78,68 @@ const categoriesWithFaqs = country.taxCategories.filter(c => c.faqs && c.faqs.le
     <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 p-5 rounded-2xl border border-hairline bg-canvas-soft dark:border-overlay-lighter dark:bg-surface/50">
       <div>
         <div class="text-xs uppercase tracking-wider text-muted font-medium">Tax Authority</div>
-        <div class="font-bold text-sm sm:text-base text-ink dark:text-on-primary truncate mt-0.5" title={country.officialTaxAuthority}>
-          <a href={country.taxAuthorityUrl} target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">
-            {country.officialTaxAuthority} ↗
+        <div class="font-bold text-sm sm:text-base text-ink dark:text-on-primary truncate mt-0.5" title={hub.officialTaxAuthority}>
+          <a href={hub.taxAuthorityUrl} target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">
+            {hub.officialTaxAuthority} ↗
           </a>
         </div>
       </div>
       <div>
         <div class="text-xs uppercase tracking-wider text-muted font-medium">Filing Deadline</div>
-        <div class="font-bold text-sm sm:text-base text-ink dark:text-on-primary mt-0.5">
-          {country.filingDeadline || "Check IRS / Local Calendar"}
+        <div class="font-bold text-sm sm:text-base text-ink dark:text-on-primary mt-0.5 truncate" title={hub.filingDeadline}>
+          {hub.filingDeadline}
         </div>
       </div>
       <div>
         <div class="text-xs uppercase tracking-wider text-muted font-medium">Currency</div>
         <div class="font-bold text-sm sm:text-base text-ink dark:text-on-primary mt-0.5">
-          {country.currency}
+          {hub.currency}
         </div>
       </div>
       <div>
-        <div class="text-xs uppercase tracking-wider text-muted font-medium">Questions Answered</div>
+        <div class="text-xs uppercase tracking-wider text-muted font-medium">In-Depth Solutions</div>
         <div class="font-bold text-sm sm:text-base text-ink dark:text-on-primary mt-0.5">
-          {allFaqEntities.length} Verified Solutions
+          {allFaqs.length} Verified Answers
         </div>
       </div>
     </div>
   </header>
 
-  <!-- CATEGORY JUMP SWITCHER -->
+  <!-- JUMP NAVIGATION PILLS -->
   <nav class="mb-12 p-4 rounded-2xl border border-hairline bg-canvas shadow-sm dark:border-overlay-lighter dark:bg-surface" aria-label="FAQ Category Navigation">
     <div class="flex items-center gap-2 mb-3">
       <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
       </svg>
-      <span class="text-xs font-bold uppercase tracking-wider text-ink dark:text-on-primary">Jump to Tax Category:</span>
+      <span class="text-xs font-bold uppercase tracking-wider text-ink dark:text-on-primary">Quick Navigation:</span>
     </div>
     <div class="flex flex-wrap gap-2">
-      {country.countryFAQs && country.countryFAQs.length > 0 && (
+      <a
+        href="#tax-brackets"
+        class="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-canvas-soft border border-hairline text-ink hover:border-primary hover:text-primary transition dark:bg-surface dark:text-on-primary dark:border-overlay-lighter"
+      >
+        📊 Tax Slabs &amp; Brackets
+      </a>
+      <a
+        href="#residency-rules"
+        class="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-canvas-soft border border-hairline text-ink hover:border-primary hover:text-primary transition dark:bg-surface dark:text-on-primary dark:border-overlay-lighter"
+      >
+        🌐 Residency Rules
+      </a>
+      {hub.sections.map(sec => (
         <a
-          href="#general-overview"
+          href={`#${sec.slug}`}
           class="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-canvas-soft border border-hairline text-ink hover:border-primary hover:text-primary transition dark:bg-surface dark:text-on-primary dark:border-overlay-lighter"
         >
-          General Overview ({country.countryFAQs.length})
-        </a>
-      )}
-      {categoriesWithFaqs.map(cat => (
-        <a
-          href={`#${cat.slug}`}
-          class="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-canvas-soft border border-hairline text-ink hover:border-primary hover:text-primary transition dark:bg-surface dark:text-on-primary dark:border-overlay-lighter"
-        >
-          {cat.name} ({cat.faqs.length})
+          {sec.name}
         </a>
       ))}
+      <a
+        href="#filing-process"
+        class="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-canvas-soft border border-hairline text-ink hover:border-primary hover:text-primary transition dark:bg-surface dark:text-on-primary dark:border-overlay-lighter"
+      >
+        📝 Filing &amp; Penalties
+      </a>
       <a
         href="#calculators"
         class="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-canvas-soft border border-hairline text-ink hover:border-primary hover:text-primary transition dark:bg-surface dark:text-on-primary dark:border-overlay-lighter"
@@ -160,150 +149,240 @@ const categoriesWithFaqs = country.taxCategories.filter(c => c.faqs && c.faqs.le
     </div>
   </nav>
 
-  <!-- SECTION 1: GENERAL COUNTRY FAQS -->
-  {country.countryFAQs && country.countryFAQs.length > 0 && (
-    <section id="general-overview" class="mb-14 scroll-mt-24">
-      <div class="flex items-center justify-between pb-4 mb-6 border-b border-hairline dark:border-overlay-lighter">
+  <!-- SECTION 1: STATUTORY TAX SLABS & BRACKETS TABLE -->
+  <section id="tax-brackets" class="mb-14 scroll-mt-24">
+    <div class="rounded-3xl border border-hairline bg-canvas p-6 sm:p-8 shadow-sm dark:border-overlay-lighter dark:bg-surface">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-4 mb-6 border-b border-hairline dark:border-overlay-lighter">
         <div>
           <h2 class="text-2xl font-bold text-ink dark:text-on-primary flex items-center gap-2">
-            <span>🏛️</span> General {country.name} Tax Overview FAQs
+            <span>📊</span> Official {hub.countryName} Tax Brackets &amp; Rates ({hub.taxYear})
           </h2>
           <p class="mt-1 text-sm text-body dark:text-muted">
-            Foundational rules, residency criteria, and system architecture for taxpayers in {country.name}.
+            {hub.taxBracketsIntro}
           </p>
         </div>
-        <span class="text-xs font-bold px-3 py-1 rounded-full bg-primary/10 text-primary dark:bg-primary/20 dark:text-link border border-primary/20 shrink-0 hidden sm:inline-block">
-          {country.countryFAQs.length} FAQs
+        <span class="text-xs font-bold px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 shrink-0 self-start sm:self-auto">
+          Current Statutory Rates
         </span>
       </div>
 
-      <div class="space-y-4">
-        {country.countryFAQs.map((faq, index) => (
-          <details
-            class="group rounded-2xl border border-hairline bg-canvas p-5 shadow-sm transition hover:border-primary/50 dark:border-overlay-lighter dark:bg-surface"
-            id={`faq-general-${index}`}
-            open={index === 0}
-          >
-            <summary class="flex cursor-pointer items-start justify-between gap-4 font-bold text-base sm:text-lg text-ink dark:text-on-primary list-none">
-              <span class="flex items-start gap-3">
-                <span class="text-primary font-black shrink-0">Q.</span>
-                <span>{faq.question}</span>
-              </span>
-              <span class="ml-2 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-canvas-soft text-ink transition-transform duration-200 group-open:rotate-180 dark:bg-surface dark:text-on-primary border border-hairline">
-                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              </span>
-            </summary>
-            <div class="mt-4 pt-4 border-t border-hairline/60 dark:border-overlay-lighter/60 pl-7 text-sm sm:text-base text-body leading-relaxed dark:text-muted">
-              <p>{faq.answer}</p>
-            </div>
-          </details>
-        ))}
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm">
+          <thead>
+            <tr class="border-b border-hairline bg-canvas-soft/70 dark:border-overlay-lighter dark:bg-surface/60">
+              <th scope="col" class="py-3.5 px-4 font-bold text-ink dark:text-on-primary">Income Bracket / Threshold</th>
+              <th scope="col" class="py-3.5 px-4 font-bold text-ink dark:text-on-primary">Marginal Tax Rate</th>
+              <th scope="col" class="py-3.5 px-4 font-bold text-ink dark:text-on-primary">Taxpayer Scope &amp; Statutory Notes</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+            {hub.taxBrackets.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? "bg-canvas dark:bg-surface" : "bg-canvas-soft/30 dark:bg-surface/40"}>
+                <td class="py-3.5 px-4 font-semibold text-ink dark:text-on-primary whitespace-nowrap">
+                  {row.bracket}
+                </td>
+                <td class="py-3.5 px-4 font-bold text-primary dark:text-link whitespace-nowrap">
+                  {row.rate}
+                </td>
+                <td class="py-3.5 px-4 text-body dark:text-muted">
+                  {row.notes}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
-    </section>
-  )}
+    </div>
+  </section>
 
-  <!-- SECTION 2: CATEGORY-SPECIFIC FAQS -->
-  {categoriesWithFaqs.map(category => (
-    <section id={category.slug} class="mb-14 scroll-mt-24">
-      <div class="rounded-3xl border border-hairline bg-canvas-soft/60 p-6 sm:p-8 dark:border-overlay-lighter dark:bg-surface/30">
+  <!-- SECTION 2: TAX RESIDENCY & JURISDICTION RULES -->
+  <section id="residency-rules" class="mb-14 scroll-mt-24">
+    <div class="rounded-3xl border border-hairline bg-canvas-soft/70 p-6 sm:p-8 dark:border-overlay-lighter dark:bg-surface/40">
+      <div class="flex items-start gap-4">
+        <div class="hidden sm:flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary dark:bg-primary/20 dark:text-link text-2xl">
+          🌐
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold text-ink dark:text-on-primary">
+            {hub.countryName} Tax Residency &amp; Worldwide Scope
+          </h2>
+          <p class="mt-2 text-sm sm:text-base text-body dark:text-muted leading-relaxed">
+            {hub.residencyRuleSummary}
+          </p>
+          <div class="mt-4 flex flex-wrap gap-3">
+            <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full bg-canvas border border-hairline text-ink dark:bg-surface dark:text-on-primary">
+              ✓ Physical Presence Test
+            </span>
+            <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full bg-canvas border border-hairline text-ink dark:bg-surface dark:text-on-primary">
+              ✓ Double Taxation Agreements (DTA)
+            </span>
+            <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full bg-canvas border border-hairline text-ink dark:bg-surface dark:text-on-primary">
+              ✓ Foreign Income Reporting
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: CATEGORY DEEP FAQS WITH ISSUEBOX RULE 10 TOOL LINKING -->
+  {hub.sections.map(section => (
+    <section id={section.slug} class="mb-14 scroll-mt-24">
+      <div class="rounded-3xl border border-hairline bg-canvas p-6 sm:p-8 shadow-sm dark:border-overlay-lighter dark:bg-surface">
+        
         <!-- CATEGORY HEADER -->
         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-6 mb-6 border-b border-hairline dark:border-overlay-lighter">
           <div>
             <div class="text-xs font-bold uppercase tracking-wider text-primary dark:text-link mb-1">
-              {country.name} Tax Category
+              Core Tax Subject
             </div>
             <h2 class="text-2xl sm:text-3xl font-extrabold text-ink dark:text-on-primary">
-              {category.name} FAQs
+              {section.name}
             </h2>
             <p class="mt-2 text-sm sm:text-base text-body dark:text-muted max-w-2xl">
-              {category.description}
+              {section.description}
             </p>
           </div>
-          <div class="shrink-0 flex items-center gap-2">
+          <a
+            href={`/countries/${hub.countrySlug}/${section.slug}/`}
+            class="shrink-0 inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold bg-canvas-soft border border-hairline text-ink hover:border-primary hover:text-primary transition dark:bg-surface dark:text-on-primary"
+          >
+            <span>Browse {section.name} Hub</span>
+            <span>→</span>
+          </a>
+        </div>
+
+        <!-- ISSUEBOX RULE 10: DEEP TOOL LINKING CTA -->
+        {section.calculator && (
+          <div class="mb-8 p-5 rounded-2xl bg-gradient-to-r from-primary/5 via-canvas to-primary/10 border border-primary/20 dark:from-primary/10 dark:via-surface dark:to-primary/20 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm">
+            <div>
+              <div class="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider text-primary dark:text-link mb-1">
+                <span>🧮</span> Interactive Calculator Tool
+              </div>
+              <h3 class="font-bold text-base sm:text-lg text-ink dark:text-on-primary">
+                {section.calculator.name}
+              </h3>
+              <p class="text-xs sm:text-sm text-body dark:text-muted mt-0.5">
+                {section.calculator.description}
+              </p>
+            </div>
             <a
-              href={`/countries/${country.slug}/${category.slug}/`}
-              class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold bg-primary text-on-primary hover:opacity-90 transition shadow-sm dark:bg-on-primary dark:text-primary"
+              href={`/countries/${hub.countrySlug}/${section.slug}/${section.calculator.slug}/`}
+              class="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-primary text-on-primary hover:opacity-90 transition shadow-sm dark:bg-on-primary dark:text-primary"
             >
-              <span>Explore {category.name} Hub</span>
+              <span>Calculate Now</span>
               <span>→</span>
             </a>
           </div>
-        </div>
-
-        <!-- CATEGORY CALCULATORS / DIRECT TOOLS CALLOUT (ISSUEBOX RULE 10) -->
-        {category.calculators && category.calculators.length > 0 && (
-          <div class="mb-6 p-4 rounded-2xl bg-canvas border border-hairline shadow-sm dark:bg-surface dark:border-overlay-lighter">
-            <div class="text-xs font-bold uppercase tracking-wider text-muted dark:text-muted mb-2 flex items-center gap-1.5">
-              <span>🧮</span> Direct Calculation Tools for {category.name}:
-            </div>
-            <div class="flex flex-wrap gap-2">
-              {category.calculators.map(calc => (
-                <a
-                  href={`/countries/${country.slug}/${category.slug}/${calc.slug}/`}
-                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-canvas-soft border border-hairline text-ink hover:border-primary hover:text-primary transition dark:bg-surface dark:text-on-primary dark:border-overlay-lighter"
-                >
-                  <span>{calc.name}</span>
-                  <span class="text-primary text-[10px]">↗</span>
-                </a>
-              ))}
-            </div>
-          </div>
         )}
 
-        <!-- FAQ ACCORDIONS -->
-        <div class="space-y-4">
-          {category.faqs.map((faq, idx) => (
-            <details
-              class="group rounded-2xl border border-hairline bg-canvas p-5 shadow-sm transition hover:border-primary/50 dark:border-overlay-lighter dark:bg-surface"
-              id={`${category.slug}-faq-${idx}`}
-              open={idx === 0}
-            >
-              <summary class="flex cursor-pointer items-start justify-between gap-4 font-bold text-base sm:text-lg text-ink dark:text-on-primary list-none">
-                <span class="flex items-start gap-3">
-                  <span class="text-primary font-black shrink-0">Q.</span>
-                  <span>{faq.question}</span>
+        <!-- FAQS ACCORDIONS / DETAILED CARDS -->
+        <div class="space-y-6">
+          {section.faqs.map((faq, idx) => (
+            <article class="p-6 rounded-2xl border border-hairline bg-canvas-soft/40 dark:border-overlay-lighter dark:bg-surface/50">
+              <h3 class="text-lg sm:text-xl font-bold text-ink dark:text-on-primary flex items-start gap-3">
+                <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-primary text-on-primary text-xs font-black dark:bg-on-primary dark:text-primary">
+                  Q.
                 </span>
-                <span class="ml-2 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-canvas-soft text-ink transition-transform duration-200 group-open:rotate-180 dark:bg-surface dark:text-on-primary border border-hairline">
-                  <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </span>
-              </summary>
-              <div class="mt-4 pt-4 border-t border-hairline/60 dark:border-overlay-lighter/60 pl-7 text-sm sm:text-base text-body leading-relaxed dark:text-muted">
+                <span>{faq.question}</span>
+              </h3>
+
+              <div class="mt-4 pl-10 text-sm sm:text-base text-body leading-relaxed dark:text-muted">
                 <p>{faq.answer}</p>
-                <div class="mt-4 pt-3 border-t border-hairline/40 flex flex-wrap items-center justify-between gap-2 text-xs">
-                  <span class="text-muted">Category: {category.name}</span>
-                  <a
-                    href={`/countries/${country.slug}/${category.slug}/`}
-                    class="font-semibold text-primary hover:underline dark:text-link"
-                  >
-                    View detailed {category.name} rules &amp; rates →
-                  </a>
-                </div>
+
+                {faq.keyPoints && faq.keyPoints.length > 0 && (
+                  <div class="mt-4 p-4 rounded-xl bg-canvas border border-hairline dark:bg-surface dark:border-overlay-lighter">
+                    <div class="text-xs font-bold uppercase tracking-wider text-ink dark:text-on-primary mb-2 flex items-center gap-1.5">
+                      <span>📌</span> Key Statutory Takeaways:
+                    </div>
+                    <ul class="space-y-1.5 text-xs sm:text-sm">
+                      {faq.keyPoints.map(point => (
+                        <li class="flex items-start gap-2 text-body dark:text-muted">
+                          <span class="text-primary font-bold shrink-0">•</span>
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
-            </details>
+            </article>
           ))}
         </div>
+
       </div>
     </section>
   ))}
 
-  <!-- SECTION 3: INTERACTIVE CALCULATORS SUITE -->
+  <!-- SECTION 4: OFFICIAL FILING PROCEDURES & PENALTIES -->
+  <section id="filing-process" class="mb-14 scroll-mt-24">
+    <div class="rounded-3xl border border-hairline bg-canvas p-6 sm:p-8 shadow-sm dark:border-overlay-lighter dark:bg-surface">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-ink dark:text-on-primary mb-3 flex items-center gap-2">
+        <span>📝</span> How to File Taxes in {hub.countryName}: Step-by-Step
+      </h2>
+      <p class="text-sm sm:text-base text-body dark:text-muted mb-6 leading-relaxed">
+        Tax returns in {hub.countryName} are submitted through the official government portal: <strong>{hub.filingPortalName}</strong>. Follow this verified filing workflow to ensure complete statutory compliance:
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div class="space-y-4">
+          {hub.filingProcessSteps.map((step, idx) => (
+            <div class="flex items-start gap-3 p-4 rounded-xl bg-canvas-soft border border-hairline dark:bg-surface dark:border-overlay-lighter">
+              <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-on-primary text-xs font-bold dark:bg-on-primary dark:text-primary">
+                {idx + 1}
+              </span>
+              <p class="text-xs sm:text-sm text-body dark:text-muted leading-relaxed">
+                {step}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div class="flex flex-col justify-between p-6 rounded-2xl bg-amber-500/5 border border-amber-500/20 dark:bg-amber-400/5 dark:border-amber-400/20">
+          <div>
+            <div class="flex items-center gap-2 text-amber-600 dark:text-amber-400 font-bold text-base mb-2">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+              <span>Late Filing &amp; Non-Compliance Penalties</span>
+            </div>
+            <p class="text-xs sm:text-sm text-body dark:text-muted leading-relaxed">
+              {hub.penaltySummary}
+            </p>
+            <p class="mt-3 text-xs text-muted leading-relaxed">
+              Missing statutory deadlines can also trigger automatic compliance audits, forfeiture of loss carryforwards, and personal asset liens by {hub.officialTaxAuthority}.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-amber-500/20">
+            <a
+              href={hub.filingPortalUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 text-xs font-bold text-amber-700 dark:text-amber-300 hover:underline"
+            >
+              <span>Access {hub.filingPortalName} Official Portal</span>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: INTERACTIVE CALCULATOR SUITE -->
   <section id="calculators" class="mb-14 scroll-mt-24">
     <div class="p-6 sm:p-8 rounded-3xl border border-hairline bg-canvas shadow-sm dark:border-overlay-lighter dark:bg-surface">
       <div class="flex items-center justify-between mb-6">
         <div>
           <h2 class="text-2xl sm:text-3xl font-extrabold text-ink dark:text-on-primary flex items-center gap-2">
-            <span>🧮</span> {country.name} Interactive Tax Calculators
+            <span>🧮</span> Free {hub.countryName} Tax Calculators
           </h2>
           <p class="mt-2 text-sm sm:text-base text-body dark:text-muted">
             Model your specific tax scenarios and estimate take-home pay, business tax, or investment liability.
           </p>
         </div>
         <a
-          href={`/countries/${country.slug}/`}
+          href={`/countries/${hub.countrySlug}/`}
           class="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:underline dark:text-link"
         >
           View All Country Calculators →
@@ -319,7 +398,7 @@ const categoriesWithFaqs = country.taxCategories.filter(c => c.faqs && c.faqs.le
           }))
         ).slice(0, 9).map(calc => (
           <a
-            href={`/countries/${country.slug}/${calc.categorySlug}/${calc.slug}/`}
+            href={`/countries/${hub.countrySlug}/${calc.categorySlug}/${calc.slug}/`}
             class="group p-5 rounded-2xl border border-hairline bg-canvas-soft hover:border-primary hover:shadow-md transition dark:bg-surface dark:border-overlay-lighter flex flex-col justify-between"
           >
             <div>
@@ -339,44 +418,6 @@ const categoriesWithFaqs = country.taxCategories.filter(c => c.faqs && c.faqs.le
             </div>
           </a>
         ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 4: STATUTORY AUTHORITY & FILING GUIDANCE -->
-  <section class="mb-14">
-    <div class="rounded-3xl border border-hairline bg-canvas-soft p-6 sm:p-8 dark:border-overlay-lighter dark:bg-surface/40">
-      <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4 flex items-center gap-2">
-        <span>⚖️</span> Official Compliance &amp; Statutory Guidance
-      </h2>
-      <p class="text-sm sm:text-base text-body leading-relaxed dark:text-muted mb-6">
-        Tax legislation in {country.name} is governed by statutory law and administrative rulings enforced by <strong>{country.officialTaxAuthority}</strong>. While Finsiva's calculators and FAQ repositories are regularly updated against current statutory schedules, individual circumstances (such as residency treaties, dual status, foreign asset disclosures, or specialized business structures) can affect your liability.
-      </p>
-      
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div class="p-4 rounded-xl bg-canvas border border-hairline dark:bg-surface dark:border-overlay-lighter">
-          <h3 class="font-bold text-sm text-ink dark:text-on-primary mb-1">Official Tax Authority Portal</h3>
-          <p class="text-xs text-muted mb-3">Access statutory forms, official rulings, and primary source legislation directly.</p>
-          <a
-            href={country.taxAuthorityUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-xs font-bold text-primary hover:underline inline-flex items-center gap-1 dark:text-link"
-          >
-            Visit {country.officialTaxAuthority} Website ↗
-          </a>
-        </div>
-
-        <div class="p-4 rounded-xl bg-canvas border border-hairline dark:bg-surface dark:border-overlay-lighter">
-          <h3 class="font-bold text-sm text-ink dark:text-on-primary mb-1">Country Tax Guide</h3>
-          <p class="text-xs text-muted mb-3">Review progressive brackets, standard deductions, and tax credits for {country.name}.</p>
-          <a
-            href={`/countries/${country.slug}/`}
-            class="text-xs font-bold text-primary hover:underline inline-flex items-center gap-1 dark:text-link"
-          >
-            Open Complete {country.name} Tax Guide →
-          </a>
-        </div>
       </div>
     </div>
   </section>
