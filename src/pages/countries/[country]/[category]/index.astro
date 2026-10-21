@@ -22,9 +22,37 @@ const category = getCategoryBySlug(Astro.params.country!, Astro.params.category!
 if (!country || !category) {
   return Astro.redirect("/countries");
 }
+
+const faqSchema = category.faqs && category.faqs.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": category.faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+} : undefined;
+
+const itemListSchema = category.calculators && category.calculators.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": `${country.name} ${category.name} Calculators`,
+  "itemListElement": category.calculators.map((calc, idx) => ({
+    "@type": "ListItem",
+    "position": idx + 1,
+    "name": calc.name,
+    "description": calc.description,
+    "url": `https://finsiva.com/countries/${country.slug}/${category.slug}/${calc.slug}/`
+  }))
+} : undefined;
 ---
 
 <CountryLayout
+  schema={faqSchema}
+  itemListSchema={itemListSchema}
   title={`${country.name} ${category.name} ${country.taxYear}`}
   description={`Comprehensive guide to ${country.name} ${category.name} for ${country.taxYear}. ${category.description}`}
   canonical={`https://finsiva.com/countries/${country.slug}/${category.slug}/`}

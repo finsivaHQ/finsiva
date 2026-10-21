@@ -1701,6 +1701,157 @@ const calcCanonical = `https://finsiva.com/countries/${country.slug}/${category.
         setOutput('employerNI', employerNI, 'currency');
       }
 
+      
+      function calcSGCorporateTax() {
+        var income = getInput('chargeableIncome') || 0;
+        var scheme = getInput('scheme') || 'partial';
+        var citRebate = getInput('citRebate') || 'yes';
+
+        var grossTax = income * 0.17;
+        var exemptIncome = 0;
+
+        if (scheme === 'startup') {
+          var t1 = Math.min(income, 100000);
+          var t2 = Math.max(0, Math.min(income - 100000, 100000));
+          exemptIncome = (t1 * 0.75) + (t2 * 0.50);
+        } else {
+          var p1 = Math.min(income, 10000);
+          var p2 = Math.max(0, Math.min(income - 10000, 190000));
+          exemptIncome = (p1 * 0.75) + (p2 * 0.50);
+        }
+
+        var taxableProfit = Math.max(0, income - exemptIncome);
+        var taxBeforeRebate = taxableProfit * 0.17;
+        var citRebateAmount = citRebate === 'yes' ? Math.min(taxBeforeRebate * 0.50, 40000) : 0;
+        var netTaxPayable = Math.max(0, taxBeforeRebate - citRebateAmount);
+        var effectiveRate = income > 0 ? (netTaxPayable / income) * 100 : 0;
+
+        setOutput('grossTax', grossTax, 'currency');
+        setOutput('exemptIncome', exemptIncome, 'currency');
+        setOutput('taxableProfit', taxableProfit, 'currency');
+        setOutput('citRebateAmount', citRebateAmount, 'currency');
+        setOutput('netTaxPayable', netTaxPayable, 'currency');
+        setOutput('effectiveRate', effectiveRate, 'percentage');
+      }
+
+      function calcUSRetirementSavings() {
+        var salary = getInput('annualSalary') || 0;
+        var filing = getInput('filingStatus') || 'single';
+        var c401k = getInput('contribution401k') || 0;
+        var cIRA = getInput('contributionIRA') || 0;
+        var cHSA = getInput('contributionHSA') || 0;
+
+        var totalContributions = c401k + cIRA + cHSA;
+
+        // Determine marginal bracket based on 2025 brackets
+        var marginalRate = 12;
+        if (filing === 'married') {
+          if (salary > 583750) marginalRate = 37;
+          else if (salary > 487450) marginalRate = 35;
+          else if (salary > 383900) marginalRate = 32;
+          else if (salary > 201050) marginalRate = 24;
+          else if (salary > 94300) marginalRate = 22;
+          else if (salary > 23200) marginalRate = 12;
+          else marginalRate = 10;
+        } else {
+          if (salary > 583750) marginalRate = 37;
+          else if (salary > 243725) marginalRate = 35;
+          else if (salary > 191950) marginalRate = 32;
+          else if (salary > 100525) marginalRate = 24;
+          else if (salary > 47150) marginalRate = 22;
+          else if (salary > 11600) marginalRate = 12;
+          else marginalRate = 10;
+        }
+
+        var taxSavings = totalContributions * (marginalRate / 100);
+        var takeHomeReduction = Math.max(0, totalContributions - taxSavings);
+        var effectiveDiscount = marginalRate;
+
+        setOutput('totalContributions', totalContributions, 'currency');
+        setOutput('marginalRate', marginalRate, 'percentage');
+        setOutput('taxSavings', taxSavings, 'currency');
+        setOutput('takeHomeReduction', takeHomeReduction, 'currency');
+        setOutput('effectiveDiscount', effectiveDiscount, 'percentage');
+      }
+
+      function calcUSTaxSavingsEstimator() {
+        var income = getInput('grossIncome') || 0;
+        var filing = getInput('filingStatus') || 'single';
+        var itemized = getInput('itemizedDeductions') || 0;
+        var preTax = getInput('preTaxDeductions') || 0;
+        var credits = getInput('taxCredits') || 0;
+
+        var standardDeduction = 15000;
+        if (filing === 'married') standardDeduction = 30000;
+        else if (filing === 'head') standardDeduction = 22500;
+
+        var appliedDeduction = Math.max(standardDeduction, itemized);
+        var taxableIncome = Math.max(0, income - appliedDeduction - preTax);
+
+        // Approximate federal tax on taxableIncome
+        var tax = 0;
+        if (taxableIncome > 100000) tax = 14000 + (taxableIncome - 100000) * 0.24;
+        else if (taxableIncome > 47000) tax = 5000 + (taxableIncome - 47000) * 0.22;
+        else if (taxableIncome > 11000) tax = 1100 + (taxableIncome - 11000) * 0.12;
+        else tax = taxableIncome * 0.10;
+
+        var netTaxPayable = Math.max(0, tax - credits);
+
+        // Baseline tax without pre-tax or credits
+        var baselineTaxable = Math.max(0, income - standardDeduction);
+        var baselineTax = 0;
+        if (baselineTaxable > 100000) baselineTax = 14000 + (baselineTaxable - 100000) * 0.24;
+        else if (baselineTaxable > 47000) baselineTax = 5000 + (baselineTaxable - 47000) * 0.22;
+        else if (baselineTaxable > 11000) baselineTax = 1100 + (baselineTaxable - 11000) * 0.12;
+        else baselineTax = baselineTaxable * 0.10;
+
+        var totalTaxSaved = Math.max(0, baselineTax - netTaxPayable);
+
+        setOutput('standardDeduction', standardDeduction, 'currency');
+        setOutput('appliedDeduction', appliedDeduction, 'currency');
+        setOutput('taxableIncome', taxableIncome, 'currency');
+        setOutput('netTaxPayable', netTaxPayable, 'currency');
+        setOutput('totalTaxSaved', totalTaxSaved, 'currency');
+      }
+
+      function calcUSIRSPaymentPlan() {
+        var balance = getInput('taxOwed') || 0;
+        var planType = getInput('planType') || 'direct_debit';
+        var payment = getInput('monthlyPayment') || 100;
+
+        var fee = 31;
+        if (planType === 'short_term') fee = 0;
+        else if (planType === 'standard_installment') fee = 130;
+
+        var months = payment > 0 ? Math.ceil(balance / payment) : 0;
+        // Failure to pay penalty: 0.25% per month while in agreement
+        // Interest: approx 8% annual = ~0.67% per month
+        var monthlyFactor = 0.0092; 
+        var estimatedInterestAndPenalties = Math.round(balance * (months * monthlyFactor * 0.55));
+        var totalRepayment = balance + fee + estimatedInterestAndPenalties;
+
+        setOutput('setupFee', fee, 'currency');
+        setOutput('monthsToPayoff', months, 'number');
+        setOutput('estimatedInterestAndPenalties', estimatedInterestAndPenalties, 'currency');
+        setOutput('totalRepayment', totalRepayment, 'currency');
+      }
+
+      function calcUSIRSRefundStatus() {
+        var method = getInput('filingMethod') || 'efile_dd';
+        var days = getInput('daysSinceFiling') || 0;
+        var eitc = getInput('claimEITC') || 'no';
+
+        var targetDays = 21;
+        if (method === 'efile_check') targetDays = 28;
+        else if (method === 'paper_mail') targetDays = 56;
+        if (eitc === 'yes') targetDays = Math.max(targetDays, 30);
+
+        var remaining = Math.max(0, targetDays - days);
+
+        setOutput('standardTargetDays', targetDays, 'number');
+        setOutput('daysRemaining', remaining, 'number');
+      }
+
       function calculate() {
         if (!form) return;
 
@@ -1744,6 +1895,11 @@ const calcCanonical = `https://finsiva.com/countries/${country.slug}/${category.
           else if (ruleId === 'singapore-income-tax-income-tax-calculator') calcSGIncomeTax();
           else if (ruleId === 'singapore-gst-gst-calculator') calcGenericVATorGST(getInput('gstRate') || '0.09', getInput('calculationType') || 'exclusive');
           else if (ruleId === 'singapore-stamp-duty-stamp-duty-calculator') calcStampDuty();
+          else if (ruleId === 'singapore-corporate-tax-income-tax-calculator') calcSGCorporateTax();
+          else if (ruleId === 'united-states-tax-planning-retirement-contribution-calculator') calcUSRetirementSavings();
+          else if (ruleId === 'united-states-tax-planning-tax-savings-estimator') calcUSTaxSavingsEstimator();
+          else if (ruleId === 'united-states-irs-support-irs-payment-planner') calcUSIRSPaymentPlan();
+          else if (ruleId === 'united-states-irs-support-irs-refund-status') calcUSIRSRefundStatus();
           else if (ruleId === 'indonesia-income-tax-income-tax-calculator') calcIDIncomeTax();
           else if (ruleId === 'indonesia-vat-vat-calculator') calcGenericVATorGST(0.11, getInput('calculationType') || 'exclusive');
           else if (ruleId === 'united-states-income-tax-effective-tax-rate') calcEffectiveRate();

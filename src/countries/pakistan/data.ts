@@ -10,7 +10,7 @@ const taxCategories: TaxCategory[] = [
       { slug: "income-tax-calculator", name: "Income Tax Calculator", description: "Calculate your Pakistan income tax under current FBR progressive slabs." },
       { slug: "salary-tax-calculator", name: "Salary Tax Calculator", description: "Calculate monthly tax on salary in Pakistan for salaried employees." },
       { slug: "business-income-tax-calculator", name: "Business Income Tax Calculator", description: "Calculate income tax for sole proprietors, businesses, and freelancers in Pakistan." },
-      { slug: "capital-gain-tax-calculator", name: "Capital Gain Tax Calculator", description: "Calculate capital gains tax on property and securities in Pakistan." }
+      { slug: "capital-gain-tax-calculator", name: "Securities & Shares Capital Gain Tax Calculator", description: "Calculate capital gains tax on listed securities, mutual funds, and shares under Section 37A." }
     ],
     guides: [
       { slug: "tax-residency-guide", title: "Tax Residency Guide", description: "Understanding Pakistani tax residency rules and 183-day physical presence test.", url: "/knowledge/pakistan-tax-residency/" },
@@ -50,7 +50,7 @@ const taxCategories: TaxCategory[] = [
     overview: "Urban Immovable Property Tax (UIPT) is a provincial levy charged on Annual Rental Value. Capital gains tax applies on property sales under federal FBR rules (15% for filers).",
     calculators: [
       { slug: "property-tax-calculator", name: "Property Tax Calculator", description: "Calculate provincial property tax and capital gains tax on property sales in Pakistan." },
-      { slug: "capital-gain-tax-calculator", name: "Capital Gain Tax Calculator", description: "Calculate capital gains tax (CGT) on property sales by holding period and filer status." },
+      { slug: "capital-gain-tax-calculator", name: "Property Capital Gain Tax Calculator (Sec. 37)", description: "Calculate capital gains tax (CGT) on immovable property sales by holding period and filer status under Section 37." },
       { slug: "token-tax-calculator", name: "Token Tax Calculator", description: "Calculate vehicle and property token tax charges by engine capacity and province." },
       { slug: "rental-income-tax-calculator", name: "Rental Income Tax Calculator", description: "Calculate tax on rental income from property in Pakistan." }
     ],

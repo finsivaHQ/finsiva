@@ -3072,5 +3072,303 @@ export const taxRules: TaxRule[] = [
       { title: "$60,000 Annual Salary, Single, Monthly", inputs: { annualIncome: 60000, payFrequency: "monthly", filingStatus: "single", dependents: 0 }, outputs: { federalWithholding: 450, annualWithholding: 5400, effectiveRate: 9.0 }, explanation: "Approximate monthly withholding of $450 based on 2025 tables." }
     ]
   },
+
+  {
+    id: "singapore-corporate-tax-income-tax-calculator",
+    countrySlug: "singapore",
+    categorySlug: "corporate-tax",
+    calculatorSlug: "income-tax-calculator",
+    name: "Singapore Corporate Tax Estimator",
+    description: "Estimate corporate income tax liability at the 17% headline rate with start-up and partial tax exemption schemes.",
+    inputs: [
+      {
+        id: "chargeableIncome",
+        label: "Chargeable Income (Taxable Profit)",
+        type: "number",
+        required: true,
+        placeholder: "Enter net chargeable profit",
+        validation: { min: 0, step: 1000 },
+      },
+      {
+        id: "scheme",
+        label: "Exemption Scheme",
+        type: "select",
+        required: true,
+        defaultValue: "partial",
+        options: [
+          { value: "partial", label: "Partial Tax Exemption (PTE) - Standard for All Companies" },
+          { value: "startup", label: "Start-Up Tax Exemption (SUTE) - Qualifying First 3 YAs" },
+        ],
+        helpText: "Qualifying new start-up companies enjoy up to 75% exemption on the first S$100,000 of normal chargeable income.",
+      },
+      {
+        id: "citRebate",
+        label: "Apply Corporate Income Tax (CIT) Rebate",
+        type: "select",
+        required: true,
+        defaultValue: "yes",
+        options: [
+          { value: "yes", label: "Yes (50% rebate capped at S$40,000)" },
+          { value: "no", label: "No (Standard calculation)" },
+        ],
+      },
+    ],
+    outputs: [
+      { id: "grossTax", label: "Gross Corporate Tax (17%)", format: "currency", description: "Tax before statutory exemptions" },
+      { id: "exemptIncome", label: "Exempt Profit Amount", format: "currency", description: "Portion of profit exempt under statutory schemes" },
+      { id: "taxableProfit", label: "Net Taxable Profit", format: "currency", description: "Profit subject to 17% corporate income tax" },
+      { id: "citRebateAmount", label: "CIT Rebate Amount", format: "currency", description: "Statutory corporate tax rebate deduction" },
+      { id: "netTaxPayable", label: "Final Corporate Tax Payable", format: "currency", description: "Total IRAS corporate income tax due" },
+      { id: "effectiveRate", label: "Effective Corporate Tax Rate", format: "percentage", description: "Final tax divided by gross chargeable income" },
+    ],
+    formulas: [
+      { id: "sg_cit", name: "Corporate Tax Formula", formula: "(Chargeable Income - Exempt Income) * 17% - CIT Rebate", description: "Section 43 of Singapore Income Tax Act" }
+    ],
+    examples: [
+      { title: "S$150,000 Normal Company (PTE)", inputs: { chargeableIncome: 150000, scheme: "partial", citRebate: "yes" }, outputs: { grossTax: 25500, exemptIncome: 77500, taxableProfit: 72500, citRebateAmount: 6162.5, netTaxPayable: 6162.5, effectiveRate: 4.1 }, explanation: "With PTE scheme and 50% CIT rebate, effective tax is only ~4.1%." }
+    ]
+  },
+  {
+    id: "united-states-tax-planning-retirement-contribution-calculator",
+    countrySlug: "united-states",
+    categorySlug: "tax-planning",
+    calculatorSlug: "retirement-contribution-calculator",
+    name: "Retirement Contribution Calculator",
+    description: "Calculate immediate federal tax savings from 401(k), traditional IRA, and HSA contributions.",
+    inputs: [
+      {
+        id: "annualSalary",
+        label: "Annual Gross Salary ($)",
+        type: "number",
+        required: true,
+        placeholder: "e.g. 95000",
+        validation: { min: 0, step: 1000 },
+      },
+      {
+        id: "filingStatus",
+        label: "Tax Filing Status",
+        type: "select",
+        required: true,
+        defaultValue: "single",
+        options: [
+          { value: "single", label: "Single" },
+          { value: "married", label: "Married Filing Jointly" },
+          { value: "head", label: "Head of Household" },
+        ],
+      },
+      {
+        id: "contribution401k",
+        label: "Annual 401(k) / 403(b) Contribution ($)",
+        type: "number",
+        required: false,
+        defaultValue: 0,
+        placeholder: "Max $23,500 in 2025",
+        validation: { min: 0, max: 31000, step: 500 },
+      },
+      {
+        id: "contributionIRA",
+        label: "Traditional IRA Contribution ($)",
+        type: "number",
+        required: false,
+        defaultValue: 0,
+        placeholder: "Max $7,000 in 2025",
+        validation: { min: 0, max: 8000, step: 500 },
+      },
+      {
+        id: "contributionHSA",
+        label: "Health Savings Account (HSA) ($)",
+        type: "number",
+        required: false,
+        defaultValue: 0,
+        placeholder: "Max $4,300 single / $8,550 family",
+        validation: { min: 0, max: 8550, step: 100 },
+      },
+    ],
+    outputs: [
+      { id: "totalContributions", label: "Total Pre-Tax Savings", format: "currency", description: "Combined annual retirement and HSA contributions" },
+      { id: "marginalRate", label: "Marginal Federal Tax Rate", format: "percentage", description: "Top federal income tax bracket saved" },
+      { id: "taxSavings", label: "Immediate Tax Savings", format: "currency", description: "Reduction in federal income tax liability" },
+      { id: "takeHomeReduction", label: "Net Reduction in Take-Home Pay", format: "currency", description: "Actual out-of-pocket impact after tax savings" },
+      { id: "effectiveDiscount", label: "Effective Savings Discount", format: "percentage", description: "Percentage of contribution funded by IRS tax savings" },
+    ],
+    formulas: [
+      { id: "us_ret_savings", name: "Pre-Tax Retirement Tax Deduction", formula: "Total Contributions * Marginal Tax Rate", description: "IRC Section 401(k), 219, and 223" }
+    ],
+    examples: [
+      { title: "$100,000 Salary, Single, $15,000 401(k)", inputs: { annualSalary: 100000, filingStatus: "single", contribution401k: 15000, contributionIRA: 0, contributionHSA: 0 }, outputs: { totalContributions: 15000, marginalRate: 22, taxSavings: 3300, takeHomeReduction: 11700, effectiveDiscount: 22 }, explanation: "Saving $15,000 saves $3,300 in taxes, costing only $11,700 in take-home pay." }
+    ]
+  },
+  {
+    id: "united-states-tax-planning-tax-savings-estimator",
+    countrySlug: "united-states",
+    categorySlug: "tax-planning",
+    calculatorSlug: "tax-savings-estimator",
+    name: "Tax Savings Estimator",
+    description: "Estimate overall federal tax savings by optimizing standard vs itemized deductions, pre-tax deductions, and tax credits.",
+    inputs: [
+      {
+        id: "grossIncome",
+        label: "Gross Annual Income ($)",
+        type: "number",
+        required: true,
+        placeholder: "e.g. 110000",
+        validation: { min: 0, step: 1000 },
+      },
+      {
+        id: "filingStatus",
+        label: "Filing Status",
+        type: "select",
+        required: true,
+        defaultValue: "single",
+        options: [
+          { value: "single", label: "Single" },
+          { value: "married", label: "Married Filing Jointly" },
+          { value: "head", label: "Head of Household" },
+        ],
+      },
+      {
+        id: "itemizedDeductions",
+        label: "Itemized Deductions (Mortgage, SALT up to $10k, Charity) ($)",
+        type: "number",
+        required: false,
+        defaultValue: 0,
+        placeholder: "Enter itemized deductions",
+        validation: { min: 0, step: 500 },
+      },
+      {
+        id: "preTaxDeductions",
+        label: "Pre-Tax Deductions (401k, HSA, Health Insurance) ($)",
+        type: "number",
+        required: false,
+        defaultValue: 0,
+        placeholder: "Enter pre-tax deductions",
+        validation: { min: 0, step: 500 },
+      },
+      {
+        id: "taxCredits",
+        label: "Eligible Tax Credits (Child Tax Credit, Education, Energy) ($)",
+        type: "number",
+        required: false,
+        defaultValue: 0,
+        placeholder: "Enter tax credits",
+        validation: { min: 0, step: 250 },
+      },
+    ],
+    outputs: [
+      { id: "standardDeduction", label: "Standard Deduction (Baseline)", format: "currency", description: "Default standard deduction for filing status" },
+      { id: "appliedDeduction", label: "Optimal Deduction Applied", format: "currency", description: "Higher of standard deduction or itemized deductions" },
+      { id: "taxableIncome", label: "Net Taxable Income", format: "currency", description: "Income subject to federal tax after all deductions" },
+      { id: "netTaxPayable", label: "Net Federal Tax Payable", format: "currency", description: "Total tax due after applying tax credits" },
+      { id: "totalTaxSaved", label: "Total Tax Saved via Planning", format: "currency", description: "Federal tax reduction achieved through pre-tax deductions and tax credits" },
+    ],
+    formulas: [
+      { id: "us_tax_plan", name: "Tax Planning Savings", formula: "Baseline Tax - (Tax on (Income - Deductions) - Credits)", description: "IRC Form 1040 Tax Calculation" }
+    ],
+    examples: [
+      { title: "$120,000 Income, Married Joint, $10,000 Pre-Tax + $2,000 Credit", inputs: { grossIncome: 120000, filingStatus: "married", itemizedDeductions: 0, preTaxDeductions: 10000, taxCredits: 2000 }, outputs: { standardDeduction: 30000, appliedDeduction: 30000, taxableIncome: 80000, netTaxPayable: 7120, totalTaxSaved: 3200 }, explanation: "Planning strategies reduce federal tax by $3,200 annually." }
+    ]
+  },
+  {
+    id: "united-states-irs-support-irs-payment-planner",
+    countrySlug: "united-states",
+    categorySlug: "irs-support",
+    calculatorSlug: "irs-payment-planner",
+    name: "IRS Payment Plan Calculator",
+    description: "Estimate monthly installment agreement terms, setup user fees, statutory interest, and total payoff duration for IRS tax balances.",
+    inputs: [
+      {
+        id: "taxOwed",
+        label: "Total Tax Balance Owed ($)",
+        type: "number",
+        required: true,
+        placeholder: "e.g. 12000",
+        validation: { min: 100, step: 100 },
+      },
+      {
+        id: "planType",
+        label: "Payment Plan Type",
+        type: "select",
+        required: true,
+        defaultValue: "direct_debit",
+        options: [
+          { value: "short_term", label: "Short-Term Plan (Up to 180 days - $0 setup fee)" },
+          { value: "direct_debit", label: "Long-Term Direct Debit Online ($31 setup fee)" },
+          { value: "standard_installment", label: "Long-Term Non-Direct Debit Check/Payroll ($130 setup fee)" },
+        ],
+      },
+      {
+        id: "monthlyPayment",
+        label: "Affordable Monthly Payment ($)",
+        type: "number",
+        required: true,
+        placeholder: "e.g. 350",
+        validation: { min: 25, step: 25 },
+      },
+    ],
+    outputs: [
+      { id: "setupFee", label: "IRS User Setup Fee", format: "currency", description: "One-time fee to establish payment agreement" },
+      { id: "monthsToPayoff", label: "Estimated Payoff Duration (Months)", format: "number", description: "Number of monthly payments required" },
+      { id: "estimatedInterestAndPenalties", label: "Estimated Interest & Penalties", format: "currency", description: "Estimated failure-to-pay penalty (0.25%/mo) and federal statutory interest (~8%/yr)" },
+      { id: "totalRepayment", label: "Total Estimated Repayment", format: "currency", description: "Total amount paid including principal, setup fee, and penalties" },
+    ],
+    formulas: [
+      { id: "irs_installment", name: "Installment Payoff Formula", formula: "Balance / Monthly Payment + Compounded Interest & Penalties", description: "IRC Section 6159 and Section 6621" }
+    ],
+    examples: [
+      { title: "$10,000 Debt, Direct Debit, $400/mo", inputs: { taxOwed: 10000, planType: "direct_debit", monthlyPayment: 400 }, outputs: { setupFee: 31, monthsToPayoff: 27, estimatedInterestAndPenalties: 980, totalRepayment: 11011 }, explanation: "Paying $400/month retires $10,000 balance in approx 27 months." }
+    ]
+  },
+  {
+    id: "united-states-irs-support-irs-refund-status",
+    countrySlug: "united-states",
+    categorySlug: "irs-support",
+    calculatorSlug: "irs-refund-status",
+    name: "IRS Refund Status & Processing Estimator",
+    description: "Track expected IRS refund release timelines based on filing method, PATH Act credit holds, and processing days.",
+    inputs: [
+      {
+        id: "filingMethod",
+        label: "Filing & Payout Method",
+        type: "select",
+        required: true,
+        defaultValue: "efile_dd",
+        options: [
+          { value: "efile_dd", label: "E-filed with Direct Deposit (Fastest: < 21 Days)" },
+          { value: "efile_check", label: "E-filed with Paper Check by Mail (3 - 4 Weeks)" },
+          { value: "paper_mail", label: "Paper Tax Return Mailed (6 - 8 Weeks)" },
+        ],
+      },
+      {
+        id: "daysSinceFiling",
+        label: "Days Since IRS Accepted Return",
+        type: "number",
+        required: true,
+        placeholder: "e.g. 14",
+        validation: { min: 0, max: 365, step: 1 },
+      },
+      {
+        id: "claimEITC",
+        label: "Claimed EITC or Child Tax Credit (PATH Act)?",
+        type: "select",
+        required: true,
+        defaultValue: "no",
+        options: [
+          { value: "no", label: "No (Standard 21-day timeline)" },
+          { value: "yes", label: "Yes (Mandatory hold until mid-to-late February)" },
+        ],
+        helpText: "By federal law, the IRS cannot issue refunds claiming EITC or ACTC before mid-February.",
+      },
+    ],
+    outputs: [
+      { id: "standardTargetDays", label: "Standard Target Processing Days", format: "number", description: "Expected timeframe under IRS processing standards" },
+      { id: "daysRemaining", label: "Estimated Days Remaining", format: "number", description: "Days until standard expected release" },
+    ],
+    formulas: [
+      { id: "irs_refund_time", name: "IRS Processing Standards", formula: "Filing Method Target Window - Elapsed Days", description: "IRS Publication 2043 Service Standards" }
+    ],
+    examples: [
+      { title: "E-filed Direct Deposit, Day 12", inputs: { filingMethod: "efile_dd", daysSinceFiling: 12, claimEITC: "no" }, outputs: { standardTargetDays: 21, daysRemaining: 9 }, explanation: "9 days remaining within the standard 21-day IRS direct deposit window." }
+    ]
+  },
 ];
 
