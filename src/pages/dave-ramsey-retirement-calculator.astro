@@ -493,26 +493,51 @@ const webAppSchema = {
       </p>
     </section>
 
-    <!-- HUB-AND-SPOKE CTA BANNER -->
-    <div class="rounded-2xl bg-gradient-to-r from-primary/10 via-primary/5 to-transparent border border-primary/20 p-6 sm:p-8 mb-16 flex flex-col md:flex-row items-center justify-between gap-6">
-      <div class="space-y-2 max-w-2xl">
-        <div class="inline-flex items-center gap-2 text-xs font-bold text-primary uppercase tracking-wider">
-          <span>📖 Deep-Dive Editorial Guide</span>
-        </div>
-        <h3 class="text-xl sm:text-2xl font-bold text-ink dark:text-on-primary">
-          Want the Real Math Behind Dave's Retirement Plan?
-        </h3>
-        <p class="text-sm text-body dark:text-muted leading-relaxed">
-          Read our comprehensive 2,000-word analysis exploring the 15% rule, S&P 500 mutual fund allocations, the 8% vs 4% withdrawal debate, and comparisons with The Money Guy and simple retirement calculators.
-        </p>
+    <!-- HUB-AND-SPOKE EDITORIAL GUIDES SHOWCASE -->
+    <div class="mb-16">
+      <div class="mb-4">
+        <span class="text-xs font-bold text-primary uppercase tracking-wider">📖 In-Depth Companion Research</span>
+        <h3 class="text-2xl font-bold text-ink dark:text-on-primary mt-1">Master Dave Ramsey's Retirement Methodology</h3>
       </div>
-      <a
-        href="/blogs/dave-ramsey-retirement-calculator-guide/"
-        class="flex-shrink-0 inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-sm font-bold text-on-primary shadow-md hover:bg-primary-hover transition"
-      >
-        <span>Read the Complete Guide</span>
-        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-      </a>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="rounded-2xl bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20 p-6 sm:p-7 flex flex-col justify-between shadow-sm">
+          <div class="space-y-2 mb-4">
+            <span class="inline-block px-2.5 py-0.5 rounded-full bg-primary/15 text-primary text-xs font-bold uppercase">15% Rule & Decumulation</span>
+            <h4 class="text-lg font-bold text-ink dark:text-on-primary">
+              Dave Ramsey Retirement Guide: 15% Rule & Real Math
+            </h4>
+            <p class="text-xs text-body dark:text-muted leading-relaxed">
+              Explore Baby Step 4 mechanics, historical 10%–12% returns, the 8% vs 4% withdrawal debate (Trinity study), and comparisons against The Money Guy FOO.
+            </p>
+          </div>
+          <a
+            href="/blogs/dave-ramsey-retirement-calculator-guide/"
+            class="inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-primary-hover group"
+          >
+            <span>Read 15% Rule & Math Guide</span>
+            <svg class="h-4 w-4 transform group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+        </div>
+
+        <div class="rounded-2xl bg-gradient-to-br from-emerald-500/10 via-emerald-500/5 to-transparent border border-emerald-500/20 p-6 sm:p-7 flex flex-col justify-between shadow-sm">
+          <div class="space-y-2 mb-4">
+            <span class="inline-block px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 text-xs font-bold uppercase">Age Milestones & 4 Funds</span>
+            <h4 class="text-lg font-bold text-ink dark:text-on-primary">
+              Dave Ramsey Retirement by Age: Nest Egg Targets & 4-Fund Mix
+            </h4>
+            <p class="text-xs text-body dark:text-muted leading-relaxed">
+              Compare exact milestone targets by age (30s to 60s) for $60k, $90k, and $130k salaries, understand the 4-part equity allocation, and learn why Dave avoids bonds.
+            </p>
+          </div>
+          <a
+            href="/blogs/dave-ramsey-retirement-by-age-fund-allocation/"
+            class="inline-flex items-center gap-2 text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 group"
+          >
+            <span>Read By Age & 4-Fund Guide</span>
+            <svg class="h-4 w-4 transform group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+        </div>
+      </div>
     </div>
 
     <!-- IN-DEPTH E-E-A-T EDUCATIONAL GUIDE (BELOW THE TOOL) -->
@@ -578,6 +603,10 @@ const webAppSchema = {
             </p>
           </div>
         </div>
+
+        <p class="text-xs text-muted leading-relaxed">
+          Want a breakdown of specific low-cost index ETF equivalents, historical standard deviations, and the rationale for excluding bonds in retirement? Read our dedicated analysis: <a href="/blogs/dave-ramsey-retirement-by-age-fund-allocation/" class="text-primary font-semibold hover:underline">Dave Ramsey Retirement by Age: Nest Egg Targets & 4-Fund Mix</a>.
+        </p>
       </section>
 
       <!-- Section 3: The 8% vs 4% Safe Withdrawal Controversy -->

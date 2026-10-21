@@ -1,0 +1,348 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Dave Ramsey Retirement by Age: Nest Egg Targets & 4-Fund Mix";
+const description = "Calculate your Dave Ramsey retirement nest egg by age (30s, 40s, 50s, 60s). Learn his 4-part mutual fund allocation, 15% rule math, and inflation reality.";
+const image = "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=1200&q=80";
+const author = "Finsiva Wealth & Retirement Research";
+const lastUpdated = "October 2026";
+const readTime = "15 min read";
+const authorBio = "Quantitative wealth research board analyzing retirement allocation models, longitudinal market returns, and milestone-based retirement readiness.";
+
+const faqList = [
+  {
+    question: "How much should I have saved for retirement by age according to Dave Ramsey?",
+    answer: "Unlike traditional rules of thumb (like Fidelity's 1x salary at 30, 3x at 40), Dave Ramsey does not specify rigid net worth multipliers by age. Instead, he focuses on sequential execution: become debt-free except the mortgage (Baby Step 2), build a 3–6 month emergency fund (Baby Step 3), and invest 15% of your gross household income continuously into growth stock mutual funds (Baby Step 4). At a 10% average annual return, investing 15% starting in your late 20s or 30s generally yields between $1.5 million and $4 million by age 65."
+  },
+  {
+    question: "What are the 4 mutual fund types Dave Ramsey recommends for retirement?",
+    answer: "Dave Ramsey recommends allocating your 15% retirement contributions equally (25% each) across four distinct mutual fund categories: (1) Growth and Income (large-cap value funds that mirror stable blue-chip companies), (2) Growth (mid-to-large-cap growth companies), (3) Aggressive Growth (small-cap and emerging growth companies with high volatility), and (4) International (companies based outside the United States)."
+  },
+  {
+    question: "Why does Dave Ramsey not recommend bonds in your retirement portfolio?",
+    answer: "Dave Ramsey rejects holding bonds both before and during retirement. He argues that bonds generate inferior returns that barely outpace inflation and carry hidden interest rate risk. Instead, Ramsey advocates maintaining a 100% equity allocation in growth stock mutual funds throughout retirement, claiming that the higher historical returns of the stock market provide greater longevity for a nest egg than conservative fixed-income securities."
+  },
+  {
+    question: "How does inflation affect the Dave Ramsey retirement calculator numbers?",
+    answer: "Dave Ramsey's standard calculations use nominal compound interest (typically 10% to 12%), which displays future account balances in unadjusted dollars. While $2.5 million thirty years from now sounds massive, 3% annual inflation will reduce its real purchasing power by roughly 55% to 60%, making it equivalent to approximately $1,000,000 in today's dollars. A realistic retirement evaluation must factor in an inflation-adjusted return rate of 7% to 8%."
+  },
+  {
+    question: "How can I catch up on retirement savings if I start in my 40s or 50s?",
+    answer: "If starting Baby Step 4 in your 40s or 50s, Ramsey advises attacking retirement with 'gazelle intensity.' This includes maximizing tax-advantaged accounts using IRS catch-up contributions (an extra $7,500 in 401(k)s and $1,000 in IRAs for those age 50+), increasing your savings rate beyond the baseline 15% to 20%–30% of income, downscaling living expenses, and delaying retirement until age 67 or 70 to maximize compound growth."
+  }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqList.map(item => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.answer
+    }
+  }))
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated={lastUpdated}
+  readTime={readTime}
+  canonical="https://finsiva.com/blogs/dave-ramsey-retirement-by-age-fund-allocation/"
+  schema={faqSchema}
+>
+  <!-- Interactive Calculator Callout (Hero CTA) -->
+  <aside class="my-8 rounded-2xl border border-primary/30 bg-gradient-to-r from-primary/10 via-primary/5 to-transparent p-6 sm:p-8 shadow-sm">
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div class="space-y-1 max-w-xl">
+        <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary">
+          <span>⚡</span> Interactive Financial Engine
+        </span>
+        <h3 class="text-xl font-bold text-ink dark:text-on-primary">
+          Simulate Your Ramsey Numbers in Real Time
+        </h3>
+        <p class="text-sm text-body dark:text-muted">
+          Input your current age, income, and monthly 15% contribution to project your exact nest egg at 65. Toggle between Dave's 10%–12% return and inflation-adjusted 7% realistic benchmarks.
+        </p>
+      </div>
+      <a
+        href="/dave-ramsey-retirement-calculator/"
+        class="flex-shrink-0 inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-on-primary shadow hover:bg-primary-hover transition"
+      >
+        <span>Launch Retirement Calculator</span>
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Lead In Paragraphs -->
+  <p class="text-lg leading-relaxed text-body dark:text-muted mb-6">
+    When individuals ask financial expert <strong>Dave Ramsey</strong> how much money they should have accumulated for retirement by their 30s, 40s, or 50s, his answer regularly surprises conventional planners. Mainstream institutions like Fidelity and Vanguard insist on rigid age-based formulas—stipulating you must have 1x your annual salary saved by 30, 3x by 40, and 6x by 50. Dave Ramsey completely rejects these arbitrary multipliers.
+  </p>
+
+  <p class="text-base leading-relaxed text-body dark:text-muted mb-8">
+    Instead, Ramsey operates on a behavior-first philosophy: eliminate all non-mortgage debt, accumulate a fully funded 3-to-6 month emergency fund, and relentlessly invest <strong>15% of gross household income</strong> into a specific <strong>4-part mutual fund allocation</strong>. But what does the actual math look like across different decades of life? What are the realistic nest egg milestones when compounding at 10% versus an inflation-adjusted 7%? And why does Ramsey stubbornly refuse to shift into bonds as investors approach their 60s?
+  </p>
+
+  <!-- Section 1 -->
+  <h2 class="text-2xl sm:text-3xl font-bold text-ink dark:text-on-primary mt-12 mb-4">
+    The Dave Ramsey Retirement Nest Egg Matrix by Age
+  </h2>
+
+  <p class="text-body dark:text-muted leading-relaxed mb-6">
+    To understand what a 15% monthly contribution achieves over time, let us model three realistic household income tiers—<strong>$60,000</strong>, <strong>$90,000</strong>, and <strong>$130,000</strong>—assuming an investor starts from $0 at various milestone ages and consistently invests until age 65.
+  </p>
+
+  <p class="text-body dark:text-muted leading-relaxed mb-6">
+    Below is the projected nest egg accumulation comparing Dave Ramsey’s preferred <strong>10% nominal return</strong> against a conservative <strong>7% inflation-adjusted return</strong>:
+  </p>
+
+  <!-- Responsive Comparison Table -->
+  <div class="overflow-x-auto my-8 rounded-xl border border-hairline bg-canvas-soft dark:border-overlay-lighter dark:bg-surface/50">
+    <table class="w-full text-left text-sm border-collapse">
+      <thead>
+        <tr class="border-b border-hairline dark:border-overlay-lighter bg-slate-100/70 dark:bg-surface">
+          <th class="p-3.5 font-semibold text-ink dark:text-on-primary">Starting Age</th>
+          <th class="p-3.5 font-semibold text-ink dark:text-on-primary">Years Compounding</th>
+          <th class="p-3.5 font-semibold text-ink dark:text-on-primary">$60k Income ($750/mo)</th>
+          <th class="p-3.5 font-semibold text-ink dark:text-on-primary">$90k Income ($1,125/mo)</th>
+          <th class="p-3.5 font-semibold text-ink dark:text-on-primary">$130k Income ($1,625/mo)</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+        <tr class="hover:bg-canvas/50">
+          <td class="p-3.5 font-medium text-ink dark:text-on-primary">Age 25 (40 Years)</td>
+          <td class="p-3.5 text-body dark:text-muted">40 Years to 65</td>
+          <td class="p-3.5 text-body dark:text-muted"><strong>$4,248,000</strong> <span class="text-xs text-muted block">(7% Real: $1,872,000)</span></td>
+          <td class="p-3.5 text-body dark:text-muted"><strong>$6,372,000</strong> <span class="text-xs text-muted block">(7% Real: $2,808,000)</span></td>
+          <td class="p-3.5 text-body dark:text-muted"><strong>$9,204,000</strong> <span class="text-xs text-muted block">(7% Real: $4,056,000)</span></td>
+        </tr>
+        <tr class="hover:bg-canvas/50">
+          <td class="p-3.5 font-medium text-ink dark:text-on-primary">Age 30 (35 Years)</td>
+          <td class="p-3.5 text-body dark:text-muted">35 Years to 65</td>
+          <td class="p-3.5 text-body dark:text-muted"><strong>$2,571,000</strong> <span class="text-xs text-muted block">(7% Real: $1,289,000)</span></td>
+          <td class="p-3.5 text-body dark:text-muted"><strong>$3,856,000</strong> <span class="text-xs text-muted block">(7% Real: $1,933,000)</span></td>
+          <td class="p-3.5 text-body dark:text-muted"><strong>$5,570,000</strong> <span class="text-xs text-muted block">(7% Real: $2,793,000)</span></td>
+        </tr>
+        <tr class="hover:bg-canvas/50">
+          <td class="p-3.5 font-medium text-ink dark:text-on-primary">Age 35 (30 Years)</td>
+          <td class="p-3.5 text-body dark:text-muted">30 Years to 65</td>
+          <td class="p-3.5 text-body dark:text-muted"><strong>$1,537,000</strong> <span class="text-xs text-muted block">(7% Real: $874,000)</span></td>
+          <td class="p-3.5 text-body dark:text-muted"><strong>$2,305,000</strong> <span class="text-xs text-muted block">(7% Real: $1,311,000)</span></td>
+          <td class="p-3.5 text-body dark:text-muted"><strong>$3,329,000</strong> <span class="text-xs text-muted block">(7% Real: $1,894,000)</span></td>
+        </tr>
+        <tr class="hover:bg-canvas/50">
+          <td class="p-3.5 font-medium text-ink dark:text-on-primary">Age 40 (25 Years)</td>
+          <td class="p-3.5 text-body dark:text-muted">25 Years to 65</td>
+          <td class="p-3.5 text-body dark:text-muted"><strong>$898,000</strong> <span class="text-xs text-muted block">(7% Real: $578,000)</span></td>
+          <td class="p-3.5 text-body dark:text-muted"><strong>$1,348,000</strong> <span class="text-xs text-muted block">(7% Real: $867,000)</span></td>
+          <td class="p-3.5 text-body dark:text-muted"><strong>$1,947,000</strong> <span class="text-xs text-muted block">(7% Real: $1,252,000)</span></td>
+        </tr>
+        <tr class="hover:bg-canvas/50">
+          <td class="p-3.5 font-medium text-ink dark:text-on-primary">Age 45 (20 Years)</td>
+          <td class="p-3.5 text-body dark:text-muted">20 Years to 65</td>
+          <td class="p-3.5 text-body dark:text-muted"><strong>$507,000</strong> <span class="text-xs text-muted block">(7% Real: $369,000)</span></td>
+          <td class="p-3.5 text-body dark:text-muted"><strong>$761,000</strong> <span class="text-xs text-muted block">(7% Real: $553,000)</span></td>
+          <td class="p-3.5 text-body dark:text-muted"><strong>$1,099,000</strong> <span class="text-xs text-muted block">(7% Real: $799,000)</span></td>
+        </tr>
+        <tr class="hover:bg-canvas/50">
+          <td class="p-3.5 font-medium text-ink dark:text-on-primary">Age 50 (15 Years)</td>
+          <td class="p-3.5 text-body dark:text-muted">15 Years to 65</td>
+          <td class="p-3.5 text-body dark:text-muted"><strong>$266,000</strong> <span class="text-xs text-muted block">(7% Real: $222,000)</span></td>
+          <td class="p-3.5 text-body dark:text-muted"><strong>$399,000</strong> <span class="text-xs text-muted block">(7% Real: $333,000)</span></td>
+          <td class="p-3.5 text-body dark:text-muted"><strong>$577,000</strong> <span class="text-xs text-muted block">(7% Real: $481,000)</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="my-6 p-4 rounded-xl border border-primary/20 bg-primary/5 text-sm text-body dark:text-muted">
+    <strong>Key Takeaway:</strong> Notice how dramatic the compound interest penalty becomes after age 35. A 25-year-old earning $90,000 ends up with over <strong>$6.3 million</strong>, whereas a 45-year-old investing the exact same monthly dollar amount accumulates <strong>$761,000</strong>. Time in the market dwarfs contribution size.
+  </div>
+
+  <!-- Section 2 -->
+  <h2 class="text-2xl sm:text-3xl font-bold text-ink dark:text-on-primary mt-12 mb-4">
+    Milestone Analysis: Where Should You Be in Your 20s, 30s, 40s, and 50s?
+  </h2>
+
+  <h3 class="text-xl font-bold text-ink dark:text-on-primary mt-6 mb-2">
+    In Your 20s: Laying the Runway
+  </h3>
+  <p class="text-body dark:text-muted leading-relaxed mb-4">
+    For 20-somethings, Dave Ramsey's advice is focused entirely on eliminating debt and setting the foundation. Do not worry if your retirement net worth is near zero in your early twenties. The primary mission is conquering <strong>Baby Step 2</strong> (clearing student loans, car notes, and credit cards via the debt snowball) and completing <strong>Baby Step 3</strong> (putting 3 to 6 months of expenses into a high-yield savings account). Once those steps are complete, opening a Roth IRA and contributing 15% in your mid-to-late twenties virtually guarantees multi-millionaire status by age 60.
+  </p>
+
+  <h3 class="text-xl font-bold text-ink dark:text-on-primary mt-6 mb-2">
+    In Your 30s: The Crucial Compounding Decade
+  </h3>
+  <p class="text-body dark:text-muted leading-relaxed mb-4">
+    In your thirties, career incomes typically rise, but so do household expenses (mortgages, children, lifestyle inflation). Dave warns against halting Baby Step 4 to fund college tuition (Baby Step 5) or pay off the home early (Baby Step 6). Your retirement 15% must remain non-negotiable. By age 35 to 40, a consistent Ramsey investor should ideally have accumulated between <strong>$100,000 and $300,000</strong> in retirement accounts, reaching the inflection point where annual compound growth exceeds annual contributions.
+  </p>
+
+  <h3 class="text-xl font-bold text-ink dark:text-on-primary mt-6 mb-2">
+    In Your 40s: Reaching the Inflection Point
+  </h3>
+  <p class="text-body dark:text-muted leading-relaxed mb-4">
+    By your forties, the math begins to accelerate dramatically. If you started investing in your late twenties, your portfolio is likely generating $30,000 to $60,000 per year in passive investment growth alone. For investors who got a late start and are just entering Baby Step 4 in their forties, Ramsey recommends tightening the household budget and considering contributions higher than 15% to bridge the lost time horizon.
+  </p>
+
+  <h3 class="text-xl font-bold text-ink dark:text-on-primary mt-6 mb-2">
+    In Your 50s & 60s: Catch-Up Strategy & Home Freedom
+  </h3>
+  <p class="text-body dark:text-muted leading-relaxed mb-4">
+    Once children are independent and the primary mortgage is eliminated (Baby Step 6), 50-somethings enter <strong>Baby Step 7: Build Wealth and Give</strong>. At this stage, Ramsey advises supercharging contributions by utilizing IRS catch-up limits, funneling bonuses and surplus cash flow into taxable brokerage accounts and Roth IRAs to close any remaining retirement gap.
+  </p>
+
+  <!-- Mid-Article CTA Card -->
+  <aside class="my-10 rounded-2xl border border-hairline bg-canvas p-6 sm:p-8 shadow-sm dark:bg-surface dark:border-overlay-lighter">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="space-y-2">
+        <span class="inline-block rounded-md bg-secondary/15 px-2.5 py-1 text-xs font-bold text-secondary uppercase tracking-wider">
+          Calculator Companion
+        </span>
+        <h3 class="text-xl font-bold text-ink dark:text-on-primary">
+          Curious Where Your Retirement Number Lands?
+        </h3>
+        <p class="text-sm text-body dark:text-muted max-w-lg">
+          Do not guess your retirement date. Use our free, interactive <strong>Dave Ramsey Retirement Calculator</strong> to see your exact timeline, total interest earned, and compare the 4% vs 8% withdrawal rules side-by-side.
+        </p>
+      </div>
+      <a
+        href="/dave-ramsey-retirement-calculator/"
+        class="inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-primary px-6 py-3.5 text-sm font-bold text-on-primary shadow hover:bg-primary-hover transition"
+      >
+        <span>Test Your Numbers Now</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Section 3 -->
+  <h2 class="text-2xl sm:text-3xl font-bold text-ink dark:text-on-primary mt-12 mb-4">
+    The 4 Mutual Fund Types: Dave Ramsey's Portfolio Allocation
+  </h2>
+
+  <p class="text-body dark:text-muted leading-relaxed mb-6">
+    A standard question asked by Ramsey listeners is: <em>"Where exactly do I put the 15%?"</em> Dave does not recommend single stocks, cryptocurrencies, precious metals, or complex derivatives. Instead, he directs all retirement capital into four equal buckets (25% each) of growth stock mutual funds:
+  </p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+    <div class="p-6 rounded-2xl border border-hairline bg-canvas dark:bg-surface dark:border-overlay-lighter shadow-sm">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary font-bold text-sm">25%</span>
+        <h4 class="text-lg font-bold text-ink dark:text-on-primary">1. Growth & Income Funds</h4>
+      </div>
+      <p class="text-sm text-body dark:text-muted leading-relaxed">
+        These are large-cap, established American companies often found in the S&P 500 or Dow Jones. They pay reliable dividends, feature mature business models, and experience lower overall volatility during economic downturns. Examples include large-cap value and S&P 500 index funds.
+      </p>
+    </div>
+
+    <div class="p-6 rounded-2xl border border-hairline bg-canvas dark:bg-surface dark:border-overlay-lighter shadow-sm">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary font-bold text-sm">25%</span>
+        <h4 class="text-lg font-bold text-ink dark:text-on-primary">2. Growth Funds</h4>
+      </div>
+      <p class="text-sm text-body dark:text-muted leading-relaxed">
+        These funds target mid-cap and large-cap growth corporations that reinvest their earnings back into operational expansion rather than paying high dividends. They offer solid capital appreciation potential over 10-to-20 year holding periods.
+      </p>
+    </div>
+
+    <div class="p-6 rounded-2xl border border-hairline bg-canvas dark:bg-surface dark:border-overlay-lighter shadow-sm">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary font-bold text-sm">25%</span>
+        <h4 class="text-lg font-bold text-ink dark:text-on-primary">3. Aggressive Growth Funds</h4>
+      </div>
+      <p class="text-sm text-body dark:text-muted leading-relaxed">
+        Consisting primarily of small-cap companies, tech innovators, and emerging market leaders, these funds represent the wild stallion of the portfolio. They swing dramatically during bear markets but produce outsized gains during long bull expansions.
+      </p>
+    </div>
+
+    <div class="p-6 rounded-2xl border border-hairline bg-canvas dark:bg-surface dark:border-overlay-lighter shadow-sm">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary font-bold text-sm">25%</span>
+        <h4 class="text-lg font-bold text-ink dark:text-on-primary">4. International Funds</h4>
+      </div>
+      <p class="text-sm text-body dark:text-muted leading-relaxed">
+        Global mutual funds invested in corporations outside of the United States. This allocation provides geographic diversification across European, Asian, and emerging foreign markets, hedging against US dollar depreciation and domestic recessions.
+      </p>
+    </div>
+  </div>
+
+  <!-- Section 4 -->
+  <h2 class="text-2xl sm:text-3xl font-bold text-ink dark:text-on-primary mt-12 mb-4">
+    Why Dave Ramsey Rejects Bonds (Even in Retirement)
+  </h2>
+
+  <p class="text-body dark:text-muted leading-relaxed mb-4">
+    In modern wealth management, the conventional advice is to adopt an <em>age-based glidepath</em>. Under classic financial rules, a 60-year-old would hold 40% to 50% of their assets in bonds to prevent a sudden stock market crash from wiping out their nest egg right before retirement.
+  </p>
+
+  <p class="text-body dark:text-muted leading-relaxed mb-4">
+    Dave Ramsey vigorously rejects this orthodox view. His reasoning rests on three principles:
+  </p>
+
+  <ul class="list-disc pl-6 space-y-3 text-body dark:text-muted mb-6">
+    <li>
+      <strong>Inflation Erosion:</strong> Fixed-income bonds historically produce yields between 3% and 5%. After subtracting federal income taxes and an average 3% inflation rate, real purchasing power growth is nearly zero.
+    </li>
+    <li>
+      <strong>Interest Rate Risk:</strong> As witnessed during Federal Reserve rate-hiking cycles, bond fund values drop significantly when interest rates rise, undermining their reputation as a "safe haven."
+    </li>
+    <li>
+      <strong>Longevity Defense:</strong> Because retirees are living 25 to 35 years past retirement age, Dave argues that keeping 100% of the portfolio in growth equities is the only reliable way to outpace longevity risk and sustain an 8% withdrawal rate.
+    </li>
+  </ul>
+
+  <p class="text-body dark:text-muted leading-relaxed mb-6">
+    <em>The Counter-Argument:</em> Certified Financial Planners (CFPs) caution that a 100% stock portfolio exposes retirees to extreme <strong>Sequence of Returns Risk (SRR)</strong>. If the stock market drops 35% during the first two years of your retirement and you continue pulling living expenses out of equities, the portfolio may permanently impair its capital base. To explore the deep math behind withdrawal sustainability, read our companion breakdown: <a href="/blogs/dave-ramsey-retirement-calculator-guide/" class="text-primary font-semibold hover:underline">Dave Ramsey Retirement Calculator: 15% Rule & Real Math</a>.
+  </p>
+
+  <!-- Section 5 -->
+  <h2 class="text-2xl sm:text-3xl font-bold text-ink dark:text-on-primary mt-12 mb-4">
+    Frequently Asked Questions (FAQ)
+  </h2>
+
+  <div class="space-y-4 my-8">
+    {faqList.map((faq) => (
+      <details class="group rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface transition">
+        <summary class="flex cursor-pointer items-center justify-between font-bold text-ink dark:text-on-primary">
+          <span>{faq.question}</span>
+          <span class="ml-4 transition-transform group-open:rotate-180 text-primary">▼</span>
+        </summary>
+        <p class="mt-4 text-sm leading-relaxed text-body dark:text-muted border-t border-hairline dark:border-overlay-lighter pt-3">
+          {faq.answer}
+        </p>
+      </details>
+    ))}
+  </div>
+
+  <!-- Bottom Final Action Box -->
+  <div class="mt-12 rounded-2xl border border-primary/20 bg-canvas-soft dark:bg-surface/50 p-6 sm:p-8 text-center space-y-4">
+    <h3 class="text-2xl font-bold text-ink dark:text-on-primary">
+      Ready to Put the Math to Work?
+    </h3>
+    <p class="text-sm text-body dark:text-muted max-w-xl mx-auto">
+      Whether you are 25 or 55, understanding your compounding horizon is the first step toward financial peace. Launch our free calculator to see your custom roadmap today.
+    </p>
+    <div class="pt-2 flex flex-wrap items-center justify-center gap-4">
+      <a
+        href="/dave-ramsey-retirement-calculator/"
+        class="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-sm font-bold text-on-primary shadow hover:bg-primary-hover transition"
+      >
+        <span>Open Free Dave Ramsey Calculator</span>
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+      </a>
+      <a
+        href="/blogs/dave-ramsey-retirement-calculator-guide/"
+        class="inline-flex items-center gap-2 rounded-xl border border-hairline bg-canvas px-6 py-3.5 text-sm font-semibold text-ink hover:bg-canvas-soft dark:border-overlay-lighter dark:bg-surface dark:text-on-primary dark:hover:bg-surface/80 transition"
+      >
+        <span>Read Guide 1: 15% Rule & Math</span>
+      </a>
+    </div>
+  </div>
+</BlogLayout>
