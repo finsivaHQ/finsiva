@@ -49,6 +49,8 @@ const faqSchema = {
     { label: "Tax FAQs" }
   ]}
   schema={faqSchema}
+  image={country.flag}
+  imageAlt={`${hub.countryName} Statutory Tax Rates, Slabs and FAQ Guide`}
   robots="index,follow"
 >
   <!-- HERO HEADER -->
@@ -168,6 +170,7 @@ const faqSchema = {
 
       <div class="overflow-x-auto">
         <table class="w-full text-left text-sm">
+          <caption class="sr-only">Official {hub.countryName} Statutory Tax Brackets, Marginal Rates, and Thresholds for Tax Year {hub.taxYear}</caption>
           <thead>
             <tr class="border-b border-hairline bg-canvas-soft/70 dark:border-overlay-lighter dark:bg-surface/60">
               <th scope="col" class="py-3.5 px-4 font-bold text-ink dark:text-on-primary">Income Bracket / Threshold</th>
@@ -210,15 +213,11 @@ const faqSchema = {
             {hub.residencyRuleSummary}
           </p>
           <div class="mt-4 flex flex-wrap gap-3">
-            <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full bg-canvas border border-hairline text-ink dark:bg-surface dark:text-on-primary">
-              ✓ Physical Presence Test
-            </span>
-            <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full bg-canvas border border-hairline text-ink dark:bg-surface dark:text-on-primary">
-              ✓ Double Taxation Agreements (DTA)
-            </span>
-            <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full bg-canvas border border-hairline text-ink dark:bg-surface dark:text-on-primary">
-              ✓ Foreign Income Reporting
-            </span>
+            {hub.residencyBadges && hub.residencyBadges.map(badge => (
+              <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full bg-canvas border border-hairline text-ink dark:bg-surface dark:text-on-primary">
+                ✓ {badge}
+              </span>
+            ))}
           </div>
         </div>
       </div>
@@ -321,7 +320,7 @@ const faqSchema = {
         <span>📝</span> How to File Taxes in {hub.countryName}: Step-by-Step
       </h2>
       <p class="text-sm sm:text-base text-body dark:text-muted mb-6 leading-relaxed">
-        Tax returns in {hub.countryName} are submitted through the official government portal: <strong>{hub.filingPortalName}</strong>. Follow this verified filing workflow to ensure complete statutory compliance:
+        {hub.filingIntro}
       </p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -350,7 +349,7 @@ const faqSchema = {
               {hub.penaltySummary}
             </p>
             <p class="mt-3 text-xs text-muted leading-relaxed">
-              Missing statutory deadlines can also trigger automatic compliance audits, forfeiture of loss carryforwards, and personal asset liens by {hub.officialTaxAuthority}.
+              {hub.auditRiskNotice}
             </p>
           </div>
           <div class="mt-6 pt-4 border-t border-amber-500/20">
@@ -378,7 +377,7 @@ const faqSchema = {
             <span>🧮</span> Free {hub.countryName} Tax Calculators
           </h2>
           <p class="mt-2 text-sm sm:text-base text-body dark:text-muted">
-            Model your specific tax scenarios and estimate take-home pay, business tax, or investment liability.
+            {hub.calculatorSuiteIntro}
           </p>
         </div>
         <a

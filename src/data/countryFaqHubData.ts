@@ -44,6 +44,10 @@ export interface CountryFaqHub {
   filingPortalUrl: string;
   filingProcessSteps: string[];
   penaltySummary: string;
+  residencyBadges: string[];
+  filingIntro: string;
+  auditRiskNotice: string;
+  calculatorSuiteIntro: string;
 }
 
 export const countryFaqHubs: Record<string, CountryFaqHub> = {
@@ -57,8 +61,8 @@ export const countryFaqHubs: Record<string, CountryFaqHub> = {
     taxAuthorityUrl: "https://www.irs.gov",
     filingDeadline: "April 15, 2026 (or October 15 with Form 4868 extension)",
     paymentDeadline: "April 15, 2026 (extensions apply to filing only, not payments)",
-    metaTitle: "United States Tax FAQs (2025/2026): IRS Slabs, Brackets & Filing Answers | Finsiva",
-    metaDescription: "Exhaustive US Federal tax FAQ hub for 2025/2026. Authoritative answers on IRS progressive brackets (10%-37%), standard vs itemized deductions, FICA, capital gains, and expat filing rules.",
+    metaTitle: "US Tax FAQs (2025/2026): IRS Slabs & Rules",
+    metaDescription: "US tax FAQ hub for 2025/2026. Expert answers on IRS tax brackets (10%-37%), standard deductions, FICA, capital gains, and foreign filing rules.",
     executiveSummary: "The United States enforces a progressive federal income tax system alongside state and municipal taxes across 50 jurisdictions. Tax obligations are determined by worldwide citizenship-based taxation for US citizens and green card holders, while non-resident aliens are taxed exclusively on US-sourced income. Tax year 2025 introduces updated inflation-adjusted bracket thresholds and higher standard deductions under IRS Revenue Procedure 2024-40.",
     residencyRuleSummary: "US citizens and lawful permanent residents (green card holders) are subject to US taxation on their worldwide earnings, regardless of where they live. Foreign nationals are treated as resident aliens for tax purposes if they satisfy the Substantial Presence Test (at least 31 days during the current year and 183 weighted days over the three-year period). Non-residents must file Form 1040-NR.",
     taxBracketsIntro: "Federal income tax for tax year 2025 is calculated using seven marginal tax brackets. Your taxable income is taxed in tranches, meaning moving into a higher bracket only increases the tax rate on dollars earned above that threshold.",
@@ -213,8 +217,16 @@ export const countryFaqHubs: Record<string, CountryFaqHub> = {
       "E-file through IRS Free File, authorized tax software, or a licensed CPA/EA by April 15.",
       "Direct deposit tax refunds within 21 days or remit balance due via IRS Direct Pay."
     ],
-    penaltySummary: "The failure-to-file penalty is 5% of unpaid taxes for each month a return is late, capped at 25%. The failure-to-pay penalty is 0.5% per month plus statutory federal interest."
-  },
+    penaltySummary: "The failure-to-file penalty is 5% of unpaid taxes for each month a return is late, capped at 25%. The failure-to-pay penalty is 0.5% per month plus statutory federal interest.",
+    residencyBadges: [
+      "Substantial Presence Test (183 Days)",
+      "Worldwide Citizenship Taxation (IRC 7701)",
+      "FBAR & FATCA Disclosure Rules"
+],
+    filingIntro: "Individual federal tax returns in the United States are lodged electronically via Form 1040 through IRS Free File, authorized e-file software, or certified tax preparers by April 15.",
+    auditRiskNotice: "Late filing under IRC Section 6651 accrues a 5% monthly penalty up to 25%, plus daily compounding interest; unfiled returns can prompt IRS Substitute for Return (SFR) assessments and passport revocations under the FAST Act.",
+    calculatorSuiteIntro: "Calculate exact federal withholding brackets, simulate state income tax liabilities across all 50 states, evaluate FICA contributions, and project take-home salary.",
+},
 
   "united-kingdom": {
     countrySlug: "united-kingdom",
@@ -226,8 +238,8 @@ export const countryFaqHubs: Record<string, CountryFaqHub> = {
     taxAuthorityUrl: "https://www.gov.uk/government/organisations/hm-revenue-customs",
     filingDeadline: "January 31 following tax year (online) / October 31 (paper)",
     paymentDeadline: "January 31 for balancing payment and 1st payment on account; July 31 for 2nd payment",
-    metaTitle: "UK Tax FAQs (2024/2025 & 2025/2026): HMRC Slabs, PAYE & Self Assessment | Finsiva",
-    metaDescription: "Exhaustive UK Tax FAQ hub. Expert answers on HMRC tax bands (20%, 40%, 45%), Personal Allowance tapering, National Insurance, Section 24, and Self Assessment filing deadlines.",
+    metaTitle: "UK Tax FAQs (2025/2026): HMRC Bands & PAYE",
+    metaDescription: "UK Tax FAQ hub. Expert answers on HMRC tax bands (20%, 40%, 45%), Personal Allowance tapering, National Insurance, Section 24, and Self Assessment.",
     executiveSummary: "The United Kingdom operates a Pay As You Earn (PAYE) cumulative withholding system for employees and a Self Assessment regime for sole traders, landlords, and directors. The UK tax year runs from April 6 to April 5 of the following calendar year. Statutory residence is governed by the Statutory Residence Test (SRT). The standard tax-free Personal Allowance remains frozen at £12,570 through 2028.",
     residencyRuleSummary: "UK tax residency is determined objectively by the Statutory Residence Test (SRT), which assesses physical presence (183+ days in the tax year automatically makes you resident), automatic overseas tests, and sufficient ties tests (family, accommodation, 90-day work ties). UK residents are taxed on worldwide income, while the traditional non-domicile regime is undergoing statutory reform.",
     taxBracketsIntro: "Income tax in England, Wales, and Northern Ireland is calculated progressively after deducting your tax-free Personal Allowance. Scotland enforces a devolved six-tier income tax structure.",
@@ -342,8 +354,16 @@ export const countryFaqHubs: Record<string, CountryFaqHub> = {
       "Submit online by midnight on January 31.",
       "Pay your tax bill via approved debit card, bank transfer, or direct debit by January 31."
     ],
-    penaltySummary: "An immediate £100 late filing penalty applies for missing January 31, even if you owe no tax. After 3 months, daily penalties of £10/day apply up to £900, plus 5% surcharges at 6 and 12 months."
-  },
+    penaltySummary: "An immediate £100 late filing penalty applies for missing January 31, even if you owe no tax. After 3 months, daily penalties of £10/day apply up to £900, plus 5% surcharges at 6 and 12 months.",
+    residencyBadges: [
+      "Statutory Residence Test (SRT)",
+      "Automatic Overseas / UK Tests",
+      "Sufficient Ties Test & Split Year"
+],
+    filingIntro: "Individual Self Assessment tax returns in the United Kingdom are submitted to HM Revenue & Customs (HMRC) via Government Gateway or commercial software before January 31.",
+    auditRiskNotice: "HMRC imposes an immediate £100 late filing penalty even if zero tax is owed, progressing to £10 daily penalties after 3 months, 5% surcharges at 6 and 12 months, and statutory debt recovery action.",
+    calculatorSuiteIntro: "Model your PAYE deductions, calculate Class 1 National Insurance liabilities, simulate student loan repayments, and verify capital gains tax on residential property.",
+},
 
   "india": {
     countrySlug: "india",
@@ -355,8 +375,8 @@ export const countryFaqHubs: Record<string, CountryFaqHub> = {
     taxAuthorityUrl: "https://www.incometax.gov.in",
     filingDeadline: "July 31 of assessment year for salaried/non-audit taxpayers; October 31 for tax audit",
     paymentDeadline: "Advance tax due in 4 quarterly installments (June 15, Sept 15, Dec 15, March 15); self-assessment tax due before filing",
-    metaTitle: "India Tax FAQs (AY 2025-26): Old vs New Regime Slabs, 87A Rebate & 80C | Finsiva",
-    metaDescription: "Comprehensive Indian Income Tax FAQ hub for AY 2025-26 (FY 2024-25). Detailed breakdown of New vs Old Tax Regime, ₹7.75 Lakh zero-tax threshold, Section 87A rebate, standard deduction, and ITR deadlines.",
+    metaTitle: "India Tax FAQs (2025/2026): New vs Old Regime",
+    metaDescription: "India Income Tax FAQ hub (AY 2025-26). Complete guide to New vs Old Regime, ₹7.75L rebate, standard deduction, 80C exemptions, and ITR deadlines.",
     executiveSummary: "India enforces a dual-regime direct taxation framework governed by the Income-tax Act, 1961. The New Tax Regime under Section 115BAC is the default framework, featuring reduced slab rates, an enhanced standard deduction of ₹75,000, and a full Section 87A tax rebate for taxable income up to ₹7,00,000 (making income up to ₹7,75,000 effectively zero-tax for salaried individuals). The Old Tax Regime allows chapter VI-A deductions including 80C, 80D, and HRA.",
     residencyRuleSummary: "An individual is a Resident in India under Section 6 if they stay for 182 days or more in the financial year, or 60 days in the year plus 365 days across the preceding 4 years. Residents and Ordinarily Residents (ROR) are taxed on worldwide income, while Non-Residents (NR) and Residents but Not Ordinarily Residents (RNOR) are taxed strictly on Indian-sourced income.",
     taxBracketsIntro: "Under Finance Act updates for FY 2024-25 (AY 2025-26), the default New Tax Regime provides wider slabs and lower marginal rates.",
@@ -453,8 +473,16 @@ export const countryFaqHubs: Record<string, CountryFaqHub> = {
       "Pre-fill personal details, salary income, Form 16 figures, and cross-check AIS/TIS.",
       "Compute tax, confirm zero or balance tax, and e-Verify via Aadhaar OTP within 30 days."
     ],
-    penaltySummary: "Section 234F imposes a mandatory late filing penalty of ₹5,000 for returns filed after July 31. Unpaid taxes accrue 1% per month interest under Section 234A/B/C."
-  },
+    penaltySummary: "Section 234F imposes a mandatory late filing penalty of ₹5,000 for returns filed after July 31. Unpaid taxes accrue 1% per month interest under Section 234A/B/C.",
+    residencyBadges: [
+      "182-Day Physical Presence Rule",
+      "RNOR Transition Status",
+      "DTAA Foreign Tax Credit (Sec 90)"
+],
+    filingIntro: "Indian income tax returns (ITR-1 through ITR-4) are filed digitally through the Income Tax e-Filing portal (incometax.gov.in) with mandatory Aadhaar-OTP or DSC e-verification.",
+    auditRiskNotice: "Late filing under Section 234F incurs a mandatory ₹5,000 fee (₹1,000 for income up to ₹5 Lakh), monthly interest of 1% under Section 234A, loss of capital loss carry-forward rights, and best judgment assessments.",
+    calculatorSuiteIntro: "Compare exact tax payable under the New Regime versus Old Regime, maximize Section 87A rebate benefits, calculate HRA exemptions, and project net take-home salary.",
+},
 
   "hong-kong": {
     countrySlug: "hong-kong",
@@ -466,8 +494,8 @@ export const countryFaqHubs: Record<string, CountryFaqHub> = {
     taxAuthorityUrl: "https://www.ird.gov.hk",
     filingDeadline: "June 2 (or July 2 for online eTAX filers); 3 months for sole proprietors",
     paymentDeadline: "Two installments: typically January and April of the following year",
-    metaTitle: "Hong Kong Tax FAQs (2024/2025): Salaries Tax, Profits Tax & IRD Rules | Finsiva",
-    metaDescription: "Exhaustive Hong Kong Tax FAQ hub. Authoritative answers on Salaries Tax progressive rates (2%-17%), two-tiered standard rate, Profits Tax, MPF exemptions, and territorial source rules.",
+    metaTitle: "Hong Kong Tax FAQs: Salaries & Profits Tax",
+    metaDescription: "Hong Kong Tax FAQ hub. Verified answers on Salaries Tax progressive rates (2%-17%), two-tiered standard rate, Profits Tax, MPF exemptions, and IRD rules.",
     executiveSummary: "Hong Kong enforces one of the most streamlined, business-friendly tax frameworks worldwide under the Inland Revenue Ordinance (IRO). Tax liability is based strictly on the territorial source principle: only income and profits arising in or derived from Hong Kong are subject to tax. There is no capital gains tax, no dividend withholding tax, no inheritance tax, and no Goods and Services Tax (GST/VAT). Salaries tax is assessed at progressive rates or standard rate, whichever is lower.",
     residencyRuleSummary: "Hong Kong does not distinguish between residents and non-residents for salaries tax liability. Anyone who renders services in Hong Kong is subject to Salaries Tax under the territorial source principle. A 60-day rule applies: individuals visiting Hong Kong for not more than 60 days in a tax year of assessment are completely exempt from Salaries Tax on their employment income.",
     taxBracketsIntro: "Salaries Tax is computed at progressive rates on net chargeable income (after deductions and personal allowances) or at the standard rate on net total income (after deductions only), whichever results in lower tax.",
@@ -552,8 +580,16 @@ export const countryFaqHubs: Record<string, CountryFaqHub> = {
       "Submit online (eTAX provides an automatic 1-month extension from standard June deadline).",
       "Receive Notice of Assessment stating final tax and provisional tax due in two installments."
     ],
-    penaltySummary: "Late filing incurs court summons, fines up to HK$10,000, and treble tax penalties under Section 80(2). A 5% penalty is charged on tax unpaid by the due date, rising to 10% after 6 months."
-  },
+    penaltySummary: "Late filing incurs court summons, fines up to HK$10,000, and treble tax penalties under Section 80(2). A 5% penalty is charged on tax unpaid by the due date, rising to 10% after 6 months.",
+    residencyBadges: [
+      "180-Day Annual Presence Rule",
+      "Strict Territorial Source Principle",
+      "Double Taxation Relief Agreements"
+],
+    filingIntro: "Hong Kong tax returns for individuals (BIR60) are filed with the Inland Revenue Department (IRD) through the eTAX electronic services portal or postal return.",
+    auditRiskNotice: "Failing to submit Form BIR60 without reasonable excuse exposes taxpayers to court summons, Section 80(1) fines up to HK$10,000, Section 82A treble provisional tax assessments, and travel departure stop orders.",
+    calculatorSuiteIntro: "Simulate progressive Salaries Tax versus the 15% standard rate ceiling, calculate MPF mandatory contributions, and estimate commercial Profits Tax liabilities.",
+},
 
   "singapore": {
     countrySlug: "singapore",
@@ -565,8 +601,8 @@ export const countryFaqHubs: Record<string, CountryFaqHub> = {
     taxAuthorityUrl: "https://www.iras.gov.sg",
     filingDeadline: "April 18 for e-Filing; April 15 for paper returns",
     paymentDeadline: "Within 1 month from date of Notice of Assessment (GIRO allows up to 12 monthly interest-free deductions)",
-    metaTitle: "Singapore Tax FAQs (YA 2025/2026): IRAS Slabs, Corporate Tax & CPF | Finsiva",
-    metaDescription: "Exhaustive Singapore Tax FAQ hub for YA 2025/2026. Detailed answers on progressive personal income tax (0%-24%), Employment Pass expat taxation, 17% corporate tax, 9% GST, and CPF.",
+    metaTitle: "Singapore Tax FAQs (2025/2026): IRAS Slabs",
+    metaDescription: "Singapore Tax FAQ hub for YA 2025/2026. Verified answers on IRAS tax rates (0%-24%), EP expat taxation, 17% corporate tax, 9% GST, and CPF rules.",
     executiveSummary: "Singapore operates a modified territorial tax system characterized by competitive marginal rates, no capital gains tax, and a one-tier corporate tax framework where distributed dividends are tax-exempt for shareholders. Personal income tax rates for tax residents range from 0% to 24%. Non-residents are taxed at a flat 15% or progressive resident rates (whichever is higher) on employment income. Central Provident Fund (CPF) contributions provide mandatory retirement savings with substantial tax relief.",
     residencyRuleSummary: "An individual is a tax resident in Singapore for a Year of Assessment (YA) if they are a Singapore Citizen or Permanent Resident residing in Singapore, or a foreigner who stayed or worked in Singapore for 183 days or more in the calendar year preceding the YA. The 183-day rule includes weekends, public holidays, and temporary absences for business.",
     taxBracketsIntro: "Tax residents pay progressive personal income tax on chargeable income after deducting personal reliefs and Central Provident Fund (CPF) contributions.",
@@ -654,8 +690,16 @@ export const countryFaqHubs: Record<string, CountryFaqHub> = {
       "Declare non-employment income and verify eligible deductions (CPF, SRS, course fees, life insurance).",
       "Submit by April 18 and receive instant digital filing acknowledgement."
     ],
-    penaltySummary: "Late filing incurs an initial S$150 fine, escalating up to S$5,000 with potential court summons. Unpaid tax incurs a 5% late payment penalty, plus an additional 1% monthly penalty up to 12%."
-  },
+    penaltySummary: "Late filing incurs an initial S$150 fine, escalating up to S$5,000 with potential court summons. Unpaid tax incurs a 5% late payment penalty, plus an additional 1% monthly penalty up to 12%.",
+    residencyBadges: [
+      "183-Day Quantitative Rule",
+      "Territorial Tax Exemption",
+      "Employment Pass Tax Equalization"
+],
+    filingIntro: "Singapore individual income tax returns are submitted to the Inland Revenue Authority of Singapore (IRAS) via the myTax Portal with Singpass authentication by April 18.",
+    auditRiskNotice: "IRAS enforces late filing fees up to S$5,000, a mandatory 5% late payment penalty with 1% monthly interest, summons to the State Courts, and travel restrictions until liabilities are settled.",
+    calculatorSuiteIntro: "Estimate progressive individual tax liabilities, compute Central Provident Fund (CPF) employee-employer contributions, and verify corporate tax exemptions.",
+},
 
   "malaysia": {
     countrySlug: "malaysia",
@@ -667,8 +711,8 @@ export const countryFaqHubs: Record<string, CountryFaqHub> = {
     taxAuthorityUrl: "https://www.hasil.gov.my",
     filingDeadline: "April 30 (Form BE manual) / May 15 (e-Filing); June 30 / July 15 for business income (Form B)",
     paymentDeadline: "April 30 / May 15 for individual balancing payment; monthly PCB withholding for employees",
-    metaTitle: "Malaysia Tax FAQs (YA 2025/2026): LHDN Slabs, MyTax e-Filing & Reliefs | Finsiva",
-    metaDescription: "Exhaustive Malaysia Tax FAQ hub for YA 2025/2026. Authoritative answers on LHDN progressive tax rates (0%-30%), non-resident 30% flat tax, SST, e-Filing Form BE, and personal tax reliefs.",
+    metaTitle: "Malaysia Tax FAQs (2025/2026): LHDN Slabs",
+    metaDescription: "Malaysia Tax FAQ hub for YA 2025/2026. Authoritative answers on LHDN tax slabs (0%-30%), non-resident 30% rate, SST, e-Filing Form BE, and tax reliefs.",
     executiveSummary: "Malaysia operates a progressive direct taxation model administered by the Inland Revenue Board of Malaysia (Lembaga Hasil Dalam Negeri / LHDN). Tax residents are taxed at graduated rates ranging from 0% to 30%, whereas non-residents are subject to a flat 30% rate without entitlement to personal reliefs. Monthly Tax Deductions (Potongan Cukai Bulanan / PCB) are withheld at source by employers. Tax returns are filed electronically via the MyTax portal.",
     residencyRuleSummary: "An individual is regarded as a tax resident in Malaysia under Section 7 of the Income Tax Act 1967 if they are in Malaysia for 182 days or more in a basis year, or satisfy linking provisions (such as staying for fewer than 182 days linked to a period of 182+ consecutive days in the adjoining year). Residents qualify for personal reliefs of RM 9,000 and progressive rates; non-residents pay flat 30%.",
     taxBracketsIntro: "Tax residents pay progressive personal income tax on chargeable income after deducting statutory personal tax reliefs.",
@@ -756,8 +800,16 @@ export const countryFaqHubs: Record<string, CountryFaqHub> = {
       "Fill in allowable tax reliefs (individual, medical, lifestyle, EPF, child allowances).",
       "Verify tax calculation, electronically sign, and submit before May 15."
     ],
-    penaltySummary: "Failure to file incurs penalties under Section 112(3) of the Income Tax Act ranging from 10% to 300% of tax payable. Late payment accrues a 10% statutory penalty."
-  },
+    penaltySummary: "Failure to file incurs penalties under Section 112(3) of the Income Tax Act ranging from 10% to 300% of tax payable. Late payment accrues a 10% statutory penalty.",
+    residencyBadges: [
+      "182-Day Rule (Section 7 ACP 1967)",
+      "Foreign Source Income (FSI) Rules",
+      "Double Tax Treaty Network"
+],
+    filingIntro: "Malaysian individual income tax returns (Form BE for residents without business income) are lodged through the LHDN MyTax digital portal with digital cert authentication.",
+    auditRiskNotice: "Late submissions under Section 112(1) incur penalties from RM200 to RM20,000 or prosecution; persistent default triggers travel restrictions under Section 104 of the Income Tax Act 1967.",
+    calculatorSuiteIntro: "Compute monthly tax deductions (PCB/MTD), evaluate Employee Provident Fund (EPF) relief, and calculate Sales and Service Tax (SST) exposure.",
+},
 
   "indonesia": {
     countrySlug: "indonesia",
@@ -769,8 +821,8 @@ export const countryFaqHubs: Record<string, CountryFaqHub> = {
     taxAuthorityUrl: "https://www.pajak.go.id",
     filingDeadline: "March 31 for individuals (SPT 1770/1770S); April 30 for corporations (SPT 1771)",
     paymentDeadline: "Monthly PPh 21 withheld by employers; annual tax balance due before filing SPT",
-    metaTitle: "Indonesia Tax FAQs (2025/2026): DJP PPh 21 Slabs, PTKP & Expat Tax | Finsiva",
-    metaDescription: "Exhaustive Indonesia Tax FAQ hub for 2025/2026. Authoritative answers on DJP PPh 21 progressive rates (5%-35%), non-taxable PTKP thresholds, Bali digital nomads, and annual SPT filing.",
+    metaTitle: "Indonesia Tax FAQs: DJP PPh 21 Slabs & PTKP",
+    metaDescription: "Indonesia Tax FAQ hub for 2025/2026. Authoritative answers on DJP PPh 21 rates (5%-35%), PTKP thresholds, Bali expat rules, and annual SPT filing.",
     executiveSummary: "Indonesia enforces a progressive direct taxation system governed by the Harmonized Tax Law (Undang-Undang Harmonisasi Peraturan Perpajakan / UU HPP No. 7/2021). Indonesian tax residents are taxed on their worldwide income under Article 21 (PPh 21) across five progressive brackets ranging from 5% to 35%. Non-residents are subject to a flat 20% withholding tax (PPh 26). Resident taxpayers are entitled to statutory non-taxable income allowances (PTKP).",
     residencyRuleSummary: "An individual is a tax resident in Indonesia if they reside in Indonesia, are physically present for more than 183 days within any 12-month period, or are present in Indonesia during a tax year with the intent to reside. Tax residents must obtain a Tax Identification Number (NPWP / integrated NIK) and report worldwide assets and income on their annual SPT Tahunan.",
     taxBracketsIntro: "Income tax for resident individuals (PPh 21) is calculated on taxable net income after deducting statutory non-taxable allowances (PTKP) and occupational costs.",
@@ -853,8 +905,16 @@ export const countryFaqHubs: Record<string, CountryFaqHub> = {
       "Input 1721-A1 withholding slips provided by employers and list global assets/liabilities.",
       "Submit with token verification sent via email or SMS before March 31."
     ],
-    penaltySummary: "Late filing of individual SPT incurs an automatic Rp 100,000 fine (Rp 1,000,000 for corporate returns). Unpaid tax balances accrue monthly interest penalties determined by the Ministry of Finance."
-  },
+    penaltySummary: "Late filing of individual SPT incurs an automatic Rp 100,000 fine (Rp 1,000,000 for corporate returns). Unpaid tax balances accrue monthly interest penalties determined by the Ministry of Finance.",
+    residencyBadges: [
+      "183-Day Law (UU HPP 7/2021)",
+      "KITAS / KITAP Expat Obligations",
+      "Territorial Exemption for Experts"
+],
+    filingIntro: "Indonesian personal tax returns (SPT Tahunan Orang Pribadi 1770 / 1770 S) are lodged electronically through the DJP Online portal using NPWP credentials and EFIN security.",
+    auditRiskNotice: "Late filing of SPT Tahunan incurs a statutory penalty of Rp 100,000 under UU KUP, 1% monthly interest on unpaid taxes, issuance of Surat Tagihan Pajak (STP), and bank account distress warrants.",
+    calculatorSuiteIntro: "Calculate exact PPh 21 withholding under TER rates, evaluate non-taxable PTKP allowances, and simulate BPJS Ketenagakerjaan employee contributions.",
+},
 
   "pakistan": {
     countrySlug: "pakistan",
@@ -866,8 +926,8 @@ export const countryFaqHubs: Record<string, CountryFaqHub> = {
     taxAuthorityUrl: "https://www.fbr.gov.pk",
     filingDeadline: "September 30 for salaried individuals, business individuals, and AOPs",
     paymentDeadline: "Advance tax quarterly; balance due before e-filing via Iris CPR (Computerized Payment Receipt)",
-    metaTitle: "Pakistan Tax FAQs (2025/2026): FBR Slabs, Salary Tax & ATL Filers | Finsiva",
-    metaDescription: "Exhaustive Pakistan Tax FAQ hub for Tax Year 2025/2026. Detailed breakdown of FBR salaried tax slabs (0%-35%), PKR 600,000 tax-free slab, Active Taxpayer List benefits, and Iris filing.",
+    metaTitle: "Pakistan Tax FAQs: FBR Slabs & Salary Tax",
+    metaDescription: "Pakistan Tax FAQ hub for Tax Year 2025/2026. Complete guide to FBR salary slabs (0%-35%), PKR 600k tax-free slab, Active Taxpayer List, and Iris filing.",
     executiveSummary: "Pakistan's direct taxation is administered centrally by the Federal Board of Revenue (FBR) under the Income Tax Ordinance, 2001. Under the Finance Act 2024/2025, salaried individuals enjoy a tax-free threshold of PKR 600,000, with progressive slabs rising to 35% (plus a 10% super surcharge for high earners). Pakistan strictly enforces a dual-status system: Active Taxpayer List (ATL) filers receive 50% or higher reductions in advance withholding taxes compared to non-filers.",
     residencyRuleSummary: "An individual is a tax resident in Pakistan under Section 82 of the Income Tax Ordinance if they are physically present in Pakistan for 183 days or more in the tax year (July 1 to June 30). Residents are taxed on worldwide income, while non-residents are taxed exclusively on Pakistan-sourced income. Foreign remittance transferred through formal banking channels by non-resident overseas Pakistanis is exempt under Section 111(4).",
     taxBracketsIntro: "Under the Finance Act 2024/2025, salaried individuals (defined as individuals whose salary constitutes more than 75% of total taxable income) are taxed according to six progressive slabs.",
@@ -953,8 +1013,16 @@ export const countryFaqHubs: Record<string, CountryFaqHub> = {
       "Complete the mandatory Wealth Statement (Section 116) detailing personal assets and liabilities.",
       "Submit with your 4-digit PIN code before September 30."
     ],
-    penaltySummary: "Section 182 imposes a late filing penalty of 0.1% of tax payable per day (minimum PKR 1,000, maximum 25% of tax). Non-filers are immediately dropped from the Active Taxpayer List (ATL)."
-  },
+    penaltySummary: "Section 182 imposes a late filing penalty of 0.1% of tax payable per day (minimum PKR 1,000, maximum 25% of tax). Non-filers are immediately dropped from the Active Taxpayer List (ATL).",
+    residencyBadges: [
+      "183-Day Presence Rule (ITO 2001)",
+      "Active Taxpayer List (ATL) Filing",
+      "Non-Resident Withholding Rates"
+],
+    filingIntro: "Pakistan income tax returns are submitted to the Federal Board of Revenue (FBR) through the Iris online portal (iris.fbr.gov.pk) alongside the mandatory wealth statement.",
+    auditRiskNotice: "Missing the September 30 deadline results in exclusion from the Active Taxpayer List (ATL), doubling withholding tax rates on banking, property, and vehicle transactions, alongside Section 182 penalties.",
+    calculatorSuiteIntro: "Determine monthly salary tax withholding under updated FBR slabs, compare filer versus non-filer rates, and estimate personal wealth tax impact.",
+},
 
   "philippines": {
     countrySlug: "philippines",
@@ -966,8 +1034,8 @@ export const countryFaqHubs: Record<string, CountryFaqHub> = {
     taxAuthorityUrl: "https://www.bir.gov.ph",
     filingDeadline: "April 15 for Annual Income Tax Return (Form 1700 / 1701 / 1701A)",
     paymentDeadline: "April 15 for annual balancing tax; quarterly advance payments for self-employed",
-    metaTitle: "Philippines Tax FAQs (2025/2026): BIR Slabs, TRAIN Law & 8% Freelancer Tax | Finsiva",
-    metaDescription: "Exhaustive Philippines Tax FAQ hub for 2025/2026. Detailed answers on BIR graduated rates (0%-35%), ₱250k tax-free bracket, 8% gross income tax for freelancers, 13th month pay, and Form 1701.",
+    metaTitle: "Philippines Tax FAQs: BIR Slabs & TRAIN Law",
+    metaDescription: "Philippines Tax FAQ hub (2025/2026). Expert answers on BIR rates (0%-35%), ₱250k tax-free bracket, 8% freelancer tax, 13th month pay, and Form 1701.",
     executiveSummary: "The Philippines operates a progressive individual income tax system overhauled under the Tax Reform for Acceleration and Inclusion (TRAIN) Law (Republic Act No. 10963). Individual income up to ₱250,000 is completely tax-exempt. Self-employed individuals and professionals with gross sales/receipts below ₱3,000,000 can elect a simplified 8% flat income tax in lieu of graduated rates and percentage taxes. Employees have taxes withheld at source under the substituted filing system.",
     residencyRuleSummary: "Resident citizens are taxed on worldwide income from all sources. Non-resident citizens (including Overseas Filipino Workers / OFWs) and resident aliens are taxed exclusively on Philippine-sourced income. Foreign individuals are treated as resident aliens if they reside in the Philippines with no definite intention as to their stay.",
     taxBracketsIntro: "Under the TRAIN Law progressive schedule, income tax for employees and purely compensation earners is calculated after deducting mandatory statutory contributions (SSS, PhilHealth, Pag-IBIG).",
@@ -1051,8 +1119,16 @@ export const countryFaqHubs: Record<string, CountryFaqHub> = {
       "Validate the form and submit online to generate a confirmation receipt.",
       "Pay balance tax online via Landbank, GCash, Maya, or authorized agent banks by April 15."
     ],
-    penaltySummary: "Late filing or payment incurs a 25% surcharge on basic tax due, 12% annual interest, and compromise penalties based on gross tax due under RMO 7-2015."
-  },
+    penaltySummary: "Late filing or payment incurs a 25% surcharge on basic tax due, 12% annual interest, and compromise penalties based on gross tax due under RMO 7-2015.",
+    residencyBadges: [
+      "180-Day / NRA-ETB Classification",
+      "Worldwide Citizen / Territorial Alien",
+      "Substituted Filing Qualification"
+],
+    filingIntro: "Philippine individual returns (BIR Form 1700 for employees or Form 1701A for freelancers) are filed through the eFPS portal or Electronic BIR Forms (eBIRForms) package.",
+    auditRiskNotice: "Non-filing or late filing incurs a 25% surcharge under Section 248 of the National Internal Revenue Code, 12% annual deficiency interest, and compromise penalties up to ₱50,000.",
+    calculatorSuiteIntro: "Simulate take-home pay after TRAIN graduated tax, compare the 8% gross income tax for freelancers against graduated rates, and calculate SSS/PhilHealth/Pag-IBIG splits.",
+},
 
   "new-zealand": {
     countrySlug: "new-zealand",
@@ -1064,8 +1140,8 @@ export const countryFaqHubs: Record<string, CountryFaqHub> = {
     taxAuthorityUrl: "https://www.ird.govt.nz",
     filingDeadline: "July 7 following end of tax year (or March 31 of following year with approved tax agent)",
     paymentDeadline: "Terminal tax due February 7 (or April 7 with tax agent); provisional tax in 3 installments",
-    metaTitle: "New Zealand Tax FAQs (2025/2026): IRD Slabs, PAYE, GST & Bright-Line | Finsiva",
-    metaDescription: "Exhaustive New Zealand Tax FAQ hub for 2025/2026. Detailed breakdown of updated IRD income tax thresholds (10.5%-39%), 15% GST, KiwiSaver, 2-year Bright-line test, and myIR filing.",
+    metaTitle: "New Zealand Tax FAQs: IRD Slabs & PAYE",
+    metaDescription: "New Zealand Tax FAQ hub for 2025/2026. Guide to updated IRD tax thresholds (10.5%-39%), 15% GST, KiwiSaver, 2-year Bright-line test, and myIR filing.",
     executiveSummary: "New Zealand's tax system is governed by the Income Tax Act 2007 and administered by Inland Revenue (Te Tari Taake). Effective July 31, 2024, personal income tax thresholds were expanded to relieve bracket creep. New Zealand operates a comprehensive Pay As You Earn (PAYE) withholding system for wage earners. There is no comprehensive capital gains tax, no inheritance tax, and no payroll tax. Property sales are monitored under the Bright-Line property rule.",
     residencyRuleSummary: "An individual is a tax resident in New Zealand if they have a permanent place of abode in New Zealand, or are physically present in New Zealand for more than 183 days in any 12-month period. Tax residents are taxed on worldwide income, though new migrants and returning Kiwis can qualify for a 4-year transitional residency exemption on foreign passive income.",
     taxBracketsIntro: "Income tax is calculated progressively on taxable income across five marginal tax thresholds updated under recent statutory adjustments.",
@@ -1152,6 +1228,14 @@ export const countryFaqHubs: Record<string, CountryFaqHub> = {
       "Declare income, attach business financial statements or Bright-Line disclosure forms.",
       "Submit online by July 7 (or March 31 with an approved tax agent) and pay terminal tax by February 7."
     ],
-    penaltySummary: "Late filing incurs penalties ranging from $50 to $250. Late payments incur a 1% initial penalty, plus 4% after 7 days, and 1% compounding monthly interest."
-  }
+    penaltySummary: "Late filing incurs penalties ranging from $50 to $250. Late payments incur a 1% initial penalty, plus 4% after 7 days, and 1% compounding monthly interest.",
+    residencyBadges: [
+      "183-Day Rule & Permanent Place of Abode",
+      "Transitional Resident 4-Year Exemption",
+      "Common Reporting Standard (CRS)"
+],
+    filingIntro: "New Zealand individual income tax assessments are finalized through Inland Revenue's myIR secure portal with automated PAYE end-of-year reconciliations.",
+    auditRiskNotice: "Late filing triggers an immediate $50 to $250 penalty, and overdue payments accrue incremental late payment penalties (1% on day 1, 4% on day 7, 1% monthly) plus IRD use-of-money interest (UOMI).",
+    calculatorSuiteIntro: "Calculate net take-home pay under updated IRD marginal rates, estimate KiwiSaver employee contributions, and verify Goods and Services Tax (GST) liabilities.",
+}
 };

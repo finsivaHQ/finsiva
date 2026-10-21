@@ -40,7 +40,7 @@ const breadcrumbSchema = breadcrumbs && breadcrumbs.length > 0 ? {
 ---
 
 <Layout
-  title={`${title} | Finsiva`}
+  title={title.replace(/\s*\|\s*Finsiva.*$/i, "") + " | Finsiva"}
   description={description}
   image={image}
   imageAlt={imageAlt}
