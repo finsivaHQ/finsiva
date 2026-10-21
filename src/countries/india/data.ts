@@ -10,7 +10,7 @@ const taxCategories: TaxCategory[] = [
       { slug: "income-tax-calculator", name: "Income Tax Calculator", description: "Calculate your Indian income tax liability.", isPopular: true }
     ],
     guides: [
-      { slug: "itr-guide", title: "ITR Filing Guide", description: "How to choose and file the correct ITR form." }
+      { slug: "itr-guide", title: "ITR Filing Guide", description: "How to choose and file the correct ITR form.", url: "/blogs/how-to-save-income-tax-india-2024-25/" }
     ],
     faqs: [
       { question: "What is the ITR filing deadline?", answer: "July 31st for individuals unless extended." },
@@ -26,7 +26,7 @@ const taxCategories: TaxCategory[] = [
       { slug: "gst-calculator", name: "GST Calculator", description: "Calculate GST inclusive or exclusive amounts.", isPopular: true }
     ],
     guides: [
-      { slug: "gst-guide", title: "GST Complete Guide", description: "Understanding GST slabs, registration, and filing." }
+      { slug: "gst-guide", title: "GST Complete Guide", description: "Understanding GST slabs, registration, and filing.", url: "/blogs/gst-complete-guide-india/" }
     ],
     faqs: [
       { question: "What are the GST slabs?", answer: "0%, 5%, 12%, 18%, and 28% for various goods and services." }
@@ -41,7 +41,7 @@ const taxCategories: TaxCategory[] = [
       { slug: "tds-calculator", name: "TDS Calculator", description: "Calculate TDS deductions for various payment types." }
     ],
     guides: [
-      { slug: "tds-guide", title: "TDS Return Filing Guide", description: "Complete guide to TDS compliance and returns." }
+      { slug: "tds-guide", title: "TDS Return Filing Guide", description: "Complete guide to TDS compliance and returns.", url: "/countries/india/tds/tds-calculator/" }
     ],
     faqs: [
       { question: "What is TDS?", answer: "Tax Deducted at Source - a mechanism for collecting tax at the time of payment." }

@@ -13,10 +13,10 @@ const taxCategories: TaxCategory[] = [
       { slug: "capital-gain-tax-calculator", name: "Capital Gain Tax Calculator", description: "Calculate capital gains tax on property and securities in Pakistan." }
     ],
     guides: [
-      { slug: "tax-residency-guide", title: "Tax Residency Guide", description: "Understanding Pakistani tax residency rules and 183-day physical presence test." },
-      { slug: "fbr-tax-slabs-guide", title: "FBR Tax Slabs Guide", description: "Complete guide to FBR progressive tax slabs for salaried individuals and businesses." },
-      { slug: "salary-tax-guide", title: "Salary Tax Guide", description: "How Section 149 tax on salary is calculated in Pakistan with payroll examples." },
-      { slug: "freelancer-tax-guide", title: "Freelancer Tax Guide", description: "Tax obligations, IT export concessions, and filing rules for freelancers in Pakistan." }
+      { slug: "tax-residency-guide", title: "Tax Residency Guide", description: "Understanding Pakistani tax residency rules and 183-day physical presence test.", url: "/knowledge/pakistan-tax-residency/" },
+      { slug: "fbr-tax-slabs-guide", title: "FBR Tax Slabs Guide", description: "Complete guide to FBR progressive tax slabs for salaried individuals and businesses.", url: "/blogs/pakistan-fbr-tax-slabs/" },
+      { slug: "salary-tax-guide", title: "Salary Tax Guide", description: "How Section 149 tax on salary is calculated in Pakistan with payroll examples.", url: "/blogs/pakistan-fbr-tax-slabs/" },
+      { slug: "freelancer-tax-guide", title: "Freelancer Tax Guide", description: "Tax obligations, IT export concessions, and filing rules for freelancers in Pakistan.", url: "/blogs/pakistan-freelancer-tax-guide/" }
     ],
     faqs: [
       { question: "What is the tax-free limit for salary in Pakistan?", answer: "The tax-free threshold for salaried individuals in Pakistan is PKR 600,000 annually. Any taxable salary income up to PKR 600,000 is taxed at 0%." },
@@ -35,7 +35,7 @@ const taxCategories: TaxCategory[] = [
       { slug: "gst-calculator", name: "GST Calculator", description: "Calculate 18% GST inclusive and exclusive prices for transactions in Pakistan." }
     ],
     guides: [
-      { slug: "sales-tax-guide", title: "Sales Tax Guide", description: "Understanding sales tax registration (STRN), monthly Iris filing by the 18th, and rates in Pakistan." }
+      { slug: "sales-tax-guide", title: "Sales Tax Guide", description: "Understanding sales tax registration (STRN), monthly Iris filing by the 18th, and rates in Pakistan.", url: "/blogs/pakistan-sales-tax-guide/" }
     ],
     faqs: [
       { question: "What is the sales tax rate in Pakistan?", answer: "The standard federal sales tax rate in Pakistan is 18% on most taxable goods. Certain essential items are exempt or zero-rated under the Sixth Schedule." },
@@ -55,9 +55,9 @@ const taxCategories: TaxCategory[] = [
       { slug: "rental-income-tax-calculator", name: "Rental Income Tax Calculator", description: "Calculate tax on rental income from property in Pakistan." }
     ],
     guides: [
-      { slug: "property-tax-guide", title: "Property Tax Guide", description: "Understanding provincial property tax (UIPT), CGT, and buyer/seller withholding tax in Pakistan." },
-      { slug: "capital-gain-tax-guide", title: "Capital Gain Tax Guide", description: "How capital gains tax is calculated on property and securities in Pakistan." },
-      { slug: "token-tax-guide", title: "Token Tax Guide", description: "Provincial token tax schedules and ePay online payment systems in Pakistan." }
+      { slug: "property-tax-guide", title: "Property Tax Guide", description: "Understanding provincial property tax (UIPT), CGT, and buyer/seller withholding tax in Pakistan.", url: "/blogs/pakistan-property-tax-guide/" },
+      { slug: "capital-gain-tax-guide", title: "Capital Gain Tax Guide", description: "How capital gains tax is calculated on property and securities in Pakistan.", url: "/blogs/pakistan-property-tax-guide/" },
+      { slug: "token-tax-guide", title: "Token Tax Guide", description: "Provincial token tax schedules and ePay online payment systems in Pakistan.", url: "/countries/pakistan/property-tax/token-tax-calculator/" }
     ],
     faqs: [
       { question: "What is property tax (UIPT) in Pakistan?", answer: "Property tax in Pakistan is a provincial tax levied on the Annual Rental Value (ARV) or gross rental value of urban real estate. Rates vary by province." },
@@ -75,8 +75,8 @@ const taxCategories: TaxCategory[] = [
       { slug: "islamabad-vehicle-tax-calculator", name: "Islamabad Vehicle Tax Calculator", description: "Calculate Islamabad vehicle token tax and withholding charges." }
     ],
     guides: [
-      { slug: "vehicle-tax-guide", title: "Vehicle Tax Guide", description: "Understanding vehicle token tax, registration fees, and transfer procedures in Pakistan." },
-      { slug: "token-tax-guide", title: "Token Tax Guide", description: "Complete guide to vehicle token tax rates, PSID generation, and ePay Punjab online payments." }
+      { slug: "vehicle-tax-guide", title: "Vehicle Tax Guide", description: "Understanding vehicle token tax, registration fees, and transfer procedures in Pakistan.", url: "/countries/pakistan/vehicle-tax/vehicle-tax-calculator/" },
+      { slug: "token-tax-guide", title: "Token Tax Guide", description: "Complete guide to vehicle token tax rates, PSID generation, and ePay Punjab online payments.", url: "/countries/pakistan/property-tax/token-tax-calculator/" }
     ],
     faqs: [
       { question: "How is vehicle token tax calculated in Pakistan?", answer: "Vehicle token tax is calculated based on engine displacement (CC), vehicle age, province, and FBR active taxpayer status (filers pay 50% lower withholding tax)." },

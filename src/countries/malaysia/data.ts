@@ -10,7 +10,7 @@ const taxCategories: TaxCategory[] = [
       { slug: "income-tax-calculator", name: "Income Tax Calculator", description: "Calculate your Malaysian individual income tax, PCB deductions, and take-home pay under LHDN brackets." }
     ],
     guides: [
-      { slug: "tax-residency-guide", title: "Tax Residency Guide", description: "Understanding Malaysian 182-day physical presence tax residency rules." }
+      { slug: "tax-residency-guide", title: "Tax Residency Guide", description: "Understanding Malaysian 182-day physical presence tax residency rules.", url: "/blogs/malaysia-expats-foreigners-non-resident-tax-guide-2026/" }
     ],
     faqs: [
       { question: "What are the Malaysia income tax brackets for 2025?", answer: "Resident individuals are taxed at progressive rates from 0% to 30% after claiming basic personal relief of RM 9,000 and other eligible deductions." },
@@ -27,7 +27,7 @@ const taxCategories: TaxCategory[] = [
       { slug: "sst-calculator", name: "SST Calculator", description: "Calculate 10% Sales Tax or 8% Service Tax for transactions in Malaysia." }
     ],
     guides: [
-      { slug: "sst-guide", title: "SST Guide", description: "Understanding SST registration thresholds, taxable service lists, and filing cycles in Malaysia." }
+      { slug: "sst-guide", title: "SST Guide", description: "Understanding SST registration thresholds, taxable service lists, and filing cycles in Malaysia.", url: "/blogs/malaysia-property-tax-cukai-pintu-quit-rent-digital-services-guide/" }
     ],
     faqs: [
       { question: "What is the standard Service Tax rate in Malaysia?", answer: "The standard Service Tax rate in Malaysia is 8% on most taxable services (increased from 6% effective March 1, 2024)." },
@@ -44,7 +44,7 @@ const taxCategories: TaxCategory[] = [
       { slug: "tax-filing-calculator", name: "Tax Filing Assistant", description: "Estimate your final tax liability or refund before submitting your LHDN return." }
     ],
     guides: [
-      { slug: "tax-filing-guide", title: "Tax Filing Guide", description: "Complete guide to filing your Form BE or Form B through the LHDN MyTax portal." }
+      { slug: "tax-filing-guide", title: "Tax Filing Guide", description: "Complete guide to filing your Form BE or Form B through the LHDN MyTax portal.", url: "/blogs/malaysia-mytax-lhdn-efiling-tax-reliefs-2026-guide/" }
     ],
     faqs: [
       { question: "When is the tax filing deadline in Malaysia?", answer: "Form BE (salaried individuals without business income) is due by April 30th (or May 15th via e-Filing). Form B (business income) is due by June 30th (or July 15th via e-Filing)." },
@@ -60,7 +60,7 @@ const taxCategories: TaxCategory[] = [
       { slug: "tax-reliefs-calculator", name: "Tax Reliefs Calculator", description: "Calculate your total eligible tax reliefs and total tax savings under YA 2025 LHDN limits." }
     ],
     guides: [
-      { slug: "tax-reliefs-guide", title: "Tax Reliefs Guide", description: "Comprehensive breakdown of all 20+ LHDN tax relief categories and receipts requirements." }
+      { slug: "tax-reliefs-guide", title: "Tax Reliefs Guide", description: "Comprehensive breakdown of all 20+ LHDN tax relief categories and receipts requirements.", url: "/blogs/malaysia-mytax-lhdn-efiling-tax-reliefs-2026-guide/" }
     ],
     faqs: [
       { question: "What is the maximum EPF relief allowed by LHDN?", answer: "Taxpayers can claim up to RM 4,000 for mandatory/voluntary EPF contributions and up to RM 3,000 for life insurance premiums." },
@@ -77,7 +77,7 @@ const taxCategories: TaxCategory[] = [
       { slug: "foreign-income-calculator", name: "Foreign Income Tax Calculator", description: "Calculate tax liability on foreign-sourced income remitted to Malaysia." }
     ],
     guides: [
-      { slug: "foreign-income-guide", title: "Foreign Income Guide", description: "Understanding LHDN foreign income remittance tax rules and foreign tax credits." }
+      { slug: "foreign-income-guide", title: "Foreign Income Guide", description: "Understanding LHDN foreign income remittance tax rules and foreign tax credits.", url: "/blogs/malaysia-foreign-source-income-tax-fsi-2026-guide/" }
     ],
     faqs: [
       { question: "Is foreign income taxed in Malaysia?", answer: "Foreign-sourced income remitted into Malaysia by resident individuals is subject to tax unless specifically exempted under statutory orders or Double Taxation Agreements." }
@@ -92,7 +92,7 @@ const taxCategories: TaxCategory[] = [
       { slug: "rental-income-calculator", name: "Rental Income Tax Calculator", description: "Calculate net taxable rental income after deducting allowable landlord expenses." }
     ],
     guides: [
-      { slug: "rental-income-guide", title: "Rental Income Guide", description: "Guide to reporting rental income, deductible property expenses, and RPGT in Malaysia." }
+      { slug: "rental-income-guide", title: "Rental Income Guide", description: "Guide to reporting rental income, deductible property expenses, and RPGT in Malaysia.", url: "/blogs/malaysia-freelancer-rental-airbnb-dividend-tax-guide/" }
     ],
     faqs: [
       { question: "What expenses can landlords deduct from rental income?", answer: "Landlords can deduct assessment tax, quit rent, mortgage interest paid on property loans, fire insurance premiums, and tenant renewal costs." }
@@ -107,7 +107,7 @@ const taxCategories: TaxCategory[] = [
       { slug: "business-income-calculator", name: "Business Income Tax Calculator", description: "Calculate corporate and sole-proprietor business income tax." }
     ],
     guides: [
-      { slug: "business-income-guide", title: "Business Income Guide", description: "Understanding business tax deductions, capital allowances, and SME tax incentives in Malaysia." }
+      { slug: "business-income-guide", title: "Business Income Guide", description: "Understanding business tax deductions, capital allowances, and SME tax incentives in Malaysia.", url: "/blogs/malaysia-company-corporate-sme-tax-rate-2026-guide/" }
     ],
     faqs: [
       { question: "What is the corporate tax rate for SMEs in Malaysia?", answer: "Qualifying Malaysian SMEs enjoy a reduced 17% corporate tax rate on statutory income up to RM 600,000. Statutory income above RM 600,000 is taxed at the standard 24% rate." }

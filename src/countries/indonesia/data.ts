@@ -72,7 +72,7 @@ const taxCategories: TaxCategory[] = [
       {
         slug: "vat-guide",
         title: "Indonesia VAT (PPN) Compliance Guide",
-        description: "Understanding compulsory IDR 4.8B VAT registration threshold, e-Faktur invoicing, and 11% consumption tax.",
+        description: "Understanding compulsory IDR 4.8B VAT registration threshold, e-Faktur invoicing, and 11% consumption tax.", url: "/countries/indonesia/vat/vat-calculator/",
         image: "https://images.unsplash.com/photo-1554224154-22dec7ec8818?w=1200&q=80"
       }
     ],

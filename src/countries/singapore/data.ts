@@ -108,7 +108,7 @@ const taxCategories: TaxCategory[] = [
       {
         slug: "gst-guide",
         title: "Singapore GST Registration & Filing Guide",
-        description: "Understanding compulsory S$1 million GST registration threshold, F5 returns, and 9% consumption tax.",
+        description: "Understanding compulsory S$1 million GST registration threshold, F5 returns, and 9% consumption tax.", url: "/countries/singapore/gst/gst-calculator/",
         image: "https://images.unsplash.com/photo-1554224154-22dec7ec8818?w=1200&q=80"
       }
     ],
@@ -129,7 +129,7 @@ const taxCategories: TaxCategory[] = [
       {
         slug: "stamp-duty-guide",
         title: "Singapore Property Stamp Duty Guide",
-        description: "Comprehensive guide to Buyer's Stamp Duty (BSD) and Additional Buyer's Stamp Duty (ABSD) tiers.",
+        description: "Comprehensive guide to Buyer's Stamp Duty (BSD) and Additional Buyer's Stamp Duty (ABSD) tiers.", url: "/countries/singapore/stamp-duty/stamp-duty-calculator/",
         image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&q=80"
       }
     ],

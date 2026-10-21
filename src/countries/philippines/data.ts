@@ -10,7 +10,7 @@ const taxCategories: TaxCategory[] = [
       { slug: "income-tax-calculator", name: "Income Tax Calculator", description: "Calculate your Philippines income tax." }
     ],
     guides: [
-      { slug: "tax-residency-guide", title: "Tax Residency Guide", description: "Understanding Philippine tax residency rules." }
+      { slug: "tax-residency-guide", title: "Tax Residency Guide", description: "Understanding Philippine tax residency rules.", url: "/countries/philippines/faqs/" }
     ],
     faqs: [
       { question: "What is the tax filing deadline?", answer: "April 15th for calendar year taxpayers." }
@@ -25,7 +25,7 @@ const taxCategories: TaxCategory[] = [
       { slug: "vat-calculator", name: "VAT Calculator", description: "Calculate VAT inclusive or exclusive amounts." }
     ],
     guides: [
-      { slug: "vat-guide", title: "VAT Guide", description: "Understanding VAT registration and filing." }
+      { slug: "vat-guide", title: "VAT Guide", description: "Understanding VAT registration and filing.", url: "/countries/philippines/vat/vat-calculator/" }
     ],
     faqs: [
       { question: "What is the VAT rate?", answer: "12% standard rate." }

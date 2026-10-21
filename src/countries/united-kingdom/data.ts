@@ -10,7 +10,7 @@ const taxCategories: TaxCategory[] = [
       { slug: "income-tax-calculator", name: "Income Tax Calculator", description: "Calculate your UK income tax." }
     ],
     guides: [
-      { slug: "tax-residency-guide", title: "Tax Residency Guide", description: "Understanding UK tax residency and domicile rules." },
+      { slug: "tax-residency-guide", title: "Tax Residency Guide", description: "Understanding UK tax residency and domicile rules.", url: "/knowledge/tax-residency-explained/" },
       { slug: "uk-income-tax-rates-brackets-guide", title: "UK Income Tax Rates & Brackets Guide", description: "Complete breakdown of UK tax bands, personal allowance, and PAYE tax calculation.", url: "/blogs/uk-income-tax-rates-brackets-salary-take-home-guide/" },
       { slug: "uk-expat-foreign-income-tax-guide", title: "UK Expat & Foreign Income Tax Guide", description: "Tax rules for US expats, foreign income, double tax treaties, and non-residents.", url: "/blogs/uk-expat-tax-guide-foreigners-non-residents-us-expats/" },
       { slug: "uk-capital-gains-rental-property-tax-guide", title: "UK Capital Gains & Rental Property Guide", description: "Tax rules for property sales, buy-to-let mortgage relief, and rental income.", url: "/blogs/uk-capital-gains-tax-rental-income-property-guide/" },
@@ -29,7 +29,7 @@ const taxCategories: TaxCategory[] = [
       { slug: "vat-calculator", name: "VAT Calculator", description: "Calculate VAT inclusive or exclusive amounts." }
     ],
     guides: [
-      { slug: "vat-guide", title: "VAT Guide", description: "Understanding VAT registration, returns, and compliance." }
+      { slug: "vat-guide", title: "VAT Guide", description: "Understanding VAT registration, returns, and compliance.", url: "/countries/united-kingdom/vat/vat-calculator/" }
     ],
     faqs: [
       { question: "What is the VAT rate?", answer: "20% standard rate." }
@@ -44,7 +44,7 @@ const taxCategories: TaxCategory[] = [
       { slug: "ni-calculator", name: "National Insurance Calculator", description: "Calculate your National Insurance contributions." }
     ],
     guides: [
-      { slug: "ni-guide", title: "National Insurance Guide", description: "Understanding NI classes and contributions." }
+      { slug: "ni-guide", title: "National Insurance Guide", description: "Understanding NI classes and contributions.", url: "/countries/united-kingdom/national-insurance/ni-calculator/" }
     ],
     faqs: [
       { question: "What are National Insurance rates?", answer: "Class 1 NI is 8% on earnings between £242 and £967 per week, then 2% above." }

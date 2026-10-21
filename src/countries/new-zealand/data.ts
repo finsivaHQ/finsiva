@@ -10,7 +10,7 @@ const taxCategories: TaxCategory[] = [
       { slug: "income-tax-calculator", name: "Income Tax Calculator", description: "Calculate your New Zealand income tax." }
     ],
     guides: [
-      { slug: "tax-residency-guide", title: "Tax Residency Guide", description: "Understanding New Zealand tax residency rules." }
+      { slug: "tax-residency-guide", title: "Tax Residency Guide", description: "Understanding New Zealand tax residency rules.", url: "/blogs/new-zealand-income-tax-for-expats-foreigners-non-residents/" }
     ],
     faqs: [
       { question: "What is the tax filing deadline?", answer: "July 7th for individuals, March 31st for companies." }
@@ -25,7 +25,7 @@ const taxCategories: TaxCategory[] = [
       { slug: "gst-calculator", name: "GST Calculator", description: "Calculate GST inclusive or exclusive amounts." }
     ],
     guides: [
-      { slug: "gst-guide", title: "GST Guide", description: "Understanding GST registration and filing." }
+      { slug: "gst-guide", title: "GST Guide", description: "Understanding GST registration and filing.", url: "/countries/new-zealand/gst/gst-calculator/" }
     ],
     faqs: [
       { question: "What is the GST rate?", answer: "15% standard rate." }

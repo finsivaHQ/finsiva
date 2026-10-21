@@ -14,12 +14,12 @@ const taxCategories: TaxCategory[] = [
       { slug: "hong-kong-income-tax-for-foreigners-calculator", name: "Hong Kong Income Tax for Foreigners Calculator", description: "Calculate income tax for foreigners working in Hong Kong." }
     ],
     guides: [
-      { slug: "salaries-tax-guide", title: "Salaries Tax Guide", description: "Understanding Hong Kong salaries tax calculation and allowances." },
-      { slug: "hk-tax-allowances-guide", title: "HK Tax Allowances and Deductions Guide", description: "Complete guide to personal allowances, deductions, and MPF in Hong Kong." },
-      { slug: "hong-kong-tax-residency-guide", title: "Hong Kong Tax Residency Guide", description: "How to qualify as a Hong Kong tax resident and understand the 60-day rule." },
-      { slug: "provisional-tax-guide", title: "Provisional Tax Guide", description: "Understanding provisional salaries tax in Hong Kong and how to calculate it." },
-      { slug: "hong-kong-expats-tax-guide", title: "Hong Kong Expats Tax Guide", description: "Tax obligations for foreigners and expats working in Hong Kong." },
-      { slug: "mpf-tax-guide", title: "MPF and Tax Guide", description: "How MPF contributions affect your Hong Kong tax calculation." }
+      { slug: "salaries-tax-guide", title: "Salaries Tax Guide", description: "Understanding Hong Kong salaries tax calculation and allowances.", url: "/blogs/hong-kong-salaries-tax-guide/" },
+      { slug: "hk-tax-allowances-guide", title: "HK Tax Allowances and Deductions Guide", description: "Complete guide to personal allowances, deductions, and MPF in Hong Kong.", url: "/blogs/hong-kong-tax-allowances-deductions/" },
+      { slug: "hong-kong-tax-residency-guide", title: "Hong Kong Tax Residency Guide", description: "How to qualify as a Hong Kong tax resident and understand the 60-day rule.", url: "/blogs/hong-kong-tax-residency/" },
+      { slug: "provisional-tax-guide", title: "Provisional Tax Guide", description: "Understanding provisional salaries tax in Hong Kong and how to calculate it.", url: "/blogs/hong-kong-provisional-tax-guide/" },
+      { slug: "hong-kong-expats-tax-guide", title: "Hong Kong Expats Tax Guide", description: "Tax obligations for foreigners and expats working in Hong Kong.", url: "/countries/hong-kong/faqs/" },
+      { slug: "mpf-tax-guide", title: "MPF and Tax Guide", description: "How MPF contributions affect your Hong Kong tax calculation.", url: "/blogs/hong-kong-mpf-tax-guide/" }
     ],
     faqs: [
       { question: "What is the salaries tax rate in Hong Kong?", answer: "Salaries tax is charged at progressive rates from 2% to 17% on net chargeable income, or at the standard rate of 15% on net income, whichever is lower." },
@@ -45,10 +45,10 @@ const taxCategories: TaxCategory[] = [
       { slug: "profit-tax-computation", name: "Profit Tax Computation", description: "Detailed breakdown of your Hong Kong profit tax calculation." }
     ],
     guides: [
-      { slug: "profits-tax-guide", title: "Profits Tax Guide", description: "Understanding source of profits rules and two-tiered tax rates in Hong Kong." },
-      { slug: "hong-kong-corporate-tax-guide", title: "Hong Kong Corporate Tax Guide", description: "Complete guide to corporate tax obligations for Hong Kong businesses." },
-      { slug: "deferred-tax-calculation-guide", title: "Deferred Tax Calculation Guide", description: "Understanding deferred tax and temporary differences in Hong Kong." },
-      { slug: "provisional-profits-tax-guide", title: "Provisional Profits Tax Guide", description: "How provisional profits tax is calculated and paid in Hong Kong." }
+      { slug: "profits-tax-guide", title: "Profits Tax Guide", description: "Understanding source of profits rules and two-tiered tax rates in Hong Kong.", url: "/blogs/hong-kong-profits-tax-guide/" },
+      { slug: "hong-kong-corporate-tax-guide", title: "Hong Kong Corporate Tax Guide", description: "Complete guide to corporate tax obligations for Hong Kong businesses.", url: "/countries/hong-kong/profits-tax/hk-corporate-tax-calculator/" },
+      { slug: "deferred-tax-calculation-guide", title: "Deferred Tax Calculation Guide", description: "Understanding deferred tax and temporary differences in Hong Kong.", url: "/countries/hong-kong/profits-tax/profits-tax-calculator/" },
+      { slug: "provisional-profits-tax-guide", title: "Provisional Profits Tax Guide", description: "How provisional profits tax is calculated and paid in Hong Kong.", url: "/blogs/hong-kong-provisional-tax-guide/" }
     ],
     faqs: [
       { question: "What is the profits tax rate in Hong Kong?", answer: "Profits tax is charged at two-tiered rates: 8.25% on the first HK$2 million for corporations, and 16.5% on the remainder. For unincorporated businesses, 7.5% and 15% respectively." },
@@ -69,9 +69,9 @@ const taxCategories: TaxCategory[] = [
       { slug: "first-registration-tax-calculator", name: "First Registration Tax Calculator", description: "Calculate first registration tax for Hong Kong vehicles." }
     ],
     guides: [
-      { slug: "stamp-duty-guide", title: "Stamp Duty Guide", description: "Understanding Hong Kong stamp duty on property and document transactions." },
-      { slug: "hk-property-stamp-duty-guide", title: "HK Property Stamp Duty Guide", description: "Complete guide to property stamp duty rates, BSD, and SSD in Hong Kong." },
-      { slug: "rental-stamp-duty-guide", title: "Rental Stamp Duty Guide", description: "How stamp duty applies to rental agreements and leases in Hong Kong." }
+      { slug: "stamp-duty-guide", title: "Stamp Duty Guide", description: "Understanding Hong Kong stamp duty on property and document transactions.", url: "/blogs/hong-kong-stamp-duty-guide/" },
+      { slug: "hk-property-stamp-duty-guide", title: "HK Property Stamp Duty Guide", description: "Complete guide to property stamp duty rates, BSD, and SSD in Hong Kong.", url: "/blogs/hong-kong-stamp-duty-guide/" },
+      { slug: "rental-stamp-duty-guide", title: "Rental Stamp Duty Guide", description: "How stamp duty applies to rental agreements and leases in Hong Kong.", url: "/blogs/hong-kong-stamp-duty-guide/" }
     ],
     faqs: [
       { question: "What is the stamp duty rate in Hong Kong?", answer: "Hong Kong property stamp duty uses Scale 2 rates: flat HK$100 for properties up to HK$4M, 1.5% for HK$4M to HK$4.5M, 2.25% for HK$4.5M to HK$6M, 3% for HK$6M to HK$9M, 3.75% for HK$9M to HK$20M, and 4.25% above HK$20M." },
@@ -89,8 +89,8 @@ const taxCategories: TaxCategory[] = [
       { slug: "hk-rental-tax-deduction-calculator", name: "HK Rental Tax Deduction Calculator", description: "Estimate rental tax deductions and property tax liability." }
     ],
     guides: [
-      { slug: "property-tax-guide", title: "Property Tax Guide", description: "Understanding Hong Kong property tax on rental income." },
-      { slug: "rental-income-tax-guide", title: "Rental Income Tax Guide", description: "How rental income is taxed in Hong Kong and what deductions you can claim." }
+      { slug: "property-tax-guide", title: "Property Tax Guide", description: "Understanding Hong Kong property tax on rental income.", url: "/blogs/hong-kong-property-tax-guide/" },
+      { slug: "rental-income-tax-guide", title: "Rental Income Tax Guide", description: "How rental income is taxed in Hong Kong and what deductions you can claim.", url: "/blogs/hong-kong-property-tax-guide/" }
     ],
     faqs: [
       { question: "What is the property tax rate in Hong Kong?", answer: "Property tax in Hong Kong is charged at the standard rate of 15% on the net assessable value of rental income, after deducting property tax standard deductions." },
