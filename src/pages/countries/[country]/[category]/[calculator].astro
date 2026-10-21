@@ -4,6 +4,7 @@ import { getCountryBySlug, getCategoryBySlug } from "../../../../data/countries"
 import { getCurrency, formatCurrency } from "../../../../config/currencies";
 import { getTaxYears } from "../../../../config/taxYears";
 import { calculatorContent } from "../../../../config/calculatorContent";
+import { calculatorSeoMap } from "../../../../config/calculatorSeoMap";
 import type { TaxRule } from "../../../../config/taxRules";
 import TaxReportExport from "../../../../components/TaxReportExport.astro";
 import TaxComparisonModal from "../../../../components/TaxComparisonModal.astro";
@@ -167,6 +168,88 @@ const idGuideMap: Record<string, Array<{ title: string; slug: string }>> = {
   ]
 };
 
+
+const usGuideMap: Record<string, Array<{ title: string; slug: string }>> = {
+  "income-tax": [
+    { title: "US Federal Income Tax Brackets & Slabs Guide", slug: "/countries/united-states/income-tax/tax-brackets/" },
+    { title: "Standard vs Itemized Deductions Guide", slug: "/countries/united-states/income-tax/itemized-vs-standard/" },
+    { title: "Employee FICA Deductions Guide", slug: "/countries/united-states/income-tax/fica-guide/" },
+    { title: "Primary Residence Property Sale Tax Guide", slug: "/countries/united-states/income-tax/property-sale-tax/" }
+  ],
+  "payroll-tax": [
+    { title: "Employer FICA & Payroll Tax Compliance Guide", slug: "/countries/united-states/payroll-tax/fica-guide/" },
+    { title: "Self-Employment vs S-Corp Payroll Strategies", slug: "/countries/united-states/payroll-tax/se-tax-guide/" }
+  ],
+  "corporate-tax": [
+    { title: "C-Corporation Tax Guide: Form 1120 & Double Taxation", slug: "/countries/united-states/corporate-tax/business-entities/" },
+    { title: "Corporate Capital Gains Tax Guide", slug: "/countries/united-states/corporate-tax/capital-gains-guide/" }
+  ],
+  "capital-gains-tax": [
+    { title: "Investment Property Capital Gains & 1031 Exchange Guide", slug: "/countries/united-states/capital-gains-tax/property-sale-tax/" },
+    { title: "Personal Capital Gains Tax Guide: Rates & NIIT", slug: "/countries/united-states/income-tax/capital-gains-guide/" }
+  ],
+  "estate-tax": [
+    { title: "Federal Estate & Gift Tax Guide: Form 706 Planning", slug: "/countries/united-states/estate-tax/estate-planning/" },
+    { title: "Inheritance & Beneficiary Income Tax Guide", slug: "/countries/united-states/income-tax/estate-planning/" }
+  ],
+  "irs-support": [
+    { title: "Where's My Refund? Complete IRS Guide", slug: "/countries/united-states/irs-support/where-is-my-refund/" },
+    { title: "IRS Phone Numbers & Contact Directory", slug: "/countries/united-states/irs-support/irs-phone-numbers/" }
+  ],
+  "tax-planning": [
+    { title: "Year-Round Tax Planning Strategies Guide", slug: "/countries/united-states/tax-planning/year-round-tax-planning/" },
+    { title: "Retirement Contributions & HSA Savings Guide", slug: "/countries/united-states/tax-planning/retirement-contribution-calculator/" }
+  ]
+};
+
+const ukGuideMap: Record<string, Array<{ title: string; slug: string }>> = {
+  "income-tax": [
+    { title: "UK Income Tax Rates & Brackets Guide", slug: "/knowledge/uk-income-tax-rates-brackets-guide/" },
+    { title: "UK Expat & Foreign Income Tax Guide", slug: "/knowledge/uk-expat-foreign-income-tax-guide/" },
+    { title: "UK Self-Assessment & Freelancer Guide", slug: "/knowledge/uk-self-assessment-freelancer-dividend-tax-guide/" }
+  ],
+  "national-insurance": [
+    { title: "UK National Insurance Rates & Thresholds Guide", slug: "/blogs/uk-self-assessment-sole-trader-dividend-corporate-tax-guide/" },
+    { title: "UK Income Tax & PAYE Salary Guide", slug: "/knowledge/uk-income-tax-rates-brackets-guide/" }
+  ],
+  "vat": [
+    { title: "UK VAT Registration & Making Tax Digital Guide", slug: "/knowledge/gst-vs-vat/" },
+    { title: "UK Business & Corporation Tax Guide", slug: "/knowledge/uk-self-assessment-freelancer-dividend-tax-guide/" }
+  ],
+  "vehicle-tax": [
+    { title: "UK EV Company Car BiK Tax Guide", slug: "/blogs/uk-ev-company-car-tax-bik-guide/" },
+    { title: "UK Road Tax & Benefit-in-Kind Guide", slug: "/knowledge/glossary/uk-bik-company-car-tax/" }
+  ]
+};
+
+const inGuideMap: Record<string, Array<{ title: string; slug: string }>> = {
+  "income-tax": [
+    { title: "How to Save Income Tax in India (80C & Deductions)", slug: "/blogs/how-to-save-income-tax-india-2024-25/" },
+    { title: "HRA Exemption & Calculation Complete Guide", slug: "/blogs/hra-calculation-guide-india/" },
+    { title: "Capital Gains Tax Rules in India", slug: "/blogs/capital-gains-tax-guide-india/" }
+  ],
+  "gst": [
+    { title: "GST Complete Guide & Input Tax Credit in India", slug: "/blogs/gst-complete-guide-india/" },
+    { title: "India Income Tax Calculator & Slabs", slug: "/countries/india/income-tax/income-tax-calculator/" }
+  ],
+  "tds": [
+    { title: "Section 80C Deductions Guide", slug: "/blogs/80c-deductions-complete-guide/" },
+    { title: "Income Tax Slabs & Regime Guide", slug: "/blogs/how-to-save-income-tax-india-2024-25/" }
+  ]
+};
+
+const nzGuideMap: Record<string, Array<{ title: string; slug: string }>> = {
+  "income-tax": [
+    { title: "How to File NZ Income Tax Return (IRD Guide)", slug: "/blogs/how-to-file-new-zealand-income-tax-return-ird-guide/" },
+    { title: "NZ Income Tax Rates & Brackets History", slug: "/blogs/nz-income-tax-brackets-rates-history-guide/" },
+    { title: "NZ Overseas Income & FIF Tax Guide", slug: "/blogs/nz-overseas-income-fif-uk-pension-transfer-tax-guide/" }
+  ],
+  "gst": [
+    { title: "New Zealand 15% GST Guide & Filing Rules", slug: "/blogs/new-zealand-income-tax-act-2007-corporate-property-rental-tax/" },
+    { title: "NZ Corporate & Business Tax Guide", slug: "/blogs/nz-corporate-business-family-trust-tax-guide/" }
+  ]
+};
+
 const sgGuideMap: Record<string, Array<{ title: string; slug: string }>> = {
   "income-tax": [
     { title: "Singapore Income Tax Rates & Brackets Guide", slug: "/blogs/singapore-income-tax-rates-brackets-2026/" },
@@ -302,21 +385,10 @@ const mergedContent = {
 
 const isThinContent = !rule && !content;
 
-const pageTitle = ruleId === 'pakistan-sales-tax-sales-tax-calculator'
-  ? "Pakistan Sales Tax & GST Calculator 2025-2026 | Calculate 18% FBR GST"
-  : ruleId === 'hong-kong-stamp-duty-hk-property-stamp-duty-calculator'
-  ? "Hong Kong Property Stamp Duty Calculator 2025-2026 | Scale 2 AVD Rates"
-  : ruleId === 'malaysia-sst-sst-calculator'
-  ? "Malaysia SST Calculator 2025-2026 | Calculate 6% & 8% Service Tax"
-  : `${country.name} ${calculator.name} ${country.taxYear}`;
+const customSeo = calculatorSeoMap[ruleId];
 
-const pageDescription = ruleId === 'pakistan-sales-tax-sales-tax-calculator'
-  ? "Calculate 18% FBR federal sales tax (GST) and provincial services tax in Pakistan. Compute inclusive and exclusive GST invoice amounts instantly with our free calculator."
-  : ruleId === 'hong-kong-stamp-duty-hk-property-stamp-duty-calculator'
-  ? "Calculate Hong Kong property stamp duty (Scale 2 AVD) and residential lease stamping duty. Compute buyer duty and tenancy agreement fees with the calculator."
-  : ruleId === 'malaysia-sst-sst-calculator'
-  ? "Calculate Malaysia Sales and Service Tax (SST). Compute applicable service tax and sales tax rates, including 6% and 8% service tax and 5%/10% sales tax where applicable."
-  : `Calculate your ${country.name} ${calculator.name.toLowerCase()} for the ${country.taxYear} tax year. ${calculator.description}`;
+const pageTitle = customSeo?.title || `${country.name} ${calculator.name} ${country.taxYear}: Slabs, Rates & Net Calculation`;
+const pageDescription = customSeo?.description || `Calculate your ${country.name} ${calculator.name.toLowerCase()} for the ${country.taxYear} tax year. ${calculator.description}`;
 const calcCanonical = `https://finsiva.com/countries/${country.slug}/${category.slug}/${calculator.slug}/`;
 ---
 
@@ -2144,6 +2216,29 @@ const calcCanonical = `https://finsiva.com/countries/${country.slug}/${category.
           }))
         })}></script>
       )}
+
+      
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": pageTitle,
+        "url": calcCanonical,
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "description": pageDescription,
+        "featureList": [
+          "Instant net take-home pay and tax liability calculation",
+          "Statutory progressive slabs and bracket computation",
+          "Free PDF and CSV export",
+          "Real-time marginal vs effective tax rate breakdown"
+        ]
+      })}></script>
 
       <script type="application/ld+json" set:html={JSON.stringify({
         "@context": "https://schema.org",
