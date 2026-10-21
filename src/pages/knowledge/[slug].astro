@@ -117,52 +117,54 @@ const guideSchema = {
         <img src={guide.data.image} alt={guide.data.title} class="mb-8 w-full rounded-lg object-cover max-h-80 sm:max-h-96" loading="lazy" />
       )}
 
-      <div class="grid grid-cols-1 gap-8 lg:grid-cols-4">
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-4 items-start">
         <aside class="lg:col-span-1" aria-label="Table of contents">
-          <div class="sticky top-24">
+          <div class="lg:sticky lg:top-24 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto">
             <GuideTOC items={headings.filter(h => h.depth >= 2 && h.depth <= 3).map(h => ({ id: h.slug, label: h.text, level: h.depth }))} />
           </div>
         </aside>
 
-        <div class="lg:col-span-3 prose max-w-none prose-headings:mt-10 prose-headings:mb-4 prose-h2:text-2xl prose-h2:font-semibold prose-h2:text-ink dark:prose-h2:text-on-primary prose-h3:text-xl prose-h3:font-semibold prose-h3:text-ink dark:prose-h3:text-on-primary prose-p:text-body prose-p:leading-relaxed prose-p:mt-4 prose-a:text-link prose-a:underline prose-a:decoration-dashed prose-a:underline-offset-4 prose-a:hover:text-primary prose-ul:list-disc prose-ul:pl-6 prose-ol:list-decimal prose-ol:pl-6 prose-li:mt-1 prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:pl-4 prose-blockquote:py-2 prose-blockquote:italic prose-blockquote:text-body dark:prose-blockquote:bg-primary/10">
-          <Content />
-        </div>
-
-        {guide.data.facts && (
-          <div class="lg:col-span-3">
-            <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">Interesting Facts</h2>
-            <ul class="list-disc pl-6 space-y-2 text-body dark:text-muted">
-              {guide.data.facts.map((fact: string) => <li>{fact}</li>)}
-            </ul>
+        <div class="lg:col-span-3 min-w-0 space-y-8">
+          <div class="prose max-w-none prose-headings:mt-10 prose-headings:mb-4 prose-h2:text-2xl prose-h2:font-semibold prose-h2:text-ink dark:prose-h2:text-on-primary prose-h3:text-xl prose-h3:font-semibold prose-h3:text-ink dark:prose-h3:text-on-primary prose-p:text-body prose-p:leading-relaxed prose-p:mt-4 prose-a:text-link prose-a:underline prose-a:decoration-dashed prose-a:underline-offset-4 prose-a:hover:text-primary prose-ul:list-disc prose-ul:pl-6 prose-ol:list-decimal prose-ol:pl-6 prose-li:mt-1 prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:pl-4 prose-blockquote:py-2 prose-blockquote:italic prose-blockquote:text-body dark:prose-blockquote:bg-primary/10">
+            <Content />
           </div>
-        )}
 
-        {guide.data.quiz && (
-          <div class="lg:col-span-3">
-            <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">Quick Quiz</h2>
-            <div class="space-y-4">
-              {guide.data.quiz.map((q: { question: string; options: string[] }, idx: number) => (
-                <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
-                  <p class="font-medium text-ink dark:text-on-primary">{idx + 1}. {q.question}</p>
-                  <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
-                    {q.options.map((opt: string) => <li>{opt}</li>)}
-                  </ul>
-                </div>
-              ))}
+          {guide.data.facts && (
+            <div>
+              <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">Interesting Facts</h2>
+              <ul class="list-disc pl-6 space-y-2 text-body dark:text-muted">
+                {guide.data.facts.map((fact: string) => <li>{fact}</li>)}
+              </ul>
             </div>
-          </div>
-        )}
+          )}
 
-        {guide.data.externalLinks && (
-          <div class="lg:col-span-3">
-            <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">Further Reading</h2>
-            <ul class="list-disc pl-6 space-y-2 text-body dark:text-muted">
-              {guide.data.externalLinks.map((link: { title: string; url: string }) => (
-                <li><a href={link.url} target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">{link.title}</a></li>
-              ))}
-            </ul>
-          </div>
-        )}
+          {guide.data.quiz && (
+            <div>
+              <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">Quick Quiz</h2>
+              <div class="space-y-4">
+                {guide.data.quiz.map((q: { question: string; options: string[] }, idx: number) => (
+                  <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+                    <p class="font-medium text-ink dark:text-on-primary">{idx + 1}. {q.question}</p>
+                    <ul class="mt-2 list-disc pl-6 text-sm text-body dark:text-muted">
+                      {q.options.map((opt: string) => <li>{opt}</li>)}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {guide.data.externalLinks && (
+            <div>
+              <h2 class="text-2xl font-semibold text-ink mb-4 dark:text-on-primary">Further Reading</h2>
+              <ul class="list-disc pl-6 space-y-2 text-body dark:text-muted">
+                {guide.data.externalLinks.map((link: { title: string; url: string }) => (
+                  <li><a href={link.url} target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">{link.title}</a></li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
       </div>
 
       {guide.data.relatedGuides && guide.data.relatedGuides.length > 0 && (

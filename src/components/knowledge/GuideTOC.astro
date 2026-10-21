@@ -7,12 +7,23 @@ const { items } = Astro.props;
 ---
 
 {items.length > 0 && (
-  <nav aria-label="Table of contents" class="toc-container">
-    <h2 class="text-sm font-semibold uppercase tracking-wider text-ink mb-4 dark:text-on-primary">On this page</h2>
-    <ol class="space-y-1">
+  <nav aria-label="Table of contents" class="toc-container rounded-2xl border border-hairline bg-canvas-soft/95 p-4 sm:p-5 backdrop-blur-md dark:border-overlay-lighter dark:bg-surface/95 shadow-sm">
+    <div class="flex items-center gap-2 mb-3 pb-2 border-b border-hairline dark:border-overlay-lighter">
+      <svg class="w-4 h-4 text-primary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+      </svg>
+      <h2 class="text-xs font-bold uppercase tracking-wider text-ink dark:text-on-primary">On this page</h2>
+    </div>
+    <ol class="space-y-1 text-xs sm:text-sm">
       {items.map((item) => (
-        <li style={`padding-left: ${Math.max(0, (item.level - 2)) * 1}rem`}>
-          <a href={`#${item.id}`} class="block text-sm text-link hover:underline dark:text-link transition">{item.label}</a>
+        <li style={`padding-left: ${Math.max(0, (item.level - 2)) * 0.75}rem`}>
+          <a
+            href={`#${item.id}`}
+            class="block py-1 px-2 rounded-md text-body hover:bg-canvas hover:text-primary transition-colors dark:text-muted dark:hover:bg-overlay-light dark:hover:text-on-primary truncate"
+            title={item.label}
+          >
+            {item.label}
+          </a>
         </li>
       ))}
     </ol>

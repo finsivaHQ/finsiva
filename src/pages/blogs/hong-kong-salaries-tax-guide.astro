@@ -1,6 +1,5 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
-import StickyToc from "../../components/StickyToc.astro";
 
 const title = "Hong Kong Salaries Tax Guide 2026/27: Calculation, Rates, Allowances & Calculator";
 const description = "Comprehensive Hong Kong salaries tax guide for assessment year 2026/27. Calculate your HK tax liability, progressive rates (2%-17%), standard rate (15%), MPF deductions, and net take-home pay with IRD rules.";
@@ -108,6 +107,28 @@ const faqSchema = {
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
   <div class="space-y-8 text-body dark:text-muted leading-relaxed">
+    <!-- Table of Contents -->
+    <div class="my-8 rounded-2xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-lighter dark:bg-surface">
+      <div class="flex items-center gap-2 mb-3 pb-2 border-b border-hairline dark:border-overlay-lighter">
+        <svg class="w-4 h-4 text-primary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+        </svg>
+        <h2 class="text-xs font-bold uppercase tracking-wider text-ink dark:text-on-primary">Table of Contents</h2>
+      </div>
+      <ol class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-body dark:text-muted">
+        <li><a href="#overview" class="text-link hover:underline">1. Overview of HK Salaries Tax</a></li>
+        <li><a href="#tax-brackets" class="text-link hover:underline">2. Progressive Rates vs Standard Rate</a></li>
+        <li><a href="#allowances" class="text-link hover:underline">3. Allowances &amp; Deductions</a></li>
+        <li><a href="#mpf-deductions" class="text-link hover:underline">4. MPF Tax Deductions</a></li>
+        <li><a href="#computation-formula" class="text-link hover:underline">5. Tax Computation Formula</a></li>
+        <li><a href="#case-studies" class="text-link hover:underline">6. Practical Case Studies</a></li>
+        <li><a href="#expat-rules" class="text-link hover:underline">7. Expat &amp; 60-Day Rules</a></li>
+        <li><a href="#etax-filing" class="text-link hover:underline">8. eTAX Filing &amp; Deadlines</a></li>
+        <li><a href="#common-mistakes" class="text-link hover:underline">9. Common Mistakes to Avoid</a></li>
+        <li><a href="#faqs" class="text-link hover:underline">10. Frequently Asked Questions</a></li>
+      </ol>
+    </div>
+
             <!-- Section 1 -->
             <section id="overview">
               <h2 class="text-2xl font-bold text-ink dark:text-on-primary mb-4">1. Overview of Hong Kong Salaries Tax (2026/27)</h2>
@@ -471,7 +492,6 @@ const faqSchema = {
             <li><a href="https://www.gov.hk" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">Hong Kong Government Official Portal</a></li>
             <li><a href="https://www.pwc.com/hk/en/services/tax/hong-kong-taxation.html" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link">PwC Hong Kong Taxation Overview</a></li>
           </ul>
-      <StickyToc />
 
     <!-- Related Interactive Calculators Section -->
     <div class="my-10 rounded-2xl border border-hairline bg-canvas-soft p-6 sm:p-8 dark:border-overlay-lighter dark:bg-surface">
