@@ -1,6 +1,7 @@
 ---
 interface Props {
   country: {
+    slug?: string;
     name: string;
     countryFAQs: Array<{ question: string; answer: string }>;
   };
@@ -25,4 +26,15 @@ const { country } = Astro.props;
       </details>
     ))}
   </div>
+  {country.slug && (
+    <div class="mt-8 text-center">
+      <a
+        href={`/countries/${country.slug}/faqs/`}
+        class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-canvas border border-hairline text-ink hover:border-primary hover:text-primary transition shadow-sm dark:bg-surface dark:text-on-primary dark:border-overlay-lighter"
+      >
+        <span>Explore All {country.name} Tax Questions &amp; Category FAQs</span>
+        <span>→</span>
+      </a>
+    </div>
+  )}
 </section>
