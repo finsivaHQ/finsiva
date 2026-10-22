@@ -1,0 +1,452 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Dave Ramsey Roth IRA vs 401(k) Order: Match Beats Roth";
+const description = "Master Dave Ramsey's 15% rule order of investing (Baby Step 4). Learn why match beats Roth, Roth beats traditional, and how to split 401(k), Roth IRA, & HSA.";
+const image = "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=1200&q=80";
+const author = "Finsiva Wealth & Retirement Research";
+const lastUpdated = "October 2026";
+const readTime = "13 min read";
+const authorBio = "Quantitative financial research board specializing in tax-advantaged account hierarchies, retirement decumulation, and longitudinal market modeling.";
+
+const faqList = [
+  {
+    question: "What is Dave Ramsey's exact order of investing for retirement?",
+    answer: "Dave Ramsey's order of investing under Baby Step 4 follows a strict hierarchy: (1) Invest in your employer 401(k) or 403(b) up to the company match; (2) Open and max out a Roth IRA (and a spousal Roth IRA if married); (3) If you still have not reached 15% of your gross household income, return to your workplace 401(k) (preferably a Roth 401(k)) or an HSA to fulfill the remaining balance."
+  },
+  {
+    question: "Does the employer 401(k) match count toward Dave Ramsey's 15% rule?",
+    answer: "No. Dave Ramsey explicitly states that the 15% target must come entirely out of your own paycheck. Employer matching dollars are treated as free money and 'icing on the cake' on top of your 15% personal contribution."
+  },
+  {
+    question: "Why does Dave Ramsey prefer a Roth IRA over a Traditional 401(k)?",
+    answer: "Dave Ramsey prefers Roth accounts because you pay taxes on the contributions upfront ('the seed') so that all future growth and withdrawals ('the harvest') are 100% tax-free. Because compound interest creates an account balance where 80% to 90% of the money is growth rather than principal, avoiding taxes on that massive growth provides superior long-term net wealth."
+  },
+  {
+    question: "Should I invest in a Roth 401(k) or a Roth IRA first?",
+    answer: "If your employer offers a Roth 401(k) with an employer match, capture the match first. If your Roth 401(k) has exceptional, low-cost mutual fund options across Dave's four categories, you can invest the entire 15% directly into the Roth 401(k). However, if your workplace plan has high fees or poor fund choices, Dave advises switching to an independent Roth IRA after capturing the match."
+  },
+  {
+    question: "What if my household income is too high to contribute to a Roth IRA?",
+    answer: "If your modified adjusted gross income exceeds IRS Roth IRA eligibility phaseouts ($161,000 for singles or $240,000 for married couples filing jointly in recent tax years), you can execute a Backdoor Roth IRA (making a non-deductible traditional IRA contribution and immediately converting it to a Roth) or invest your remaining 15% into your workplace 401(k)."
+  }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqList.map(item => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.answer
+    }
+  }))
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated={lastUpdated}
+  readTime={readTime}
+  canonical="https://finsiva.com/blogs/dave-ramsey-roth-ira-vs-401k-order/"
+  schema={faqSchema}
+>
+  <!-- Hero Interactive Calculator CTA -->
+  <aside class="my-8 rounded-2xl border border-primary/30 bg-gradient-to-r from-primary/10 via-primary/5 to-transparent p-6 sm:p-8 shadow-sm">
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div class="space-y-1 max-w-xl">
+        <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary">
+          <span>⚡</span> Interactive Planning Tool
+        </span>
+        <h3 class="text-xl font-bold text-ink dark:text-on-primary">
+          Calculate Your Exact 15% Retirement Split
+        </h3>
+        <p class="text-sm text-body dark:text-muted">
+          Input your household income to calculate your exact monthly 15% target, model 401(k) match capture, and project compound growth with our free tool.
+        </p>
+      </div>
+      <a
+        href="/dave-ramsey-retirement-calculator/"
+        class="flex-shrink-0 inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-on-primary shadow hover:bg-primary-hover transition"
+      >
+        <span>Open Free Calculator</span>
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Lead In -->
+  <p class="text-lg leading-relaxed text-body dark:text-muted mb-6">
+    Once you achieve <strong>Baby Step 4</strong> in Dave Ramsey’s financial framework—eliminating all non-mortgage debt and securing a 3-to-6 month emergency fund—you arrive at the wealth-building milestone: <strong>investing 15% of your gross household income for retirement</strong>. Yet for millions of employees staring at HR open-enrollment forms, immediate confusion strikes: <em>Should I put the money into my employer 401(k) or open a Roth IRA? What if my company offers a Roth 401(k)? And where does the employer match fit into the 15% equation?</em>
+  </p>
+
+  <p class="text-base leading-relaxed text-body dark:text-muted mb-8">
+    Dave Ramsey simplifies this decision into an ironclad wealth maxim: <strong>"Match beats Roth, and Roth beats Pre-Tax."</strong> In this comprehensive guide, we dissect the exact chronological order of funding retirement accounts, run the mathematical proof behind taxing the seed versus the harvest, explore practical workplace scenarios ($65k to $200k incomes), and contrast Dave's approach with modern financial planning frameworks like The Money Guy’s Financial Order of Operations (FOO).
+  </p>
+
+  <!-- Quick Summary Callout -->
+  <div class="my-8 rounded-xl border border-primary/20 bg-primary/5 p-5 text-sm text-body dark:text-muted">
+    <div class="flex items-start gap-3">
+      <span class="text-2xl">📋</span>
+      <div>
+        <strong class="text-ink dark:text-on-primary text-base block mb-1">Dave Ramsey’s 3-Step Investment Checklist:</strong>
+        <ol class="list-decimal pl-5 space-y-1 text-xs sm:text-sm">
+          <li><strong>Step 1:</strong> Contribute to your workplace 401(k) / 403(b) up to the employer match (never leave free money on the table).</li>
+          <li><strong>Step 2:</strong> Open and fund a Roth IRA (or two for married couples) up to the maximum allowable annual IRS limit.</li>
+          <li><strong>Step 3:</strong> If you have not yet reached 15% of your gross income, return to your workplace 401(k) or an HSA for the balance.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 1 -->
+  <h2 class="text-2xl sm:text-3xl font-bold text-ink dark:text-on-primary mt-12 mb-4">
+    The Rule Explained: Why "Match Beats Roth, and Roth Beats Pre-Tax"
+  </h2>
+
+  <p class="text-body dark:text-muted leading-relaxed mb-4">
+    To understand why Dave Ramsey insists on this specific sequence, examine the mathematical return at each tier of the hierarchy:
+  </p>
+
+  <!-- Priority Comparison Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+    <div class="rounded-xl border border-hairline bg-canvas p-5 shadow-sm dark:border-overlay-lighter dark:bg-surface">
+      <div class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 mb-2">Priority #1</div>
+      <h3 class="text-lg font-bold text-ink dark:text-on-primary mb-2">The Company Match</h3>
+      <p class="text-xs text-body dark:text-muted leading-relaxed mb-3">
+        If your company matches 50% or 100% of your contributions up to 4%, you receive an immediate, risk-free <strong>50% to 100% instant return on investment</strong>. No mutual fund or stock in the world guarantees this return on day one.
+      </p>
+      <div class="text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 p-2 rounded">
+        Action: Invest up to the match limit only.
+      </div>
+    </div>
+
+    <div class="rounded-xl border border-primary/30 bg-primary/5 p-5 shadow-sm dark:bg-surface">
+      <div class="text-xs font-bold uppercase tracking-wider text-primary mb-2">Priority #2</div>
+      <h3 class="text-lg font-bold text-ink dark:text-on-primary mb-2">The Roth IRA</h3>
+      <p class="text-xs text-body dark:text-muted leading-relaxed mb-3">
+        Funded with after-tax income, every dollar of interest, dividend, and capital gains grows <strong>100% tax-free</strong>. You also gain unrestricted access to thousands of low-cost mutual funds rather than 15 picked by your employer.
+      </p>
+      <div class="text-xs font-bold text-primary bg-primary/10 p-2 rounded">
+        Action: Max out to annual limit ($7,000–$8,000).
+      </div>
+    </div>
+
+    <div class="rounded-xl border border-hairline bg-canvas p-5 shadow-sm dark:border-overlay-lighter dark:bg-surface">
+      <div class="text-xs font-bold uppercase tracking-wider text-muted mb-2">Priority #3</div>
+      <h3 class="text-lg font-bold text-ink dark:text-on-primary mb-2">Back to the 401(k) / HSA</h3>
+      <p class="text-xs text-body dark:text-muted leading-relaxed mb-3">
+        If maxing out the Roth IRA does not yet equal 15% of your gross income, return to your employer 401(k) (favoring the Roth 401(k) option if available) or an HSA to fulfill the remaining dollar gap.
+      </p>
+      <div class="text-xs font-bold text-ink dark:text-on-primary bg-slate-100 dark:bg-surface/80 p-2 rounded">
+        Action: Fill the remainder of the 15% goal.
+      </div>
+    </div>
+  </div>
+
+  <h3 class="text-xl font-bold text-ink dark:text-on-primary mt-8 mb-3">
+    Does the Match Count Toward Your 15%?
+  </h3>
+  <p class="text-body dark:text-muted leading-relaxed mb-4">
+    One of the most frequent mistakes investors make is subtracting their employer match from their 15% target. For example, if a worker earns $80,000 and receives a 4% match ($3,200), they mistakenly think they only need to contribute 11% ($8,800).
+  </p>
+  <p class="text-body dark:text-muted leading-relaxed mb-6">
+    Dave Ramsey is adamant: <strong>The 15% must come entirely from your own out-of-pocket paycheck ($12,000 in this example).</strong> The employer match represents gravy on top. Treating the match as a replacement for your personal contribution dilutes your wealth-building velocity by over $500,000 across a 30-year compounding horizon.
+  </p>
+
+  <!-- Section 2 -->
+  <h2 class="text-2xl sm:text-3xl font-bold text-ink dark:text-on-primary mt-12 mb-4">
+    Mathematical Proof: Taxing the Seed vs Taxing the Harvest
+  </h2>
+
+  <p class="text-body dark:text-muted leading-relaxed mb-4">
+    Why does Dave Ramsey despise traditional pre-tax accounts so intensely? Financial advisors often push traditional 401(k)s because you receive an immediate tax deduction today. Ramsey counters this with a classic agricultural analogy:
+  </p>
+
+  <blockquote class="border-l-4 border-primary pl-4 py-3 italic text-body dark:text-muted bg-canvas-soft dark:bg-surface rounded-r-xl my-6">
+    "Would you rather pay taxes on the bushel of apples when you harvest them, or on the tiny bag of seeds when you plant them? With a Traditional IRA or 401(k), the IRS lets you plant the seed tax-free, but they tax every single apple you harvest for the rest of your life."
+  </blockquote>
+
+  <p class="text-body dark:text-muted leading-relaxed mb-4">
+    Let us evaluate the cold arithmetic over a 30-year investing career assuming a 10% average annual return:
+  </p>
+
+  <div class="overflow-x-auto my-6 rounded-xl border border-hairline bg-canvas-soft dark:border-overlay-lighter dark:bg-surface/50">
+    <table class="w-full text-left text-sm border-collapse">
+      <thead>
+        <tr class="border-b border-hairline dark:border-overlay-lighter bg-slate-100/70 dark:bg-surface">
+          <th class="p-3.5 font-semibold text-ink dark:text-on-primary">Account Type</th>
+          <th class="p-3.5 font-semibold text-ink dark:text-on-primary">Total Out-of-Pocket</th>
+          <th class="p-3.5 font-semibold text-ink dark:text-on-primary">Final Nest Egg at 65</th>
+          <th class="p-3.5 font-semibold text-ink dark:text-on-primary">Estimated Taxes in Retirement</th>
+          <th class="p-3.5 font-semibold text-ink dark:text-on-primary">Net Spendable Wealth</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+        <tr>
+          <td class="p-3.5 font-bold text-primary">Roth IRA / Roth 401(k)</td>
+          <td class="p-3.5 font-medium">$216,000 (after-tax)</td>
+          <td class="p-3.5 font-bold text-ink dark:text-on-primary">$1,356,000</td>
+          <td class="p-3.5 font-bold text-emerald-600 dark:text-emerald-400">$0 (100% Tax-Free)</td>
+          <td class="p-3.5 font-black text-emerald-600 dark:text-emerald-400">$1,356,000</td>
+        </tr>
+        <tr>
+          <td class="p-3.5 font-bold text-muted">Traditional 401(k)</td>
+          <td class="p-3.5 font-medium">$216,000 (pre-tax)</td>
+          <td class="p-3.5 font-bold text-ink dark:text-on-primary">$1,356,000</td>
+          <td class="p-3.5 font-bold text-red-500">-$271,200 (at 20% effective tax)</td>
+          <td class="p-3.5 font-bold text-ink dark:text-on-primary">$1,084,800</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="text-xs text-muted leading-relaxed mb-6">
+    *Assumes $600/month invested for 30 years at 10% nominal compound return. The Roth investor saved approximately $50,000 in upfront taxes over 30 years, but avoided paying over $270,000 in retirement taxes on the growth.
+  </p>
+
+  <!-- Mid-Article In-Content Callout -->
+  <div class="my-8 rounded-xl border border-primary/20 bg-primary/5 p-5 text-sm text-body dark:text-muted flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+    <div>
+      <span class="font-bold text-ink dark:text-on-primary block">Want to see how your balance grows by age 40, 50, and 65?</span>
+      <p class="text-xs text-body dark:text-muted mt-1">Read our age-by-age milestone benchmark guide and explore Dave's 4-part mutual fund breakdown.</p>
+    </div>
+    <a
+      href="/blogs/dave-ramsey-retirement-by-age-fund-allocation/"
+      class="flex-shrink-0 inline-flex items-center gap-1.5 font-bold text-primary hover:underline text-xs"
+    >
+      <span>Read Retirement by Age Guide</span>
+      <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+    </a>
+  </div>
+
+  <!-- Section 3 -->
+  <h2 class="text-2xl sm:text-3xl font-bold text-ink dark:text-on-primary mt-12 mb-4">
+    Three Real-World Scenarios: How to Execute Baby Step 4 Step-by-Step
+  </h2>
+
+  <p class="text-body dark:text-muted leading-relaxed mb-6">
+    To eliminate guesswork, here is how individuals and families across three distinct income brackets should distribute their 15% monthly retirement dollars:
+  </p>
+
+  <div class="space-y-6 my-8">
+    <!-- Scenario A -->
+    <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+      <div class="flex items-center justify-between border-b border-hairline dark:border-overlay-lighter pb-3 mb-4">
+        <div>
+          <span class="text-xs font-bold text-primary uppercase">Scenario A</span>
+          <h3 class="text-lg font-bold text-ink dark:text-on-primary">Single Earner Making $65,000</h3>
+        </div>
+        <div class="text-right">
+          <div class="text-xs text-muted">15% Target:</div>
+          <div class="text-base font-black text-primary">$9,750 / year ($812.50 / mo)</div>
+        </div>
+      </div>
+      <p class="text-xs text-body dark:text-muted mb-3"><strong>Company Plan:</strong> 401(k) matches 100% up to 3% ($1,950/year). No Roth 401(k) option.</p>
+      <div class="space-y-2 text-xs">
+        <div class="p-3 rounded-lg bg-canvas-soft dark:bg-surface/50 border border-hairline dark:border-overlay-lighter flex justify-between items-center">
+          <span><strong>1. Workplace 401(k) (to get match):</strong> 3% contribution</span>
+          <span class="font-bold text-emerald-600 dark:text-emerald-400">$1,950 / yr ($162.50 / mo)</span>
+        </div>
+        <div class="p-3 rounded-lg bg-canvas-soft dark:bg-surface/50 border border-hairline dark:border-overlay-lighter flex justify-between items-center">
+          <span><strong>2. Roth IRA (outside workplace):</strong> Fund up to remaining gap</span>
+          <span class="font-bold text-primary">$7,000 / yr ($583.33 / mo)</span>
+        </div>
+        <div class="p-3 rounded-lg bg-canvas-soft dark:bg-surface/50 border border-hairline dark:border-overlay-lighter flex justify-between items-center">
+          <span><strong>3. Back to Workplace 401(k):</strong> Finish remaining 15% goal ($9,750 - $1,950 - $7,000)</span>
+          <span class="font-bold text-ink dark:text-on-primary">$800 / yr ($66.67 / mo)</span>
+        </div>
+      </div>
+      <p class="text-[11px] text-muted mt-3"><strong>Result:</strong> Captures 100% of employer match ($1,950 free money), maxes out Roth IRA ($7,000), and hits exact 15% total ($9,750).</p>
+    </div>
+
+    <!-- Scenario B -->
+    <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+      <div class="flex items-center justify-between border-b border-hairline dark:border-overlay-lighter pb-3 mb-4">
+        <div>
+          <span class="text-xs font-bold text-primary uppercase">Scenario B</span>
+          <h3 class="text-lg font-bold text-ink dark:text-on-primary">Married Couple Making $120,000</h3>
+        </div>
+        <div class="text-right">
+          <div class="text-xs text-muted">15% Target:</div>
+          <div class="text-base font-black text-primary">$18,000 / year ($1,500 / mo)</div>
+        </div>
+      </div>
+      <p class="text-xs text-body dark:text-muted mb-3"><strong>Company Plans:</strong> Spouse A has 401(k) match 50% up to 6% (contributes 6% = $4,200). Spouse B has no workplace match.</p>
+      <div class="space-y-2 text-xs">
+        <div class="p-3 rounded-lg bg-canvas-soft dark:bg-surface/50 border border-hairline dark:border-overlay-lighter flex justify-between items-center">
+          <span><strong>1. Spouse A Workplace 401(k):</strong> 6% to capture full company match</span>
+          <span class="font-bold text-emerald-600 dark:text-emerald-400">$4,200 / yr ($350 / mo)</span>
+        </div>
+        <div class="p-3 rounded-lg bg-canvas-soft dark:bg-surface/50 border border-hairline dark:border-overlay-lighter flex justify-between items-center">
+          <span><strong>2. Spouse A Roth IRA:</strong> Max out personal annual limit</span>
+          <span class="font-bold text-primary">$7,000 / yr ($583.33 / mo)</span>
+        </div>
+        <div class="p-3 rounded-lg bg-canvas-soft dark:bg-surface/50 border border-hairline dark:border-overlay-lighter flex justify-between items-center">
+          <span><strong>3. Spouse B Spousal Roth IRA:</strong> Partially fund toward 15% ($18,000 - $4,200 - $7,000)</span>
+          <span class="font-bold text-primary">$6,800 / yr ($566.67 / mo)</span>
+        </div>
+      </div>
+      <p class="text-[11px] text-muted mt-3"><strong>Result:</strong> Free match captured, zero traditional 401(k) excess, and nearly $14,000 allocated into pure tax-free Roth buckets.</p>
+    </div>
+
+    <!-- Scenario C -->
+    <div class="rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface">
+      <div class="flex items-center justify-between border-b border-hairline dark:border-overlay-lighter pb-3 mb-4">
+        <div>
+          <span class="text-xs font-bold text-primary uppercase">Scenario C</span>
+          <h3 class="text-lg font-bold text-ink dark:text-on-primary">Workplace Offers a High-Quality Roth 401(k)</h3>
+        </div>
+        <div class="text-right">
+          <div class="text-xs text-muted">15% Target:</div>
+          <div class="text-base font-black text-primary">15% Payroll Deduction</div>
+        </div>
+      </div>
+      <p class="text-xs text-body dark:text-muted mb-3"><strong>Special Ramsey Exemption:</strong> What if your employer 401(k) includes a <em>Roth option</em> and has excellent low-cost growth stock mutual funds?</p>
+      <div class="p-4 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-xs text-body dark:text-muted leading-relaxed">
+        <strong class="text-emerald-700 dark:text-emerald-400 block mb-1">The One-Stop Shortcut:</strong>
+        Dave Ramsey confirms that if your employer offers a Roth 401(k) with good mutual fund options, you can bypass opening a separate Roth IRA and simply set your workplace <strong>Roth 401(k) deduction directly to 15%</strong>. This captures the match, maintains 100% tax-free growth, and eliminates the hassle of managing separate IRA brokerages.
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 4 -->
+  <h2 class="text-2xl sm:text-3xl font-bold text-ink dark:text-on-primary mt-12 mb-4">
+    The Financial Advisor Critique: High Tax Brackets & The HSA
+  </h2>
+
+  <p class="text-body dark:text-muted leading-relaxed mb-4">
+    While Dave Ramsey’s framework provides crystal-clear behavioral simplicity, Certified Financial Planners (CFPs) and educators like <em>The Money Guy</em> highlight two key nuances where Dave's advice warrants careful adjustment:
+  </p>
+
+  <h3 class="text-xl font-bold text-ink dark:text-on-primary mt-6 mb-2">
+    1. High-Income Earners in the 24%, 32%, or 35% Federal Tax Brackets
+  </h3>
+  <p class="text-body dark:text-muted leading-relaxed mb-4">
+    If a household earns $250,000+ per year, paying a marginal tax rate of 24% to 35% (plus state income taxes) today to fund a Roth account is mathematically punishing. By taking the traditional pre-tax deduction today, high earners immediately save 30%+ in taxes. If they invest those tax savings, they can build substantial wealth and potentially withdraw during early retirement at much lower effective tax brackets (10% to 12%).
+  </p>
+
+  <h3 class="text-xl font-bold text-ink dark:text-on-primary mt-6 mb-2">
+    2. The "Stealth IRA": Triple-Tax-Advantaged Health Savings Accounts (HSA)
+  </h3>
+  <p class="text-body dark:text-muted leading-relaxed mb-4">
+    Dave Ramsey largely ignores Health Savings Accounts (HSAs) in his retirement hierarchy, treating them only as medical spending accounts. However, tax strategists consider the HSA the single most tax-advantaged account in the United States code because it offers a <strong>triple tax break</strong>:
+  </p>
+  <ul class="list-disc pl-5 space-y-2 text-sm text-body dark:text-muted mb-6">
+    <li><strong>Tax-Deductible:</strong> Contributions reduce your taxable income today.</li>
+    <li><strong>Tax-Free Growth:</strong> All invested interest and dividends grow with zero taxes.</li>
+    <li><strong>Tax-Free Withdrawals:</strong> Money pulled out for qualified medical expenses is 100% tax-free at any age.</li>
+    <li><strong>After Age 65:</strong> Any non-medical withdrawal can be taken as ordinary income with zero penalty, functioning identically to a Traditional IRA.</li>
+  </ul>
+
+  <!-- Related Guides Spiderweb -->
+  <aside class="my-12 rounded-2xl border border-hairline bg-canvas-soft p-6 sm:p-8 dark:border-overlay-lighter dark:bg-surface">
+    <div class="mb-4">
+      <span class="text-xs font-bold uppercase tracking-wider text-primary">Complete Dave Ramsey Architecture</span>
+      <h3 class="text-xl font-bold text-ink dark:text-on-primary mt-1">Explore Companion Analyses & Tools</h3>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+      <a
+        href="/dave-ramsey-retirement-calculator/"
+        class="p-4 rounded-xl border border-hairline bg-canvas hover:border-primary transition group dark:bg-surface/60 shadow-sm flex flex-col justify-between"
+      >
+        <div>
+          <span class="text-xs font-semibold text-primary block mb-1">Interactive Hub</span>
+          <h4 class="font-bold text-ink dark:text-on-primary group-hover:text-primary transition mb-1 text-sm">
+            Dave Ramsey Retirement Calculator
+          </h4>
+          <p class="text-xs text-body dark:text-muted leading-relaxed">
+            Run your 15% rule numbers, toggle 10%–12% nominal vs 7% realistic returns, and test withdrawals.
+          </p>
+        </div>
+        <div class="mt-3 inline-flex items-center gap-1.5 text-xs font-bold text-primary group-hover:underline">
+          <span>Launch Tool</span>
+          <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </div>
+      </a>
+
+      <a
+        href="/blogs/dave-ramsey-retirement-calculator-guide/"
+        class="p-4 rounded-xl border border-hairline bg-canvas hover:border-primary transition group dark:bg-surface/60 shadow-sm flex flex-col justify-between"
+      >
+        <div>
+          <span class="text-xs font-semibold text-primary block mb-1">Guide 1: Math Theory</span>
+          <h4 class="font-bold text-ink dark:text-on-primary group-hover:text-primary transition mb-1 text-sm">
+            15% Rule, 8% Withdrawals & Money Guy FOO
+          </h4>
+          <p class="text-xs text-body dark:text-muted leading-relaxed">
+            Deep dive into S&P 500 returns, the Trinity Study 4% rebuttal, and sequential bear market risks.
+          </p>
+        </div>
+        <div class="mt-3 inline-flex items-center gap-1.5 text-xs font-bold text-primary group-hover:underline">
+          <span>Read Guide 1</span>
+          <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </div>
+      </a>
+
+      <a
+        href="/blogs/dave-ramsey-retirement-by-age-fund-allocation/"
+        class="p-4 rounded-xl border border-hairline bg-canvas hover:border-primary transition group dark:bg-surface/60 shadow-sm flex flex-col justify-between"
+      >
+        <div>
+          <span class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 block mb-1">Guide 2: Portfolio Mix</span>
+          <h4 class="font-bold text-ink dark:text-on-primary group-hover:text-primary transition mb-1 text-sm">
+            Retirement by Age & 4-Fund Allocation
+          </h4>
+          <p class="text-xs text-body dark:text-muted leading-relaxed">
+            Nest egg targets by decade ($60k–$130k salaries), the 4 mutual fund split, and why Dave avoids bonds.
+          </p>
+        </div>
+        <div class="mt-3 inline-flex items-center gap-1.5 text-xs font-bold text-emerald-600 dark:text-emerald-400 group-hover:underline">
+          <span>Read Guide 2</span>
+          <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </div>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Section 5: FAQ -->
+  <section class="mt-16 pt-10 border-t border-hairline dark:border-overlay-lighter" aria-labelledby="faq-title">
+    <h2 id="faq-title" class="text-2xl sm:text-3xl font-bold text-ink dark:text-on-primary mb-6">
+      Frequently Asked Questions (FAQ)
+    </h2>
+
+    <div class="space-y-4">
+      {faqList.map(item => (
+        <div class="rounded-xl border border-hairline bg-canvas p-5 shadow-sm dark:border-overlay-lighter dark:bg-surface">
+          <h3 class="text-base font-bold text-ink dark:text-on-primary mb-2">
+            {item.question}
+          </h3>
+          <p class="text-sm text-body dark:text-muted leading-relaxed">
+            {item.answer}
+          </p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Bottom CTA Banner -->
+  <div class="mt-12 rounded-2xl border border-primary/20 bg-canvas-soft dark:bg-surface/50 p-6 sm:p-8 text-center space-y-4">
+    <h3 class="text-2xl font-bold text-ink dark:text-on-primary">
+      Ready to Model Your Personal 15% Retirement Plan?
+    </h3>
+    <p class="text-sm text-body dark:text-muted max-w-xl mx-auto">
+      Whether you contribute through a workplace 401(k), a Roth IRA, or both, see how your monthly savings compound toward financial freedom with our free interactive tool.
+    </p>
+    <div class="pt-2">
+      <a
+        href="/dave-ramsey-retirement-calculator/"
+        class="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-sm font-bold text-on-primary shadow hover:bg-primary-hover transition"
+      >
+        <span>Launch Free Dave Ramsey Retirement Calculator</span>
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+      </a>
+    </div>
+  </div>
+</BlogLayout>
