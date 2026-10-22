@@ -147,7 +147,7 @@ export const indonesia: Country = {
   officialLanguage: "Bahasa Indonesia",
   overview: "Indonesia operates a progressive self-assessment tax system governed by the Direktorat Jenderal Pajak (DJP). Personal income tax (PPh 21) features five progressive brackets ranging from 5% to 35% after deducting Non-Taxable Income (PTKP) starting at IDR 54,000,000. Corporate income tax is set at a flat 22%, with reduced rates available for small and medium enterprises. Foreigners and expats living in Bali or other Indonesian regions for 183+ days qualify as tax residents, benefiting from territorial provisions under the Job Creation Law.",
   lastUpdated: "2026-08-20",
-  taxYear: "Calendar Year (January 1 – December 31)",
+  taxYear: "2026 (Calendar Year)",
   filingDeadline: "March 31 (individuals); April 30 (corporations)",
   paymentDeadline: "Prior to filing annual SPT returns; monthly withholding due 10th-15th",
   taxSystemOverview: {
