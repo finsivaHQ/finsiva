@@ -225,55 +225,71 @@ const faqSchema = {
   </section>
 
   <!-- SECTION 3: CATEGORY DEEP FAQS WITH ISSUEBOX RULE 10 TOOL LINKING -->
-  {hub.sections.map(section => (
-    <section id={section.slug} class="mb-14 scroll-mt-24">
-      <div class="rounded-3xl border border-hairline bg-canvas p-6 sm:p-8 shadow-sm dark:border-overlay-lighter dark:bg-surface">
-        
-        <!-- CATEGORY HEADER -->
-        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-6 mb-6 border-b border-hairline dark:border-overlay-lighter">
-          <div>
-            <div class="text-xs font-bold uppercase tracking-wider text-primary dark:text-link mb-1">
-              Core Tax Subject
-            </div>
-            <h2 class="text-2xl sm:text-3xl font-extrabold text-ink dark:text-on-primary">
-              {section.name}
-            </h2>
-            <p class="mt-2 text-sm sm:text-base text-body dark:text-muted max-w-2xl">
-              {section.description}
-            </p>
-          </div>
-          <a
-            href={`/countries/${hub.countrySlug}/${section.slug}/`}
-            class="shrink-0 inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold bg-canvas-soft border border-hairline text-ink hover:border-primary hover:text-primary transition dark:bg-surface dark:text-on-primary"
-          >
-            <span>Browse {section.name} Hub</span>
-            <span>→</span>
-          </a>
-        </div>
+  {hub.sections.map(section => {
+    const hasCategoryHub = country.taxCategories.some(c => c.slug === section.slug);
+    const categoryUrl = hasCategoryHub 
+      ? `/countries/${hub.countrySlug}/${section.slug}/` 
+      : `/countries/${hub.countrySlug}/`;
 
-        <!-- ISSUEBOX RULE 10: DEEP TOOL LINKING CTA -->
-        {section.calculator && (
-          <div class="mb-8 p-5 rounded-2xl bg-gradient-to-r from-primary/5 via-canvas to-primary/10 border border-primary/20 dark:from-primary/10 dark:via-surface dark:to-primary/20 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm">
+    const targetCategory = country.taxCategories.find(c =>
+      c.slug === section.slug && c.calculators.some(calc => calc.slug === section.calculator?.slug)
+    ) || country.taxCategories.find(c =>
+      c.calculators.some(calc => calc.slug === section.calculator?.slug)
+    );
+
+    const calcUrl = (targetCategory && section.calculator)
+      ? `/countries/${hub.countrySlug}/${targetCategory.slug}/${section.calculator.slug}/`
+      : categoryUrl;
+
+    return (
+      <section id={section.slug} class="mb-14 scroll-mt-24">
+        <div class="rounded-3xl border border-hairline bg-canvas p-6 sm:p-8 shadow-sm dark:border-overlay-lighter dark:bg-surface">
+          
+          <!-- CATEGORY HEADER -->
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-6 mb-6 border-b border-hairline dark:border-overlay-lighter">
             <div>
-              <div class="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider text-primary dark:text-link mb-1">
-                <span>🧮</span> Interactive Calculator Tool
+              <div class="text-xs font-bold uppercase tracking-wider text-primary dark:text-link mb-1">
+                Core Tax Subject
               </div>
-              <h3 class="font-bold text-base sm:text-lg text-ink dark:text-on-primary">
-                {section.calculator.name}
-              </h3>
-              <p class="text-xs sm:text-sm text-body dark:text-muted mt-0.5">
-                {section.calculator.description}
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-ink dark:text-on-primary">
+                {section.name}
+              </h2>
+              <p class="mt-2 text-sm sm:text-base text-body dark:text-muted max-w-2xl">
+                {section.description}
               </p>
             </div>
             <a
-              href={`/countries/${hub.countrySlug}/${section.slug}/${section.calculator.slug}/`}
-              class="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-primary text-on-primary hover:opacity-90 transition shadow-sm dark:bg-on-primary dark:text-primary"
+              href={categoryUrl}
+              class="shrink-0 inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold bg-canvas-soft border border-hairline text-ink hover:border-primary hover:text-primary transition dark:bg-surface dark:text-on-primary"
             >
-              <span>Calculate Now</span>
+              <span>{hasCategoryHub ? `Browse ${section.name} Hub` : `Explore ${country.name} Calculators`}</span>
               <span>→</span>
             </a>
           </div>
-        )}
+
+          <!-- ISSUEBOX RULE 10: DEEP TOOL LINKING CTA -->
+          {section.calculator && (
+            <div class="mb-8 p-5 rounded-2xl bg-gradient-to-r from-primary/5 via-canvas to-primary/10 border border-primary/20 dark:from-primary/10 dark:via-surface dark:to-primary/20 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm">
+              <div>
+                <div class="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider text-primary dark:text-link mb-1">
+                  <span>🧮</span> Interactive Calculator Tool
+                </div>
+                <h3 class="font-bold text-base sm:text-lg text-ink dark:text-on-primary">
+                  {section.calculator.name}
+                </h3>
+                <p class="text-xs sm:text-sm text-body dark:text-muted mt-0.5">
+                  {section.calculator.description}
+                </p>
+              </div>
+              <a
+                href={calcUrl}
+                class="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-primary text-on-primary hover:opacity-90 transition shadow-sm dark:bg-on-primary dark:text-primary"
+              >
+                <span>Calculate Now</span>
+                <span>→</span>
+              </a>
+            </div>
+          )}
 
         <!-- FAQS ACCORDIONS / DETAILED CARDS -->
         <div class="space-y-6">
@@ -311,7 +327,8 @@ const faqSchema = {
 
       </div>
     </section>
-  ))}
+    );
+  })}
 
   <!-- SECTION 4: OFFICIAL FILING PROCEDURES & PENALTIES -->
   <section id="filing-process" class="mb-14 scroll-mt-24">

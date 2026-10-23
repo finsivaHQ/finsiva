@@ -2,6 +2,7 @@
 interface Props {
   country: {
     name: string;
+    taxYear?: string;
     currentTaxBrackets: Array<{ label: string; rate: string; threshold: string; notes?: string }>;
   };
 }
@@ -12,7 +13,7 @@ const { country } = Astro.props;
 <section class="country-section" aria-labelledby="brackets-heading">
   <h2 id="brackets-heading" class="section-title">Tax Brackets & Rates</h2>
   <p class="section-description mb-6">
-    {country.taxYear} income tax brackets for {country.name}. Tax is calculated progressively — higher portions of income are taxed at higher rates.
+    {country.taxYear || "2026"} income tax brackets for {country.name}. Tax is calculated progressively — higher portions of income are taxed at higher rates.
   </p>
 
   <div class="brackets-intro grid grid-cols-1 gap-4 sm:grid-cols-3 mb-8">
@@ -31,7 +32,7 @@ const { country } = Astro.props;
   </div>
 
   <div class="table-responsive">
-    <table class="tax-table" role="table" aria-label="Tax brackets and rates for {country.name}">
+    <table class="tax-table" role="table" aria-label={`Tax brackets and rates for ${country.name}`}>
       <caption class="visually-hidden">Tax brackets and rates for {country.name}</caption>
       <thead>
         <tr>

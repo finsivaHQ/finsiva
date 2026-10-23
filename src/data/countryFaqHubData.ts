@@ -122,7 +122,7 @@ export const countryFaqHubs: Record<string, CountryFaqHub> = {
         name: "Payroll & FICA Withholding Taxes",
         description: "Social Security, Medicare, and Additional Medicare taxes deducted from W-2 wages and self-employment earnings.",
         calculator: {
-          slug: "effective-tax-rate",
+          slug: "payroll-tax-calculator",
           name: "Effective Tax Rate Calculator",
           description: "Calculate your overall tax bite including federal income tax, state tax, and FICA payroll deductions."
         },
@@ -152,7 +152,7 @@ export const countryFaqHubs: Record<string, CountryFaqHub> = {
         name: "Corporate & Business Taxation",
         description: "C-Corporation flat rates, S-Corporation pass-through rules, and self-employment business obligations.",
         calculator: {
-          slug: "state-income-tax",
+          slug: "corporate-tax-calculator",
           name: "State Income Tax Calculator",
           description: "Compare business and individual income tax liabilities across all 50 states."
         },
@@ -182,7 +182,7 @@ export const countryFaqHubs: Record<string, CountryFaqHub> = {
         name: "Capital Gains & Investment Income",
         description: "Short-term vs long-term capital gains rates, Net Investment Income Tax (NIIT), and loss harvesting.",
         calculator: {
-          slug: "effective-tax-rate",
+          slug: "capital-gains-calculator",
           name: "Effective Tax Rate Calculator",
           description: "Model capital gains liabilities and determine exact blended tax on investment returns."
         },
@@ -256,7 +256,7 @@ export const countryFaqHubs: Record<string, CountryFaqHub> = {
         name: "Income Tax, PAYE & The 60% Tax Trap",
         description: "HMRC progressive tax bands, Personal Allowance tapering above £100,000, and employment tax codes.",
         calculator: {
-          slug: "uk-income-tax-calculator",
+          slug: "income-tax-calculator",
           name: "UK Salary & Take-Home Pay Calculator",
           description: "Calculate your net monthly take-home pay after PAYE income tax, Student Loan, and National Insurance."
         },
@@ -288,7 +288,7 @@ export const countryFaqHubs: Record<string, CountryFaqHub> = {
         name: "National Insurance & Freelancer Obligations",
         description: "Class 1 employee contributions, Class 2/4 self-employment NI, and state pension qualification.",
         calculator: {
-          slug: "uk-self-assessment-calculator",
+          slug: "ni-calculator",
           name: "UK Self Assessment Tax Calculator",
           description: "Calculate sole trader profits, Class 4 National Insurance, and balancing payments."
         },
@@ -314,14 +314,7 @@ export const countryFaqHubs: Record<string, CountryFaqHub> = {
         ]
       },
       {
-        slug: "property-tax",
-        name: "Property, Section 24 & Capital Gains Tax",
-        description: "Buy-to-let rental taxation under Section 24, Stamp Duty Land Tax (SDLT), and CGT on residential property.",
-        calculator: {
-          slug: "uk-capital-gains-tax-calculator",
-          name: "UK Capital Gains Tax Calculator",
-          description: "Calculate capital gains tax on residential property and shares under current annual exemption limits."
-        },
+        
         faqs: [
           {
             question: "What is Section 24 mortgage interest relief restriction for landlords?",
@@ -544,7 +537,7 @@ export const countryFaqHubs: Record<string, CountryFaqHub> = {
         name: "Profits Tax & Two-Tiered System",
         description: "Corporate taxation, two-tier concessionary rates (8.25%/16.5%), and territorial offshore claims.",
         calculator: {
-          slug: "hong-kong-profits-tax-calculator",
+          slug: "profits-tax-calculator",
           name: "Hong Kong Profits Tax Calculator",
           description: "Estimate corporate profits tax under the two-tiered regime and evaluate offshore claim eligibility."
         },
@@ -654,7 +647,7 @@ export const countryFaqHubs: Record<string, CountryFaqHub> = {
         name: "Corporate Income Tax & 9% GST",
         description: "17% headline corporate rate, Start-up Tax Exemption (SUTE), and Goods and Services Tax compliance.",
         calculator: {
-          slug: "singapore-corporate-tax-calculator",
+          slug: "income-tax-calculator",
           name: "Singapore Corporate Tax Calculator",
           description: "Calculate corporate tax liability factoring in Start-up Tax Exemption and partial tax relief."
         },
@@ -733,7 +726,7 @@ export const countryFaqHubs: Record<string, CountryFaqHub> = {
         name: "Personal Income Tax & MyTax e-Filing",
         description: "LHDN progressive slabs, Form BE deadlines, PCB reconciliation, and personal tax reliefs.",
         calculator: {
-          slug: "malaysia-personal-income-tax-calculator",
+          slug: "income-tax-calculator",
           name: "Malaysia Income Tax Calculator",
           description: "Calculate your annual tax liability, PCB deductions, and tax refund under LHDN brackets."
         },
@@ -839,7 +832,7 @@ export const countryFaqHubs: Record<string, CountryFaqHub> = {
         name: "Personal Income Tax (PPh 21) & PTKP",
         description: "UU HPP progressive brackets, PTKP non-taxable income thresholds, and occupational expense deductions.",
         calculator: {
-          slug: "indonesia-pph21-calculator",
+          slug: "income-tax-calculator",
           name: "Indonesia PPh 21 Tax Calculator",
           description: "Calculate your monthly and annual PPh 21 income tax taking into account PTKP status and TER rates."
         },
