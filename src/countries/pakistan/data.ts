@@ -16,7 +16,10 @@ const taxCategories: TaxCategory[] = [
       { slug: "tax-residency-guide", title: "Tax Residency Guide", description: "Understanding Pakistani tax residency rules and 183-day physical presence test.", url: "/knowledge/pakistan-tax-residency/" },
       { slug: "fbr-tax-slabs-guide", title: "FBR Tax Slabs Guide", description: "Complete guide to FBR progressive tax slabs for salaried individuals and businesses.", url: "/blogs/pakistan-fbr-tax-slabs/" },
       { slug: "salary-tax-guide", title: "Salary Tax Guide", description: "How Section 149 tax on salary is calculated in Pakistan with payroll examples.", url: "/blogs/pakistan-fbr-tax-slabs/" },
-      { slug: "freelancer-tax-guide", title: "Freelancer Tax Guide", description: "Tax obligations, IT export concessions, and filing rules for freelancers in Pakistan.", url: "/blogs/pakistan-freelancer-tax-guide/" }
+      { slug: "freelancer-tax-guide", title: "Freelancer Tax Guide", description: "Tax obligations, IT export concessions, and filing rules for freelancers in Pakistan.", url: "/blogs/pakistan-freelancer-tax-guide/" },
+      { slug: "pseb-registration-guide", title: "PSEB Registration Guide", description: "Step-by-step PSEB registration for IT freelancers to secure the 0.25% FBR tax rate.", url: "/blogs/pseb-registration-tax-exemption-guide/" },
+      { slug: "section-154a-it-export-guide", title: "Section 154A IT Export Guide", description: "FBR Section 154A banking remittance rules, SBP purpose codes, and e-PRC certificates.", url: "/blogs/fbr-section-154a-it-export-tax-remittance-guide/" },
+      { slug: "sole-proprietor-vs-pvt-ltd-guide", title: "Sole Proprietor vs SMC Pvt Ltd", description: "Tax comparison between sole proprietorship and SMC Pvt Ltd for tech agencies.", url: "/blogs/sole-proprietor-vs-smc-pvt-ltd-pakistan-tech-tax/" }
     ],
     faqs: [
       { question: "What is the tax-free limit for salary in Pakistan?", answer: "The tax-free threshold for salaried individuals in Pakistan is PKR 600,000 annually. Any taxable salary income up to PKR 600,000 is taxed at 0%." },
