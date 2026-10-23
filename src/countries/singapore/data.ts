@@ -38,6 +38,24 @@ const taxCategories: TaxCategory[] = [
         ]
       },
       {
+        slug: "s-pass-work-permit-guide",
+        title: "S Pass & Work Permit Tax Guide",
+        description: "Income tax brackets, 183-day rules, CPF exemptions, and IR21 tax clearance for S Pass and Work Permit holders.",
+        url: "/blogs/singapore-s-pass-work-permit-tax-guide/"
+      },
+      {
+        slug: "area-representative-guide",
+        title: "Area Representative Scheme Guide",
+        description: "How regional traveling expats can apportion employment income to save on Singapore taxes.",
+        url: "/blogs/singapore-area-representative-tax-guide/"
+      },
+      {
+        slug: "srs-tax-relief-guide",
+        title: "SRS Tax Relief Guide",
+        description: "Maximize personal tax savings with the S$35,700 foreigner SRS contribution limit.",
+        url: "/blogs/singapore-srs-tax-relief-guide/"
+      },
+      {
         slug: "tax-residency-guide",
         title: "Singapore Tax Residency Guide",
         description: "Determine your tax residency status, understand the 183-day rule, 60-day rule, and non-resident tax rates.",

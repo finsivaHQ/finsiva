@@ -1,0 +1,240 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Singapore S Pass & Work Permit Tax Guide: Rates & Rules 2026";
+const description = "Calculate Singapore income tax for S Pass & Work Permit holders. Learn the 183-day residency rule, 15% non-resident rate, IR21 tax clearance & CPF exemptions.";
+const image = "https://images.unsplash.com/photo-1508873696983-2df5293cb395?w=1200&q=80";
+const author = "Rachel Lim, Senior International Tax Consultant";
+const authorBio = "Senior Tax Consultant specializing in Singapore expat tax planning, cross-border employee mobility, and IRAS regulatory compliance.";
+const canonical = "https://finsiva.com/blogs/singapore-s-pass-work-permit-tax-guide/";
+const lastUpdated = "October 2026";
+const readTime = "11 min read";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do S Pass and Work Permit holders pay tax in Singapore?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Any individual exercising employment in Singapore is liable to income tax, regardless of whether they hold an Employment Pass (EP), S Pass, or Work Permit (WP). However, the tax rate depends on whether they qualify as a tax resident under the 183-day rule."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the tax rate for an S Pass holder staying more than 183 days?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An S Pass holder physically present or working in Singapore for 183 days or more in a calendar year is treated as a tax resident. They are taxed at progressive resident rates ranging from 0% to 24%, with the first S$20,000 of income completely tax-free, and are entitled to personal tax reliefs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if an S Pass holder works in Singapore for less than 183 days?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you work in Singapore between 61 and 182 days, you are classified as a non-resident and taxed at a flat rate of 15% on employment income (or progressive resident rates without personal reliefs, whichever results in a higher tax amount). If you work for 60 days or less, employment income is entirely tax-exempt under the 60-day rule."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do Work Permit and S Pass holders pay Central Provident Fund (CPF)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. CPF contributions are mandatory only for Singapore Citizens and Singapore Permanent Residents (SPRs). S Pass and Work Permit holders do not contribute to CPF, meaning their gross salary is paid out in full without CPF deductions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Form IR21 Tax Clearance when an S Pass holder resigns?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under Singapore law, when a non-citizen employee resigns, completes their contract, or is posted overseas, the employer must notify IRAS via Form IR21 at least one month before cessation of employment and withhold all salary payments until IRAS issues a Tax Clearance Directive."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  canonical={canonical}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated={lastUpdated}
+  readTime={readTime}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
+    <p>
+      While discussions around expatriate taxation in Singapore frequently revolve around high-earning Employment Pass (EP) executives, hundreds of thousands of international professionals, technicians, and specialized workers contribute to the nation’s economy on <strong>S Passes</strong> and <strong>Work Permits (WP)</strong>.
+    </p>
+    <p>
+      If you are an S Pass technician, healthcare professional, F&amp;B manager, or skilled work permit holder, understanding your tax obligations before the Inland Revenue Authority of Singapore (IRAS) is essential. Navigating whether you qualify for progressive tax brackets (starting at 0%) or face a flat 15% non-resident rate, understanding employer withholding obligations under Form IR21, and knowing your Central Provident Fund (CPF) exemption status can mean the difference between keeping your hard-earned savings and facing unexpected tax bills.
+    </p>
+    <p>
+      In this comprehensive guide, we unpack the exact tax rules, residency tests, deduction allowances, and tax clearance requirements for S Pass and Work Permit holders in 2026.
+    </p>
+
+    <!-- ISSUEBOX / MACHARULE: HUB FUNNEL CTA -->
+    <aside class="my-8 rounded-2xl border border-primary/20 bg-gradient-to-r from-primary/5 via-canvas to-primary/10 p-6 shadow-sm dark:from-primary/10 dark:via-surface dark:to-primary/20">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary dark:text-link mb-1">
+            <span>🧮</span> Interactive Calculator Tool
+          </span>
+          <h3 class="text-lg font-bold text-ink dark:text-on-primary">
+            Calculate Your Singapore Take-Home Pay &amp; Tax
+          </h3>
+          <p class="text-xs sm:text-sm text-body dark:text-muted mt-1 max-w-xl">
+            Input your monthly S Pass or Work Permit salary to simulate your exact IRAS tax bracket, marginal deduction, and net take-home pay.
+          </p>
+        </div>
+        <a
+          href="/countries/singapore/income-tax/income-tax-calculator/"
+          class="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-primary text-on-primary hover:opacity-90 transition shadow-sm dark:bg-on-primary dark:text-primary"
+        >
+          <span>Calculate Singapore Tax Now</span>
+          <span>→</span>
+        </a>
+      </div>
+    </aside>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      1. S Pass vs Work Permit: What Are the Key Tax Distinctions?
+    </h2>
+    <p>
+      The Ministry of Manpower (MOM) issues work passes based on salary thresholds and educational qualifications:
+    </p>
+    <ul class="space-y-2 list-disc pl-5">
+      <li><strong>S Pass:</strong> Designed for mid-level skilled staff earning at least S$3,150/month (or S$3,650 in the financial services sector). S Pass holders frequently cross the S$30,000 annual income mark, meaning they fall squarely into taxable brackets.</li>
+      <li><strong>Work Permit (WP):</strong> Aimed at semi-skilled foreign workers in construction, manufacturing, marine shipyard, process, or services sectors. While base wages are lower, overtime pay, shift allowances, and annual bonuses can push total earnings into taxable territory.</li>
+    </ul>
+    <p>
+      Crucially, <strong>IRAS assesses tax based on total annual remuneration and physical presence in Singapore</strong>—not on pass type. Regardless of your pass title, your tax rate is determined exclusively by the <strong>183-Day Physical Presence Rule</strong>.
+    </p>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      2. The 183-Day Rule: Resident vs Non-Resident Tax Rates
+    </h2>
+    <p>
+      In Singapore, the tax year corresponds to the calendar year (January 1 to December 31). Your tax status is categorized into one of three statutory tiers:
+    </p>
+
+    <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+      <table class="w-full text-left text-sm">
+        <thead class="bg-canvas-soft border-b border-hairline dark:bg-surface/80 dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+          <tr>
+            <th class="p-3.5">Physical Presence in Singapore</th>
+            <th class="p-3.5">Tax Status</th>
+            <th class="p-3.5">Applicable Tax Formula</th>
+            <th class="p-3.5">Personal Tax Reliefs?</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr class="bg-emerald-500/5">
+            <td class="p-3.5 font-bold text-ink dark:text-on-primary">183 Days or More</td>
+            <td class="p-3.5 font-bold text-emerald-600 dark:text-emerald-400">Tax Resident</td>
+            <td class="p-3.5 font-medium">Progressive resident rates: 0% to 24%</td>
+            <td class="p-3.5 font-bold text-emerald-600 dark:text-emerald-400">Yes (Full entitlement)</td>
+          </tr>
+          <tr>
+            <td class="p-3.5 font-medium text-ink dark:text-on-primary">61 to 182 Days</td>
+            <td class="p-3.5 font-bold text-amber-600 dark:text-amber-400">Non-Resident</td>
+            <td class="p-3.5 font-medium">Flat 15% (or resident rate without relief, whichever is higher)</td>
+            <td class="p-3.5 font-bold text-rose-600 dark:text-rose-400">No (Zero reliefs)</td>
+          </tr>
+          <tr class="bg-sky-500/5">
+            <td class="p-3.5 font-medium text-ink dark:text-on-primary">60 Days or Less</td>
+            <td class="p-3.5 font-bold text-sky-600 dark:text-sky-400">Short-Term Non-Resident</td>
+            <td class="p-3.5 font-bold text-sky-700 dark:text-sky-300">0% (Completely Exempt)</td>
+            <td class="p-3.5 text-muted">N/A</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      <strong>The Two-Year / Three-Year Administrative Concession:</strong> If your employment contract spans across two calendar years and you stay in Singapore for at least 183 continuous days spanning both years, IRAS treats you as a tax resident for both years under the Two-Year Administrative Scheme.
+    </p>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      3. CPF Exemption &amp; Employer Foreign Worker Levy (FWL)
+    </h2>
+    <p>
+      Two distinct wage deductions often cause confusion for new pass holders:
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+      <div class="p-5 rounded-2xl border border-hairline bg-canvas dark:bg-surface dark:border-overlay-lighter">
+        <h4 class="font-bold text-ink dark:text-on-primary text-base mb-2">Central Provident Fund (CPF)</h4>
+        <p class="text-xs sm:text-sm text-body dark:text-muted leading-relaxed">
+          S Pass and Work Permit holders <strong>do not pay CPF</strong>. Employers are strictly prohibited from deducting 20% employee CPF from your salary. Your agreed gross salary is paid out directly into your bank account.
+        </p>
+      </div>
+      <div class="p-5 rounded-2xl border border-hairline bg-canvas dark:bg-surface dark:border-overlay-lighter">
+        <h4 class="font-bold text-ink dark:text-on-primary text-base mb-2">Foreign Worker Levy (FWL)</h4>
+        <p class="text-xs sm:text-sm text-body dark:text-muted leading-relaxed">
+          Employers must pay a monthly levy to MOM for hiring foreign workers. <strong>Under Singapore law, this levy cannot be deducted from your salary.</strong> It is 100% an employer operational expense. Deducting FWL from a worker’s wage is a criminal offense under the EFMA.
+        </p>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      4. What Personal Tax Reliefs Can S Pass Holders Claim?
+    </h2>
+    <p>
+      If you qualify as a tax resident (≥183 days), you are entitled to statutory reliefs that lower your assessable income before tax is calculated:
+    </p>
+    <ul class="space-y-2 list-disc pl-5 text-sm">
+      <li><strong>Earned Income Relief:</strong> S$1,000 automatic deduction for all individuals earning employment income below age 55.</li>
+      <li><strong>Spouse Relief:</strong> S$2,000 deduction if your legally married spouse lives with or is maintained by you and did not have an annual income exceeding S$4,000.</li>
+      <li><strong>Qualifying Child Relief (QCR):</strong> S$4,000 per eligible child maintained by you during the year.</li>
+      <li><strong>Course Fee Relief:</strong> Up to S$5,500 annually for tuition fees and examination fees for courses, seminars, or certifications related to your trade or employment.</li>
+      <li><strong>Supplementary Retirement Scheme (SRS):</strong> Voluntary contributions up to S$35,700 per year for foreigners receive a 100% dollar-for-dollar tax deduction.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      5. Resigning or Changing Jobs: Form IR21 Tax Clearance
+    </h2>
+    <p>
+      When your employment ends—whether you are changing companies, your pass is cancelled, or you are returning to your home country—Singapore law mandates a formal tax clearance process:
+    </p>
+    <ol class="space-y-2 list-decimal pl-5 text-sm">
+      <li>Your employer must file <strong>Form IR21</strong> electronically with IRAS at least <strong>30 days prior</strong> to your final day of work.</li>
+      <li>The employer is legally required to <strong>withhold 100% of your remaining salary</strong>, unused leave encashment, and final incentives from the date you submit notice.</li>
+      <li>IRAS computes any outstanding tax liabilities across the current and preceding tax years and issues a <em>Directive to Pay Tax</em> to your employer.</li>
+      <li>Your employer remits the required amount directly to IRAS and releases any surplus remaining balance to you. Once cleared, IRAS issues a <em>Tax Clearance Notice</em>.</li>
+    </ol>
+
+    <!-- STRATEGIC INTERNAL CROSS-LINKING -->
+    <div class="my-8 p-5 rounded-2xl bg-canvas-soft border border-hairline dark:bg-surface dark:border-overlay-lighter">
+      <h4 class="font-bold text-ink dark:text-on-primary text-sm sm:text-base flex items-center gap-2">
+        <span>📖</span> Related Singapore Tax Intelligence:
+      </h4>
+      <p class="text-xs sm:text-sm text-body dark:text-muted mt-1">
+        Learn about advanced expat tax planning in the <a href="/blogs/singapore-tax-for-foreigners-expats-guide/" class="text-primary font-semibold hover:underline dark:text-link">Singapore Expat &amp; EP Tax Guide</a>, or check how to file your tax return step-by-step in the <a href="/blogs/singapore-how-to-pay-file-income-tax-iras/" class="text-primary font-semibold hover:underline dark:text-link">IRAS Tax Portal e-Filing Guide</a>.
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      Frequently Asked Questions
+    </h2>
+    <div class="space-y-4 my-6">
+      {faqSchema.mainEntity.map(item => (
+        <article class="p-5 rounded-2xl border border-hairline bg-canvas-soft/40 dark:border-overlay-lighter dark:bg-surface/50">
+          <h3 class="font-bold text-base text-ink dark:text-on-primary">
+            {item.name}
+          </h3>
+          <p class="mt-2 text-xs sm:text-sm text-body dark:text-muted leading-relaxed">
+            {item.acceptedAnswer.text}
+          </p>
+        </article>
+      ))}
+    </div>
+  </div>
+</BlogLayout>
