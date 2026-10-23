@@ -5,7 +5,8 @@ export function getStaticPaths() {
   return [
     { params: { comparison: "hong-kong-vs-singapore" } },
     { params: { comparison: "united-states-vs-united-kingdom" } },
-    { params: { comparison: "india-vs-singapore-nri-tax" } }
+    { params: { comparison: "india-vs-singapore-nri-tax" } },
+    { params: { comparison: "malaysia-vs-indonesia" } }
   ];
 }
 
@@ -102,8 +103,8 @@ const dataMap: Record<string, any> = {
       { name: "US Payroll Tax Calculator", url: "/countries/united-states/payroll-tax/payroll-tax-calculator/" }
     ],
     calculatorsB: [
-      { name: "UK Income Tax Guide", url: "/countries/united-kingdom/income-tax/tax-residency-guide/" },
-      { name: "UK VAT Calculator", url: "/countries/united-kingdom/vat/vat-guide/" }
+      { name: "UK PAYE Income Tax Calculator", url: "/countries/united-kingdom/income-tax/income-tax-calculator/" },
+      { name: "UK VAT Calculator", url: "/countries/united-kingdom/vat/vat-calculator/" }
     ]
   },
   "india-vs-singapore-nri-tax": {
@@ -150,6 +151,53 @@ const dataMap: Record<string, any> = {
     ],
     calculatorsB: [
       { name: "Singapore Income Tax Calculator", url: "/countries/singapore/income-tax/income-tax-calculator/" }
+    ]
+  },
+  "malaysia-vs-indonesia": {
+    title: "Malaysia vs Indonesia Tax Comparison for Expats & Nomads 2026",
+    description: "Detailed side-by-side tax comparison between Malaysia and Indonesia. Compare progressive personal tax rates (30% vs 35%), 183-day residency rules, FSI foreign income, PPh 21, and Bali digital nomad rules.",
+    countryA: { name: "Malaysia", flag: "🇲🇾", currency: "MYR" },
+    countryB: { name: "Indonesia", flag: "🇮🇩", currency: "IDR" },
+    summary: "Malaysia and Indonesia represent Southeast Asia's two largest dynamic economies. Malaysia offers a competitive progressive tax structure (0% to 30%) with foreign source income (FSI) tax exemptions and a territorial footprint, while Indonesia taxes residents on worldwide income (5% to 35%) with special 4-year foreign-source territorial exemptions under the Job Creation Law for qualifying foreign specialists.",
+    matrix: [
+      { feature: "Top Personal Income Tax Rate", countryA: "30% (on income > RM 2,000,000)", countryB: "35% (on income > IDR 5 Billion)" },
+      { feature: "Non-Resident Flat Tax Rate", countryA: "30% Flat Rate (No Personal Reliefs)", countryB: "20% Flat Withholding (PPh 26)" },
+      { feature: "Standard Corporate Tax Rate", countryA: "24% (15%-17% for Qualifying SMEs)", countryB: "22% (0.5% Final for Micro-SMEs)" },
+      { feature: "Capital Gains Tax on Equities", countryA: "0% on Listed Equities", countryB: "0.1% Final Withholding on IDX Shares" },
+      { feature: "Consumption Tax (SST vs VAT)", countryA: "SST (6%/8% Services, 5-10% Sales)", countryB: "VAT / PPN (11% – 12% Standard Rate)" },
+      { feature: "Foreign Sourced Income (FSI)", countryA: "Exempt for Individuals until end of 2026", countryB: "Worldwide Tax (4-Year Exemption for Experts)" },
+      { feature: "Digital Nomad / Remote Worker Pass", countryA: "DE Rantau Nomad Pass (3-4% Tax)", countryB: "Remote Worker Visa E33G / KITAS" }
+    ],
+    sections: [
+      {
+        title: "183-Day Tax Residency Rules in Malaysia vs. Indonesia",
+        content: "Both Malaysia and Indonesia rely on the international 183-day physical presence test. In Malaysia, staying 182 days or more in a calendar year establishes tax resident status under Section 7 of the Income Tax Act 1967. In Indonesia, staying more than 183 days within any 12-month period makes you a domestic tax resident (Subjek Pajak Dalam Negeri) subject to DJP progressive rates."
+      },
+      {
+        title: "Foreign-Sourced Income (FSI) Exemption Frameworks",
+        content: "Malaysia traditionally maintained a strict territorial tax system. Although foreign source income remitted by residents became nominally taxable in 2022, Malaysia's Ministry of Finance issued statutory tax exemption orders for individuals until December 31, 2026, provided the income was taxed abroad. Indonesia levies worldwide tax on residents, but under the Job Creation Law (Undang-Undang Cipta Kerja), foreign specialists residing in Indonesia are exempt from Indonesian tax on foreign-sourced income for their first 4 consecutive tax years."
+      },
+      {
+        title: "Retirement & Social Security Deductions (EPF vs. BPJS)",
+        content: "In Malaysia, Employees Provident Fund (EPF) contributions are voluntary for foreign expatriates (with a 2% employee option), providing tax-free dividend growth. In Indonesia, BPJS Ketenagakerjaan (manpower social security) is mandatory for workers employed for more than six months, covering work accident, death, and old-age security (JHT)."
+      },
+      {
+        title: "Bali Digital Nomads vs. Kuala Lumpur Expat Hubs",
+        content: "Remote workers choosing between Bali and Kuala Lumpur face differing compliance environments. Malaysia's DE Rantau Nomad visa explicitly caters to IT freelancers and remote workers earning over $24,000/year with a streamlined tax structure. Indonesia's E33G Remote Worker visa allows expats to live in Bali for up to one year while working for an overseas employer, without becoming local tax filers provided income originates outside Indonesia."
+      }
+    ],
+    faqs: [
+      { q: "Which country has lower taxes for expats: Malaysia or Indonesia?", a: "For mid-to-high salaries, Malaysia generally offers lower overall effective tax rates due to higher bracket thresholds and generous personal reliefs (RM 9,000 self allowance plus medical and lifestyle reliefs). Non-residents, however, pay 30% in Malaysia vs 20% in Indonesia." },
+      { q: "Do digital nomads pay tax in Bali under an E33G visa?", a: "Holders of the Indonesian E33G remote worker visa are not permitted to work for Indonesian clients. Their remote earnings sourced outside Indonesia are generally not subject to local Indonesian income tax during their temporary stay." },
+      { q: "Does Malaysia tax foreign investment dividends remitted from Indonesia or overseas?", a: "Under current Malaysian statutory exemptions valid until December 2026, foreign dividend income received by individuals in Malaysia is exempt from Malaysian personal income tax if it has been subject to tax in the country of origin." }
+    ],
+    calculatorsA: [
+      { name: "Malaysia Income Tax Calculator", url: "/countries/malaysia/income-tax/income-tax-calculator/" },
+      { name: "Malaysia Foreign Income Tax Calculator", url: "/countries/malaysia/foreign-income/foreign-income-calculator/" }
+    ],
+    calculatorsB: [
+      { name: "Indonesia Income Tax Calculator", url: "/countries/indonesia/income-tax/income-tax-calculator/" },
+      { name: "Indonesia VAT (PPN) Calculator", url: "/countries/indonesia/vat/vat-calculator/" }
     ]
   }
 };
