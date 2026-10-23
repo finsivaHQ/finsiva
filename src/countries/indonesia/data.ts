@@ -41,17 +41,26 @@ const taxCategories: TaxCategory[] = [
         slug: "tax-residency-guide",
         title: "Indonesia Tax Residency Guide",
         description: "Understand the 183-day quantitative test, KITAS/KITAP rules, non-resident 20% PPh 26 tax, and tax treaties.",
-        image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=80",
-        sections: [
-          {
-            title: "183-Day Quantitative Residency Test",
-            content: "An individual is classified as an Indonesian tax resident if they are present in Indonesia for more than 183 days within any 12-month period, or if they reside in Indonesia with the intention to stay."
-          },
-          {
-            title: "Non-Resident Withholding Tax (PPh 26)",
-            content: "Non-residents earning income from Indonesian sources are subject to a flat 20% withholding tax (PPh 26) on gross payment, unless reduced by a Double Taxation Agreement (DTA)."
-          }
-        ]
+        url: "/blogs/indonesia-tax-for-expats-foreigners-bali-guide/",
+        image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=80"
+      },
+      {
+        slug: "digital-nomad-e33g-tax-guide",
+        title: "Digital Nomad E33G Visa Tax Guide",
+        description: "Learn whether remote workers and digital nomads in Bali pay tax on foreign client earnings and the 183-day residency cliff.",
+        url: "/blogs/indonesia-digital-nomad-visa-tax-e33g-guide/"
+      },
+      {
+        slug: "183-day-worldwide-tax-guide",
+        title: "183-Day Rule & Worldwide Tax Guide",
+        description: "How the rolling 12-month physical presence test works, SPT Form 1770 filing, and Article 24 foreign tax credits.",
+        url: "/blogs/indonesia-183-day-tax-residency-worldwide-income-guide/"
+      },
+      {
+        slug: "kitas-tax-npwp-guide",
+        title: "KITAS Tax Obligations & PPh 21 Guide",
+        description: "Complete guide for Working and Investor KITAS holders on NPWP requirements, TER withholding, and BPJS deductions.",
+        url: "/blogs/indonesia-kitas-tax-obligations-npwp-pph21-guide/"
       }
     ],
     faqs: [

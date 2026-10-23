@@ -1,0 +1,297 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Indonesia Digital Nomad Tax: E33G Visa & Remote Worker Guide";
+const description = "Complete 2026 tax guide for Bali digital nomads and E33G Remote Worker Visa holders. 183-day rule, foreign client tax exemption, and DJP filing.";
+const image = "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=80";
+const author = "Dewi Lestari, International Expat Tax Advisory Lead";
+const authorBio = "Senior International Tax Specialist advising expatriates, digital nomads in Bali, KITAS holders, and foreign tech founders on Indonesian DJP tax compliance and bilateral DTAs.";
+const canonical = "https://finsiva.com/blogs/indonesia-digital-nomad-visa-tax-e33g-guide/";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Do E33G Remote Worker Visa holders pay income tax in Indonesia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "E33G Remote Worker Visa holders do not pay Indonesian income tax on remote earnings paid by offshore foreign employers, provided they do not conduct commercial business with Indonesian domestic clients or stay in Indonesia beyond 183 days without qualifying for the Omnibus Law expat territorial exemption."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What happens if a digital nomad stays in Bali for more than 183 days?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Staying in Indonesia for more than 183 days in any 12-month period classifies a foreigner as a domestic tax resident (Subjek Pajak Dalam Negeri). Tax residents must register for an NPWP tax number and are subject to progressive tax rates (5% to 35%) on global income unless exempt."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Can digital nomads work for Indonesian clients on an E33G visa?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. The Indonesian E33G Remote Worker Visa strictly prohibits working for Indonesian companies or generating local domestic income. Doing so violates immigration laws and triggers immediate domestic corporate and personal income tax liabilities."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How does the Job Creation Law 4-year territorial tax exemption work?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Under the Job Creation Law (UU Cipta Kerja), qualifying foreign specialists who become tax residents are taxed only on Indonesian-sourced income for their first 4 calendar years, exempting overseas dividends, capital gains, and remote earnings not remitted through domestic exploitation."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="October 2026"
+  readTime="14 min read"
+  canonical={canonical}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <!-- Summary Box -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-lighter dark:bg-surface">
+      <h2 class="text-xl font-bold text-ink dark:text-on-primary mb-3">
+        Quick Executive Summary: E33G Digital Nomad Tax Rules
+      </h2>
+      <ul class="space-y-2 text-sm leading-relaxed">
+        <li>
+          <strong>E33G Remote Worker Visa:</strong> Introduced by Indonesia's Directorate General of Immigration, allowing foreign remote workers earning at least $60,000 USD/year from offshore employers to live legally in Bali and across Indonesia for up to 1 year (renewable for up to 2 years).
+        </li>
+        <li>
+          <strong>Tax Status Under 183 Days:</strong> Foreign remote workers staying 182 days or fewer in a rolling 12-month period remain non-residents (SPLN). Foreign-sourced salary remitted into offshore bank accounts is 100% exempt from Indonesian income tax.
+        </li>
+        <li>
+          <strong>The 183-Day Residency Cliff:</strong> Staying past 183 days triggers domestic tax resident status (SPDN) under Article 2 of the Income Tax Act (UU PPh) and Law No. 7/2021 (UU HPP), potentially subjecting worldwide earnings to progressive rates (5% to 35%).
+        </li>
+        <li>
+          <strong>The 4-Year Expat Territorial Shield:</strong> Foreigners possessing specific STEM or managerial skill sets can elect for territorial taxation for their first 4 years under Article 4(1a) of UU Cipta Kerja.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Hub CTA Card -->
+    <aside class="my-8 rounded-2xl border-2 border-primary/20 bg-primary/5 p-6 dark:border-primary/30 dark:bg-primary/10">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-primary">
+            Interactive Tax Modeling
+          </span>
+          <h3 class="text-lg font-bold text-ink dark:text-on-primary">
+            Calculate Your Indonesian Personal Income Tax (PPh 21)
+          </h3>
+          <p class="text-xs sm:text-sm text-body dark:text-muted mt-1 max-w-xl">
+            Simulate your take-home pay, progressive tax brackets (5% to 35%), and PTKP deductions under current Directorate General of Taxes (DJP) rules.
+          </p>
+        </div>
+        <a
+          href="/countries/indonesia/income-tax/income-tax-calculator/"
+          class="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-primary text-on-primary hover:opacity-90 transition shadow-sm dark:bg-on-primary dark:text-primary"
+        >
+          <span>Open Indonesia Tax Calculator</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+    </aside>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      Do E33G Remote Worker Visa Holders Pay Income Tax in Indonesia?
+    </h2>
+    <p>
+      E33G Remote Worker Visa holders do not pay Indonesian income tax on remote earnings paid by offshore foreign employers, provided they do not conduct commercial business with Indonesian domestic clients or stay in Indonesia beyond 183 days without qualifying for the Omnibus Law expat territorial exemption.
+    </p>
+    <p>
+      For years, digital nomads residing in Canggu, Ubud, and Uluwatu operated in a legal gray zone using Tourist Visas on Arrival (B1/VoA) or Pre-Investment Visas (C11/B211A). The Indonesian Directorate General of Immigration addressed this ambiguity by launching the <strong>E33G Remote Worker Visa</strong>. This dedicated visa explicitly allows foreign employees and freelancers to reside in Indonesia while working exclusively for companies outside Indonesia.
+    </p>
+    <p>
+      However, immigration legality does not automatically overwrite fiscal law. Indonesia's tax code is governed separately by the <em>Direktorat Jenderal Pajak (DJP)</em> under the Ministry of Finance. Below is the operational comparison of visa rules versus tax obligations:
+    </p>
+
+    <!-- Comparison Table -->
+    <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+      <table class="w-full text-left text-xs sm:text-sm">
+        <thead class="bg-canvas-soft dark:bg-surface-soft border-b border-hairline dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+          <tr>
+            <th class="p-3 sm:p-4">Visa &amp; Tax Parameter</th>
+            <th class="p-3 sm:p-4">Short Stay (&le; 183 Days)</th>
+            <th class="p-3 sm:p-4">Extended Stay (&gt; 183 Days)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Tax Residency Classification</td>
+            <td class="p-3 sm:p-4">Non-Resident (SPLN)</td>
+            <td class="p-3 sm:p-4 font-bold text-primary">Domestic Tax Resident (SPDN)</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Tax on Remote Foreign Salary</td>
+            <td class="p-3 sm:p-4 text-emerald-600 dark:text-emerald-400 font-semibold">0% (Tax-Free in Indonesia)</td>
+            <td class="p-3 sm:p-4">5% – 35% Progressive (or 4-Year Expat Exemption)</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">NPWP Tax Registration</td>
+            <td class="p-3 sm:p-4">Not Required</td>
+            <td class="p-3 sm:p-4">Mandatory within 30 days of crossing 183 days</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Annual Tax Return (SPT Tahunan)</td>
+            <td class="p-3 sm:p-4">No Filing Required</td>
+            <td class="p-3 sm:p-4">Mandatory via DJP Online before March 31</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Indonesian Source Income Tax</td>
+            <td class="p-3 sm:p-4">Flat 20% PPh 26 Withholding</td>
+            <td class="p-3 sm:p-4">5% – 35% Progressive PPh 21 Rates</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      What Triggers Indonesian Tax Residency for Digital Nomads?
+    </h2>
+    <p>
+      An expatriate becomes an Indonesian domestic tax resident (Subjek Pajak Dalam Negeri / SPDN) immediately upon staying in the country for more than 183 days within any consecutive 12-month period, or by signing a long-term contract or lease establishing legal intent to reside.
+    </p>
+    <p>
+      Under Article 2, Paragraph 3 of the Income Tax Act (UU PPh), physical presence is measured on a rolling 365-day basis, not a calendar year. This catches many digital nomads off-guard:
+    </p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li>
+        <strong>The Rolling Period Trap:</strong> If you arrive in Bali on October 1, 2025, and stay continuously through June 1, 2026, you have logged 244 days within an 8-month window. You have legally triggered tax residency, even though your stay was split across two separate calendar tax years.
+      </li>
+      <li>
+        <strong>The Intent to Reside Clause:</strong> If you enter on a working KITAS or sign a 2-year villa lease with your family, DJP tax officers can classify you as a tax resident from day one based on demonstrable intent.
+      </li>
+    </ul>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      How Does the 4-Year Territorial Expat Tax Exemption Work?
+    </h2>
+    <p>
+      Under Law No. 7/2021 on the Harmonization of Tax Regulations (UU HPP) amending the Job Creation Law, qualifying foreign professionals residing in Indonesia are taxed exclusively on Indonesian-sourced income for their first 4 tax years, completely shielding their overseas foreign investments and salaries from Indonesian progressive rates.
+    </p>
+    <p>
+      This represents one of Indonesia's most significant tax reforms, specifically designed to attract foreign capital, technology founders, and highly skilled specialists. To qualify for this 4-year territorial tax protection:
+    </p>
+    <ol class="list-decimal pl-6 space-y-3">
+      <li>
+        <strong>Specialized Skill Requirement:</strong> The foreign national must possess specialized skills in science, technology, engineering, mathematics (STEM), or corporate leadership as regulated under Minister of Finance Regulation No. 18/PMK.03/2021.
+      </li>
+      <li>
+        <strong>Offshore Sourcing Test:</strong> The foreign income must originate entirely outside Indonesia and cannot be paid by an Indonesian permanent establishment (BUT) or related Indonesian subsidiary.
+      </li>
+      <li>
+        <strong>No Double Tax Treaty Abuse:</strong> The taxpayer cannot claim dual treaty relief on the same shielded income in their home jurisdiction.
+      </li>
+    </ol>
+
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-5 my-6 dark:border-overlay-lighter dark:bg-surface">
+      <h4 class="font-bold text-ink dark:text-on-primary mb-2 text-sm sm:text-base">
+        Important Caveat on the 4-Year Exemption for E33G Nomads:
+      </h4>
+      <p class="text-xs sm:text-sm leading-relaxed">
+        The 4-year exemption requires an active application and verification of professional credentials through the DJP. If you are an unregistered freelancer living in Bali who crosses 183 days without formal expat qualification, the DJP default position is to treat you as a standard domestic tax resident subject to worldwide income reporting on Form 1770.
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      What are the Indonesian Personal Income Tax Brackets for 2026?
+    </h2>
+    <p>
+      Indonesian tax residents are taxed on net chargeable income at progressive rates ranging from 5% up to 35% across five statutory income tiers, after deducting the Non-Taxable Income allowance (Penghasilan Tidak Kena Pajak / PTKP).
+    </p>
+    <p>
+      Chargeable income is calculated after applying standard deductions, including the basic personal PTKP of IDR 54,000,000 for single taxpayers, plus IDR 4,500,000 for married taxpayers and IDR 4,500,000 per child (up to 3 dependents):
+    </p>
+
+    <!-- Tax Slabs Table -->
+    <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+      <table class="w-full text-left text-xs sm:text-sm">
+        <thead class="bg-canvas-soft dark:bg-surface-soft border-b border-hairline dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+          <tr>
+            <th class="p-3 sm:p-4">Taxable Income Slab (IDR)</th>
+            <th class="p-3 sm:p-4">Tax Rate</th>
+            <th class="p-3 sm:p-4">Approximate USD Equivalent</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 sm:p-4 font-mono">Up to IDR 60,000,000</td>
+            <td class="p-3 sm:p-4 font-bold text-emerald-600 dark:text-emerald-400">5%</td>
+            <td class="p-3 sm:p-4">Up to ~$3,750 USD</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-mono">IDR 60,000,001 &ndash; IDR 250,000,000</td>
+            <td class="p-3 sm:p-4 font-semibold">15%</td>
+            <td class="p-3 sm:p-4">~$3,751 &ndash; $15,600 USD</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-mono">IDR 250,000,001 &ndash; IDR 500,000,000</td>
+            <td class="p-3 sm:p-4 font-semibold">25%</td>
+            <td class="p-3 sm:p-4">~$15,601 &ndash; $31,250 USD</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-mono">IDR 500,000,001 &ndash; IDR 5,000,000,000</td>
+            <td class="p-3 sm:p-4 font-bold text-amber-600 dark:text-amber-400">30%</td>
+            <td class="p-3 sm:p-4">~$31,251 &ndash; $312,500 USD</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-mono">Above IDR 5,000,000,000</td>
+            <td class="p-3 sm:p-4 font-bold text-red-600 dark:text-red-400">35%</td>
+            <td class="p-3 sm:p-4">Above ~$312,500 USD</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      To see how these marginal brackets apply to your specific monthly or annual salary, use our <a href="/countries/indonesia/income-tax/income-tax-calculator/" class="text-link font-semibold hover:underline">Indonesia Income Tax Calculator</a> for instant net take-home computations.
+    </p>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      How Can Bali Digital Nomads Remain 100% Tax Compliant?
+    </h2>
+    <p>
+      Digital nomads can maintain complete tax and legal compliance in Indonesia by adhering to a clear four-step strategy:
+    </p>
+    <ul class="list-disc pl-6 space-y-3">
+      <li>
+        <strong>Monitor Physical Presence (The 180-Day Rule):</strong> If you do not intend to become an Indonesian tax resident, limit your cumulative stay to under 183 days in any 12-month rolling window. Many remote workers follow a 5-month stay in Bali followed by travel elsewhere in Southeast Asia.
+      </li>
+      <li>
+        <strong>Never Bill Indonesian Clients Directly on an E33G Visa:</strong> Generating domestic income in rupiah from Indonesian businesses or individuals constitutes unlawful employment under immigration regulations and triggers immediate local PPh 21/PPh 23 tax assessments.
+      </li>
+      <li>
+        <strong>Utilize Bilateral Double Taxation Agreements (DTAs):</strong> Indonesia has over 70 DTAs. If you are a tax resident of the UK, US, Australia, or Germany, ensure you obtain a Certificate of Fiscal Residence (CoR) from your home jurisdiction to prevent paying double taxes.
+      </li>
+      <li>
+        <strong>Formalize Your Stay via KITAS if Settling Permanently:</strong> If you intend to establish permanent residency in Indonesia, transition from the E33G to an Investor KITAS (E28A) or Working KITAS (E23), register for an NPWP, and submit your annual SPT Tahunan before March 31.
+      </li>
+    </ul>
+
+    <!-- Related Links -->
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Related Indonesia Expat Tax Guides &amp; Tools</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/countries/indonesia/income-tax/income-tax-calculator/" class="text-link hover:underline font-medium">Indonesia Income Tax Calculator</a>
+        <a href="/blogs/indonesia-tax-for-expats-foreigners-bali-guide/" class="text-link hover:underline font-medium">Expat &amp; Foreigner Bali Tax Hub</a>
+        <a href="/blogs/indonesia-income-tax-rates-brackets-2026/" class="text-link hover:underline font-medium">Personal Tax Rates &amp; Brackets 2026</a>
+        <a href="/blogs/indonesia-corporate-tax-guide-2026/" class="text-link hover:underline font-medium">Corporate Tax &amp; PT PMA Guide</a>
+        <a href="/countries/indonesia/" class="text-link hover:underline font-medium">Finsiva Indonesia Tax Portal</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>

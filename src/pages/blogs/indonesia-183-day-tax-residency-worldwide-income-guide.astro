@@ -1,0 +1,245 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Indonesia 183-Day Tax Residency: Worldwide Income Rules";
+const description = "Understand the Indonesian 183-day tax residency rule, worldwide income reporting on SPT Form 1770, foreign tax credits, and non-resident PPh 26 flat tax.";
+const image = "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&q=80";
+const author = "Dewi Lestari, International Expat Tax Advisory Lead";
+const authorBio = "Senior International Tax Specialist advising expatriates, digital nomads in Bali, KITAS holders, and foreign tech founders on Indonesian DJP tax compliance and bilateral DTAs.";
+const canonical = "https://finsiva.com/blogs/indonesia-183-day-tax-residency-worldwide-income-guide/";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How is the 183-day tax residency rule calculated in Indonesia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Under Article 2(3) of the Indonesian Income Tax Act, an individual is a domestic tax resident if present in Indonesia for more than 183 days within any continuous 12-month period. Partial days of presence, including arrival and departure dates, count as full days toward the 183-day threshold."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Does Indonesia tax worldwide income for foreign tax residents?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Once deemed an Indonesian domestic tax resident, you are legally subject to tax on your global worldwide income under the Income Tax Act, unless you qualify for the 4-year territorial tax exemption for foreign specialists introduced under the Job Creation Law (UU Cipta Kerja)."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What tax rate applies to non-residents earning Indonesian income?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Non-residents present in Indonesia for 182 days or less are subject to a flat 20% final withholding tax (PPh 26) on gross Indonesian-sourced payments, without entitlement to PTKP non-taxable allowances, unless reduced by an applicable Double Taxation Agreement (DTA)."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Can foreign taxes paid overseas be credited against Indonesian income tax?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Under Article 24 of the Income Tax Act (PPh 24), Indonesian tax residents can claim a foreign tax credit for taxes paid overseas on foreign-sourced income, capped at the amount of Indonesian tax proportionally attributable to that foreign income."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="October 2026"
+  readTime="15 min read"
+  canonical={canonical}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <!-- Summary Box -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-lighter dark:bg-surface">
+      <h2 class="text-xl font-bold text-ink dark:text-on-primary mb-3">
+        Quick Executive Summary: The 183-Day Rule &amp; Worldwide Taxation
+      </h2>
+      <ul class="space-y-2 text-sm leading-relaxed">
+        <li>
+          <strong>The Quantitative Standard:</strong> An individual is classified as an Indonesian domestic tax resident (<em>Subjek Pajak Dalam Negeri / SPDN</em>) by being physically present in Indonesia for <strong>more than 183 days</strong> within any continuous 12-month timeframe.
+        </li>
+        <li>
+          <strong>The Rolling Window Trap:</strong> The 183-day counter does not reset on January 1st. It applies across any rolling 365-day period, meaning cross-year stays automatically count.
+        </li>
+        <li>
+          <strong>Tax Scope:</strong> Domestic residents pay progressive rates (5% to 35%) on global worldwide income. Non-residents pay a flat 20% final withholding tax (PPh 26) strictly on Indonesian-sourced income.
+        </li>
+        <li>
+          <strong>Relief Mechanisms:</strong> Article 24 Foreign Tax Credits (PPh 24) and over 70 bilateral Double Taxation Avoidance Agreements (DTAs) prevent double taxation on foreign dividends, interest, and capital gains.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Hub CTA Card -->
+    <aside class="my-8 rounded-2xl border-2 border-primary/20 bg-primary/5 p-6 dark:border-primary/30 dark:bg-primary/10">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-primary">
+            Instant Calculations
+          </span>
+          <h3 class="text-lg font-bold text-ink dark:text-on-primary">
+            Model Your Resident vs. Non-Resident Tax Liability
+          </h3>
+          <p class="text-xs sm:text-sm text-body dark:text-muted mt-1 max-w-xl">
+            Compare progressive 5%–35% resident rates versus flat 20% non-resident PPh 26 withholding with our free interactive tax calculator.
+          </p>
+        </div>
+        <a
+          href="/countries/indonesia/income-tax/income-tax-calculator/"
+          class="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-primary text-on-primary hover:opacity-90 transition shadow-sm dark:bg-on-primary dark:text-primary"
+        >
+          <span>Calculate Indonesian Tax Now</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+    </aside>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      How is the 183-Day Tax Residency Rule Calculated in Indonesia?
+    </h2>
+    <p>
+      Under Article 2(3) of the Indonesian Income Tax Act, an individual is a domestic tax resident if present in Indonesia for more than 183 days within any continuous 12-month period. Partial days of presence, including arrival and departure dates, count as full days toward the 183-day threshold.
+    </p>
+    <p>
+      Many expatriates and long-stay travelers assume that tax residency follows the calendar year. In Indonesia, this assumption is dangerous. The Directorate General of Taxes (DJP) monitors immigration entry and exit stamps using automated border databases (SIMKIM). The physical presence test evaluates every consecutive 365-day block.
+    </p>
+
+    <!-- Visual Example -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-5 my-6 dark:border-overlay-lighter dark:bg-surface">
+      <h4 class="font-bold text-ink dark:text-on-primary mb-2 text-sm sm:text-base">
+        Case Study: The Rolling 12-Month Trap
+      </h4>
+      <p class="text-xs sm:text-sm leading-relaxed mb-3">
+        Marcus, a software architect from Australia, arrives in Bali on <strong>November 1, 2025</strong> and stays until <strong>June 30, 2026</strong> (a continuous stay of 242 days).
+      </p>
+      <ul class="text-xs sm:text-sm space-y-1.5 list-disc pl-5">
+        <li>Stay in 2025 calendar year: 61 days</li>
+        <li>Stay in 2026 calendar year: 181 days</li>
+        <li><strong>DJP Assessment:</strong> Because 61 + 181 = 242 days within a rolling 8-month window, Marcus exceeds 183 days and becomes an Indonesian domestic tax resident retroactively from November 1, 2025.</li>
+      </ul>
+    </div>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      What is the Legal Difference Between SPDN and SPLN Status?
+    </h2>
+    <p>
+      Indonesia maintains a dual taxation structure dividing individuals into Domestic Tax Subjects (<em>Subjek Pajak Dalam Negeri / SPDN</em>) and Foreign Tax Subjects (<em>Subjek Pajak Luar Negeri / SPLN</em>), each governed by fundamentally different rates, deductions, and reporting duties:
+    </p>
+
+    <!-- SPDN vs SPLN Table -->
+    <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+      <table class="w-full text-left text-xs sm:text-sm">
+        <thead class="bg-canvas-soft dark:bg-surface-soft border-b border-hairline dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+          <tr>
+            <th class="p-3 sm:p-4">Compliance Parameter</th>
+            <th class="p-3 sm:p-4">Domestic Resident (SPDN)</th>
+            <th class="p-3 sm:p-4">Non-Resident (SPLN)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Qualifying Criteria</td>
+            <td class="p-3 sm:p-4">&gt; 183 days in 12 months, or intent to reside</td>
+            <td class="p-3 sm:p-4">&le; 183 days, no permanent domicile</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Tax Base Scope</td>
+            <td class="p-3 sm:p-4 font-bold text-primary">Worldwide Global Income</td>
+            <td class="p-3 sm:p-4">Indonesian-Sourced Income Only</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Applicable Tax Rates</td>
+            <td class="p-3 sm:p-4">Progressive 5% to 35% (UU HPP Slabs)</td>
+            <td class="p-3 sm:p-4 font-bold text-amber-600 dark:text-amber-400">Flat 20% Withholding (PPh 26)</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Personal Reliefs (PTKP)</td>
+            <td class="p-3 sm:p-4 text-emerald-600 dark:text-emerald-400 font-semibold">Yes (IDR 54M &ndash; IDR 72M deductible)</td>
+            <td class="p-3 sm:p-4 font-semibold text-red-500">None (Gross withholding)</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">NPWP Tax ID Requirement</td>
+            <td class="p-3 sm:p-4">Mandatory</td>
+            <td class="p-3 sm:p-4">Not Required</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Annual Tax Return</td>
+            <td class="p-3 sm:p-4">Form 1770 / 1770 S before March 31</td>
+            <td class="p-3 sm:p-4">None (Tax finalized at withholding)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      How Does Indonesia Tax Worldwide Income for Tax Residents?
+    </h2>
+    <p>
+      Unless an expat qualifies for the statutory 4-year territorial exemption under the Job Creation Law, becoming an Indonesian tax resident subjects your global income—including foreign salary, offshore consulting fees, dividends, interest, rental yields, and capital gains—to Indonesian progressive tax rates.
+    </p>
+    <p>
+      Under Article 4(1) of the Income Tax Act, taxable income is broadly defined as any economic accretion received or accrued by a taxpayer, whether originating from within Indonesia or from abroad, that can be used for consumption or to increase wealth.
+    </p>
+
+    <h3 class="text-xl font-bold text-ink dark:text-on-primary mt-6">
+      How Can Expats Avoid Double Taxation via Article 24 Foreign Tax Credits?
+    </h3>
+    <p>
+      To prevent double taxation on income already taxed in foreign jurisdictions, Indonesian tax law provides the <strong>Article 24 Foreign Tax Credit (PPh 24)</strong>. This mechanism operates on the ordinary credit method:
+    </p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li>
+        <strong>The Credit Limitation Formula:</strong> The maximum credit allowable cannot exceed the amount of Indonesian tax that would have been payable on that foreign income.
+      </li>
+      <li>
+        <strong>Per-Country Basket Limitation:</strong> Tax credits must be calculated separately for each foreign nation from which income is derived (per-country limitation).
+      </li>
+      <li>
+        <strong>Required Documentation:</strong> You must attach official foreign tax assessment notices (such as IRS transcripts in the US or HMRC statements in the UK) when filing Form 1770 on the DJP Online portal.
+      </li>
+    </ul>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      What Happens When You Depart Indonesia: NPWP Cancellation &amp; NE Status
+    </h2>
+    <p>
+      A common compliance blunder among foreign expats is leaving Indonesia permanently without deregistering their NPWP tax identification number. Simply departing the country does not terminate your tax residency in the eyes of the DJP.
+    </p>
+    <p>
+      If your NPWP remains active, the DJP system will automatically flag you as a non-compliant taxpayer each March 31st for unfiled SPT returns, generating automatic IDR 100,000 late penalties and triggering audit inquiries. To close your tax obligations cleanly:
+    </p>
+    <ol class="list-decimal pl-6 space-y-2">
+      <li>
+        <strong>File for Non-Effective (NE) Status:</strong> If you are departing temporarily or have ceased earning Indonesian income, apply for <em>Wajib Pajak Non-Efektif (WP NE)</em> status. This suspends the obligation to file annual SPT returns without extinguishing your number.
+      </li>
+      <li>
+        <strong>Submit Full NPWP Cancellation (Pencabutan NPWP):</strong> If leaving permanently with your KITAS canceled (Exit Permit Only / EPO), file a formal cancellation request at your local KPP. The DJP will perform a routine tax audit covering open years before issuing an official Letter of Tax Number Revocation.
+      </li>
+    </ol>
+
+    <!-- Related Links -->
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Related Indonesia Tax Articles &amp; Calculators</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/countries/indonesia/income-tax/income-tax-calculator/" class="text-link hover:underline font-medium">Indonesia Income Tax Calculator</a>
+        <a href="/blogs/indonesia-digital-nomad-visa-tax-e33g-guide/" class="text-link hover:underline font-medium">Digital Nomad E33G Visa Tax Guide</a>
+        <a href="/blogs/indonesia-tax-for-expats-foreigners-bali-guide/" class="text-link hover:underline font-medium">Bali Expat &amp; Foreigner Tax Hub</a>
+        <a href="/blogs/indonesia-income-tax-rates-brackets-2026/" class="text-link hover:underline font-medium">Personal Tax Rates &amp; Brackets 2026</a>
+        <a href="/blogs/indonesia-corporate-tax-guide-2026/" class="text-link hover:underline font-medium">Corporate Tax &amp; PT PMA Guide</a>
+        <a href="/countries/indonesia/" class="text-link hover:underline font-medium">Finsiva Indonesia Tax Portal</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>

@@ -1,0 +1,238 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Indonesia KITAS Tax: NPWP, PPh 21 & Expat Rules";
+const description = "Comprehensive 2026 tax guide for Indonesian KITAS holders: Working (E23) vs Investor (E28A), NPWP registration, TER monthly withholding, and Form 1770 S.";
+const image = "https://images.unsplash.com/photo-1554224154-22dec7ec8818?w=1200&q=80";
+const author = "Dewi Lestari, International Expat Tax Advisory Lead";
+const authorBio = "Senior International Tax Specialist advising expatriates, digital nomads in Bali, KITAS holders, and foreign tech founders on Indonesian DJP tax compliance and bilateral DTAs.";
+const canonical = "https://finsiva.com/blogs/indonesia-kitas-tax-obligations-npwp-pph21-guide/";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Are KITAS holders required to obtain an NPWP tax number in Indonesia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. All foreign nationals holding an Indonesian Temporary Stay Permit (KITAS/ITAS) who reside in Indonesia or earn local Indonesian income are legally required to register for an NPWP (Nomor Pokok Wajib Pajak) with the Directorate General of Taxes (DJP)."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is the difference between Working KITAS and Investor KITAS tax rules?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Working KITAS (E23) holders receive local employment salaries subject to monthly employer PPh 21 withholding and BPJS contributions. Investor KITAS (E28A) holders do not draw employment salaries; their income consists primarily of corporate dividends subject to a 10% final tax."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How does the TER withholding scheme affect PPh 21 for expats?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Under Government Regulation PP 58/2023, employers calculate monthly PPh 21 deductions using the Average Effective Rate (TER - Tarif Efektif Rata-Rata) categories (A, B, C) based on gross monthly salary and PTKP status from January through November, with a true-up reconciliation in December."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "When is the annual SPT Tahunan tax filing deadline for KITAS holders?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Individual KITAS holders must submit their annual tax return (SPT Tahunan Form 1770 or 1770 S) via the DJP Online portal on or before March 31st following the end of the tax year to avoid late penalties."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="October 2026"
+  readTime="15 min read"
+  canonical={canonical}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <!-- Summary Box -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-lighter dark:bg-surface">
+      <h2 class="text-xl font-bold text-ink dark:text-on-primary mb-3">
+        Quick Executive Summary: KITAS Tax Compliance
+      </h2>
+      <ul class="space-y-2 text-sm leading-relaxed">
+        <li>
+          <strong>Automatic Tax Residency:</strong> Holding a KITAS (Temporary Stay Permit) legally establishes demonstrable "intent to reside" under Article 2 of the Indonesian Income Tax Act, making you a domestic tax resident (SPDN).
+        </li>
+        <li>
+          <strong>Working KITAS (Index E23/C312):</strong> Requires an Indonesian sponsor company (PT or PT PMA). Salary is subject to monthly PPh 21 withholding under the new TER (Tarif Efektif Rata-Rata) table and mandatory BPJS contributions.
+        </li>
+        <li>
+          <strong>Investor KITAS (Index E28A/C313/C314):</strong> Requires owning at least IDR 10 billion in authorized capital or IDR 1 billion in direct shares in a PT PMA. Dividends are taxed at a 10% final rate (or 0% if reinvested within Indonesia for 3 years).
+        </li>
+        <li>
+          <strong>Mandatory Filings:</strong> Annual individual SPT return (Form 1770 S for employees, Form 1770 for business owners) due by <strong>March 31st</strong> each year via DJP Online.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Hub CTA Card -->
+    <aside class="my-8 rounded-2xl border-2 border-primary/20 bg-primary/5 p-6 dark:border-primary/30 dark:bg-primary/10">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-primary">
+            Instant Calculations
+          </span>
+          <h3 class="text-lg font-bold text-ink dark:text-on-primary">
+            Calculate Your Net Indonesian Take-Home Salary (PPh 21)
+          </h3>
+          <p class="text-xs sm:text-sm text-body dark:text-muted mt-1 max-w-xl">
+            Compute your progressive income tax brackets, monthly TER withholding, and PTKP deductions with our official interactive tax calculator.
+          </p>
+        </div>
+        <a
+          href="/countries/indonesia/income-tax/income-tax-calculator/"
+          class="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-primary text-on-primary hover:opacity-90 transition shadow-sm dark:bg-on-primary dark:text-primary"
+        >
+          <span>Calculate KITAS Salary Tax</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+    </aside>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      Are KITAS Holders Legally Required to Have an NPWP in Indonesia?
+    </h2>
+    <p>
+      Yes. All foreign nationals holding an Indonesian Temporary Stay Permit (KITAS/ITAS) who reside in Indonesia or earn local Indonesian income are legally required to register for an NPWP (Nomor Pokok Wajib Pajak) with the Directorate General of Taxes (DJP).
+    </p>
+    <p>
+      Holding a KITAS establishes legal proof of "intent to reside" (<em>niat untuk bertempat tinggal</em>) under Indonesian tax statutes. Consequently, even if you spend fewer than 183 days in the country in your initial year, immigration authorities share residency telemetry directly with the DJP through integrated ministerial databases.
+    </p>
+    <p>
+      Without an NPWP, foreign employees face severe penalties: employers are mandated by law to withhold PPh 21 employment tax at a <strong>20% punitive surcharge</strong> above standard progressive rates.
+    </p>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      What is the Difference Between Working KITAS and Investor KITAS Tax Rules?
+    </h2>
+    <p>
+      The tax profile of an expatriate in Indonesia depends fundamentally on the legal classification of their stay permit:
+    </p>
+
+    <!-- Comparison Table -->
+    <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+      <table class="w-full text-left text-xs sm:text-sm">
+        <thead class="bg-canvas-soft dark:bg-surface-soft border-b border-hairline dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+          <tr>
+            <th class="p-3 sm:p-4">Tax &amp; Legal Feature</th>
+            <th class="p-3 sm:p-4">Working KITAS (Index E23 / C312)</th>
+            <th class="p-3 sm:p-4">Investor KITAS (Index E28A / C313)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Primary Income Source</td>
+            <td class="p-3 sm:p-4">Employment Salary &amp; Allowances</td>
+            <td class="p-3 sm:p-4">Corporate Dividends / Director Fees</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Withholding Tax Regime</td>
+            <td class="p-3 sm:p-4 font-bold text-primary">Monthly PPh 21 TER Withholding</td>
+            <td class="p-3 sm:p-4 font-bold text-emerald-600 dark:text-emerald-400">10% Final Tax on Dividends</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">DKP-TKA Manpower Compensation</td>
+            <td class="p-3 sm:p-4">$100 USD/month paid by employer</td>
+            <td class="p-3 sm:p-4 text-emerald-600 dark:text-emerald-400 font-semibold">Exempt ($0 USD)</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Social Security (BPJS)</td>
+            <td class="p-3 sm:p-4">Mandatory (Kesehatan &amp; Ketenagakerjaan)</td>
+            <td class="p-3 sm:p-4">Not mandatory unless drawing local salary</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Annual Tax Return Form</td>
+            <td class="p-3 sm:p-4">Form 1770 S (with Form 1721-A1 voucher)</td>
+            <td class="p-3 sm:p-4">Form 1770 (declaring shareholdings &amp; assets)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      How Does the New Monthly TER Withholding Scheme Work for Expats?
+    </h2>
+    <p>
+      Under Government Regulation PP 58/2023 and Minister of Finance Regulation PMK 168/2023, Indonesia replaced complex monthly progressive brackets with a standardized Average Effective Rate (<em>Tarif Efektif Rata-Rata / TER</em>) system for PPh 21 employment withholding.
+    </p>
+    <p>
+      From January through November of each calendar tax year, employers withhold tax directly from your gross monthly earnings by looking up your exact income bracket in one of three statutory tables based on your Non-Taxable Income (PTKP) classification:
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6 text-sm">
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h4 class="font-bold text-ink mb-1 dark:text-on-primary">Category A (TER A)</h4>
+        <p class="text-xs text-muted dark:text-muted">Applies to single taxpayers without dependents (TK/0), single with 1 dependent (TK/1), and married without dependents (K/0). Rates range from 0% (up to IDR 5.4M/mo) up to 34% (above IDR 1.4B/mo).</p>
+      </div>
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h4 class="font-bold text-ink mb-1 dark:text-on-primary">Category B (TER B)</h4>
+        <p class="text-xs text-muted dark:text-muted">Applies to single taxpayers with 2 dependents (TK/2), single with 3 dependents (TK/3), married with 1 dependent (K/1), and married with 2 dependents (K/2). Rates range from 0% (up to IDR 6.2M/mo) up to 34%.</p>
+      </div>
+      <div class="rounded-lg border border-hairline bg-canvas p-4 dark:border-overlay-lighter dark:bg-surface">
+        <h4 class="font-bold text-ink mb-1 dark:text-on-primary">Category C (TER C)</h4>
+        <p class="text-xs text-muted dark:text-muted">Applies to married taxpayers with 3 dependents (K/3). Rates range from 0% (up to IDR 6.6M/mo) up to 34% for high earners.</p>
+      </div>
+    </div>
+
+    <p>
+      <strong>The December True-Up:</strong> In December, your employer computes your total annual tax liability using standard progressive brackets (5% to 35%) minus your full annual PTKP and occupational expenses (Biaya Jabatan: 5%, capped at IDR 6,000,000/year). The tax withheld from January to November is credited, and only the net difference is deducted in your December paycheck.
+    </p>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      How Do You File Form 1770 S on the DJP Online Portal?
+    </h2>
+    <p>
+      Every expatriate tax resident must submit their individual annual tax return (SPT Tahunan) through the official <em>DJP Online</em> portal before <strong>March 31st</strong> following the end of the tax year.
+    </p>
+    <p>
+      Follow this step-by-step checklist to avoid common filing rejections and tax authority audits:
+    </p>
+    <ol class="list-decimal pl-6 space-y-3">
+      <li>
+        <strong>Collect Form 1721-A1 from Your Employer:</strong> Before January 31st, your Indonesian employer must provide official withholding Form 1721-A1 (Bukti Potong PPh 21) detailing your gross annual compensation and all taxes withheld.
+      </li>
+      <li>
+        <strong>Obtain Your EFIN (Electronic Filing Identification Number):</strong> If filing for the first time, visit any local tax office (KPP) or email your registered KPP with your passport and KITAS to activate your EFIN code.
+      </li>
+      <li>
+        <strong>Log in to DJP Online (djponline.pajak.go.id):</strong> Access the e-Filing module and select Form 1770 S (for salaried individuals earning more than IDR 60 million/year).
+      </li>
+      <li>
+        <strong>Declare Worldwide Assets and Liabilities:</strong> Under Indonesian transparency rules, you must disclose your end-of-year asset holdings (Indonesian bank accounts, vehicles, foreign securities, and real estate) in Section B of the return.
+      </li>
+      <li>
+        <strong>Submit with SMS/Email Token:</strong> Request an authorization verification token sent to your registered phone or email, enter the OTP, and download your Electronic Filing Receipt (Bukti Penerimaan Elektronik / BPE).
+      </li>
+    </ol>
+
+    <!-- Related Links -->
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Related Indonesia Tax Guides &amp; Tools</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/countries/indonesia/income-tax/income-tax-calculator/" class="text-link hover:underline font-medium">Indonesia Income Tax Calculator</a>
+        <a href="/blogs/indonesia-183-day-tax-residency-worldwide-income-guide/" class="text-link hover:underline font-medium">183-Day Tax Residency &amp; Worldwide Income</a>
+        <a href="/blogs/indonesia-digital-nomad-visa-tax-e33g-guide/" class="text-link hover:underline font-medium">Digital Nomad E33G Visa Tax Guide</a>
+        <a href="/blogs/indonesia-tax-for-expats-foreigners-bali-guide/" class="text-link hover:underline font-medium">Expat &amp; Foreigner Bali Tax Hub</a>
+        <a href="/blogs/indonesia-income-tax-rates-brackets-2026/" class="text-link hover:underline font-medium">Personal Tax Rates &amp; Brackets 2026</a>
+        <a href="/countries/indonesia/" class="text-link hover:underline font-medium">Finsiva Indonesia Tax Portal</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>
