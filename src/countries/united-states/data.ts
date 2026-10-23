@@ -49,13 +49,13 @@ const taxCategories: TaxCategory[] = [
       },
       {
         slug: "tax-brackets",
-        title: "Understanding US Tax Brackets",
-        description: "Learn how progressive tax brackets work, how marginal rates apply, and practical strategies to minimize your tax liability.",
+        title: "US Tax Brackets 2026: Federal Rates & Income Slabs",
+        description: "2026 federal income tax brackets and rates (10% to 37%). Calculate taxable income thresholds for Single, Married Joint, and Head of Household.",
         image: "/images/guides/united-states/tax-brackets.jpg",
         sections: [
           {
             title: "How Progressive Taxation Works",
-            content: "The US federal income tax system uses progressive rates, meaning higher portions of income are taxed at higher rates. For 2025, there are seven brackets: 10%, 12%, 22%, 24%, 32%, 35%, and 37%. Importantly, you do not pay the highest rate on all your income — only the portion that falls within each bracket is taxed at that rate. For example, if your taxable income puts you in the 22% bracket, only the income above the 22% threshold is taxed at 22%, while income below that threshold is taxed at the lower 10% or 12% rates."
+            content: "The US federal income tax system uses progressive rates, meaning higher portions of income are taxed at higher rates. For 2026, there are seven brackets: 10%, 12%, 22%, 24%, 32%, 35%, and 37%. Importantly, you do not pay the highest rate on all your income — only the portion that falls within each bracket is taxed at that rate. For example, if your taxable income puts you in the 22% bracket, only the income above the 22% threshold is taxed at 22%, while income below that threshold is taxed at the lower 10% or 12% rates."
           },
           {
             title: "Marginal vs Effective Tax Rate",

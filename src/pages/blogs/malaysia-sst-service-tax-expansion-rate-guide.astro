@@ -1,0 +1,212 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Malaysia 8% Service Tax (SST) Guide: Taxable Services 2026";
+const description = "Complete 2026 guide to Malaysia's 8% Service Tax expansion. Learn newly taxed services (logistics, maintenance), the RM 500k threshold, and B2B exemptions.";
+const image = "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&q=80";
+const author = "Michael Tang, Senior Tax & Corporate Advisory Lead";
+const authorBio = "Senior corporate tax consultant specializing in Malaysian corporate tax compliance, SME tax incentives, Form C filings, withholding tax, and indirect tax (SST) advisory.";
+const canonical = "https://finsiva.com/blogs/malaysia-sst-service-tax-expansion-rate-guide/";
+const lastUpdated = "October 2026";
+const readTime = "11 min read";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the standard Service Tax rate in Malaysia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The standard Service Tax rate in Malaysia is 8%, effective from March 1, 2024 and maintained through 2026. However, essential consumer services—including food and beverage (F&B), telecommunications, parking, and logistics—remain taxed at the lower 6% rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What services are taxed at 8% under the expanded scope?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Services taxed at 8% include professional services (legal, accounting, consultancy, engineering), digital services (streaming, cloud software, SaaS), IT services, maintenance and repair services, brokerage and underwriting, and advertising services."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the mandatory registration threshold for Service Tax in Malaysia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most professional, technical, and commercial service providers, the mandatory SST registration threshold is RM 500,000 in total taxable turnover over a 12-month period. For Food & Beverage (F&B) operators, the registration threshold is RM 1,500,000."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the Business-to-Business (B2B) Service Tax exemption work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under the Service Tax (Persons Exempted from Payment of Tax) Order, registered businesses providing the same taxable service group to another registered business can qualify for a B2B exemption to eliminate tax cascading and double-charging along the commercial supply chain."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are foreign digital service providers required to register for SST in Malaysia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Foreign digital service providers (FRP) delivering software, cloud hosting, streaming media, or digital advertising to Malaysian consumers must register for Service Tax on Digital Services (SToDS) if annual sales exceed the RM 500,000 threshold."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  canonical={canonical}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated={lastUpdated}
+  readTime={readTime}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
+    <p>
+      In modern Malaysian commerce, understanding the Sales and Service Tax (SST) architecture is vital for business sustainability. Following comprehensive fiscal reforms enacted by the Ministry of Finance and the Royal Malaysian Customs Department (RMCD), Malaysia increased its standard <strong>Service Tax rate from 6% to 8%</strong> and significantly broadened the statutory scope of taxable services.
+    </p>
+    <p>
+      For business owners, corporate executives, agency founders, and digital service providers, navigating this expanded regime requires clarity. Failing to register once your commercial turnover crosses the <strong>RM 500,000 threshold</strong>, or failing to invoice clients with the correct 6% versus 8% rate, exposes your business to severe penalties, late payment compounding, and director audits.
+    </p>
+    <p>
+      In this comprehensive guide, we unpack the dual 6% vs 8% rate framework, newly taxable service categories, the Business-to-Business (B2B) exemption mechanism, and bi-monthly SST-02 return filing rules.
+    </p>
+
+    <!-- ISSUEBOX / MACHARULE / LONGYTAIL: HUB FUNNEL CTA -->
+    <aside class="my-8 rounded-2xl border border-primary/20 bg-gradient-to-r from-primary/5 via-canvas to-primary/10 p-6 shadow-sm dark:from-primary/10 dark:via-surface dark:to-primary/20">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary dark:text-link mb-1">
+            <span>🧮</span> Interactive Malaysian Tax Tool
+          </span>
+          <h3 class="text-lg font-bold text-ink dark:text-on-primary">
+            Calculate Your Malaysia Business &amp; Corporate Tax
+          </h3>
+          <p class="text-xs sm:text-sm text-body dark:text-muted mt-1 max-w-xl">
+            Simulate your net company tax liability under the 17% SME corporate rate and calculate your indirect tax compliance margins.
+          </p>
+        </div>
+        <a
+          href="/countries/malaysia/business-income/business-income-calculator/"
+          class="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-primary text-on-primary hover:opacity-90 transition shadow-sm dark:bg-on-primary dark:text-primary"
+        >
+          <span>Calculate Business Tax Now</span>
+          <span>→</span>
+        </a>
+      </div>
+    </aside>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      What is the Difference Between 6% and 8% Service Tax in Malaysia?
+    </h2>
+    <p>
+      To prevent cost-of-living spikes for everyday citizens while mobilizing domestic revenue, the Ministry of Finance created a bifurcated Service Tax rate structure:
+    </p>
+
+    <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+      <table class="w-full text-left text-sm">
+        <thead class="bg-canvas-soft border-b border-hairline dark:bg-surface/80 dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+          <tr>
+            <th class="p-3.5">Taxable Service Category</th>
+            <th class="p-3.5">Prevailing Service Tax Rate</th>
+            <th class="p-3.5">Policy Rationale</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr class="bg-emerald-500/5">
+            <td class="p-3.5 font-bold text-ink dark:text-on-primary">Food and Beverage (F&amp;B / Restaurants)</td>
+            <td class="p-3.5 font-bold text-emerald-600 dark:text-emerald-400">6% Concessional Rate</td>
+            <td class="p-3.5 text-xs text-body dark:text-muted">Protects daily consumer dining and staple food costs</td>
+          </tr>
+          <tr class="bg-emerald-500/5">
+            <td class="p-3.5 font-bold text-ink dark:text-on-primary">Telecommunications &amp; Mobile Internet</td>
+            <td class="p-3.5 font-bold text-emerald-600 dark:text-emerald-400">6% Concessional Rate</td>
+            <td class="p-3.5 text-xs text-body dark:text-muted">Protects digital connectivity and broadband affordability</td>
+          </tr>
+          <tr class="bg-emerald-500/5">
+            <td class="p-3.5 font-bold text-ink dark:text-on-primary">Parking &amp; Vehicle Storage</td>
+            <td class="p-3.5 font-bold text-emerald-600 dark:text-emerald-400">6% Concessional Rate</td>
+            <td class="p-3.5 text-xs text-body dark:text-muted">Essential urban commuting infrastructure</td>
+          </tr>
+          <tr>
+            <td class="p-3.5 font-bold text-ink dark:text-on-primary">Professional Services (Legal, Tax, Audit, Consulting)</td>
+            <td class="p-3.5 font-bold text-primary dark:text-link">8% Standard Rate</td>
+            <td class="p-3.5 text-xs text-body dark:text-muted">Standard corporate commercial services</td>
+          </tr>
+          <tr>
+            <td class="p-3.5 font-bold text-ink dark:text-on-primary">Digital Services &amp; Cloud SaaS (SToDS)</td>
+            <td class="p-3.5 font-bold text-primary dark:text-link">8% Standard Rate</td>
+            <td class="p-3.5 text-xs text-body dark:text-muted">Software, streaming, hosting, and foreign tech platforms</td>
+          </tr>
+          <tr>
+            <td class="p-3.5 font-bold text-ink dark:text-on-primary">Maintenance, Repair &amp; Overhaul (MRO)</td>
+            <td class="p-3.5 font-bold text-primary dark:text-link">8% Standard Rate</td>
+            <td class="p-3.5 text-xs text-body dark:text-muted">Newly expanded commercial maintenance services</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      How Does the B2B Service Tax Exemption Prevent Cascading Taxes?
+    </h2>
+    <p>
+      Unlike a Value Added Tax (VAT) or Goods and Services Tax (GST) system where input tax credits offset output tax, Service Tax is inherently a single-stage turnover tax. Without an exemption mechanism, taxing business-to-business transactions causes severe "tax-on-tax" cascading.
+    </p>
+    <p>
+      Under the <strong>B2B Service Tax Exemption</strong>, registered businesses do not need to pay or charge Service Tax if they meet three criteria:
+    </p>
+    <ol class="space-y-1.5 list-decimal pl-5 text-sm">
+      <li>Both the service provider and the customer are registered for Service Tax with Customs;</li>
+      <li>The service acquired falls into the <strong>exact same taxable service group</strong> (e.g., a law firm subcontracting legal research to another law firm, or an IT agency outsourcing coding to another IT company);</li>
+      <li>The acquired service is not consumed internally, but is directly passed on or incorporated into the service delivered to the end client.</li>
+    </ol>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      Who Must Register for SST Under the RM 500,000 Annual Threshold?
+    </h2>
+    <p>
+      Registration is mandatory once your taxable services exceed the statutory threshold over a rolling 12-month period:
+    </p>
+    <ul class="space-y-2 list-disc pl-5 text-sm">
+      <li><strong>Standard Commercial &amp; Professional Services:</strong> RM 500,000 annual turnover.</li>
+      <li><strong>Food and Beverage (F&amp;B):</strong> RM 1,500,000 annual turnover.</li>
+      <li><strong>Filing Frequency:</strong> Registered businesses must submit bi-monthly <strong>Form SST-02</strong> returns electronically via the MySST portal no later than the last day of the month following the end of each taxable period.</li>
+    </ul>
+
+    <!-- STRATEGIC INTERNAL CROSS-LINKING -->
+    <div class="my-8 p-5 rounded-2xl bg-canvas-soft border border-hairline dark:bg-surface dark:border-overlay-lighter">
+      <h4 class="font-bold text-ink dark:text-on-primary text-sm sm:text-base flex items-center gap-2">
+        <span>📖</span> Related Malaysian Tax Intelligence:
+      </h4>
+      <p class="text-xs sm:text-sm text-body dark:text-muted mt-1">
+        Learn how overseas stock dividends are treated in our <a href="/blogs/malaysia-foreign-dividend-income-tax-exemption-guide/" class="text-primary font-semibold hover:underline dark:text-link">Malaysia Foreign Dividend Tax Exemption Guide</a>, or check monthly payroll deductions in the <a href="/blogs/malaysia-pcb-tax-deduction-monthly-calculation-guide/" class="text-primary font-semibold hover:underline dark:text-link">Malaysia PCB Tax Deduction Guide</a>.
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      Frequently Asked Questions
+    </h2>
+    <div class="space-y-4 my-6">
+      {faqSchema.mainEntity.map(item => (
+        <article class="p-5 rounded-2xl border border-hairline bg-canvas-soft/40 dark:border-overlay-lighter dark:bg-surface/50">
+          <h3 class="font-bold text-base text-ink dark:text-on-primary">
+            {item.name}
+          </h3>
+          <p class="mt-2 text-xs sm:text-sm text-body dark:text-muted leading-relaxed">
+            {item.acceptedAnswer.text}
+          </p>
+        </article>
+      ))}
+    </div>
+  </div>
+</BlogLayout>

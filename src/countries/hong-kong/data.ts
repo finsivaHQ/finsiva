@@ -15,6 +15,9 @@ const taxCategories: TaxCategory[] = [
     ],
     guides: [
       { slug: "salaries-tax-guide", title: "Salaries Tax Guide", description: "Understanding Hong Kong salaries tax calculation and allowances.", url: "/blogs/hong-kong-salaries-tax-guide/" },
+      { slug: "progressive-vs-standard-rates-guide", title: "Progressive vs Standard Rate Guide", description: "Learn when the 15% standard rate cap beats 2%-17% progressive rates.", url: "/blogs/hong-kong-progressive-vs-standard-tax-rates/" },
+      { slug: "rental-reimbursement-scheme-guide", title: "Rental Reimbursement Scheme Guide", description: "How employees cut salaries tax by up to 30% using the Section 9(1A) 10% rental value rule.", url: "/blogs/hong-kong-rental-reimbursement-scheme-guide/" },
+      { slug: "mpf-tax-deductions-guide", title: "MPF & TVC Tax Deductions Guide", description: "How mandatory MPF (HK$18k) and TVC (HK$60k) reduce net taxable salaries tax.", url: "/blogs/hong-kong-mpf-tax-deduction-mandatory-voluntary/" },
       { slug: "hk-tax-allowances-guide", title: "HK Tax Allowances and Deductions Guide", description: "Complete guide to personal allowances, deductions, and MPF in Hong Kong.", url: "/blogs/hong-kong-tax-allowances-deductions/" },
       { slug: "hong-kong-tax-residency-guide", title: "Hong Kong Tax Residency Guide", description: "How to qualify as a Hong Kong tax resident and understand the 60-day rule.", url: "/blogs/hong-kong-tax-residency/" },
       { slug: "provisional-tax-guide", title: "Provisional Tax Guide", description: "Understanding provisional salaries tax in Hong Kong and how to calculate it.", url: "/blogs/hong-kong-provisional-tax-guide/" },

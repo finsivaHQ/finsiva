@@ -1,0 +1,234 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Malaysia Foreign Dividend Tax: How to Qualify for Exemption";
+const description = "Complete 2026 guide to Malaysia Foreign Source Income (FSI) tax on dividends. Learn Section 127(3A) economic substance rules and headline tax rate tests.";
+const image = "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1200&q=80";
+const author = "Michael Tang, Senior Tax & Corporate Advisory Lead";
+const authorBio = "Senior corporate tax consultant specializing in Malaysian corporate tax compliance, SME tax incentives, Form C filings, withholding tax, and foreign source income advisory.";
+const canonical = "https://finsiva.com/blogs/malaysia-foreign-dividend-income-tax-exemption-guide/";
+const lastUpdated = "October 2026";
+const readTime = "12 min read";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Are foreign dividends taxable when remitted to Malaysia in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under statutory tax amendments effective through 2026, foreign dividends remitted to Malaysia by resident individuals (excluding partnership businesses) and resident companies are exempt from Malaysian income tax under Section 127(3A), provided qualifying conditions are met."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the qualifying condition for foreign dividend tax exemption in Malaysia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To qualify for tax exemption upon remittance, the foreign dividend must have originated from a territory where the headline corporate tax rate is at least 15%, and the foreign income must have been subjected to tax in the country of origin."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are US stock dividends (e.g. Apple, Microsoft) exempt when brought into Malaysia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The United States has a federal headline corporate tax rate of 21% (exceeding the 15% statutory threshold), and dividends paid to non-resident aliens are subject to US withholding tax (30% or treaty rate), fulfilling the 'subject to tax' test."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What economic substance requirements apply to Malaysian companies receiving foreign dividends?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Malaysian companies claiming foreign dividend exemption must demonstrate economic substance: maintaining an adequate number of qualified employees in Malaysia and incurring an adequate amount of annual operating expenditure in Malaysia to manage the foreign equity holdings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do non-resident individuals pay tax on foreign income brought into Malaysia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Under Paragraph 28, Schedule 6 of the Malaysian Income Tax Act 1967, non-resident individuals are completely exempt from tax on all foreign-sourced income received in Malaysia."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  canonical={canonical}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated={lastUpdated}
+  readTime={readTime}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
+    <p>
+      For decades, Malaysia operated an unconditional territorial tax system: income derived from sources outside Malaysia was completely tax-exempt upon remittance. However, following European Union (EU) Code of Conduct Group scrutiny and the subsequent removal of Malaysia from the EU grey list, the Ministry of Finance enacted significant statutory changes to the taxation of <strong>Foreign Source Income (FSI)</strong>.
+    </p>
+    <p>
+      For investors, high-net-worth individuals, and digital entrepreneurs who hold foreign equity portfolios (such as US tech stocks, Singapore REITs, or UK dividend assets), navigating these rules can feel intimidating. Fortunately, under the statutory <strong>Section 127(3A) Exemption Orders</strong> (extended through <strong>December 31, 2026</strong>), foreign dividend income remains <strong>100% tax-free upon remittance to Malaysia</strong>—provided you satisfy specific statutory tests.
+    </p>
+    <p>
+      In this comprehensive guide, we unpack the exact qualifying criteria: the 15% headline tax rate threshold, the "subject to tax" requirement, bilateral tax credits under Double Taxation Agreements (DTA), and economic substance rules for holding companies.
+    </p>
+
+    <!-- ISSUEBOX / MACHARULE / LONGYTAIL: HUB FUNNEL CTA -->
+    <aside class="my-8 rounded-2xl border border-primary/20 bg-gradient-to-r from-primary/5 via-canvas to-primary/10 p-6 shadow-sm dark:from-primary/10 dark:via-surface dark:to-primary/20">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary dark:text-link mb-1">
+            <span>🧮</span> Interactive Malaysian Tax Tool
+          </span>
+          <h3 class="text-lg font-bold text-ink dark:text-on-primary">
+            Calculate Your Malaysia Foreign Income &amp; Tax Liability
+          </h3>
+          <p class="text-xs sm:text-sm text-body dark:text-muted mt-1 max-w-xl">
+            Input your overseas dividends, capital gains, and employment remittances to simulate your exemption status and LHDN tax obligations.
+          </p>
+        </div>
+        <a
+          href="/countries/malaysia/foreign-income/foreign-income-calculator/"
+          class="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-primary text-on-primary hover:opacity-90 transition shadow-sm dark:bg-on-primary dark:text-primary"
+        >
+          <span>Calculate Foreign Income Tax Now</span>
+          <span>→</span>
+        </a>
+      </div>
+    </aside>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      Are Foreign Dividends Taxable When Remitted to Malaysia in 2026?
+    </h2>
+    <p>
+      The general charging provision under Section 3 of the <em>Income Tax Act 1967 (ITA)</em> states that income received in Malaysia from outside Malaysia is taxable. However, pursuant to the <em>Income Tax (Exemption) (No. 6) Order 2022</em> and subsequent MoF extensions:
+    </p>
+    <ul class="space-y-1.5 list-disc pl-5 text-sm">
+      <li><strong>Resident Individuals:</strong> All foreign-sourced dividend income received in Malaysia from <strong>January 1, 2022 to December 31, 2026</strong> is exempt from Malaysian personal income tax, provided the dividend meets the statutory headline rate test.</li>
+      <li><strong>Resident Companies &amp; LLPs:</strong> Foreign dividends received are exempt from corporate income tax provided the company satisfies the headline rate test and demonstrates economic substance in Malaysia.</li>
+      <li><strong>Non-Resident Individuals:</strong> Completely tax-exempt on all foreign-sourced remittances under Paragraph 28, Schedule 6 of the ITA.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      What Are the Qualifying Conditions for Section 127(3A) Dividend Exemption?
+    </h2>
+    <p>
+      To prevent Malaysia from being used as a conduit for completely untaxed offshore profits, the Inland Revenue Board of Malaysia (LHDN) enforces two mandatory statutory conditions under Public Ruling No. 5/2022:
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+      <div class="p-5 rounded-2xl border border-hairline bg-canvas dark:bg-surface dark:border-overlay-lighter">
+        <span class="text-xs font-bold uppercase tracking-wider text-primary dark:text-link">Condition 1</span>
+        <h4 class="font-bold text-ink dark:text-on-primary text-base mt-1">15% Headline Tax Rate Test</h4>
+        <p class="text-xs sm:text-sm text-body dark:text-muted mt-2 leading-relaxed">
+          The foreign dividend must arise from a country or territory where the highest statutory headline corporate tax rate is <strong>at least 15%</strong>. Note: this refers to the headline tax rate in that foreign jurisdiction, not the actual effective rate paid by the foreign entity.
+        </p>
+      </div>
+      <div class="p-5 rounded-2xl border border-hairline bg-canvas dark:bg-surface dark:border-overlay-lighter">
+        <span class="text-xs font-bold uppercase tracking-wider text-primary dark:text-link">Condition 2</span>
+        <h4 class="font-bold text-ink dark:text-on-primary text-base mt-1">"Subject to Tax" Test</h4>
+        <p class="text-xs sm:text-sm text-body dark:text-muted mt-2 leading-relaxed">
+          The dividend income must have been subjected to income tax or withholding tax in the country of origin. Dividend distribution withholding taxes deducted at source (e.g. 30% US withholding) satisfy this requirement completely.
+        </p>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      How Does the "Subject to Tax" 15% Headline Rate Test Work Across Major Markets?
+    </h2>
+    <p>
+      Here is how the statutory test applies to popular international investment destinations for Malaysian residents:
+    </p>
+
+    <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+      <table class="w-full text-left text-sm">
+        <thead class="bg-canvas-soft border-b border-hairline dark:bg-surface/80 dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+          <tr>
+            <th class="p-3.5">Foreign Jurisdiction</th>
+            <th class="p-3.5">Headline Corporate Tax Rate</th>
+            <th class="p-3.5">Passes 15% Threshold?</th>
+            <th class="p-3.5">Malaysian Tax Exemption Status</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr class="bg-emerald-500/5">
+            <td class="p-3.5 font-bold text-ink dark:text-on-primary">United States (US Stocks)</td>
+            <td class="p-3.5">21% Federal (excl. state)</td>
+            <td class="p-3.5 font-bold text-emerald-600 dark:text-emerald-400">Yes (≥ 15%)</td>
+            <td class="p-3.5 font-bold text-emerald-700 dark:text-emerald-300">100% Tax-Exempt in Malaysia</td>
+          </tr>
+          <tr class="bg-emerald-500/5">
+            <td class="p-3.5 font-bold text-ink dark:text-on-primary">Singapore (SGX Shares &amp; REITs)</td>
+            <td class="p-3.5">17% Headline Flat Rate</td>
+            <td class="p-3.5 font-bold text-emerald-600 dark:text-emerald-400">Yes (≥ 15%)</td>
+            <td class="p-3.5 font-bold text-emerald-700 dark:text-emerald-300">100% Tax-Exempt in Malaysia</td>
+          </tr>
+          <tr class="bg-emerald-500/5">
+            <td class="p-3.5 font-bold text-ink dark:text-on-primary">United Kingdom (LSE Shares)</td>
+            <td class="p-3.5">25% Headline Rate</td>
+            <td class="p-3.5 font-bold text-emerald-600 dark:text-emerald-400">Yes (≥ 15%)</td>
+            <td class="p-3.5 font-bold text-emerald-700 dark:text-emerald-300">100% Tax-Exempt in Malaysia</td>
+          </tr>
+          <tr class="bg-emerald-500/5">
+            <td class="p-3.5 font-bold text-ink dark:text-on-primary">Australia (ASX Equities)</td>
+            <td class="p-3.5">30% (25% for base rate)</td>
+            <td class="p-3.5 font-bold text-emerald-600 dark:text-emerald-400">Yes (≥ 15%)</td>
+            <td class="p-3.5 font-bold text-emerald-700 dark:text-emerald-300">100% Tax-Exempt in Malaysia</td>
+          </tr>
+          <tr class="bg-rose-500/5">
+            <td class="p-3.5 font-bold text-ink dark:text-on-primary">BVI / Cayman Islands / Zero-Tax Havens</td>
+            <td class="p-3.5">0% Headline Rate</td>
+            <td class="p-3.5 font-bold text-rose-600 dark:text-rose-400">Fails (&lt; 15%)</td>
+            <td class="p-3.5 font-bold text-rose-700 dark:text-rose-300">Taxable in Malaysia (0% to 30%)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      What Substantial Economic Presence is Required for Resident Companies?
+    </h2>
+    <p>
+      For Malaysian corporate entities claiming exemption on foreign dividend income, LHDN enforces <strong>Economic Substance Requirements (ESR)</strong>:
+    </p>
+    <ul class="space-y-1.5 list-disc pl-5 text-sm">
+      <li><strong>Qualified Personnel:</strong> The company must employ an adequate number of staff with appropriate qualifications in Malaysia to manage the investment assets.</li>
+      <li><strong>Annual Operating Expenditure:</strong> The company must incur an adequate amount of operating expenditure in Malaysia (office rent, administrative overhead, professional accounting fees).</li>
+      <li><strong>Board Governance:</strong> Key strategic decisions regarding holding or disposing of foreign shares must be actively deliberated in board meetings held physically within Malaysia.</li>
+    </ul>
+
+    <!-- STRATEGIC INTERNAL CROSS-LINKING -->
+    <div class="my-8 p-5 rounded-2xl bg-canvas-soft border border-hairline dark:bg-surface dark:border-overlay-lighter">
+      <h4 class="font-bold text-ink dark:text-on-primary text-sm sm:text-base flex items-center gap-2">
+        <span>📖</span> Related Malaysian Tax Intelligence:
+      </h4>
+      <p class="text-xs sm:text-sm text-body dark:text-muted mt-1">
+        Learn how SME corporate tax rates work in our <a href="/blogs/malaysia-company-corporate-sme-tax-rate-2026-guide/" class="text-primary font-semibold hover:underline dark:text-link">Malaysia Corporate Tax Rate Guide 2026</a>, or check how to file your annual return via the <a href="/blogs/malaysia-mytax-lhdn-efiling-tax-reliefs-2026-guide/" class="text-primary font-semibold hover:underline dark:text-link">MyTax LHDN e-Filing Guide</a>.
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      Frequently Asked Questions
+    </h2>
+    <div class="space-y-4 my-6">
+      {faqSchema.mainEntity.map(item => (
+        <article class="p-5 rounded-2xl border border-hairline bg-canvas-soft/40 dark:border-overlay-lighter dark:bg-surface/50">
+          <h3 class="font-bold text-base text-ink dark:text-on-primary">
+            {item.name}
+          </h3>
+          <p class="mt-2 text-xs sm:text-sm text-body dark:text-muted leading-relaxed">
+            {item.acceptedAnswer.text}
+          </p>
+        </article>
+      ))}
+    </div>
+  </div>
+</BlogLayout>

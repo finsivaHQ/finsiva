@@ -10,7 +10,8 @@ const taxCategories: TaxCategory[] = [
       { slug: "income-tax-calculator", name: "Income Tax Calculator", description: "Calculate your Malaysian individual income tax, PCB deductions, and take-home pay under LHDN brackets." }
     ],
     guides: [
-      { slug: "tax-residency-guide", title: "Tax Residency Guide", description: "Understanding Malaysian 182-day physical presence tax residency rules.", url: "/blogs/malaysia-expats-foreigners-non-resident-tax-guide-2026/" }
+      { slug: "tax-residency-guide", title: "Tax Residency Guide", description: "Understanding Malaysian 182-day physical presence tax residency rules.", url: "/blogs/malaysia-expats-foreigners-non-resident-tax-guide-2026/" },
+      { slug: "pcb-tax-deduction-guide", title: "Monthly PCB Calculation Guide", description: "Learn how employers calculate Monthly Tax Deductions (PCB) using the computerized formula and Form TP1.", url: "/blogs/malaysia-pcb-tax-deduction-monthly-calculation-guide/" }
     ],
     faqs: [
       { question: "What are the Malaysia income tax brackets for 2025?", answer: "Resident individuals are taxed at progressive rates from 0% to 30% after claiming basic personal relief of RM 9,000 and other eligible deductions." },
@@ -27,7 +28,8 @@ const taxCategories: TaxCategory[] = [
       { slug: "sst-calculator", name: "SST Calculator", description: "Calculate 10% Sales Tax or 8% Service Tax for transactions in Malaysia." }
     ],
     guides: [
-      { slug: "sst-guide", title: "SST Guide", description: "Understanding SST registration thresholds, taxable service lists, and filing cycles in Malaysia.", url: "/blogs/malaysia-property-tax-cukai-pintu-quit-rent-digital-services-guide/" }
+      { slug: "sst-guide", title: "SST Guide", description: "Understanding SST registration thresholds, taxable service lists, and filing cycles in Malaysia.", url: "/blogs/malaysia-property-tax-cukai-pintu-quit-rent-digital-services-guide/" },
+      { slug: "sst-service-tax-expansion-guide", title: "SST 8% Rate & Expansion Guide", description: "Complete breakdown of the 6% to 8% Service Tax hike, new taxable sectors, and B2B exemption eligibility.", url: "/blogs/malaysia-sst-service-tax-expansion-rate-guide/" }
     ],
     faqs: [
       { question: "What is the standard Service Tax rate in Malaysia?", answer: "The standard Service Tax rate in Malaysia is 8% on most taxable services (increased from 6% effective March 1, 2024)." },
@@ -77,7 +79,8 @@ const taxCategories: TaxCategory[] = [
       { slug: "foreign-income-calculator", name: "Foreign Income Tax Calculator", description: "Calculate tax liability on foreign-sourced income remitted to Malaysia." }
     ],
     guides: [
-      { slug: "foreign-income-guide", title: "Foreign Income Guide", description: "Understanding LHDN foreign income remittance tax rules and foreign tax credits.", url: "/blogs/malaysia-foreign-source-income-tax-fsi-2026-guide/" }
+      { slug: "foreign-income-guide", title: "Foreign Income Guide", description: "Understanding LHDN foreign income remittance tax rules and foreign tax credits.", url: "/blogs/malaysia-foreign-source-income-tax-fsi-2026-guide/" },
+      { slug: "foreign-dividend-exemption-guide", title: "Foreign Dividend Exemption Guide", description: "Tax conditions for remitting overseas dividends tax-free under Section 127(3A) and the 15% headline rate test.", url: "/blogs/malaysia-foreign-dividend-income-tax-exemption-guide/" }
     ],
     faqs: [
       { question: "Is foreign income taxed in Malaysia?", answer: "Foreign-sourced income remitted into Malaysia by resident individuals is subject to tax unless specifically exempted under statutory orders or Double Taxation Agreements." }

@@ -1,0 +1,220 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "HK MPF Tax Deduction Guide: Mandatory vs TVC Limits (2026)";
+const description = "Maximize Hong Kong salaries tax deductions with MPF. Learn the HK$18,000 mandatory cap, HK$60,000 Tax-Deductible Voluntary Contributions (TVC), and tax savings.";
+const image = "https://images.unsplash.com/photo-1554224154-22dec7ec8818?w=1200&q=80";
+const author = "David Kwok, FCPA";
+const authorBio = "Senior Hong Kong Tax Partner & Expatriate Advisory Specialist with over 18 years advising multinational executives and corporations on Inland Revenue Department (IRD) compliance.";
+const canonical = "https://finsiva.com/blogs/hong-kong-mpf-tax-deduction-mandatory-voluntary/";
+const lastUpdated = "October 2026";
+const readTime = "11 min read";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much mandatory MPF can you deduct from Hong Kong salaries tax?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For mandatory contributions under the Mandatory Provident Fund (MPF) Schemes Ordinance, the maximum statutory tax deduction is capped at HK$18,000 per Year of Assessment (corresponding to 5% of maximum assessable monthly income of HK$30,000)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the maximum tax deduction for Tax-Deductible Voluntary Contributions (TVC)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under Section 26V of the Inland Revenue Ordinance, taxpayers can claim an additional tax deduction of up to HK$60,000 annually for Tax-Deductible Voluntary Contributions (TVC) made into an authorized MPF scheme or qualifying deferred annuity policy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much tax does an executive in the 17% bracket save with TVC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An executive whose marginal tax bracket is 17% saves exactly HK$10,200 in hard cash taxes (17% of HK$60,000) every year by making the maximum allowable TVC contribution."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can expatriates withdraw their accumulated MPF when leaving Hong Kong?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Foreigners who permanently depart Hong Kong with no intention of returning for employment or residence can withdraw 100% of their accumulated mandatory and TVC MPF benefits before age 65 by submitting a statutory declaration Form MPF(S)-W(SD2) to their MPF trustee."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are regular voluntary contributions made through an employer tax-deductible?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Standard employee voluntary contributions (VC) deducted by payroll beyond the mandatory 5% cap are not tax-deductible. To claim the HK$60,000 tax deduction, you must specifically open a designated TVC account in your personal name."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  canonical={canonical}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated={lastUpdated}
+  readTime={readTime}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
+    <p>
+      In Hong Kong, minimizing your annual salaries tax liability requires taking full advantage of allowable deductions under the <em>Inland Revenue Ordinance (IRO)</em>. While personal allowances (such as the Basic Allowance of HK$132,000) are automatically applied, the single most powerful statutory deduction available to every working professional is the <strong>Mandatory Provident Fund (MPF)</strong>.
+    </p>
+    <p>
+      However, many taxpayers confuse <strong>Mandatory MPF Contributions</strong> (capped at HK$18,000) with <strong>Tax-Deductible Voluntary Contributions (TVC)</strong> (capped at HK$60,000). By understanding how both deductions operate concurrently, an individual can legally shelter up to <strong>HK$78,000 of annual income</strong> from the top 17% tax bracket, putting over <strong>HK$13,200 of direct tax savings back in their pocket every year</strong>.
+    </p>
+    <p>
+      In this guide, we break down the exact statutory contribution rules, tax deduction ceilings, TVC account opening procedures, and early withdrawal rules for expats permanently leaving Hong Kong.
+    </p>
+
+    <!-- ISSUEBOX / MACHARULE / LONGYTAIL: HUB FUNNEL CTA -->
+    <aside class="my-8 rounded-2xl border border-primary/20 bg-gradient-to-r from-primary/5 via-canvas to-primary/10 p-6 shadow-sm dark:from-primary/10 dark:via-surface dark:to-primary/20">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary dark:text-link mb-1">
+            <span>🧮</span> Interactive Hong Kong Tax Calculator
+          </span>
+          <h3 class="text-lg font-bold text-ink dark:text-on-primary">
+            Calculate Your Net Salaries Tax After MPF Deductions
+          </h3>
+          <p class="text-xs sm:text-sm text-body dark:text-muted mt-1 max-w-xl">
+            Simulate your Hong Kong tax bill before and after claiming the maximum HK$78,000 combined MPF &amp; TVC tax deduction.
+          </p>
+        </div>
+        <a
+          href="/countries/hong-kong/salaries-tax/salaries-tax-calculator/"
+          class="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-primary text-on-primary hover:opacity-90 transition shadow-sm dark:bg-on-primary dark:text-primary"
+        >
+          <span>Calculate Salaries Tax Now</span>
+          <span>→</span>
+        </a>
+      </div>
+    </aside>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      How Much MPF Contribution Can You Deduct From Salaries Tax in 2026?
+    </h2>
+    <p>
+      Under Hong Kong law, both employers and employees are required to contribute <strong>5% of relevant monthly income</strong> into an MPF scheme, subject to statutory minimum and maximum income levels:
+    </p>
+    <ul class="space-y-1.5 list-disc pl-5 text-sm">
+      <li><strong>Minimum Income Level:</strong> HK$7,100 per month (employees earning below this do not contribute, though employers must still contribute 5%).</li>
+      <li><strong>Maximum Income Level:</strong> HK$30,000 per month. The 5% employee contribution is capped at <strong>HK$1,500 per month</strong> (HK$18,000 per year).</li>
+    </ul>
+    <p>
+      Under Section 26G of the IRO, your mandatory employee contributions are <strong>100% tax-deductible up to the statutory cap of HK$18,000 per year</strong>.
+    </p>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      What is the Difference Between Mandatory MPF and Tax-Deductible Voluntary Contributions (TVC)?
+    </h2>
+    <p>
+      Many employees mistakenly believe that making standard voluntary contributions through their company payroll gives them additional tax relief. <strong>It does not.</strong> To claim tax relief beyond the HK$18,000 mandatory cap, you must specifically utilize a <strong>Tax-Deductible Voluntary Contribution (TVC)</strong> account:
+    </p>
+
+    <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+      <table class="w-full text-left text-sm">
+        <thead class="bg-canvas-soft border-b border-hairline dark:bg-surface/80 dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+          <tr>
+            <th class="p-3.5">Feature</th>
+            <th class="p-3.5">Mandatory MPF</th>
+            <th class="p-3.5">Regular Voluntary (VC)</th>
+            <th class="p-3.5">Tax-Deductible Voluntary (TVC)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3.5 font-bold text-ink dark:text-on-primary">Maximum Tax Deduction</td>
+            <td class="p-3.5 font-bold text-emerald-600 dark:text-emerald-400">HK$18,000 / year</td>
+            <td class="p-3.5 text-rose-600 font-bold dark:text-rose-400">HK$0 (Zero Deduction)</td>
+            <td class="p-3.5 font-bold text-emerald-600 dark:text-emerald-400">HK$60,000 / year</td>
+          </tr>
+          <tr>
+            <td class="p-3.5 font-medium text-ink dark:text-on-primary">Account Setup</td>
+            <td class="p-3.5">Setup by Employer</td>
+            <td class="p-3.5">Setup through Employer Payroll</td>
+            <td class="p-3.5 font-bold text-primary dark:text-link">Opened Personally with any MPF Trustee</td>
+          </tr>
+          <tr>
+            <td class="p-3.5 font-medium text-ink dark:text-on-primary">Contribution Flexibility</td>
+            <td class="p-3.5">Fixed 5% of monthly salary</td>
+            <td class="p-3.5">Fixed percentage from monthly salary</td>
+            <td class="p-3.5 font-bold text-emerald-600 dark:text-emerald-400">Flexible lump sum or monthly debit</td>
+          </tr>
+          <tr>
+            <td class="p-3.5 font-medium text-ink dark:text-on-primary">Withdrawal Lock-In</td>
+            <td class="p-3.5">Locked until age 65 (or permanent departure)</td>
+            <td class="p-3.5 text-emerald-600">Withdrawable upon changing jobs</td>
+            <td class="p-3.5">Locked until age 65 (or permanent departure)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      How Much Real Cash Can You Save With the HK$60,000 TVC Deduction?
+    </h2>
+    <p>
+      Depositing funds into a TVC account before March 31 generates direct tax savings proportional to your top marginal tax rate:
+    </p>
+    <ul class="space-y-1.5 list-disc pl-5 text-sm">
+      <li><strong>10% Marginal Bracket:</strong> Saves <strong>HK$6,000</strong> in cash taxes.</li>
+      <li><strong>14% Marginal Bracket:</strong> Saves <strong>HK$8,400</strong> in cash taxes.</li>
+      <li><strong>17% Top Progressive Bracket:</strong> Saves <strong>HK$10,200</strong> in cash taxes.</li>
+      <li><strong>15% Standard Rate Bracket:</strong> Saves <strong>HK$9,000</strong> in cash taxes.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      Can Expats Withdraw Their MPF Upon Permanently Departing Hong Kong?
+    </h2>
+    <p>
+      Foreign professionals frequently hesitate to contribute to TVC out of concern that funds will be locked until age 65. However, under Section 15 of the MPF Schemes Ordinance, <strong>Permanent Departure from Hong Kong</strong> is an authorized ground for early withdrawal:
+    </p>
+    <ol class="space-y-1.5 list-decimal pl-5 text-sm">
+      <li>You must furnish proof of permanent departure (such as an overseas employment contract, foreign permanent residency visa, or overseas tax residency certificate).</li>
+      <li>Execute a statutory declaration using <strong>Form MPF(S)-W(SD2)</strong> before a Commissioner for Oaths or notary public stating that you are permanently departing Hong Kong.</li>
+      <li>Submit the declaration and claim form to your MPF trustees (HSBC, AIA, Manulife, Sun Life).</li>
+      <li>Trustees process and release 100% of your accumulated balance (mandatory contributions, employer contributions, and TVC balances) directly to your designated bank account.</li>
+    </ol>
+
+    <!-- STRATEGIC INTERNAL CROSS-LINKING -->
+    <div class="my-8 p-5 rounded-2xl bg-canvas-soft border border-hairline dark:bg-surface dark:border-overlay-lighter">
+      <h4 class="font-bold text-ink dark:text-on-primary text-sm sm:text-base flex items-center gap-2">
+        <span>📖</span> Related Hong Kong Tax Intelligence:
+      </h4>
+      <p class="text-xs sm:text-sm text-body dark:text-muted mt-1">
+        Learn how progressive rates compare to standard rates in our <a href="/blogs/hong-kong-progressive-vs-standard-tax-rates/" class="text-primary font-semibold hover:underline dark:text-link">Progressive vs 15% Standard Tax Rate Guide</a>, or see how to save 30% on housing in the <a href="/blogs/hong-kong-rental-reimbursement-scheme-guide/" class="text-primary font-semibold hover:underline dark:text-link">Rental Reimbursement Scheme Guide</a>.
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      Frequently Asked Questions
+    </h2>
+    <div class="space-y-4 my-6">
+      {faqSchema.mainEntity.map(item => (
+        <article class="p-5 rounded-2xl border border-hairline bg-canvas-soft/40 dark:border-overlay-lighter dark:bg-surface/50">
+          <h3 class="font-bold text-base text-ink dark:text-on-primary">
+            {item.name}
+          </h3>
+          <p class="mt-2 text-xs sm:text-sm text-body dark:text-muted leading-relaxed">
+            {item.acceptedAnswer.text}
+          </p>
+        </article>
+      ))}
+    </div>
+  </div>
+</BlogLayout>

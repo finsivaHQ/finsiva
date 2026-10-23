@@ -1,0 +1,194 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Malaysia PCB Tax Calculation: Monthly Potongan Cukai Guide";
+const description = "Learn how Malaysia monthly PCB (Potongan Cukai Berjadual) is calculated. Discover Form TP1 mid-year tax reliefs and avoid overpaying income tax via payroll.";
+const image = "https://images.unsplash.com/photo-1554224154-22dec7ec8818?w=1200&q=80";
+const author = "Michael Tang, Senior Tax & Corporate Advisory Lead";
+const authorBio = "Senior corporate tax consultant specializing in Malaysian corporate tax compliance, SME tax incentives, Form C filings, withholding tax, and payroll PCB optimization.";
+const canonical = "https://finsiva.com/blogs/malaysia-pcb-tax-deduction-monthly-calculation-guide/";
+const lastUpdated = "October 2026";
+const readTime = "12 min read";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is PCB (Potongan Cukai Berjadual) in Malaysia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PCB (Monthly Tax Deduction) is a mandatory statutory mechanism under the Income Tax (Deduction from Remuneration) Rules where employers deduct estimated income tax directly from an employee's monthly remuneration and remit it to LHDN by the 15th of the following month."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is monthly PCB calculated by Malaysian payroll software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PCB is calculated using the official LHDN computerized formula: P = [(Y - K*) × 12] + (Yt1 - Kt1) - (D + S + 1000C). The formula annualizes monthly earnings, deducts EPF and standard reliefs, computes estimated annual tax using progressive brackets, and divides by remaining months."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is monthly PCB often higher than actual tax payable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PCB defaults to basic individual and spouse reliefs. It does not account for mid-year personal tax deductions—such as medical insurance, lifestyle relief, course fees, or PRS contributions—unless you formally notify your employer using LHDN Form TP1."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Form TP1 and how does it lower monthly PCB?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Form TP1 is an official LHDN declaration form submitted by employees to their HR department to claim optional tax reliefs during the tax year. Once submitted, your employer adjusts the PCB formula, immediately lowering monthly tax deductions and boosting take-home pay."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can PCB be treated as Final Tax in Malaysia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Under Section 77C of the Income Tax Act, employees with only employment income whose PCB deductions are 100% accurate under the MTD as Final Tax scheme can choose not to submit Form BE, treating PCB as their full and final tax settlement."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  canonical={canonical}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated={lastUpdated}
+  readTime={readTime}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
+    <p>
+      For every salaried employee and expatriate working in Malaysia, examining your monthly payslip often raises an immediate question: <strong>Why was this specific amount of PCB (Potongan Cukai Berjadual) deducted from my salary, and is it accurate?</strong>
+    </p>
+    <p>
+      <strong>Potongan Cukai Berjadual (Monthly Tax Deduction)</strong> is Malaysia’s statutory Pay-As-You-Earn (PAYE) withholding mechanism. While PCB prevents employees from facing a crushing lump-sum tax bill at the end of the tax year, the official Inland Revenue Board of Malaysia (LHDN) formula frequently <strong>over-deducts taxes every month</strong> if you do not actively manage your payroll tax reliefs.
+    </p>
+    <p>
+      In this comprehensive guide, we explain the exact LHDN PCB computerized formula, why bonus payments cause massive one-month tax spikes, how to use <strong>Form TP1</strong> to increase your monthly take-home cash immediately, and how to claim tax refunds during annual e-Filing.
+    </p>
+
+    <!-- ISSUEBOX / MACHARULE / LONGYTAIL: HUB FUNNEL CTA -->
+    <aside class="my-8 rounded-2xl border border-primary/20 bg-gradient-to-r from-primary/5 via-canvas to-primary/10 p-6 shadow-sm dark:from-primary/10 dark:via-surface dark:to-primary/20">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary dark:text-link mb-1">
+            <span>🧮</span> Interactive Malaysian Tax Tool
+          </span>
+          <h3 class="text-lg font-bold text-ink dark:text-on-primary">
+            Calculate Your Malaysia Monthly Take-Home &amp; PCB
+          </h3>
+          <p class="text-xs sm:text-sm text-body dark:text-muted mt-1 max-w-xl">
+            Input your monthly salary, EPF, and claimable reliefs to verify whether your employer’s monthly PCB deductions are 100% accurate.
+          </p>
+        </div>
+        <a
+          href="/countries/malaysia/income-tax/income-tax-calculator/"
+          class="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-primary text-on-primary hover:opacity-90 transition shadow-sm dark:bg-on-primary dark:text-primary"
+        >
+          <span>Calculate Malaysia Tax Now</span>
+          <span>→</span>
+        </a>
+      </div>
+    </aside>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      How is Monthly PCB (Potongan Cukai Berjadual) Calculated by Employers?
+    </h2>
+    <p>
+      Employers in Malaysia do not simply pick a percentage from a static tax table. Under the <em>Income Tax (Deduction from Remuneration) (Amendment) Rules</em>, HR and payroll systems execute a complex mathematical formula every month:
+    </p>
+    <div class="my-6 p-5 rounded-2xl bg-canvas-soft border border-hairline dark:bg-surface dark:border-overlay-lighter">
+      <div class="font-mono text-xs sm:text-sm text-primary dark:text-link font-bold text-center">
+        P = [(Y - K*) × 12] + (Yt1 - Kt1) - (D + S + 1000C)
+      </div>
+    </div>
+    <p class="text-sm">
+      Where <strong>Y</strong> represents monthly remuneration, <strong>K*</strong> represents monthly EPF deductions (capped at RM 4,000/year), <strong>D</strong> represents standard personal relief (RM 9,000), <strong>S</strong> represents spouse relief (RM 4,000), and <strong>C</strong> represents qualifying children.
+    </p>
+    <p class="text-sm">
+      The formula annualizes your current monthly earnings, computes the estimated annual tax liability across Malaysia's progressive brackets (0% to 30%), subtracts total tax already deducted in previous months, and divides the remainder by the number of months left in the calendar year.
+    </p>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      Why is Your Monthly PCB Higher Than Your Actual Year-End Tax Liability?
+    </h2>
+    <p>
+      If you examine your payslip, you might discover that your annual PCB total exceeds your actual tax assessment by thousands of ringgit. This discrepancy occurs because <strong>standard payroll systems only factor in statutory defaults</strong>:
+    </p>
+    <ul class="space-y-2 list-disc pl-5 text-sm">
+      <li><strong>Individual Relief:</strong> RM 9,000 (Automatic)</li>
+      <li><strong>Employee EPF Relief:</strong> Up to RM 4,000 (Automatic from payroll)</li>
+      <li><strong>Optional Reliefs (Ignored by Default):</strong> Lifestyle relief (RM 2,500), medical treatment for parents (RM 8,000), medical insurance (RM 3,000), private retirement schemes PRS (RM 3,000), and dental/health screenings (RM 1,000) are <strong>completely excluded from monthly PCB math</strong> unless declared.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      How to Reduce Monthly PCB Deductions Using LHDN Form TP1?
+    </h2>
+    <p>
+      You do not have to wait until April of the following year to claim your tax refunds. Under Malaysian tax law, employees have the legal right to submit <strong>LHDN Form TP1 (Borang TP1)</strong> to their employer’s HR or payroll team twice a year.
+    </p>
+    <p>
+      By declaring your incurred deductible expenses on Form TP1:
+    </p>
+    <ol class="space-y-1.5 list-decimal pl-5 text-sm">
+      <li>Submit Form TP1 along with digital copies of receipts (for books, smartphone, sports equipment, medical insurance, or education fees) to your HR department.</li>
+      <li>Your employer enters these deductions into the LHDN computerized calculation system for the current month.</li>
+      <li>Your monthly PCB deduction drops immediately, <strong>increasing your take-home cash in your bank account that very month</strong>.</li>
+    </ol>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      How to Reconcile PCB Deductions with Annual e-Filing (Form BE)?
+    </h2>
+    <p>
+      At the end of the tax year, your employer issues your <strong>Form EA (Borang EA)</strong> by February 28. Box C of Form EA records your total gross remuneration and total PCB remitted to LHDN.
+    </p>
+    <p>
+      When you log in to the MyTax portal in March/April to submit Form BE:
+    </p>
+    <ul class="space-y-1.5 list-disc pl-5 text-sm">
+      <li>Your total annual PCB is pre-filled automatically by LHDN.</li>
+      <li>Claim all remaining tax reliefs, rebates, and donations.</li>
+      <li>If your actual tax liability is <strong>lower</strong> than total PCB deducted, LHDN issues a direct tax refund to your registered bank account via DuitNow within <strong>14 to 30 working days</strong>.</li>
+    </ul>
+
+    <!-- STRATEGIC INTERNAL CROSS-LINKING -->
+    <div class="my-8 p-5 rounded-2xl bg-canvas-soft border border-hairline dark:bg-surface dark:border-overlay-lighter">
+      <h4 class="font-bold text-ink dark:text-on-primary text-sm sm:text-base flex items-center gap-2">
+        <span>📖</span> Related Malaysian Tax Intelligence:
+      </h4>
+      <p class="text-xs sm:text-sm text-body dark:text-muted mt-1">
+        Learn how foreign stock dividends are taxed in our <a href="/blogs/malaysia-foreign-dividend-income-tax-exemption-guide/" class="text-primary font-semibold hover:underline dark:text-link">Malaysia Foreign Dividend Tax Exemption Guide</a>, or check how to file your annual return in the <a href="/blogs/malaysia-mytax-lhdn-efiling-tax-reliefs-2026-guide/" class="text-primary font-semibold hover:underline dark:text-link">MyTax LHDN e-Filing Guide</a>.
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      Frequently Asked Questions
+    </h2>
+    <div class="space-y-4 my-6">
+      {faqSchema.mainEntity.map(item => (
+        <article class="p-5 rounded-2xl border border-hairline bg-canvas-soft/40 dark:border-overlay-lighter dark:bg-surface/50">
+          <h3 class="font-bold text-base text-ink dark:text-on-primary">
+            {item.name}
+          </h3>
+          <p class="mt-2 text-xs sm:text-sm text-body dark:text-muted leading-relaxed">
+            {item.acceptedAnswer.text}
+          </p>
+        </article>
+      ))}
+    </div>
+  </div>
+</BlogLayout>
