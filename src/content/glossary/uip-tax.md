@@ -6,7 +6,6 @@ examples:
   - "In Punjab, a 5 marla residential house in Category A rating incurs annual UIPT property tax."
   - "ePay Punjab and e-Payment Sindh allow online UIPT property tax payments using 17-digit PSID numbers."
 relatedGuides:
-  - "/blogs/pakistan-property-tax-guide"
   - "/blogs/pakistan-property-tax-guide/"
 relatedCalculators:
   - "property-tax-calculator"

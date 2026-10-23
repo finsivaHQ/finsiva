@@ -7,7 +7,7 @@ examples:
   - "Active tax filers on the ATL pay 0% withholding tax on daily cash withdrawals from Pakistani commercial banks."
 relatedGuides:
   - "/blogs/pakistan-fbr-tax-slabs/"
-  - "/blogs/pakistan-tax-filing-guide"
+  - "/blogs/pakistan-tax-filing-guide/"
 relatedCalculators:
   - "income-tax-calculator"
   - "salary-tax-calculator"

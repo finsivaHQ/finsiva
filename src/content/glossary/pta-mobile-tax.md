@@ -6,8 +6,8 @@ examples:
   - "Registering an iPhone 12 Pro Max on CNIC incurs a PTA tax based on its C&F dollar value."
   - "Travelers registering a phone on Passport within 60 days of arrival pay lower PTA tax."
 relatedGuides:
-  - "/blogs/pakistan-pta-mobile-tax-guide"
-  - "/blogs/pakistan-vehicle-tax-guide"
+  - "/blogs/pakistan-pta-mobile-tax-guide/"
+  - "/blogs/pakistan-vehicle-tax-guide/"
 relatedCalculators:
   - "income-tax-calculator"
 ---
