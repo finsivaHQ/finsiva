@@ -1,8 +1,9 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
+import InteractiveCalculatorEmbed from "../../components/InteractiveCalculatorEmbed.astro";
 
-const title = "Indonesia & Bali Income Tax Guide for Expats & Foreigners 2026";
-const description = "Essential guide to income tax in Indonesia and Bali for expats, foreigners, KITAS/KITAP holders, and digital nomads. Covers 183-day residency rule, non-resident 20% PPh 26 tax, and Job Creation Law.";
+const title = "Indonesia & Bali Tax Guide 2026: Expat Income Tax & 183-Day Rule";
+const description = "Complete guide to income tax in Indonesia and Bali for expats, KITAS holders, and digital nomads. 183-day rule, 20% PPh 26 tax, and tax calculator.";
 const image = "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=80";
 const author = "Dewi Lestari, International Expat Tax Advisory Lead";
 const authorBio = "Senior International Tax Specialist advising expatriates, digital nomads in Bali, KITAS holders, and foreign investors on DJP tax compliance and double taxation agreements.";
@@ -62,7 +63,15 @@ const faqSchema = {
     </p>
 
     <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
-      <h2 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Table of Contents</h2>
+      
+    <!-- Interactive Calculator Embed -->
+    <InteractiveCalculatorEmbed
+      ruleId="indonesia-income-tax-income-tax-calculator"
+      instanceId="id-expat-tax-calc"
+      title="Indonesia Personal Income Tax Calculator (2026)"
+      description="Compute Indonesian progressive tax brackets (5% to 35%), PTKP non-taxable income allowances, and estimated net take-home salary under DJP rules."
+    />
+<h2 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Table of Contents</h2>
       <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
         <li><a href="#residency-rules" class="text-link hover:underline">1. 183-Day Tax Residency & Intent Test</a></li>
         <li><a href="#job-creation-law" class="text-link hover:underline">2. Job Creation Law Expat Territorial Exemption</a></li>

@@ -1,8 +1,9 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
+import InteractiveCalculatorEmbed from "../../components/InteractiveCalculatorEmbed.astro";
 
-const title = "The Definitive Guide to Singapore Income Tax for Foreigners & Expats (2026)";
-const description = "Everything expats need to know about the singapore income tax rate for foreigners, EP holders, the 183-day rule, and how to legally reduce your tax burden in Singapore.";
+const title = "Singapore Expat Tax Guide 2026: Tax Brackets, EP Rules & Calculator";
+const description = "Calculate Singapore income tax for expats & EP holders. 2026 progressive brackets (0-24%), the 183-day rule, non-resident 15% rate, and legal tax deductions.";
 const image = "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1200&q=80";
 const author = "Rachel Lim, Senior International Tax Consultant";
 const authorBio = "Senior Tax Consultant specializing in Singapore expat tax planning, cross-border employee mobility, and tax optimization.";
@@ -51,7 +52,15 @@ const faqSchema = {
       In this deeply researched guide, we are moving entirely away from robotic, academic legalese. Instead, we are breaking down exactly <strong>how much tax do foreigners pay in Singapore</strong>, exploring the psychological relief of proactive tax planning, and giving you advanced strategies on <strong>how to reduce income tax in singapore foreigners</strong> legally and effectively.
     </p>
 
-    <h2 class="text-3xl font-bold mt-12 mb-6">1. The Fundamentals: Understanding Singapore Income Tax Rate</h2>
+    
+    <!-- Interactive Calculator Embed -->
+    <InteractiveCalculatorEmbed
+      ruleId="singapore-income-tax-income-tax-calculator"
+      instanceId="sg-expat-tax-calc"
+      title="Singapore Expat Income Tax Calculator (2026)"
+      description="Calculate your exact personal income tax liability, progressive resident tax rates (0% to 24%), and take-home pay under IRAS rules."
+    />
+<h2 class="text-3xl font-bold mt-12 mb-6">1. The Fundamentals: Understanding Singapore Income Tax Rate</h2>
     <p>
       Singapore is globally renowned for its business-friendly environment and attractive tax system. However, the exact <strong>income tax rate singapore</strong> applies to you depends entirely on one crucial factor: your tax residency status. This is where many expatriates make their first critical error. 
     </p>

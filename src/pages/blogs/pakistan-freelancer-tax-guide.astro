@@ -1,8 +1,9 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
+import InteractiveCalculatorEmbed from "../../components/InteractiveCalculatorEmbed.astro";
 
-const title = "Pakistan Freelancer Tax Guide 2026: IT Export Concessions & Rates";
-const description = "Complete guide to tax for freelancers and IT exporters in Pakistan. Learn Section 154A reduced 0.25% withholding tax, PSEB registration, Fiverr/Upwork earnings tax, and Google Adsense filing.";
+const title = "Pakistan Freelancer Tax Guide 2026: 0.25% IT Export Tax & PSEB";
+const description = "Calculate tax on foreign remittances & freelance income in Pakistan. Section 154A 0.25% rate, PSEB registration, Upwork/Fiverr & FBR filing guide.";
 const image = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80";
 const canonical = "https://finsiva.com/blogs/pakistan-freelancer-tax-guide/";
 const author = "Zainab Hussain";
@@ -72,7 +73,15 @@ const faqSchema = {
       In this comprehensive guide, we will break down everything you need to know about freelancer taxes in Pakistan. Whether you are a top-rated seller on Upwork, a digital nomad earning through Payoneer, or an agency owner scaling a software house, this 1,500+ word deep dive will equip you with the knowledge, strategies, and psychological resilience needed to master your tax obligations in 2026.
     </p>
 
-    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-10">1. Decoding Section 154A: The IT Export Tax Concessions</h2>
+    
+    <!-- Interactive Calculator Embed -->
+    <InteractiveCalculatorEmbed
+      ruleId="pakistan-income-tax-income-tax-calculator"
+      instanceId="pk-freelancer-tax-calc"
+      title="Pakistan Freelancer & Individual Income Tax Calculator (2026)"
+      description="Compute taxable income, monthly withholding deductions, and compare Section 154A IT export concession rates against standard FBR individual slabs."
+    />
+<h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-10">1. Decoding Section 154A: The IT Export Tax Concessions</h2>
     <p>
       At the heart of Pakistan’s tax incentives for the IT sector lies Section 154A. This section was introduced to simplify taxation for IT exporters and provide a compelling reason to bring foreign currency into the country through legal banking channels. Under Section 154A, foreign currency proceeds derived from the export of computer software, IT services, or IT-enabled services (ITES) are subject to a concessional final tax regime.
     </p>

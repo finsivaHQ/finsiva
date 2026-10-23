@@ -1,8 +1,9 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
+import InteractiveCalculatorEmbed from "../../components/InteractiveCalculatorEmbed.astro";
 
-const title = "Hong Kong Salaries Tax Guide 2026/27: Calculation, Rates, Allowances & Calculator";
-const description = "Comprehensive Hong Kong salaries tax guide for assessment year 2026/27. Calculate your HK tax liability, progressive rates (2%-17%), standard rate (15%), MPF deductions, and net take-home pay with IRD rules.";
+const title = "Hong Kong Salaries Tax Guide 2026: Rates, Allowances & Calculator";
+const description = "Calculate your Hong Kong salaries tax liability for 2026. Progressive rates (2%-17%), 15% standard rate, MPF deductions, and take-home pay calculator.";
 const image = "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=1200&q=80";
 const canonical = "https://finsiva.com/blogs/hong-kong-salaries-tax-guide/";
 
@@ -197,6 +198,14 @@ const faqSchema = {
                   </tbody>
                 </table>
               </div>
+    <!-- Interactive Calculator Embed -->
+    <InteractiveCalculatorEmbed
+      ruleId="hong-kong-salaries-tax-salaries-tax-calculator"
+      instanceId="hk-salaries-tax-calc"
+      title="Hong Kong Salaries Tax Calculator (2026)"
+      description="Calculate your net payable tax under both the progressive rate system (2% to 17%) and the 15% standard rate system with full MPF allowances."
+    />
+
 
               <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6 mb-3">Standard Rate (15% Flat Rate)</h3>
               <p>

@@ -1,8 +1,9 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
+import InteractiveCalculatorEmbed from "../../components/InteractiveCalculatorEmbed.astro";
 
-const title = "Pakistan Vehicle Token Tax Guide 2026: Punjab, Sindh & FBR Customs";
-const description = "Guide to motor vehicle token tax in Pakistan across Punjab, Sindh, ICT, and KPK. View engine CC rates, applicable filer/non-filer information, and imported car customs duties.";
+const title = "Pakistan Vehicle Tax Guide 2026: Engine CC Rates & Filer Slabs";
+const description = "Calculate 2026 vehicle token tax in Pakistan across Punjab, Sindh & Islamabad. Engine CC rates (660cc-2000cc+), FBR filer vs non-filer rules & ePay guide.";
 const image = "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=1200&q=80";
 const canonical = "https://finsiva.com/blogs/pakistan-vehicle-tax-guide/";
 const author = "Sana Chaudhry";
@@ -61,7 +62,15 @@ const faqSchema = {
               Vehicle taxation in Pakistan involves two distinct administrative levels: <strong>Provincial Excise & Taxation Departments</strong> (Punjab, Sindh, ICT, KPK, Balochistan) collecting annual token taxes and transfer fees, and <strong>Federal FBR</strong> collecting advance withholding taxes under Section 231B/234 and customs duties on vehicle imports.
             </p>
 
-            <h2 class="text-2xl font-semibold text-ink dark:text-on-primary">1. Provincial Excise Department Systems & Portals</h2>
+            
+    <!-- Interactive Calculator Embed -->
+    <InteractiveCalculatorEmbed
+      ruleId="pakistan-vehicle-tax-vehicle-tax-calculator"
+      instanceId="pk-vehicle-tax-calc"
+      title="Pakistan Vehicle Token Tax Calculator (2026)"
+      description="Calculate annual motor vehicle token tax, engine displacement capacity slabs, and filer vs non-filer advance withholding tax across Punjab and Sindh."
+    />
+<h2 class="text-2xl font-semibold text-ink dark:text-on-primary">1. Provincial Excise Department Systems & Portals</h2>
             <p>
               Provincial excise departments collect annual token tax through integrated online portals:
             </p>

@@ -1,8 +1,9 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
+import InteractiveCalculatorEmbed from "../../components/InteractiveCalculatorEmbed.astro";
 
-const title = "Singapore Overseas Online Shopping GST & Low Value Goods (LVG) Import Tax Guide 2026";
-const description = "Complete 2026 guide to Singapore GST on overseas online purchases, Low Value Goods (LVG < S$400), e-commerce platforms (Amazon, AliExpress, ASOS), FedEx shipping permits, and digital services tax.";
+const title = "Singapore LVG GST Guide 2026: 9% Tax on Online Orders under S$400";
+const description = "Calculate 9% Singapore GST on overseas purchases & Low Value Goods (LVG < S$400). Rules for Amazon, Taobao, shipping permits & customs clearance fees.";
 const image = "https://images.unsplash.com/photo-1556742049-0a6791497792?w=1200&q=80";
 const author = "Michael Tang, Senior Tax & Corporate Advisory Lead";
 const authorBio = "Corporate tax advisor specializing in Singapore Goods and Services Tax (GST), cross-border trade, Overseas Vendor Registration (OVR), and e-commerce import compliance.";
@@ -114,6 +115,14 @@ const faqSchema = {
         <li><a href="#faqs" class="text-link hover:underline">7. Frequently Asked Questions (FAQ)</a></li>
       </ul>
     </div>
+    <!-- Interactive Calculator Embed -->
+    <InteractiveCalculatorEmbed
+      ruleId="singapore-gst-gst-calculator"
+      instanceId="sg-lvg-gst-calc"
+      title="Singapore 9% Import & LVG GST Calculator (2026)"
+      description="Estimate your exact 9% Goods and Services Tax obligation on overseas orders, whether under S$400 (point-of-sale) or above S$400 (Customs CIF valuation)."
+    />
+
 
     <!-- Section 1 -->
     <h2 id="low-value-goods-framework" class="text-2xl font-semibold text-ink dark:text-on-primary">1. The S$400 Low Value Goods (LVG) Rule Explained</h2>
