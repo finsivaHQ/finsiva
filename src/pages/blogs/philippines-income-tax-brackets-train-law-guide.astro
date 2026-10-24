@@ -1,0 +1,273 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Philippines Income Tax Brackets 2026: TRAIN Law Slabs & Net Pay";
+const description = "Complete guide to Philippines income tax brackets under the updated TRAIN Law. Learn revised tax slabs, 13th-month pay exemptions, SSS/PhilHealth deductions, and net take-home pay.";
+const image = "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=1200&q=80";
+const canonical = "https://finsiva.com/blogs/philippines-income-tax-brackets-train-law-guide/";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are the Philippines income tax brackets under the updated TRAIN Law?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under the updated TRAIN Law (Republic Act No. 10963), annual taxable income up to PHP 250,000 is 100% tax-free (0%). Income between PHP 250,001 and PHP 400,000 is taxed at 15% on the excess over PHP 250,000. Income between PHP 400,001 and PHP 800,000 incurs PHP 22,500 plus 20% on the excess. Income between PHP 800,001 and PHP 2,000,000 pays PHP 102,500 plus 25%. Income between PHP 2,000,001 and PHP 8,000,000 pays PHP 402,500 plus 30%, and taxable income above PHP 8,000,000 is taxed at PHP 2,202,500 plus 35%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is 13th month pay taxable in the Philippines?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "13th month pay and other productivity bonuses in the Philippines are tax-exempt up to a statutory ceiling of PHP 90,000 per calendar year under the Tax Reform for Acceleration and Inclusion (TRAIN) Act. Any cumulative bonuses and de minimis benefits exceeding the PHP 90,000 threshold are added to your gross compensation and taxed at regular graduated income tax rates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which employee contributions are deductible from gross taxable income in the Philippines?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mandatory statutory employee contributions to the Social Security System (SSS) or Government Service Insurance System (GSIS), the Philippine Health Insurance Corporation (PhilHealth), and the Home Development Mutual Fund (Pag-IBIG Fund) are fully excluded and deducted from your gross compensation before computing taxable income."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who must file BIR Form 1700 versus Form 1701?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pure compensation earners with multiple employers in a single taxable year must file BIR Form 1700 by April 15. Salaried workers with a single employer qualify for substituted filing where Form 2316 serves as their final return. Self-employed individuals, professionals, and mixed-income earners must file BIR Form 1701 annually alongside quarterly Form 1701Q returns."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does substituted filing work for Philippine employees?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Substituted filing applies to pure compensation earners who receive income from only one employer in the Philippines during the calendar year, provided their employer correctly withheld the exact final tax due. In this case, BIR Form 2316 (Certificate of Compensation Payment/Tax Withheld) signed by both employer and employee serves as the equivalent of an officially filed annual income tax return."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  canonical={canonical}
+  author="Maria Elena Santos, CPA"
+  authorBio="Maria Elena Santos is a senior tax accountant and compensation specialist based in Manila, advising corporate HR teams and expatriates on BIR compliance, payroll withholding, and TRAIN Law computations."
+  lastUpdated="October 2026"
+  readTime="14 min read"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
+    <p>Navigating personal income tax in the Philippines has undergone significant modernization following the implementation of the <strong>Tax Reform for Acceleration and Inclusion (TRAIN) Act</strong> (Republic Act No. 10963). Designed to reduce the income tax burden on low- and middle-income wage earners while simplifying compliance, the law introduced progressive bracket reductions that directly boost monthly take-home pay across private and public sectors.</p>
+
+    <p>Whether you are starting a new job in Bonifacio Global City (BGC), managing payroll for an enterprise in Makati, or working as an overseas Filipino worker (OFW) returning to domestic employment, understanding how the Bureau of Internal Revenue (BIR) calculates withholding taxes, statutory deductions, and bonus exemptions is critical for personal financial planning.</p>
+
+    <!-- Quick Answer Card -->
+    <div class="my-6 rounded-2xl border-2 border-primary/20 bg-primary/[0.03] p-6 dark:border-primary/30 dark:bg-primary/[0.05]">
+      <h3 class="text-lg font-bold text-ink dark:text-on-primary mb-2 flex items-center gap-2">
+        <span class="w-3 h-3 rounded-full bg-primary inline-block"></span>
+        TRAIN Law Income Tax Snapshot (2026)
+      </h3>
+      <p class="text-sm leading-relaxed text-body dark:text-muted">
+        <strong>The first PHP 250,000 of annual taxable income is 100% tax-free.</strong> For workers earning above PHP 250,000, revised tax rates range from 15% to 35%. Statutory employee contributions (SSS, PhilHealth, Pag-IBIG) and 13th-month pay up to <strong>PHP 90,000</strong> are completely exempt from personal income tax.
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">What Are the Philippines Income Tax Brackets Under the Updated TRAIN Law?</h2>
+    <p><strong>Under the updated TRAIN Law (Republic Act No. 10963), individual income tax rates are divided into six progressive slabs, where income up to PHP 250,000 pays 0% tax, while income above PHP 8,000,000 is taxed at a top marginal rate of 35%.</strong> The intermediate brackets were permanently reduced in the second phase of the TRAIN implementation, providing additional tax savings to middle-class salary earners.</p>
+
+    <p>The revised individual income tax schedule applicable for the current taxable assessment year is outlined below:</p>
+
+    <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+      <table class="w-full text-left text-sm">
+        <thead class="bg-canvas-soft border-b border-hairline dark:bg-surface/80 dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+          <tr>
+            <th class="p-3">Annual Taxable Income Bracket (PHP)</th>
+            <th class="p-3">Base Tax Amount</th>
+            <th class="p-3">Marginal Tax Rate</th>
+            <th class="p-3">Effective Threshold Excess</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr class="bg-primary/[0.02]"><td class="p-3 font-semibold">Up to PHP 250,000</td><td class="p-3">PHP 0</td><td class="p-3 font-bold text-primary dark:text-on-primary">0% (Tax-Exempt)</td><td class="p-3">PHP 0</td></tr>
+          <tr><td class="p-3">PHP 250,001 – PHP 400,000</td><td class="p-3">PHP 0</td><td class="p-3 font-bold">15%</td><td class="p-3">Over PHP 250,000</td></tr>
+          <tr><td class="p-3">PHP 400,001 – PHP 800,000</td><td class="p-3">PHP 22,500</td><td class="p-3 font-bold">20%</td><td class="p-3">Over PHP 400,000</td></tr>
+          <tr><td class="p-3">PHP 800,001 – PHP 2,000,000</td><td class="p-3">PHP 102,500</td><td class="p-3 font-bold">25%</td><td class="p-3">Over PHP 800,000</td></tr>
+          <tr><td class="p-3">PHP 2,000,001 – PHP 8,000,000</td><td class="p-3">PHP 402,500</td><td class="p-3 font-bold">30%</td><td class="p-3">Over PHP 2,000,000</td></tr>
+          <tr class="bg-canvas-soft"><td class="p-3 font-semibold">Over PHP 8,000,000</td><td class="p-3">PHP 2,202,500</td><td class="p-3 font-bold text-primary dark:text-on-primary">35%</td><td class="p-3">Over PHP 8,000,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>To compute your exact withholding liability or compare net take-home salary, visit our dedicated <a href="/countries/philippines/income-tax/income-tax-calculator/" class="text-link font-semibold hover:underline dark:text-link">Philippines Income Tax Calculator</a>.</p>
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">How Is Taxable Income Computed from Gross Compensation?</h2>
+    <p><strong>Taxable income in the Philippines is computed by subtracting statutory government contributions (SSS, PhilHealth, Pag-IBIG), non-taxable de minimis benefits, and exempt bonuses from total gross compensation.</strong> In the Philippines, personal and additional exemptions for dependents were repealed under the TRAIN Law in exchange for the broad PHP 250,000 zero-bracket.</p>
+
+    <p>The standard payroll calculation formula follows this sequential hierarchy:</p>
+    <ol class="list-decimal pl-6 space-y-2 mt-3">
+      <li><strong>Gross Compensation Income:</strong> Includes basic monthly salary, overtime pay, night shift differential, hazard pay, allowances, and statutory bonuses.</li>
+      <li><strong>Less Non-Taxable / Exempt Deductions:</strong>
+        <ul class="list-disc pl-6 space-y-1 mt-1 text-sm">
+          <li>Mandatory Employee SSS / GSIS contributions (subject to statutory monthly salary credit schedules).</li>
+          <li>PhilHealth premium share (currently capped at prevailing annual premium schedules).</li>
+          <li>Pag-IBIG Fund monthly mandatory contributions (standard employee share of PHP 200).</li>
+          <li>13th Month Pay and other productivity incentives up to the statutory <strong>PHP 90,000</strong> limit.</li>
+          <li>Qualifying <em>De Minimis</em> benefits (e.g., rice subsidy, medical cash allowance, uniform allowance within BIR threshold caps).</li>
+        </ul>
+      </li>
+      <li><strong>Equals Net Taxable Compensation Income:</strong> This net figure is applied against the annual or semi-monthly BIR withholding tax tables to compute the precise payroll deduction.</li>
+    </ol>
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">Is 13th Month Pay Taxable in the Philippines?</h2>
+    <p><strong>13th month pay is legally mandated under Presidential Decree No. 851 and is 100% tax-free up to a combined ceiling of PHP 90,000 per calendar year.</strong> This statutory ceiling covers not only the mandatory 13th-month salary but also includes Christmas bonuses, mid-year incentives, productivity bonuses, and other non-statutory benefits received during the calendar year.</p>
+
+    <p>If the cumulative total of your 13th-month salary and other bonuses does not exceed PHP 90,000, no withholding tax is deducted. However, if your company awards a Christmas bonus of PHP 60,000 on top of an existing PHP 50,000 13th-month pay (totaling PHP 110,000), the <strong>excess PHP 20,000</strong> is deemed taxable compensation. That excess is consolidated with your basic salary in the December payroll and taxed at your top marginal bracket.</p>
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">Step-by-Step Payroll Tax Calculation Example</h2>
+    <p><strong>To visualize how the BIR formula applies in practice, consider a private sector professional in Metro Manila earning a gross basic salary of PHP 50,000 per month (PHP 600,000 annually) plus a mandatory 13th-month pay of PHP 50,000.</strong></p>
+
+    <div class="my-6 rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface shadow-sm space-y-3">
+      <h3 class="font-bold text-ink dark:text-on-primary text-base">Annual Tax Computation Breakdown:</h3>
+      <ul class="list-disc pl-6 space-y-1.5 text-sm">
+        <li><strong>Gross Basic Annual Pay:</strong> PHP 50,000 × 12 = PHP 600,000</li>
+        <li><strong>13th Month Pay:</strong> PHP 50,000 (Fully exempt, as it is under the PHP 90,000 cap)</li>
+        <li><strong>Estimated Annual SSS Employee Share:</strong> ~PHP 16,200 (based on max MSC)</li>
+        <li><strong>Estimated Annual PhilHealth Employee Share:</strong> ~PHP 15,000 (5% total premium split 50/50)</li>
+        <li><strong>Annual Pag-IBIG Mandatory Employee Share:</strong> PHP 200 × 12 = PHP 2,400</li>
+        <li><strong>Total Statutory Deductions:</strong> PHP 16,200 + PHP 15,000 + PHP 2,400 = <strong>PHP 33,600</strong></li>
+        <li><strong>Net Chargeable Taxable Compensation:</strong> PHP 600,000 − PHP 33,600 = <strong>PHP 566,400</strong></li>
+      </ul>
+
+      <div class="pt-3 border-t border-hairline dark:border-overlay-lighter space-y-1.5 text-sm">
+        <p><strong>Applying TRAIN Law Brackets to PHP 566,400:</strong></p>
+        <p>This income falls into the <em>PHP 400,001 to PHP 800,000</em> bracket (Base tax: PHP 22,500 + 20% on excess over PHP 400,000):</p>
+        <p>• Base tax: PHP 22,500</p>
+        <p>• Excess: PHP 566,400 − PHP 400,000 = PHP 166,400</p>
+        <p>• Marginal tax on excess: PHP 166,400 × 20% = PHP 33,280</p>
+        <p class="text-base font-bold text-primary dark:text-on-primary pt-1">
+          • Total Annual Income Tax Due: PHP 22,500 + PHP 33,280 = <strong>PHP 55,780</strong>
+        </p>
+        <p class="text-xs text-muted">Average Monthly Withholding Tax: ~PHP 4,648.33 | Effective Tax Rate: 9.30% of gross earnings.</p>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">What Is Substituted Filing and Who Qualifies for BIR Form 2316?</h2>
+    <p><strong>Substituted filing is an administrative relief under Revenue Regulations No. 2-98 that exempts eligible employees from filing an individual Annual Income Tax Return (BIR Form 1700), as their employer's year-end annualized withholding tax serves as the final assessment.</strong> If you qualify, your employer provides you with BIR Form 2316, signed by both parties, which acts as your official tax return.</p>
+
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Mandatory Criteria for Substituted Filing:</h3>
+    <ul class="list-disc pl-6 space-y-2 mt-2">
+      <li>The employee receives purely compensation income (no side business, freelancing, or rental trade).</li>
+      <li>The employee had only <strong>one employer</strong> in the Philippines during the entire calendar year.</li>
+      <li>The tax due on the employee's compensation was correctly withheld and remitted to the BIR by the employer.</li>
+      <li>The employee's spouse, if applicable, complies with the same individual filing rules.</li>
+    </ul>
+
+    <p class="mt-3"><strong>When must you file BIR Form 1700 manually?</strong> If you switched employers mid-year (having two or more employers in one calendar year), you are disqualified from substituted filing. You must request Form 2316 from both previous and current employers, consolidate your income on BIR Form 1700 using the eBIRForms package or eFPS, and file by <strong>April 15</strong> of the following year.</p>
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">Income Tax Rules for Resident Aliens and Expatriates</h2>
+    <p><strong>Resident aliens and expatriates working in the Philippines on a 9(g) commercial work visa or Alien Employment Permit (AEP) are taxed exclusively on Philippine-sourced compensation at the standard graduated TRAIN Law rates (0% to 35%).</strong> Unlike Philippine citizens, who are subject to worldwide income taxation, alien individuals are taxed solely on income derived from sources within the territory of the Philippines.</p>
+
+    <p>Furthermore, the preferential 15% tax rate previously enjoyed by foreign employees of Regional Operating Headquarters (ROHQ), Regional Headquarters (RHQ), and Offshore Banking Units (OBUs) was vetoed and repealed under the TRAIN Law. All expatriates employed in these multinational entities are now integrated into the standard graduated tax schedule.</p>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-12 mb-6">Frequently Asked Questions</h2>
+  {faqSchema.mainEntity.map(faq => (
+    <div class="my-4 p-5 rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface shadow-sm">
+      <h3 class="text-lg font-bold text-ink dark:text-on-primary">{faq.name}</h3>
+      <p class="text-sm text-body dark:text-muted mt-2 leading-relaxed">{faq.acceptedAnswer.text}</p>
+    </div>
+  ))}
+
+  <!-- Interactive Calculator Hub Section -->
+  <div class="my-10 rounded-2xl border border-hairline bg-canvas-soft p-6 sm:p-8 dark:border-overlay-lighter dark:bg-surface">
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+      <div>
+        <span class="text-xs font-bold text-primary uppercase tracking-wider mb-1 block">Instant Tax Estimations</span>
+        <h3 class="text-xl font-bold text-ink dark:text-on-primary">Calculate Your Philippine Net Salary Instantly</h3>
+        <p class="text-sm text-muted mt-1">Estimate SSS, PhilHealth, Pag-IBIG contributions, and exact BIR withholding with our free tool:</p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <a href="/countries/philippines/income-tax/income-tax-calculator/" class="group rounded-xl border border-hairline bg-canvas p-5 transition-all hover:border-primary hover:shadow-md dark:border-overlay-lighter dark:bg-surface flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between text-xs font-semibold text-primary mb-1.5">
+            <span class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+              Interactive Calculator
+            </span>
+            <span class="text-muted text-[11px] font-normal">Philippines</span>
+          </div>
+          <h4 class="font-bold text-ink dark:text-on-primary group-hover:text-primary transition-colors text-base">Philippines Income Tax Calculator</h4>
+          <p class="text-xs text-muted mt-1.5 leading-relaxed">Compute graduated TRAIN tax brackets, monthly deductions, and net take-home salary.</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-hairline dark:border-overlay-lighter flex items-center justify-between text-xs font-semibold text-primary">
+          <span>Calculate Now</span>
+          <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
+        </div>
+      </a>
+
+      <a href="/countries/philippines/vat/vat-calculator/" class="group rounded-xl border border-hairline bg-canvas p-5 transition-all hover:border-primary hover:shadow-md dark:border-overlay-lighter dark:bg-surface flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between text-xs font-semibold text-primary mb-1.5">
+            <span class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+              Interactive Calculator
+            </span>
+            <span class="text-muted text-[11px] font-normal">Philippines</span>
+          </div>
+          <h4 class="font-bold text-ink dark:text-on-primary group-hover:text-primary transition-colors text-base">Philippines 12% VAT Calculator</h4>
+          <p class="text-xs text-muted mt-1.5 leading-relaxed">Calculate VAT inclusive and exclusive prices, 12% input/output taxes, and receipts.</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-hairline dark:border-overlay-lighter flex items-center justify-between text-xs font-semibold text-primary">
+          <span>Calculate Now</span>
+          <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="mt-6 pt-4 border-t border-hairline dark:border-overlay-lighter flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-xs text-muted">
+      <span>Need tools for other tax categories in the Philippines?</span>
+      <a href="/countries/philippines/" class="font-semibold text-primary hover:underline flex items-center gap-1">
+        Explore Philippines Tax Authority Hub &rarr;
+      </a>
+    </div>
+  </div>
+
+  <!-- Internal Resource Linking Grid -->
+  <div class="mt-12 pt-8 border-t border-hairline dark:border-overlay-lighter">
+    <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Related Philippine Tax Guides & Tools</h2>
+    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <a href="/blogs/philippines-freelancer-tax-rate-8-percent-bir-guide/" class="block rounded-xl border border-hairline p-5 hover:border-primary hover:shadow-md transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+        <h3 class="font-bold text-ink dark:text-on-primary text-base">Philippines Freelancer Tax Guide</h3>
+        <p class="text-sm text-muted mt-2">8% flat gross rate vs graduated rates for self-employed professionals.</p>
+      </a>
+      <a href="/blogs/philippines-12-percent-vat-bir-guide/" class="block rounded-xl border border-hairline p-5 hover:border-primary hover:shadow-md transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+        <h3 class="font-bold text-ink dark:text-on-primary text-base">Philippines 12% VAT Guide</h3>
+        <p class="text-sm text-muted mt-2">Input vs output tax, 3M VAT threshold, and zero-rated BPO rules.</p>
+      </a>
+      <a href="/countries/philippines/income-tax/income-tax-calculator/" class="block rounded-xl border border-hairline p-5 hover:border-primary hover:shadow-md transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+        <h3 class="font-bold text-ink dark:text-on-primary text-base">Philippines Tax Calculator</h3>
+        <p class="text-sm text-muted mt-2">Interactive TRAIN Law withholding salary tax calculator.</p>
+      </a>
+    </div>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-ink mt-12 mb-6 dark:text-on-primary">Official Authorities & References</h2>
+  <ul class="list-disc pl-6 space-y-2 text-body dark:text-muted">
+    <li><a href="https://www.bir.gov.ph" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link font-medium">Bureau of Internal Revenue (BIR) Official Portal</a></li>
+    <li><a href="https://www.bir.gov.ph/tax-rates" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link font-medium">BIR Withholding Tax Tables & TRAIN Law Regulations</a></li>
+    <li><a href="https://www.sss.gov.ph" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link font-medium">Social Security System (SSS) Contributions Schedule</a></li>
+    <li><a href="https://www.philhealth.gov.ph" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link font-medium">PhilHealth Premium Rate Advisory</a></li>
+  </ul>
+</BlogLayout>

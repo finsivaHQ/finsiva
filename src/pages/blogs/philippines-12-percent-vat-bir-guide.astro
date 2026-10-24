@@ -1,0 +1,305 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "Philippines 12% VAT Guide: BIR Input vs Output Tax & 3M Threshold";
+const description = "Complete guide to Philippines 12% Value-Added Tax (VAT). Learn how BIR input and output taxes work, the PHP 3,000,000 registration threshold, zero-rated BPO rules, and EOPT invoice reforms.";
+const image = "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&q=80";
+const canonical = "https://finsiva.com/blogs/philippines-12-percent-vat-bir-guide/";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is 12% VAT calculated in the Philippines?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "12% Value-Added Tax (VAT) in the Philippines is an indirect consumption tax levied on the sale, barter, exchange, or lease of taxable goods, properties, and services. It is computed as Output Tax (12% of total sales price charged to customers) minus Input Tax (12% VAT paid to local VAT-registered suppliers on business purchases). The net difference is the VAT Payable remitted to the BIR quarterly via Form 2550Q."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the mandatory VAT registration threshold in the Philippines?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under the National Internal Revenue Code (NIRC) as amended by the TRAIN Law, any individual or corporation whose gross annual sales or receipts exceed PHP 3,000,000 is legally mandated to register as a VAT taxpayer with the BIR. Businesses with gross annual sales of PHP 3,000,000 or below are classified as Non-VAT and pay a 3% percentage tax instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between zero-rated (0%) VAT and VAT-exempt sales?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Zero-rated sales (such as direct export sales of goods or BPO services rendered to foreign non-resident clients) are subject to 0% VAT, allowing the business to claim a refund or tax credit for all input VAT incurred on purchases. VAT-exempt transactions (such as unprocessed agricultural food products, medical services, and school tuition) do not charge VAT to buyers, but sellers cannot claim or recover any input VAT on related operational costs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When must BIR Form 2550Q be filed and paid?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under current BIR tax filing rules, the monthly VAT declaration (BIR Form 2550M) has been phased out, and VAT-registered businesses must file and pay the Quarterly Value-Added Tax Return (BIR Form 2550Q) within twenty-five (25) days following the close of each taxable quarter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How did the Ease of Paying Taxes (EOPT) Act change VAT invoicing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Republic Act No. 11976 (EOPT Act) repealed the distinction between sales invoices (for goods) and official receipts (for services). All VAT-registered taxpayers now issue a single commercial document called the 'Invoice' for both goods and services. Furthermore, VAT for services is now recognized upon issuance of the invoice, shifting tax recognition to an accrual basis."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  canonical={canonical}
+  author="Maria Elena Santos, CPA"
+  authorBio="Maria Elena Santos is a senior tax accountant and compensation specialist based in Manila, advising corporate HR teams and expatriates on BIR compliance, payroll withholding, and TRAIN Law computations."
+  lastUpdated="October 2026"
+  readTime="15 min read"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
+    <p>Value-Added Tax (VAT) is the primary indirect consumption tax powering the Philippine fiscal system. Administered by the <strong>Bureau of Internal Revenue (BIR)</strong> under Title IV of the National Internal Revenue Code (NIRC), the standard statutory VAT rate is set at <strong>12%</strong> on domestic sales of goods, properties, and services, as well as the importation of commercial goods into the customs territory of the Philippines.</p>
+
+    <p>Following landmark statutory overhauls—most notably the <strong>Tax Reform for Acceleration and Inclusion (TRAIN) Law</strong> and the recent <strong>Ease of Paying Taxes (EOPT) Act</strong> (Republic Act No. 11976)—the BIR has fundamentally streamlined VAT administration. Monthly declarations have been retired in favor of streamlined quarterly filings, and commercial invoices have replaced traditional official receipts as the definitive instrument for claiming input tax credits.</p>
+
+    <!-- Key Takeaway Banner -->
+    <div class="my-6 rounded-2xl border-2 border-primary/20 bg-primary/[0.03] p-6 dark:border-primary/30 dark:bg-primary/[0.05]">
+      <h3 class="text-lg font-bold text-ink dark:text-on-primary mb-2 flex items-center gap-2">
+        <span class="w-3 h-3 rounded-full bg-primary inline-block"></span>
+        12% Philippine VAT Architecture Overview
+      </h3>
+      <p class="text-sm leading-relaxed text-body dark:text-muted">
+        <strong>The statutory VAT rate is 12%.</strong> Any enterprise exceeding the <strong>PHP 3,000,000 annual gross sales threshold</strong> must register for VAT. VAT is calculated as <code>Output VAT − Input VAT = Net VAT Payable</code>. BPO and IT export services to non-resident foreign clients qualify for <strong>0% zero-rated VAT</strong> with full input tax refund eligibility.
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">How Does the 12% Value-Added Tax (VAT) Mechanism Work?</h2>
+    <p><strong>The Philippine VAT system operates on a tax-credit method, where a VAT-registered business acts as a tax collection agent for the BIR by charging a 12% Output Tax on taxable sales and offsetting that liability against the 12% Input Tax paid on business-related purchases and operating expenses.</strong> The net difference is either remitted to the BIR or carried forward as an input tax credit to subsequent quarters.</p>
+
+    <p>The core mathematical framework is defined by two primary elements:</p>
+    <ul class="list-disc pl-6 space-y-2 mt-3">
+      <li><strong>Output VAT:</strong> The 12% tax added to the net selling price of goods or services billed to your customers. For example, if you sell consulting services for PHP 100,000 net, you invoice the client for PHP 112,000 (collecting PHP 12,000 as Output VAT).</li>
+      <li><strong>Input VAT:</strong> The 12% tax that your business paid to other VAT-registered suppliers on legitimate business expenses, raw materials, capital equipment, office rent, utilities, and professional services, supported by valid VAT Invoices.</li>
+    </ul>
+
+    <p class="mt-4">
+      To calculate exact inclusive or exclusive values, use our interactive <a href="/countries/philippines/vat/vat-calculator/" class="text-link font-semibold hover:underline dark:text-link">Philippines 12% VAT Calculator</a>.
+    </p>
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">What Is the Mandatory VAT Registration Threshold in the Philippines?</h2>
+    <p><strong>Under Section 236 of the Tax Code, any individual, partnership, or corporation whose gross sales or receipts exceed PHP 3,000,000 in any 12-month period is legally required to register as a VAT taxpayer with the BIR.</strong> If a business projects that its gross sales will surpass this threshold in the next 12 months, mandatory VAT registration is triggered immediately.</p>
+
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Mandatory VAT vs Non-VAT Comparison</h3>
+    <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+      <table class="w-full text-left text-sm">
+        <thead class="bg-canvas-soft border-b border-hairline dark:bg-surface/80 dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+          <tr>
+            <th class="p-3">Category</th>
+            <th class="p-3">Annual Gross Sales Threshold</th>
+            <th class="p-3">Applicable Tax Rate</th>
+            <th class="p-3">Tax Filing Form</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 font-semibold">Non-VAT Taxpayer</td>
+            <td class="p-3">PHP 3,000,000 or below</td>
+            <td class="p-3 font-bold text-primary dark:text-on-primary">3% Percentage Tax (or 8% Flat Tax)</td>
+            <td class="p-3">BIR Form 2551Q (Quarterly)</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-semibold">VAT-Registered Taxpayer</td>
+            <td class="p-3">Exceeds PHP 3,000,000</td>
+            <td class="p-3 font-bold text-primary dark:text-on-primary">12% Value-Added Tax</td>
+            <td class="p-3">BIR Form 2550Q (Quarterly)</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-semibold">Voluntary VAT</td>
+            <td class="p-3">Below PHP 3,000,000 (Optional)</td>
+            <td class="p-3 font-bold">12% Value-Added Tax</td>
+            <td class="p-3">BIR Form 2550Q (Quarterly)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-sm text-muted">
+      <strong>Voluntary VAT Registration:</strong> Small BPO enterprises and service providers with revenues under PHP 3M frequently register for VAT voluntarily to issue valid VAT invoices to corporate enterprise clients who demand input tax deductibility, or to claim input tax refunds on zero-rated export transactions. Note that once you voluntarily register for VAT, the election is locked for a minimum of three (3) consecutive years.
+    </p>
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">Zero-Rated (0%) VAT vs VAT-Exempt Transactions: The Critical Distinction</h2>
+    <p><strong>The essential difference between zero-rated and VAT-exempt sales lies in input tax recoverability: zero-rated sales allow businesses to claim cash refunds or tax credit certificates for input VAT paid on operational purchases, whereas VAT-exempt sales do not allow any input tax credits.</strong></p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface shadow-sm">
+        <h3 class="font-bold text-ink dark:text-on-primary text-base text-primary mb-2">Zero-Rated Transactions (0% VAT)</h3>
+        <p class="text-xs text-muted mb-3">Covered under Section 106(A)(2) and Section 108(B) of the Tax Code:</p>
+        <ul class="list-disc pl-5 space-y-1.5 text-sm">
+          <li><strong>Export Sales:</strong> Direct export of goods to foreign destinations.</li>
+          <li><strong>BPO & Offshore Services:</strong> IT-BPO, customer support, and software engineering services performed in the Philippines for foreign clients, paid in acceptable foreign currency remitted through the BSP banking system.</li>
+          <li><strong>PEZA / Ecozone Sales:</strong> Sales of goods or services to registered business enterprises (RBEs) located inside Philippine Economic Zone Authority (PEZA) zones or Subic/Clark freeports.</li>
+          <li><strong>Input Tax Recovery:</strong> Eligible for <strong>100% BIR input tax refund</strong> or Tax Credit Certificate (TCC).</li>
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface shadow-sm">
+        <h3 class="font-bold text-ink dark:text-on-primary text-base mb-2">VAT-Exempt Transactions</h3>
+        <p class="text-xs text-muted mb-3">Covered under Section 109 of the Tax Code:</p>
+        <ul class="list-disc pl-5 space-y-1.5 text-sm">
+          <li><strong>Agricultural & Marine Products:</strong> Sale of agricultural and marine food products in their original or raw state (livestock, poultry, fruits, vegetables).</li>
+          <li><strong>Healthcare & Medical:</strong> Medical, dental, and hospital services, except those rendered by professionals.</li>
+          <li><strong>Education:</strong> Educational services rendered by private and state educational institutions.</li>
+          <li><strong>Residential Leases:</strong> Residential rental units with monthly rent not exceeding PHP 15,000 per unit.</li>
+          <li><strong>Input Tax Recovery:</strong> No input tax credit allowed; input VAT is treated as an ordinary business expense.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">Step-by-Step VAT Calculation Example</h2>
+    <p><strong>To illustrate how net VAT payable is calculated in quarterly operations, let's examine a digital creative agency in Makati generating PHP 2,000,000 in domestic taxable sales in a single quarter, while incurring PHP 800,000 in VAT-registered operational expenses.</strong></p>
+
+    <div class="my-6 rounded-xl border border-hairline bg-canvas p-6 dark:border-overlay-lighter dark:bg-surface shadow-sm space-y-3">
+      <h3 class="font-bold text-ink dark:text-on-primary text-base">Quarterly VAT Computation Breakdown:</h3>
+      <ul class="list-disc pl-6 space-y-1.5 text-sm">
+        <li><strong>Gross Taxable Sales (Net of VAT):</strong> PHP 2,000,000</li>
+        <li><strong>Output VAT (12%):</strong> PHP 2,000,000 × 12% = <strong>PHP 240,000</strong> (Collected from clients)</li>
+        <li><strong>Local Operating Purchases (Net of VAT):</strong> PHP 800,000 (cloud hosting, equipment, rent, software licenses)</li>
+        <li><strong>Creditable Input VAT (12%):</strong> PHP 800,000 × 12% = <strong>PHP 96,000</strong> (Supported by valid VAT Invoices)</li>
+      </ul>
+
+      <div class="pt-3 border-t border-hairline dark:border-overlay-lighter space-y-1.5 text-sm">
+        <p><strong>Applying the Output Less Input Formula:</strong></p>
+        <p><code>Net VAT Payable = Output VAT (PHP 240,000) − Creditable Input VAT (PHP 96,000)</code></p>
+        <p class="text-base font-bold text-primary dark:text-on-primary pt-1">
+          • Net VAT Payable to BIR on Form 2550Q: <strong>PHP 144,000</strong>
+        </p>
+        <p class="text-xs text-muted">Payment Deadline: 25th day of the month following the close of the calendar quarter.</p>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">Ease of Paying Taxes (EOPT) Act: Crucial VAT Reforms</h2>
+    <p><strong>The Ease of Paying Taxes (EOPT) Act (Republic Act No. 11976) introduced the most substantial administrative overhaul of Philippine VAT in decades, standardizing all sales documentation under a single 'Invoice' and streamlining the input VAT refund timeline to an enforceable 90-day window.</strong></p>
+
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Key VAT Innovations Under the EOPT Act:</h3>
+    <ul class="list-disc pl-6 space-y-2 mt-2">
+      <li><strong>Abolition of Official Receipts (OR) for Services:</strong> Previously, businesses had to issue Sales Invoices for goods and Official Receipts for services. Under EOPT, the <strong>Invoice</strong> is now the sole primary document for both sales and input tax substantiation across all sectors.</li>
+      <li><strong>Shift to Accrual Basis for Services:</strong> Output VAT on service contracts is now recognized and payable upon issuance of the invoice, rather than upon actual collection of cash. If the client fails to pay, businesses may claim an output VAT deduction for uncollected receivables (bad debts) in future returns.</li>
+      <li><strong>90-Day Enforceable VAT Refund:</strong> The BIR is strictly required to process and decide on applications for VAT refunds under Section 112 within ninety (90) days from the submission of complete supporting documents.</li>
+      <li><strong>Classification of Taxpayers:</strong> Taxpayers are categorized into Micro, Small, Medium, and Large based on annual gross sales, reducing recordkeeping and penalty burdens on micro and small enterprises.</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">Filing Requirements: Deadlines and Penalties for BIR Form 2550Q</h2>
+    <p><strong>VAT-registered businesses must file their Quarterly Value-Added Tax Return (BIR Form 2550Q) and pay the corresponding tax within twenty-five (25) days following the end of each taxable quarter through the Electronic Filing and Payment System (eFPS) or authorized agent banks (AAB).</strong></p>
+
+    <ul class="list-disc pl-6 space-y-1.5 mt-2 text-sm">
+      <li><strong>1st Quarter Return (Jan – Mar):</strong> Due on or before <strong>April 25</strong></li>
+      <li><strong>2nd Quarter Return (Apr – Jun):</strong> Due on or before <strong>July 25</strong></li>
+      <li><strong>3rd Quarter Return (Jul – Sep):</strong> Due on or before <strong>October 25</strong></li>
+      <li><strong>4th Quarter Return (Oct – Dec):</strong> Due on or before <strong>January 25</strong> of the following year</li>
+    </ul>
+
+    <p class="mt-3">
+      <strong>Penalties for Late Filing:</strong> Failure to file and pay VAT on time incurs a mandatory <strong>25% surcharge</strong> on the basic tax due, an annual legal interest penalty (currently 12% per annum under TRAIN), plus compromise penalties ranging from PHP 1,000 to PHP 50,000 depending on the gross sales bracket.
+    </p>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-12 mb-6">Frequently Asked Questions</h2>
+  {faqSchema.mainEntity.map(faq => (
+    <div class="my-4 p-5 rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface shadow-sm">
+      <h3 class="text-lg font-bold text-ink dark:text-on-primary">{faq.name}</h3>
+      <p class="text-sm text-body dark:text-muted mt-2 leading-relaxed">{faq.acceptedAnswer.text}</p>
+    </div>
+  ))}
+
+  <!-- Interactive Calculator Hub Section -->
+  <div class="my-10 rounded-2xl border border-hairline bg-canvas-soft p-6 sm:p-8 dark:border-overlay-lighter dark:bg-surface">
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+      <div>
+        <span class="text-xs font-bold text-primary uppercase tracking-wider mb-1 block">Free Tax Calculator</span>
+        <h3 class="text-xl font-bold text-ink dark:text-on-primary">Calculate Your Philippine VAT Obligations</h3>
+        <p class="text-sm text-muted mt-1">Determine exact VAT inclusive amounts, output taxes, and creditable input deductions:</p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <a href="/countries/philippines/vat/vat-calculator/" class="group rounded-xl border border-hairline bg-canvas p-5 transition-all hover:border-primary hover:shadow-md dark:border-overlay-lighter dark:bg-surface flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between text-xs font-semibold text-primary mb-1.5">
+            <span class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+              Interactive Calculator
+            </span>
+            <span class="text-muted text-[11px] font-normal">Philippines</span>
+          </div>
+          <h4 class="font-bold text-ink dark:text-on-primary group-hover:text-primary transition-colors text-base">Philippines 12% VAT Calculator</h4>
+          <p class="text-xs text-muted mt-1.5 leading-relaxed">Calculate 12% VAT inclusive and exclusive prices, input tax credits, and invoicing amounts.</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-hairline dark:border-overlay-lighter flex items-center justify-between text-xs font-semibold text-primary">
+          <span>Calculate Now</span>
+          <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
+        </div>
+      </a>
+
+      <a href="/countries/philippines/income-tax/income-tax-calculator/" class="group rounded-xl border border-hairline bg-canvas p-5 transition-all hover:border-primary hover:shadow-md dark:border-overlay-lighter dark:bg-surface flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between text-xs font-semibold text-primary mb-1.5">
+            <span class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+              Interactive Calculator
+            </span>
+            <span class="text-muted text-[11px] font-normal">Philippines</span>
+          </div>
+          <h4 class="font-bold text-ink dark:text-on-primary group-hover:text-primary transition-colors text-base">Philippines Income Tax Calculator</h4>
+          <p class="text-xs text-muted mt-1.5 leading-relaxed">Compute graduated TRAIN tax brackets, monthly deductions, and net take-home salary.</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-hairline dark:border-overlay-lighter flex items-center justify-between text-xs font-semibold text-primary">
+          <span>Calculate Now</span>
+          <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="mt-6 pt-4 border-t border-hairline dark:border-overlay-lighter flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-xs text-muted">
+      <span>Need more Philippine tax resources and guides?</span>
+      <a href="/countries/philippines/" class="font-semibold text-primary hover:underline flex items-center gap-1">
+        Explore Philippines Tax Hub &rarr;
+      </a>
+    </div>
+  </div>
+
+  <!-- Internal Resource Linking Grid -->
+  <div class="mt-12 pt-8 border-t border-hairline dark:border-overlay-lighter">
+    <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Related Philippine Tax Guides & Tools</h2>
+    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <a href="/blogs/philippines-income-tax-brackets-train-law-guide/" class="block rounded-xl border border-hairline p-5 hover:border-primary hover:shadow-md transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+        <h3 class="font-bold text-ink dark:text-on-primary text-base">TRAIN Law Tax Brackets Guide</h3>
+        <p class="text-sm text-muted mt-2">Individual income tax slabs, 13th-month pay exemption, and Form 2316.</p>
+      </a>
+      <a href="/blogs/philippines-freelancer-tax-rate-8-percent-bir-guide/" class="block rounded-xl border border-hairline p-5 hover:border-primary hover:shadow-md transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+        <h3 class="font-bold text-ink dark:text-on-primary text-base">Philippines Freelancer Tax Guide</h3>
+        <p class="text-sm text-muted mt-2">8% flat gross rate vs graduated rates for self-employed professionals.</p>
+      </a>
+      <a href="/countries/philippines/vat/vat-calculator/" class="block rounded-xl border border-hairline p-5 hover:border-primary hover:shadow-md transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+        <h3 class="font-bold text-ink dark:text-on-primary text-base">Philippines VAT Calculator</h3>
+        <p class="text-sm text-muted mt-2">Interactive 12% Value-Added Tax estimation tool.</p>
+      </a>
+    </div>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-ink mt-12 mb-6 dark:text-on-primary">Official Authorities & References</h2>
+  <ul class="list-disc pl-6 space-y-2 text-body dark:text-muted">
+    <li><a href="https://www.bir.gov.ph" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link font-medium">Bureau of Internal Revenue (BIR) Official Portal</a></li>
+    <li><a href="https://www.bir.gov.ph/efps" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link font-medium">BIR eFPS Electronic Filing & Payment System</a></li>
+    <li><a href="https://www.officialgazette.gov.ph/2024/01/05/republic-act-no-11976/" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link font-medium">Republic Act No. 11976 (Ease of Paying Taxes Act Full Text)</a></li>
+    <li><a href="https://www.peza.gov.ph" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link font-medium">Philippine Economic Zone Authority (PEZA) Official Guidelines</a></li>
+  </ul>
+</BlogLayout>

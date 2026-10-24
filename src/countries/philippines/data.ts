@@ -10,7 +10,8 @@ const taxCategories: TaxCategory[] = [
       { slug: "income-tax-calculator", name: "Income Tax Calculator", description: "Calculate your Philippines income tax." }
     ],
     guides: [
-      { slug: "tax-residency-guide", title: "Tax Residency Guide", description: "Understanding Philippine tax residency rules.", url: "/countries/philippines/faqs/" }
+      { slug: "train-law-tax-brackets-guide", title: "Philippines TRAIN Law Tax Brackets Guide", description: "Graduated tax slabs (0% to 35%), 13th-month pay exemptions, SSS/PhilHealth deductions, and net take-home pay.", url: "/blogs/philippines-income-tax-brackets-train-law-guide/" },
+      { slug: "freelancer-tax-guide", title: "Philippines Freelancer 8% Flat Tax Guide", description: "Comparing the 8% flat gross tax rate vs graduated BIR rates and OSD for self-employed professionals.", url: "/blogs/philippines-freelancer-tax-rate-8-percent-bir-guide/" }
     ],
     faqs: [
       { question: "What is the tax filing deadline?", answer: "April 15th for calendar year taxpayers." }
@@ -25,7 +26,7 @@ const taxCategories: TaxCategory[] = [
       { slug: "vat-calculator", name: "VAT Calculator", description: "Calculate VAT inclusive or exclusive amounts." }
     ],
     guides: [
-      { slug: "vat-guide", title: "VAT Guide", description: "Understanding VAT registration and filing.", url: "/countries/philippines/vat/vat-calculator/" }
+      { slug: "philippines-12-percent-vat-guide", title: "Philippines 12% VAT Guide", description: "Understanding BIR input and output taxes, PHP 3,000,000 registration threshold, zero-rated BPO rules, and EOPT invoice reforms.", url: "/blogs/philippines-12-percent-vat-bir-guide/" }
     ],
     faqs: [
       { question: "What is the VAT rate?", answer: "12% standard rate." }
