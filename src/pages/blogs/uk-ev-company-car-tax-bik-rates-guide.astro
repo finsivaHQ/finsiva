@@ -1,0 +1,273 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "UK EV Company Car Tax: BiK Rates & Rules (2025–2028)";
+const description = "Complete guide to UK electric company car tax. Learn Benefit-in-Kind (BiK) rates (2% to 5%), P11D calculations, Class 1A NI, and employee tax savings.";
+const image = "https://images.unsplash.com/photo-1563720223185-11003d516935?w=1200&q=80";
+const author = "Oliver Smith, Senior Automotive Tax Analyst";
+const authorBio = "Senior UK Automotive Tax Analyst specializing in HMRC vehicle taxation, VED rate reform, company car Benefit-in-Kind (BiK) modeling, and corporate fleet green transitions.";
+const canonical = "https://finsiva.com/blogs/uk-ev-company-car-tax-bik-rates-guide/";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is the Benefit-in-Kind (BiK) rate for electric company cars in the UK?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The UK Benefit-in-Kind (BiK) rate for zero-emission electric vehicles is 2% for 2024/25, rising to 3% in 2025/26, 4% in 2026/27, and 5% in 2027/28. This remains drastically lower than petrol and diesel company cars, which range from 20% to 37%."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How do you calculate company car tax on an electric vehicle?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "To calculate annual company car tax on an EV, multiply the vehicle's official P11D value by the applicable BiK percentage (e.g., 3% for 2025/26) to find the taxable benefit. Then multiply that taxable benefit by your personal marginal income tax rate (20%, 40%, or 45%)."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Do employers pay National Insurance on electric company cars?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Employers pay Class 1A National Insurance contributions on the taxable benefit of an electric company car at the standard employer rate (13.8% or 15% under updated budget rules), which is vastly cheaper than cash salary bonuses."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Can business directors claim 100% First-Year Capital Allowances on new EVs?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Limited companies purchasing brand-new zero-emission electric cars can claim 100% First-Year Allowances (FYA), allowing the entire purchase price of the vehicle to be deducted against company profits in Year 1 to reduce Corporation Tax."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="October 2026"
+  readTime="15 min read"
+  canonical={canonical}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <!-- Executive Summary Box -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-lighter dark:bg-surface">
+      <h2 class="text-xl font-bold text-ink dark:text-on-primary mb-3">
+        Quick Executive Summary: UK EV Company Car Tax Rules
+      </h2>
+      <ul class="space-y-2 text-sm leading-relaxed">
+        <li>
+          <strong>Exceptional Tax Efficiency:</strong> Pure electric company cars (0g/km CO2) are taxed at an ultra-low Benefit-in-Kind (BiK) rate of <strong>2% in 2024/25</strong>, increasing by 1% annually to <strong>3% (2025/26)</strong>, <strong>4% (2026/27)</strong>, and <strong>5% (2027/28)</strong>.
+        </li>
+        <li>
+          <strong>Massive Savings vs. Combustion Cars:</strong> A £50,000 petrol executive saloon (32% BiK) costs a 40% higher-rate taxpayer roughly <strong>£6,400 per year</strong> in personal tax. An identical £50,000 electric vehicle (3% BiK) costs just <strong>£600 per year</strong>—an annual personal saving of £5,800.
+        </li>
+        <li>
+          <strong>100% First-Year Capital Allowances:</strong> Businesses that purchase brand-new electric cars can deduct the entire cost against Corporation Tax in the first financial year.
+        </li>
+        <li>
+          <strong>Workplace Charging Exemption:</strong> Electricity provided free to employees for charging their electric company cars at work is completely exempt from BiK fuel benefit charges.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Hub CTA Card -->
+    <aside class="my-8 rounded-2xl border-2 border-primary/20 bg-primary/5 p-6 dark:border-primary/30 dark:bg-primary/10">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-primary">
+            Instant BiK Modeling
+          </span>
+          <h3 class="text-lg font-bold text-ink dark:text-on-primary">
+            Calculate Your UK EV Company Car Benefit-in-Kind Tax
+          </h3>
+          <p class="text-xs sm:text-sm text-body dark:text-muted mt-1 max-w-xl">
+            Simulate your monthly and annual take-home deduction across 20%, 40%, and 45% tax bands under HMRC BiK schedules from 2024 to 2028.
+          </p>
+        </div>
+        <a
+          href="/countries/united-kingdom/vehicle-tax/ev-tax-calculator/"
+          class="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-primary text-on-primary hover:opacity-90 transition shadow-sm dark:bg-on-primary dark:text-primary"
+        >
+          <span>Open UK EV Calculator</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+    </aside>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      What is the Benefit-in-Kind (BiK) Rate for Electric Cars in the UK?
+    </h2>
+    <p>
+      The UK Benefit-in-Kind (BiK) rate for zero-emission electric vehicles is 2% for 2024/25, rising to 3% in 2025/26, 4% in 2026/27, and 5% in 2027/28. This remains drastically lower than petrol and diesel company cars, which range from 20% to 37%.
+    </p>
+    <p>
+      When an employer provides an employee or director with a car available for private use (including commuting), HM Revenue and Customs (HMRC) treats this as a non-cash fringe benefit. The value of this benefit is taxed according to carbon emissions (CO2 g/km) and official list price (P11D).
+    </p>
+    <p>
+      To support the UK's Net Zero ambitions, HM Treasury locked in long-term certainty for fleet operators by publishing statutory BiK rates through 2028:
+    </p>
+
+    <!-- Multi-Year BiK Trajectory Table -->
+    <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+      <table class="w-full text-left text-xs sm:text-sm">
+        <thead class="bg-canvas-soft dark:bg-surface-soft border-b border-hairline dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+          <tr>
+            <th class="p-3 sm:p-4">Tax Year</th>
+            <th class="p-3 sm:p-4">Zero-Emission EV (0g CO2)</th>
+            <th class="p-3 sm:p-4">PHEV (1&ndash;50g CO2, &gt;130mi range)</th>
+            <th class="p-3 sm:p-4">Standard Petrol / Diesel Car</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">2024 / 2025</td>
+            <td class="p-3 sm:p-4 font-bold text-emerald-600 dark:text-emerald-400">2%</td>
+            <td class="p-3 sm:p-4">2%</td>
+            <td class="p-3 sm:p-4">25% &ndash; 37% (Maximum Cap)</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">2025 / 2026</td>
+            <td class="p-3 sm:p-4 font-bold text-emerald-600 dark:text-emerald-400">3%</td>
+            <td class="p-3 sm:p-4">3%</td>
+            <td class="p-3 sm:p-4">26% &ndash; 37%</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">2026 / 2027</td>
+            <td class="p-3 sm:p-4 font-bold text-emerald-600 dark:text-emerald-400">4%</td>
+            <td class="p-3 sm:p-4">4%</td>
+            <td class="p-3 sm:p-4">27% &ndash; 37%</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">2027 / 2028</td>
+            <td class="p-3 sm:p-4 font-bold text-emerald-600 dark:text-emerald-400">5%</td>
+            <td class="p-3 sm:p-4">5%</td>
+            <td class="p-3 sm:p-4">28% &ndash; 37%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      How Do You Calculate Company Car Tax on an Electric Vehicle?
+    </h2>
+    <p>
+      To calculate annual company car tax on an EV, multiply the vehicle's official P11D value by the applicable BiK percentage (e.g., 3% for 2025/26) to find the taxable benefit. Then multiply that taxable benefit by your personal marginal income tax rate (20%, 40%, or 45%).
+    </p>
+
+    <!-- Formula Breakdown Box -->
+    <div class="rounded-xl border border-hairline bg-canvas p-5 my-6 dark:border-overlay-lighter dark:bg-surface">
+      <h3 class="font-bold text-ink dark:text-on-primary mb-2 text-sm sm:text-base">
+        The Official HMRC Company Car Tax Formula:
+      </h3>
+      <p class="font-mono text-sm sm:text-base text-primary font-bold my-2">
+        Tax Payable = (P11D Value &times; BiK Rate %) &times; Employee Income Tax Band %
+      </p>
+      <div class="mt-4 text-xs sm:text-sm space-y-1 text-muted dark:text-muted">
+        <p><strong>Step 1:</strong> A BMW i4 eDrive40 has a P11D value of £58,000.</p>
+        <p><strong>Step 2:</strong> In the 2025/26 tax year, the EV BiK rate is 3%.</p>
+        <p><strong>Step 3:</strong> Taxable benefit = £58,000 &times; 3% = <strong>£1,740</strong>.</p>
+        <p><strong>Step 4:</strong> Basic-rate 20% taxpayer pays: £1,740 &times; 20% = <strong>£348 / year (£29 / month)</strong>.</p>
+        <p><strong>Step 5:</strong> Higher-rate 40% taxpayer pays: £1,740 &times; 40% = <strong>£696 / year (£58 / month)</strong>.</p>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      How Do Electric Car BiK Rates Compare to Petrol &amp; Diesel Cars?
+    </h2>
+    <p>
+      Electric car BiK rates are up to 12 times lower than traditional internal combustion engine (ICE) cars, resulting in thousands of pounds in annual income tax savings for drivers.
+    </p>
+    <p>
+      Consider the stark contrast between two executive vehicles of equal market value (£48,000) for a 40% taxpayer in the 2025/26 tax year:
+    </p>
+
+    <!-- Side-by-Side Comparison Table -->
+    <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+      <table class="w-full text-left text-xs sm:text-sm">
+        <thead class="bg-canvas-soft dark:bg-surface-soft border-b border-hairline dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+          <tr>
+            <th class="p-3 sm:p-4">Tax Parameter</th>
+            <th class="p-3 sm:p-4">Pure Electric (e.g. Tesla Model Y)</th>
+            <th class="p-3 sm:p-4">Petrol Saloon (e.g. BMW 320i)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">P11D List Price</td>
+            <td class="p-3 sm:p-4 font-mono">£48,000</td>
+            <td class="p-3 sm:p-4 font-mono">£48,000</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">CO2 Emissions (g/km)</td>
+            <td class="p-3 sm:p-4 text-emerald-600 dark:text-emerald-400 font-bold">0 g/km</td>
+            <td class="p-3 sm:p-4 font-semibold">145 g/km</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">2025/26 BiK Percentage</td>
+            <td class="p-3 sm:p-4 font-bold text-emerald-600 dark:text-emerald-400">3%</td>
+            <td class="p-3 sm:p-4 font-bold text-red-600 dark:text-red-400">34%</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Taxable Benefit Value</td>
+            <td class="p-3 sm:p-4 font-mono">£1,440</td>
+            <td class="p-3 sm:p-4 font-mono">£16,320</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Annual Tax (40% Taxpayer)</td>
+            <td class="p-3 sm:p-4 font-bold text-emerald-600 dark:text-emerald-400">£576 / year (£48/mo)</td>
+            <td class="p-3 sm:p-4 font-bold text-red-600 dark:text-red-400">£6,528 / year (£544/mo)</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Annual Employee Tax Saving</td>
+            <td class="p-3 sm:p-4 font-bold text-emerald-600 dark:text-emerald-400" colspan="2">
+              &pound;5,952 / year saved in personal income tax!
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      What are the Corporation Tax Benefits for Businesses Buying Electric Vehicles?
+    </h2>
+    <p>
+      For UK companies, company cars are not just an employee perk; they are a powerful Corporation Tax shield:
+    </p>
+    <ul class="list-disc pl-6 space-y-3">
+      <li>
+        <strong>100% First-Year Allowances (FYA):</strong> Unlike petrol cars (which must be written down across years at 6% or 18% in the special or main rate capital allowance pool), 100% of the cost of a brand-new zero-emission car can be deducted immediately from trading profits in year one.
+      </li>
+      <li>
+        <strong>Substantial Corporation Tax Savings:</strong> For a company paying the main 25% Corporation Tax rate, purchasing a £60,000 electric vehicle reduces company tax liability by <strong>£15,000</strong> (£60,000 &times; 25%) in that assessment year.
+      </li>
+      <li>
+        <strong>Zero Fuel Benefit Charge on Electricity:</strong> Under Section 149 of ITEPA 2003, electricity is not legally considered "fuel" by HMRC. Employers can pay for business mileage charging (at HMRC's Advisory Electricity Rate of 9p/mile) or provide free workplace charging without triggering any taxable fuel benefit.
+      </li>
+    </ul>
+
+    <!-- Related Links -->
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Related UK Vehicle &amp; Corporate Tax Guides</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/countries/united-kingdom/vehicle-tax/ev-tax-calculator/" class="text-link hover:underline font-medium">UK EV Tax Calculator</a>
+        <a href="/blogs/uk-electric-car-road-tax-ved-2025-2026-guide/" class="text-link hover:underline font-medium">UK Electric Car Road Tax (VED) 2025/2026</a>
+        <a href="/blogs/uk-electric-vehicle-tax-guide/" class="text-link hover:underline font-medium">Cornerstone UK EV Tax &amp; Rebate Guide</a>
+        <a href="/countries/united-kingdom/income-tax/income-tax-calculator/" class="text-link hover:underline font-medium">UK PAYE Salary Calculator</a>
+        <a href="/countries/united-kingdom/national-insurance/ni-calculator/" class="text-link hover:underline font-medium">National Insurance Calculator</a>
+        <a href="/countries/united-kingdom/" class="text-link hover:underline font-medium">Finsiva UK Tax Portal</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>

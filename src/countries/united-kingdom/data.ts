@@ -63,6 +63,7 @@ const taxCategories: TaxCategory[] = [
         slug: "ev-tax-guide",
         title: "UK Electric Vehicle Tax Guide",
         description: "Complete guide to UK electric vehicle road tax (VED), BiK rates, £40k luxury car surcharge, and tax relief rules.",
+        url: "/blogs/uk-electric-vehicle-tax-guide/",
         image: "https://images.unsplash.com/photo-1563720223185-11003d516935?w=1200&q=80",
         sections: [
           {
@@ -94,6 +95,24 @@ const taxCategories: TaxCategory[] = [
           "Claim workplace charging grants (up to £350 per socket) and home chargepoint installation grants if eligible.",
           "Businesses purchasing new EVs should claim 100% First-Year Capital Allowances to lower Corporation Tax."
         ]
+      },
+      {
+        slug: "electric-car-road-tax-ved-guide",
+        title: "Electric Car Road Tax (VED) 2025/2026 Guide",
+        description: "Everything you need to know about 1 April 2025 EV VED rates, the £190 standard charge, and £410 luxury surcharge.",
+        url: "/blogs/uk-electric-car-road-tax-ved-2025-2026-guide/"
+      },
+      {
+        slug: "ev-company-car-tax-bik-guide",
+        title: "EV Company Car Tax & BiK Rates Guide",
+        description: "HMRC Benefit-in-Kind (BiK) rates from 2025 to 2028: 2%, 3%, 4%, and 5% tax calculations for corporate electric fleets.",
+        url: "/blogs/uk-ev-company-car-tax-bik-rates-guide/"
+      },
+      {
+        slug: "salary-sacrifice-electric-car-guide",
+        title: "Salary Sacrifice Electric Car Tax Savings Guide",
+        description: "How UK employees and employers save 30% to 50% on EV leasing via gross salary sacrifice, NI relief, and low BiK.",
+        url: "/blogs/uk-salary-sacrifice-electric-car-tax-savings-guide/"
       }
     ],
     faqs: [

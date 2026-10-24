@@ -1,0 +1,254 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "UK Salary Sacrifice Electric Car: Tax Savings Guide";
+const description = "Learn how UK electric car salary sacrifice saves 30% to 50% on EV leasing via gross pay deductions, Income Tax, and National Insurance relief.";
+const image = "https://images.unsplash.com/photo-1563720223185-11003d516935?w=1200&q=80";
+const author = "Oliver Smith, Senior Automotive Tax Analyst";
+const authorBio = "Senior UK Automotive Tax Analyst specializing in HMRC vehicle taxation, VED rate reform, company car Benefit-in-Kind (BiK) modeling, and corporate fleet green transitions.";
+const canonical = "https://finsiva.com/blogs/uk-salary-sacrifice-electric-car-tax-savings-guide/";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How does electric car salary sacrifice work in the UK?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "In an electric car salary sacrifice scheme, an employee agrees to reduce their gross contractual salary in exchange for a brand-new electric lease car. Because the lease payment is deducted before Income Tax and National Insurance, higher-rate taxpayers save 30% to 50% compared to private leasing."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Does electric car salary sacrifice trigger OpRA tax penalties?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. Ultra-low emission vehicles emitting 75g/km CO2 or less (which includes all 0g/km pure electric cars) are explicitly exempt from the Optional Remuneration Arrangements (OpRA) rules under Section 69B of ITEPA 2003, preserving full tax savings."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Can salary sacrifice push you below the National Minimum Wage?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. Under UK employment law, a salary sacrifice deduction cannot reduce an employee's remaining post-sacrifice cash earnings below the National Minimum Wage (NMW) or National Living Wage (NLW) threshold."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How does salary sacrifice compare to private PCP car financing?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Private PCP or personal leasing is paid out of post-tax net salary with zero tax relief. Salary sacrifice uses pre-tax gross income and includes maintenance, road tax, comprehensive insurance, and breakdown cover, reducing overall costs by thousands of pounds annually."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="October 2026"
+  readTime="15 min read"
+  canonical={canonical}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <!-- Executive Summary Box -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-lighter dark:bg-surface">
+      <h2 class="text-xl font-bold text-ink dark:text-on-primary mb-3">
+        Quick Executive Summary: EV Salary Sacrifice Tax Mechanics
+      </h2>
+      <ul class="space-y-2 text-sm leading-relaxed">
+        <li>
+          <strong>Pre-Tax Deduction:</strong> Monthly vehicle lease costs are subtracted from gross earnings before PAYE Income Tax (20%, 40%, or 45%) and employee National Insurance (8% or 2%) are calculated.
+        </li>
+        <li>
+          <strong>HMRC OpRA Exemption:</strong> Unlike petrol or diesel cars (which lost tax benefits under the 2017 OpRA rules), zero-emission electric vehicles enjoy a statutory exemption under Section 69B of ITEPA 2003.
+        </li>
+        <li>
+          <strong>Net Cost Advantage:</strong> A 40% higher-rate taxpayer sacrificing £650/month in gross salary experiences a net reduction in take-home pay of only roughly <strong>£370 to £400/month</strong>, including full comprehensive insurance and maintenance.
+        </li>
+        <li>
+          <strong>Dual Win for Employers:</strong> Employers reduce Class 1 secondary National Insurance contributions and enhance employee retention at zero direct capital outlay.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Hub CTA Card -->
+    <aside class="my-8 rounded-2xl border-2 border-primary/20 bg-primary/5 p-6 dark:border-primary/30 dark:bg-primary/10">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-primary">
+            Interactive Take-Home Modeling
+          </span>
+          <h3 class="text-lg font-bold text-ink dark:text-on-primary">
+            Calculate Your UK EV Salary Sacrifice Tax Relief
+          </h3>
+          <p class="text-xs sm:text-sm text-body dark:text-muted mt-1 max-w-xl">
+            Simulate your gross vs. net salary impact, PAYE relief, employee NI savings, and BiK deductions with our free UK vehicle tax calculator.
+          </p>
+        </div>
+        <a
+          href="/countries/united-kingdom/vehicle-tax/ev-tax-calculator/"
+          class="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-primary text-on-primary hover:opacity-90 transition shadow-sm dark:bg-on-primary dark:text-primary"
+        >
+          <span>Calculate Salary Sacrifice Now</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+    </aside>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      How Does Electric Car Salary Sacrifice Work in the UK?
+    </h2>
+    <p>
+      In an electric car salary sacrifice scheme, an employee agrees to reduce their gross contractual salary in exchange for a brand-new electric lease car. Because the lease payment is deducted before Income Tax and National Insurance, higher-rate taxpayers save 30% to 50% compared to private leasing.
+    </p>
+    <p>
+      Under a standard salary sacrifice arrangement governed by HMRC:
+    </p>
+    <ol class="list-decimal pl-6 space-y-2">
+      <li>Your employer partners with an EV salary sacrifice leasing provider (such as Octopus EV, Zenith, or Tusker).</li>
+      <li>You select a brand-new battery electric vehicle (BEV). The lease package typically bundles the vehicle, servicing, routine maintenance, replacement tires, roadside breakdown assistance, and fully comprehensive motor insurance into one single monthly gross deduction.</li>
+      <li>The monthly package cost is deducted from your pre-tax gross salary each payroll run.</li>
+      <li>You pay a nominal Benefit-in-Kind (BiK) tax (3% in 2025/26, 4% in 2026/27) on the vehicle's P11D value through your PAYE tax code.</li>
+    </ol>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      How Much Tax Can You Save on an EV with Salary Sacrifice?
+    </h2>
+    <p>
+      The tax savings from an EV salary sacrifice scheme are proportional to your personal marginal tax band. Higher-rate (40%) and additional-rate (45%) taxpayers achieve the highest percentage savings:
+    </p>
+
+    <!-- Tax Relief by Bracket Table -->
+    <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+      <table class="w-full text-left text-xs sm:text-sm">
+        <thead class="bg-canvas-soft dark:bg-surface-soft border-b border-hairline dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+          <tr>
+            <th class="p-3 sm:p-4">Taxpayer Band</th>
+            <th class="p-3 sm:p-4">Income Tax Relief</th>
+            <th class="p-3 sm:p-4">Employee NI Relief</th>
+            <th class="p-3 sm:p-4">Total Marginal Relief</th>
+            <th class="p-3 sm:p-4">Typical Net Savings</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Basic Rate (20%)</td>
+            <td class="p-3 sm:p-4">20%</td>
+            <td class="p-3 sm:p-4">8%</td>
+            <td class="p-3 sm:p-4 font-semibold">28% Gross Relief</td>
+            <td class="p-3 sm:p-4 text-emerald-600 dark:text-emerald-400 font-bold">~25% &ndash; 30% Net Discount</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Higher Rate (40%)</td>
+            <td class="p-3 sm:p-4">40%</td>
+            <td class="p-3 sm:p-4">2%</td>
+            <td class="p-3 sm:p-4 font-bold text-primary">42% Gross Relief</td>
+            <td class="p-3 sm:p-4 text-emerald-600 dark:text-emerald-400 font-bold">~38% &ndash; 45% Net Discount</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Personal Allowance Taper (£100k &ndash; £125k)</td>
+            <td class="p-3 sm:p-4 font-bold text-red-600 dark:text-red-400">60% Effective Rate</td>
+            <td class="p-3 sm:p-4">2%</td>
+            <td class="p-3 sm:p-4 font-bold text-red-600 dark:text-red-400">62% Gross Relief</td>
+            <td class="p-3 sm:p-4 text-emerald-600 dark:text-emerald-400 font-bold">Up to 55%+ Net Discount!</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Additional Rate (45%)</td>
+            <td class="p-3 sm:p-4">45%</td>
+            <td class="p-3 sm:p-4">2%</td>
+            <td class="p-3 sm:p-4 font-semibold">47% Gross Relief</td>
+            <td class="p-3 sm:p-4 text-emerald-600 dark:text-emerald-400 font-bold">~42% &ndash; 48% Net Discount</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- The 60% Trap Callout -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-5 my-6 dark:border-overlay-lighter dark:bg-surface">
+      <h4 class="font-bold text-ink dark:text-on-primary mb-2 text-sm sm:text-base">
+        The £100,000 Tax Trap Solution:
+      </h4>
+      <p class="text-xs sm:text-sm leading-relaxed">
+        UK earners between £100,000 and £125,140 lose £1 of their tax-free personal allowance for every £2 earned above £100,000, creating an infamous <strong>60% effective income tax trap</strong>. Participating in an EV salary sacrifice reduces your adjusted net income back down toward £100,000, restoring your personal allowance while putting a brand-new electric car on your driveway at a fraction of market cost.
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      How Does Salary Sacrifice Compare to Private PCP Car Financing?
+    </h2>
+    <p>
+      Private PCP or personal leasing is paid out of post-tax net salary with zero tax relief. Salary sacrifice uses pre-tax gross income and includes maintenance, road tax, comprehensive insurance, and breakdown cover, reducing overall costs by thousands of pounds annually.
+    </p>
+
+    <!-- Side-by-Side Comparison -->
+    <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+      <table class="w-full text-left text-xs sm:text-sm">
+        <thead class="bg-canvas-soft dark:bg-surface-soft border-b border-hairline dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+          <tr>
+            <th class="p-3 sm:p-4">Expense Component</th>
+            <th class="p-3 sm:p-4">Private PCP / Personal Contract Hire</th>
+            <th class="p-3 sm:p-4">EV Salary Sacrifice Scheme</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Payment Source</td>
+            <td class="p-3 sm:p-4 text-red-500 font-medium">Take-Home Pay (After 40% Tax &amp; 2% NI)</td>
+            <td class="p-3 sm:p-4 text-emerald-600 dark:text-emerald-400 font-bold">Gross Salary (Before Tax &amp; NI)</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Deposit Required</td>
+            <td class="p-3 sm:p-4">Typically £3,000 &ndash; £6,000 Upfront Cash</td>
+            <td class="p-3 sm:p-4 text-emerald-600 dark:text-emerald-400 font-bold">£0 (Zero Upfront Deposit)</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Motor Insurance</td>
+            <td class="p-3 sm:p-4">£1,200 &ndash; £2,000/yr (Paid Separately)</td>
+            <td class="p-3 sm:p-4 font-bold text-emerald-600 dark:text-emerald-400">Included Fully Comprehensive</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Servicing, MOT &amp; Tires</td>
+            <td class="p-3 sm:p-4">Paid out of pocket</td>
+            <td class="p-3 sm:p-4 font-bold text-emerald-600 dark:text-emerald-400">Included Full Maintenance</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Monthly Effective Net Cost</td>
+            <td class="p-3 sm:p-4 font-mono font-bold text-red-600 dark:text-red-400">~£750 / month total</td>
+            <td class="p-3 sm:p-4 font-mono font-bold text-emerald-600 dark:text-emerald-400">~£420 / month net take-home</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">3-Year Total Savings</td>
+            <td class="p-3 sm:p-4 text-muted">Baseline cost</td>
+            <td class="p-3 sm:p-4 font-bold text-emerald-600 dark:text-emerald-400">
+              Save over &pound;11,800 across 36 months!
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Related Links -->
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Related UK Vehicle &amp; Income Tax Guides</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/countries/united-kingdom/vehicle-tax/ev-tax-calculator/" class="text-link hover:underline font-medium">UK EV Tax Calculator</a>
+        <a href="/blogs/uk-ev-company-car-tax-bik-rates-guide/" class="text-link hover:underline font-medium">Company Car Tax BiK Rates Guide</a>
+        <a href="/blogs/uk-electric-car-road-tax-ved-2025-2026-guide/" class="text-link hover:underline font-medium">UK Electric Car Road Tax (VED) 2025/2026</a>
+        <a href="/blogs/uk-electric-vehicle-tax-guide/" class="text-link hover:underline font-medium">Cornerstone UK EV Tax Guide</a>
+        <a href="/countries/united-kingdom/income-tax/income-tax-calculator/" class="text-link hover:underline font-medium">UK PAYE Salary Calculator</a>
+        <a href="/countries/united-kingdom/" class="text-link hover:underline font-medium">Finsiva UK Tax Portal</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>

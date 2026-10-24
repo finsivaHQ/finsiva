@@ -1,0 +1,293 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "UK Electric Car Road Tax (VED) 2025/2026: Rates & Rules";
+const description = "Complete guide to UK electric car road tax (VED) changes from 1 April 2025: £190 standard rate, £410 luxury surcharge, Tesla road tax, and DVLA rules.";
+const image = "https://images.unsplash.com/photo-1563720223185-11003d516935?w=1200&q=80";
+const author = "Oliver Smith, Senior Automotive Tax Analyst";
+const authorBio = "Senior UK Automotive Tax Analyst specializing in HMRC vehicle taxation, VED rate reform, company car Benefit-in-Kind (BiK) modeling, and corporate fleet green transitions.";
+const canonical = "https://finsiva.com/blogs/uk-electric-car-road-tax-ved-2025-2026-guide/";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "When do electric cars start paying road tax in the UK?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Zero-emission electric vehicles (EVs) in the UK must begin paying Vehicle Excise Duty (VED) from 1 April 2025. Both newly registered EVs and existing electric vehicles registered on or after 1 April 2017 are affected by the new rules."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How much is UK electric car road tax from 1 April 2025?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Brand-new electric vehicles registered on or after 1 April 2025 pay a £10 lowest-band first-year VED rate, followed by the standard £190 annual rate from Year 2 onwards. Existing EVs registered between April 2017 and March 2025 transition directly to the £190 annual rate."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How does the £40,000 Expensive Car Supplement apply to electric cars?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Electric cars with an official manufacturer list price (P11D value) exceeding £40,000 registered on or after 1 April 2025 are subject to the Expensive Car Supplement. This adds £410 per year for 5 consecutive years (Years 2 to 6 of registration), bringing total annual road tax to £600."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How much road tax does a Tesla Model Y pay in the UK?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Because all Tesla Model Y variants in the UK have a list price above £40,000, new models registered on or after 1 April 2025 pay £10 in Year 1, and £600 per year (£190 standard VED + £410 Expensive Car Supplement) for Years 2 through 6."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="October 2026"
+  readTime="15 min read"
+  canonical={canonical}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <!-- Executive Summary Box -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-lighter dark:bg-surface">
+      <h2 class="text-xl font-bold text-ink dark:text-on-primary mb-3">
+        Quick Executive Summary: 2025/2026 UK EV Road Tax Reform
+      </h2>
+      <ul class="space-y-2 text-sm leading-relaxed">
+        <li>
+          <strong>The End of £0 Road Tax:</strong> Effective <strong>1 April 2025</strong>, HM Treasury officially ends the zero-rate Vehicle Excise Duty (VED) exemption for zero-emission electric vehicles (BEVs).
+        </li>
+        <li>
+          <strong>First-Year Registration Rate:</strong> Brand-new electric cars registered on or after 1 April 2025 incur a <strong>£10 first-year rate</strong> before transitioning to standard rates.
+        </li>
+        <li>
+          <strong>Standard Annual Rate:</strong> From the second year of registration onwards, all pure electric cars pay the standard annual VED rate of <strong>£190 per year</strong>.
+        </li>
+        <li>
+          <strong>The £40k Luxury Surcharge Cliff:</strong> EVs registered on or after 1 April 2025 with an official P11D list price over £40,000 are hit with the <strong>£410/year Expensive Car Supplement</strong> for 5 years (Years 2 to 6), making total annual road tax <strong>£600 per year</strong>.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Hub CTA Card -->
+    <aside class="my-8 rounded-2xl border-2 border-primary/20 bg-primary/5 p-6 dark:border-primary/30 dark:bg-primary/10">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-primary">
+            Interactive DVLA Calculation
+          </span>
+          <h3 class="text-lg font-bold text-ink dark:text-on-primary">
+            Calculate Your UK EV Road Tax (VED) &amp; Luxury Surcharge
+          </h3>
+          <p class="text-xs sm:text-sm text-body dark:text-muted mt-1 max-w-xl">
+            Simulate your exact vehicle tax based on registration date, P11D list price, Expensive Car Supplement, and Benefit-in-Kind (BiK) company car rates.
+          </p>
+        </div>
+        <a
+          href="/countries/united-kingdom/vehicle-tax/ev-tax-calculator/"
+          class="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-primary text-on-primary hover:opacity-90 transition shadow-sm dark:bg-on-primary dark:text-primary"
+        >
+          <span>Calculate UK EV Tax Now</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+    </aside>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      When Do Electric Cars Start Paying Road Tax in the UK?
+    </h2>
+    <p>
+      Zero-emission electric vehicles (EVs) in the UK must begin paying Vehicle Excise Duty (VED) from 1 April 2025. Both newly registered EVs and existing electric vehicles registered on or after 1 April 2017 are affected by the new rules.
+    </p>
+    <p>
+      For over a decade, UK motorists enjoyed an exemption from road tax when driving battery electric vehicles (BEVs). As electric vehicle adoption surged to over 1 million vehicles on UK roads, the government announced in the Autumn Statement that zero-emission cars would be incorporated into the standard motoring tax system to ensure all road users contribute to infrastructure maintenance.
+    </p>
+    <p>
+      The critical date for every electric car owner in England, Scotland, Wales, and Northern Ireland is <strong>1 April 2025</strong>. When your vehicle tax renewal is due on or after this date, the DVLA will no longer issue a £0 tax disc.
+    </p>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      How Much is UK Electric Car Road Tax (VED) from 1 April 2025?
+    </h2>
+    <p>
+      Brand-new electric vehicles registered on or after 1 April 2025 pay a £10 lowest-band first-year VED rate, followed by the standard £190 annual rate from Year 2 onwards. Existing EVs registered between April 2017 and March 2025 transition directly to the £190 annual rate.
+    </p>
+    <p>
+      The road tax obligation depends entirely on your vehicle's first date of registration as recorded in your V5C logbook:
+    </p>
+
+    <!-- Comprehensive VED Table -->
+    <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+      <table class="w-full text-left text-xs sm:text-sm">
+        <thead class="bg-canvas-soft dark:bg-surface-soft border-b border-hairline dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+          <tr>
+            <th class="p-3 sm:p-4">Vehicle Registration Date</th>
+            <th class="p-3 sm:p-4">Year 1 First Tax Rate</th>
+            <th class="p-3 sm:p-4">Standard Rate (Year 2+)</th>
+            <th class="p-3 sm:p-4">Expensive Car Supplement (£40k+)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Registered on or after 1 April 2025</td>
+            <td class="p-3 sm:p-4 font-bold text-emerald-600 dark:text-emerald-400">£10</td>
+            <td class="p-3 sm:p-4 font-bold">£190 / year</td>
+            <td class="p-3 sm:p-4 font-bold text-red-600 dark:text-red-400">+£410 / year (Total: £600/yr)</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Registered 1 April 2017 &ndash; 31 March 2025</td>
+            <td class="p-3 sm:p-4 text-muted">Already paid (£0)</td>
+            <td class="p-3 sm:p-4 font-bold">£190 / year</td>
+            <td class="p-3 sm:p-4 text-emerald-600 dark:text-emerald-400 font-semibold">EXEMPT (Grandfathered)</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Registered 1 March 2001 &ndash; 31 March 2017</td>
+            <td class="p-3 sm:p-4 text-muted">Already paid</td>
+            <td class="p-3 sm:p-4 font-semibold">£20 / year (Band A)</td>
+            <td class="p-3 sm:p-4 text-emerald-600 dark:text-emerald-400 font-semibold">EXEMPT</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Electric Vans &amp; LCVs (Light Goods Vehicles)</td>
+            <td class="p-3 sm:p-4 font-semibold">Standard LCV Rate</td>
+            <td class="p-3 sm:p-4 font-bold">£335 / year (TC39 Band)</td>
+            <td class="p-3 sm:p-4 text-emerald-600 dark:text-emerald-400 font-semibold">EXEMPT</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      How Does the £40,000 Expensive Car Supplement Apply to EVs?
+    </h2>
+    <p>
+      Electric cars with an official manufacturer list price (P11D value) exceeding £40,000 registered on or after 1 April 2025 are subject to the Expensive Car Supplement. This adds £410 per year for 5 consecutive years (Years 2 to 6 of registration), bringing total annual road tax to £600.
+    </p>
+    <p>
+      Historically, petrol and diesel cars over £40,000 paid this supplement, while electric vehicles were completely exempt. From 1 April 2025, that exemption is removed for all newly registered zero-emission vehicles.
+    </p>
+
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-5 my-6 dark:border-overlay-lighter dark:bg-surface">
+      <h4 class="font-bold text-ink dark:text-on-primary mb-2 text-sm sm:text-base">
+        Critical Rule: What Counts Toward the £40,000 Threshold?
+      </h4>
+      <p class="text-xs sm:text-sm leading-relaxed mb-3">
+        The £40,000 threshold is based on the vehicle's <strong>P11D list price</strong> on the day before it is first registered. This includes:
+      </p>
+      <ul class="text-xs sm:text-sm space-y-1.5 list-disc pl-5">
+        <li>The manufacturer base list price including 20% VAT.</li>
+        <li>All factory-fitted optional extras (paint upgrades, alloy wheels, panoramic glass roofs, premium sound systems).</li>
+        <li>Manufacturer delivery charges and pre-delivery inspection fees.</li>
+        <li><strong>Does NOT include:</strong> Dealer discounts, government grants, first-year registration fees, or first-year VED. If the list price is £40,050 and the dealer discounts it to £37,000, <em>the vehicle still pays the £410 surcharge!</em></li>
+      </ul>
+    </div>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      How Much Road Tax Does a Tesla Model Y or Model 3 Pay in the UK?
+    </h2>
+    <p>
+      Because all Tesla Model Y variants in the UK have a list price above £40,000, new models registered on or after 1 April 2025 pay £10 in Year 1, and £600 per year (£190 standard VED + £410 Expensive Car Supplement) for Years 2 through 6.
+    </p>
+    <p>
+      Let us examine how popular electric car models perform under the new tax framework:
+    </p>
+
+    <!-- Popular EV Models Breakdown -->
+    <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+      <table class="w-full text-left text-xs sm:text-sm">
+        <thead class="bg-canvas-soft dark:bg-surface-soft border-b border-hairline dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+          <tr>
+            <th class="p-3 sm:p-4">Electric Vehicle Model</th>
+            <th class="p-3 sm:p-4">Typical List Price</th>
+            <th class="p-3 sm:p-4">&gt; £40k Supplement?</th>
+            <th class="p-3 sm:p-4">Year 1 VED</th>
+            <th class="p-3 sm:p-4">Years 2&ndash;6 VED</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Tesla Model Y (All Trims)</td>
+            <td class="p-3 sm:p-4">£44,990 &ndash; £59,990</td>
+            <td class="p-3 sm:p-4 font-bold text-red-600 dark:text-red-400">YES (£410/yr)</td>
+            <td class="p-3 sm:p-4">£10</td>
+            <td class="p-3 sm:p-4 font-bold">£600 / year</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Tesla Model 3 (Rear-Wheel Drive)</td>
+            <td class="p-3 sm:p-4">£39,990 (Base with no options)</td>
+            <td class="p-3 sm:p-4 font-semibold text-emerald-600 dark:text-emerald-400">NO (Under £40k)</td>
+            <td class="p-3 sm:p-4">£10</td>
+            <td class="p-3 sm:p-4 font-bold text-emerald-600 dark:text-emerald-400">£190 / year</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Tesla Model 3 Long Range / Performance</td>
+            <td class="p-3 sm:p-4">£49,990 &ndash; £59,990</td>
+            <td class="p-3 sm:p-4 font-bold text-red-600 dark:text-red-400">YES (£410/yr)</td>
+            <td class="p-3 sm:p-4">£10</td>
+            <td class="p-3 sm:p-4 font-bold">£600 / year</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Kia EV6 / Hyundai Ioniq 5</td>
+            <td class="p-3 sm:p-4">£45,000 &ndash; £57,000</td>
+            <td class="p-3 sm:p-4 font-bold text-red-600 dark:text-red-400">YES (£410/yr)</td>
+            <td class="p-3 sm:p-4">£10</td>
+            <td class="p-3 sm:p-4 font-bold">£600 / year</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">MG4 EV (Standard / Long Range)</td>
+            <td class="p-3 sm:p-4">£26,995 &ndash; £36,495</td>
+            <td class="p-3 sm:p-4 font-semibold text-emerald-600 dark:text-emerald-400">NO (Under £40k)</td>
+            <td class="p-3 sm:p-4">£10</td>
+            <td class="p-3 sm:p-4 font-bold text-emerald-600 dark:text-emerald-400">£190 / year</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      <strong>Notice the Tesla Model 3 tipping point:</strong> A standard Tesla Model 3 in solid black or white with default aero wheels sitting at £39,990 escapes the expensive car supplement and pays only £190/year. However, adding metallic red paint (+£1,500) pushes the list price to £41,490, costing the buyer an extra <strong>£2,050 in road tax</strong> (£410 &times; 5 years)!
+    </p>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      Are Existing Electric Cars Grandfathered Under Old £0 Rules?
+    </h2>
+    <p>
+      Existing electric cars are NOT grandfathered into permanent £0 road tax; all electric vehicles registered on or after 1 April 2017 must begin paying £190 per year from 1 April 2025. However, existing electric cars registered prior to 1 April 2025 are permanently protected from the £410 Expensive Car Supplement.
+    </p>
+    <p>
+      This represents a major financial win for drivers who already own or lease an expensive luxury EV (such as a Porsche Taycan, Audi e-tron, or Tesla Model X):
+    </p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li>
+        <strong>If registered on 31 March 2025:</strong> The owner will pay £190 per year from April 2025 onwards, with zero luxury surcharge, saving £2,050 over five years.
+      </li>
+      <li>
+        <strong>If registered on 1 April 2025:</strong> The owner pays £10 in year one, and £600 per year for the next five years.
+      </li>
+    </ul>
+
+    <!-- Related Links -->
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Related UK Vehicle &amp; Expat Tax Resources</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/countries/united-kingdom/vehicle-tax/ev-tax-calculator/" class="text-link hover:underline font-medium">UK EV Tax Calculator</a>
+        <a href="/blogs/uk-electric-vehicle-tax-guide/" class="text-link hover:underline font-medium">UK EV Tax &amp; Rebate Cornerstone Guide</a>
+        <a href="/countries/united-kingdom/income-tax/income-tax-calculator/" class="text-link hover:underline font-medium">UK PAYE Salary Calculator</a>
+        <a href="/countries/united-kingdom/national-insurance/ni-calculator/" class="text-link hover:underline font-medium">National Insurance Calculator</a>
+        <a href="/countries/united-kingdom/" class="text-link hover:underline font-medium">Finsiva UK Tax Portal</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>
