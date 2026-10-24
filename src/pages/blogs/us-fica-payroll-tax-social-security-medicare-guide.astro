@@ -1,0 +1,316 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "US FICA Tax Guide: Social Security Wage Base, Medicare & W-2 Rates";
+const description = "Complete guide to US FICA payroll taxes. Understand the 7.65% W-2 tax rate, the Social Security wage base limit, 1.45% Medicare, and the 0.9% Additional Medicare tax.";
+const image = "https://images.unsplash.com/photo-1450133064473-71024230f91b?w=1200&q=80";
+const canonical = "https://finsiva.com/blogs/us-fica-payroll-tax-social-security-medicare-guide/";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the FICA tax rate for W-2 employees?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The statutory employee FICA tax rate is 7.65%, consisting of 6.2% for Social Security (Old-Age, Survivors, and Disability Insurance) and 1.45% for Medicare (Hospital Insurance). Your employer pays a mandatory matching 7.65%, bringing the total combined FICA tax contribution to 15.3%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Social Security wage base limit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Social Security wage base limit is the maximum amount of gross earned compensation subject to the 6.2% Social Security tax in a calendar year. Once an employee's cumulative earnings reach this statutory threshold, no further Social Security tax is withheld for the remainder of the year. Earnings above the cap remain subject to the 1.45% Medicare tax."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When does the 0.9% Additional Medicare Tax apply?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The 0.9% Additional Medicare Tax applies under Section 3101(b)(2) to Medicare wages exceeding $200,000 for single filers, $250,000 for married couples filing jointly, or $125,000 for married individuals filing separately. Employers must automatically begin withholding the 0.9% tax in the pay period an employee's wages exceed $200,000, regardless of their marital status."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do 401(k) contributions reduce FICA payroll taxes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Pre-tax contributions to a traditional 401(k), 403(b), or traditional IRA reduce your wages subject to federal and state income tax (Box 1 of Form W-2), but they do not reduce wages subject to FICA Social Security and Medicare taxes (Boxes 3 and 5). However, Section 125 cafeteria plan deductions—such as employer-sponsored health insurance, HSA, and FSA contributions—do legally reduce FICA taxable wages."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you get a refund for excess Social Security tax withheld by multiple employers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. If you worked for two or more employers during the same calendar year and your combined earnings exceeded the Social Security wage base limit, each employer independently withheld the 6.2% tax, resulting in total withholding exceeding the statutory maximum. You can claim the excess Social Security tax as a refundable credit on Line 11 of Schedule 3 on Form 1040."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  canonical={canonical}
+  author="Sarah Jenkins, CPA"
+  authorBio="Sarah Jenkins is a Certified Public Accountant and federal tax strategist based in Chicago, advising individuals and businesses on IRS compliance, tax bracket optimization, and retirement planning."
+  lastUpdated="October 2026"
+  readTime="15 min read"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
+    <p>Every payday, millions of American workers review their paystubs and notice a substantial portion of their gross salary deducted under the acronym <strong>FICA</strong>. Governed by the <strong>Federal Insurance Contributions Act</strong> (codified under Chapter 21 of the Internal Revenue Code), FICA is the mandatory federal payroll tax dedicated to funding two foundational social safety nets: <strong>Social Security</strong> (Old-Age, Survivors, and Disability Insurance) and <strong>Medicare</strong> (Hospital Insurance).</p>
+
+    <p>Unlike federal income taxes, which feature progressive tax brackets and broad itemized or standard deductions, FICA operates as a flat, direct percentage levied from your very first dollar of earned income. Understanding how the statutory <strong>7.65% employee rate</strong> is split, how the annual <strong>Social Security wage base limit</strong> caps your deductions, and how Section 125 cafeteria plans can legally shelter your wages is critical for optimizing your overall compensation.</p>
+
+    <!-- Key Takeaway Box -->
+    <div class="my-6 rounded-2xl border-2 border-primary/20 bg-primary/[0.03] p-6 dark:border-primary/30 dark:bg-primary/[0.05]">
+      <h3 class="text-lg font-bold text-ink dark:text-on-primary mb-2 flex items-center gap-2">
+        <span class="w-3 h-3 rounded-full bg-primary inline-block"></span>
+        FICA Payroll Tax Blueprint Snapshot
+      </h3>
+      <p class="text-sm leading-relaxed text-body dark:text-muted">
+        <strong>The employee FICA rate is 7.65% (6.2% Social Security + 1.45% Medicare), matched equally by your employer (total 15.3%).</strong> Social Security tax stops completely once your annual earnings cross the <strong>wage base limit</strong>, while Medicare tax applies indefinitely to all wages plus an extra <strong>0.9% Additional Medicare Tax</strong> on earnings over $200,000.
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">How Does the 7.65% FICA Payroll Tax Rate Work?</h2>
+    <p><strong>Under the Federal Insurance Contributions Act, all W-2 employees pay a statutory tax rate of 7.65% on gross wages, while their employer contributes an identical 7.65% out of corporate funds, resulting in a total combined contribution of 15.3% to federal trust funds.</strong></p>
+
+    <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+      <table class="w-full text-left text-sm">
+        <thead class="bg-canvas-soft border-b border-hairline dark:bg-surface/80 dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+          <tr>
+            <th class="p-3">Component</th>
+            <th class="p-3">Employee Rate</th>
+            <th class="p-3">Employer Rate</th>
+            <th class="p-3">Total Combined Rate</th>
+            <th class="p-3">Annual Wage Ceiling</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr class="bg-primary/[0.02]">
+            <td class="p-3 font-semibold">Social Security (OASDI)</td>
+            <td class="p-3 font-bold text-primary dark:text-on-primary">6.20%</td>
+            <td class="p-3 font-bold">6.20%</td>
+            <td class="p-3 font-bold">12.40%</td>
+            <td class="p-3 font-semibold">Capped at Wage Base Limit</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-semibold">Medicare (Hospital Insurance)</td>
+            <td class="p-3 font-bold text-primary dark:text-on-primary">1.45%</td>
+            <td class="p-3 font-bold">1.45%</td>
+            <td class="p-3 font-bold">2.90%</td>
+            <td class="p-3 font-semibold text-emerald-600 dark:text-emerald-400">No Limit (Uncapped)</td>
+          </tr>
+          <tr class="bg-canvas-soft">
+            <td class="p-3 font-semibold">Additional Medicare Tax</td>
+            <td class="p-3 font-bold text-red-600 dark:text-red-400">0.90%</td>
+            <td class="p-3">0.00% (No Match)</td>
+            <td class="p-3">0.90%</td>
+            <td class="p-3">Applies over $200k / $250k</td>
+          </tr>
+          <tr class="font-bold border-t-2 border-hairline dark:border-overlay-lighter">
+            <td class="p-3">Standard Total Rate</td>
+            <td class="p-3 text-primary dark:text-on-primary">7.65%</td>
+            <td class="p-3">7.65%</td>
+            <td class="p-3">15.30%</td>
+            <td class="p-3">—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>To compute your exact payroll withholding and net take-home salary, visit our interactive <a href="/countries/united-states/payroll-tax/fica-calculator/" class="text-link font-semibold hover:underline dark:text-link">US FICA Tax Calculator</a>.</p>
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">The Social Security Wage Base Limit: Why High Earners See a Pay Bump</h2>
+    <p><strong>The Social Security wage base limit is the maximum amount of annual earned income subject to the 6.2% Social Security tax; once an employee's cumulative year-to-date earnings exceed this cap, Social Security tax withholding drops to 0% for the rest of the calendar year.</strong></p>
+
+    <p>Established under Section 230 of the Social Security Act and adjusted annually based on the National Average Wage Index, this cap creates a noticeable financial boost for upper-income earners:</p>
+    <ul class="list-disc pl-6 space-y-1.5 mt-2 text-sm">
+      <li><strong>Maximum Annual Social Security Tax:</strong> Once your compensation crosses the annual wage base limit, you have paid the maximum allowable Social Security tax for that year.</li>
+      <li><strong>The "Pay Bump" Phenomenon:</strong> An employee earning $250,000 per year will hit the wage base limit in late summer or early autumn. From that pay period through December 31, their biweekly paycheck suddenly increases by <strong>6.2%</strong> because Social Security tax is no longer withheld.</li>
+      <li><strong>Reset Every January 1:</strong> On January 1 of the new tax year, the withholding clock resets, and the 6.2% deduction resumes until the new annual limit is reached.</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">The 0.9% Additional Medicare Tax Under the ACA</h2>
+    <p><strong>Enacted under the Affordable Care Act (ACA) and codified under Section 3101(b)(2), an Additional Medicare Tax of 0.9% is levied on wages and compensation that exceed statutory income thresholds based on your tax filing status.</strong></p>
+
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">Statutory Income Thresholds:</h3>
+    <ul class="list-disc pl-6 space-y-1.5 mt-2 text-sm">
+      <li><strong>Married Filing Jointly:</strong> $250,000</li>
+      <li><strong>Single & Head of Household:</strong> $200,000</li>
+      <li><strong>Married Filing Separately:</strong> $125,000</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-4">Employer Withholding Rules vs Year-End Reconciliation:</h3>
+    <p class="text-sm">
+      Employers are legally mandated to begin withholding the 0.9% Additional Medicare Tax in the pay period in which an employee's wages exceed <strong>$200,000</strong>, regardless of the employee's filing status or marital income. This creates two common reconciliation scenarios on <strong>IRS Form 8959</strong> at tax time:
+    </p>
+    <ul class="list-disc pl-6 space-y-1 mt-1 text-sm">
+      <li><strong>Under-Withholding:</strong> If a married couple has two spouses who each earn $150,000 (totaling $300,000), neither employer withheld the 0.9% tax because neither spouse individually crossed $200,000. On their joint Form 1040, they will owe 0.9% on the $50,000 excess over $250,000 ($450).</li>
+      <li><strong>Over-Withholding:</strong> If a single earner making $220,000 is married to a non-working spouse, their employer withheld 0.9% on the $20,000 excess over $200,000. However, because their joint threshold is $250,000, they owe $0 in Additional Medicare Tax and receive the withheld amount back as a tax credit on Form 8959.</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">Pre-Tax Deductions: What Reduces FICA Taxes vs What Does Not</h2>
+    <p><strong>A vital distinction on Form W-2 is that cafeteria plan benefits under Section 125 legally reduce both FICA payroll taxes and federal income taxes, whereas traditional retirement contributions (like a 401k) reduce only federal income taxes.</strong></p>
+
+    <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+      <table class="w-full text-left text-sm">
+        <thead class="bg-canvas-soft border-b border-hairline dark:bg-surface/80 dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+          <tr>
+            <th class="p-3">Pre-Tax Benefit Type</th>
+            <th class="p-3">Reduces Federal Income Tax (Box 1)?</th>
+            <th class="p-3">Reduces FICA Taxes (Boxes 3 & 5)?</th>
+            <th class="p-3">Total Tax Savings Potential</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr class="bg-primary/[0.02]">
+            <td class="p-3 font-semibold">Health Insurance Premiums (Section 125)</td>
+            <td class="p-3 font-bold text-emerald-600 dark:text-emerald-400">YES</td>
+            <td class="p-3 font-bold text-emerald-600 dark:text-emerald-400">YES (Saves 7.65%)</td>
+            <td class="p-3 font-bold text-primary dark:text-on-primary">Maximum Tax Relief</td>
+          </tr>
+          <tr class="bg-primary/[0.02]">
+            <td class="p-3 font-semibold">Health Savings Account (HSA via Payroll)</td>
+            <td class="p-3 font-bold text-emerald-600 dark:text-emerald-400">YES</td>
+            <td class="p-3 font-bold text-emerald-600 dark:text-emerald-400">YES (Saves 7.65%)</td>
+            <td class="p-3 font-bold text-primary dark:text-on-primary">Maximum Tax Relief</td>
+          </tr>
+          <tr class="bg-primary/[0.02]">
+            <td class="p-3 font-semibold">Flexible Spending Account (FSA Healthcare/DC)</td>
+            <td class="p-3 font-bold text-emerald-600 dark:text-emerald-400">YES</td>
+            <td class="p-3 font-bold text-emerald-600 dark:text-emerald-400">YES (Saves 7.65%)</td>
+            <td class="p-3 font-bold text-primary dark:text-on-primary">Maximum Tax Relief</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-semibold">Traditional 401(k) / 403(b) Elective Deferrals</td>
+            <td class="p-3 font-bold text-emerald-600 dark:text-emerald-400">YES</td>
+            <td class="p-3 font-bold text-red-600 dark:text-red-400">NO (Subject to FICA)</td>
+            <td class="p-3">Income Tax Relief Only</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-semibold">Roth 401(k) Contributions</td>
+            <td class="p-3 font-bold text-red-600 dark:text-red-400">NO</td>
+            <td class="p-3 font-bold text-red-600 dark:text-red-400">NO</td>
+            <td class="p-3">Tax-Free Withdrawals in Retirement</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-sm">
+      <strong>Pro Tip on HSA Contributions:</strong> Contributing to an HSA directly through employer payroll deduction saves you an extra <strong>7.65% in FICA taxes</strong> compared to funding an HSA with after-tax cash from your bank account and claiming the deduction on Form 1040 (which recovers income tax but does not recover FICA).
+    </p>
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">How to Recover Excess Social Security Tax from Multiple Employers</h2>
+    <p><strong>If you switched jobs mid-year or worked multiple W-2 jobs simultaneously, each employer is legally required to withhold 6.2% Social Security tax without considering wages earned elsewhere; if your combined wages exceed the wage base cap, you can claim 100% of the excess withholding as a refundable credit on Form 1040.</strong></p>
+
+    <p>To reclaim excess Social Security tax:</p>
+    <ol class="list-decimal pl-6 space-y-1.5 mt-2 text-sm">
+      <li>Add together Box 4 (Social Security tax withheld) from all W-2 forms received during the tax year.</li>
+      <li>Compare this sum against the maximum statutory Social Security tax for that year.</li>
+      <li>Enter the difference on <strong>Schedule 3 (Form 1040), Line 11</strong> ("Excess social security and tier 1 RRTA tax withheld").</li>
+      <li>This amount flows directly to Form 1040 as a refundable tax payment, increasing your tax refund or reducing any balance owed.</li>
+    </ol>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-12 mb-6">Frequently Asked Questions</h2>
+  {faqSchema.mainEntity.map(faq => (
+    <div class="my-4 p-5 rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface shadow-sm">
+      <h3 class="text-lg font-bold text-ink dark:text-on-primary">{faq.name}</h3>
+      <p class="text-sm text-body dark:text-muted mt-2 leading-relaxed">{faq.acceptedAnswer.text}</p>
+    </div>
+  ))}
+
+  <!-- Interactive Calculator Hub Section -->
+  <div class="my-10 rounded-2xl border border-hairline bg-canvas-soft p-6 sm:p-8 dark:border-overlay-lighter dark:bg-surface">
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+      <div>
+        <span class="text-xs font-bold text-primary uppercase tracking-wider mb-1 block">Free Tax Tool</span>
+        <h3 class="text-xl font-bold text-ink dark:text-on-primary">Calculate Your FICA Payroll Deductions</h3>
+        <p class="text-sm text-muted mt-1">Estimate exact Social Security withholding, Medicare taxes, and take-home pay:</p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <a href="/countries/united-states/payroll-tax/fica-calculator/" class="group rounded-xl border border-hairline bg-canvas p-5 transition-all hover:border-primary hover:shadow-md dark:border-overlay-lighter dark:bg-surface flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between text-xs font-semibold text-primary mb-1.5">
+            <span class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+              Interactive Calculator
+            </span>
+            <span class="text-muted text-[11px] font-normal">United States</span>
+          </div>
+          <h4 class="font-bold text-ink dark:text-on-primary group-hover:text-primary transition-colors text-base">US FICA Tax Calculator</h4>
+          <p class="text-xs text-muted mt-1.5 leading-relaxed">Calculate Social Security withholding, Medicare tax, and employer matching.</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-hairline dark:border-overlay-lighter flex items-center justify-between text-xs font-semibold text-primary">
+          <span>Calculate Now</span>
+          <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
+        </div>
+      </a>
+
+      <a href="/countries/united-states/income-tax/federal-income-tax/" class="group rounded-xl border border-hairline bg-canvas p-5 transition-all hover:border-primary hover:shadow-md dark:border-overlay-lighter dark:bg-surface flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between text-xs font-semibold text-primary mb-1.5">
+            <span class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+              Interactive Calculator
+            </span>
+            <span class="text-muted text-[11px] font-normal">United States</span>
+          </div>
+          <h4 class="font-bold text-ink dark:text-on-primary group-hover:text-primary transition-colors text-base">Federal Income Tax Calculator</h4>
+          <p class="text-xs text-muted mt-1.5 leading-relaxed">Calculate progressive federal tax liability across all 2026 brackets.</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-hairline dark:border-overlay-lighter flex items-center justify-between text-xs font-semibold text-primary">
+          <span>Calculate Now</span>
+          <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="mt-6 pt-4 border-t border-hairline dark:border-overlay-lighter flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-xs text-muted">
+      <span>Need more US tax calculators and guides?</span>
+      <a href="/countries/united-states/" class="font-semibold text-primary hover:underline flex items-center gap-1">
+        Explore United States Tax Authority Hub &rarr;
+      </a>
+    </div>
+  </div>
+
+  <!-- Internal Resource Linking Grid -->
+  <div class="mt-12 pt-8 border-t border-hairline dark:border-overlay-lighter">
+    <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Related US Tax Guides & Tools</h2>
+    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <a href="/blogs/us-federal-income-tax-brackets-2026-guide/" class="block rounded-xl border border-hairline p-5 hover:border-primary hover:shadow-md transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+        <h3 class="font-bold text-ink dark:text-on-primary text-base">Federal Tax Brackets 2026 Guide</h3>
+        <p class="text-sm text-muted mt-2">7 tax slabs, standard deductions, and marginal vs effective rate math.</p>
+      </a>
+      <a href="/blogs/us-self-employment-tax-1099-schedule-c-guide/" class="block rounded-xl border border-hairline p-5 hover:border-primary hover:shadow-md transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+        <h3 class="font-bold text-ink dark:text-on-primary text-base">1099 Self-Employment Tax Guide</h3>
+        <p class="text-sm text-muted mt-2">15.3% SE tax rate, Schedule C deductions, and quarterly estimated taxes.</p>
+      </a>
+      <a href="/countries/united-states/payroll-tax/self-employment-tax/" class="block rounded-xl border border-hairline p-5 hover:border-primary hover:shadow-md transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+        <h3 class="font-bold text-ink dark:text-on-primary text-base">Self-Employment Tax Calculator</h3>
+        <p class="text-sm text-muted mt-2">Interactive 15.3% SECA tax estimator for independent contractors.</p>
+      </a>
+    </div>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-ink mt-12 mb-6 dark:text-on-primary">Official Authorities & References</h2>
+  <ul class="list-disc pl-6 space-y-2 text-body dark:text-muted">
+    <li><a href="https://www.ssa.gov" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link font-medium">Social Security Administration (SSA) Wage Base Standards</a></li>
+    <li><a href="https://www.irs.gov/taxtopics/tc751" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link font-medium">IRS Topic No. 751 - Social Security and Medicare Withholding Rates</a></li>
+    <li><a href="https://www.irs.gov/forms-pubs/about-form-8959" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link font-medium">IRS Form 8959 - Additional Medicare Tax Instructions</a></li>
+  </ul>
+</BlogLayout>

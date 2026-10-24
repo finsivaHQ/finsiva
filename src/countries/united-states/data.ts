@@ -49,6 +49,7 @@ const taxCategories: TaxCategory[] = [
       },
       {
         slug: "tax-brackets",
+        url: "/blogs/us-federal-income-tax-brackets-2026-guide/",
         title: "US Tax Brackets 2026: Federal Rates & Income Slabs",
         description: "2026 federal income tax brackets and rates (10% to 37%). Calculate taxable income thresholds for Single, Married Joint, and Head of Household.",
         image: "/images/guides/united-states/tax-brackets.jpg",
@@ -111,6 +112,7 @@ const taxCategories: TaxCategory[] = [
       },
       {
         slug: "fica-guide",
+        url: "/blogs/us-fica-payroll-tax-social-security-medicare-guide/",
         title: "Employee FICA Deductions & W-2 Withholding Guide",
         description: "Understanding employee FICA taxes, Social Security wage base thresholds, 0.9% Additional Medicare Tax, and claiming excess FICA credits on Form 1040.",
         image: "/images/guides/united-states/fica-guide.jpg",
@@ -142,6 +144,7 @@ const taxCategories: TaxCategory[] = [
       },
       {
         slug: "se-tax-guide",
+        url: "/blogs/us-self-employment-tax-1099-schedule-c-guide/",
         title: "Self-Employment Tax & Schedule C Filing Guide",
         description: "Complete guide to Schedule SE, calculating the 15.3% self-employment tax, claiming the 50% above-the-line deduction, and paying quarterly estimated taxes on Form 1040-ES.",
         image: "/images/guides/united-states/se-tax-guide.jpg",
