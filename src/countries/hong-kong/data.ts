@@ -72,9 +72,10 @@ const taxCategories: TaxCategory[] = [
       { slug: "first-registration-tax-calculator", name: "First Registration Tax Calculator", description: "Calculate first registration tax for Hong Kong vehicles." }
     ],
     guides: [
-      { slug: "stamp-duty-guide", title: "Stamp Duty Guide", description: "Understanding Hong Kong stamp duty on property and document transactions.", url: "/blogs/hong-kong-stamp-duty-guide/" },
-      { slug: "hk-property-stamp-duty-guide", title: "HK Property Stamp Duty Guide", description: "Complete guide to property stamp duty rates, BSD, and SSD in Hong Kong.", url: "/blogs/hong-kong-stamp-duty-guide/" },
-      { slug: "rental-stamp-duty-guide", title: "Rental Stamp Duty Guide", description: "How stamp duty applies to rental agreements and leases in Hong Kong.", url: "/blogs/hong-kong-stamp-duty-guide/" }
+      { slug: "stamp-duty-guide", title: "Hong Kong Stamp Duty Hub", description: "Overview of Hong Kong stamp duty on property, vehicle, and tenancy agreements.", url: "/blogs/hong-kong-stamp-duty-guide/" },
+      { slug: "hk-property-stamp-duty-guide", title: "Scale 2 AVD Property Stamp Duty Guide", description: "Complete guide to Scale 2 AVD rates, marginal relief, and post-cooling measure rules.", url: "/blogs/hong-kong-property-stamp-duty-scale-2-avd-guide/" },
+      { slug: "first-registration-tax-guide", title: "First Registration Tax & EV Concession Guide", description: "Comprehensive guide to vehicle FRT tax bands (46% to 132%) and the EV One-for-One Scheme.", url: "/blogs/hong-kong-first-registration-tax-ev-one-for-one-guide/" },
+      { slug: "rental-stamp-duty-guide", title: "Tenancy Agreement Rental Stamp Duty Guide", description: "How rental stamp duty is calculated (0.25% to 1%) and e-stamping via the IRD eTAX portal.", url: "/blogs/hong-kong-tenancy-agreement-rental-stamp-duty-guide/" }
     ],
     faqs: [
       { question: "What is the stamp duty rate in Hong Kong?", answer: "Hong Kong property stamp duty uses Scale 2 rates: flat HK$100 for properties up to HK$4M, 1.5% for HK$4M to HK$4.5M, 2.25% for HK$4.5M to HK$6M, 3% for HK$6M to HK$9M, 3.75% for HK$9M to HK$20M, and 4.25% above HK$20M." },

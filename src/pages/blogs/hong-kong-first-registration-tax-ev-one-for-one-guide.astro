@@ -1,0 +1,210 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "HK First Registration Tax: FRT & EV One-for-One Guide";
+const description = "Complete 2026 guide to Hong Kong First Registration Tax (FRT). Private car tax bands (46% to 132%), electric vehicle One-for-One scheme, and Tesla savings.";
+const image = "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=1200&q=80";
+const author = "Kenneth Wong, Senior Automotive & Property Tax Analyst";
+const authorBio = "Senior Hong Kong Tax Advisor specializing in Inland Revenue Department and Transport Department vehicle taxation, green concessions, and corporate fleet cost optimization.";
+const canonical = "https://finsiva.com/blogs/hong-kong-first-registration-tax-ev-one-for-one-guide/";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is First Registration Tax (FRT) in Hong Kong?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "First Registration Tax (FRT) is a statutory tax levied by the Hong Kong Transport Department under the Motor Vehicles (First Registration Tax) Ordinance on motor vehicles upon their initial registration and licensing for use on Hong Kong roads."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What are the First Registration Tax rates for private cars?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Private cars pay progressive FRT rates based on taxable value: 46% on the first HK$150,000, 86% on the next HK$150,000, 115% on the next HK$200,000, and 132% on the remaining taxable value exceeding HK$500,000."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How does the EV 'One-for-One Replacement' scheme work in Hong Kong?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The One-for-One Replacement Scheme allows car owners who scrap and de-register an eligible old internal combustion engine (ICE) car to receive a higher First Registration Tax concession of up to HK$172,500 when purchasing a brand-new electric private car."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is the maximum tax concession for electric cars without scrapping?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Electric private cars purchased without scrapping an old car under the general concession receive a baseline FRT reduction capped at HK$58,500. Additionally, electric private cars with a pre-tax taxable value exceeding HK$500,000 are ineligible for FRT concessions."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  author={author}
+  authorBio={authorBio}
+  lastUpdated="October 2026"
+  readTime="15 min read"
+  canonical={canonical}
+>
+  <div class="mt-8 space-y-8 text-body dark:text-muted">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <!-- Executive Summary Box -->
+    <div class="rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-lighter dark:bg-surface">
+      <h2 class="text-xl font-bold text-ink dark:text-on-primary mb-3">
+        Quick Executive Summary: HK First Registration Tax (FRT)
+      </h2>
+      <ul class="space-y-2 text-sm leading-relaxed">
+        <li>
+          <strong>Aggressive Progressive Rates:</strong> First Registration Tax for private cars ranges from <strong>46% up to 132%</strong> of the vehicle's published taxable value, often doubling the retail sticker price of imported vehicles.
+        </li>
+        <li>
+          <strong>The "One-for-One" EV Concession:</strong> Scrapping an eligible old petrol or diesel vehicle provides up to <strong>HK$172,500</strong> in FRT tax relief when registering a new electric private car.
+        </li>
+        <li>
+          <strong>General EV Concession:</strong> Buyers registering an EV without scrapping an old vehicle receive a maximum baseline concession of <strong>HK$58,500</strong>.
+        </li>
+        <li>
+          <strong>The HK$500k Luxury EV Cap:</strong> Electric cars with a published pre-tax list price exceeding HK$500,000 receive zero concession under the government's luxury EV fiscal policy.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Hub CTA Card -->
+    <aside class="my-8 rounded-2xl border-2 border-primary/20 bg-primary/5 p-6 dark:border-primary/30 dark:bg-primary/10">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-primary">
+            Instant Transport Department Simulation
+          </span>
+          <h3 class="text-lg font-bold text-ink dark:text-on-primary">
+            Calculate Your Hong Kong First Registration Tax (FRT)
+          </h3>
+          <p class="text-xs sm:text-sm text-body dark:text-muted mt-1 max-w-xl">
+            Compute your exact vehicle tax across 46% to 132% progressive brackets, EV concessions, and One-for-One replacement scheme deductions.
+          </p>
+        </div>
+        <a
+          href="/countries/hong-kong/stamp-duty/first-registration-tax-calculator/"
+          class="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-primary text-on-primary hover:opacity-90 transition shadow-sm dark:bg-on-primary dark:text-primary"
+        >
+          <span>Calculate HK Car Tax Now</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+    </aside>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      What is the First Registration Tax (FRT) in Hong Kong?
+    </h2>
+    <p>
+      First Registration Tax (FRT) is a statutory tax levied by the Hong Kong Transport Department under the Motor Vehicles (First Registration Tax) Ordinance on motor vehicles upon their initial registration and licensing for use on Hong Kong roads.
+    </p>
+    <p>
+      Due to Hong Kong's dense urban geography and limited road network, the Transport Department uses FRT as a traffic management tool to curb private vehicle ownership. Unlike most jurisdictions where vehicle sales tax is 5% to 20%, Hong Kong's rates can exceed 100% of the car's pre-tax import value.
+    </p>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      What are the Tiered First Registration Tax Rates for Private Cars?
+    </h2>
+    <p>
+      Private cars pay progressive FRT rates based on taxable value: 46% on the first HK$150,000, 86% on the next HK$150,000, 115% on the next HK$200,000, and 132% on the remaining taxable value exceeding HK$500,000.
+    </p>
+    <p>
+      Taxable value is determined by the Customs and Excise Department based on the vehicle's published retail price (inclusive of distributor margins, delivery charges, and all factory-fitted optional accessories).
+    </p>
+
+    <!-- FRT Brackets Table -->
+    <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+      <table class="w-full text-left text-xs sm:text-sm">
+        <thead class="bg-canvas-soft dark:bg-surface-soft border-b border-hairline dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+          <tr>
+            <th class="p-3 sm:p-4">Taxable Value Bracket (HK$)</th>
+            <th class="p-3 sm:p-4">FRT Marginal Tax Rate</th>
+            <th class="p-3 sm:p-4">Cumulative Tax at Tier Ceiling</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">First HK$150,000</td>
+            <td class="p-3 sm:p-4 font-bold text-emerald-600 dark:text-emerald-400">46%</td>
+            <td class="p-3 sm:p-4 font-mono">HK$69,000</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Next HK$150,000 (HK$150,001 &ndash; HK$300,000)</td>
+            <td class="p-3 sm:p-4 font-semibold">86%</td>
+            <td class="p-3 sm:p-4 font-mono">HK$198,000</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Next HK$200,000 (HK$300,001 &ndash; HK$500,000)</td>
+            <td class="p-3 sm:p-4 font-semibold">115%</td>
+            <td class="p-3 sm:p-4 font-mono">HK$428,000</td>
+          </tr>
+          <tr>
+            <td class="p-3 sm:p-4 font-semibold">Remaining Balance (Above HK$500,000)</td>
+            <td class="p-3 sm:p-4 font-bold text-red-600 dark:text-red-400">132% (Top Rate)</td>
+            <td class="p-3 sm:p-4 font-mono">HK$428,000 + 132% of excess</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-2xl font-bold text-ink dark:text-on-primary mt-10">
+      How Does the Electric Vehicle "One-for-One Replacement" Scheme Work?
+    </h2>
+    <p>
+      The One-for-One Replacement Scheme allows car owners who scrap and de-register an eligible old internal combustion engine (ICE) car to receive a higher First Registration Tax concession of up to HK$172,500 when purchasing a brand-new electric private car.
+    </p>
+    <p>
+      To qualify for the full HK$172,500 concession, the scrapped vehicle must satisfy strict Transport Department criteria:
+    </p>
+    <ol class="list-decimal pl-6 space-y-2">
+      <li><strong>Age of Scrapped Vehicle:</strong> Must be at least 6 years old at the time of de-registration.</li>
+      <li><strong>Ownership Duration:</strong> The applicant must have been the registered owner of the old car continuously for at least <strong>18 months</strong> immediately prior to de-registration.</li>
+      <li><strong>Licensed Period:</strong> The old car must have been continuously licensed for at least <strong>10 months (304 days)</strong> within the 12 months immediately before scrapping.</li>
+    </ol>
+
+    <!-- One-for-One Comparison Box -->
+    <div class="rounded-xl border border-hairline bg-canvas p-5 my-6 dark:border-overlay-lighter dark:bg-surface">
+      <h3 class="font-bold text-ink dark:text-on-primary mb-2 text-sm sm:text-base">
+        Case Study: Tesla Model 3 RWD Under the One-for-One Scheme
+      </h3>
+      <p class="text-xs sm:text-sm text-body dark:text-muted leading-relaxed mb-3">
+        Consider a brand-new electric saloon with a pre-tax published list price of <strong>HK$280,000</strong>:
+      </p>
+      <div class="text-xs sm:text-sm space-y-1 text-muted dark:text-muted">
+        <p><strong>Gross FRT Payable:</strong> (HK$150k &times; 46%) + (HK$130k &times; 86%) = HK$69,000 + HK$111,800 = <strong>HK$180,800</strong>.</p>
+        <p><strong>Without Scrapping (General Concession):</strong> HK$180,800 &minus; HK$58,500 = <strong>HK$122,300</strong> FRT payable (Total price: HK$402,300).</p>
+        <p><strong>With One-for-One Scheme:</strong> HK$180,800 &minus; HK$172,500 = <strong>HK$8,300</strong> FRT payable (Total price: HK$288,300).</p>
+        <p class="font-bold text-emerald-600 dark:text-emerald-400">
+          The One-for-One Scheme saves the buyer HK$114,000 in upfront cash!
+        </p>
+      </div>
+    </div>
+
+    <!-- Related Links -->
+    <div class="mt-12 rounded-xl border border-hairline bg-canvas-soft p-6 dark:border-overlay-light dark:bg-surface">
+      <h3 class="text-xl font-semibold text-ink mb-3 dark:text-on-primary">Related Hong Kong Vehicle &amp; Stamp Duty Guides</h3>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+        <a href="/countries/hong-kong/stamp-duty/first-registration-tax-calculator/" class="text-link hover:underline font-medium">HK First Registration Tax Calculator</a>
+        <a href="/blogs/hong-kong-car-tax-guide/" class="text-link hover:underline font-medium">Hong Kong Car Tax Overview Guide</a>
+        <a href="/blogs/hong-kong-property-stamp-duty-scale-2-avd-guide/" class="text-link hover:underline font-medium">Property Stamp Duty Scale 2 Guide</a>
+        <a href="/blogs/hong-kong-stamp-duty-guide/" class="text-link hover:underline font-medium">Hong Kong Stamp Duty Hub</a>
+        <a href="/countries/hong-kong/salaries-tax/salaries-tax-calculator/" class="text-link hover:underline font-medium">Salaries Tax Calculator</a>
+        <a href="/countries/hong-kong/" class="text-link hover:underline font-medium">Finsiva Hong Kong Portal</a>
+      </div>
+    </div>
+  </div>
+</BlogLayout>
