@@ -125,9 +125,21 @@ const taxCategories: TaxCategory[] = [
     guides: [
       {
         slug: "gst-guide",
-        title: "Singapore GST Registration & Filing Guide",
-        description: "Understanding compulsory S$1 million GST registration threshold, F5 returns, and 9% consumption tax.", url: "/countries/singapore/gst/gst-calculator/",
-        image: "https://images.unsplash.com/photo-1554224154-22dec7ec8818?w=1200&q=80"
+        title: "Singapore GST Rate 2026 Guide",
+        description: "Understanding the 9% rate hike history, IRAS compliance, and online payment options via myTax Portal.",
+        url: "/blogs/singapore-gst-rate-2026-guide/"
+      },
+      {
+        slug: "low-value-goods-gst-guide",
+        title: "Singapore Low-Value Goods GST Guide",
+        description: "Cross-border e-commerce rules, S$400 LVG threshold, and the Overseas Vendor Registration (OVR) regime.",
+        url: "/blogs/singapore-ecommerce-low-value-goods-gst-guide/"
+      },
+      {
+        slug: "property-tourist-gst-refund-guide",
+        title: "Singapore Property, Vehicle & Tourist GST Refund Guide",
+        description: "Tourist refund scheme (eTRS), commercial vehicle GST, and residential property exemptions in Singapore.",
+        url: "/blogs/singapore-property-rental-vehicle-tourist-gst-refund-guide/"
       }
     ],
     faqs: [
