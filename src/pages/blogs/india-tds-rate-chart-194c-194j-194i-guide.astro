@@ -1,0 +1,326 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "TDS Rate Chart FY 2025-26: Section 194C, 194J, 194I & Thresholds";
+const description = "Complete TDS rate chart for FY 2025-26 (AY 2026-27). Detailed threshold limits and rules for Section 194C (contractors), 194J (professional/technical), 194I (rent), and TRACES filing.";
+const image = "https://images.unsplash.com/photo-1450133064473-71024230f91b?w=1200&q=80";
+const canonical = "https://finsiva.com/blogs/india-tds-rate-chart-194c-194j-194i-guide/";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between 2% and 10% TDS under Section 194J?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under Section 194J of the Income Tax Act, fees for technical services (FTS), royalty for sale/distribution of cinematographic films, and call center operator payments are subject to a reduced TDS rate of 2%. In contrast, professional fees (such as legal, medical, architectural, accountancy, or consultancy services) and director remuneration remain subject to the standard 10% TDS rate, provided cumulative payments exceed the ₹30,000 annual threshold."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the exemption thresholds for contractor TDS under Section 194C?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under Section 194C, TDS is not applicable if a single contract payment does not exceed ₹30,000, or if aggregate payments to the contractor do not exceed ₹1,00,000 in a financial year. Once either threshold is crossed, tax must be deducted at 1% for individual/HUF payees and 2% for corporate/partnership entities."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the annual rent threshold for TDS under Section 194I?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under Section 194I, any business or individual subject to tax audit must deduct TDS on commercial or residential rent if the total rent paid or payable exceeds ₹2,40,000 per financial year. The applicable rate is 2% for the lease of plant, machinery, or equipment, and 10% for the lease of land, buildings, or furniture."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the penalties for late deduction versus late deposit of TDS under Section 201(1A)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under Section 201(1A), failure to deduct TDS at source incurs simple interest at 1% per month (or part of a month) from the date tax was deductible to the date of actual deduction. Failure to deposit deducted TDS to the government by the 7th of the following month incurs higher interest of 1.5% per month from the date of deduction to the date of actual payment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Section 206AB penalize non-filers of income tax returns?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Section 206AB mandates higher TDS rates for 'specified persons' who failed to file their Income Tax Return for the assessment year preceding the financial year and had aggregate TDS/TCS of ₹50,000 or more. The applicable withholding rate is the higher of: twice the statutory rate, twice the rate in force, or a flat 5%."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  canonical={canonical}
+  author="Vikramaditya Sharma, CA"
+  authorBio="Vikramaditya Sharma is a Chartered Accountant and direct tax advisor based in Mumbai, specializing in personal financial planning, corporate tax compliance, and CBDT regulatory assessments."
+  lastUpdated="October 2026"
+  readTime="16 min read"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
+    <p>Tax Deducted at Source (TDS) is the foundational collection engine of the Indian direct tax architecture. Designed under the <strong>Income-tax Act, 1961</strong> to capture taxes at the exact point of income generation, TDS operates on the "pay as you earn" principle. Payers (deductors) are legally mandated to withhold a specified percentage before disbursing payments to contractors, professionals, landlords, and commercial vendors, remitting the balance to the central government.</p>
+
+    <p>For corporate finance teams, startup founders, and chartered accountants, staying updated on shifting statutory thresholds, differential rates for technical versus professional services under <strong>Section 194J</strong>, and punitive withholding rates for non-filers under <strong>Section 206AB</strong> is non-negotiable. Falling afoul of TDS provisions triggers mandatory disallowance of business expenses under Section 40(a)(ia), punitive monthly interest, and daily late-filing fees.</p>
+
+    <!-- Key Takeaway Box -->
+    <div class="my-6 rounded-2xl border-2 border-primary/20 bg-primary/[0.03] p-6 dark:border-primary/30 dark:bg-primary/[0.05]">
+      <h3 class="text-lg font-bold text-ink dark:text-on-primary mb-2 flex items-center gap-2">
+        <span class="w-3 h-3 rounded-full bg-primary inline-block"></span>
+        Core TDS Rule Summary (FY 2025-26)
+      </h3>
+      <p class="text-sm leading-relaxed text-body dark:text-muted">
+        <strong>Technical services (FTS) under 194J are taxed at 2%, while professional services remain at 10%.</strong> Contractor payments under 194C are taxed at <strong>1% (individual)</strong> or <strong>2% (corporate)</strong> once aggregate billings cross ₹1,00,000. Rent on immovable property under 194I is taxed at <strong>10%</strong> above the ₹2,40,000 annual threshold.
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">Master TDS Rate Chart for FY 2025-26 (AY 2026-27)</h2>
+    <p><strong>The Income Tax Department enforces specific withholding rates and exemption thresholds across different payment categories under Chapter XVII-B of the Act.</strong> The master reference table below details the statutory rates applicable for the current financial year:</p>
+
+    <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+      <table class="w-full text-left text-sm">
+        <thead class="bg-canvas-soft border-b border-hairline dark:bg-surface/80 dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+          <tr>
+            <th class="p-3">Section</th>
+            <th class="p-3">Nature of Payment</th>
+            <th class="p-3">Exemption Threshold (INR)</th>
+            <th class="p-3">Standard TDS Rate</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 font-semibold">192</td>
+            <td class="p-3">Salary payments to employees</td>
+            <td class="p-3">Basic exemption limit</td>
+            <td class="p-3">Average progressive income tax rate</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-semibold">194A</td>
+            <td class="p-3">Interest other than interest on securities (Bank FD)</td>
+            <td class="p-3">₹40,000 (₹50,000 for Senior Citizens)</td>
+            <td class="p-3">10%</td>
+          </tr>
+          <tr class="bg-primary/[0.02]">
+            <td class="p-3 font-semibold">194C</td>
+            <td class="p-3">Payment to contractors / sub-contractors / advertising</td>
+            <td class="p-3">₹30,000 (Single) / ₹1,00,000 (Aggregate)</td>
+            <td class="p-3 font-bold text-primary dark:text-on-primary">1% (Ind/HUF) | 2% (Company/Firm)</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-semibold">194H</td>
+            <td class="p-3">Commission or brokerage charges</td>
+            <td class="p-3">₹15,000</td>
+            <td class="p-3">5% (Reduced to 2% in recent revisions)</td>
+          </tr>
+          <tr class="bg-primary/[0.02]">
+            <td class="p-3 font-semibold">194I (a)</td>
+            <td class="p-3">Rent on plant, machinery, or equipment</td>
+            <td class="p-3">₹2,40,000 per annum</td>
+            <td class="p-3 font-bold">2%</td>
+          </tr>
+          <tr class="bg-primary/[0.02]">
+            <td class="p-3 font-semibold">194I (b)</td>
+            <td class="p-3">Rent on land, building, furniture, or fittings</td>
+            <td class="p-3">₹2,40,000 per annum</td>
+            <td class="p-3 font-bold text-primary dark:text-on-primary">10%</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-semibold">194IA</td>
+            <td class="p-3">Purchase of immovable property (other than agricultural)</td>
+            <td class="p-3">₹50,00,000 consideration</td>
+            <td class="p-3">1% of consideration or stamp duty value</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-semibold">194IB</td>
+            <td class="p-3">Rent paid by individual/HUF (not liable to audit)</td>
+            <td class="p-3">₹50,000 per month</td>
+            <td class="p-3">5% (Capped at last month rent)</td>
+          </tr>
+          <tr class="bg-primary/[0.02]">
+            <td class="p-3 font-semibold">194J (1)</td>
+            <td class="p-3">Fees for Technical Services (FTS) / Call Centers</td>
+            <td class="p-3">₹30,000</td>
+            <td class="p-3 font-bold text-primary dark:text-on-primary">2%</td>
+          </tr>
+          <tr class="bg-primary/[0.02]">
+            <td class="p-3 font-semibold">194J (2)</td>
+            <td class="p-3">Fees for Professional Services & Director Fees</td>
+            <td class="p-3">₹30,000 (No limit on director fees)</td>
+            <td class="p-3 font-bold text-primary dark:text-on-primary">10%</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-semibold">194Q</td>
+            <td class="p-3">Purchase of goods by buyer with turnover > ₹10 Cr</td>
+            <td class="p-3">₹50,00,000 aggregate purchase</td>
+            <td class="p-3">0.1%</td>
+          </tr>
+          <tr class="bg-canvas-soft">
+            <td class="p-3 font-semibold">206AA</td>
+            <td class="p-3">Payee fails to furnish valid Permanent Account Number (PAN)</td>
+            <td class="p-3">No threshold</td>
+            <td class="p-3 font-bold text-red-600 dark:text-red-400">20% (or higher rate)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>To compute precise withholding values across any invoice or contract value, access our interactive <a href="/countries/india/tds/tds-calculator/" class="text-link font-semibold hover:underline dark:text-link">India TDS Calculator</a>.</p>
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">Section 194J Deconstructed: The Critical 2% vs 10% Division</h2>
+    <p><strong>Section 194J differentiates between technical services (FTS taxed at 2%) and professional services (taxed at 10%), a distinction that historically sparked intense litigation between taxpayers and assessing officers.</strong></p>
+
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">What Qualifies for the Reduced 2% Rate?</h3>
+    <p>Under the amended provisions of Section 194J(1), the following payment streams are taxed at the concessional rate of <strong>2%</strong>:</p>
+    <ul class="list-disc pl-6 space-y-1 mt-2 text-sm">
+      <li><strong>Fees for Technical Services (FTS):</strong> Any consideration for managerial, technical, or consultancy services (such as IT network maintenance, software coding, routine engineering, or database management).</li>
+      <li><strong>Royalty:</strong> Consideration for the sale, distribution, or exhibition of cinematographic films.</li>
+      <li><strong>BPO / Call Center Operations:</strong> Income derived by business process outsourcing centers and call center services.</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-4">What Remains Taxable at the Higher 10% Rate?</h3>
+    <p>Payments for professional services defined under Section 44AA remain subject to <strong>10% TDS</strong>. This includes services rendered by individuals carrying on legal, medical, engineering, architectural, accountancy, technical consultancy, interior decoration, authorized representation, or notified professions (such as film artists, company secretaries, and information technology professionals acting in an individual professional capacity).</p>
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">Section 194C Contractor Payments: Single vs Aggregate Thresholds</h2>
+    <p><strong>Section 194C applies to payments made to contractors or sub-contractors for carrying out any work (including labor supply, advertising, broadcasting, catering, and transport carriage), requiring tax deduction at 1% for individuals/HUFs and 2% for other entities.</strong></p>
+
+    <p>The application of TDS under Section 194C is governed by a dual-threshold safety net:</p>
+    <ol class="list-decimal pl-6 space-y-1.5 mt-2 text-sm">
+      <li><strong>Single Bill Threshold:</strong> If a single contract invoice exceeds <strong>₹30,000</strong>, TDS must be deducted on that invoice immediately.</li>
+      <li><strong>Aggregate Annual Threshold:</strong> Even if every individual invoice is below ₹30,000 (e.g., ten separate invoices of ₹15,000 each), the moment cumulative payments to that contractor surpass <strong>₹1,00,000</strong> in a single financial year, TDS must be deducted on the invoice that causes the total to cross ₹1,00,000 and all subsequent invoices.</li>
+    </ol>
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">Filing Quarterly TDS Returns: Forms, Deadlines & TRACES Portal</h2>
+    <p><strong>Every deductor must deposit deducted taxes with the central government via Challan ITNS 281 by the 7th of the following month (and April 30 for March deductions), followed by filing quarterly TDS returns on the TRACES portal.</strong></p>
+
+    <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+      <table class="w-full text-left text-sm">
+        <thead class="bg-canvas-soft border-b border-hairline dark:bg-surface/80 dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+          <tr>
+            <th class="p-3">Quarter</th>
+            <th class="p-3">Period Covered</th>
+            <th class="p-3">Return Due Date (Forms 24Q, 26Q, 27Q)</th>
+            <th class="p-3">Form 16 / 16A Issuance Due Date</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr><td class="p-3 font-semibold">Q1</td><td class="p-3">April 1 – June 30</td><td class="p-3 font-bold text-primary dark:text-on-primary">July 31</td><td class="p-3">August 15</td></tr>
+          <tr><td class="p-3 font-semibold">Q2</td><td class="p-3">July 1 – September 30</td><td class="p-3 font-bold text-primary dark:text-on-primary">October 31</td><td class="p-3">November 15</td></tr>
+          <tr><td class="p-3 font-semibold">Q3</td><td class="p-3">October 1 – December 31</td><td class="p-3 font-bold text-primary dark:text-on-primary">January 31</td><td class="p-3">February 15</td></tr>
+          <tr class="bg-canvas-soft"><td class="p-3 font-semibold">Q4</td><td class="p-3">January 1 – March 31</td><td class="p-3 font-bold text-primary dark:text-on-primary">May 31</td><td class="p-3">June 15</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-sm">
+      <strong>Primary Return Types:</strong> Form 24Q is filed for salary payments (generating Form 16 for employees); Form 26Q is filed for all domestic non-salary payments (generating Form 16A for vendors); and Form 27Q is filed for payments made to non-resident Indians (NRIs) and foreign corporations.
+    </p>
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">Penalties for Default: Interest, Section 234E & Expense Disallowance</h2>
+    <p><strong>Failure to comply with statutory TDS timelines triggers severe compounding consequences under the Income-tax Act, including statutory interest under Section 201(1A), a daily late-filing fee under Section 234E, and a 30% expenditure disallowance under Section 40(a)(ia).</strong></p>
+
+    <ul class="list-disc pl-6 space-y-2 mt-2 text-sm">
+      <li><strong>Interest for Non-Deduction (1% per month):</strong> Calculated from the date the tax was deductible until the date it was actually deducted.</li>
+      <li><strong>Interest for Non-Payment (1.5% per month):</strong> Calculated from the date of deduction to the actual date of deposit into the government treasury.</li>
+      <li><strong>Late Filing Fee (Section 234E):</strong> A mandatory fee of <strong>₹200 per day</strong> for every day the quarterly return remains unfiled, capped at the total amount of TDS deductible in that return.</li>
+      <li><strong>30% Business Expense Disallowance (Section 40(a)(ia)):</strong> If a business fails to deduct TDS or fails to deposit deducted tax before the ITR filing due date, <strong>30% of that entire contract/rent/professional expense is disallowed</strong> from its profit and loss statement, directly inflating taxable business profits.</li>
+    </ul>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-12 mb-6">Frequently Asked Questions</h2>
+  {faqSchema.mainEntity.map(faq => (
+    <div class="my-4 p-5 rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface shadow-sm">
+      <h3 class="text-lg font-bold text-ink dark:text-on-primary">{faq.name}</h3>
+      <p class="text-sm text-body dark:text-muted mt-2 leading-relaxed">{faq.acceptedAnswer.text}</p>
+    </div>
+  ))}
+
+  <!-- Interactive Calculator Hub Section -->
+  <div class="my-10 rounded-2xl border border-hairline bg-canvas-soft p-6 sm:p-8 dark:border-overlay-lighter dark:bg-surface">
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+      <div>
+        <span class="text-xs font-bold text-primary uppercase tracking-wider mb-1 block">Instant TDS Computation</span>
+        <h3 class="text-xl font-bold text-ink dark:text-on-primary">Calculate Your Withholding Tax Obligations</h3>
+        <p class="text-sm text-muted mt-1">Determine exact TDS deductions, net vendor payouts, and section thresholds:</p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <a href="/countries/india/tds/tds-calculator/" class="group rounded-xl border border-hairline bg-canvas p-5 transition-all hover:border-primary hover:shadow-md dark:border-overlay-lighter dark:bg-surface flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between text-xs font-semibold text-primary mb-1.5">
+            <span class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+              Interactive Calculator
+            </span>
+            <span class="text-muted text-[11px] font-normal">India</span>
+          </div>
+          <h4 class="font-bold text-ink dark:text-on-primary group-hover:text-primary transition-colors text-base">India TDS Calculator</h4>
+          <p class="text-xs text-muted mt-1.5 leading-relaxed">Calculate Tax Deducted at Source for Section 194C, 194J, 194I, and 194Q.</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-hairline dark:border-overlay-lighter flex items-center justify-between text-xs font-semibold text-primary">
+          <span>Calculate Now</span>
+          <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
+        </div>
+      </a>
+
+      <a href="/countries/india/income-tax/income-tax-calculator/" class="group rounded-xl border border-hairline bg-canvas p-5 transition-all hover:border-primary hover:shadow-md dark:border-overlay-lighter dark:bg-surface flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between text-xs font-semibold text-primary mb-1.5">
+            <span class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+              Interactive Calculator
+            </span>
+            <span class="text-muted text-[11px] font-normal">India</span>
+          </div>
+          <h4 class="font-bold text-ink dark:text-on-primary group-hover:text-primary transition-colors text-base">India Income Tax Calculator</h4>
+          <p class="text-xs text-muted mt-1.5 leading-relaxed">Compare Old vs New Tax Regime with 80C, 80D, and HRA inputs.</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-hairline dark:border-overlay-lighter flex items-center justify-between text-xs font-semibold text-primary">
+          <span>Calculate Now</span>
+          <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="mt-6 pt-4 border-t border-hairline dark:border-overlay-lighter flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-xs text-muted">
+      <span>Need tools for other Indian direct or indirect taxes?</span>
+      <a href="/countries/india/" class="font-semibold text-primary hover:underline flex items-center gap-1">
+        Explore India Country Hub &rarr;
+      </a>
+    </div>
+  </div>
+
+  <!-- Internal Resource Linking Grid -->
+  <div class="mt-12 pt-8 border-t border-hairline dark:border-overlay-lighter">
+    <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Related Indian Tax Guides & Tools</h2>
+    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <a href="/blogs/india-new-vs-old-tax-regime-fy-2025-26-guide/" class="block rounded-xl border border-hairline p-5 hover:border-primary hover:shadow-md transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+        <h3 class="font-bold text-ink dark:text-on-primary text-base">New vs Old Tax Regime Guide</h3>
+        <p class="text-sm text-muted mt-2">Section 115BAC slabs, ₹75k standard deduction, and break-even math.</p>
+      </a>
+      <a href="/blogs/india-nri-income-tax-182-day-residency-guide/" class="block rounded-xl border border-hairline p-5 hover:border-primary hover:shadow-md transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+        <h3 class="font-bold text-ink dark:text-on-primary text-base">NRI Tax & 182-Day Residency Guide</h3>
+        <p class="text-sm text-muted mt-2">NRE vs NRO taxation, Section 195 property TDS, and DTAA relief.</p>
+      </a>
+      <a href="/blogs/gst-complete-guide-india/" class="block rounded-xl border border-hairline p-5 hover:border-primary hover:shadow-md transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+        <h3 class="font-bold text-ink dark:text-on-primary text-base">India GST Complete Guide</h3>
+        <p class="text-sm text-muted mt-2">0%, 5%, 12%, 18%, 28% slabs, input tax credits, and GSTR filing.</p>
+      </a>
+    </div>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-ink mt-12 mb-6 dark:text-on-primary">Official Authorities & References</h2>
+  <ul class="list-disc pl-6 space-y-2 text-body dark:text-muted">
+    <li><a href="https://www.traces.gov.in" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link font-medium">TRACES Portal - TDS Reconciliation & Form 16A Generation</a></li>
+    <li><a href="https://www.incometax.gov.in" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link font-medium">Income Tax Department Official e-Filing Portal</a></li>
+    <li><a href="https://incometaxindia.gov.in" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link font-medium">CBDT Direct Tax Circulars and Notifications</a></li>
+  </ul>
+</BlogLayout>

@@ -1,0 +1,293 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const title = "NRI Tax in India Guide: 182-Day Rule, NRE vs NRO & DTAA Relief";
+const description = "Complete 2026 guide to NRI taxation in India. Understand the 182-day residency rule, RNOR status, NRE vs NRO bank interest, Section 195 property TDS, and DTAA foreign tax relief.";
+const image = "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1200&q=80";
+const canonical = "https://finsiva.com/blogs/india-nri-income-tax-182-day-residency-guide/";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is NRI tax residency determined under the 182-day rule in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An individual is classified as an Indian tax resident under Section 6 of the Income-tax Act if they stay in India for 182 days or more during the financial year, or stay for at least 60 days in the current year and 365 days or more across the preceding 4 financial years. For Indian citizens leaving India for employment abroad or visiting citizens with Indian income under ₹15 Lakhs, the 60-day threshold is substituted with 182 days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is foreign income earned by an NRI taxable in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Income earned, accrued, or received outside India by a Non-Resident Indian (NRI) is completely exempt from Indian income tax. NRIs are taxed in India strictly on income that is earned, accrued, or received within the territory of India, such as Indian rental income, capital gains from Indian shares or mutual funds, and interest from NRO bank deposits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference in taxation between NRE and NRO bank accounts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Interest earned on a Non-Resident External (NRE) savings or fixed deposit account is 100% tax-free in India under Section 10(4) and fully repatriable abroad. In contrast, interest earned on a Non-Resident Ordinary (NRO) account is subject to Indian income tax and withheld at source (TDS) at 30% plus applicable cess and surcharge, unless reduced under a Double Taxation Avoidance Agreement (DTAA)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the TDS rate when an NRI sells residential property in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When an NRI sells an immovable property in India, the buyer must deduct TDS under Section 195 at 20% (plus surcharge and cess) on long-term capital gains, or at 30% (plus surcharge and cess) on short-term capital gains. Because buyers often withhold tax on the gross sale consideration rather than the net capital gain, NRIs should apply for a Lower Deduction Certificate (Form 13) from the Income Tax Department prior to executing the sale."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does an NRI claim DTAA benefits to avoid double taxation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To claim treaty benefits under a Double Taxation Avoidance Agreement (DTAA) under Section 90, an NRI must obtain a Tax Residency Certificate (TRC) from the tax authority of their country of residence, file self-declaration Form 10F electronically on the Indian e-filing portal, and submit Form 67 to claim Foreign Tax Credit (FTC) before filing their annual ITR."
+      }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={image}
+  canonical={canonical}
+  author="Vikramaditya Sharma, CA"
+  authorBio="Vikramaditya Sharma is a Chartered Accountant and direct tax advisor based in Mumbai, specializing in personal financial planning, corporate tax compliance, and CBDT regulatory assessments."
+  lastUpdated="October 2026"
+  readTime="16 min read"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <div class="mt-8 space-y-6 text-body dark:text-muted leading-relaxed">
+    <p>For millions of Non-Resident Indians (NRIs), Persons of Indian Origin (PIOs), and Overseas Citizens of India (OCIs) residing across the United States, the United Kingdom, the UAE, Singapore, and Canada, managing cross-border finances involves navigating complex residential tests and withholding obligations. Under the <strong>Income-tax Act, 1961</strong>, your tax liability in India is governed not by your citizenship or passport, but entirely by your <strong>residential status</strong> for that specific financial year.</p>
+
+    <p>A single miscalculated day of physical presence in India can trigger unexpected tax residency, exposing global offshore income to the Indian tax authorities. Furthermore, standard transactions—such as selling ancestral property in Bangalore, repatriating funds from NRO deposits to Dubai, or investing in domestic mutual funds—are subject to heavy withholding taxes under <strong>Section 195</strong>. Understanding the statutory rules under Section 6, the transitional shield of <strong>RNOR status</strong>, and treaty mechanisms under Double Taxation Avoidance Agreements (DTAA) is vital for wealth preservation.</p>
+
+    <!-- Quick Takeaway Banner -->
+    <div class="my-6 rounded-2xl border-2 border-primary/20 bg-primary/[0.03] p-6 dark:border-primary/30 dark:bg-primary/[0.05]">
+      <h3 class="text-lg font-bold text-ink dark:text-on-primary mb-2 flex items-center gap-2">
+        <span class="w-3 h-3 rounded-full bg-primary inline-block"></span>
+        NRI Tax Essentials Snapshot
+      </h3>
+      <p class="text-sm leading-relaxed text-body dark:text-muted">
+        <strong>NRIs are taxed in India solely on Indian-sourced income (foreign salary and offshore investments are 100% exempt).</strong> NRE deposit interest is completely tax-free, while NRO interest faces 30% TDS. When selling Indian property, buyers must withhold <strong>20% TDS under Section 195</strong> unless you secure a Nil/Lower Deduction Certificate (Form 13).
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">How Is NRI Tax Residency Determined Under Section 6?</h2>
+    <p><strong>Under Section 6 of the Income-tax Act, an individual is categorized as an Indian Resident if they spend 182 days or more in India during the financial year (April 1 to March 31), or if they spend 60 days in India during the year plus an aggregate of 365 days across the preceding four financial years.</strong> If neither test is satisfied, the individual is classified as a Non-Resident (NR).</p>
+
+    <p>However, the Indian tax code provides crucial statutory exceptions and modifications to the standard 60-day rule:</p>
+
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">1. Indian Citizens Leaving for Employment Abroad:</h3>
+    <p class="text-sm">
+      If an Indian citizen leaves India during the financial year for the purpose of employment abroad, or as a member of the crew of an Indian ship, the 60-day condition is substituted entirely with <strong>182 days</strong>. This ensures that professionals taking up overseas jobs are not penalized as residents simply because they spent more than 60 days in India prior to departure.
+    </p>
+
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-4">2. Visiting Indian Citizens & PIOs with Indian Income ≤ ₹15 Lakhs:</h3>
+    <p class="text-sm">
+      An Indian citizen or Person of Indian Origin (PIO) who resides abroad and visits India during the financial year enjoys the full <strong>182-day threshold</strong>, provided their total income from Indian sources (excluding foreign income) does not exceed <strong>₹15,00,000</strong>.
+    </p>
+
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-4">3. Visiting Citizens with Indian Income Exceeding ₹15 Lakhs (120-Day Rule):</h3>
+    <p class="text-sm">
+      If an Indian citizen or PIO residing abroad visits India and their Indian-sourced income exceeds <strong>₹15,00,000</strong>, the 60-day threshold is modified to <strong>120 days</strong> (combined with the 365-day presence over the preceding four years). If their physical stay is between 120 and 181 days, they are classified as a <strong>Resident but Not Ordinarily Resident (RNOR)</strong>.
+    </p>
+
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-4">4. Deemed Residency for Stateless Citizens (Section 6(1A)):</h3>
+    <p class="text-sm">
+      Introduced to prevent stateless tax avoidance, an Indian citizen whose total income from Indian sources exceeds <strong>₹15,00,000</strong> is deemed to be an Indian resident if they are not liable to tax in any other country by reason of domicile or residence (e.g., individuals residing in zero-tax jurisdictions like the UAE). Such deemed residents are automatically granted <strong>RNOR status</strong>, protecting their foreign income from Indian taxation.
+    </p>
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">The Scope of Taxable Income: ROR vs RNOR vs Non-Resident</h2>
+    <p><strong>Your exact tax liability in India depends on which of the three residential tiers you occupy: Resident & Ordinarily Resident (ROR), Resident but Not Ordinarily Resident (RNOR), or Non-Resident (NR).</strong></p>
+
+    <div class="my-6 overflow-x-auto rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface">
+      <table class="w-full text-left text-sm">
+        <thead class="bg-canvas-soft border-b border-hairline dark:bg-surface/80 dark:border-overlay-lighter text-ink dark:text-on-primary font-bold">
+          <tr>
+            <th class="p-3">Type of Income Stream</th>
+            <th class="p-3">Resident & Ordinarily Resident (ROR)</th>
+            <th class="p-3">Resident but Not Ordinarily Resident (RNOR)</th>
+            <th class="p-3">Non-Resident Indian (NRI)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-hairline dark:divide-overlay-lighter">
+          <tr>
+            <td class="p-3 font-semibold">Income received or accrued in India (e.g., Indian rent, salary, FD interest)</td>
+            <td class="p-3 text-red-600 dark:text-red-400 font-bold">Taxable</td>
+            <td class="p-3 text-red-600 dark:text-red-400 font-bold">Taxable</td>
+            <td class="p-3 text-red-600 dark:text-red-400 font-bold">Taxable</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-semibold">Income deemed to accrue or arise in India (e.g., sale of Indian property)</td>
+            <td class="p-3 text-red-600 dark:text-red-400 font-bold">Taxable</td>
+            <td class="p-3 text-red-600 dark:text-red-400 font-bold">Taxable</td>
+            <td class="p-3 text-red-600 dark:text-red-400 font-bold">Taxable</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-semibold">Foreign income from business controlled or profession set up in India</td>
+            <td class="p-3 text-red-600 dark:text-red-400 font-bold">Taxable</td>
+            <td class="p-3 text-red-600 dark:text-red-400 font-bold">Taxable</td>
+            <td class="p-3 font-bold text-emerald-600 dark:text-emerald-400">EXEMPT</td>
+          </tr>
+          <tr class="bg-primary/[0.02]">
+            <td class="p-3 font-semibold">Pure foreign income (overseas salary, global dividends, capital gains abroad)</td>
+            <td class="p-3 text-red-600 dark:text-red-400 font-bold">Taxable (Worldwide)</td>
+            <td class="p-3 font-bold text-emerald-600 dark:text-emerald-400">EXEMPT</td>
+            <td class="p-3 font-bold text-emerald-600 dark:text-emerald-400">EXEMPT</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-sm text-muted">
+      <strong>The RNOR Golden Shield:</strong> RNOR status is a massive transitional tax benefit for returning NRIs. You qualify as RNOR if you were a Non-Resident in 9 out of the 10 preceding financial years, or spent 729 days or less in India during the preceding 7 years. During your RNOR years (typically 2 to 3 years after moving back), your global foreign income remains 100% tax-free in India.
+    </p>
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">Bank Accounts: NRE vs NRO vs FCNR Taxation Compared</h2>
+    <p><strong>Under the Foreign Exchange Management Act (FEMA), an individual who becomes a non-resident cannot legally hold a standard resident savings bank account in India, and must convert existing accounts to Non-Resident Ordinary (NRO) status or open Non-Resident External (NRE) accounts.</strong></p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface shadow-sm">
+        <h3 class="font-bold text-ink dark:text-on-primary text-base text-primary mb-2">NRE Account (Non-Resident External)</h3>
+        <ul class="list-disc pl-5 space-y-1.5 text-sm">
+          <li><strong>Purpose:</strong> Parking foreign earnings transferred to India in Indian Rupees (INR).</li>
+          <li><strong>Tax Status:</strong> <strong>100% Tax-Exempt in India</strong> under Section 10(4)(ii). Zero tax on savings or term deposit interest.</li>
+          <li><strong>Repatriability:</strong> Both principal and interest are freely and fully repatriable abroad without limits.</li>
+          <li><strong>Joint Accounts:</strong> Can only be held jointly with another NRI, or with a resident relative on a former-or-survivor basis.</li>
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-hairline bg-canvas p-5 dark:border-overlay-lighter dark:bg-surface shadow-sm">
+        <h3 class="font-bold text-ink dark:text-on-primary text-base mb-2">NRO Account (Non-Resident Ordinary)</h3>
+        <ul class="list-disc pl-5 space-y-1.5 text-sm">
+          <li><strong>Purpose:</strong> Managing income generated inside India (rent, local dividends, pensions, capital gains).</li>
+          <li><strong>Tax Status:</strong> <strong>Taxable in India.</strong> Banks deduct TDS at <strong>30% plus cess (31.2%)</strong> on all interest credited.</li>
+          <li><strong>Repatriability:</strong> Repatriation is limited to <strong>USD 1,000,000 per financial year</strong> under RBI guidelines, subject to submitting Form 15CA and Form 15CB (CA certificate).</li>
+          <li><strong>DTAA Benefit:</strong> TDS can be reduced to 10%–15% if DTAA relief is claimed via Form 10F and a Tax Residency Certificate.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">Sale of Property by an NRI: Section 195 TDS & Form 13 Strategy</h2>
+    <p><strong>When an NRI sells an immovable property in India, Section 195 mandates that the buyer must deduct TDS at 20% on long-term capital gains (if held over 24 months) or 30% on short-term capital gains, plus applicable surcharge and 4% cess.</strong></p>
+
+    <p>However, in standard conveyancing transactions, buyers and their legal advisors frequently withhold the 20% + surcharge + cess <strong>on the total sale consideration</strong> rather than the net capital gain. On a ₹1.5 Crore property sale, this can freeze over ₹35 Lakhs in TDS with the tax authorities, even if your actual indexed capital gain is modest.</p>
+
+    <h3 class="text-xl font-semibold text-ink dark:text-on-primary mt-6">How to Avoid Excessive Withholding via Form 13:</h3>
+    <ol class="list-decimal pl-6 space-y-2 mt-2 text-sm">
+      <li><strong>File Form 13 Online:</strong> Before executing the sale deed, submit an application for a <strong>Certificate for Lower or Nil Deduction of Tax</strong> under Section 197 via the TRACES portal.</li>
+      <li><strong>Furnish Supporting Documents:</strong> Submit the original purchase agreement, proof of indexation/improvement costs, circle rate valuation, and draft agreement to sell.</li>
+      <li><strong>Issuance of Certificate:</strong> The Assessing Officer evaluates the actual capital gain liability and issues a formal certificate specifying the exact reduced TDS percentage that the buyer must withhold.</li>
+      <li><strong>Exemptions:</strong> NRIs can also reinvest capital gains under <strong>Section 54</strong> (residential house purchase) or <strong>Section 54EC</strong> (capital gain bonds up to ₹50 Lakhs) to achieve zero net tax liability.</li>
+    </ol>
+
+    <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-8">Double Taxation Avoidance Agreement (DTAA) & Form 67 Relief</h2>
+    <p><strong>Under Section 90 of the Income-tax Act, NRIs can claim treaty benefits under bilateral Double Taxation Avoidance Agreements (DTAA) between India and over 85 countries to avoid paying tax twice on the same income stream.</strong></p>
+
+    <ul class="list-disc pl-6 space-y-2 mt-2 text-sm">
+      <li><strong>Tax Residency Certificate (TRC):</strong> You must obtain a TRC from the government or revenue authority of the country where you reside (e.g., IRS Form 6166 in the USA, HMRC certificate in the UK).</li>
+      <li><strong>Electronic Form 10F:</strong> Mandatory self-declaration filed on the Indian e-filing portal confirming your foreign tax residency and permanent establishment status.</li>
+      <li><strong>Form 67 (Foreign Tax Credit):</strong> If you pay tax in India on Indian income and are also taxed on that income in your country of residence (such as US citizens taxed on worldwide income), you must submit <strong>Form 67</strong> on the e-filing portal on or before the due date for filing your ITR to claim full credit for Indian taxes against your foreign tax return.</li>
+    </ul>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-ink dark:text-on-primary mt-12 mb-6">Frequently Asked Questions</h2>
+  {faqSchema.mainEntity.map(faq => (
+    <div class="my-4 p-5 rounded-xl border border-hairline bg-canvas dark:border-overlay-lighter dark:bg-surface shadow-sm">
+      <h3 class="text-lg font-bold text-ink dark:text-on-primary">{faq.name}</h3>
+      <p class="text-sm text-body dark:text-muted mt-2 leading-relaxed">{faq.acceptedAnswer.text}</p>
+    </div>
+  ))}
+
+  <!-- Interactive Calculator Hub Section -->
+  <div class="my-10 rounded-2xl border border-hairline bg-canvas-soft p-6 sm:p-8 dark:border-overlay-lighter dark:bg-surface">
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+      <div>
+        <span class="text-xs font-bold text-primary uppercase tracking-wider mb-1 block">Free Tax Calculator</span>
+        <h3 class="text-xl font-bold text-ink dark:text-on-primary">Calculate Your Indian Tax Liability</h3>
+        <p class="text-sm text-muted mt-1">Estimate your income tax, TDS deductions, and capital gains obligations in India:</p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <a href="/countries/india/income-tax/income-tax-calculator/" class="group rounded-xl border border-hairline bg-canvas p-5 transition-all hover:border-primary hover:shadow-md dark:border-overlay-lighter dark:bg-surface flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between text-xs font-semibold text-primary mb-1.5">
+            <span class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+              Interactive Calculator
+            </span>
+            <span class="text-muted text-[11px] font-normal">India</span>
+          </div>
+          <h4 class="font-bold text-ink dark:text-on-primary group-hover:text-primary transition-colors text-base">India Income Tax Calculator</h4>
+          <p class="text-xs text-muted mt-1.5 leading-relaxed">Compare Old vs New Tax Regime with 80C, 80D, and HRA inputs.</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-hairline dark:border-overlay-lighter flex items-center justify-between text-xs font-semibold text-primary">
+          <span>Calculate Now</span>
+          <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
+        </div>
+      </a>
+
+      <a href="/countries/india/tds/tds-calculator/" class="group rounded-xl border border-hairline bg-canvas p-5 transition-all hover:border-primary hover:shadow-md dark:border-overlay-lighter dark:bg-surface flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between text-xs font-semibold text-primary mb-1.5">
+            <span class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+              Interactive Calculator
+            </span>
+            <span class="text-muted text-[11px] font-normal">India</span>
+          </div>
+          <h4 class="font-bold text-ink dark:text-on-primary group-hover:text-primary transition-colors text-base">India TDS Calculator</h4>
+          <p class="text-xs text-muted mt-1.5 leading-relaxed">Calculate Tax Deducted at Source for Section 194C, 194J, 194I, and 195.</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-hairline dark:border-overlay-lighter flex items-center justify-between text-xs font-semibold text-primary">
+          <span>Calculate Now</span>
+          <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="mt-6 pt-4 border-t border-hairline dark:border-overlay-lighter flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-xs text-muted">
+      <span>Need more Indian tax guides and calculators?</span>
+      <a href="/countries/india/" class="font-semibold text-primary hover:underline flex items-center gap-1">
+        Explore India Country Hub &rarr;
+      </a>
+    </div>
+  </div>
+
+  <!-- Internal Resource Linking Grid -->
+  <div class="mt-12 pt-8 border-t border-hairline dark:border-overlay-lighter">
+    <h2 class="text-2xl font-semibold text-ink mb-6 dark:text-on-primary">Related Indian Tax Guides & Tools</h2>
+    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <a href="/blogs/india-new-vs-old-tax-regime-fy-2025-26-guide/" class="block rounded-xl border border-hairline p-5 hover:border-primary hover:shadow-md transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+        <h3 class="font-bold text-ink dark:text-on-primary text-base">New vs Old Tax Regime Guide</h3>
+        <p class="text-sm text-muted mt-2">Section 115BAC slabs, ₹75k standard deduction, and break-even math.</p>
+      </a>
+      <a href="/blogs/india-tds-rate-chart-194c-194j-194i-guide/" class="block rounded-xl border border-hairline p-5 hover:border-primary hover:shadow-md transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+        <h3 class="font-bold text-ink dark:text-on-primary text-base">TDS Rate Chart FY 2025-26 Guide</h3>
+        <p class="text-sm text-muted mt-2">Section 194C, 194J, 194I thresholds, TRACES, and Form 16A.</p>
+      </a>
+      <a href="/blogs/capital-gains-tax-guide-india/" class="block rounded-xl border border-hairline p-5 hover:border-primary hover:shadow-md transition bg-canvas dark:bg-surface dark:border-overlay-lighter">
+        <h3 class="font-bold text-ink dark:text-on-primary text-base">Capital Gains Tax India Guide</h3>
+        <p class="text-sm text-muted mt-2">LTCG vs STCG rates on real estate, equity shares, and mutual funds.</p>
+      </a>
+    </div>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-ink mt-12 mb-6 dark:text-on-primary">Official Authorities & References</h2>
+  <ul class="list-disc pl-6 space-y-2 text-body dark:text-muted">
+    <li><a href="https://www.incometax.gov.in" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link font-medium">Income Tax Department Portal - Non-Resident Taxpayer Services</a></li>
+    <li><a href="https://rbi.org.in" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link font-medium">Reserve Bank of India (RBI) FEMA Remittance Regulations</a></li>
+    <li><a href="https://incometaxindia.gov.in/Pages/international-taxation.aspx" target="_blank" rel="noopener noreferrer" class="text-link hover:underline dark:text-link font-medium">CBDT Comprehensive List of Indian DTAA Treaties</a></li>
+  </ul>
+</BlogLayout>

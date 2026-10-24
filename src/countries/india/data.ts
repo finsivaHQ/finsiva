@@ -10,7 +10,10 @@ const taxCategories: TaxCategory[] = [
       { slug: "income-tax-calculator", name: "Income Tax Calculator", description: "Calculate your Indian income tax liability.", isPopular: true }
     ],
     guides: [
-      { slug: "itr-guide", title: "ITR Filing Guide", description: "How to choose and file the correct ITR form.", url: "/blogs/how-to-save-income-tax-india-2024-25/" }
+      { slug: "new-vs-old-tax-regime-guide", title: "New vs Old Tax Regime FY 2025-26 Guide", description: "Section 115BAC slabs, ₹75,000 standard deduction, and break-even math.", url: "/blogs/india-new-vs-old-tax-regime-fy-2025-26-guide/" },
+      { slug: "nri-tax-guide", title: "NRI Tax & 182-Day Residency Guide", description: "182-day rule, NRE vs NRO bank account interest, Section 195 property TDS, and DTAA relief.", url: "/blogs/india-nri-income-tax-182-day-residency-guide/" },
+      { slug: "80c-deductions-guide", title: "Section 80C Deductions Complete Guide", description: "₹1.5 Lakh tax-saving investments in PPF, ELSS, EPF, and life insurance.", url: "/blogs/80c-deductions-complete-guide/" },
+      { slug: "itr-guide", title: "ITR Filing & Tax Saving Guide", description: "How to choose and file the correct ITR form and maximize legitimate tax savings.", url: "/blogs/how-to-save-income-tax-india-2024-25/" }
     ],
     faqs: [
       { question: "What is the ITR filing deadline?", answer: "July 31st for individuals unless extended." },
@@ -41,7 +44,7 @@ const taxCategories: TaxCategory[] = [
       { slug: "tds-calculator", name: "TDS Calculator", description: "Calculate TDS deductions for various payment types." }
     ],
     guides: [
-      { slug: "tds-guide", title: "TDS Return Filing Guide", description: "Complete guide to TDS compliance and returns.", url: "/countries/india/tds/tds-calculator/" }
+      { slug: "tds-rate-chart-guide", title: "TDS Rate Chart FY 2025-26 Guide", description: "Complete threshold limits and rates for Section 194C, 194J, 194I, 194Q, and TRACES compliance.", url: "/blogs/india-tds-rate-chart-194c-194j-194i-guide/" }
     ],
     faqs: [
       { question: "What is TDS?", answer: "Tax Deducted at Source - a mechanism for collecting tax at the time of payment." }
