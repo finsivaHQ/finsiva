@@ -10,6 +10,7 @@ export interface RichFAQItem {
 }
 
 export interface RichCalculatorContent {
+  definitionBox?: string;
   overview?: RichCalculatorSection;
   howToUse?: RichCalculatorSection;
   understandingResults?: RichCalculatorSection;

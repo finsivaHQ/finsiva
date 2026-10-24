@@ -157,8 +157,8 @@ export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
     "description": "Calculate capital gains tax on stocks, mutual funds, and listed securities in Pakistan under Section 37A. Compare filer vs non-filer CGT."
   },
   "pakistan-sales-tax-sales-tax-calculator": {
-    "title": "Pakistan Sales Tax & GST Calculator 2025: 18% FBR GST Rate",
-    "description": "Calculate 18% FBR federal sales tax (GST) and provincial services tax in Pakistan. Compute inclusive and exclusive GST invoice amounts instantly."
+    "title": "Pakistan Sales Tax & GST Calculator 2026: 18% FBR GST Rate",
+    "description": "Calculate 18% FBR sales tax and 3% Further Tax in Pakistan. Compute inclusive and exclusive GST invoice amounts with instant visual breakdown."
   },
   "pakistan-sales-tax-gst-calculator": {
     "title": "Pakistan GST Calculator: 18% Inclusive & Exclusive Invoices",

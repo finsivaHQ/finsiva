@@ -102,9 +102,9 @@ const pkGuideMap: Record<string, Array<{ title: string; slug: string }>> = {
     { title: "Corporate & Business Tax Guide", slug: "/blogs/pakistan-corporate-tax-guide/" }
   ],
   "sales-tax": [
-    { title: "Pakistan Sales Tax Guide", slug: "/blogs/pakistan-sales-tax-guide/" },
-    { title: "Pakistan Tax Filing Guide", slug: "/blogs/pakistan-tax-filing-guide/" },
-    { title: "Pakistan Income Tax Guide", slug: "/blogs/pakistan-fbr-tax-slabs/" }
+    { title: "Pakistan Sales Tax & GST Comprehensive Guide", slug: "/blogs/pakistan-sales-tax-guide/" },
+    { title: "Pakistan Freelancer Tax Guide", slug: "/blogs/pakistan-freelancer-tax-guide/" },
+    { title: "Pakistan Tax Filing & ATL Guide", slug: "/blogs/pakistan-tax-filing-guide/" }
   ],
   "property-tax": [
     { title: "Pakistan Property Tax Guide", slug: "/blogs/pakistan-property-tax-guide/" },
@@ -470,9 +470,13 @@ const calcWebAppSchema = {
           <span class="text-xs font-bold uppercase tracking-wider text-primary">Statutory Rule &amp; Definition</span>
           <span class="text-[11px] font-semibold text-muted">&bull; Verified for {country.taxYear || "2026"}</span>
         </div>
-        <p class="text-sm leading-relaxed text-ink dark:text-on-primary">
-          <strong>{country.name} {calculator.name}:</strong> Under statutory guidelines established by {country.officialTaxAuthority}, {calculator.description.toLowerCase().replace(/\.$/, "")}. Calculations for {country.taxYear || "2026"} determine precise marginal brackets, statutory rate percentages, allowable deductions, and net post-tax retained amounts.
-        </p>
+        {content?.definitionBox ? (
+          <div class="text-sm leading-relaxed text-ink dark:text-on-primary" set:html={content.definitionBox}></div>
+        ) : (
+          <p class="text-sm leading-relaxed text-ink dark:text-on-primary">
+            <strong>{country.name} {calculator.name}:</strong> Under statutory guidelines established by {country.officialTaxAuthority}, {calculator.description.toLowerCase().replace(/\.$/, "")}. Calculations for {country.taxYear || "2026"} determine precise marginal brackets, statutory rate percentages, allowable deductions, and net post-tax retained amounts.
+          </p>
+        )}
       </div>
     </div>
   </div>
@@ -1438,6 +1442,7 @@ const calcWebAppSchema = {
         }
         setOutput('vatAmount', vatAmount, 'currency');
         setOutput('gstAmount', vatAmount, 'currency');
+        setOutput('taxAmount', vatAmount, 'currency');
         setOutput('totalAmount', totalAmount, 'currency');
         setOutput('netAmount', netAmount, 'currency');
       }
@@ -2138,9 +2143,16 @@ const calcWebAppSchema = {
         if (!text) return;
         navigator.clipboard.writeText(text).then(function() {
           var copyTextBtn = document.getElementById('copy-result-text-btn');
+          var topCopyBtn = document.getElementById('copy-result-btn');
+          var copiedSvg = '<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Copied!';
+          var defaultSvg = '<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg> Copy';
           if (copyTextBtn) {
-            copyTextBtn.innerHTML = '<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Copied!';
-            setTimeout(function(){ copyTextBtn.innerHTML = '<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg> Copy'; }, 2000);
+            copyTextBtn.innerHTML = copiedSvg;
+            setTimeout(function(){ copyTextBtn.innerHTML = defaultSvg; }, 2000);
+          }
+          if (topCopyBtn) {
+            topCopyBtn.innerHTML = copiedSvg;
+            setTimeout(function(){ topCopyBtn.innerHTML = defaultSvg; }, 2000);
           }
         }).catch(function() {});
       }
