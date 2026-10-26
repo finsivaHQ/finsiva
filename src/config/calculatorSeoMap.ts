@@ -85,61 +85,61 @@ export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
     "description": "Simulate year-round tax reduction strategies: tax loss harvesting, charitable bunching, retirement contributions, and quarterly payments."
   },
   "hong-kong-salaries-tax-salaries-tax-calculator": {
-    "title": "Hong Kong Salaries Tax Calculator 2026: Progressive vs Standard",
-    "description": "Calculate Hong Kong salaries tax under progressive rates (2% to 17%) vs 15% standard rate cap. Deduct MPF, child allowances, and married relief."
+    "title": "Hong Kong Salaries Tax Calculator 2026 | Progressive & Standard Rates",
+    "description": "Calculate Hong Kong Salaries Tax with 2026 IRD progressive slabs (2%-17%) vs 15% standard rate cap, MPF deductions, and statutory allowances."
   },
   "hong-kong-salaries-tax-salary-tax-computation": {
-    "title": "Hong Kong Salary Tax Computation 2025/26: IRD Slabs & Rules",
-    "description": "Official IRD methodology: compute net chargeable income, basic allowance (HK$132,000), and progressive salaries tax liability in Hong Kong."
+    "title": "Hong Kong Salaries Tax Computation 2026 | Official IRD Formula",
+    "description": "Step-by-step Hong Kong Salaries Tax computation breakdown comparing progressive bands against the standard rate ceiling under Cap. 112."
   },
   "hong-kong-salaries-tax-hk-net-salary-calculator": {
-    "title": "Hong Kong Net Salary Calculator 2026: Take-Home Pay & MPF",
-    "description": "Calculate your net take-home salary in Hong Kong after 5% mandatory MPF deduction and IRD progressive salaries tax (2% to 17%) or standard 15% rate."
+    "title": "Hong Kong Net Salary Calculator 2026 | Take-Home Pay & MPF",
+    "description": "Calculate your exact Hong Kong net take-home pay after mandatory MPF contributions (5% up to HK$1,500/mo) and IRD provisional salaries tax."
   },
   "hong-kong-salaries-tax-hong-kong-tax-calculator-for-expats": {
-      "title": "Hong Kong Expat Tax Calculator 2026: Salaries Tax & 60-Day Rules",
-      "description": "Model Hong Kong expat taxes for foreign employees. Compare progressive vs 15% standard rate, rental reimbursement scheme savings, and travel apportionments."
+    "title": "Hong Kong Expat Tax Calculator 2026: Salaries Tax & 60-Day Rules",
+    "description": "Model Hong Kong expat taxes for foreign employees. Compare progressive vs 15% standard rate, rental reimbursement scheme savings, and travel apportionments."
   },
   "hong-kong-salaries-tax-hong-kong-income-tax-for-foreigners-calculator": {
-    "title": "Hong Kong Income Tax Calculator for Foreigners & Expats 2025/26",
-    "description": "Calculate Hong Kong income tax for foreign workers. Assess territorial source principle, 60-day rule exemptions, and dual-employment contracts."
+    "title": "Hong Kong Tax Calculator for Foreigners & Expats 2026 | IRD Guide",
+    "description": "Calculate HK tax liability for expatriates and foreign workers under territorial source rules, 60-day exemption, and housing benefits."
   },
   "hong-kong-profits-tax-profits-tax-calculator": {
-      "title": "Hong Kong Profits Tax Calculator 2026: Two-Tiered Rates & IRD Slabs",
-      "description": "Calculate Hong Kong profits tax for 2025/26 under statutory two-tiered rates (8.25% & 16.5%). Estimate assessable profits, allowable deductions, and offshore exemptions."
+    "title": "Hong Kong Profits Tax Calculator 2026: Two-Tiered Rates & IRD Slabs",
+    "description": "Calculate Hong Kong profits tax for 2025/26 under statutory two-tiered rates (8.25% & 16.5%). Estimate assessable profits, allowable deductions, and offshore exemptions."
   },
   "hong-kong-profits-tax-hk-corporate-tax-calculator": {
-      "title": "HK Corporate Tax Calculator 2026: Corporation Profits & Concessions",
-      "description": "Accurate Hong Kong corporate tax calculator for limited companies. Compute statutory two-tiered 8.25%/16.5% CIT, capital allowances, and provisional tax."
+    "title": "HK Corporate Tax Calculator 2026: Corporation Profits & Concessions",
+    "description": "Accurate Hong Kong corporate tax calculator for limited companies. Compute statutory two-tiered 8.25%/16.5% CIT, capital allowances, and provisional tax."
   },
   "hong-kong-profits-tax-profit-tax-computation": {
-    "title": "Hong Kong Profit Tax Computation: Assessable Profits & Rules",
-    "description": "Step-by-step profit tax calculation for Hong Kong companies. Compute assessable profit, deductible business expenses, and net IRD liability."
+    "title": "Hong Kong Profits Tax Computation 2026 | Two-Tiered Regime",
+    "description": "Accurate HK profits tax computation for corporations (8.25%/16.5%) and unincorporated firms (7.5%/15%) under Inland Revenue Ordinance."
   },
   "hong-kong-stamp-duty-hk-property-stamp-duty-calculator": {
-  "title": "Hong Kong Property Stamp Duty Calculator: Scale 2 AVD Rates 2026",
-  "description": "Calculate residential and commercial property stamp duty in Hong Kong. Scale 2 Ad Valorem Stamp Duty (AVD) rates from HK$100 to 4.25% after cooling measure cancellation."
-},
+    "title": "Hong Kong Property Stamp Duty Calculator: Scale 2 AVD Rates 2026",
+    "description": "Calculate residential and commercial property stamp duty in Hong Kong. Scale 2 Ad Valorem Stamp Duty (AVD) rates from HK$100 to 4.25% after cooling measure cancellation."
+  },
   "hong-kong-stamp-duty-stamp-duty-calculator": {
-    "title": "Hong Kong Stamp Duty Calculator 2025/26: Property & Stock",
-    "description": "Calculate Hong Kong stamp duty on real estate sales, rental leases, and stock transfers (0.1% buyer & seller). Instant fee breakdown."
+    "title": "Hong Kong Stamp Duty Calculator 2026 | Scale 2 AVD Property Rates",
+    "description": "Calculate Hong Kong residential property stamp duty (AVD Scale 2) across all consideration bands from HK$100 flat to 4.25% top tier."
   },
   "hong-kong-stamp-duty-rental-stamp-duty-calculator": {
-      "title": "Hong Kong Rental Stamp Duty Calculator 2026: Tenancy Lease Rates",
-      "description": "Calculate HK tenancy agreement stamp duty under Cap. 117. Fast calculation for 1-year, 2-year, and 3-year leases with duplicate counterpart stamping rules."
+    "title": "Hong Kong Rental Stamp Duty Calculator 2026: Tenancy Lease Rates",
+    "description": "Calculate HK tenancy agreement stamp duty under Cap. 117. Fast calculation for 1-year, 2-year, and 3-year leases with duplicate counterpart stamping rules."
   },
   "hong-kong-stamp-duty-first-registration-tax-calculator": {
-  "title": "Hong Kong First Registration Tax (FRT) Calculator: Car Tax & EV 2026",
-  "description": "Calculate vehicle First Registration Tax (FRT 40% to 115%) in Hong Kong. Factors in the latest EV One-for-One Replacement Scheme concession up to HK$172,500."
-},
+    "title": "Hong Kong First Registration Tax (FRT) Calculator: Car Tax & EV 2026",
+    "description": "Calculate vehicle First Registration Tax (FRT 40% to 115%) in Hong Kong. Factors in the latest EV One-for-One Replacement Scheme concession up to HK$172,500."
+  },
   "hong-kong-property-tax-property-tax-calculator": {
-      "title": "Hong Kong Property Tax Calculator 2026: 15% NAV & Rental Deductions",
-      "description": "Compute Hong Kong property tax on rental income. Apply the statutory 20% repairs allowance, municipal rates deduction, and Personal Assessment tax relief."
+    "title": "Hong Kong Property Tax Calculator 2026: 15% NAV & Rental Deductions",
+    "description": "Compute Hong Kong property tax on rental income. Apply the statutory 20% repairs allowance, municipal rates deduction, and Personal Assessment tax relief."
   },
   "hong-kong-property-tax-hk-rental-tax-deduction-calculator": {
-  "title": "HK Domestic Rental Tax Deduction Calculator: Up to HK$100,000 (2026)",
-  "description": "Calculate salaries tax savings under the Hong Kong domestic rental deduction scheme (Section 26RV). Save up to HK$17,000 annually with stamped residential leases."
-},
+    "title": "HK Domestic Rental Tax Deduction Calculator: Up to HK$100,000 (2026)",
+    "description": "Calculate salaries tax savings under the Hong Kong domestic rental deduction scheme (Section 26RV). Save up to HK$17,000 annually with stamped residential leases."
+  },
   "pakistan-income-tax-income-tax-calculator": {
     "title": "Pakistan Income Tax Calculator 2024-25: FBR Slabs & Rates",
     "description": "Calculate annual income tax in Pakistan under current FBR progressive slabs (0% to 35%). Tax-free threshold of PKR 600,000 included."
@@ -149,12 +149,12 @@ export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
     "description": "Calculate monthly income tax on salary in Pakistan under updated FBR tax slabs (0% to 35%). Check take-home pay, Section 149 withholding, and ATL benefits."
   },
   "pakistan-income-tax-business-income-tax-calculator": {
-      "title": "Pakistan Business Tax Calculator 2026: Non-Salaried & AOP Slabs",
-      "description": "Calculate income tax for sole proprietorships, AOPs, and small businesses in Pakistan under the 2025/26 non-salaried tax slabs (15% to 45%)."
+    "title": "Pakistan Business Tax Calculator 2026: Non-Salaried & AOP Slabs",
+    "description": "Calculate income tax for sole proprietorships, AOPs, and small businesses in Pakistan under the 2025/26 non-salaried tax slabs (15% to 45%)."
   },
   "pakistan-income-tax-capital-gain-tax-calculator": {
-      "title": "Pakistan Securities Capital Gain Tax Calculator 2026: Sec. 37A PSX",
-      "description": "Calculate capital gains tax on PSX shares, mutual funds, and securities under Section 37A. Estimate NCCPL withholding tax for filers and non-filers."
+    "title": "Pakistan Securities Capital Gain Tax Calculator 2026: Sec. 37A PSX",
+    "description": "Calculate capital gains tax on PSX shares, mutual funds, and securities under Section 37A. Estimate NCCPL withholding tax for filers and non-filers."
   },
   "pakistan-sales-tax-sales-tax-calculator": {
     "title": "Pakistan Sales Tax & GST Calculator 2026: 18% FBR GST Rate",
@@ -165,49 +165,49 @@ export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
     "description": "Instant 18% GST calculator for Pakistani transactions. Calculate sales tax on goods, taxable value, and gross invoice amounts."
   },
   "pakistan-property-tax-property-tax-calculator": {
-      "title": "Pakistan Property Tax Calculator 2026: Provincial ARV & Slabs",
-      "description": "Calculate provincial property tax across Punjab, Sindh, KPK, and Islamabad. Compute Annual Rental Value (ARV), residential exemptions, and rebate discounts."
+    "title": "Pakistan Property Tax Calculator 2026: Provincial ARV & Slabs",
+    "description": "Calculate provincial property tax across Punjab, Sindh, KPK, and Islamabad. Compute Annual Rental Value (ARV), residential exemptions, and rebate discounts."
   },
   "pakistan-property-tax-capital-gain-tax-calculator": {
-      "title": "Pakistan Property Capital Gain Tax Calculator 2026: Sec. 37 Slabs",
-      "description": "Calculate capital gains tax on property in Pakistan under Section 37. Estimate FBR filer vs non-filer CGT rates for open plots, houses, and flats."
+    "title": "Pakistan Property Capital Gain Tax Calculator 2026: Sec. 37 Slabs",
+    "description": "Calculate capital gains tax on property in Pakistan under Section 37. Estimate FBR filer vs non-filer CGT rates for open plots, houses, and flats."
   },
   "pakistan-property-tax-token-tax-calculator": {
-      "title": "Pakistan Property Transfer & Token Tax Calculator 2026: 236K/236C",
-      "description": "Calculate property registration fees, provincial stamp duty, TMA taxes, and Section 236K/236C advance withholding taxes for filers and non-filers."
+    "title": "Pakistan Property Transfer & Token Tax Calculator 2026: 236K/236C",
+    "description": "Calculate property registration fees, provincial stamp duty, TMA taxes, and Section 236K/236C advance withholding taxes for filers and non-filers."
   },
   "pakistan-property-tax-rental-income-tax-calculator": {
-      "title": "Pakistan Rental Income Tax Calculator 2026: Sec. 15 FBR Slabs",
-      "description": "Compute tax on rental property income in Pakistan under Section 15. Apply the 1/5th repair deduction, local property taxes, and progressive rental slabs."
+    "title": "Pakistan Rental Income Tax Calculator 2026: Sec. 15 FBR Slabs",
+    "description": "Compute tax on rental property income in Pakistan under Section 15. Apply the 1/5th repair deduction, local property taxes, and progressive rental slabs."
   },
   "pakistan-vehicle-tax-vehicle-tax-calculator": {
     "title": "Pakistan Vehicle Token Tax Calculator 2026: Rates by CC",
     "description": "Calculate annual vehicle token tax in Pakistan for Punjab, Sindh, KPK, and ICT. Check rates by engine capacity (CC), lifetime tokens, and filer exemptions."
   },
   "pakistan-vehicle-tax-sindh-vehicle-tax-calculator": {
-      "title": "Sindh Vehicle Tax Calculator 2026: Karachi Token & Transfer Fees",
-      "description": "Calculate Sindh vehicle token tax, lifetime token rates, and transfer fees. Includes Section 234 federal withholding tax for filers and non-filers."
+    "title": "Sindh Vehicle Tax Calculator 2026: Karachi Token & Transfer Fees",
+    "description": "Calculate Sindh vehicle token tax, lifetime token rates, and transfer fees. Includes Section 234 federal withholding tax for filers and non-filers."
   },
   "pakistan-vehicle-tax-islamabad-vehicle-tax-calculator": {
-      "title": "Islamabad Vehicle Tax Calculator 2026: ICT Token & Sec. 234 WHT",
-      "description": "Estimate Islamabad vehicle token tax and registration fees. Calculate ICT Excise road tax and Section 234 income tax withholding for filers & non-filers."
+    "title": "Islamabad Vehicle Tax Calculator 2026: ICT Token & Sec. 234 WHT",
+    "description": "Estimate Islamabad vehicle token tax and registration fees. Calculate ICT Excise road tax and Section 234 income tax withholding for filers & non-filers."
   },
   "singapore-income-tax-income-tax-calculator": {
     "title": "Singapore Income Tax & Expat Calculator 2026: IRAS Rates",
     "description": "Calculate Singapore personal income tax under IRAS progressive brackets (0% to 24%). Compare tax reliefs, deductions, and expat tax obligations."
   },
   "singapore-corporate-tax-income-tax-calculator": {
-      "title": "Singapore Corporate Tax Calculator 2026: 17% CIT, SUTE & Rebates",
-      "description": "Estimate Singapore corporate income tax with the headline 17% rate, Start-Up Tax Exemption (SUTE), Partial Tax Exemption (PTE), and 50% CIT rebate cap."
+    "title": "Singapore Corporate Tax Calculator 2026: 17% CIT, SUTE & Rebates",
+    "description": "Estimate Singapore corporate income tax with the headline 17% rate, Start-Up Tax Exemption (SUTE), Partial Tax Exemption (PTE), and 50% CIT rebate cap."
   },
   "singapore-gst-gst-calculator": {
     "title": "Singapore GST Calculator 2026: 9% Inclusive & Exclusive",
     "description": "Calculate 9% Singapore Goods and Services Tax (GST). Compute GST-inclusive prices, net amounts, and IRAS input/output tax credits."
   },
   "singapore-stamp-duty-stamp-duty-calculator": {
-  "title": "Singapore Stamp Duty Calculator 2026: BSD & ABSD Rates (IRAS)",
-  "description": "Calculate Singapore property stamp duty: Buyer's Stamp Duty (BSD up to 6%), Additional Buyer's Stamp Duty (ABSD from 0% to 60%), and total acquisition outlay."
-},
+    "title": "Singapore Stamp Duty Calculator 2026: BSD & ABSD Rates (IRAS)",
+    "description": "Calculate Singapore property stamp duty: Buyer's Stamp Duty (BSD up to 6%), Additional Buyer's Stamp Duty (ABSD from 0% to 60%), and total acquisition outlay."
+  },
   "malaysia-income-tax-income-tax-calculator": {
     "title": "Malaysia Income Tax Calculator 2025/26: LHDN Tax Rates & Slabs",
     "description": "Calculate Malaysian personal income tax under LHDN resident tax brackets (0% to 30%). Factor in individual reliefs and assessable net income."
