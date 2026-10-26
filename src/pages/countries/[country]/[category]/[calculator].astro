@@ -285,7 +285,9 @@ const sgGuideMap: Record<string, Array<{ title: string; slug: string }>> = {
   ]
 };
 
-const suggestedArticles = country.slug === 'hong-kong' && hkGuideMap[category.slug]
+const suggestedArticles = country.slug === 'united-states' && usGuideMap[category.slug]
+  ? usGuideMap[category.slug]
+  : country.slug === 'hong-kong' && hkGuideMap[category.slug]
   ? hkGuideMap[category.slug]
   : country.slug === 'pakistan' && pkGuideMap[category.slug]
   ? pkGuideMap[category.slug]

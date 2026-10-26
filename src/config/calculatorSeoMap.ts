@@ -41,12 +41,12 @@ export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
     "description": "Calculate 2026 self-employment tax (Schedule SE) on 1099 income. Computes 15.3% Social Security & Medicare tax, wage base caps, and 50% IRS deduction."
   },
   "united-states-corporate-tax-corporate-tax-calculator": {
-    "title": "US Corporate Tax Calculator 2025: Flat 21% Federal CIT Rate",
-    "description": "Estimate federal corporate income tax for C-Corporations at the statutory 21% flat rate under IRC Section 11. Calculate net corporate tax liability."
+    "title": "US Corporate Tax Calculator 2026: 21% Flat Federal CIT Rate",
+    "description": "Calculate US corporate income tax for C-Corporations at the flat 21% federal rate under IRC Section 11. Compute net corporate liability and after-tax profits."
   },
   "united-states-corporate-tax-small-business-tax": {
-    "title": "Small Business Tax Calculator 2025: LLC, S-Corp & Sole Prop",
-    "description": "Calculate pass-through business income tax for LLCs, Sole Proprietors, and S-Corporations. Estimate Section 199A QBI deductions and net tax."
+    "title": "Small Business Tax Calculator 2026: LLC, S-Corp & QBI Deduction",
+    "description": "Calculate small business taxes in the US: compare LLC & S-Corp pass-through treatment, 20% Section 199A QBI deduction, and C-Corp 21% flat corporate tax."
   },
   "united-states-capital-gains-tax-capital-gains-calculator": {
     "title": "US Capital Gains Tax Calculator 2025: Short vs Long-Term Rates",
@@ -57,28 +57,28 @@ export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
     "description": "Calculate federal long-term capital gains tax for 2026. Applies 0%, 15%, and 20% IRS brackets, 3.8% Net Investment Income Tax (NIIT), and loss deductions."
   },
   "united-states-estate-tax-estate-tax-calculator": {
-    "title": "US Estate Tax Calculator 2025: Federal Exemption & Rates",
-    "description": "Calculate federal estate tax under the 2025 basic exclusion amount of $13.61 million ($27.22M married). Estimate 40% top marginal estate tax."
+    "title": "US Estate Tax Calculator 2026: Federal Exemption & 40% Slabs",
+    "description": "Calculate federal estate tax under the $13.61M basic exclusion ($27.22M married). Estimate 40% top marginal estate tax and spousal portability under Form 706."
   },
   "united-states-irs-support-irs-refund-status": {
-    "title": "IRS Refund Status Checker 2025: Direct Deposit Timeline",
-    "description": "Track your 2025 IRS tax refund processing timeline. Estimate deposit dates for e-filed returns, paper checks, and PATH Act credit holds."
+    "title": "IRS Refund Status Checker 2026: Direct Deposit Delivery Dates",
+    "description": "Track your 2026 IRS tax refund processing timeline. Estimate direct deposit arrival dates (within 21 days), paper check mailings, and PATH Act holds."
   },
   "united-states-irs-support-irs-payment-planner": {
-    "title": "IRS Payment Plan Calculator 2025: Installment Agreement Fees",
-    "description": "Calculate monthly payments, user setup fees, statutory interest, and payoff timelines for IRS installment payment agreements."
+    "title": "IRS Payment Plan Calculator 2026: Installment Fees & Interest",
+    "description": "Calculate monthly payments, user setup fees ($0 to $31 online), 0.25% reduced failure-to-pay penalties, and payoff timelines for IRS installment plans."
   },
   "united-states-irs-support-irs-phone-numbers": {
     "title": "IRS Support & Phone Directory 2025: Contact Numbers & Lines",
     "description": "Direct IRS phone numbers for individual tax help (1-800-829-1040), business inquiries (1-800-829-4933), transcripts, and taxpayer advocates."
   },
   "united-states-tax-planning-tax-savings-estimator": {
-    "title": "Tax Savings Estimator 2025: Optimize Deductions & Credits",
-    "description": "Estimate annual tax savings by combining pre-tax retirement contributions, HSA accounts, optimal deductions, and eligible IRS tax credits."
+    "title": "Tax Savings Estimator 2026: Standard vs Itemized & Tax Credits",
+    "description": "Calculate maximum federal tax savings: compare $15k Single / $30k Married standard deduction vs Schedule A itemizing, pre-tax shields, and child tax credits."
   },
   "united-states-tax-planning-retirement-contribution-calculator": {
-    "title": "Retirement Contribution Calculator 2025: 401(k), IRA & HSA",
-    "description": "Calculate immediate federal tax savings from 401(k) ($23,500 cap), Traditional IRA ($7,000 cap), and HSA contributions based on tax bracket."
+    "title": "Retirement Contribution Calculator 2026: 401(k), IRA & HSA Savings",
+    "description": "Calculate immediate federal tax savings from 401(k) ($23,000 cap), Traditional IRA ($7,000 cap), and HSA contributions based on your marginal tax bracket."
   },
   "united-states-tax-planning-year-round-tax-planning": {
     "title": "Year-Round Tax Planning Calculator 2025: Strategic Tax Reductions",
