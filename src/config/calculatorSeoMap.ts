@@ -253,24 +253,24 @@ export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
     "description": "Calculate UK electric vehicle company car tax, 3% BiK rate, employer Class 1A NI, and post-April 2025 VED road tax plus £40k luxury supplement."
   },
   "india-income-tax-income-tax-calculator": {
-    "title": "India Income Tax Calculator FY 2024-25: New vs Old Regime Slabs",
-    "description": "Calculate income tax in India comparing New Tax Regime (Section 115BAC) vs Old Tax Regime with 80C, 80D, and HRA deductions."
+    "title": "Income Tax Calculator India 2026: New vs Old Regime FY 2025-26",
+    "description": "Compare India income tax under New vs Old Tax Regime for FY 2025-26 (AY 2026-27). Includes ₹75,000 standard deduction, Section 87A rebate, and 80C/80D."
   },
   "india-gst-gst-calculator": {
-    "title": "India GST Calculator: 5%, 12%, 18% & 28% Inclusive/Exclusive GST",
-    "description": "Calculate GST amounts in India across CGST, SGST, and IGST slabs. Compute gross inclusive and net exclusive prices with instant breakdown."
+    "title": "India GST Calculator 2026: 5%, 12%, 18%, 28% Add & Remove",
+    "description": "Calculate India Goods and Services Tax (GST) for 5%, 12%, 18%, and 28% slabs. Compute CGST, SGST, IGST, and reverse-calculate GST from inclusive MRP prices."
   },
   "india-tds-tds-calculator": {
-    "title": "India TDS Calculator FY 2024-25: 194C, 194J, 194I & 194H Rates",
-    "description": "Calculate Tax Deducted at Source (TDS) under Income Tax Act sections: professional fees (194J), contracts (194C), rent (194I), and commission (194H)."
+    "title": "India TDS Calculator 2026: Section 194C, 194J & 194I Rates",
+    "description": "Calculate TDS in India under Section 194J (10%), 194C (2%), and 194I (10%). Includes PAN vs Non-PAN (Section 206AA 20%) rates and net payment amounts."
   },
   "indonesia-income-tax-income-tax-calculator": {
-    "title": "Indonesia PPh 21 Tax Calculator 2026: TER Slabs & Expat Tax",
-    "description": "Calculate Indonesian personal income tax (PPh 21) under progressive brackets (5% to 35%) and monthly TER deduction rates. PTKP allowances included."
+    "title": "Indonesia PPh 21 Calculator 2026: PTKP & Progressive Slabs",
+    "description": "Calculate Indonesia PPh 21 income tax under UU HPP. Computes PTKP status (TK/0 to K/3), 5% to 35% progressive brackets, and net take-home pay in IDR."
   },
   "indonesia-vat-vat-calculator": {
-    "title": "Indonesia VAT (PPN) Calculator: Calculate 11% & 12% Value Added Tax",
-    "description": "Calculate Indonesian Value Added Tax (PPN) at statutory 11% rate (and 12% transition). Compute DPP (tax base) and gross transaction amounts."
+    "title": "Indonesia VAT Calculator 2026: PPN 11% Add & Remove",
+    "description": "Calculate Indonesia VAT (PPN 11%) easily. Add PPN to net invoice amounts or extract PPN from inclusive totals under DJP tax rules in Indonesian Rupiah."
   },
   "new-zealand-income-tax-income-tax-calculator": {
     "title": "NZ Income Tax Calculator 2025/26: IRD Progressive Slabs & PAYE",
