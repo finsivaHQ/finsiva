@@ -167,149 +167,129 @@ export const pkContent: Record<string, RichCalculatorContent> = {
   }
 },
   "pakistan-income-tax-business-income-tax-calculator": {
-    "overview": {
-      "title": "Overview of Business Income Tax Calculator",
-      "html": "<p>Pakistan non-salaried & business tax is governed by statutory laws enforced by the Federal Board of Revenue (FBR Pakistan). This tool provides real-time, precise financial estimates using current rate schedules, thresholds, and allowances.</p><p>This tool incorporates current Pakistan tax rules governed by the Federal Board of Revenue (FBR Pakistan), applying accurate tax rates, thresholds, and statutory allowances to provide an instant, reliable calculation.</p>"
-    },
-    "howToUse": {
-      "title": "How to Use the Business Income Tax Calculator",
-      "html": "<p>Enter your earned salary, revenue, or assessable transaction value into the Business Income Tax Calculator. Select your tax year and filing parameters to compute exact tax liability.</p><ol class=\"list-decimal pl-6 space-y-2\"><li>Input your total gross income, transaction value, or assessable metric in PKR.</li><li>Select your tax year, filing status, or applicable tax slab tier.</li><li>Specify eligible deductions, reliefs, or statutory exemptions.</li><li>Review the itemized tax breakdown, marginal rates, and net take-home output.</li></ol>"
-    },
-    "understandingResults": {
-      "title": "Understanding Your Calculation Results",
-      "html": "<p>The results summary highlights gross input, taxable base, calculated tax owed, effective tax percentage, and remaining net take-home earnings.</p><ul class=\"list-disc pl-6 space-y-2\"><li><strong>Gross Metric:</strong> Total unadjusted financial baseline prior to statutory calculations.</li><li><strong>Taxable Base:</strong> Net amount subject to tax after subtracting standard exemptions.</li><li><strong>Calculated Tax Owed:</strong> Total monetary liability across all applicable progressive tiers.</li><li><strong>Effective Tax Rate:</strong> Realized overall tax percentage relative to gross input.</li><li><strong>Net Output:</strong> Final post-tax retained amount or net payable obligation.</li></ul>"
-    },
-    "formula": {
-      "title": "Calculation Methodology & Formula Breakdown",
-      "html": "<p>The calculation is executed using the official statutory formula for Pakistan:</p><p class=\"my-3 font-mono bg-slate-100 dark:bg-slate-800 p-3 rounded text-sm\">Tax Liability = Σ (Progressive Rate × Tier Income) - Exemptions</p><p>Review the primary rate and metric structure applied during computation:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-sm text-left border-collapse border border-slate-200 dark:border-slate-700\"><thead><tr><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Salaried Income Slab (PKR / Year)</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Tax Rate (FY 2024-25)</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Fixed Base Tax</th></tr></thead><tbody><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Up to PKR 600,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">0%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 0</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 600,001 to 1,200,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">5% of amount > 600k</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 0</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 1,200,001 to 2,200,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 30,000 + 15% > 1.2M</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 30,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 2,200,001 to 3,200,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 180,000 + 25% > 2.2M</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 180,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 3,200,001 to 4,100,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 430,000 + 30% > 3.2M</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 430,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Above PKR 4,100,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 700,000 + 35% > 4.1M</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 700,000 + 10% Surcharge (>10M)</td></tr></tbody></table></div>"
-    },
-    "taxSlabs": {
-      "title": "Pakistan Tax Brackets & Rate Structure",
-      "html": "<p>The official rates and thresholds applied by the Federal Board of Revenue (FBR Pakistan) for current assessment periods are detailed below:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-sm text-left border-collapse border border-slate-200 dark:border-slate-700\"><thead><tr><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Category</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Filer Status Rate</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Non-Filer Status Rate</th></tr></thead><tbody><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Sales Tax / GST</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">18%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">18% + 3% Further Tax</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Property Transfer WHT</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">3%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">10.5%</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Securities CGT</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">15%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">45%</td></tr></tbody></table></div>"
-    },
-    "workedExample": {
-      "title": "Step-by-Step Worked Calculation Example",
-      "html": "<p>For an assessable metric of PKR50,000 under current rules, subtracting standard statutory allowances yields your net taxable baseline. Applying progressive tiers results in an itemized breakdown of your total liability and net retained earnings.</p>"
-    },
-    "benefits": {
-      "title": "Benefits of Using This Business Income Tax Calculator",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Calculates exact obligations based on official statutory rate schedules.</li><li>Clear breakdown of marginal rates vs effective tax burden.</li><li>Includes standard statutory allowances and exemptions.</li></ul>"
-    },
-    "limitations": {
-      "title": "Edge Cases & Analytical Limitations",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Does not calculate specialized cross-border tax treaties.</li><li>Does not compute subjective legal exemptions without custom inputs.</li></ul>"
-    },
-    "commonMistakes": {
-      "title": "Common Pitfalls & Mistakes to Avoid",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Applying flat rates across entire income instead of progressive tiers.</li><li>Failing to account for mandatory statutory payroll contributions.</li></ul>"
-    },
-    "faq": [
-      {
-        "question": "How does the Business Income Tax Calculator calculate tax?",
-        "answer": "It applies official progressive rates and allowances enforced by the Federal Board of Revenue (FBR Pakistan) to your net assessable input."
-      },
-      {
-        "question": "Is this updated for the current tax year?",
-        "answer": "Yes, all rates, thresholds, and statutory allowances are updated for the current tax assessment period."
-      }
-    ],
-    "relatedCalculators": {
-      "title": "Related Calculators",
-      "html": "<p>Explore complementary tools: <a href=\"/countries/pakistan/\" class=\"text-primary font-semibold hover:underline\">Pakistan Tax Overview</a>.</p>"
-    },
-    "suggestedArticles": {
-      "title": "Educational Tax Guides",
-      "html": "<p>Read comprehensive guides: <a href=\"/countries/pakistan/\" class=\"text-primary font-semibold hover:underline\">Pakistan Tax Guide</a>.</p>"
-    },
-    "officialResources": {
-      "title": "Official Government Resources",
-      "html": "<ul class=\"space-y-2\"><li><a href=\"#\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary font-semibold hover:underline\">the Federal Board of Revenue (FBR Pakistan)</a> — Official Pakistan Tax Authority</li></ul>"
-    },
-    "relatedCountry": {
-      "title": "International Tax Hubs",
-      "html": "<p>Compare with other global jurisdictions: <a href=\"/countries/\" class=\"text-primary font-semibold hover:underline\">All Countries Overview</a>.</p>"
-    },
-    "educationalDisclaimer": {
-      "title": "Educational & Accuracy Disclaimer",
-      "text": "This calculator provides financial estimates based on public tax rules from the Federal Board of Revenue (FBR Pakistan). Tax legislation is subject to change. For complex corporate or cross-border filings, consult a certified tax practitioner."
-    },
-    "faqSchema": {
-      "How does the Business Income Tax Calculator calculate tax?": "It applies official progressive rates and allowances enforced by the Federal Board of Revenue (FBR Pakistan) to your net assessable input.",
-      "Is this updated for the current tax year?": "Yes, all rates, thresholds, and statutory allowances are updated for the current tax assessment period."
-    }
+  "howToUse": {
+    "title": "How to Use the Pakistan Business Income Tax Calculator",
+    "steps": [
+      "Select your business legal structure: Sole Proprietorship, Association of Persons (AOP/Partnership), or Freelancer.",
+      "Enter your gross business turnover and deduct allowable commercial operating expenses.",
+      "Include allowable capital depreciation deductions under Section 22 of the Income Tax Ordinance.",
+      "Check whether your business is subject to Section 113 Minimum Turnover Tax (1.25% of gross turnover).",
+      "Click Calculate to display net taxable business profit, non-salaried tax slab liability, effective rate, and net retained earnings."
+    ]
   },
+  "overview": {
+    "title": "Pakistan Business Tax (Non-Salaried & AOP Slabs)",
+    "html": "<div class=\"bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-4 my-4\">\n        <p class=\"text-sm font-semibold text-emerald-800 dark:text-emerald-200\">\n          The Pakistan Business Income Tax Calculator computes net tax liability for sole proprietorships, Associations of Persons (AOPs), and unincorporated small businesses under the First Schedule of the Income Tax Ordinance, 2001. Applying non-salaried progressive tax slabs (15% to 45%), it calculates allowable commercial deductions, depreciation allowances, and minimum tax.\n        </p>\n      </div>\n      <p class=\"mt-3\">\n        In Pakistan, businesses operating as <strong>Sole Proprietorships</strong> or <strong>Associations of Persons (AOPs)</strong> are taxed under the <strong>Non-Salaried Tax Schedule</strong> found in Division I, Part I of the First Schedule to the Income Tax Ordinance, 2001. Taxable business profits are computed on an accrual basis, where legitimate expenses incurred wholly and exclusively for the production of business income—such as commercial rent, staff wages, utilities, raw materials, and depreciation allowances—are deductible from gross turnover.\n      </p>\n      <div class=\"my-6 flex justify-center\">\n        <svg viewBox=\"0 0 680 230\" class=\"w-full max-w-2xl h-auto font-sans\">\n          <rect width=\"680\" height=\"230\" rx=\"12\" fill=\"#0f172a\" />\n          <text x=\"340\" y=\"30\" fill=\"#f8fafc\" font-size=\"15\" font-weight=\"bold\" text-anchor=\"middle\">Pakistan Business Income Tax (Non-Salaried Slabs)</text>\n          \n          <rect x=\"35\" y=\"65\" width=\"135\" height=\"125\" rx=\"8\" fill=\"#1e293b\" stroke=\"#38bdf8\" stroke-width=\"2\" />\n          <text x=\"102\" y=\"95\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Gross Revenue</text>\n          <text x=\"102\" y=\"125\" fill=\"#f8fafc\" font-size=\"11\" text-anchor=\"middle\">Invoiced Turnover</text>\n          <text x=\"102\" y=\"145\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">Sales Receipts</text>\n\n          <path d=\"M 175 125 L 200 125\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\" />\n\n          <rect x=\"205\" y=\"65\" width=\"135\" height=\"125\" rx=\"8\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"2\" />\n          <text x=\"272\" y=\"95\" fill=\"#f59e0b\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Deductions</text>\n          <text x=\"272\" y=\"125\" fill=\"#f8fafc\" font-size=\"11\" text-anchor=\"middle\">Rent, Salaries, Bills</text>\n          <text x=\"272\" y=\"145\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">Sec 22 Depreciation</text>\n\n          <path d=\"M 345 125 L 370 125\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\" />\n\n          <rect x=\"375\" y=\"65\" width=\"135\" height=\"125\" rx=\"8\" fill=\"#1e293b\" stroke=\"#10b981\" stroke-width=\"2\" />\n          <text x=\"442\" y=\"95\" fill=\"#10b981\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Taxable Profit</text>\n          <text x=\"442\" y=\"125\" fill=\"#f8fafc\" font-size=\"11\" text-anchor=\"middle\">Progressive Rates</text>\n          <text x=\"442\" y=\"145\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">15% up to 45%</text>\n\n          <path d=\"M 515 125 L 540 125\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\" />\n\n          <rect x=\"545\" y=\"65\" width=\"105\" height=\"125\" rx=\"8\" fill=\"#1e293b\" stroke=\"#ec4899\" stroke-width=\"2\" />\n          <text x=\"597\" y=\"95\" fill=\"#ec4899\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Net Tax</text>\n          <text x=\"597\" y=\"125\" fill=\"#f8fafc\" font-size=\"11\" text-anchor=\"middle\">Less Sec 153 WHT</text>\n          <text x=\"597\" y=\"145\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">Sec 113 Floor</text>\n        </svg>\n      </div>"
+  },
+  "formula": {
+    "title": "Non-Salaried Business Tax Slabs Schedule",
+    "html": "<p>Statutory progressive schedule for non-salaried individuals and AOPs under the Finance Act:</p>\n      <div class=\"bg-slate-100 dark:bg-slate-800 p-4 rounded-lg my-3 font-mono text-xs\">\n        <p><strong>Taxable Profit ≤ PKR 600,000:</strong> Tax = 0% (Nil)</p>\n        <p><strong>PKR 600,001 – PKR 1,200,000:</strong> 15% of the amount exceeding PKR 600,000</p>\n        <p><strong>PKR 1,200,001 – PKR 1,600,000:</strong> PKR 90,000 + 20% of amount exceeding PKR 1,200,000</p>\n        <p><strong>PKR 1,600,001 – PKR 3,200,000:</strong> PKR 170,000 + 30% of amount exceeding PKR 1,600,000</p>\n        <p><strong>PKR 3,200,001 – PKR 5,600,000:</strong> PKR 650,000 + 40% of amount exceeding PKR 3,200,000</p>\n        <p><strong>Exceeding PKR 5,600,000:</strong> PKR 1,610,000 + 45% of amount exceeding PKR 5,600,000</p>\n        <p class=\"mt-2 text-amber-600 dark:text-amber-400\"><strong>Section 113 Minimum Tax:</strong> 1.25% of gross turnover applies as a mandatory floor if regular slab tax is lower.</p>\n      </div>"
+  },
+  "benefits": {
+    "title": "Business Tax Benchmark Scenarios",
+    "html": "<div class=\"space-y-4\">\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario A: Small Retail Sole Proprietor (PKR 550,000 Net Profit)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> Annual net trading profit = PKR 550,000.<br/>\n            <strong>Tax Computation:</strong> Falls below the PKR 600,000 basic exemption threshold.<br/>\n            <strong>Net Income Tax:</strong> <strong>PKR 0</strong>.\n          </p>\n        </div>\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario B: Trading Partnership AOP (PKR 2,400,000 Net Profit)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> Registered AOP with PKR 2.4M taxable profit.<br/>\n            <strong>Tax Slabs:</strong> PKR 1.6M–3.2M tier: Base PKR 170,000 + 30% of (PKR 2,400,000 - PKR 1,600,000) = PKR 170,000 + PKR 240,000 = <strong>PKR 410,000</strong>.<br/>\n            <strong>Effective Rate:</strong> 17.08%.\n          </p>\n        </div>\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario C: Mid-Market Commercial Firm (PKR 7,500,000 Net Profit)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> Business profit = PKR 7,500,000.<br/>\n            <strong>Tax Slabs:</strong> Top tier: Base PKR 1,610,000 + 45% of (PKR 7,500,000 - PKR 5,600,000) = PKR 1,610,000 + PKR 855,000 = <strong>PKR 2,465,000</strong>.<br/>\n            <strong>Effective Rate:</strong> 32.87%.\n          </p>\n        </div>\n      </div>"
+  },
+  "limitations": {
+    "title": "Section 113 Minimum Turnover Tax & Sec. 153 WHT",
+    "html": "<p>Critical statutory business tax rules in Pakistan:</p>\n      <ul class=\"list-disc pl-5 mt-2 space-y-1 text-sm\">\n        <li><strong>Minimum Turnover Tax (Section 113):</strong> Every individual or AOP having business turnover of PKR 100 million or more is liable to minimum tax at 1.25% of gross turnover even in cases of commercial loss.</li>\n        <li><strong>Withholding Tax Credits (Section 153):</strong> Taxes deducted by clients on the sale of goods (5.5%–11%) and supply of services (10%–20%) are fully adjustable or minimum tax depending on business classification.</li>\n        <li><strong>Audited Financials for Large Businesses:</strong> Businesses with gross turnover exceeding PKR 100 million must file audited accounts prepared by a licensed Chartered Accountant.</li>\n      </ul>"
+  },
+  "faq": [
+    {
+      "question": "What are the non-salaried business tax slabs for Tax Year 2025/2026?",
+      "answer": "Business tax rates for individuals and AOPs range from 15% to 45%, with the first PKR 600,000 of net taxable profit completely exempt from tax."
+    },
+    {
+      "question": "How is an Association of Persons (AOP) taxed in Pakistan?",
+      "answer": "An AOP is taxed as a separate taxable entity under non-salaried slabs. Once the AOP pays its tax, the share of profit distributed to individual partners is exempt from further tax."
+    },
+    {
+      "question": "What is Section 113 Minimum Turnover Tax?",
+      "answer": "Under Section 113, businesses having turnover exceeding PKR 100M must pay minimum tax equal to 1.25% of gross turnover if normal slab tax is lower or if the business incurs a trading loss."
+    },
+    {
+      "question": "Can commercial business losses be carried forward in Pakistan?",
+      "answer": "Yes. Business trading losses can be carried forward for up to 6 consecutive tax years to be set off against future business profits under Section 57."
+    },
+    {
+      "question": "How are depreciation allowances deducted under Section 22?",
+      "answer": "Tangible business assets (plant, machinery, computers, vehicles) qualify for annual reducing-balance depreciation allowances (15% for machinery, 30% for IT equipment) plus initial 25% allowances."
+    },
+    {
+      "question": "What is the penalty for not filing a business tax return by September 30?",
+      "answer": "Late filing attracts penalties of 0.1% of tax payable per day (minimum PKR 1,000, up to 50% of tax due) and results in exclusion or removal from the Active Taxpayer List (ATL)."
+    }
+  ],
+  "faqSchema": {
+    "What are the non-salaried business tax slabs for Tax Year 2025/2026?": "Business tax rates for individuals and AOPs range from 15% to 45%, with the first PKR 600,000 of net taxable profit completely exempt from tax.",
+    "How is an Association of Persons (AOP) taxed in Pakistan?": "An AOP is taxed as a separate taxable entity under non-salaried slabs. Once the AOP pays its tax, the share of profit distributed to individual partners is exempt from further tax.",
+    "What is Section 113 Minimum Turnover Tax?": "Under Section 113, businesses having turnover exceeding PKR 100M must pay minimum tax equal to 1.25% of gross turnover if normal slab tax is lower or if the business incurs a trading loss.",
+    "Can commercial business losses be carried forward in Pakistan?": "Yes. Business trading losses can be carried forward for up to 6 consecutive tax years to be set off against future business profits under Section 57.",
+    "How are depreciation allowances deducted under Section 22?": "Tangible business assets (plant, machinery, computers, vehicles) qualify for annual reducing-balance depreciation allowances (15% for machinery, 30% for IT equipment) plus initial 25% allowances.",
+    "What is the penalty for not filing a business tax return by September 30?": "Late filing attracts penalties of 0.1% of tax payable per day (minimum PKR 1,000, up to 50% of tax due) and results in exclusion or removal from the Active Taxpayer List (ATL)."
+  }
+},
   "pakistan-income-tax-capital-gain-tax-calculator": {
-    "overview": {
-      "title": "Overview of Capital Gain Tax Calculator",
-      "html": "<p>Pakistan FBR capital gains tax is governed by statutory laws enforced by the Federal Board of Revenue (FBR Pakistan). This tool provides real-time, precise financial estimates using current rate schedules, thresholds, and allowances.</p><p>This tool incorporates current Pakistan tax rules governed by the Federal Board of Revenue (FBR Pakistan), applying accurate tax rates, thresholds, and statutory allowances to provide an instant, reliable calculation.</p>"
-    },
-    "howToUse": {
-      "title": "How to Use the Capital Gain Tax Calculator",
-      "html": "<p>Enter your earned salary, revenue, or assessable transaction value into the Capital Gain Tax Calculator. Select your tax year and filing parameters to compute exact tax liability.</p><ol class=\"list-decimal pl-6 space-y-2\"><li>Input your total gross income, transaction value, or assessable metric in PKR.</li><li>Select your tax year, filing status, or applicable tax slab tier.</li><li>Specify eligible deductions, reliefs, or statutory exemptions.</li><li>Review the itemized tax breakdown, marginal rates, and net take-home output.</li></ol>"
-    },
-    "understandingResults": {
-      "title": "Understanding Your Calculation Results",
-      "html": "<p>The results summary highlights gross input, taxable base, calculated tax owed, effective tax percentage, and remaining net take-home earnings.</p><ul class=\"list-disc pl-6 space-y-2\"><li><strong>Gross Metric:</strong> Total unadjusted financial baseline prior to statutory calculations.</li><li><strong>Taxable Base:</strong> Net amount subject to tax after subtracting standard exemptions.</li><li><strong>Calculated Tax Owed:</strong> Total monetary liability across all applicable progressive tiers.</li><li><strong>Effective Tax Rate:</strong> Realized overall tax percentage relative to gross input.</li><li><strong>Net Output:</strong> Final post-tax retained amount or net payable obligation.</li></ul>"
-    },
-    "formula": {
-      "title": "Calculation Methodology & Formula Breakdown",
-      "html": "<p>The calculation is executed using the official statutory formula for Pakistan:</p><p class=\"my-3 font-mono bg-slate-100 dark:bg-slate-800 p-3 rounded text-sm\">Tax Liability = Σ (Progressive Rate × Tier Income) - Exemptions</p><p>Review the primary rate and metric structure applied during computation:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-sm text-left border-collapse border border-slate-200 dark:border-slate-700\"><thead><tr><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Salaried Income Slab (PKR / Year)</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Tax Rate (FY 2024-25)</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Fixed Base Tax</th></tr></thead><tbody><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Up to PKR 600,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">0%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 0</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 600,001 to 1,200,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">5% of amount > 600k</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 0</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 1,200,001 to 2,200,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 30,000 + 15% > 1.2M</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 30,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 2,200,001 to 3,200,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 180,000 + 25% > 2.2M</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 180,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 3,200,001 to 4,100,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 430,000 + 30% > 3.2M</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 430,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Above PKR 4,100,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 700,000 + 35% > 4.1M</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 700,000 + 10% Surcharge (>10M)</td></tr></tbody></table></div>"
-    },
-    "taxSlabs": {
-      "title": "Pakistan Tax Brackets & Rate Structure",
-      "html": "<p>The official rates and thresholds applied by the Federal Board of Revenue (FBR Pakistan) for current assessment periods are detailed below:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-sm text-left border-collapse border border-slate-200 dark:border-slate-700\"><thead><tr><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Category</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Filer Status Rate</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Non-Filer Status Rate</th></tr></thead><tbody><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Sales Tax / GST</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">18%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">18% + 3% Further Tax</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Property Transfer WHT</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">3%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">10.5%</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Securities CGT</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">15%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">45%</td></tr></tbody></table></div>"
-    },
-    "workedExample": {
-      "title": "Step-by-Step Worked Calculation Example",
-      "html": "<p>For an assessable metric of PKR50,000 under current rules, subtracting standard statutory allowances yields your net taxable baseline. Applying progressive tiers results in an itemized breakdown of your total liability and net retained earnings.</p>"
-    },
-    "benefits": {
-      "title": "Benefits of Using This Capital Gain Tax Calculator",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Calculates exact obligations based on official statutory rate schedules.</li><li>Clear breakdown of marginal rates vs effective tax burden.</li><li>Includes standard statutory allowances and exemptions.</li></ul>"
-    },
-    "limitations": {
-      "title": "Edge Cases & Analytical Limitations",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Does not calculate specialized cross-border tax treaties.</li><li>Does not compute subjective legal exemptions without custom inputs.</li></ul>"
-    },
-    "commonMistakes": {
-      "title": "Common Pitfalls & Mistakes to Avoid",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Applying flat rates across entire income instead of progressive tiers.</li><li>Failing to account for mandatory statutory payroll contributions.</li></ul>"
-    },
-    "faq": [
-      {
-        "question": "How does the Capital Gain Tax Calculator calculate tax?",
-        "answer": "It applies official progressive rates and allowances enforced by the Federal Board of Revenue (FBR Pakistan) to your net assessable input."
-      },
-      {
-        "question": "Is this updated for the current tax year?",
-        "answer": "Yes, all rates, thresholds, and statutory allowances are updated for the current tax assessment period."
-      }
-    ],
-    "relatedCalculators": {
-      "title": "Related Calculators",
-      "html": "<p>Explore complementary tools: <a href=\"/countries/pakistan/\" class=\"text-primary font-semibold hover:underline\">Pakistan Tax Overview</a>.</p>"
-    },
-    "suggestedArticles": {
-      "title": "Educational Tax Guides",
-      "html": "<p>Read comprehensive guides: <a href=\"/countries/pakistan/\" class=\"text-primary font-semibold hover:underline\">Pakistan Tax Guide</a>.</p>"
-    },
-    "officialResources": {
-      "title": "Official Government Resources",
-      "html": "<ul class=\"space-y-2\"><li><a href=\"#\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary font-semibold hover:underline\">the Federal Board of Revenue (FBR Pakistan)</a> — Official Pakistan Tax Authority</li></ul>"
-    },
-    "relatedCountry": {
-      "title": "International Tax Hubs",
-      "html": "<p>Compare with other global jurisdictions: <a href=\"/countries/\" class=\"text-primary font-semibold hover:underline\">All Countries Overview</a>.</p>"
-    },
-    "educationalDisclaimer": {
-      "title": "Educational & Accuracy Disclaimer",
-      "text": "This calculator provides financial estimates based on public tax rules from the Federal Board of Revenue (FBR Pakistan). Tax legislation is subject to change. For complex corporate or cross-border filings, consult a certified tax practitioner."
-    },
-    "faqSchema": {
-      "How does the Capital Gain Tax Calculator calculate tax?": "It applies official progressive rates and allowances enforced by the Federal Board of Revenue (FBR Pakistan) to your net assessable input.",
-      "Is this updated for the current tax year?": "Yes, all rates, thresholds, and statutory allowances are updated for the current tax assessment period."
-    }
+  "howToUse": {
+    "title": "How to Use the Pakistan Securities CGT Calculator",
+    "steps": [
+      "Enter your total gross capital gain realized from selling listed shares, equity mutual funds, or derivatives.",
+      "Enter the original acquisition cost basis and documented transaction brokerage fees.",
+      "Select the asset holding period (holding duration before sale).",
+      "Select the acquisition date window (acquired before or after July 1, 2024).",
+      "Click Calculate to display NCCPL capital gains tax liability, effective rate, and net after-tax return."
+    ]
   },
+  "overview": {
+    "title": "Pakistan Securities Capital Gains Tax (Section 37A)",
+    "html": "<div class=\"bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-4 my-4\">\n        <p class=\"text-sm font-semibold text-emerald-800 dark:text-emerald-200\">\n          The Pakistan Securities Capital Gains Tax Calculator computes federal CGT on shares, mutual funds, and derivative disposals under Section 37A of the Income Tax Ordinance, 2001. Modeling the NCCPL capital gain tax schedule, holding period classifications, and Active Taxpayer List (ATL) filer versus non-filer rates, it determines net investment gain after tax.\n        </p>\n      </div>\n      <p class=\"mt-3\">\n        Capital gains on listed equities, shares of public companies, units of mutual funds, and Pakistan Stock Exchange (PSX) financial instruments are taxed under <strong>Section 37A of the Income Tax Ordinance, 2001</strong>. Unlike other capital assets, securities capital gains tax is automated and withheld directly at source by the <strong>National Clearing Company of Pakistan Limited (NCCPL)</strong>. Securities acquired on or after July 1, 2024, are subject to a flat 15% rate for filers, whereas non-filers are taxed at standard income slabs.\n      </p>\n      <div class=\"my-6 flex justify-center\">\n        <svg viewBox=\"0 0 680 230\" class=\"w-full max-w-2xl h-auto font-sans\">\n          <rect width=\"680\" height=\"230\" rx=\"12\" fill=\"#0f172a\" />\n          <text x=\"340\" y=\"30\" fill=\"#f8fafc\" font-size=\"15\" font-weight=\"bold\" text-anchor=\"middle\">Securities Capital Gains Tax Framework (Section 37A NCCPL)</text>\n          \n          <rect x=\"35\" y=\"65\" width=\"180\" height=\"135\" rx=\"8\" fill=\"#1e293b\" stroke=\"#38bdf8\" stroke-width=\"2\" />\n          <text x=\"125\" y=\"90\" fill=\"#38bdf8\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Acquired Post-July 2024</text>\n          <text x=\"125\" y=\"115\" fill=\"#f8fafc\" font-size=\"12\" text-anchor=\"middle\">Active Filer Rate</text>\n          <text x=\"125\" y=\"140\" fill=\"#10b981\" font-size=\"20\" font-weight=\"bold\" text-anchor=\"middle\">15.0%</text>\n          <text x=\"125\" y=\"165\" fill=\"#94a3b8\" font-size=\"11\" text-anchor=\"middle\">Flat statutory rate</text>\n          <text x=\"125\" y=\"180\" fill=\"#cbd5e1\" font-size=\"10\" text-anchor=\"middle\">Regardless of holding</text>\n\n          <rect x=\"250\" y=\"65\" width=\"180\" height=\"135\" rx=\"8\" fill=\"#1e293b\" stroke=\"#10b981\" stroke-width=\"2\" />\n          <text x=\"340\" y=\"90\" fill=\"#10b981\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Mutual Fund Units</text>\n          <text x=\"340\" y=\"115\" fill=\"#f8fafc\" font-size=\"12\" text-anchor=\"middle\">Money Market: Slabs</text>\n          <text x=\"340\" y=\"135\" fill=\"#f8fafc\" font-size=\"12\" text-anchor=\"middle\">Equity Funds: 15%</text>\n          <text x=\"340\" y=\"160\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Tax Credit S.62</text>\n          <text x=\"340\" y=\"180\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">Investments in VPMS/Funds</text>\n\n          <rect x=\"465\" y=\"65\" width=\"180\" height=\"135\" rx=\"8\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"2\" />\n          <text x=\"555\" y=\"90\" fill=\"#f59e0b\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Non-Filer Penality</text>\n          <text x=\"555\" y=\"115\" fill=\"#f8fafc\" font-size=\"12\" text-anchor=\"middle\">Standard Slabs</text>\n          <text x=\"555\" y=\"140\" fill=\"#ef4444\" font-size=\"20\" font-weight=\"bold\" text-anchor=\"middle\">Up to 45%</text>\n          <text x=\"555\" y=\"165\" fill=\"#ef4444\" font-size=\"11\" text-anchor=\"middle\">Non-Filer Surcharge</text>\n          <text x=\"555\" y=\"180\" fill=\"#cbd5e1\" font-size=\"10\" text-anchor=\"middle\">High friction trading</text>\n        </svg>\n      </div>"
+  },
+  "formula": {
+    "title": "Section 37A Securities CGT Schedule",
+    "html": "<p>Statutory capital gains rates under Division VII, Part I of the First Schedule:</p>\n      <div class=\"bg-slate-100 dark:bg-slate-800 p-4 rounded-lg my-3 font-mono text-xs\">\n        <p><strong>Securities Acquired on or after July 1, 2024:</strong></p>\n        <p>Active Filer: 15.0% flat on capital gains</p>\n        <p>Non-Filer: Standard progressive non-salaried income slabs (15% to 45%)</p>\n        <p class=\"mt-2\"><strong>Securities Acquired between July 1, 2022 and June 30, 2024:</strong></p>\n        <p>Holding &lt; 1 Year: 15.0% | 1–2 Years: 12.5% | 2–3 Years: 10.0% | 3–4 Years: 7.5% | 4–5 Years: 5.0% | 5–6 Years: 2.5% | &gt; 6 Years: 0%</p>\n        <p class=\"mt-2 text-indigo-600 dark:text-indigo-400\"><strong>Automatic NCCPL Withholding:</strong> Taxes are computed and remitted monthly directly to the FBR by NCCPL.</p>\n      </div>"
+  },
+  "benefits": {
+    "title": "Securities CGT Benchmark Scenarios",
+    "html": "<div class=\"space-y-4\">\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario A: Filer Selling PSX Shares (PKR 500,000 Capital Gain)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> Active filer selling listed equities acquired in current tax year; net gain PKR 500,000.<br/>\n            <strong>Tax Rate:</strong> 15% flat statutory rate.<br/>\n            <strong>NCCPL Deduction:</strong> PKR 500,000 × 15% = <strong>PKR 75,000</strong>.<br/>\n            <strong>Net After-Tax Gain:</strong> PKR 425,000.\n          </p>\n        </div>\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario B: Filer Disposing of Mutual Fund Units (PKR 1,200,000 Gain)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> Active filer realizing PKR 1,200,000 on equity fund units.<br/>\n            <strong>Tax Rate:</strong> 15% statutory rate.<br/>\n            <strong>Capital Gains Tax:</strong> PKR 1,200,000 × 15% = <strong>PKR 180,000</strong>.<br/>\n            <strong>Effective Rate:</strong> 15.00%.\n          </p>\n        </div>\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario C: Non-Filer Realizing Stock Gains (PKR 1,000,000 Gain)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> Inactive taxpayer on ATL.<br/>\n            <strong>Non-Filer Surcharge:</strong> Subject to standard income tax progressive slabs.<br/>\n            <strong>Estimated Tax Deduction:</strong> Over <strong>PKR 250,000 – PKR 350,000</strong> withheld via NCCPL non-filer billing.\n          </p>\n        </div>\n      </div>"
+  },
+  "limitations": {
+    "title": "Capital Loss Adjustment & NCCPL Certificates",
+    "html": "<p>Regulatory rules governing stock market capital gains in Pakistan:</p>\n      <ul class=\"list-disc pl-5 mt-2 space-y-1 text-sm\">\n        <li><strong>Loss Set-Off & Carry Forward:</strong> Capital losses sustained on securities under Section 37A can only be set off against capital gains under Section 37A and can be carried forward for up to <strong>3 consecutive tax years</strong>.</li>\n        <li><strong>NCCPL Annual Tax Certificate:</strong> NCCPL issues an official computerized annual CGT statement reconciling all monthly trade profits, losses, and taxes paid for inclusion in Iris tax filings.</li>\n        <li><strong>Dividend Tax Separate:</strong> Dividends received from listed companies are taxed separately under Section 150 (typically 15% for filers, 30% for non-filers) and are not clubbed with capital gains.</li>\n      </ul>"
+  },
+  "faq": [
+    {
+      "question": "What is the capital gains tax rate on PSX shares under Section 37A?",
+      "answer": "For securities acquired on or after July 1, 2024, the capital gains tax rate is a flat 15% for active filers on the ATL. For non-filers, gains are taxed under standard progressive income slabs."
+    },
+    {
+      "question": "How does the NCCPL calculate and collect capital gains tax?",
+      "answer": "The National Clearing Company of Pakistan Limited (NCCPL) automatically calculates net capital gains on all trades executed on the PSX, deducts tax on a monthly net basis, and remits it directly to the FBR."
+    },
+    {
+      "question": "Can capital losses on shares be carried forward in Pakistan?",
+      "answer": "Yes. Under Section 37A(5), capital losses on securities can be carried forward for up to three consecutive tax years, but can only be set off against future capital gains on securities."
+    },
+    {
+      "question": "How are mutual fund capital gains taxed compared to stocks?",
+      "answer": "Capital gains on equity-oriented mutual funds are taxed at the same 15% rate as listed stocks. Debt and money-market funds are taxed at marginal slab rates."
+    },
+    {
+      "question": "What happens if a non-filer makes capital gains on the stock exchange?",
+      "answer": "Non-filers are subject to punitive tax rates up to 45% through NCCPL withholding and face account restrictions under SECP compliance regulations."
+    },
+    {
+      "question": "Do I need to report NCCPL capital gains on my annual FBR tax return?",
+      "answer": "Yes. Even though NCCPL deducts the tax at source, taxpayers must report gross disposal consideration, cost, and tax deducted in the Capital Assets schedule of Form 114 on Iris."
+    }
+  ],
+  "faqSchema": {
+    "What is the capital gains tax rate on PSX shares under Section 37A?": "For securities acquired on or after July 1, 2024, the capital gains tax rate is a flat 15% for active filers on the ATL. For non-filers, gains are taxed under standard progressive income slabs.",
+    "How does the NCCPL calculate and collect capital gains tax?": "The National Clearing Company of Pakistan Limited (NCCPL) automatically calculates net capital gains on all trades executed on the PSX, deducts tax on a monthly net basis, and remits it directly to the FBR.",
+    "Can capital losses on shares be carried forward in Pakistan?": "Yes. Under Section 37A(5), capital losses on securities can be carried forward for up to three consecutive tax years, but can only be set off against future capital gains on securities.",
+    "How are mutual fund capital gains taxed compared to stocks?": "Capital gains on equity-oriented mutual funds are taxed at the same 15% rate as listed stocks. Debt and money-market funds are taxed at marginal slab rates.",
+    "What happens if a non-filer makes capital gains on the stock exchange?": "Non-filers are subject to punitive tax rates up to 45% through NCCPL withholding and face account restrictions under SECP compliance regulations.",
+    "Do I need to report NCCPL capital gains on my annual FBR tax return?": "Yes. Even though NCCPL deducts the tax at source, taxpayers must report gross disposal consideration, cost, and tax deducted in the Capital Assets schedule of Form 114 on Iris."
+  }
+},
   "pakistan-sales-tax-sales-tax-calculator": {
   "definitionBox": "<p><strong>Pakistan Sales Tax (GST):</strong> Under the <em>Sales Tax Act, 1990</em> administered by the <strong>Federal Board of Revenue (FBR)</strong>, the standard federal sales tax rate is <strong>18%</strong> on the manufacture, import, wholesale, and retail of taxable goods. Supplies to unregistered commercial purchasers incur an additional <strong>3% Further Tax</strong> (Section 3(1A)), elevating total tax to <strong>21%</strong>, while zero-rated export supplies incur <strong>0%</strong>.</p>",
   "overview": {
@@ -476,293 +456,253 @@ export const pkContent: Record<string, RichCalculatorContent> = {
     }
   },
   "pakistan-property-tax-property-tax-calculator": {
-    "overview": {
-      "title": "Overview of Property Tax Calculator",
-      "html": "<p>Pakistan provincial property tax is governed by statutory laws enforced by the Federal Board of Revenue (FBR Pakistan). This tool provides real-time, precise financial estimates using current rate schedules, thresholds, and allowances.</p><p>This tool incorporates current Pakistan tax rules governed by the Federal Board of Revenue (FBR Pakistan), applying accurate tax rates, thresholds, and statutory allowances to provide an instant, reliable calculation.</p>"
-    },
-    "howToUse": {
-      "title": "How to Use the Property Tax Calculator",
-      "html": "<p>Enter your earned salary, revenue, or assessable transaction value into the Property Tax Calculator. Select your tax year and filing parameters to compute exact tax liability.</p><ol class=\"list-decimal pl-6 space-y-2\"><li>Input your total gross income, transaction value, or assessable metric in PKR.</li><li>Select your tax year, filing status, or applicable tax slab tier.</li><li>Specify eligible deductions, reliefs, or statutory exemptions.</li><li>Review the itemized tax breakdown, marginal rates, and net take-home output.</li></ol>"
-    },
-    "understandingResults": {
-      "title": "Understanding Your Calculation Results",
-      "html": "<p>The results summary highlights gross input, taxable base, calculated tax owed, effective tax percentage, and remaining net take-home earnings.</p><ul class=\"list-disc pl-6 space-y-2\"><li><strong>Gross Metric:</strong> Total unadjusted financial baseline prior to statutory calculations.</li><li><strong>Taxable Base:</strong> Net amount subject to tax after subtracting standard exemptions.</li><li><strong>Calculated Tax Owed:</strong> Total monetary liability across all applicable progressive tiers.</li><li><strong>Effective Tax Rate:</strong> Realized overall tax percentage relative to gross input.</li><li><strong>Net Output:</strong> Final post-tax retained amount or net payable obligation.</li></ul>"
-    },
-    "formula": {
-      "title": "Calculation Methodology & Formula Breakdown",
-      "html": "<p>The calculation is executed using the official statutory formula for Pakistan:</p><p class=\"my-3 font-mono bg-slate-100 dark:bg-slate-800 p-3 rounded text-sm\">Tax Liability = Σ (Progressive Rate × Tier Income) - Exemptions</p><p>Review the primary rate and metric structure applied during computation:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-sm text-left border-collapse border border-slate-200 dark:border-slate-700\"><thead><tr><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Salaried Income Slab (PKR / Year)</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Tax Rate (FY 2024-25)</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Fixed Base Tax</th></tr></thead><tbody><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Up to PKR 600,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">0%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 0</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 600,001 to 1,200,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">5% of amount > 600k</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 0</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 1,200,001 to 2,200,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 30,000 + 15% > 1.2M</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 30,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 2,200,001 to 3,200,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 180,000 + 25% > 2.2M</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 180,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 3,200,001 to 4,100,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 430,000 + 30% > 3.2M</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 430,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Above PKR 4,100,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 700,000 + 35% > 4.1M</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 700,000 + 10% Surcharge (>10M)</td></tr></tbody></table></div>"
-    },
-    "taxSlabs": {
-      "title": "Pakistan Tax Brackets & Rate Structure",
-      "html": "<p>The official rates and thresholds applied by the Federal Board of Revenue (FBR Pakistan) for current assessment periods are detailed below:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-sm text-left border-collapse border border-slate-200 dark:border-slate-700\"><thead><tr><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Category</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Filer Status Rate</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Non-Filer Status Rate</th></tr></thead><tbody><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Sales Tax / GST</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">18%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">18% + 3% Further Tax</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Property Transfer WHT</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">3%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">10.5%</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Securities CGT</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">15%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">45%</td></tr></tbody></table></div>"
-    },
-    "workedExample": {
-      "title": "Step-by-Step Worked Calculation Example",
-      "html": "<p>For an assessable metric of PKR50,000 under current rules, subtracting standard statutory allowances yields your net taxable baseline. Applying progressive tiers results in an itemized breakdown of your total liability and net retained earnings.</p>"
-    },
-    "benefits": {
-      "title": "Benefits of Using This Property Tax Calculator",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Calculates exact obligations based on official statutory rate schedules.</li><li>Clear breakdown of marginal rates vs effective tax burden.</li><li>Includes standard statutory allowances and exemptions.</li></ul>"
-    },
-    "limitations": {
-      "title": "Edge Cases & Analytical Limitations",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Does not calculate specialized cross-border tax treaties.</li><li>Does not compute subjective legal exemptions without custom inputs.</li></ul>"
-    },
-    "commonMistakes": {
-      "title": "Common Pitfalls & Mistakes to Avoid",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Applying flat rates across entire income instead of progressive tiers.</li><li>Failing to account for mandatory statutory payroll contributions.</li></ul>"
-    },
-    "faq": [
-      {
-        "question": "How does the Property Tax Calculator calculate tax?",
-        "answer": "It applies official progressive rates and allowances enforced by the Federal Board of Revenue (FBR Pakistan) to your net assessable input."
-      },
-      {
-        "question": "Is this updated for the current tax year?",
-        "answer": "Yes, all rates, thresholds, and statutory allowances are updated for the current tax assessment period."
-      }
-    ],
-    "relatedCalculators": {
-      "title": "Related Calculators",
-      "html": "<p>Explore complementary tools: <a href=\"/countries/pakistan/\" class=\"text-primary font-semibold hover:underline\">Pakistan Tax Overview</a>.</p>"
-    },
-    "suggestedArticles": {
-      "title": "Educational Tax Guides",
-      "html": "<p>Read comprehensive guides: <a href=\"/countries/pakistan/\" class=\"text-primary font-semibold hover:underline\">Pakistan Tax Guide</a>.</p>"
-    },
-    "officialResources": {
-      "title": "Official Government Resources",
-      "html": "<ul class=\"space-y-2\"><li><a href=\"#\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary font-semibold hover:underline\">the Federal Board of Revenue (FBR Pakistan)</a> — Official Pakistan Tax Authority</li></ul>"
-    },
-    "relatedCountry": {
-      "title": "International Tax Hubs",
-      "html": "<p>Compare with other global jurisdictions: <a href=\"/countries/\" class=\"text-primary font-semibold hover:underline\">All Countries Overview</a>.</p>"
-    },
-    "educationalDisclaimer": {
-      "title": "Educational & Accuracy Disclaimer",
-      "text": "This calculator provides financial estimates based on public tax rules from the Federal Board of Revenue (FBR Pakistan). Tax legislation is subject to change. For complex corporate or cross-border filings, consult a certified tax practitioner."
-    },
-    "faqSchema": {
-      "How does the Property Tax Calculator calculate tax?": "It applies official progressive rates and allowances enforced by the Federal Board of Revenue (FBR Pakistan) to your net assessable input.",
-      "Is this updated for the current tax year?": "Yes, all rates, thresholds, and statutory allowances are updated for the current tax assessment period."
-    }
+  "howToUse": {
+    "title": "How to Use the Pakistan Property Tax Calculator",
+    "steps": [
+      "Select your province: Punjab, Sindh, Khyber Pakhtunkhwa (KPK), or Islamabad Capital Territory (ICT).",
+      "Choose your property category: Residential or Commercial.",
+      "Enter the estimated property capital value or Annual Rental Value (ARV) according to provincial excise valuation tables.",
+      "Check whether your property qualifies for the 5-marla residential owner-occupied statutory tax exemption.",
+      "Click Calculate to display net annual property tax, applicable provincial rebates, and payment challan breakdown."
+    ]
   },
+  "overview": {
+    "title": "Pakistan Provincial Property Tax Framework (Act of 1958)",
+    "html": "<div class=\"bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-4 my-4\">\n        <p class=\"text-sm font-semibold text-emerald-800 dark:text-emerald-200\">\n          The Pakistan Property Tax Calculator determines annual provincial immovable property tax liability under the Urban Immovable Property Tax Act, 1958. Calculating rates across Punjab, Sindh, KPK, and ICT Excise departments, it models Annual Rental Value (ARV), residential exemptions (5-marla plots), commercial property rates (10%), and early payment rebate discounts.\n        </p>\n      </div>\n      <p class=\"mt-3\">\n        In Pakistan, <strong>Urban Immovable Property Tax (UIPT)</strong> is a provincial levy enacted under the Urban Immovable Property Tax Act, 1958, and administered by provincial Excise, Taxation & Narcotics Control Departments. Unlike federal income taxes collected by the FBR, property tax funds municipal infrastructure and urban civic development. The tax is computed on the <strong>Annual Rental Value (ARV)</strong> of the building and land, determined using rating tables based on location category (Category A to G), covered area, and whether the premises are self-occupied or rented out.\n      </p>\n      <div class=\"my-6 flex justify-center\">\n        <svg viewBox=\"0 0 680 230\" class=\"w-full max-w-2xl h-auto font-sans\">\n          <rect width=\"680\" height=\"230\" rx=\"12\" fill=\"#0f172a\" />\n          <text x=\"340\" y=\"30\" fill=\"#f8fafc\" font-size=\"15\" font-weight=\"bold\" text-anchor=\"middle\">Pakistan Provincial Property Tax Computation (UIPT)</text>\n          \n          <rect x=\"35\" y=\"65\" width=\"135\" height=\"125\" rx=\"8\" fill=\"#1e293b\" stroke=\"#38bdf8\" stroke-width=\"2\" />\n          <text x=\"102\" y=\"95\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">1. Covered Area</text>\n          <text x=\"102\" y=\"125\" fill=\"#f8fafc\" font-size=\"11\" text-anchor=\"middle\">Plot Size (Marla/SqYd)</text>\n          <text x=\"102\" y=\"145\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">Building Category A-G</text>\n\n          <path d=\"M 175 125 L 200 125\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\" />\n\n          <rect x=\"205\" y=\"65\" width=\"135\" height=\"125\" rx=\"8\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"2\" />\n          <text x=\"272\" y=\"95\" fill=\"#f59e0b\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">2. Rental Value</text>\n          <text x=\"272\" y=\"125\" fill=\"#f8fafc\" font-size=\"11\" text-anchor=\"middle\">Excise ARV Matrix</text>\n          <text x=\"272\" y=\"145\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">Self vs Rented Multiplier</text>\n\n          <path d=\"M 345 125 L 370 125\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\" />\n\n          <rect x=\"375\" y=\"65\" width=\"135\" height=\"125\" rx=\"8\" fill=\"#1e293b\" stroke=\"#10b981\" stroke-width=\"2\" />\n          <text x=\"442\" y=\"95\" fill=\"#10b981\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">3. Statutory Rate</text>\n          <text x=\"442\" y=\"125\" fill=\"#f8fafc\" font-size=\"11\" text-anchor=\"middle\">5% Residential</text>\n          <text x=\"442\" y=\"145\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">10% Commercial</text>\n\n          <path d=\"M 515 125 L 540 125\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\" />\n\n          <rect x=\"545\" y=\"65\" width=\"105\" height=\"125\" rx=\"8\" fill=\"#1e293b\" stroke=\"#ec4899\" stroke-width=\"2\" />\n          <text x=\"597\" y=\"95\" fill=\"#ec4899\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">4. Challan</text>\n          <text x=\"597\" y=\"125\" fill=\"#f8fafc\" font-size=\"11\" text-anchor=\"middle\">PT-10 Challan</text>\n          <text x=\"597\" y=\"145\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">Less 5% Rebate</text>\n        </svg>\n      </div>"
+  },
+  "formula": {
+    "title": "Statutory Property Tax Valuation Formula",
+    "html": "<p>Under the Punjab and Sindh Urban Immovable Property Tax Schedules:</p>\n      <div class=\"bg-slate-100 dark:bg-slate-800 p-4 rounded-lg my-3 font-mono text-xs\">\n        <p><strong>Annual Rental Value (ARV)</strong> = Covered Area (Sq Ft) × Locality Base Rate (Category A–G) × Usage Factor</p>\n        <p><strong>Residential Properties:</strong> Tax = Annual Rental Value × 5%</p>\n        <p><strong>Commercial Properties:</strong> Tax = Annual Rental Value × 10%</p>\n        <p><strong>Self-Occupied 5-Marla Exemption:</strong> Residential plots ≤ 5 Marla (approx 125 sq yds / 1,125 sq ft) are 100% EXEMPT from property tax.</p>\n        <p class=\"mt-2 text-emerald-600 dark:text-emerald-400\"><strong>Early Payment Discount:</strong> 5% discount on prompt annual payment via ePay Punjab or ePay Sindh before August 31.</p>\n      </div>"
+  },
+  "benefits": {
+    "title": "Provincial Property Tax Benchmark Scenarios",
+    "html": "<div class=\"space-y-4\">\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario A: 5-Marla Owner-Occupied Residential Unit (Lahore / Rawalpindi)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> Residential plot size 5 Marla (1,125 sq ft covered area), owner-occupied.<br/>\n            <strong>Statutory Exemption:</strong> Under Section 3(2) of the Punjab UIPT Act, 5-marla residential houses are 100% exempt from property tax.<br/>\n            <strong>Annual Property Tax:</strong> <strong>PKR 0</strong>.\n          </p>\n        </div>\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario B: 1-Kanal House in Category B Locality (ARV PKR 600,000)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> 1-Kanal (20 Marla) residential house with assessed ARV of PKR 600,000.<br/>\n            <strong>Tax Computation:</strong> PKR 600,000 × 5% = PKR 30,000.<br/>\n            <strong>Prompt Payment Rebate:</strong> Less 5% ePay discount (-PKR 1,500).<br/>\n            <strong>Net Annual Challan:</strong> <strong>PKR 28,500</strong>.\n          </p>\n        </div>\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario C: Commercial Showroom in Category A Commercial Strip (ARV PKR 2,400,000)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> Commercial retail outlet with assessed ARV of PKR 2,400,000.<br/>\n            <strong>Tax Computation:</strong> PKR 2,400,000 × 10% commercial rate = <strong>PKR 240,000</strong>.<br/>\n            <strong>Effective Rate:</strong> 10% of Annual Rental Value.\n          </p>\n        </div>\n      </div>"
+  },
+  "limitations": {
+    "title": "Exemptions & Dispute Resolution (PT-10 Challan)",
+    "html": "<p>Important statutory guidelines and legal recourse for property taxpayers in Pakistan:</p>\n      <ul class=\"list-disc pl-5 mt-2 space-y-1 text-sm\">\n        <li><strong>Widow & Orphan Exemption:</strong> Widows, minor orphans, and disabled persons are entitled to full property tax exemption on residential property up to 1 Kanal with ARV up to statutory limits.</li>\n        <li><strong>Objection to Assessment (Form PT-6):</strong> Property owners who dispute valuation rating may file an objection within 30 days of receiving the assessment notice before the Excise Assessing Authority.</li>\n        <li><strong>Digital Payment Requirement:</strong> Payments made through online channels (ePay Punjab, ePay Sindh, 1Link, Easypaisa, JazzCash) automatically update computer-generated excise records without manual visits.</li>\n      </ul>"
+  },
+  "faq": [
+    {
+      "question": "How is provincial property tax calculated in Pakistan?",
+      "answer": "Property tax is calculated as a percentage of the Annual Rental Value (ARV) determined by provincial Excise rating tables: typically 5% for residential premises and 10% for commercial buildings."
+    },
+    {
+      "question": "Are 5-marla residential houses exempt from property tax?",
+      "answer": "Yes. Under provincial legislation in Punjab and KPK, self-occupied residential houses built on plots of 5 Marla (125 sq yds) or less in urban areas are completely exempt from property tax."
+    },
+    {
+      "question": "What is the difference between FBR tax and provincial property tax?",
+      "answer": "Provincial property tax is an annual recurring municipal charge paid to Excise departments for local urban development. FBR taxes (Sections 236K, 236C, 37) are federal one-time transaction withholding taxes on real estate purchase and sale."
+    },
+    {
+      "question": "What discount rebates are offered for early property tax payment?",
+      "answer": "Most provincial excise departments (Punjab and Sindh) offer a 5% prompt payment discount if the full annual property tax bill is paid before August 31 or September 30 of the financial year."
+    },
+    {
+      "question": "How does locality classification (Category A to G) affect property tax?",
+      "answer": "Excise departments divide urban cities into valuation categories (Category A being prime commercial or posh residential zones like DHA/Gulberg, down to Category G). Higher categories have significantly higher per-square-foot ARV benchmark rates."
+    },
+    {
+      "question": "How can I pay my PT-10 property tax challan online?",
+      "answer": "Property tax challans can be paid electronically using the 17-digit PSID number via ePay Punjab or ePay Sindh apps, online banking, ATMs, and mobile wallets (Easypaisa/JazzCash)."
+    }
+  ],
+  "faqSchema": {
+    "How is provincial property tax calculated in Pakistan?": "Property tax is calculated as a percentage of the Annual Rental Value (ARV) determined by provincial Excise rating tables: typically 5% for residential premises and 10% for commercial buildings.",
+    "Are 5-marla residential houses exempt from property tax?": "Yes. Under provincial legislation in Punjab and KPK, self-occupied residential houses built on plots of 5 Marla (125 sq yds) or less in urban areas are completely exempt from property tax.",
+    "What is the difference between FBR tax and provincial property tax?": "Provincial property tax is an annual recurring municipal charge paid to Excise departments for local urban development. FBR taxes (Sections 236K, 236C, 37) are federal one-time transaction withholding taxes on real estate purchase and sale.",
+    "What discount rebates are offered for early property tax payment?": "Most provincial excise departments (Punjab and Sindh) offer a 5% prompt payment discount if the full annual property tax bill is paid before August 31 or September 30 of the financial year.",
+    "How does locality classification (Category A to G) affect property tax?": "Excise departments divide urban cities into valuation categories (Category A being prime commercial or posh residential zones like DHA/Gulberg, down to Category G). Higher categories have significantly higher per-square-foot ARV benchmark rates.",
+    "How can I pay my PT-10 property tax challan online?": "Property tax challans can be paid electronically using the 17-digit PSID number via ePay Punjab or ePay Sindh apps, online banking, ATMs, and mobile wallets (Easypaisa/JazzCash)."
+  }
+},
   "pakistan-property-tax-capital-gain-tax-calculator": {
-    "overview": {
-      "title": "Overview of Property CGT Calculator",
-      "html": "<p>Pakistan immovable property CGT is governed by statutory laws enforced by the Federal Board of Revenue (FBR Pakistan). This tool provides real-time, precise financial estimates using current rate schedules, thresholds, and allowances.</p><p>This tool incorporates current Pakistan tax rules governed by the Federal Board of Revenue (FBR Pakistan), applying accurate tax rates, thresholds, and statutory allowances to provide an instant, reliable calculation.</p>"
-    },
-    "howToUse": {
-      "title": "How to Use the Property CGT Calculator",
-      "html": "<p>Enter your earned salary, revenue, or assessable transaction value into the Property CGT Calculator. Select your tax year and filing parameters to compute exact tax liability.</p><ol class=\"list-decimal pl-6 space-y-2\"><li>Input your total gross income, transaction value, or assessable metric in PKR.</li><li>Select your tax year, filing status, or applicable tax slab tier.</li><li>Specify eligible deductions, reliefs, or statutory exemptions.</li><li>Review the itemized tax breakdown, marginal rates, and net take-home output.</li></ol>"
-    },
-    "understandingResults": {
-      "title": "Understanding Your Calculation Results",
-      "html": "<p>The results summary highlights gross input, taxable base, calculated tax owed, effective tax percentage, and remaining net take-home earnings.</p><ul class=\"list-disc pl-6 space-y-2\"><li><strong>Gross Metric:</strong> Total unadjusted financial baseline prior to statutory calculations.</li><li><strong>Taxable Base:</strong> Net amount subject to tax after subtracting standard exemptions.</li><li><strong>Calculated Tax Owed:</strong> Total monetary liability across all applicable progressive tiers.</li><li><strong>Effective Tax Rate:</strong> Realized overall tax percentage relative to gross input.</li><li><strong>Net Output:</strong> Final post-tax retained amount or net payable obligation.</li></ul>"
-    },
-    "formula": {
-      "title": "Calculation Methodology & Formula Breakdown",
-      "html": "<p>The calculation is executed using the official statutory formula for Pakistan:</p><p class=\"my-3 font-mono bg-slate-100 dark:bg-slate-800 p-3 rounded text-sm\">Tax Liability = Σ (Progressive Rate × Tier Income) - Exemptions</p><p>Review the primary rate and metric structure applied during computation:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-sm text-left border-collapse border border-slate-200 dark:border-slate-700\"><thead><tr><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Salaried Income Slab (PKR / Year)</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Tax Rate (FY 2024-25)</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Fixed Base Tax</th></tr></thead><tbody><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Up to PKR 600,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">0%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 0</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 600,001 to 1,200,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">5% of amount > 600k</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 0</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 1,200,001 to 2,200,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 30,000 + 15% > 1.2M</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 30,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 2,200,001 to 3,200,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 180,000 + 25% > 2.2M</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 180,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 3,200,001 to 4,100,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 430,000 + 30% > 3.2M</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 430,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Above PKR 4,100,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 700,000 + 35% > 4.1M</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 700,000 + 10% Surcharge (>10M)</td></tr></tbody></table></div>"
-    },
-    "taxSlabs": {
-      "title": "Pakistan Tax Brackets & Rate Structure",
-      "html": "<p>The official rates and thresholds applied by the Federal Board of Revenue (FBR Pakistan) for current assessment periods are detailed below:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-sm text-left border-collapse border border-slate-200 dark:border-slate-700\"><thead><tr><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Category</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Filer Status Rate</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Non-Filer Status Rate</th></tr></thead><tbody><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Sales Tax / GST</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">18%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">18% + 3% Further Tax</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Property Transfer WHT</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">3%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">10.5%</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Securities CGT</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">15%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">45%</td></tr></tbody></table></div>"
-    },
-    "workedExample": {
-      "title": "Step-by-Step Worked Calculation Example",
-      "html": "<p>For an assessable metric of PKR50,000 under current rules, subtracting standard statutory allowances yields your net taxable baseline. Applying progressive tiers results in an itemized breakdown of your total liability and net retained earnings.</p>"
-    },
-    "benefits": {
-      "title": "Benefits of Using This Property CGT Calculator",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Calculates exact obligations based on official statutory rate schedules.</li><li>Clear breakdown of marginal rates vs effective tax burden.</li><li>Includes standard statutory allowances and exemptions.</li></ul>"
-    },
-    "limitations": {
-      "title": "Edge Cases & Analytical Limitations",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Does not calculate specialized cross-border tax treaties.</li><li>Does not compute subjective legal exemptions without custom inputs.</li></ul>"
-    },
-    "commonMistakes": {
-      "title": "Common Pitfalls & Mistakes to Avoid",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Applying flat rates across entire income instead of progressive tiers.</li><li>Failing to account for mandatory statutory payroll contributions.</li></ul>"
-    },
-    "faq": [
-      {
-        "question": "How does the Property CGT Calculator calculate tax?",
-        "answer": "It applies official progressive rates and allowances enforced by the Federal Board of Revenue (FBR Pakistan) to your net assessable input."
-      },
-      {
-        "question": "Is this updated for the current tax year?",
-        "answer": "Yes, all rates, thresholds, and statutory allowances are updated for the current tax assessment period."
-      }
-    ],
-    "relatedCalculators": {
-      "title": "Related Calculators",
-      "html": "<p>Explore complementary tools: <a href=\"/countries/pakistan/\" class=\"text-primary font-semibold hover:underline\">Pakistan Tax Overview</a>.</p>"
-    },
-    "suggestedArticles": {
-      "title": "Educational Tax Guides",
-      "html": "<p>Read comprehensive guides: <a href=\"/countries/pakistan/\" class=\"text-primary font-semibold hover:underline\">Pakistan Tax Guide</a>.</p>"
-    },
-    "officialResources": {
-      "title": "Official Government Resources",
-      "html": "<ul class=\"space-y-2\"><li><a href=\"#\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary font-semibold hover:underline\">the Federal Board of Revenue (FBR Pakistan)</a> — Official Pakistan Tax Authority</li></ul>"
-    },
-    "relatedCountry": {
-      "title": "International Tax Hubs",
-      "html": "<p>Compare with other global jurisdictions: <a href=\"/countries/\" class=\"text-primary font-semibold hover:underline\">All Countries Overview</a>.</p>"
-    },
-    "educationalDisclaimer": {
-      "title": "Educational & Accuracy Disclaimer",
-      "text": "This calculator provides financial estimates based on public tax rules from the Federal Board of Revenue (FBR Pakistan). Tax legislation is subject to change. For complex corporate or cross-border filings, consult a certified tax practitioner."
-    },
-    "faqSchema": {
-      "How does the Property CGT Calculator calculate tax?": "It applies official progressive rates and allowances enforced by the Federal Board of Revenue (FBR Pakistan) to your net assessable input.",
-      "Is this updated for the current tax year?": "Yes, all rates, thresholds, and statutory allowances are updated for the current tax assessment period."
-    }
+  "howToUse": {
+    "title": "How to Use the Property Capital Gain Tax Calculator",
+    "steps": [
+      "Enter your total capital gain (sale price minus original acquisition cost and documented capital improvements).",
+      "Select the property asset type: Constructed Residential House, High-Rise Flat/Apartment, or Open Plot.",
+      "Select the holding period (number of completed years between purchase registration and disposal).",
+      "Specify your FBR tax filing status on the Active Taxpayer List (ATL): Filer or Non-Filer.",
+      "Click Calculate to view federal Capital Gain Tax under Section 37(1A), applicable holding exemptions, and net after-tax proceeds."
+    ]
   },
+  "overview": {
+    "title": "Pakistan Property Capital Gains Tax (Section 37)",
+    "html": "<div class=\"bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-4 my-4\">\n        <p class=\"text-sm font-semibold text-emerald-800 dark:text-emerald-200\">\n          The Pakistan Property Capital Gain Tax Calculator computes federal CGT on real estate disposals under Section 37(1A) of the Income Tax Ordinance, 2001. Modeling Finance Act holding period tiers for open plots, constructed property, and flats, it determines statutory tax liability based on Active Taxpayer List (ATL) filer versus non-filer status.\n        </p>\n      </div>\n      <p class=\"mt-3\">\n        Capital gains derived from the sale of immovable property situated in Pakistan are taxable at the federal level under <strong>Section 37(1A) of the Income Tax Ordinance, 2001</strong>. Governed by the Federal Board of Revenue (FBR), property CGT applies on the net difference between the disposal consideration and cost of acquisition. Tax rates progressively taper down as the holding duration increases, with significantly lower rates for constructed houses and apartments compared to speculative open plots.\n      </p>\n      <div class=\"my-6 flex justify-center\">\n        <svg viewBox=\"0 0 680 230\" class=\"w-full max-w-2xl h-auto font-sans\">\n          <rect width=\"680\" height=\"230\" rx=\"12\" fill=\"#0f172a\" />\n          <text x=\"340\" y=\"30\" fill=\"#f8fafc\" font-size=\"15\" font-weight=\"bold\" text-anchor=\"middle\">Property CGT Holding Period Tiers (Sec. 37(1A))</text>\n          \n          <rect x=\"35\" y=\"65\" width=\"180\" height=\"135\" rx=\"8\" fill=\"#1e293b\" stroke=\"#38bdf8\" stroke-width=\"2\" />\n          <text x=\"125\" y=\"90\" fill=\"#38bdf8\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Constructed House</text>\n          <text x=\"125\" y=\"115\" fill=\"#f8fafc\" font-size=\"12\" text-anchor=\"middle\">&lt; 1 Year: 15.0%</text>\n          <text x=\"125\" y=\"135\" fill=\"#f8fafc\" font-size=\"12\" text-anchor=\"middle\">1–2 Years: 10.0%</text>\n          <text x=\"125\" y=\"155\" fill=\"#f8fafc\" font-size=\"12\" text-anchor=\"middle\">2–3 Years: 7.5%</text>\n          <text x=\"125\" y=\"180\" fill=\"#10b981\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">&gt; 3 Years: 0.0% (Exempt)</text>\n\n          <rect x=\"250\" y=\"65\" width=\"180\" height=\"135\" rx=\"8\" fill=\"#1e293b\" stroke=\"#10b981\" stroke-width=\"2\" />\n          <text x=\"340\" y=\"90\" fill=\"#10b981\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">High-Rise Flats</text>\n          <text x=\"340\" y=\"115\" fill=\"#f8fafc\" font-size=\"12\" text-anchor=\"middle\">&lt; 1 Year: 15.0%</text>\n          <text x=\"340\" y=\"135\" fill=\"#f8fafc\" font-size=\"12\" text-anchor=\"middle\">1–2 Years: 7.5%</text>\n          <text x=\"340\" y=\"160\" fill=\"#10b981\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">&gt; 2 Years: 0.0% (Exempt)</text>\n          <text x=\"340\" y=\"180\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">Incentivized vertical housing</text>\n\n          <rect x=\"465\" y=\"65\" width=\"180\" height=\"135\" rx=\"8\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"2\" />\n          <text x=\"555\" y=\"90\" fill=\"#f59e0b\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Open Plots</text>\n          <text x=\"555\" y=\"115\" fill=\"#f8fafc\" font-size=\"12\" text-anchor=\"middle\">&lt; 1 Year: 15.0%</text>\n          <text x=\"555\" y=\"135\" fill=\"#f8fafc\" font-size=\"12\" text-anchor=\"middle\">Tapers over 6 years</text>\n          <text x=\"555\" y=\"160\" fill=\"#f59e0b\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">&gt; 6 Years: 0.0%</text>\n          <text x=\"555\" y=\"180\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">Longest holding requirement</text>\n        </svg>\n      </div>"
+  },
+  "formula": {
+    "title": "Section 37 Capital Gain Tax Schedule",
+    "html": "<p>Statutory CGT rates under Division VIII, Part I of the First Schedule:</p>\n      <div class=\"bg-slate-100 dark:bg-slate-800 p-4 rounded-lg my-3 font-mono text-xs\">\n        <p><strong>Capital Gain</strong> = Disposal Consideration - Cost of Acquisition - Capital Additions</p>\n        <p><strong>Constructed Residential Property:</strong></p>\n        <p>Holding &lt; 1 Year: 15.0% | 1–2 Years: 10.0% | 2–3 Years: 7.5% | 3–4 Years: 5.0% | &gt; 4 Years: 0%</p>\n        <p class=\"mt-2\"><strong>Open Plots (Unconstructed Land):</strong></p>\n        <p>Holding &lt; 1 Year: 15.0% | 1–2 Years: 12.5% | 2–3 Years: 10.0% | 3–4 Years: 7.5% | 4–5 Years: 5.0% | 5–6 Years: 2.5% | &gt; 6 Years: 0%</p>\n        <p class=\"mt-2 text-rose-600 dark:text-rose-400\"><strong>Non-Filer Penalty:</strong> Non-filers are subject to standard income tax slabs (up to 45%) on property gains under the 10th Schedule.</p>\n      </div>"
+  },
+  "benefits": {
+    "title": "Property CGT Benchmark Scenarios",
+    "html": "<div class=\"space-y-4\">\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario A: Filer Selling Constructed House (2-Year Holding, PKR 3,000,000 Gain)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> Active filer selling house held for 2.5 years; net gain PKR 3,000,000.<br/>\n            <strong>Applicable Rate:</strong> 7.5% for constructed property in 2–3 year tier.<br/>\n            <strong>Tax Payable:</strong> PKR 3,000,000 × 7.5% = <strong>PKR 225,000</strong>.<br/>\n            <strong>After-Tax Proceeds:</strong> PKR 2,775,000.\n          </p>\n        </div>\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario B: Filer Selling Open Plot (1-Year Holding, PKR 4,000,000 Gain)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> Active filer selling plot held for 14 months; net gain PKR 4,000,000.<br/>\n            <strong>Applicable Rate:</strong> 12.5% for open plot in 1–2 year tier.<br/>\n            <strong>Tax Payable:</strong> PKR 4,000,000 × 12.5% = <strong>PKR 500,000</strong>.<br/>\n            <strong>Effective Rate:</strong> 12.50%.\n          </p>\n        </div>\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario C: Non-Filer Selling Open Plot (PKR 5,000,000 Gain)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> Non-filer on ATL disposing of plot with PKR 5,000,000 capital gain.<br/>\n            <strong>Non-Filer Slabs:</strong> Subject to standard non-salaried slab rates reaching up to 35%–45% plus double advance withholding tax under Section 236C.<br/>\n            <strong>Estimated Total Tax:</strong> Over <strong>PKR 1,500,000</strong> in statutory deductions.\n          </p>\n        </div>\n      </div>"
+  },
+  "limitations": {
+    "title": "Section 7E Deemed Tax & Valuation Basis",
+    "html": "<p>Key statutory considerations governing real estate capital gains in Pakistan:</p>\n      <ul class=\"list-disc pl-5 mt-2 space-y-1 text-sm\">\n        <li><strong>FBR Valuation Tables vs DC Rate:</strong> Capital gains are computed against the higher of actual registered transaction value or official FBR valuation table benchmarks.</li>\n        <li><strong>Section 7E Tax on Deemed Income:</strong> Property owners must obtain a Section 7E certificate from the Commissioner Inland Revenue certifying compliance with the 20% deemed rental value tax (1% effective tax on fair market value) prior to registering property transfers.</li>\n        <li><strong>Advance Withholding Tax Credit (Sec. 236C):</strong> Advance tax paid by the seller at the time of transfer (3% for filers, 6%–10% for non-filers) is fully adjustable against final Section 37 capital gains tax liability in annual tax returns.</li>\n      </ul>"
+  },
+  "faq": [
+    {
+      "question": "What is the capital gains tax rate on property under Section 37?",
+      "answer": "Property capital gains tax ranges from 15% down to 0% for filers depending on the holding period and asset type (fully exempt after 4 years for houses, 2 years for flats, and 6 years for open plots)."
+    },
+    {
+      "question": "How does the holding period affect property CGT in Pakistan?",
+      "answer": "Every additional year of holding reduces the applicable capital gains tax rate by 2.5% to 5%, eventually reaching 0% once the statutory threshold is crossed."
+    },
+    {
+      "question": "What are the capital gains tax penalties for non-filers?",
+      "answer": "Non-filers do not benefit from concessionary Section 37 rates; their capital gains are clubbed with standard income and taxed under progressive non-salaried slabs reaching up to 45%."
+    },
+    {
+      "question": "How is the capital gain calculated if the property was acquired via inheritance?",
+      "answer": "Under Section 37(4), where property is acquired by inheritance or gift, the cost of acquisition is deemed to be the fair market value of the property on the date the previous owner acquired it."
+    },
+    {
+      "question": "Is Section 236C advance tax adjustable against capital gains tax?",
+      "answer": "Yes. The advance tax collected from the seller by the registering authority under Section 236C (3% for filers) is an adjustable advance tax credit against final income tax liability."
+    },
+    {
+      "question": "What is Section 7E clearance and why is it needed for property transfer?",
+      "answer": "Section 7E levies a 1% deemed tax on immovable property valued over PKR 25 million. Registering authorities cannot transfer title without proof of Section 7E tax payment or exemption certificate."
+    }
+  ],
+  "faqSchema": {
+    "What is the capital gains tax rate on property under Section 37?": "Property capital gains tax ranges from 15% down to 0% for filers depending on the holding period and asset type (fully exempt after 4 years for houses, 2 years for flats, and 6 years for open plots).",
+    "How does the holding period affect property CGT in Pakistan?": "Every additional year of holding reduces the applicable capital gains tax rate by 2.5% to 5%, eventually reaching 0% once the statutory threshold is crossed.",
+    "What are the capital gains tax penalties for non-filers?": "Non-filers do not benefit from concessionary Section 37 rates; their capital gains are clubbed with standard income and taxed under progressive non-salaried slabs reaching up to 45%.",
+    "How is the capital gain calculated if the property was acquired via inheritance?": "Under Section 37(4), where property is acquired by inheritance or gift, the cost of acquisition is deemed to be the fair market value of the property on the date the previous owner acquired it.",
+    "Is Section 236C advance tax adjustable against capital gains tax?": "Yes. The advance tax collected from the seller by the registering authority under Section 236C (3% for filers) is an adjustable advance tax credit against final income tax liability.",
+    "What is Section 7E clearance and why is it needed for property transfer?": "Section 7E levies a 1% deemed tax on immovable property valued over PKR 25 million. Registering authorities cannot transfer title without proof of Section 7E tax payment or exemption certificate."
+  }
+},
   "pakistan-property-tax-token-tax-calculator": {
-    "overview": {
-      "title": "Overview of Token Tax Calculator",
-      "html": "<p>Pakistan vehicle token tax is governed by statutory laws enforced by the Federal Board of Revenue (FBR Pakistan). This tool provides real-time, precise financial estimates using current rate schedules, thresholds, and allowances.</p><p>This tool incorporates current Pakistan tax rules governed by the Federal Board of Revenue (FBR Pakistan), applying accurate tax rates, thresholds, and statutory allowances to provide an instant, reliable calculation.</p>"
-    },
-    "howToUse": {
-      "title": "How to Use the Token Tax Calculator",
-      "html": "<p>Enter your earned salary, revenue, or assessable transaction value into the Token Tax Calculator. Select your tax year and filing parameters to compute exact tax liability.</p><ol class=\"list-decimal pl-6 space-y-2\"><li>Input your total gross income, transaction value, or assessable metric in PKR.</li><li>Select your tax year, filing status, or applicable tax slab tier.</li><li>Specify eligible deductions, reliefs, or statutory exemptions.</li><li>Review the itemized tax breakdown, marginal rates, and net take-home output.</li></ol>"
-    },
-    "understandingResults": {
-      "title": "Understanding Your Calculation Results",
-      "html": "<p>The results summary highlights gross input, taxable base, calculated tax owed, effective tax percentage, and remaining net take-home earnings.</p><ul class=\"list-disc pl-6 space-y-2\"><li><strong>Gross Metric:</strong> Total unadjusted financial baseline prior to statutory calculations.</li><li><strong>Taxable Base:</strong> Net amount subject to tax after subtracting standard exemptions.</li><li><strong>Calculated Tax Owed:</strong> Total monetary liability across all applicable progressive tiers.</li><li><strong>Effective Tax Rate:</strong> Realized overall tax percentage relative to gross input.</li><li><strong>Net Output:</strong> Final post-tax retained amount or net payable obligation.</li></ul>"
-    },
-    "formula": {
-      "title": "Calculation Methodology & Formula Breakdown",
-      "html": "<p>The calculation is executed using the official statutory formula for Pakistan:</p><p class=\"my-3 font-mono bg-slate-100 dark:bg-slate-800 p-3 rounded text-sm\">Tax Liability = Σ (Progressive Rate × Tier Income) - Exemptions</p><p>Review the primary rate and metric structure applied during computation:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-sm text-left border-collapse border border-slate-200 dark:border-slate-700\"><thead><tr><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Salaried Income Slab (PKR / Year)</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Tax Rate (FY 2024-25)</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Fixed Base Tax</th></tr></thead><tbody><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Up to PKR 600,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">0%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 0</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 600,001 to 1,200,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">5% of amount > 600k</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 0</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 1,200,001 to 2,200,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 30,000 + 15% > 1.2M</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 30,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 2,200,001 to 3,200,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 180,000 + 25% > 2.2M</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 180,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 3,200,001 to 4,100,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 430,000 + 30% > 3.2M</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 430,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Above PKR 4,100,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 700,000 + 35% > 4.1M</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 700,000 + 10% Surcharge (>10M)</td></tr></tbody></table></div>"
-    },
-    "taxSlabs": {
-      "title": "Pakistan Tax Brackets & Rate Structure",
-      "html": "<p>The official rates and thresholds applied by the Federal Board of Revenue (FBR Pakistan) for current assessment periods are detailed below:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-sm text-left border-collapse border border-slate-200 dark:border-slate-700\"><thead><tr><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Category</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Filer Status Rate</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Non-Filer Status Rate</th></tr></thead><tbody><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Sales Tax / GST</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">18%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">18% + 3% Further Tax</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Property Transfer WHT</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">3%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">10.5%</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Securities CGT</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">15%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">45%</td></tr></tbody></table></div>"
-    },
-    "workedExample": {
-      "title": "Step-by-Step Worked Calculation Example",
-      "html": "<p>For an assessable metric of PKR50,000 under current rules, subtracting standard statutory allowances yields your net taxable baseline. Applying progressive tiers results in an itemized breakdown of your total liability and net retained earnings.</p>"
-    },
-    "benefits": {
-      "title": "Benefits of Using This Token Tax Calculator",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Calculates exact obligations based on official statutory rate schedules.</li><li>Clear breakdown of marginal rates vs effective tax burden.</li><li>Includes standard statutory allowances and exemptions.</li></ul>"
-    },
-    "limitations": {
-      "title": "Edge Cases & Analytical Limitations",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Does not calculate specialized cross-border tax treaties.</li><li>Does not compute subjective legal exemptions without custom inputs.</li></ul>"
-    },
-    "commonMistakes": {
-      "title": "Common Pitfalls & Mistakes to Avoid",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Applying flat rates across entire income instead of progressive tiers.</li><li>Failing to account for mandatory statutory payroll contributions.</li></ul>"
-    },
-    "faq": [
-      {
-        "question": "How does the Token Tax Calculator calculate tax?",
-        "answer": "It applies official progressive rates and allowances enforced by the Federal Board of Revenue (FBR Pakistan) to your net assessable input."
-      },
-      {
-        "question": "Is this updated for the current tax year?",
-        "answer": "Yes, all rates, thresholds, and statutory allowances are updated for the current tax assessment period."
-      }
-    ],
-    "relatedCalculators": {
-      "title": "Related Calculators",
-      "html": "<p>Explore complementary tools: <a href=\"/countries/pakistan/\" class=\"text-primary font-semibold hover:underline\">Pakistan Tax Overview</a>.</p>"
-    },
-    "suggestedArticles": {
-      "title": "Educational Tax Guides",
-      "html": "<p>Read comprehensive guides: <a href=\"/countries/pakistan/\" class=\"text-primary font-semibold hover:underline\">Pakistan Tax Guide</a>.</p>"
-    },
-    "officialResources": {
-      "title": "Official Government Resources",
-      "html": "<ul class=\"space-y-2\"><li><a href=\"#\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary font-semibold hover:underline\">the Federal Board of Revenue (FBR Pakistan)</a> — Official Pakistan Tax Authority</li></ul>"
-    },
-    "relatedCountry": {
-      "title": "International Tax Hubs",
-      "html": "<p>Compare with other global jurisdictions: <a href=\"/countries/\" class=\"text-primary font-semibold hover:underline\">All Countries Overview</a>.</p>"
-    },
-    "educationalDisclaimer": {
-      "title": "Educational & Accuracy Disclaimer",
-      "text": "This calculator provides financial estimates based on public tax rules from the Federal Board of Revenue (FBR Pakistan). Tax legislation is subject to change. For complex corporate or cross-border filings, consult a certified tax practitioner."
-    },
-    "faqSchema": {
-      "How does the Token Tax Calculator calculate tax?": "It applies official progressive rates and allowances enforced by the Federal Board of Revenue (FBR Pakistan) to your net assessable input.",
-      "Is this updated for the current tax year?": "Yes, all rates, thresholds, and statutory allowances are updated for the current tax assessment period."
-    }
+  "howToUse": {
+    "title": "How to Use the Property Registration & Token Tax Calculator",
+    "steps": [
+      "Enter the property consideration value based on the official FBR Valuation Table or District Collector (DC) rate.",
+      "Select the buyer's Active Taxpayer List (ATL) status: Filer (3%) or Non-Filer (10.5%).",
+      "Select the seller's ATL status: Filer (3%) or Non-Filer (6%–10%).",
+      "Include provincial stamp duty (typically 1% to 3% depending on provincial schedule).",
+      "Click Calculate to review complete transaction costs, municipal TMA fees, and Section 236K/236C advance withholding liabilities."
+    ]
   },
+  "overview": {
+    "title": "Pakistan Property Transfer Taxes & Withholding (236K / 236C)",
+    "html": "<div class=\"bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-4 my-4\">\n        <p class=\"text-sm font-semibold text-emerald-800 dark:text-emerald-200\">\n          The Pakistan Property Registration & Token Tax Calculator computes statutory transfer taxes, stamp duties, and federal withholding levies payable during real estate transactions. Incorporating Section 236K (buyer withholding), Section 236C (seller withholding), provincial stamp duty (1%–3%), Tehsil municipal TMA fees, and registration charges, it outlines complete transaction costs.\n        </p>\n      </div>\n      <p class=\"mt-3\">\n        When immovable property is bought, sold, or registered in Pakistan, transactions are subject to a dual layer of federal advance withholding taxes and provincial registration duties. At the federal level, the FBR levies <strong>Section 236K</strong> on the purchaser and <strong>Section 236C</strong> on the seller. Provincially, the registration deed attracts <strong>Stamp Duty</strong> under the Stamp Act, 1899, Tehsil Municipal Administration (TMA) transfer tax, and sub-registrar administrative fees based on the higher of actual sale consideration or official FBR valuation table rates.\n      </p>\n      <div class=\"my-6 flex justify-center\">\n        <svg viewBox=\"0 0 680 230\" class=\"w-full max-w-2xl h-auto font-sans\">\n          <rect width=\"680\" height=\"230\" rx=\"12\" fill=\"#0f172a\" />\n          <text x=\"340\" y=\"30\" fill=\"#f8fafc\" font-size=\"15\" font-weight=\"bold\" text-anchor=\"middle\">Property Transfer Tax Stack (Filer vs Non-Filer)</text>\n          \n          <rect x=\"35\" y=\"65\" width=\"180\" height=\"135\" rx=\"8\" fill=\"#1e293b\" stroke=\"#38bdf8\" stroke-width=\"2\" />\n          <text x=\"125\" y=\"90\" fill=\"#38bdf8\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Federal 236K (Buyer)</text>\n          <text x=\"125\" y=\"115\" fill=\"#f8fafc\" font-size=\"12\" text-anchor=\"middle\">Active Filer: 3.0%</text>\n          <text x=\"125\" y=\"135\" fill=\"#ef4444\" font-size=\"12\" text-anchor=\"middle\">Late Filer: 6.0%–7.5%</text>\n          <text x=\"125\" y=\"155\" fill=\"#ef4444\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Non-Filer: 10.5%–12%</text>\n          <text x=\"125\" y=\"180\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">Adjustable advance tax</text>\n\n          <rect x=\"250\" y=\"65\" width=\"180\" height=\"135\" rx=\"8\" fill=\"#1e293b\" stroke=\"#10b981\" stroke-width=\"2\" />\n          <text x=\"340\" y=\"90\" fill=\"#10b981\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Federal 236C (Seller)</text>\n          <text x=\"340\" y=\"115\" fill=\"#f8fafc\" font-size=\"12\" text-anchor=\"middle\">Active Filer: 3.0%</text>\n          <text x=\"340\" y=\"135\" fill=\"#ef4444\" font-size=\"12\" text-anchor=\"middle\">Late Filer: 6.0%</text>\n          <text x=\"340\" y=\"155\" fill=\"#ef4444\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Non-Filer: 10.0%</text>\n          <text x=\"340\" y=\"180\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">Adjustable against CGT</text>\n\n          <rect x=\"465\" y=\"65\" width=\"180\" height=\"135\" rx=\"8\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"2\" />\n          <text x=\"555\" y=\"90\" fill=\"#f59e0b\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Provincial Charges</text>\n          <text x=\"555\" y=\"115\" fill=\"#f8fafc\" font-size=\"12\" text-anchor=\"middle\">Stamp Duty: 1%–2%</text>\n          <text x=\"555\" y=\"135\" fill=\"#f8fafc\" font-size=\"12\" text-anchor=\"middle\">TMA Transfer: 1.0%</text>\n          <text x=\"555\" y=\"155\" fill=\"#f8fafc\" font-size=\"12\" text-anchor=\"middle\">Sub-Registrar Fee</text>\n          <text x=\"555\" y=\"180\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">Paid via e-Stamping</text>\n        </svg>\n      </div>"
+  },
+  "formula": {
+    "title": "Property Transfer Statutory Fee Schedule",
+    "html": "<p>Statutory withholding and provincial rates enforced under Finance Acts:</p>\n      <div class=\"bg-slate-100 dark:bg-slate-800 p-4 rounded-lg my-3 font-mono text-xs\">\n        <p><strong>FBR Section 236K (Advance Tax on Purchase):</strong></p>\n        <p>Active Filer: 3.0% of fair market value | Non-Filer: 10.5% (punitive 3.5x penalty rate)</p>\n        <p class=\"mt-2\"><strong>FBR Section 236C (Advance Tax on Sale):</strong></p>\n        <p>Active Filer: 3.0% of fair market value | Non-Filer: 10.0%</p>\n        <p class=\"mt-2\"><strong>Provincial Transfer Charges (Punjab / Sindh / KPK):</strong></p>\n        <p>Stamp Duty: 1% to 2% of DC value</p>\n        <p>TMA (Tehsil Municipal Administration) Transfer Fee: 1%</p>\n        <p>Registration Fee: Fixed PKR 500 to 1,000</p>\n      </div>"
+  },
+  "benefits": {
+    "title": "Property Transfer Benchmark Scenarios",
+    "html": "<div class=\"space-y-4\">\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario A: Filer Buyer & Filer Seller (PKR 10,000,000 Property)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> Property value PKR 10M, both parties active filers.<br/>\n            <strong>Buyer Costs:</strong> 3% 236K (PKR 300,000) + 1% Stamp Duty (PKR 100,000) + 1% TMA (PKR 100,000) = <strong>PKR 500,000</strong>.<br/>\n            <strong>Seller Costs:</strong> 3% 236C = <strong>PKR 300,000</strong>.<br/>\n            <strong>Total Transfer Friction:</strong> 8% overall.\n          </p>\n        </div>\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario B: Non-Filer Buyer (PKR 15,000,000 Property)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> Non-filer buyer on PKR 15M property.<br/>\n            <strong>Section 236K Withholding:</strong> 10.5% penal rate = <strong>PKR 1,575,000</strong>.<br/>\n            <strong>Filer vs Non-Filer Penalty:</strong> An active filer pays only PKR 450,000—a non-filer forfeits an extra <strong>PKR 1,125,000</strong>.\n          </p>\n        </div>\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario C: Commercial Plot Registration (PKR 30,000,000 Value)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> Commercial land transaction PKR 30M.<br/>\n            <strong>Total Advance Taxes:</strong> 236K (PKR 900,000) + 236C (PKR 900,000) + Stamp & TMA (PKR 900,000) = <strong>PKR 2,700,000</strong> total transfer taxes.\n          </p>\n        </div>\n      </div>"
+  },
+  "limitations": {
+    "title": "e-Stamping & Tax Credit Adjustments",
+    "html": "<p>Procedural requirements for executing property deeds in Pakistan:</p>\n      <ul class=\"list-disc pl-5 mt-2 space-y-1 text-sm\">\n        <li><strong>Adjustable Advance Tax Credit:</strong> Both Section 236K (buyer) and Section 236C (seller) advance taxes are 100% adjustable against final annual income tax liabilities on the FBR Iris portal.</li>\n        <li><strong>Mandatory e-Stamping:</strong> Physical paper stamp papers have been replaced across Punjab, Sindh, and KPK with digital e-Stamp challans verified via 32-A Challan numbers.</li>\n        <li><strong>FBR Valuation Revision:</strong> FBR periodically updates statutory immovable property valuation tables to align declared transaction values closer to real market prices.</li>\n      </ul>"
+  },
+  "faq": [
+    {
+      "question": "What is Section 236K tax on property purchase?",
+      "answer": "Section 236K is an advance federal withholding tax collected by the registering authority from the purchaser of immovable property at 3% for active filers and 10.5% for non-filers."
+    },
+    {
+      "question": "What is Section 236C tax on property sale?",
+      "answer": "Section 236C is an advance federal withholding tax collected from the seller of immovable property at 3% for active filers and 10% for non-filers at the time of deed registration."
+    },
+    {
+      "question": "Is advance tax paid on property transfer adjustable?",
+      "answer": "Yes. Both 236K and 236C advance taxes are adjustable tax credits that can be set off against your overall annual income tax liability when filing your tax return on Iris."
+    },
+    {
+      "question": "What is the TMA transfer tax rate?",
+      "answer": "The Tehsil Municipal Administration (TMA) transfer tax is a local government fee of 1% levied on the total value of the property being transferred within municipal boundaries."
+    },
+    {
+      "question": "How are FBR valuation tables used during property registration?",
+      "answer": "Taxes and duties are assessed on the actual contractual value or the official FBR valuation table rate, whichever is higher, preventing intentional property undervaluation."
+    },
+    {
+      "question": "Are overseas Pakistanis holding NICOP treated as filers for property taxes?",
+      "answer": "Under recent amendments, non-resident overseas Pakistanis holding a NICOP or POC card who remit funds through formal banking channels enjoy filer withholding tax benefits upon verification."
+    }
+  ],
+  "faqSchema": {
+    "What is Section 236K tax on property purchase?": "Section 236K is an advance federal withholding tax collected by the registering authority from the purchaser of immovable property at 3% for active filers and 10.5% for non-filers.",
+    "What is Section 236C tax on property sale?": "Section 236C is an advance federal withholding tax collected from the seller of immovable property at 3% for active filers and 10% for non-filers at the time of deed registration.",
+    "Is advance tax paid on property transfer adjustable?": "Yes. Both 236K and 236C advance taxes are adjustable tax credits that can be set off against your overall annual income tax liability when filing your tax return on Iris.",
+    "What is the TMA transfer tax rate?": "The Tehsil Municipal Administration (TMA) transfer tax is a local government fee of 1% levied on the total value of the property being transferred within municipal boundaries.",
+    "How are FBR valuation tables used during property registration?": "Taxes and duties are assessed on the actual contractual value or the official FBR valuation table rate, whichever is higher, preventing intentional property undervaluation.",
+    "Are overseas Pakistanis holding NICOP treated as filers for property taxes?": "Under recent amendments, non-resident overseas Pakistanis holding a NICOP or POC card who remit funds through formal banking channels enjoy filer withholding tax benefits upon verification."
+  }
+},
   "pakistan-property-tax-rental-income-tax-calculator": {
-    "overview": {
-      "title": "Overview of Rental Income Tax Calculator",
-      "html": "<p>Pakistan rental income tax is governed by statutory laws enforced by the Federal Board of Revenue (FBR Pakistan). This tool provides real-time, precise financial estimates using current rate schedules, thresholds, and allowances.</p><p>This tool incorporates current Pakistan tax rules governed by the Federal Board of Revenue (FBR Pakistan), applying accurate tax rates, thresholds, and statutory allowances to provide an instant, reliable calculation.</p>"
-    },
-    "howToUse": {
-      "title": "How to Use the Rental Income Tax Calculator",
-      "html": "<p>Enter your earned salary, revenue, or assessable transaction value into the Rental Income Tax Calculator. Select your tax year and filing parameters to compute exact tax liability.</p><ol class=\"list-decimal pl-6 space-y-2\"><li>Input your total gross income, transaction value, or assessable metric in PKR.</li><li>Select your tax year, filing status, or applicable tax slab tier.</li><li>Specify eligible deductions, reliefs, or statutory exemptions.</li><li>Review the itemized tax breakdown, marginal rates, and net take-home output.</li></ol>"
-    },
-    "understandingResults": {
-      "title": "Understanding Your Calculation Results",
-      "html": "<p>The results summary highlights gross input, taxable base, calculated tax owed, effective tax percentage, and remaining net take-home earnings.</p><ul class=\"list-disc pl-6 space-y-2\"><li><strong>Gross Metric:</strong> Total unadjusted financial baseline prior to statutory calculations.</li><li><strong>Taxable Base:</strong> Net amount subject to tax after subtracting standard exemptions.</li><li><strong>Calculated Tax Owed:</strong> Total monetary liability across all applicable progressive tiers.</li><li><strong>Effective Tax Rate:</strong> Realized overall tax percentage relative to gross input.</li><li><strong>Net Output:</strong> Final post-tax retained amount or net payable obligation.</li></ul>"
-    },
-    "formula": {
-      "title": "Calculation Methodology & Formula Breakdown",
-      "html": "<p>The calculation is executed using the official statutory formula for Pakistan:</p><p class=\"my-3 font-mono bg-slate-100 dark:bg-slate-800 p-3 rounded text-sm\">Tax Liability = Σ (Progressive Rate × Tier Income) - Exemptions</p><p>Review the primary rate and metric structure applied during computation:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-sm text-left border-collapse border border-slate-200 dark:border-slate-700\"><thead><tr><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Salaried Income Slab (PKR / Year)</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Tax Rate (FY 2024-25)</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Fixed Base Tax</th></tr></thead><tbody><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Up to PKR 600,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">0%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 0</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 600,001 to 1,200,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">5% of amount > 600k</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 0</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 1,200,001 to 2,200,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 30,000 + 15% > 1.2M</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 30,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 2,200,001 to 3,200,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 180,000 + 25% > 2.2M</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 180,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 3,200,001 to 4,100,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 430,000 + 30% > 3.2M</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 430,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Above PKR 4,100,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 700,000 + 35% > 4.1M</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 700,000 + 10% Surcharge (>10M)</td></tr></tbody></table></div>"
-    },
-    "taxSlabs": {
-      "title": "Pakistan Tax Brackets & Rate Structure",
-      "html": "<p>The official rates and thresholds applied by the Federal Board of Revenue (FBR Pakistan) for current assessment periods are detailed below:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-sm text-left border-collapse border border-slate-200 dark:border-slate-700\"><thead><tr><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Category</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Filer Status Rate</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Non-Filer Status Rate</th></tr></thead><tbody><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Sales Tax / GST</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">18%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">18% + 3% Further Tax</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Property Transfer WHT</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">3%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">10.5%</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Securities CGT</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">15%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">45%</td></tr></tbody></table></div>"
-    },
-    "workedExample": {
-      "title": "Step-by-Step Worked Calculation Example",
-      "html": "<p>For an assessable metric of PKR50,000 under current rules, subtracting standard statutory allowances yields your net taxable baseline. Applying progressive tiers results in an itemized breakdown of your total liability and net retained earnings.</p>"
-    },
-    "benefits": {
-      "title": "Benefits of Using This Rental Income Tax Calculator",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Calculates exact obligations based on official statutory rate schedules.</li><li>Clear breakdown of marginal rates vs effective tax burden.</li><li>Includes standard statutory allowances and exemptions.</li></ul>"
-    },
-    "limitations": {
-      "title": "Edge Cases & Analytical Limitations",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Does not calculate specialized cross-border tax treaties.</li><li>Does not compute subjective legal exemptions without custom inputs.</li></ul>"
-    },
-    "commonMistakes": {
-      "title": "Common Pitfalls & Mistakes to Avoid",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Applying flat rates across entire income instead of progressive tiers.</li><li>Failing to account for mandatory statutory payroll contributions.</li></ul>"
-    },
-    "faq": [
-      {
-        "question": "How does the Rental Income Tax Calculator calculate tax?",
-        "answer": "It applies official progressive rates and allowances enforced by the Federal Board of Revenue (FBR Pakistan) to your net assessable input."
-      },
-      {
-        "question": "Is this updated for the current tax year?",
-        "answer": "Yes, all rates, thresholds, and statutory allowances are updated for the current tax assessment period."
-      }
-    ],
-    "relatedCalculators": {
-      "title": "Related Calculators",
-      "html": "<p>Explore complementary tools: <a href=\"/countries/pakistan/\" class=\"text-primary font-semibold hover:underline\">Pakistan Tax Overview</a>.</p>"
-    },
-    "suggestedArticles": {
-      "title": "Educational Tax Guides",
-      "html": "<p>Read comprehensive guides: <a href=\"/countries/pakistan/\" class=\"text-primary font-semibold hover:underline\">Pakistan Tax Guide</a>.</p>"
-    },
-    "officialResources": {
-      "title": "Official Government Resources",
-      "html": "<ul class=\"space-y-2\"><li><a href=\"#\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary font-semibold hover:underline\">the Federal Board of Revenue (FBR Pakistan)</a> — Official Pakistan Tax Authority</li></ul>"
-    },
-    "relatedCountry": {
-      "title": "International Tax Hubs",
-      "html": "<p>Compare with other global jurisdictions: <a href=\"/countries/\" class=\"text-primary font-semibold hover:underline\">All Countries Overview</a>.</p>"
-    },
-    "educationalDisclaimer": {
-      "title": "Educational & Accuracy Disclaimer",
-      "text": "This calculator provides financial estimates based on public tax rules from the Federal Board of Revenue (FBR Pakistan). Tax legislation is subject to change. For complex corporate or cross-border filings, consult a certified tax practitioner."
-    },
-    "faqSchema": {
-      "How does the Rental Income Tax Calculator calculate tax?": "It applies official progressive rates and allowances enforced by the Federal Board of Revenue (FBR Pakistan) to your net assessable input.",
-      "Is this updated for the current tax year?": "Yes, all rates, thresholds, and statutory allowances are updated for the current tax assessment period."
-    }
+  "howToUse": {
+    "title": "How to Use the Pakistan Rental Income Tax Calculator",
+    "steps": [
+      "Enter your gross annual rental income received or receivable from letting immovable property.",
+      "Deduct allowable municipal property taxes paid to the provincial Excise department.",
+      "The calculator automatically applies the statutory 1/5th (20%) building repair allowance.",
+      "Input any mortgage interest paid on loans obtained to construct or acquire the property.",
+      "Click Calculate to display net chargeable rental income, tax liability under Section 15, and withholding credits under Section 155."
+    ]
   },
+  "overview": {
+    "title": "Pakistan Income from Property (Section 15 FBR Slabs)",
+    "html": "<div class=\"bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-4 my-4\">\n        <p class=\"text-sm font-semibold text-emerald-800 dark:text-emerald-200\">\n          The Pakistan Rental Income Tax Calculator estimates individual, AOP, and corporate tax liability on property rentals under Section 15 of the Income Tax Ordinance, 2001. Incorporating progressive rental income slabs, 1/5th statutory building repair deductions, local property taxes paid, and filer withholding thresholds, it computes exact net rental tax.\n        </p>\n      </div>\n      <p class=\"mt-3\">\n        Under <strong>Section 15 of the Income Tax Ordinance, 2001</strong>, rent derived by the owner of land or a building is categorized as 'Income from Property'. For individual landlords and Associations of Persons (AOPs), rental income is taxed under a progressive rate schedule. Taxpayers can claim statutory deductions under Section 15A—including a flat <strong>one-fifth (20%) statutory allowance for repairs</strong>, local rates and taxes paid, insurance premiums, and mortgage profit paid on construction loans.\n      </p>\n      <div class=\"my-6 flex justify-center\">\n        <svg viewBox=\"0 0 680 230\" class=\"w-full max-w-2xl h-auto font-sans\">\n          <rect width=\"680\" height=\"230\" rx=\"12\" fill=\"#0f172a\" />\n          <text x=\"340\" y=\"30\" fill=\"#f8fafc\" font-size=\"15\" font-weight=\"bold\" text-anchor=\"middle\">Income from Property (Section 15 & 15A Deduction Flow)</text>\n          \n          <rect x=\"35\" y=\"65\" width=\"135\" height=\"125\" rx=\"8\" fill=\"#1e293b\" stroke=\"#38bdf8\" stroke-width=\"2\" />\n          <text x=\"102\" y=\"95\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Gross Rent</text>\n          <text x=\"102\" y=\"125\" fill=\"#f8fafc\" font-size=\"11\" text-anchor=\"middle\">Annual Rent</text>\n          <text x=\"102\" y=\"145\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">+ 1/10th Advance</text>\n\n          <path d=\"M 175 125 L 200 125\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\" />\n\n          <rect x=\"205\" y=\"65\" width=\"135\" height=\"125\" rx=\"8\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"2\" />\n          <text x=\"272\" y=\"95\" fill=\"#f59e0b\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Sec. 15A Deductions</text>\n          <text x=\"272\" y=\"125\" fill=\"#f8fafc\" font-size=\"11\" text-anchor=\"middle\">20% Repair Allowance</text>\n          <text x=\"272\" y=\"145\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">Provincial Property Tax</text>\n\n          <path d=\"M 345 125 L 370 125\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\" />\n\n          <rect x=\"375\" y=\"65\" width=\"135\" height=\"125\" rx=\"8\" fill=\"#1e293b\" stroke=\"#10b981\" stroke-width=\"2\" />\n          <text x=\"442\" y=\"95\" fill=\"#10b981\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Net Chargeable</text>\n          <text x=\"442\" y=\"125\" fill=\"#f8fafc\" font-size=\"11\" text-anchor=\"middle\">Progressive Slabs</text>\n          <text x=\"442\" y=\"145\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">PKR 300k Exemption</text>\n\n          <path d=\"M 515 125 L 540 125\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\" />\n\n          <rect x=\"545\" y=\"65\" width=\"105\" height=\"125\" rx=\"8\" fill=\"#1e293b\" stroke=\"#ec4899\" stroke-width=\"2\" />\n          <text x=\"597\" y=\"95\" fill=\"#ec4899\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Net Tax</text>\n          <text x=\"597\" y=\"125\" fill=\"#f8fafc\" font-size=\"11\" text-anchor=\"middle\">Annual Tax</text>\n          <text x=\"597\" y=\"145\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">Less Sec. 155</text>\n        </svg>\n      </div>"
+  },
+  "formula": {
+    "title": "Rental Income Tax Slabs Schedule",
+    "html": "<p>Progressive tax schedule for individuals and AOPs under Division VIA, Part I of the First Schedule:</p>\n      <div class=\"bg-slate-100 dark:bg-slate-800 p-4 rounded-lg my-3 font-mono text-xs\">\n        <p><strong>Chargeable Rent ≤ PKR 300,000:</strong> Tax = 0% (Nil)</p>\n        <p><strong>PKR 300,001 – PKR 600,000:</strong> 5% of the amount exceeding PKR 300,000</p>\n        <p><strong>PKR 600,001 – PKR 1,000,000:</strong> PKR 15,000 + 10% of amount exceeding PKR 600,000</p>\n        <p><strong>PKR 1,000,001 – PKR 2,000,000:</strong> PKR 55,000 + 15% of amount exceeding PKR 1,000,000</p>\n        <p><strong>PKR 2,000,001 – PKR 3,000,000:</strong> PKR 205,000 + 20% of amount exceeding PKR 2,000,000</p>\n        <p><strong>Exceeding PKR 3,000,000:</strong> PKR 405,000 + 25% of amount exceeding PKR 3,000,000</p>\n      </div>"
+  },
+  "benefits": {
+    "title": "Rental Income Benchmark Scenarios",
+    "html": "<div class=\"space-y-4\">\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario A: Modest Residential Rental (PKR 30,000 / Month)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> Annual rental income = PKR 360,000.<br/>\n            <strong>Taxable Slabs:</strong> First PKR 300,000 exempt. Excess PKR 60,000 @ 5% = <strong>PKR 3,000</strong>.<br/>\n            <strong>Effective Rate:</strong> 0.83% of gross annual rental income.\n          </p>\n        </div>\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario B: Commercial Shop Rental (PKR 120,000 / Month)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> Annual rental income = PKR 1,440,000.<br/>\n            <strong>Taxable Slabs:</strong> PKR 1M to PKR 2M tier: Base PKR 55,000 + 15% of (PKR 1,440,000 - PKR 1,000,000) = PKR 55,000 + PKR 66,000 = <strong>PKR 121,000</strong>.<br/>\n            <strong>Effective Rate:</strong> 8.40%.\n          </p>\n        </div>\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario C: Commercial Plaza Investor (PKR 350,000 / Month)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> Annual rental income = PKR 4,200,000.<br/>\n            <strong>Taxable Slabs:</strong> Top tier: Base PKR 405,000 + 25% of (PKR 4,200,000 - PKR 3,000,000) = PKR 405,000 + PKR 300,000 = <strong>PKR 705,000</strong>.<br/>\n            <strong>Effective Rate:</strong> 16.79%.\n          </p>\n        </div>\n      </div>"
+  },
+  "limitations": {
+    "title": "Section 155 Withholding & Non-Adjustable Deposit",
+    "html": "<p>Statutory compliance obligations for landlords and corporate tenants:</p>\n      <ul class=\"list-disc pl-5 mt-2 space-y-1 text-sm\">\n        <li><strong>Withholding Tax by Tenant (Section 155):</strong> Corporate and registered business tenants paying rent to landlords are legally required to withhold tax at statutory Division VIA rates and issue CPR certificates.</li>\n        <li><strong>Unadjustable Advance (Pugree / Section 16):</strong> Any non-refundable advance received that is not adjustable against monthly rent is treated as income and apportioned equally over <strong>10 consecutive years</strong>.</li>\n        <li><strong>Separate Block vs Normal Law:</strong> Individual landlords are taxed under the separate block schedule; corporations must account for rental receipts under normal corporate profits tax rules.</li>\n      </ul>"
+  },
+  "faq": [
+    {
+      "question": "How is rental income taxed under Section 15 of the Income Tax Ordinance?",
+      "answer": "Rental income earned by individuals is taxed under progressive slabs ranging from 5% to 25%, with the first PKR 300,000 of annual rent completely exempt from tax."
+    },
+    {
+      "question": "What is the 1/5th repair allowance deduction?",
+      "answer": "Under Section 15A, an allowance equal to one-fifth (20%) of the gross rent is automatically deductible to account for building repairs, maintenance, and upkeep."
+    },
+    {
+      "question": "Can property taxes paid to provincial Excise be deducted from rental income?",
+      "answer": "Yes. Section 15A explicitly allows any local rate, tax, charge, or cess paid in respect of the property (such as Punjab or Sindh property tax) to be deducted from gross rent."
+    },
+    {
+      "question": "What is Section 155 tenant withholding tax?",
+      "answer": "Section 155 requires designated corporate withholding agents and business tenants to deduct tax at source when paying rent to landlords, which can be credited against the landlord's annual tax return."
+    },
+    {
+      "question": "How is non-adjustable advance rent (Pugree) taxed?",
+      "answer": "Under Section 16, any non-adjustable advance or security deposit not refundable to the tenant is treated as taxable rental income spread in equal 1/10th proportions over 10 consecutive tax years."
+    },
+    {
+      "question": "Are joint property co-owners taxed separately on their rental share?",
+      "answer": "Yes. Under Section 66, where property is owned by two or more persons with ascertainable shares, each co-owner is assessed separately on their proportionate share of rental income."
+    }
+  ],
+  "faqSchema": {
+    "How is rental income taxed under Section 15 of the Income Tax Ordinance?": "Rental income earned by individuals is taxed under progressive slabs ranging from 5% to 25%, with the first PKR 300,000 of annual rent completely exempt from tax.",
+    "What is the 1/5th repair allowance deduction?": "Under Section 15A, an allowance equal to one-fifth (20%) of the gross rent is automatically deductible to account for building repairs, maintenance, and upkeep.",
+    "Can property taxes paid to provincial Excise be deducted from rental income?": "Yes. Section 15A explicitly allows any local rate, tax, charge, or cess paid in respect of the property (such as Punjab or Sindh property tax) to be deducted from gross rent.",
+    "What is Section 155 tenant withholding tax?": "Section 155 requires designated corporate withholding agents and business tenants to deduct tax at source when paying rent to landlords, which can be credited against the landlord's annual tax return.",
+    "How is non-adjustable advance rent (Pugree) taxed?": "Under Section 16, any non-adjustable advance or security deposit not refundable to the tenant is treated as taxable rental income spread in equal 1/10th proportions over 10 consecutive tax years.",
+    "Are joint property co-owners taxed separately on their rental share?": "Yes. Under Section 66, where property is owned by two or more persons with ascertainable shares, each co-owner is assessed separately on their proportionate share of rental income."
+  }
+},
   "pakistan-vehicle-tax-vehicle-tax-calculator": {
   "definitionBox": "<p><strong>Pakistan Vehicle Token Tax:</strong> Motor vehicle token tax is an annual road maintenance levy collected under the <em>Motor Vehicles Taxation Act</em> by provincial Excise, Taxation &amp; Narcotics Control Departments (Punjab, Sindh, KPK, Balochistan, and ICT). Rates are determined primarily by <strong>engine displacement (cc)</strong>, vehicle category, and owner <strong>Active Taxpayer List (ATL)</strong> filer status.</p>",
   "overview": {
@@ -857,77 +797,67 @@ export const pkContent: Record<string, RichCalculatorContent> = {
   }
 },
   "pakistan-vehicle-tax-sindh-vehicle-tax-calculator": {
-    "overview": {
-      "title": "Overview of Sindh Vehicle Tax Calculator",
-      "html": "<p>Pakistan Sindh excise vehicle tax is governed by statutory laws enforced by the Federal Board of Revenue (FBR Pakistan). This tool provides real-time, precise financial estimates using current rate schedules, thresholds, and allowances.</p><p>This tool incorporates current Pakistan tax rules governed by the Federal Board of Revenue (FBR Pakistan), applying accurate tax rates, thresholds, and statutory allowances to provide an instant, reliable calculation.</p>"
-    },
-    "howToUse": {
-      "title": "How to Use the Sindh Vehicle Tax Calculator",
-      "html": "<p>Enter your earned salary, revenue, or assessable transaction value into the Sindh Vehicle Tax Calculator. Select your tax year and filing parameters to compute exact tax liability.</p><ol class=\"list-decimal pl-6 space-y-2\"><li>Input your total gross income, transaction value, or assessable metric in PKR.</li><li>Select your tax year, filing status, or applicable tax slab tier.</li><li>Specify eligible deductions, reliefs, or statutory exemptions.</li><li>Review the itemized tax breakdown, marginal rates, and net take-home output.</li></ol>"
-    },
-    "understandingResults": {
-      "title": "Understanding Your Calculation Results",
-      "html": "<p>The results summary highlights gross input, taxable base, calculated tax owed, effective tax percentage, and remaining net take-home earnings.</p><ul class=\"list-disc pl-6 space-y-2\"><li><strong>Gross Metric:</strong> Total unadjusted financial baseline prior to statutory calculations.</li><li><strong>Taxable Base:</strong> Net amount subject to tax after subtracting standard exemptions.</li><li><strong>Calculated Tax Owed:</strong> Total monetary liability across all applicable progressive tiers.</li><li><strong>Effective Tax Rate:</strong> Realized overall tax percentage relative to gross input.</li><li><strong>Net Output:</strong> Final post-tax retained amount or net payable obligation.</li></ul>"
-    },
-    "formula": {
-      "title": "Calculation Methodology & Formula Breakdown",
-      "html": "<p>The calculation is executed using the official statutory formula for Pakistan:</p><p class=\"my-3 font-mono bg-slate-100 dark:bg-slate-800 p-3 rounded text-sm\">Tax Liability = Σ (Progressive Rate × Tier Income) - Exemptions</p><p>Review the primary rate and metric structure applied during computation:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-sm text-left border-collapse border border-slate-200 dark:border-slate-700\"><thead><tr><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Salaried Income Slab (PKR / Year)</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Tax Rate (FY 2024-25)</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Fixed Base Tax</th></tr></thead><tbody><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Up to PKR 600,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">0%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 0</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 600,001 to 1,200,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">5% of amount > 600k</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 0</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 1,200,001 to 2,200,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 30,000 + 15% > 1.2M</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 30,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 2,200,001 to 3,200,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 180,000 + 25% > 2.2M</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 180,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 3,200,001 to 4,100,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 430,000 + 30% > 3.2M</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 430,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Above PKR 4,100,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 700,000 + 35% > 4.1M</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">PKR 700,000 + 10% Surcharge (>10M)</td></tr></tbody></table></div>"
-    },
-    "taxSlabs": {
-      "title": "Pakistan Tax Brackets & Rate Structure",
-      "html": "<p>The official rates and thresholds applied by the Federal Board of Revenue (FBR Pakistan) for current assessment periods are detailed below:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-sm text-left border-collapse border border-slate-200 dark:border-slate-700\"><thead><tr><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Category</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Filer Status Rate</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Non-Filer Status Rate</th></tr></thead><tbody><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Sales Tax / GST</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">18%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">18% + 3% Further Tax</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Property Transfer WHT</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">3%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">10.5%</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Securities CGT</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">15%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">45%</td></tr></tbody></table></div>"
-    },
-    "workedExample": {
-      "title": "Step-by-Step Worked Calculation Example",
-      "html": "<p>For an assessable metric of PKR50,000 under current rules, subtracting standard statutory allowances yields your net taxable baseline. Applying progressive tiers results in an itemized breakdown of your total liability and net retained earnings.</p>"
-    },
-    "benefits": {
-      "title": "Benefits of Using This Sindh Vehicle Tax Calculator",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Calculates exact obligations based on official statutory rate schedules.</li><li>Clear breakdown of marginal rates vs effective tax burden.</li><li>Includes standard statutory allowances and exemptions.</li></ul>"
-    },
-    "limitations": {
-      "title": "Edge Cases & Analytical Limitations",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Does not calculate specialized cross-border tax treaties.</li><li>Does not compute subjective legal exemptions without custom inputs.</li></ul>"
-    },
-    "commonMistakes": {
-      "title": "Common Pitfalls & Mistakes to Avoid",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Applying flat rates across entire income instead of progressive tiers.</li><li>Failing to account for mandatory statutory payroll contributions.</li></ul>"
-    },
-    "faq": [
-      {
-        "question": "How does the Sindh Vehicle Tax Calculator calculate tax?",
-        "answer": "It applies official progressive rates and allowances enforced by the Federal Board of Revenue (FBR Pakistan) to your net assessable input."
-      },
-      {
-        "question": "Is this updated for the current tax year?",
-        "answer": "Yes, all rates, thresholds, and statutory allowances are updated for the current tax assessment period."
-      }
-    ],
-    "relatedCalculators": {
-      "title": "Related Calculators",
-      "html": "<p>Explore complementary tools: <a href=\"/countries/pakistan/\" class=\"text-primary font-semibold hover:underline\">Pakistan Tax Overview</a>.</p>"
-    },
-    "suggestedArticles": {
-      "title": "Educational Tax Guides",
-      "html": "<p>Read comprehensive guides: <a href=\"/countries/pakistan/\" class=\"text-primary font-semibold hover:underline\">Pakistan Tax Guide</a>.</p>"
-    },
-    "officialResources": {
-      "title": "Official Government Resources",
-      "html": "<ul class=\"space-y-2\"><li><a href=\"#\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary font-semibold hover:underline\">the Federal Board of Revenue (FBR Pakistan)</a> — Official Pakistan Tax Authority</li></ul>"
-    },
-    "relatedCountry": {
-      "title": "International Tax Hubs",
-      "html": "<p>Compare with other global jurisdictions: <a href=\"/countries/\" class=\"text-primary font-semibold hover:underline\">All Countries Overview</a>.</p>"
-    },
-    "educationalDisclaimer": {
-      "title": "Educational & Accuracy Disclaimer",
-      "text": "This calculator provides financial estimates based on public tax rules from the Federal Board of Revenue (FBR Pakistan). Tax legislation is subject to change. For complex corporate or cross-border filings, consult a certified tax practitioner."
-    },
-    "faqSchema": {
-      "How does the Sindh Vehicle Tax Calculator calculate tax?": "It applies official progressive rates and allowances enforced by the Federal Board of Revenue (FBR Pakistan) to your net assessable input.",
-      "Is this updated for the current tax year?": "Yes, all rates, thresholds, and statutory allowances are updated for the current tax assessment period."
-    }
+  "howToUse": {
+    "title": "How to Use the Sindh Vehicle Tax Calculator",
+    "steps": [
+      "Enter your vehicle's engine displacement in cubic centimeters (cc).",
+      "Specify the vehicle age (years since manufacturing/registration) to determine transfer fees and depreciation.",
+      "Check whether your vehicle qualifies for the one-time Lifetime Token Tax scheme (applicable to cars up to 1000cc).",
+      "Select your Active Taxpayer List (ATL) status: Filer or Non-Filer for Section 234 federal income tax withholding.",
+      "Click Calculate to review provincial token tax, transfer charges, Section 234 advance tax, and total Sindh Excise challan."
+    ]
   },
+  "overview": {
+    "title": "Sindh Motor Vehicle Token Tax & Transfer Rules",
+    "html": "<div class=\"bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-4 my-4\">\n        <p class=\"text-sm font-semibold text-emerald-800 dark:text-emerald-200\">\n          The Sindh Vehicle Tax Calculator computes annual motor vehicle token tax, registration fees, and ownership transfer charges under the Sindh Motor Vehicles Taxation Act. Administered by the Sindh Excise, Taxation & Narcotics Control Department, it models engine capacity (cc), luxury tax levies, lifetime token options, and ATL filer status.\n        </p>\n      </div>\n      <p class=\"mt-3\">\n        In the province of Sindh, motor vehicle road taxes are governed by the <strong>Sindh Motor Vehicles Taxation Act, 1958</strong>, and enforced by the <a href=\"https://excise.gos.pk/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary font-semibold hover:underline\">Excise, Taxation & Narcotics Control Department Government of Sindh</a>. Private and commercial vehicles registered in Karachi, Hyderabad, and other Sindh districts pay annual or lifetime road tax determined strictly by engine capacity (cc) and seated passenger capacity, coupled with federal <strong>Section 234 advance income tax withholding</strong> based on the owner's FBR filer status.\n      </p>\n      <div class=\"my-6 flex justify-center\">\n        <svg viewBox=\"0 0 680 230\" class=\"w-full max-w-2xl h-auto font-sans\">\n          <rect width=\"680\" height=\"230\" rx=\"12\" fill=\"#0f172a\" />\n          <text x=\"340\" y=\"30\" fill=\"#f8fafc\" font-size=\"15\" font-weight=\"bold\" text-anchor=\"middle\">Sindh Motor Vehicle Tax Structure (Engine CC Slabs)</text>\n          \n          <rect x=\"35\" y=\"65\" width=\"180\" height=\"135\" rx=\"8\" fill=\"#1e293b\" stroke=\"#38bdf8\" stroke-width=\"2\" />\n          <text x=\"125\" y=\"90\" fill=\"#38bdf8\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">≤ 1000cc (Hatchbacks)</text>\n          <text x=\"125\" y=\"115\" fill=\"#f8fafc\" font-size=\"12\" text-anchor=\"middle\">Lifetime Token Tax</text>\n          <text x=\"125\" y=\"135\" fill=\"#10b981\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\">One-Time Fee</text>\n          <text x=\"125\" y=\"160\" fill=\"#f8fafc\" font-size=\"11\" text-anchor=\"middle\">Alto, Cultus, WagonR</text>\n          <text x=\"125\" y=\"180\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">Exempt from recurring bills</text>\n\n          <rect x=\"250\" y=\"65\" width=\"180\" height=\"135\" rx=\"8\" fill=\"#1e293b\" stroke=\"#10b981\" stroke-width=\"2\" />\n          <text x=\"340\" y=\"90\" fill=\"#10b981\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">1001cc – 1300cc</text>\n          <text x=\"340\" y=\"115\" fill=\"#f8fafc\" font-size=\"12\" text-anchor=\"middle\">Annual Motor Tax</text>\n          <text x=\"340\" y=\"135\" fill=\"#f8fafc\" font-size=\"12\" text-anchor=\"middle\">PKR 3,000 / Year</text>\n          <text x=\"340\" y=\"155\" fill=\"#38bdf8\" font-size=\"11\" text-anchor=\"middle\">+ Sec 234 FBR Tax</text>\n          <text x=\"340\" y=\"180\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">Yaris, City, Swift</text>\n\n          <rect x=\"465\" y=\"65\" width=\"180\" height=\"135\" rx=\"8\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"2\" />\n          <text x=\"555\" y=\"90\" fill=\"#f59e0b\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">&gt; 1300cc &amp; SUVs</text>\n          <text x=\"555\" y=\"115\" fill=\"#f8fafc\" font-size=\"12\" text-anchor=\"middle\">Annual Motor Tax</text>\n          <text x=\"555\" y=\"135\" fill=\"#f8fafc\" font-size=\"12\" text-anchor=\"middle\">PKR 6,000 – 12,000</text>\n          <text x=\"555\" y=\"155\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">Double WHT for Non-Filers</text>\n          <text x=\"555\" y=\"180\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">Civic, Fortuner, Sportage</text>\n        </svg>\n      </div>"
+  },
+  "formula": {
+    "title": "Sindh Vehicle Excise & Transfer Formula",
+    "html": "<p>Annual and transfer fee structure under the Sindh Motor Vehicle Taxation Schedule:</p>\n      <div class=\"bg-slate-100 dark:bg-slate-800 p-4 rounded-lg my-3 font-mono text-xs\">\n        <p><strong>Total Annual Challan</strong> = Provincial Motor Vehicle Tax + Section 234 Federal WHT + Professional Tax</p>\n        <p class=\"mt-2\"><strong>Engine CC Token Tax Bands:</strong></p>\n        <p>Up to 1000cc: Lifetime token paid upon initial registration</p>\n        <p>1001cc to 1300cc: PKR 3,000 annual motor tax</p>\n        <p>1301cc to 1500cc: PKR 4,500 annual motor tax</p>\n        <p>1501cc to 2000cc: PKR 6,000 to 9,000 annual motor tax</p>\n        <p>Above 2000cc: PKR 12,000+ luxury rates</p>\n        <p class=\"mt-2\"><strong>Ownership Transfer Fee:</strong> Based on vehicle age depreciation formula (PKR 5,000 + age depreciation factor).</p>\n      </div>"
+  },
+  "benefits": {
+    "title": "Sindh Vehicle Tax Benchmark Scenarios",
+    "html": "<div class=\"space-y-4\">\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario A: 1000cc Hatchback in Karachi (Suzuki Cultus / Alto)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> 998cc engine displacement, Karachi registered.<br/>\n            <strong>Tax Rule:</strong> Governed by one-time lifetime token tax scheme.<br/>\n            <strong>Annual Recurring Tax:</strong> <strong>PKR 0</strong>.\n          </p>\n        </div>\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario B: 1300cc Sedan Owned by Active Filer (Toyota Yaris / Honda City)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> 1329cc engine, active filer on ATL.<br/>\n            <strong>Token Tax:</strong> PKR 3,000 provincial tax + PKR 1,500 Section 234 FBR advance tax = <strong>PKR 4,500</strong> total annual challan.<br/>\n            <strong>Filer Advantage:</strong> PKR 1,500 WHT is 100% adjustable on annual tax return.\n          </p>\n        </div>\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario C: 1800cc Sedan Owned by Non-Filer (Honda Civic)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> 1799cc engine, non-filer.<br/>\n            <strong>Token Tax:</strong> PKR 6,000 provincial tax + double non-filer Section 234 WHT (PKR 9,000) = <strong>PKR 15,000</strong> total annual challan.\n          </p>\n        </div>\n      </div>"
+  },
+  "limitations": {
+    "title": "Late Payment Penalties & Digital Payment Options",
+    "html": "<p>Compliance regulations enforced by Sindh Excise:</p>\n      <ul class=\"list-disc pl-5 mt-2 space-y-1 text-sm\">\n        <li><strong>Late Payment Penalties:</strong> Failure to pay vehicle token tax by the due date incurs a statutory compound penalty of up to <strong>100% of the tax due</strong> under Section 9 of the Act.</li>\n        <li><strong>e-Payment Sindh:</strong> Taxpayers can generate a digital PSID and pay token tax through the e-Payment Sindh mobile application, 1Link ATMs, and mobile banking.</li>\n        <li><strong>Biometric Transfer Verification:</strong> Vehicle ownership transfers in Sindh require physical or digital biometric verification of both buyer and seller to prevent forged registrations.</li>\n      </ul>"
+  },
+  "faq": [
+    {
+      "question": "How is motor vehicle token tax calculated in Sindh?",
+      "answer": "Token tax in Sindh is calculated primarily on engine capacity (cc) for cars and jeeps, with vehicles up to 1000cc paying a one-time lifetime tax, and higher engine capacities paying annual recurring token tax."
+    },
+    {
+      "question": "Which vehicles qualify for lifetime token tax in Sindh?",
+      "answer": "Private motor cars and jeeps with engine displacement of 1000cc or less are eligible for lifetime token tax upon initial registration, exempting owners from annual token tax visits."
+    },
+    {
+      "question": "What is the penalty for late token tax payment in Sindh?",
+      "answer": "Late payment attracts statutory penalties ranging from 20% up to 100% of the unpaid token tax amount depending on the duration of the default."
+    },
+    {
+      "question": "How does non-filer status affect the annual token tax bill in Karachi?",
+      "answer": "Under Section 234 of the Income Tax Ordinance, non-filers must pay double the statutory federal withholding tax alongside their provincial token tax challan."
+    },
+    {
+      "question": "Can I pay my Sindh vehicle token tax online?",
+      "answer": "Yes. Sindh Excise provides digital payment via the 'e-Payment GoS' app, online bank portals, and 1Link ATMs using the vehicle registration number and generated PSID."
+    },
+    {
+      "question": "Is biometric verification mandatory for vehicle transfer in Sindh?",
+      "answer": "Yes. To prevent car theft and fraudulent sales, the Sindh Excise Department mandates biometric verification of both seller and buyer at NADRA e-Sahulat centers or excise offices."
+    }
+  ],
+  "faqSchema": {
+    "How is motor vehicle token tax calculated in Sindh?": "Token tax in Sindh is calculated primarily on engine capacity (cc) for cars and jeeps, with vehicles up to 1000cc paying a one-time lifetime tax, and higher engine capacities paying annual recurring token tax.",
+    "Which vehicles qualify for lifetime token tax in Sindh?": "Private motor cars and jeeps with engine displacement of 1000cc or less are eligible for lifetime token tax upon initial registration, exempting owners from annual token tax visits.",
+    "What is the penalty for late token tax payment in Sindh?": "Late payment attracts statutory penalties ranging from 20% up to 100% of the unpaid token tax amount depending on the duration of the default.",
+    "How does non-filer status affect the annual token tax bill in Karachi?": "Under Section 234 of the Income Tax Ordinance, non-filers must pay double the statutory federal withholding tax alongside their provincial token tax challan.",
+    "Can I pay my Sindh vehicle token tax online?": "Yes. Sindh Excise provides digital payment via the 'e-Payment GoS' app, online bank portals, and 1Link ATMs using the vehicle registration number and generated PSID.",
+    "Is biometric verification mandatory for vehicle transfer in Sindh?": "Yes. To prevent car theft and fraudulent sales, the Sindh Excise Department mandates biometric verification of both seller and buyer at NADRA e-Sahulat centers or excise offices."
+  }
+},
   "pakistan-vehicle-tax-islamabad-vehicle-tax-calculator": {
     "overview": {
       "title": "Overview of Islamabad Vehicle Tax Calculator",
@@ -1000,4 +930,67 @@ export const pkContent: Record<string, RichCalculatorContent> = {
       "Is this updated for the current tax year?": "Yes, all rates, thresholds, and statutory allowances are updated for the current tax assessment period."
     }
   }
+,
+  "pakistan-vehicle-tax-islamabad-vehicle-tax-calculator": {
+  "howToUse": {
+    "title": "How to Use the Islamabad Vehicle Tax Calculator",
+    "steps": [
+      "Enter your vehicle's engine capacity in cubic centimeters (cc).",
+      "Select your vehicle category: Motor Car, Jeep/SUV, or Commercial Vehicle.",
+      "Choose your FBR Active Taxpayer List (ATL) status: Active Filer or Non-Filer.",
+      "Check whether your vehicle was registered with lifetime token tax or annual recurring token.",
+      "Click Calculate to view ICT motor tax, road maintenance charges, Section 234 federal withholding tax, and total challan."
+    ]
+  },
+  "overview": {
+    "title": "Islamabad (ICT) Vehicle Token Tax Framework",
+    "html": "<div class=\"bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-4 my-4\">\n        <p class=\"text-sm font-semibold text-emerald-800 dark:text-emerald-200\">\n          The Islamabad Vehicle Tax Calculator computes annual token tax, professional tax, and registration charges under the ICT Excise and Taxation Department. Modeling engine capacity (cc), commercial vs private categories, Section 234 federal income tax withholding, and Active Taxpayer List (ATL) status, it calculates exact ICT challan totals.\n        </p>\n      </div>\n      <p class=\"mt-3\">\n        Administered by the <strong>Excise & Taxation Department, Islamabad Capital Territory (ICT) Administration</strong>, vehicles registered with the 'ICT-Islamabad' registration series operate under a distinct federal-capital taxation regime. Annual token tax challans incorporate provincial-equivalent road maintenance tax, ICT professional tax, and mandatory federal <strong>Section 234 advance income tax withholding</strong> collected on behalf of the Federal Board of Revenue.\n      </p>\n      <div class=\"my-6 flex justify-center\">\n        <svg viewBox=\"0 0 680 230\" class=\"w-full max-w-2xl h-auto font-sans\">\n          <rect width=\"680\" height=\"230\" rx=\"12\" fill=\"#0f172a\" />\n          <text x=\"340\" y=\"30\" fill=\"#f8fafc\" font-size=\"15\" font-weight=\"bold\" text-anchor=\"middle\">Islamabad (ICT) Vehicle Tax Challan Composition</text>\n          \n          <rect x=\"35\" y=\"65\" width=\"180\" height=\"135\" rx=\"8\" fill=\"#1e293b\" stroke=\"#38bdf8\" stroke-width=\"2\" />\n          <text x=\"125\" y=\"90\" fill=\"#38bdf8\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">1. ICT Motor Tax</text>\n          <text x=\"125\" y=\"115\" fill=\"#f8fafc\" font-size=\"12\" text-anchor=\"middle\">Engine CC Based</text>\n          <text x=\"125\" y=\"135\" fill=\"#f8fafc\" font-size=\"12\" text-anchor=\"middle\">PKR 1,000 – 10,000</text>\n          <text x=\"125\" y=\"160\" fill=\"#10b981\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Capital Territory Levy</text>\n          <text x=\"125\" y=\"180\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">Road Maintenance Fund</text>\n\n          <rect x=\"250\" y=\"65\" width=\"180\" height=\"135\" rx=\"8\" fill=\"#1e293b\" stroke=\"#10b981\" stroke-width=\"2\" />\n          <text x=\"340\" y=\"90\" fill=\"#10b981\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">2. Section 234 WHT</text>\n          <text x=\"340\" y=\"115\" fill=\"#f8fafc\" font-size=\"12\" text-anchor=\"middle\">Filer: Standard WHT</text>\n          <text x=\"340\" y=\"135\" fill=\"#ef4444\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Non-Filer: 2x WHT</text>\n          <text x=\"340\" y=\"160\" fill=\"#38bdf8\" font-size=\"11\" text-anchor=\"middle\">FBR Advance Income Tax</text>\n          <text x=\"340\" y=\"180\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">100% Tax Adjustable</text>\n\n          <rect x=\"465\" y=\"65\" width=\"180\" height=\"135\" rx=\"8\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"2\" />\n          <text x=\"555\" y=\"90\" fill=\"#f59e0b\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">3. Digital Challan</text>\n          <text x=\"555\" y=\"115\" fill=\"#f8fafc\" font-size=\"12\" text-anchor=\"middle\">City Islamabad App</text>\n          <text x=\"555\" y=\"135\" fill=\"#f8fafc\" font-size=\"12\" text-anchor=\"middle\">Doorstep Delivery</text>\n          <text x=\"555\" y=\"160\" fill=\"#f59e0b\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Smart Card &amp; Sticker</text>\n          <text x=\"555\" y=\"180\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">1Link / 1Bill online</text>\n        </svg>\n      </div>"
+  },
+  "formula": {
+    "title": "ICT Vehicle Token Tax Schedule",
+    "html": "<p>Statutory fee schedule enforced by ICT Administration and FBR:</p>\n      <div class=\"bg-slate-100 dark:bg-slate-800 p-4 rounded-lg my-3 font-mono text-xs\">\n        <p><strong>Total ICT Challan</strong> = ICT Motor Vehicle Road Tax + Section 234 Federal WHT + Professional Tax</p>\n        <p class=\"mt-2\"><strong>Engine Displacement Bands (ICT):</strong></p>\n        <p>Below 1000cc: Lifetime token tax upon registration</p>\n        <p>1001cc to 1300cc: PKR 2,000 motor tax + PKR 1,500 Filer WHT (PKR 3,000 Non-Filer)</p>\n        <p>1301cc to 1500cc: PKR 2,500 motor tax + PKR 2,500 Filer WHT (PKR 5,000 Non-Filer)</p>\n        <p>1501cc to 1800cc: PKR 3,500 motor tax + PKR 4,500 Filer WHT (PKR 9,000 Non-Filer)</p>\n        <p>Above 2500cc: PKR 10,000 motor tax + PKR 15,000 Filer WHT (PKR 30,000 Non-Filer)</p>\n      </div>"
+  },
+  "benefits": {
+    "title": "Islamabad Vehicle Tax Benchmark Scenarios",
+    "html": "<div class=\"space-y-4\">\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario A: 1200cc Sedan Owned by Filer in Islamabad (Changan Alsvin)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> 1200cc engine, active filer on ATL.<br/>\n            <strong>Token Tax:</strong> PKR 2,000 ICT road tax + PKR 1,500 Section 234 WHT = <strong>PKR 3,500</strong>.<br/>\n            <strong>Filer Advantage:</strong> PKR 1,500 advance income tax is fully adjusted on annual income tax return.\n          </p>\n        </div>\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario B: 1500cc Sedan Owned by Filer (Honda City / Toyota Yaris)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> 1498cc engine, active filer.<br/>\n            <strong>Token Tax:</strong> PKR 2,500 ICT road tax + PKR 2,500 Section 234 WHT = <strong>PKR 5,000</strong> total annual challan.\n          </p>\n        </div>\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario C: 2800cc SUV Owned by Non-Filer (Toyota Fortuner)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> 2755cc engine, non-filer.<br/>\n            <strong>Token Tax:</strong> PKR 10,000 ICT road tax + double non-filer Section 234 WHT (PKR 30,000) = <strong>PKR 40,000</strong>.<br/>\n            <strong>Non-Filer Penalty:</strong> An active filer pays only PKR 25,000 for the same vehicle.\n          </p>\n        </div>\n      </div>"
+  },
+  "limitations": {
+    "title": "City Islamabad App & Doorstep Services",
+    "html": "<p>Digital services and compliance rules for Islamabad registered vehicles:</p>\n      <ul class=\"list-disc pl-5 mt-2 space-y-1 text-sm\">\n        <li><strong>City Islamabad Mobile App:</strong> Vehicle owners can verify registration records, generate token tax challans, and pay fees electronically with delivery of the physical token sticker to their doorstep.</li>\n        <li><strong>Section 234 Advance Tax Credit:</strong> The federal withholding tax component on your ICT excise token receipt is completely adjustable when filing Form 114 on FBR Iris.</li>\n        <li><strong>Universal Number Plates:</strong> Vehicles registered in ICT must display standardized digital barcode security plates issued by the ICT Excise office.</li>\n      </ul>"
+  },
+  "faq": [
+    {
+      "question": "What taxes are included in the Islamabad vehicle token challan?",
+      "answer": "The annual challan consists of the ICT Motor Vehicle Road Tax, ICT Professional Tax, and the federal advance income tax withholding under Section 234."
+    },
+    {
+      "question": "Can I pay my Islamabad vehicle token tax through the City Islamabad app?",
+      "answer": "Yes. The ICT Administration's official 'City Islamabad' app allows you to enter your registration number, generate a 1Link PSID, pay online, and receive the annual token sticker via courier."
+    },
+    {
+      "question": "How does FBR filer status impact vehicle token tax in Islamabad?",
+      "answer": "Active filers on the ATL pay standard Section 234 withholding rates, while non-filers are penalized with 2x to 3x higher withholding tax rates."
+    },
+    {
+      "question": "Is Section 234 withholding tax on vehicle token adjustable?",
+      "answer": "Yes. Section 234 tax paid at the excise counter is an advance income tax payment that can be credited against your total annual income tax liability on the Iris portal."
+    },
+    {
+      "question": "What is the penalty for late payment of ICT vehicle token tax?",
+      "answer": "Late payments beyond the annual grace period (typically September 30) attract late surcharge penalties starting from 10% up to 100% of the token tax amount."
+    },
+    {
+      "question": "Can a vehicle registered in Punjab or Sindh pay token tax in Islamabad?",
+      "answer": "No. Provincial vehicles must pay token tax through their respective provincial excise departments (ePay Punjab or ePay Sindh). ICT Excise only accepts Islamabad-registered vehicles."
+    }
+  ],
+  "faqSchema": {
+    "What taxes are included in the Islamabad vehicle token challan?": "The annual challan consists of the ICT Motor Vehicle Road Tax, ICT Professional Tax, and the federal advance income tax withholding under Section 234.",
+    "Can I pay my Islamabad vehicle token tax through the City Islamabad app?": "Yes. The ICT Administration's official 'City Islamabad' app allows you to enter your registration number, generate a 1Link PSID, pay online, and receive the annual token sticker via courier.",
+    "How does FBR filer status impact vehicle token tax in Islamabad?": "Active filers on the ATL pay standard Section 234 withholding rates, while non-filers are penalized with 2x to 3x higher withholding tax rates.",
+    "Is Section 234 withholding tax on vehicle token adjustable?": "Yes. Section 234 tax paid at the excise counter is an advance income tax payment that can be credited against your total annual income tax liability on the Iris portal.",
+    "What is the penalty for late payment of ICT vehicle token tax?": "Late payments beyond the annual grace period (typically September 30) attract late surcharge penalties starting from 10% up to 100% of the token tax amount.",
+    "Can a vehicle registered in Punjab or Sindh pay token tax in Islamabad?": "No. Provincial vehicles must pay token tax through their respective provincial excise departments (ePay Punjab or ePay Sindh). ICT Excise only accepts Islamabad-registered vehicles."
+  }
+}
 };

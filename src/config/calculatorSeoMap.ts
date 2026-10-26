@@ -149,12 +149,12 @@ export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
     "description": "Calculate monthly income tax on salary in Pakistan under updated FBR tax slabs (0% to 35%). Check take-home pay, Section 149 withholding, and ATL benefits."
   },
   "pakistan-income-tax-business-income-tax-calculator": {
-    "title": "Pakistan Business Tax Calculator: Sole Proprietor & AOP Slabs",
-    "description": "Calculate income tax for businesses, sole proprietors, and AOPs in Pakistan. Compare business tax brackets (0% to 45%) and deductions."
+      "title": "Pakistan Business Tax Calculator 2026: Non-Salaried & AOP Slabs",
+      "description": "Calculate income tax for sole proprietorships, AOPs, and small businesses in Pakistan under the 2025/26 non-salaried tax slabs (15% to 45%)."
   },
   "pakistan-income-tax-capital-gain-tax-calculator": {
-    "title": "Pakistan Securities Capital Gain Tax Calculator: Section 37A",
-    "description": "Calculate capital gains tax on stocks, mutual funds, and listed securities in Pakistan under Section 37A. Compare filer vs non-filer CGT."
+      "title": "Pakistan Securities Capital Gain Tax Calculator 2026: Sec. 37A PSX",
+      "description": "Calculate capital gains tax on PSX shares, mutual funds, and securities under Section 37A. Estimate NCCPL withholding tax for filers and non-filers."
   },
   "pakistan-sales-tax-sales-tax-calculator": {
     "title": "Pakistan Sales Tax & GST Calculator 2026: 18% FBR GST Rate",
@@ -165,32 +165,32 @@ export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
     "description": "Instant 18% GST calculator for Pakistani transactions. Calculate sales tax on goods, taxable value, and gross invoice amounts."
   },
   "pakistan-property-tax-property-tax-calculator": {
-    "title": "Pakistan Property Tax Calculator: Provincial UIPT Rates",
-    "description": "Calculate provincial urban immovable property tax (UIPT) in Punjab, Sindh, KPK, and Islamabad based on Annual Rental Value (ARV)."
+      "title": "Pakistan Property Tax Calculator 2026: Provincial ARV & Slabs",
+      "description": "Calculate provincial property tax across Punjab, Sindh, KPK, and Islamabad. Compute Annual Rental Value (ARV), residential exemptions, and rebate discounts."
   },
   "pakistan-property-tax-capital-gain-tax-calculator": {
-    "title": "Pakistan Property Capital Gain Tax Calculator: Section 37",
-    "description": "Calculate capital gains tax (CGT) on immovable property sales in Pakistan under Section 37. Compare 15% filer rates vs non-filer penalties."
+      "title": "Pakistan Property Capital Gain Tax Calculator 2026: Sec. 37 Slabs",
+      "description": "Calculate capital gains tax on property in Pakistan under Section 37. Estimate FBR filer vs non-filer CGT rates for open plots, houses, and flats."
   },
   "pakistan-property-tax-token-tax-calculator": {
-    "title": "Pakistan Property Token Tax Calculator: Registration Charges",
-    "description": "Calculate property token tax, advance withholding tax, and transfer fees on urban immovable property transactions in Pakistan."
+      "title": "Pakistan Property Transfer & Token Tax Calculator 2026: 236K/236C",
+      "description": "Calculate property registration fees, provincial stamp duty, TMA taxes, and Section 236K/236C advance withholding taxes for filers and non-filers."
   },
   "pakistan-property-tax-rental-income-tax-calculator": {
-    "title": "Pakistan Rental Income Tax Calculator: Section 15 Slabs",
-    "description": "Calculate tax on rental income from real estate in Pakistan under Section 15. Factor in gross rent, deductions, and individual tax slabs."
+      "title": "Pakistan Rental Income Tax Calculator 2026: Sec. 15 FBR Slabs",
+      "description": "Compute tax on rental property income in Pakistan under Section 15. Apply the 1/5th repair deduction, local property taxes, and progressive rental slabs."
   },
   "pakistan-vehicle-tax-vehicle-tax-calculator": {
     "title": "Pakistan Vehicle Token Tax Calculator 2026: Rates by CC",
     "description": "Calculate annual vehicle token tax in Pakistan for Punjab, Sindh, KPK, and ICT. Check rates by engine capacity (CC), lifetime tokens, and filer exemptions."
   },
   "pakistan-vehicle-tax-sindh-vehicle-tax-calculator": {
-    "title": "Sindh Vehicle Tax Calculator: Token Tax & Lifetime Fee",
-    "description": "Calculate Sindh Excise vehicle token tax, lifetime motor vehicle tax, and transfer charges by engine capacity in Karachi and Sindh."
+      "title": "Sindh Vehicle Tax Calculator 2026: Karachi Token & Transfer Fees",
+      "description": "Calculate Sindh vehicle token tax, lifetime token rates, and transfer fees. Includes Section 234 federal withholding tax for filers and non-filers."
   },
   "pakistan-vehicle-tax-islamabad-vehicle-tax-calculator": {
-    "title": "Islamabad Vehicle Tax Calculator: ICT Token Tax & Transfer",
-    "description": "Calculate Islamabad (ICT) vehicle token tax, registration charges, and withholding taxes for filers and non-filers."
+      "title": "Islamabad Vehicle Tax Calculator 2026: ICT Token & Sec. 234 WHT",
+      "description": "Estimate Islamabad vehicle token tax and registration fees. Calculate ICT Excise road tax and Section 234 income tax withholding for filers & non-filers."
   },
   "singapore-income-tax-income-tax-calculator": {
     "title": "Singapore Income Tax & Expat Calculator 2026: IRAS Rates",
