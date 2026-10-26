@@ -213,16 +213,16 @@ export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
     "description": "Calculate Malaysian personal income tax under LHDN resident tax brackets (0% to 30%). Factor in individual reliefs and assessable net income."
   },
   "malaysia-sst-sst-calculator": {
-    "title": "Malaysia SST Calculator 2025/26: Calculate 6% & 8% Service Tax",
-    "description": "Calculate Malaysia Sales and Service Tax (SST). Compute 6% and 8% service tax rates, and 5%/10% sales tax on taxable goods and services."
+    "title": "Malaysia SST Calculator 2026: Calculate 6% & 8% Service Tax, 10% Sales Tax",
+    "description": "Calculate Malaysia Sales & Service Tax (SST) under expanded rates: 8% standard service tax, 6% F&B concession, and 5%/10% sales tax on goods under JKDM rules."
   },
   "malaysia-tax-filing-tax-filing-calculator": {
     "title": "Malaysia Tax Filing Calculator: Form BE / B e-Filing Slabs",
     "description": "Estimate your tax payable or refund before filing LHDN Form BE or Form B on MyTax. Factor in monthly PCB withholding deductions."
   },
   "malaysia-tax-reliefs-tax-reliefs-calculator": {
-    "title": "Malaysia Tax Reliefs Calculator 2025: Maximize LHDN Deductions",
-    "description": "Calculate total tax savings from Malaysian tax reliefs: EPF/life insurance (RM7,000), lifestyle (RM2,500), medical, and child allowances."
+    "title": "Malaysia Tax Reliefs Calculator 2026: Form BE Deductions & Tax Savings",
+    "description": "Calculate maximum LHDN personal tax reliefs for YA 2025/2026: RM9k basic, EPF (RM4k), life insurance (RM3k), medical (RM10k), lifestyle, and child tax savings."
   },
   "malaysia-foreign-income-foreign-income-calculator": {
     "title": "Malaysia Foreign Income Tax Calculator 2026: FSI & DTA Rules",
@@ -273,19 +273,19 @@ export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
     "description": "Calculate Indonesia VAT (PPN 11%) easily. Add PPN to net invoice amounts or extract PPN from inclusive totals under DJP tax rules in Indonesian Rupiah."
   },
   "new-zealand-income-tax-income-tax-calculator": {
-    "title": "NZ Income Tax Calculator 2025/26: IRD Progressive Slabs & PAYE",
-    "description": "Calculate New Zealand income tax under updated IRD tax brackets: 10.5%, 17.5%, 30%, 32%, 39%. Compute PAYE deductions and net salary."
+    "title": "NZ Income Tax Calculator 2026: PAYE Salary, IRD Slabs & ACC Levy",
+    "description": "Calculate New Zealand PAYE income tax, ACC Earner's Levy (1.60%), and take-home pay under updated IRD brackets (10.5% to 39%). Accurate net salary breakdown."
   },
   "new-zealand-gst-gst-calculator": {
-    "title": "NZ GST Calculator: 15% Inclusive & Exclusive Goods Tax",
-    "description": "Calculate 15% New Zealand Goods and Services Tax (GST). Compute GST-inclusive, GST-exclusive, and IRD return values."
+    "title": "NZ GST Calculator 2026: 15% Inclusive & Exclusive Reverse Extraction",
+    "description": "Calculate New Zealand 15% Goods and Services Tax (GST). Add 15% to net quotes or reverse-extract built-in GST using the 3/23 statutory tax fraction under IRD rules."
   },
   "philippines-income-tax-income-tax-calculator": {
-    "title": "Philippines Income Tax Calculator: BIR TRAIN Law Tax Brackets",
-    "description": "Calculate Philippine individual income tax under BIR TRAIN law progressive brackets (0% to 35%). Compute compensation and taxable net income."
+    "title": "Philippines Income Tax Calculator 2026: BIR TRAIN Law Brackets & 2316",
+    "description": "Calculate Philippine individual income tax under TRAIN Law (RA 10963): ₱250k tax-free threshold, 15% to 35% progressive brackets, and net take-home salary."
   },
   "philippines-vat-vat-calculator": {
-    "title": "Philippines VAT Calculator: Calculate 12% Standard Value Added Tax",
-    "description": "Calculate 12% Value Added Tax (VAT) in the Philippines under BIR regulations. Compute net taxable sales and gross transaction amounts."
+    "title": "Philippines VAT Calculator 2026: 12% Inclusive & Exclusive BIR Invoices",
+    "description": "Calculate 12% Value-Added Tax (VAT) in the Philippines. Add 12% to net service fees or reverse-calculate built-in VAT from inclusive receipts under BIR regulations."
   }
 };
