@@ -209,32 +209,32 @@ export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
     "description": "Calculate Singapore property stamp duty: Buyer's Stamp Duty (BSD up to 6%), Additional Buyer's Stamp Duty (ABSD from 0% to 60%), and total acquisition outlay."
   },
   "malaysia-income-tax-income-tax-calculator": {
-    "title": "Malaysia Income Tax Calculator 2025/26: LHDN Tax Rates & Slabs",
-    "description": "Calculate Malaysian personal income tax under LHDN resident tax brackets (0% to 30%). Factor in individual reliefs and assessable net income."
+    "title": "Malaysia Income Tax Calculator 2026 | LHDN Resident Slabs & Rates",
+    "description": "Calculate Malaysia personal income tax under LHDN 2026 brackets (0% to 30%), RM 9,000 personal relief, low-income rebates, and PCB withholding."
   },
   "malaysia-sst-sst-calculator": {
-    "title": "Malaysia SST Calculator 2026: Calculate 6% & 8% Service Tax, 10% Sales Tax",
-    "description": "Calculate Malaysia Sales & Service Tax (SST) under expanded rates: 8% standard service tax, 6% F&B concession, and 5%/10% sales tax on goods under JKDM rules."
+    "title": "Malaysia SST Calculator 2026 | 8% Service Tax & 5%/10% Sales Tax",
+    "description": "Calculate Malaysian Sales and Service Tax (SST) with expanded 8% service tax, 6% F&B/telecom rate, and 5%/10% sales tax (inclusive & exclusive)."
   },
   "malaysia-tax-filing-tax-filing-calculator": {
-    "title": "Malaysia Tax Filing Calculator: Form BE / B e-Filing Slabs",
-    "description": "Estimate your tax payable or refund before filing LHDN Form BE or Form B on MyTax. Factor in monthly PCB withholding deductions."
+    "title": "Malaysia Tax Filing Calculator 2026 | Form BE & MyTax Estimator",
+    "description": "Estimate your annual tax liability and prepare for official LHDN MyTax e-Filing (Form BE/B) with resident reliefs and refund projections."
   },
   "malaysia-tax-reliefs-tax-reliefs-calculator": {
-    "title": "Malaysia Tax Reliefs Calculator 2026: Form BE Deductions & Tax Savings",
-    "description": "Calculate maximum LHDN personal tax reliefs for YA 2025/2026: RM9k basic, EPF (RM4k), life insurance (RM3k), medical (RM10k), lifestyle, and child tax savings."
+    "title": "Malaysia Tax Reliefs Calculator 2026 | Maximize LHDN Deductions",
+    "description": "Calculate total allowable Malaysian tax reliefs—EPF (RM4k), life insurance (RM3k), medical (RM10k), and lifestyle—to maximize annual tax savings."
   },
   "malaysia-foreign-income-foreign-income-calculator": {
-    "title": "Malaysia Foreign Income Tax Calculator 2026: FSI & DTA Rules",
-    "description": "Calculate tax on foreign-sourced income (FSI) remitted into Malaysia. Check qualifying exemptions for foreign dividends, DTA double tax relief, and LHDN slabs."
+    "title": "Malaysia Foreign Income Tax Calculator 2026 | FSI Exemption Guide",
+    "description": "Calculate tax on foreign-source income (FSI) remitted into Malaysia with 100% foreign dividend exemption through 2026 and DTA tax credits."
   },
   "malaysia-rental-income-rental-income-calculator": {
-    "title": "Malaysia Rental Income Tax Calculator 2026: Section 4(d)",
-    "description": "Calculate tax on residential & commercial rental income in Malaysia. Deduct mortgage interest, assessment tax (cukai pintu), quit rent, and repair expenses."
+    "title": "Malaysia Rental Income Tax Calculator 2026 | Sec 4(d) Deductions",
+    "description": "Calculate net taxable rental income under Section 4(d) with allowable deductions for mortgage interest, cukai pintu, quit rent, and repairs."
   },
   "malaysia-business-income-business-income-calculator": {
-    "title": "Malaysia Business & SME Tax Calculator: 15% & 24% Corporate Rates",
-    "description": "Calculate SME corporate income tax in Malaysia: 15% on first RM150,000 chargeable income, 17% on next RM450,000, and 24% headline rate."
+    "title": "Malaysia Business Income Tax Calculator 2026 | Sole Prop & SME Rates",
+    "description": "Calculate business income tax for Malaysian sole proprietorships (Form B) and SMEs (Form C) with 15%/17%/24% preferential corporate tax tiers."
   },
   "united-kingdom-income-tax-income-tax-calculator": {
     "title": "UK Income Tax Calculator 2026: PAYE Salary, HMRC Slabs & Take-Home Pay",
