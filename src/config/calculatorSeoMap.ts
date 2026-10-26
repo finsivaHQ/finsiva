@@ -193,7 +193,7 @@ export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
     "description": "Calculate Islamabad (ICT) vehicle token tax, registration charges, and withholding taxes for filers and non-filers."
   },
   "singapore-income-tax-income-tax-calculator": {
-    "title": "Singapore Income Tax Calculator 2025/26: IRAS Personal Slabs",
+    "title": "Singapore Income Tax & Expat Calculator 2026: IRAS Rates",
     "description": "Calculate Singapore personal income tax under IRAS progressive brackets (0% to 24%). Compare tax reliefs, deductions, and expat tax obligations."
   },
   "singapore-corporate-tax-income-tax-calculator": {

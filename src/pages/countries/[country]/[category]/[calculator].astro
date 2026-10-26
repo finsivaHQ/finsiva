@@ -1660,7 +1660,20 @@ const calcWebAppSchema = {
           ]);
           tax = Math.max(0, tax - Math.min(tax * 0.50, 200));
         } else {
-          tax = taxableIncome * 0.24;
+          var progressive = pTax(taxableIncome, [
+            [20000, 0],
+            [30000, 0.02],
+            [40000, 0.035],
+            [80000, 0.07],
+            [120000, 0.115],
+            [160000, 0.15],
+            [200000, 0.18],
+            [240000, 0.19],
+            [280000, 0.205],
+            [320000, 0.22],
+            [100000000, 0.24]
+          ]);
+          tax = Math.max(taxableIncome * 0.15, progressive);
         }
         var effectiveRate = income > 0 ? (tax / income * 100) : 0;
         setOutput('taxableIncome', taxableIncome, 'currency');
