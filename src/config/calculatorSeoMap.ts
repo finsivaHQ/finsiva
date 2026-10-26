@@ -97,20 +97,20 @@ export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
     "description": "Calculate your net take-home salary in Hong Kong after 5% mandatory MPF deduction and IRD progressive salaries tax (2% to 17%) or standard 15% rate."
   },
   "hong-kong-salaries-tax-hong-kong-tax-calculator-for-expats": {
-    "title": "Hong Kong Tax Calculator for Expats: 180-Day Rule & Rates",
-    "description": "Estimate expat tax liability in Hong Kong. Calculate progressive vs standard 15% rates, rental reimbursement schemes, and foreign income tax rules."
+      "title": "Hong Kong Expat Tax Calculator 2026: Salaries Tax & 60-Day Rules",
+      "description": "Model Hong Kong expat taxes for foreign employees. Compare progressive vs 15% standard rate, rental reimbursement scheme savings, and travel apportionments."
   },
   "hong-kong-salaries-tax-hong-kong-income-tax-for-foreigners-calculator": {
     "title": "Hong Kong Income Tax Calculator for Foreigners & Expats 2025/26",
     "description": "Calculate Hong Kong income tax for foreign workers. Assess territorial source principle, 60-day rule exemptions, and dual-employment contracts."
   },
   "hong-kong-profits-tax-profits-tax-calculator": {
-    "title": "Hong Kong Profits Tax Calculator 2025/26: Two-Tiered Rates",
-    "description": "Calculate Hong Kong profits tax under the two-tiered regime: 8.25% on first HK$2 million profit and 16.5% on remaining corporate earnings."
+      "title": "Hong Kong Profits Tax Calculator 2026: Two-Tiered Rates & IRD Slabs",
+      "description": "Calculate Hong Kong profits tax for 2025/26 under statutory two-tiered rates (8.25% & 16.5%). Estimate assessable profits, allowable deductions, and offshore exemptions."
   },
   "hong-kong-profits-tax-hk-corporate-tax-calculator": {
-    "title": "Hong Kong Corporate Tax Calculator: 8.25% & 16.5% CIT Rates",
-    "description": "Estimate Hong Kong corporate income tax for corporations and unincorporated businesses. Apply statutory exemptions and offshore profit claims."
+      "title": "HK Corporate Tax Calculator 2026: Corporation Profits & Concessions",
+      "description": "Accurate Hong Kong corporate tax calculator for limited companies. Compute statutory two-tiered 8.25%/16.5% CIT, capital allowances, and provisional tax."
   },
   "hong-kong-profits-tax-profit-tax-computation": {
     "title": "Hong Kong Profit Tax Computation: Assessable Profits & Rules",
@@ -125,16 +125,16 @@ export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
     "description": "Calculate Hong Kong stamp duty on real estate sales, rental leases, and stock transfers (0.1% buyer & seller). Instant fee breakdown."
   },
   "hong-kong-stamp-duty-rental-stamp-duty-calculator": {
-    "title": "Hong Kong Rental Stamp Duty Calculator: Tenancy Agreement Fee",
-    "description": "Calculate stamp duty on residential and commercial rental agreements in Hong Kong based on lease duration and annual rent."
+      "title": "Hong Kong Rental Stamp Duty Calculator 2026: Tenancy Lease Rates",
+      "description": "Calculate HK tenancy agreement stamp duty under Cap. 117. Fast calculation for 1-year, 2-year, and 3-year leases with duplicate counterpart stamping rules."
   },
   "hong-kong-stamp-duty-first-registration-tax-calculator": {
   "title": "Hong Kong First Registration Tax (FRT) Calculator: Car Tax & EV 2026",
   "description": "Calculate vehicle First Registration Tax (FRT 40% to 115%) in Hong Kong. Factors in the latest EV One-for-One Replacement Scheme concession up to HK$172,500."
 },
   "hong-kong-property-tax-property-tax-calculator": {
-    "title": "Hong Kong Property Tax Calculator 2025/26: 15% Net Rental Tax",
-    "description": "Calculate Hong Kong property tax on rental income: 15% standard rate on net assessable value after statutory 20% repair and outgoings deduction."
+      "title": "Hong Kong Property Tax Calculator 2026: 15% NAV & Rental Deductions",
+      "description": "Compute Hong Kong property tax on rental income. Apply the statutory 20% repairs allowance, municipal rates deduction, and Personal Assessment tax relief."
   },
   "hong-kong-property-tax-hk-rental-tax-deduction-calculator": {
   "title": "HK Domestic Rental Tax Deduction Calculator: Up to HK$100,000 (2026)",
@@ -197,8 +197,8 @@ export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
     "description": "Calculate Singapore personal income tax under IRAS progressive brackets (0% to 24%). Compare tax reliefs, deductions, and expat tax obligations."
   },
   "singapore-corporate-tax-income-tax-calculator": {
-    "title": "Singapore Corporate Tax Calculator: 17% CIT & Partial Exemption",
-    "description": "Calculate Singapore corporate income tax at the 17% headline rate. Compute Start-Up Tax Exemption (SUTE), Partial Tax Exemption (PTE), and 50% CIT rebates."
+      "title": "Singapore Corporate Tax Calculator 2026: 17% CIT, SUTE & Rebates",
+      "description": "Estimate Singapore corporate income tax with the headline 17% rate, Start-Up Tax Exemption (SUTE), Partial Tax Exemption (PTE), and 50% CIT rebate cap."
   },
   "singapore-gst-gst-calculator": {
     "title": "Singapore GST Calculator 2026: 9% Inclusive & Exclusive",

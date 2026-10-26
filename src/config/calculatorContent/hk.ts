@@ -188,77 +188,67 @@ export const hkContent: Record<string, RichCalculatorContent> = {
   }
 },
   "hong-kong-salaries-tax-hong-kong-tax-calculator-for-expats": {
-    "overview": {
-      "title": "Overview of Hong Kong Tax Calculator for Expats",
-      "html": "<p>Hong Kong expat housing & allowances is governed by statutory laws enforced by the Inland Revenue Department (IRD). This tool provides real-time, precise financial estimates using current rate schedules, thresholds, and allowances.</p><p>This tool incorporates current Hong Kong tax rules governed by the Inland Revenue Department (IRD), applying accurate tax rates, thresholds, and statutory allowances to provide an instant, reliable calculation.</p>"
-    },
-    "howToUse": {
-      "title": "How to Use the Hong Kong Tax Calculator for Expats",
-      "html": "<p>Enter your earned salary, revenue, or assessable transaction value into the Hong Kong Tax Calculator for Expats. Select your tax year and filing parameters to compute exact tax liability.</p><ol class=\"list-decimal pl-6 space-y-2\"><li>Input your total gross income, transaction value, or assessable metric in HK$.</li><li>Select your tax year, filing status, or applicable tax slab tier.</li><li>Specify eligible deductions, reliefs, or statutory exemptions.</li><li>Review the itemized tax breakdown, marginal rates, and net take-home output.</li></ol>"
-    },
-    "understandingResults": {
-      "title": "Understanding Your Calculation Results",
-      "html": "<p>The results summary highlights gross input, taxable base, calculated tax owed, effective tax percentage, and remaining net take-home earnings.</p><ul class=\"list-disc pl-6 space-y-2\"><li><strong>Gross Metric:</strong> Total unadjusted financial baseline prior to statutory calculations.</li><li><strong>Taxable Base:</strong> Net amount subject to tax after subtracting standard exemptions.</li><li><strong>Calculated Tax Owed:</strong> Total monetary liability across all applicable progressive tiers.</li><li><strong>Effective Tax Rate:</strong> Realized overall tax percentage relative to gross input.</li><li><strong>Net Output:</strong> Final post-tax retained amount or net payable obligation.</li></ul>"
-    },
-    "formula": {
-      "title": "Calculation Methodology & Formula Breakdown",
-      "html": "<p>The calculation is executed using the official statutory formula for Hong Kong:</p><p class=\"my-3 font-mono bg-slate-100 dark:bg-slate-800 p-3 rounded text-sm\">Tax Liability = Σ (Progressive Rate × Tier Income) - Exemptions</p><p>Review the primary rate and metric structure applied during computation:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-sm text-left border-collapse border border-slate-200 dark:border-slate-700\"><thead><tr><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Net Chargeable Income (HK$)</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Progressive Rate</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Standard Rate Benchmark</th></tr></thead><tbody><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">First HK$50,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">2%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">15% / 16% Standard Rate</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Next HK$50,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">6%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Applied if progressive tax exceeds standard tax</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Next HK$50,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">10%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Basic Allowance HK$132,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Next HK$50,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">14%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Married Allowance HK$264,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Remainder</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">17%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Highest progressive tier</td></tr></tbody></table></div>"
-    },
-    "taxSlabs": {
-      "title": "Hong Kong Tax Brackets & Rate Structure",
-      "html": "<p>The official rates and thresholds applied by the Inland Revenue Department (IRD) for current assessment periods are detailed below:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-sm text-left border-collapse border border-slate-200 dark:border-slate-700\"><thead><tr><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Allowance Type</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">2024/2025 Amount (HK$)</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Rules</th></tr></thead><tbody><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Basic Allowance</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">HK$132,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Single taxpayers</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Married Allowance</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">HK$264,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Married couples</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Child Allowance</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">HK$130,000 per child</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Up to 9 children</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">MPF Contribution Cap</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">HK$18,000 / year</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">5% mandatory contribution cap</td></tr></tbody></table></div>"
-    },
-    "workedExample": {
-      "title": "Step-by-Step Worked Calculation Example",
-      "html": "<p>For an assessable metric of HK$50,000 under current rules, subtracting standard statutory allowances yields your net taxable baseline. Applying progressive tiers results in an itemized breakdown of your total liability and net retained earnings.</p>"
-    },
-    "benefits": {
-      "title": "Benefits of Using This Hong Kong Tax Calculator for Expats",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Calculates exact obligations based on official statutory rate schedules.</li><li>Clear breakdown of marginal rates vs effective tax burden.</li><li>Includes standard statutory allowances and exemptions.</li></ul>"
-    },
-    "limitations": {
-      "title": "Edge Cases & Analytical Limitations",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Does not calculate specialized cross-border tax treaties.</li><li>Does not compute subjective legal exemptions without custom inputs.</li></ul>"
-    },
-    "commonMistakes": {
-      "title": "Common Pitfalls & Mistakes to Avoid",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Applying flat rates across entire income instead of progressive tiers.</li><li>Failing to account for mandatory statutory payroll contributions.</li></ul>"
-    },
-    "faq": [
-      {
-        "question": "How does the Hong Kong Tax Calculator for Expats calculate tax?",
-        "answer": "It applies official progressive rates and allowances enforced by the Inland Revenue Department (IRD) to your net assessable input."
-      },
-      {
-        "question": "Is this updated for the current tax year?",
-        "answer": "Yes, all rates, thresholds, and statutory allowances are updated for the current tax assessment period."
-      }
-    ],
-    "relatedCalculators": {
-      "title": "Related Calculators",
-      "html": "<p>Explore complementary tools: <a href=\"/countries/hong-kong/\" class=\"text-primary font-semibold hover:underline\">Hong Kong Tax Overview</a>.</p>"
-    },
-    "suggestedArticles": {
-      "title": "Educational Tax Guides",
-      "html": "<p>Read comprehensive guides: <a href=\"/countries/hong-kong/\" class=\"text-primary font-semibold hover:underline\">Hong Kong Tax Guide</a>.</p>"
-    },
-    "officialResources": {
-      "title": "Official Government Resources",
-      "html": "<ul class=\"space-y-2\"><li><a href=\"#\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary font-semibold hover:underline\">the Inland Revenue Department (IRD)</a> — Official Hong Kong Tax Authority</li></ul>"
-    },
-    "relatedCountry": {
-      "title": "International Tax Hubs",
-      "html": "<p>Compare with other global jurisdictions: <a href=\"/countries/\" class=\"text-primary font-semibold hover:underline\">All Countries Overview</a>.</p>"
-    },
-    "educationalDisclaimer": {
-      "title": "Educational & Accuracy Disclaimer",
-      "text": "This calculator provides financial estimates based on public tax rules from the Inland Revenue Department (IRD). Tax legislation is subject to change. For complex corporate or cross-border filings, consult a certified tax practitioner."
-    },
-    "faqSchema": {
-      "How does the Hong Kong Tax Calculator for Expats calculate tax?": "It applies official progressive rates and allowances enforced by the Inland Revenue Department (IRD) to your net assessable input.",
-      "Is this updated for the current tax year?": "Yes, all rates, thresholds, and statutory allowances are updated for the current tax assessment period."
-    }
+  "howToUse": {
+    "title": "How to Use the Hong Kong Expat Tax Calculator",
+    "steps": [
+      "Enter your total gross remuneration (base salary, contractual bonuses, allowances, and equity vesting).",
+      "Input employer-provided housing refunds or rental allowances under the Rental Reimbursement Scheme.",
+      "Specify your marital status and number of dependent children to claim personal statutory allowances.",
+      "Include mandatory MPF contributions (up to HK$18,000 statutory maximum deduction).",
+      "Click Calculate to compare your tax under progressive brackets (2%–17%) versus the 15% standard rate cap."
+    ]
   },
+  "overview": {
+    "title": "Hong Kong Tax Rules for Expats & Foreign Professionals",
+    "html": "<div class=\"bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-4 my-4\">\n        <p class=\"text-sm font-semibold text-emerald-800 dark:text-emerald-200\">\n          The Hong Kong Expat Tax Calculator models progressive vs standard salaries tax for foreign professionals, cross-border executives, and expatriates under the Inland Revenue Ordinance. Calculating the 60-day visitor rule, 180-day residency threshold, rental reimbursement schemes, and dual-employment regional travel apportionments, it optimizes take-home pay and tax filing strategy.\n        </p>\n      </div>\n      <p class=\"mt-3\">\n        Hong Kong is renowned for offering one of the world's most expatriate-friendly personal tax environments. Foreign professionals employed in Hong Kong pay Salaries Tax under a <strong>two-method system</strong>: progressive rates ranging from 2% to 17% (with generous personal allowances), or a flat standard rate of <strong>15%</strong> on net assessable income without personal allowances—whichever produces the lower tax bill. Moreover, expatriates benefit from tax-advantaged <strong>Rental Reimbursement Schemes</strong> and territorial exemptions for non-Hong Kong sourced employment.\n      </p>\n      <div class=\"my-6 flex justify-center\">\n        <svg viewBox=\"0 0 680 230\" class=\"w-full max-w-2xl h-auto font-sans\">\n          <rect width=\"680\" height=\"230\" rx=\"12\" fill=\"#0f172a\" />\n          <text x=\"340\" y=\"30\" fill=\"#f8fafc\" font-size=\"15\" font-weight=\"bold\" text-anchor=\"middle\">Expat Tax Liability Assessment Flowchart</text>\n          \n          <rect x=\"35\" y=\"65\" width=\"135\" height=\"125\" rx=\"8\" fill=\"#1e293b\" stroke=\"#38bdf8\" stroke-width=\"2\" />\n          <text x=\"102\" y=\"95\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Days in HK</text>\n          <text x=\"102\" y=\"125\" fill=\"#f8fafc\" font-size=\"11\" text-anchor=\"middle\">≤ 60 Days: Exempt</text>\n          <text x=\"102\" y=\"145\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">&gt; 60 Days: Taxable</text>\n\n          <path d=\"M 175 125 L 200 125\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\" />\n\n          <rect x=\"205\" y=\"65\" width=\"135\" height=\"125\" rx=\"8\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"2\" />\n          <text x=\"272\" y=\"95\" fill=\"#f59e0b\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Employment Source</text>\n          <text x=\"272\" y=\"125\" fill=\"#f8fafc\" font-size=\"11\" text-anchor=\"middle\">HK Contract: 100%</text>\n          <text x=\"272\" y=\"145\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">Offshore: Days Basis</text>\n\n          <path d=\"M 345 125 L 370 125\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\" />\n\n          <rect x=\"375\" y=\"65\" width=\"135\" height=\"125\" rx=\"8\" fill=\"#1e293b\" stroke=\"#10b981\" stroke-width=\"2\" />\n          <text x=\"442\" y=\"95\" fill=\"#10b981\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Rental Benefit</text>\n          <text x=\"442\" y=\"125\" fill=\"#f8fafc\" font-size=\"11\" text-anchor=\"middle\">Reimbursement</text>\n          <text x=\"442\" y=\"145\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">Capped at 10%</text>\n\n          <path d=\"M 515 125 L 540 125\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\" />\n\n          <rect x=\"545\" y=\"65\" width=\"105\" height=\"125\" rx=\"8\" fill=\"#1e293b\" stroke=\"#ec4899\" stroke-width=\"2\" />\n          <text x=\"597\" y=\"95\" fill=\"#ec4899\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Dual Calc</text>\n          <text x=\"597\" y=\"125\" fill=\"#f8fafc\" font-size=\"11\" text-anchor=\"middle\">Progressive vs</text>\n          <text x=\"597\" y=\"145\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">15% Standard</text>\n        </svg>\n      </div>"
+  },
+  "formula": {
+    "title": "Expat Tax Calculations: Progressive vs Standard Cap",
+    "html": "<p>Salaries Tax for expats is statutory law under Section 13 of the Inland Revenue Ordinance:</p>\n      <div class=\"bg-slate-100 dark:bg-slate-800 p-4 rounded-lg my-3 font-mono text-xs\">\n        <p><strong>Method 1 (Progressive Rates):</strong></p>\n        <p>Net Chargeable Income = Assessable Income - Allowable Deductions - Personal Allowances</p>\n        <p>Progressive Brackets: 2% (first HK$50k), 6% (next HK$50k), 10% (next HK$50k), 14% (next HK$50k), 17% (remainder)</p>\n        <p class=\"mt-2\"><strong>Method 2 (Standard Rate Cap):</strong></p>\n        <p>Standard Tax = (Assessable Income - Allowable Deductions) × 15%</p>\n        <p class=\"mt-2 text-emerald-600 dark:text-emerald-400\"><strong>Final Tax Payable</strong> = MIN(Method 1, Method 2)</p>\n      </div>"
+  },
+  "benefits": {
+    "title": "Expatriate Benchmark Scenarios",
+    "html": "<div class=\"space-y-4\">\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario A: Expat Professional with Rental Scheme (HK$750,000 Package)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> Single expat with HK$750,000 salary, HK$180,000 rent reimbursed.<br/>\n            <strong>Housing Benefit Valuation:</strong> Treated as 10% of remaining salary (HK$57,000) rather than cash rent (HK$180,000).<br/>\n            <strong>Tax Savings:</strong> Reduces taxable income by HK$123,000, saving approximately <strong>HK$20,910</strong> in net salaries tax.\n          </p>\n        </div>\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario B: Mid-Level Expat Family (HK$1,200,000 Package)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> Married expat, non-working spouse, 1 child.<br/>\n            <strong>Allowances:</strong> Married Allowance (HK$264,000) + Child Allowance (HK$130,000) + MPF (HK$18,000) = HK$412,000.<br/>\n            <strong>Net Chargeable Income:</strong> HK$788,000.<br/>\n            <strong>Tax Payable:</strong> Computed under progressive brackets = <strong>HK$115,960</strong> (Effective Rate: 9.66%).\n          </p>\n        </div>\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario C: Senior Executive at Standard Rate (HK$3,000,000 Package)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> Senior director earning HK$3,000,000.<br/>\n            <strong>Progressive Calculation:</strong> Exceeds HK$480,000.<br/>\n            <strong>Standard Rate Cap:</strong> (HK$3,000,000 - HK$18,000 MPF) × 15% = <strong>HK$447,300</strong>.<br/>\n            <strong>Standard Rate Benefit:</strong> Automatically saves ~HK$35,000 compared to progressive rates.\n          </p>\n        </div>\n      </div>"
+  },
+  "limitations": {
+    "title": "60-Day Rule & Departure Clearance (IR56G)",
+    "html": "<p>Critical statutory compliance rules foreign professionals must navigate in Hong Kong:</p>\n      <ul class=\"list-disc pl-5 mt-2 space-y-1 text-sm\">\n        <li><strong>The 60-Day Exemption Rule:</strong> A visitor who renders services in Hong Kong during visits not exceeding 60 days in a tax year is exempt from Salaries Tax on employment earnings under Section 8(1A)(b).</li>\n        <li><strong>Time Apportionment:</strong> Foreign contracts negotiated with non-Hong Kong employers qualify for 'time apportionment', where only days spent in Hong Kong are assessable.</li>\n        <li><strong>Tax Clearance on Departure (IR56G):</strong> Employers must notify the IRD at least one month before an expat permanently leaves Hong Kong and withhold all payments until a Letter of Release is issued.</li>\n      </ul>"
+  },
+  "faq": [
+    {
+      "question": "How does the 60-day rule work for expats visiting Hong Kong?",
+      "answer": "Under Section 8(1A)(b) of the IRO, an employee who renders services in Hong Kong for not more than 60 days in a Year of Assessment is entirely exempt from Hong Kong Salaries Tax on that employment income."
+    },
+    {
+      "question": "How does the Rental Reimbursement Scheme benefit expat employees?",
+      "answer": "If an employer directly pays or reimburses accommodation rent under strict contractual oversight, the taxable value added to the employee's assessable income is capped at just 10% of base salary, offering substantial tax savings over cash rent allowances."
+    },
+    {
+      "question": "When does the standard 15% rate cap apply over progressive tax rates?",
+      "answer": "The IRD automatically calculates Salaries Tax under both progressive rates (2% to 17% with personal allowances) and the standard rate (15% without allowances). Taxpayers are assessed at whichever produces the lower tax bill, usually kicking in around HK$2M income."
+    },
+    {
+      "question": "Are Mandatory Provident Fund (MPF) contributions mandatory for expat workers?",
+      "answer": "Foreign employees entering Hong Kong on employment visas who belong to overseas retirement schemes or whose employment contracts are under 13 months are exempt from MPF. Otherwise, mandatory contributions (5% up to HK$1,500/month) apply."
+    },
+    {
+      "question": "Can an expat claim time-apportionment for business travel outside Hong Kong?",
+      "answer": "Time-apportionment claims are only permitted if the employment contract is deemed 'non-Hong Kong sourced' (contract negotiated, entered into, and enforceable outside Hong Kong, with an offshore employer and offshore payroll)."
+    },
+    {
+      "question": "What is Form IR56G and why does an employer withhold an expat's final salary?",
+      "answer": "Under Section 52(7) of the IRO, when an expatriate employee is leaving Hong Kong permanently, the employer must submit Form IR56G and freeze all salaries and severance payments for one month until the employee obtains an official IRD Letter of Release."
+    }
+  ],
+  "faqSchema": {
+    "How does the 60-day rule work for expats visiting Hong Kong?": "Under Section 8(1A)(b) of the IRO, an employee who renders services in Hong Kong for not more than 60 days in a Year of Assessment is entirely exempt from Hong Kong Salaries Tax on that employment income.",
+    "How does the Rental Reimbursement Scheme benefit expat employees?": "If an employer directly pays or reimburses accommodation rent under strict contractual oversight, the taxable value added to the employee's assessable income is capped at just 10% of base salary, offering substantial tax savings over cash rent allowances.",
+    "When does the standard 15% rate cap apply over progressive tax rates?": "The IRD automatically calculates Salaries Tax under both progressive rates (2% to 17% with personal allowances) and the standard rate (15% without allowances). Taxpayers are assessed at whichever produces the lower tax bill, usually kicking in around HK$2M income.",
+    "Are Mandatory Provident Fund (MPF) contributions mandatory for expat workers?": "Foreign employees entering Hong Kong on employment visas who belong to overseas retirement schemes or whose employment contracts are under 13 months are exempt from MPF. Otherwise, mandatory contributions (5% up to HK$1,500/month) apply.",
+    "Can an expat claim time-apportionment for business travel outside Hong Kong?": "Time-apportionment claims are only permitted if the employment contract is deemed 'non-Hong Kong sourced' (contract negotiated, entered into, and enforceable outside Hong Kong, with an offshore employer and offshore payroll).",
+    "What is Form IR56G and why does an employer withhold an expat's final salary?": "Under Section 52(7) of the IRO, when an expatriate employee is leaving Hong Kong permanently, the employer must submit Form IR56G and freeze all salaries and severance payments for one month until the employee obtains an official IRD Letter of Release."
+  }
+},
   "hong-kong-salaries-tax-hong-kong-income-tax-for-foreigners-calculator": {
     "overview": {
       "title": "Overview of HK Income Tax for Foreigners Calculator",
@@ -332,149 +322,129 @@ export const hkContent: Record<string, RichCalculatorContent> = {
     }
   },
   "hong-kong-profits-tax-profits-tax-calculator": {
-    "overview": {
-      "title": "Overview of Profits Tax Calculator",
-      "html": "<p>Hong Kong corporate profits tax is governed by statutory laws enforced by the Inland Revenue Department (IRD). This tool provides real-time, precise financial estimates using current rate schedules, thresholds, and allowances.</p><p>This tool incorporates current Hong Kong tax rules governed by the Inland Revenue Department (IRD), applying accurate tax rates, thresholds, and statutory allowances to provide an instant, reliable calculation.</p>"
-    },
-    "howToUse": {
-      "title": "How to Use the Profits Tax Calculator",
-      "html": "<p>Enter your earned salary, revenue, or assessable transaction value into the Profits Tax Calculator. Select your tax year and filing parameters to compute exact tax liability.</p><ol class=\"list-decimal pl-6 space-y-2\"><li>Input your total gross income, transaction value, or assessable metric in HK$.</li><li>Select your tax year, filing status, or applicable tax slab tier.</li><li>Specify eligible deductions, reliefs, or statutory exemptions.</li><li>Review the itemized tax breakdown, marginal rates, and net take-home output.</li></ol>"
-    },
-    "understandingResults": {
-      "title": "Understanding Your Calculation Results",
-      "html": "<p>The results summary highlights gross input, taxable base, calculated tax owed, effective tax percentage, and remaining net take-home earnings.</p><ul class=\"list-disc pl-6 space-y-2\"><li><strong>Gross Metric:</strong> Total unadjusted financial baseline prior to statutory calculations.</li><li><strong>Taxable Base:</strong> Net amount subject to tax after subtracting standard exemptions.</li><li><strong>Calculated Tax Owed:</strong> Total monetary liability across all applicable progressive tiers.</li><li><strong>Effective Tax Rate:</strong> Realized overall tax percentage relative to gross input.</li><li><strong>Net Output:</strong> Final post-tax retained amount or net payable obligation.</li></ul>"
-    },
-    "formula": {
-      "title": "Calculation Methodology & Formula Breakdown",
-      "html": "<p>The calculation is executed using the official statutory formula for Hong Kong:</p><p class=\"my-3 font-mono bg-slate-100 dark:bg-slate-800 p-3 rounded text-sm\">Tax Liability = Σ (Progressive Rate × Tier Income) - Exemptions</p><p>Review the primary rate and metric structure applied during computation:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-sm text-left border-collapse border border-slate-200 dark:border-slate-700\"><thead><tr><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Net Chargeable Income (HK$)</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Progressive Rate</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Standard Rate Benchmark</th></tr></thead><tbody><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">First HK$50,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">2%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">15% / 16% Standard Rate</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Next HK$50,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">6%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Applied if progressive tax exceeds standard tax</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Next HK$50,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">10%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Basic Allowance HK$132,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Next HK$50,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">14%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Married Allowance HK$264,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Remainder</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">17%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Highest progressive tier</td></tr></tbody></table></div>"
-    },
-    "taxSlabs": {
-      "title": "Hong Kong Tax Brackets & Rate Structure",
-      "html": "<p>The official rates and thresholds applied by the Inland Revenue Department (IRD) for current assessment periods are detailed below:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-sm text-left border-collapse border border-slate-200 dark:border-slate-700\"><thead><tr><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Allowance Type</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">2024/2025 Amount (HK$)</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Rules</th></tr></thead><tbody><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Basic Allowance</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">HK$132,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Single taxpayers</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Married Allowance</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">HK$264,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Married couples</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Child Allowance</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">HK$130,000 per child</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Up to 9 children</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">MPF Contribution Cap</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">HK$18,000 / year</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">5% mandatory contribution cap</td></tr></tbody></table></div>"
-    },
-    "workedExample": {
-      "title": "Step-by-Step Worked Calculation Example",
-      "html": "<p>For an assessable metric of HK$50,000 under current rules, subtracting standard statutory allowances yields your net taxable baseline. Applying progressive tiers results in an itemized breakdown of your total liability and net retained earnings.</p>"
-    },
-    "benefits": {
-      "title": "Benefits of Using This Profits Tax Calculator",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Calculates exact obligations based on official statutory rate schedules.</li><li>Clear breakdown of marginal rates vs effective tax burden.</li><li>Includes standard statutory allowances and exemptions.</li></ul>"
-    },
-    "limitations": {
-      "title": "Edge Cases & Analytical Limitations",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Does not calculate specialized cross-border tax treaties.</li><li>Does not compute subjective legal exemptions without custom inputs.</li></ul>"
-    },
-    "commonMistakes": {
-      "title": "Common Pitfalls & Mistakes to Avoid",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Applying flat rates across entire income instead of progressive tiers.</li><li>Failing to account for mandatory statutory payroll contributions.</li></ul>"
-    },
-    "faq": [
-      {
-        "question": "How does the Profits Tax Calculator calculate tax?",
-        "answer": "It applies official progressive rates and allowances enforced by the Inland Revenue Department (IRD) to your net assessable input."
-      },
-      {
-        "question": "Is this updated for the current tax year?",
-        "answer": "Yes, all rates, thresholds, and statutory allowances are updated for the current tax assessment period."
-      }
-    ],
-    "relatedCalculators": {
-      "title": "Related Calculators",
-      "html": "<p>Explore complementary tools: <a href=\"/countries/hong-kong/\" class=\"text-primary font-semibold hover:underline\">Hong Kong Tax Overview</a>.</p>"
-    },
-    "suggestedArticles": {
-      "title": "Educational Tax Guides",
-      "html": "<p>Read comprehensive guides: <a href=\"/countries/hong-kong/\" class=\"text-primary font-semibold hover:underline\">Hong Kong Tax Guide</a>.</p>"
-    },
-    "officialResources": {
-      "title": "Official Government Resources",
-      "html": "<ul class=\"space-y-2\"><li><a href=\"#\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary font-semibold hover:underline\">the Inland Revenue Department (IRD)</a> — Official Hong Kong Tax Authority</li></ul>"
-    },
-    "relatedCountry": {
-      "title": "International Tax Hubs",
-      "html": "<p>Compare with other global jurisdictions: <a href=\"/countries/\" class=\"text-primary font-semibold hover:underline\">All Countries Overview</a>.</p>"
-    },
-    "educationalDisclaimer": {
-      "title": "Educational & Accuracy Disclaimer",
-      "text": "This calculator provides financial estimates based on public tax rules from the Inland Revenue Department (IRD). Tax legislation is subject to change. For complex corporate or cross-border filings, consult a certified tax practitioner."
-    },
-    "faqSchema": {
-      "How does the Profits Tax Calculator calculate tax?": "It applies official progressive rates and allowances enforced by the Inland Revenue Department (IRD) to your net assessable input.",
-      "Is this updated for the current tax year?": "Yes, all rates, thresholds, and statutory allowances are updated for the current tax assessment period."
-    }
+  "howToUse": {
+    "title": "How to Use the Hong Kong Profits Tax Calculator",
+    "steps": [
+      "Select your business structure: Corporation (Limited Company) or Unincorporated Entity (Partnership / Sole Proprietorship).",
+      "Enter your gross assessable profit (net turnover minus allowable business operating expenses and statutory outgoings).",
+      "Specify if your entity is the designated nominating entity entitled to claim the two-tiered profits tax rates under connected entity rules.",
+      "Input any eligible tax concessions, capital allowances, or mandatory provisional tax prepayments from previous assessments.",
+      "Click Calculate to review statutory two-tiered tax liability, effective rate, and net retained corporate earnings."
+    ]
   },
+  "overview": {
+    "title": "Hong Kong Profits Tax System & Two-Tiered Rates",
+    "html": "<div class=\"bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-4 my-4\">\n        <p class=\"text-sm font-semibold text-emerald-800 dark:text-emerald-200\">\n          The Hong Kong Profits Tax Calculator determines net tax liability for corporations and unincorporated entities under the Inland Revenue Ordinance two-tiered regime. Incorporating statutory 8.25% (first HK$2M) and 16.5% standard corporate rates, or 7.5% and 15% unincorporated tiers, it models assessable profits, territorial exemptions, offshore claims, and statutory depreciation allowances accurately.\n        </p>\n      </div>\n      <p class=\"mt-3\">\n        Hong Kong enforces a strict <strong>territorial source principle</strong> of taxation under Section 14 of the Inland Revenue Ordinance (Cap. 112). Only profits arising in or derived from a trade, profession, or business carried on in Hong Kong are assessable to profits tax. Offshore profits generated outside the territorial jurisdiction are completely exempt from Hong Kong tax, irrespective of whether they are remitted into Hong Kong banks, subject to Foreign Source Income Exemption (FSIE) economic substance rules for passive investment holdings.\n      </p>\n      <div class=\"my-6 flex justify-center\">\n        <svg viewBox=\"0 0 680 230\" class=\"w-full max-w-2xl h-auto font-sans\">\n          <rect width=\"680\" height=\"230\" rx=\"12\" fill=\"#0f172a\" />\n          <text x=\"340\" y=\"30\" fill=\"#f8fafc\" font-size=\"15\" font-weight=\"bold\" text-anchor=\"middle\">Hong Kong Profits Tax Two-Tiered Structure</text>\n          \n          <rect x=\"40\" y=\"60\" width=\"180\" height=\"135\" rx=\"8\" fill=\"#1e293b\" stroke=\"#38bdf8\" stroke-width=\"2\" />\n          <text x=\"130\" y=\"85\" fill=\"#38bdf8\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Tier 1: First HK$2M</text>\n          <text x=\"130\" y=\"115\" fill=\"#f8fafc\" font-size=\"20\" font-weight=\"bold\" text-anchor=\"middle\">8.25%</text>\n          <text x=\"130\" y=\"135\" fill=\"#94a3b8\" font-size=\"11\" text-anchor=\"middle\">Corporations</text>\n          <text x=\"130\" y=\"155\" fill=\"#10b981\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">7.50%</text>\n          <text x=\"130\" y=\"175\" fill=\"#94a3b8\" font-size=\"11\" text-anchor=\"middle\">Unincorporated Firms</text>\n\n          <path d=\"M 230 125 L 260 125\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\" />\n\n          <rect x=\"270\" y=\"60\" width=\"180\" height=\"135\" rx=\"8\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"2\" />\n          <text x=\"360\" y=\"85\" fill=\"#f59e0b\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Tier 2: Above HK$2M</text>\n          <text x=\"360\" y=\"115\" fill=\"#f8fafc\" font-size=\"20\" font-weight=\"bold\" text-anchor=\"middle\">16.5%</text>\n          <text x=\"360\" y=\"135\" fill=\"#94a3b8\" font-size=\"11\" text-anchor=\"middle\">Standard Corporate Rate</text>\n          <text x=\"360\" y=\"155\" fill=\"#f59e0b\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">15.0%</text>\n          <text x=\"360\" y=\"175\" fill=\"#94a3b8\" font-size=\"11\" text-anchor=\"middle\">Unincorporated Businesses</text>\n\n          <path d=\"M 460 125 L 490 125\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\" />\n\n          <rect x=\"500\" y=\"60\" width=\"145\" height=\"135\" rx=\"8\" fill=\"#1e293b\" stroke=\"#10b981\" stroke-width=\"2\" />\n          <text x=\"572\" y=\"85\" fill=\"#10b981\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Offshore Profits</text>\n          <text x=\"572\" y=\"115\" fill=\"#f8fafc\" font-size=\"20\" font-weight=\"bold\" text-anchor=\"middle\">0.00%</text>\n          <text x=\"572\" y=\"140\" fill=\"#94a3b8\" font-size=\"11\" text-anchor=\"middle\">Territorial Exemption</text>\n          <text x=\"572\" y=\"165\" fill=\"#38bdf8\" font-size=\"11\" text-anchor=\"middle\">Subject to FSIE</text>\n        </svg>\n      </div>"
+  },
+  "formula": {
+    "title": "Statutory Profits Tax Calculation Formula",
+    "html": "<p>Profits tax liability under the Inland Revenue Department (IRD) two-tiered framework is computed via:</p>\n      <div class=\"bg-slate-100 dark:bg-slate-800 p-4 rounded-lg my-3 font-mono text-xs\">\n        <p><strong>Corporate Entity:</strong></p>\n        <p>Assessable Profits ≤ HK$2,000,000: Tax = Assessable Profits × 8.25%</p>\n        <p>Assessable Profits &gt; HK$2,000,000: Tax = (HK$2,000,000 × 8.25%) + ((Assessable Profits - HK$2,000,000) × 16.5%)</p>\n        <p class=\"mt-2\"><strong>Unincorporated Business (Sole Proprietorship / Partnership):</strong></p>\n        <p>Assessable Profits ≤ HK$2,000,000: Tax = Assessable Profits × 7.50%</p>\n        <p>Assessable Profits &gt; HK$2,000,000: Tax = (HK$2,000,000 × 7.50%) + ((Assessable Profits - HK$2,000,000) × 15.0%)</p>\n      </div>"
+  },
+  "benefits": {
+    "title": "Worked Benchmark Scenarios",
+    "html": "<div class=\"space-y-4\">\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario A: Digital SME Startup (HK$1,500,000 Assessable Profit)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> Corporation with HK$1.5M profit, single qualifying nominating entity.<br/>\n            <strong>Tax Breakdown:</strong> Falls entirely within Tier 1 (≤ HK$2,000,000) @ 8.25%.<br/>\n            <strong>Tax Payable:</strong> HK$1,500,000 × 8.25% = <strong>HK$123,750</strong> (Effective Tax Rate: 8.25%).\n          </p>\n        </div>\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario B: Mid-Market Trading Company (HK$6,000,000 Assessable Profit)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> Corporation with HK$6M profit.<br/>\n            <strong>Tier 1 Tax:</strong> First HK$2,000,000 × 8.25% = HK$165,000.<br/>\n            <strong>Tier 2 Tax:</strong> Remaining HK$4,000,000 × 16.5% = HK$660,000.<br/>\n            <strong>Total Tax Payable:</strong> HK$165,000 + HK$660,000 = <strong>HK$825,000</strong> (Effective Tax Rate: 13.75%).\n          </p>\n        </div>\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario C: Regional Advisory Group (HK$15,000,000 Assessable Profit)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> Corporation with HK$15M profit.<br/>\n            <strong>Tier 1 Tax:</strong> First HK$2,000,000 × 8.25% = HK$165,000.<br/>\n            <strong>Tier 2 Tax:</strong> Remaining HK$13,000,000 × 16.5% = HK$2,145,000.<br/>\n            <strong>Total Tax Payable:</strong> HK$165,000 + HK$2,145,000 = <strong>HK$2,310,000</strong> (Effective Tax Rate: 15.40%).\n          </p>\n        </div>\n      </div>"
+  },
+  "limitations": {
+    "title": "Connected Entities & Tax Filing Rules",
+    "html": "<p>To prevent tax avoidance via corporate splitting, the Inland Revenue Ordinance enforces strict <strong>connected entity restrictions</strong> under the two-tiered profits tax regime:</p>\n      <ul class=\"list-disc pl-5 mt-2 space-y-1 text-sm\">\n        <li><strong>Single Entity Election:</strong> Only one entity within a group of connected entities is eligible to elect for the 8.25% two-tiered tax rate in any given Year of Assessment.</li>\n        <li><strong>Definition of Connected Entity:</strong> An entity is connected to another if one entity controls the other, or both entities are controlled by the same person or enterprise (controlling over 50% voting power, capital, or distributed profits).</li>\n        <li><strong>FSIE Economic Substance:</strong> Multinational enterprise groups claiming offshore exemptions on passive dividends, equity gains, or IP income must satisfy substantial economic activity requirements in Hong Kong.</li>\n      </ul>"
+  },
+  "faq": [
+    {
+      "question": "How does the Hong Kong two-tiered profits tax regime work?",
+      "answer": "Under the two-tiered regime introduced in Year of Assessment 2018/19, corporations pay 8.25% on the first HK$2,000,000 of assessable profits and 16.5% on profits exceeding that threshold. Unincorporated businesses pay 7.5% on the first HK$2M and 15% on the balance."
+    },
+    {
+      "question": "What qualifies as offshore non-taxable profits under the territorial principle?",
+      "answer": "Profits earned from operations, contract negotiations, manufacturing, or service provision executed wholly outside Hong Kong are eligible for offshore profit tax exemption (0% rate). Companies must substantiate claims through IRD offshore profit queries and satisfy FSIE compliance for passive income."
+    },
+    {
+      "question": "Can a corporate group with multiple subsidiaries claim the 8.25% tier for each company?",
+      "answer": "No. The two-tiered legislation explicitly dictates that only one entity within a group of connected entities can elect for the preferential two-tiered rates per year. All other sister or subsidiary companies must apply the full flat 16.5% rate."
+    },
+    {
+      "question": "What business expenses are tax-deductible in Hong Kong?",
+      "answer": "All outgoings and expenses incurred in the production of assessable profits are tax-deductible. This includes office rent, employee salaries, MPF contributions (up to 15% of total remuneration), utility bills, interest on commercial borrowings, and depreciation allowances."
+    },
+    {
+      "question": "When is the Hong Kong Profits Tax Return (BIR51) due?",
+      "answer": "BIR51 returns are typically issued by the IRD on the first working day of April. Companies with an accounting year-end between 1 April and 30 November (Code M) have until 15 November, while those with a 31 December year-end (Code D) have until 15 August under Block Extension Schemes."
+    },
+    {
+      "question": "Does Hong Kong levy withholding tax on dividends or capital gains?",
+      "answer": "Hong Kong does not levy capital gains tax, nor does it impose withholding tax on dividend distributions to local or foreign shareholders. However, royalties paid to non-resident entities for the use of intellectual property may be subject to deemed withholding tax."
+    }
+  ],
+  "faqSchema": {
+    "How does the Hong Kong two-tiered profits tax regime work?": "Under the two-tiered regime introduced in Year of Assessment 2018/19, corporations pay 8.25% on the first HK$2,000,000 of assessable profits and 16.5% on profits exceeding that threshold. Unincorporated businesses pay 7.5% on the first HK$2M and 15% on the balance.",
+    "What qualifies as offshore non-taxable profits under the territorial principle?": "Profits earned from operations, contract negotiations, manufacturing, or service provision executed wholly outside Hong Kong are eligible for offshore profit tax exemption (0% rate). Companies must substantiate claims through IRD offshore profit queries and satisfy FSIE compliance for passive income.",
+    "Can a corporate group with multiple subsidiaries claim the 8.25% tier for each company?": "No. The two-tiered legislation explicitly dictates that only one entity within a group of connected entities can elect for the preferential two-tiered rates per year. All other sister or subsidiary companies must apply the full flat 16.5% rate.",
+    "What business expenses are tax-deductible in Hong Kong?": "All outgoings and expenses incurred in the production of assessable profits are tax-deductible. This includes office rent, employee salaries, MPF contributions (up to 15% of total remuneration), utility bills, interest on commercial borrowings, and depreciation allowances.",
+    "When is the Hong Kong Profits Tax Return (BIR51) due?": "BIR51 returns are typically issued by the IRD on the first working day of April. Companies with an accounting year-end between 1 April and 30 November (Code M) have until 15 November, while those with a 31 December year-end (Code D) have until 15 August under Block Extension Schemes.",
+    "Does Hong Kong levy withholding tax on dividends or capital gains?": "Hong Kong does not levy capital gains tax, nor does it impose withholding tax on dividend distributions to local or foreign shareholders. However, royalties paid to non-resident entities for the use of intellectual property may be subject to deemed withholding tax."
+  }
+},
   "hong-kong-profits-tax-hk-corporate-tax-calculator": {
-    "overview": {
-      "title": "Overview of HK Corporate Tax Calculator",
-      "html": "<p>Hong Kong two-tiered profits tax is governed by statutory laws enforced by the Inland Revenue Department (IRD). This tool provides real-time, precise financial estimates using current rate schedules, thresholds, and allowances.</p><p>This tool incorporates current Hong Kong tax rules governed by the Inland Revenue Department (IRD), applying accurate tax rates, thresholds, and statutory allowances to provide an instant, reliable calculation.</p>"
-    },
-    "howToUse": {
-      "title": "How to Use the HK Corporate Tax Calculator",
-      "html": "<p>Enter your earned salary, revenue, or assessable transaction value into the HK Corporate Tax Calculator. Select your tax year and filing parameters to compute exact tax liability.</p><ol class=\"list-decimal pl-6 space-y-2\"><li>Input your total gross income, transaction value, or assessable metric in HK$.</li><li>Select your tax year, filing status, or applicable tax slab tier.</li><li>Specify eligible deductions, reliefs, or statutory exemptions.</li><li>Review the itemized tax breakdown, marginal rates, and net take-home output.</li></ol>"
-    },
-    "understandingResults": {
-      "title": "Understanding Your Calculation Results",
-      "html": "<p>The results summary highlights gross input, taxable base, calculated tax owed, effective tax percentage, and remaining net take-home earnings.</p><ul class=\"list-disc pl-6 space-y-2\"><li><strong>Gross Metric:</strong> Total unadjusted financial baseline prior to statutory calculations.</li><li><strong>Taxable Base:</strong> Net amount subject to tax after subtracting standard exemptions.</li><li><strong>Calculated Tax Owed:</strong> Total monetary liability across all applicable progressive tiers.</li><li><strong>Effective Tax Rate:</strong> Realized overall tax percentage relative to gross input.</li><li><strong>Net Output:</strong> Final post-tax retained amount or net payable obligation.</li></ul>"
-    },
-    "formula": {
-      "title": "Calculation Methodology & Formula Breakdown",
-      "html": "<p>The calculation is executed using the official statutory formula for Hong Kong:</p><p class=\"my-3 font-mono bg-slate-100 dark:bg-slate-800 p-3 rounded text-sm\">Tax Liability = Σ (Progressive Rate × Tier Income) - Exemptions</p><p>Review the primary rate and metric structure applied during computation:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-sm text-left border-collapse border border-slate-200 dark:border-slate-700\"><thead><tr><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Net Chargeable Income (HK$)</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Progressive Rate</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Standard Rate Benchmark</th></tr></thead><tbody><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">First HK$50,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">2%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">15% / 16% Standard Rate</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Next HK$50,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">6%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Applied if progressive tax exceeds standard tax</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Next HK$50,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">10%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Basic Allowance HK$132,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Next HK$50,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">14%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Married Allowance HK$264,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Remainder</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">17%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Highest progressive tier</td></tr></tbody></table></div>"
-    },
-    "taxSlabs": {
-      "title": "Hong Kong Tax Brackets & Rate Structure",
-      "html": "<p>The official rates and thresholds applied by the Inland Revenue Department (IRD) for current assessment periods are detailed below:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-sm text-left border-collapse border border-slate-200 dark:border-slate-700\"><thead><tr><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Allowance Type</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">2024/2025 Amount (HK$)</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Rules</th></tr></thead><tbody><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Basic Allowance</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">HK$132,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Single taxpayers</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Married Allowance</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">HK$264,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Married couples</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Child Allowance</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">HK$130,000 per child</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Up to 9 children</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">MPF Contribution Cap</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">HK$18,000 / year</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">5% mandatory contribution cap</td></tr></tbody></table></div>"
-    },
-    "workedExample": {
-      "title": "Step-by-Step Worked Calculation Example",
-      "html": "<p>For an assessable metric of HK$50,000 under current rules, subtracting standard statutory allowances yields your net taxable baseline. Applying progressive tiers results in an itemized breakdown of your total liability and net retained earnings.</p>"
-    },
-    "benefits": {
-      "title": "Benefits of Using This HK Corporate Tax Calculator",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Calculates exact obligations based on official statutory rate schedules.</li><li>Clear breakdown of marginal rates vs effective tax burden.</li><li>Includes standard statutory allowances and exemptions.</li></ul>"
-    },
-    "limitations": {
-      "title": "Edge Cases & Analytical Limitations",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Does not calculate specialized cross-border tax treaties.</li><li>Does not compute subjective legal exemptions without custom inputs.</li></ul>"
-    },
-    "commonMistakes": {
-      "title": "Common Pitfalls & Mistakes to Avoid",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Applying flat rates across entire income instead of progressive tiers.</li><li>Failing to account for mandatory statutory payroll contributions.</li></ul>"
-    },
-    "faq": [
-      {
-        "question": "How does the HK Corporate Tax Calculator calculate tax?",
-        "answer": "It applies official progressive rates and allowances enforced by the Inland Revenue Department (IRD) to your net assessable input."
-      },
-      {
-        "question": "Is this updated for the current tax year?",
-        "answer": "Yes, all rates, thresholds, and statutory allowances are updated for the current tax assessment period."
-      }
-    ],
-    "relatedCalculators": {
-      "title": "Related Calculators",
-      "html": "<p>Explore complementary tools: <a href=\"/countries/hong-kong/\" class=\"text-primary font-semibold hover:underline\">Hong Kong Tax Overview</a>.</p>"
-    },
-    "suggestedArticles": {
-      "title": "Educational Tax Guides",
-      "html": "<p>Read comprehensive guides: <a href=\"/countries/hong-kong/\" class=\"text-primary font-semibold hover:underline\">Hong Kong Tax Guide</a>.</p>"
-    },
-    "officialResources": {
-      "title": "Official Government Resources",
-      "html": "<ul class=\"space-y-2\"><li><a href=\"#\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary font-semibold hover:underline\">the Inland Revenue Department (IRD)</a> — Official Hong Kong Tax Authority</li></ul>"
-    },
-    "relatedCountry": {
-      "title": "International Tax Hubs",
-      "html": "<p>Compare with other global jurisdictions: <a href=\"/countries/\" class=\"text-primary font-semibold hover:underline\">All Countries Overview</a>.</p>"
-    },
-    "educationalDisclaimer": {
-      "title": "Educational & Accuracy Disclaimer",
-      "text": "This calculator provides financial estimates based on public tax rules from the Inland Revenue Department (IRD). Tax legislation is subject to change. For complex corporate or cross-border filings, consult a certified tax practitioner."
-    },
-    "faqSchema": {
-      "How does the HK Corporate Tax Calculator calculate tax?": "It applies official progressive rates and allowances enforced by the Inland Revenue Department (IRD) to your net assessable input.",
-      "Is this updated for the current tax year?": "Yes, all rates, thresholds, and statutory allowances are updated for the current tax assessment period."
-    }
+  "howToUse": {
+    "title": "How to Use the HK Corporate Tax Calculator",
+    "steps": [
+      "Enter your company's net chargeable profit before statutory tax adjustments.",
+      "Deduct statutory commercial depreciation allowances and qualifying industrial building deductions.",
+      "Verify your election status for the two-tiered corporate tax rate (8.25% on the first HK$2M).",
+      "Include any prior-year unabsorbed trading losses carried forward from previous assessments.",
+      "Click Calculate to display net corporate tax payable, provisional tax installment demands, and effective tax rates."
+    ]
   },
+  "overview": {
+    "title": "Hong Kong Corporate Tax: In-Depth Legal Framework",
+    "html": "<div class=\"bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-4 my-4\">\n        <p class=\"text-sm font-semibold text-emerald-800 dark:text-emerald-200\">\n          The Hong Kong Corporate Tax Calculator models annual corporate tax obligations for private and public limited companies under the Inland Revenue Department. Calculating statutory two-tiered rates—8.25% on the initial HK$2,000,000 assessable profit and 16.5% thereafter—it quantifies commercial deductions, capital allowances, provisional tax instalments, and one-off budget concessions for Year of Assessment 2025/26.\n        </p>\n      </div>\n      <p class=\"mt-3\">\n        Incorporated limited companies in Hong Kong operate within one of the most transparent and competitive corporate tax ecosystems globally. Governed by the Inland Revenue Department (IRD), the corporate tax framework maintains a single-tier top headline rate of 16.5%, halved to 8.25% on the first HK$2 million of profits for eligible businesses. Corporate profits are assessed on an actual year-of-assessment basis alongside mandatory <strong>provisional profits tax</strong> billed for the succeeding accounting period.\n      </p>\n      <div class=\"my-6 flex justify-center\">\n        <svg viewBox=\"0 0 680 230\" class=\"w-full max-w-2xl h-auto font-sans\">\n          <rect width=\"680\" height=\"230\" rx=\"12\" fill=\"#0f172a\" />\n          <text x=\"340\" y=\"30\" fill=\"#f8fafc\" font-size=\"15\" font-weight=\"bold\" text-anchor=\"middle\">Corporate Tax Assessment Flow (Form BIR51)</text>\n          \n          <rect x=\"30\" y=\"65\" width=\"130\" height=\"120\" rx=\"8\" fill=\"#1e293b\" stroke=\"#38bdf8\" stroke-width=\"2\" />\n          <text x=\"95\" y=\"95\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">1. Gross Revenue</text>\n          <text x=\"95\" y=\"125\" fill=\"#f8fafc\" font-size=\"11\" text-anchor=\"middle\">Invoiced Sales</text>\n          <text x=\"95\" y=\"145\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">+ Other Income</text>\n\n          <path d=\"M 165 125 L 195 125\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\" />\n\n          <rect x=\"200\" y=\"65\" width=\"135\" height=\"120\" rx=\"8\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"2\" />\n          <text x=\"267\" y=\"95\" fill=\"#f59e0b\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">2. Allowable Costs</text>\n          <text x=\"267\" y=\"125\" fill=\"#f8fafc\" font-size=\"11\" text-anchor=\"middle\">Salaries & Rent</text>\n          <text x=\"267\" y=\"145\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">Capital Allowances</text>\n\n          <path d=\"M 340 125 L 370 125\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\" />\n\n          <rect x=\"375\" y=\"65\" width=\"135\" height=\"120\" rx=\"8\" fill=\"#1e293b\" stroke=\"#10b981\" stroke-width=\"2\" />\n          <text x=\"442\" y=\"95\" fill=\"#10b981\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">3. Net Assessable</text>\n          <text x=\"442\" y=\"125\" fill=\"#f8fafc\" font-size=\"11\" text-anchor=\"middle\">Tier 1: 8.25%</text>\n          <text x=\"442\" y=\"145\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">Tier 2: 16.50%</text>\n\n          <path d=\"M 515 125 L 545 125\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\" />\n\n          <rect x=\"550\" y=\"65\" width=\"105\" height=\"120\" rx=\"8\" fill=\"#1e293b\" stroke=\"#ec4899\" stroke-width=\"2\" />\n          <text x=\"602\" y=\"95\" fill=\"#ec4899\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">4. Final Bill</text>\n          <text x=\"602\" y=\"125\" fill=\"#f8fafc\" font-size=\"11\" text-anchor=\"middle\">Final Tax</text>\n          <text x=\"602\" y=\"145\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">+ Provisional</text>\n        </svg>\n      </div>"
+  },
+  "formula": {
+    "title": "Corporate Tax Formula & Depreciation Rates",
+    "html": "<p>Assessable corporate profit is derived after applying statutory tax depreciation allowances on plant and machinery under Part VI of the IRO:</p>\n      <div class=\"bg-slate-100 dark:bg-slate-800 p-4 rounded-lg my-3 font-mono text-xs\">\n        <p><strong>Initial Allowance:</strong> 60% immediate deduction on capital expenditure for plant and machinery in year of purchase.</p>\n        <p><strong>Annual Allowance:</strong> 10%, 20%, or 30% reducing-balance depreciation on residual pooling balances.</p>\n        <p><strong>Computer Hardware / Software:</strong> 100% full immediate write-off under Section 16G.</p>\n        <p class=\"mt-2\"><strong>Tax Payable</strong> = (First HK$2,000,000 × 8.25%) + (Remainder × 16.50%) - Concessions</p>\n      </div>"
+  },
+  "benefits": {
+    "title": "Corporate Worked Benchmark Scenarios",
+    "html": "<div class=\"space-y-4\">\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario A: Boutique Creative Agency (HK$800,000 Chargeable Profit)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> Incorporated agency with HK$800,000 net chargeable profit.<br/>\n            <strong>Tax Computation:</strong> HK$800,000 × 8.25% = <strong>HK$66,000</strong>.<br/>\n            <strong>Provisional Tax:</strong> Estimated HK$66,000 for upcoming year.<br/>\n            <strong>Effective Tax Rate:</strong> 8.25%.\n          </p>\n        </div>\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario B: Cross-Border Logistics Firm (HK$3,500,000 Chargeable Profit)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> Logistics company with HK$3,500,000 chargeable profit.<br/>\n            <strong>Tier 1 Tax:</strong> HK$2,000,000 × 8.25% = HK$165,000.<br/>\n            <strong>Tier 2 Tax:</strong> HK$1,500,000 × 16.5% = HK$247,500.<br/>\n            <strong>Total Corporate Tax:</strong> HK$165,000 + HK$247,500 = <strong>HK$412,500</strong> (Effective Tax Rate: 11.79%).\n          </p>\n        </div>\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario C: Multi-Branch Retail Corporation (HK$10,000,000 Chargeable Profit)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> Retail chain with HK$10,000,000 chargeable profit.<br/>\n            <strong>Tier 1 Tax:</strong> HK$2,000,000 × 8.25% = HK$165,000.<br/>\n            <strong>Tier 2 Tax:</strong> HK$8,000,000 × 16.5% = HK$1,320,000.<br/>\n            <strong>Total Corporate Tax:</strong> HK$165,000 + HK$1,320,000 = <strong>HK$1,485,000</strong> (Effective Tax Rate: 14.85%).\n          </p>\n        </div>\n      </div>"
+  },
+  "limitations": {
+    "title": "Auditing & Loss Carry-Forward Rules",
+    "html": "<p>All Hong Kong limited companies must comply with statutory financial auditing under the Companies Ordinance (Cap. 622):</p>\n      <ul class=\"list-disc pl-5 mt-2 space-y-1 text-sm\">\n        <li><strong>Mandatory Audited Accounts:</strong> Profits Tax Returns (BIR51) must be accompanied by audited financial statements certified by an independent Hong Kong Certified Public Accountant (CPA).</li>\n        <li><strong>Indefinite Loss Carry-Forward:</strong> Commercial trading losses can be carried forward indefinitely to offset future assessable profits. Loss carry-back is not permitted under Hong Kong tax law.</li>\n        <li><strong>Thin Capitalization Rules:</strong> Hong Kong has no statutory thin capitalization rules, allowing substantial flexibility in debt-versus-equity capitalization.</li>\n      </ul>"
+  },
+  "faq": [
+    {
+      "question": "What is the difference between profits tax and corporate tax in Hong Kong?",
+      "answer": "In Hong Kong, there is no separate tax termed 'corporate tax'; corporations pay Profits Tax on net assessable earnings under the Inland Revenue Ordinance at 8.25% up to HK$2M and 16.5% thereafter."
+    },
+    {
+      "question": "How does provisional profits tax work for companies?",
+      "answer": "The IRD bills provisional profits tax for the upcoming Year of Assessment simultaneously with final tax, based on the previous year's actual profits. Payment is typically split into two installments (75% in January/February and 25% in April)."
+    },
+    {
+      "question": "Are capital gains on asset sales taxed under Hong Kong corporate tax?",
+      "answer": "Capital gains realized from the sale of fixed assets or capital investments are completely tax-exempt in Hong Kong, provided the transactions do not constitute an adventure in the nature of trade."
+    },
+    {
+      "question": "What is the statutory deadline for submitting corporate Form BIR51?",
+      "answer": "Form BIR51 must be filed within one month of issue, but automated extensions are granted under the Block Extension Scheme: mid-August for December accounting year-ends and mid-November for March year-ends."
+    },
+    {
+      "question": "Can business losses be carried forward to offset future corporate profits?",
+      "answer": "Yes. Trading losses incurred by a company in any Year of Assessment can be carried forward indefinitely and set off against assessable profits in subsequent years without limitation."
+    },
+    {
+      "question": "Do holding companies pay tax on dividends received from subsidiaries?",
+      "answer": "No. Dividends received from a company that is subject to Hong Kong profits tax are completely exempt from tax in the hands of the recipient holding company."
+    }
+  ],
+  "faqSchema": {
+    "What is the difference between profits tax and corporate tax in Hong Kong?": "In Hong Kong, there is no separate tax termed 'corporate tax'; corporations pay Profits Tax on net assessable earnings under the Inland Revenue Ordinance at 8.25% up to HK$2M and 16.5% thereafter.",
+    "How does provisional profits tax work for companies?": "The IRD bills provisional profits tax for the upcoming Year of Assessment simultaneously with final tax, based on the previous year's actual profits. Payment is typically split into two installments (75% in January/February and 25% in April).",
+    "Are capital gains on asset sales taxed under Hong Kong corporate tax?": "Capital gains realized from the sale of fixed assets or capital investments are completely tax-exempt in Hong Kong, provided the transactions do not constitute an adventure in the nature of trade.",
+    "What is the statutory deadline for submitting corporate Form BIR51?": "Form BIR51 must be filed within one month of issue, but automated extensions are granted under the Block Extension Scheme: mid-August for December accounting year-ends and mid-November for March year-ends.",
+    "Can business losses be carried forward to offset future corporate profits?": "Yes. Trading losses incurred by a company in any Year of Assessment can be carried forward indefinitely and set off against assessable profits in subsequent years without limitation.",
+    "Do holding companies pay tax on dividends received from subsidiaries?": "No. Dividends received from a company that is subject to Hong Kong profits tax are completely exempt from tax in the hands of the recipient holding company."
+  }
+},
   "hong-kong-profits-tax-profit-tax-computation": {
     "overview": {
       "title": "Overview of Profit Tax Computation",
@@ -713,77 +683,67 @@ export const hkContent: Record<string, RichCalculatorContent> = {
     }
   },
   "hong-kong-stamp-duty-rental-stamp-duty-calculator": {
-    "overview": {
-      "title": "Overview of Rental Stamp Duty Calculator",
-      "html": "<p>Hong Kong tenancy stamp duty is governed by statutory laws enforced by the Inland Revenue Department (IRD). This tool provides real-time, precise financial estimates using current rate schedules, thresholds, and allowances.</p><p>This tool incorporates current Hong Kong tax rules governed by the Inland Revenue Department (IRD), applying accurate tax rates, thresholds, and statutory allowances to provide an instant, reliable calculation.</p>"
-    },
-    "howToUse": {
-      "title": "How to Use the Rental Stamp Duty Calculator",
-      "html": "<p>Enter your earned salary, revenue, or assessable transaction value into the Rental Stamp Duty Calculator. Select your tax year and filing parameters to compute exact tax liability.</p><ol class=\"list-decimal pl-6 space-y-2\"><li>Input your total gross income, transaction value, or assessable metric in HK$.</li><li>Select your tax year, filing status, or applicable tax slab tier.</li><li>Specify eligible deductions, reliefs, or statutory exemptions.</li><li>Review the itemized tax breakdown, marginal rates, and net take-home output.</li></ol>"
-    },
-    "understandingResults": {
-      "title": "Understanding Your Calculation Results",
-      "html": "<p>The results summary highlights gross input, taxable base, calculated tax owed, effective tax percentage, and remaining net take-home earnings.</p><ul class=\"list-disc pl-6 space-y-2\"><li><strong>Gross Metric:</strong> Total unadjusted financial baseline prior to statutory calculations.</li><li><strong>Taxable Base:</strong> Net amount subject to tax after subtracting standard exemptions.</li><li><strong>Calculated Tax Owed:</strong> Total monetary liability across all applicable progressive tiers.</li><li><strong>Effective Tax Rate:</strong> Realized overall tax percentage relative to gross input.</li><li><strong>Net Output:</strong> Final post-tax retained amount or net payable obligation.</li></ul>"
-    },
-    "formula": {
-      "title": "Calculation Methodology & Formula Breakdown",
-      "html": "<p>The calculation is executed using the official statutory formula for Hong Kong:</p><p class=\"my-3 font-mono bg-slate-100 dark:bg-slate-800 p-3 rounded text-sm\">Tax Liability = Σ (Progressive Rate × Tier Income) - Exemptions</p><p>Review the primary rate and metric structure applied during computation:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-sm text-left border-collapse border border-slate-200 dark:border-slate-700\"><thead><tr><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Net Chargeable Income (HK$)</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Progressive Rate</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Standard Rate Benchmark</th></tr></thead><tbody><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">First HK$50,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">2%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">15% / 16% Standard Rate</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Next HK$50,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">6%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Applied if progressive tax exceeds standard tax</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Next HK$50,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">10%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Basic Allowance HK$132,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Next HK$50,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">14%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Married Allowance HK$264,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Remainder</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">17%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Highest progressive tier</td></tr></tbody></table></div>"
-    },
-    "taxSlabs": {
-      "title": "Hong Kong Tax Brackets & Rate Structure",
-      "html": "<p>The official rates and thresholds applied by the Inland Revenue Department (IRD) for current assessment periods are detailed below:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-sm text-left border-collapse border border-slate-200 dark:border-slate-700\"><thead><tr><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Allowance Type</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">2024/2025 Amount (HK$)</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Rules</th></tr></thead><tbody><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Basic Allowance</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">HK$132,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Single taxpayers</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Married Allowance</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">HK$264,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Married couples</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Child Allowance</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">HK$130,000 per child</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Up to 9 children</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">MPF Contribution Cap</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">HK$18,000 / year</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">5% mandatory contribution cap</td></tr></tbody></table></div>"
-    },
-    "workedExample": {
-      "title": "Step-by-Step Worked Calculation Example",
-      "html": "<p>For an assessable metric of HK$50,000 under current rules, subtracting standard statutory allowances yields your net taxable baseline. Applying progressive tiers results in an itemized breakdown of your total liability and net retained earnings.</p>"
-    },
-    "benefits": {
-      "title": "Benefits of Using This Rental Stamp Duty Calculator",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Calculates exact obligations based on official statutory rate schedules.</li><li>Clear breakdown of marginal rates vs effective tax burden.</li><li>Includes standard statutory allowances and exemptions.</li></ul>"
-    },
-    "limitations": {
-      "title": "Edge Cases & Analytical Limitations",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Does not calculate specialized cross-border tax treaties.</li><li>Does not compute subjective legal exemptions without custom inputs.</li></ul>"
-    },
-    "commonMistakes": {
-      "title": "Common Pitfalls & Mistakes to Avoid",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Applying flat rates across entire income instead of progressive tiers.</li><li>Failing to account for mandatory statutory payroll contributions.</li></ul>"
-    },
-    "faq": [
-      {
-        "question": "How does the Rental Stamp Duty Calculator calculate tax?",
-        "answer": "It applies official progressive rates and allowances enforced by the Inland Revenue Department (IRD) to your net assessable input."
-      },
-      {
-        "question": "Is this updated for the current tax year?",
-        "answer": "Yes, all rates, thresholds, and statutory allowances are updated for the current tax assessment period."
-      }
-    ],
-    "relatedCalculators": {
-      "title": "Related Calculators",
-      "html": "<p>Explore complementary tools: <a href=\"/countries/hong-kong/\" class=\"text-primary font-semibold hover:underline\">Hong Kong Tax Overview</a>.</p>"
-    },
-    "suggestedArticles": {
-      "title": "Educational Tax Guides",
-      "html": "<p>Read comprehensive guides: <a href=\"/countries/hong-kong/\" class=\"text-primary font-semibold hover:underline\">Hong Kong Tax Guide</a>.</p>"
-    },
-    "officialResources": {
-      "title": "Official Government Resources",
-      "html": "<ul class=\"space-y-2\"><li><a href=\"#\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary font-semibold hover:underline\">the Inland Revenue Department (IRD)</a> — Official Hong Kong Tax Authority</li></ul>"
-    },
-    "relatedCountry": {
-      "title": "International Tax Hubs",
-      "html": "<p>Compare with other global jurisdictions: <a href=\"/countries/\" class=\"text-primary font-semibold hover:underline\">All Countries Overview</a>.</p>"
-    },
-    "educationalDisclaimer": {
-      "title": "Educational & Accuracy Disclaimer",
-      "text": "This calculator provides financial estimates based on public tax rules from the Inland Revenue Department (IRD). Tax legislation is subject to change. For complex corporate or cross-border filings, consult a certified tax practitioner."
-    },
-    "faqSchema": {
-      "How does the Rental Stamp Duty Calculator calculate tax?": "It applies official progressive rates and allowances enforced by the Inland Revenue Department (IRD) to your net assessable input.",
-      "Is this updated for the current tax year?": "Yes, all rates, thresholds, and statutory allowances are updated for the current tax assessment period."
-    }
+  "howToUse": {
+    "title": "How to Use the Rental Stamp Duty Calculator",
+    "steps": [
+      "Enter the agreed monthly rental amount in Hong Kong Dollars (HKD).",
+      "Select the contractual lease duration (Not exceeding 1 year, 1 to 3 years, or Exceeding 3 years).",
+      "Specify any premium or key money paid under the tenancy agreement.",
+      "Check whether counterpart / duplicate copies require stamping for landlord and tenant records.",
+      "Click Calculate to view total statutory stamp duty, counterpart charges, and the standard 50/50 cost split."
+    ]
   },
+  "overview": {
+    "title": "Hong Kong Tenancy Agreement Stamp Duty (Cap. 117)",
+    "html": "<div class=\"bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-4 my-4\">\n        <p class=\"text-sm font-semibold text-emerald-800 dark:text-emerald-200\">\n          The Hong Kong Rental Stamp Duty Calculator computes statutory tenancy agreement stamping fees under Cap. 117 of the Stamp Duty Ordinance. Modeling statutory rates—0.25% for leases up to 1 year, 0.5% for 1 to 3 years, and 1% for over 3 years—it accounts for duplicate counterpart stamping and shared landlord-tenant splits.\n        </p>\n      </div>\n      <p class=\"mt-3\">\n        Under the <strong>Stamp Duty Ordinance (Cap. 117)</strong>, every lease, tenancy agreement, or license agreement relating to immovable property in Hong Kong must be stamped by the Inland Revenue Department Stamp Office. Stamping legally executes the document and renders it admissible as evidence in Hong Kong courts and the Lands Tribunal during tenancy dispute proceedings. Standard market practice dictates that the landlord and tenant divide the total stamp duty equally.\n      </p>\n      <div class=\"my-6 flex justify-center\">\n        <svg viewBox=\"0 0 680 230\" class=\"w-full max-w-2xl h-auto font-sans\">\n          <rect width=\"680\" height=\"230\" rx=\"12\" fill=\"#0f172a\" />\n          <text x=\"340\" y=\"30\" fill=\"#f8fafc\" font-size=\"15\" font-weight=\"bold\" text-anchor=\"middle\">HK Tenancy Agreement Stamp Duty Tiers (Cap. 117)</text>\n          \n          <rect x=\"35\" y=\"65\" width=\"180\" height=\"130\" rx=\"8\" fill=\"#1e293b\" stroke=\"#38bdf8\" stroke-width=\"2\" />\n          <text x=\"125\" y=\"95\" fill=\"#38bdf8\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">≤ 1 Year Lease</text>\n          <text x=\"125\" y=\"125\" fill=\"#f8fafc\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\">0.25%</text>\n          <text x=\"125\" y=\"150\" fill=\"#94a3b8\" font-size=\"11\" text-anchor=\"middle\">of Total Rent</text>\n          <text x=\"125\" y=\"170\" fill=\"#cbd5e1\" font-size=\"10\" text-anchor=\"middle\">Payable over term</text>\n\n          <rect x=\"250\" y=\"65\" width=\"180\" height=\"130\" rx=\"8\" fill=\"#1e293b\" stroke=\"#10b981\" stroke-width=\"2\" />\n          <text x=\"340\" y=\"95\" fill=\"#10b981\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">1 to 3 Years (Standard)</text>\n          <text x=\"340\" y=\"125\" fill=\"#f8fafc\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\">0.50%</text>\n          <text x=\"340\" y=\"150\" fill=\"#94a3b8\" font-size=\"11\" text-anchor=\"middle\">of Average Annual Rent</text>\n          <text x=\"340\" y=\"170\" fill=\"#cbd5e1\" font-size=\"10\" text-anchor=\"middle\">Most common residential term</text>\n\n          <rect x=\"465\" y=\"65\" width=\"180\" height=\"130\" rx=\"8\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"2\" />\n          <text x=\"555\" y=\"95\" fill=\"#f59e0b\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">&gt; 3 Years (Long Term)</text>\n          <text x=\"555\" y=\"125\" fill=\"#f8fafc\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\">1.00%</text>\n          <text x=\"555\" y=\"150\" fill=\"#94a3b8\" font-size=\"11\" text-anchor=\"middle\">of Average Annual Rent</text>\n          <text x=\"555\" y=\"170\" fill=\"#cbd5e1\" font-size=\"10\" text-anchor=\"middle\">Commercial & Retail leases</text>\n        </svg>\n      </div>"
+  },
+  "formula": {
+    "title": "Statutory Tenancy Stamping Schedule",
+    "html": "<p>Stamp duty rates on leases and tenancy agreements under Head 1(2) of the First Schedule to Cap. 117:</p>\n      <div class=\"bg-slate-100 dark:bg-slate-800 p-4 rounded-lg my-3 font-mono text-xs\">\n        <p><strong>Term undefined or uncertain:</strong> 0.25% of total rent for the term</p>\n        <p><strong>Term not exceeding 1 year:</strong> 0.25% of total rent payable for the period</p>\n        <p><strong>Term exceeding 1 year but not exceeding 3 years:</strong> 0.50% of the average yearly rent</p>\n        <p><strong>Term exceeding 3 years:</strong> 1.00% of the average yearly rent</p>\n        <p><strong>Duplicate / Counterpart Copy:</strong> HK$5 per counterpart</p>\n      </div>"
+  },
+  "benefits": {
+    "title": "Tenancy Worked Benchmark Scenarios",
+    "html": "<div class=\"space-y-4\">\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario A: 1-Year Studio Apartment (HK$18,000 / Month)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> Total annual rent = HK$18,000 × 12 = HK$216,000 for 1-year lease.<br/>\n            <strong>Stamp Duty Rate:</strong> 0.25% of total rent.<br/>\n            <strong>Calculation:</strong> HK$216,000 × 0.25% = HK$540 + HK$5 duplicate = <strong>HK$545</strong>.<br/>\n            <strong>Share:</strong> HK$272.50 Landlord / HK$272.50 Tenant.\n          </p>\n        </div>\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario B: Standard 2-Year Residential Lease (HK$32,000 / Month)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> Average annual rent = HK$32,000 × 12 = HK$384,000 for 2-year lease.<br/>\n            <strong>Stamp Duty Rate:</strong> 0.50% of average yearly rent.<br/>\n            <strong>Calculation:</strong> HK$384,000 × 0.50% = HK$1,920 + HK$5 duplicate = <strong>HK$1,925</strong>.<br/>\n            <strong>Share:</strong> HK$962.50 Landlord / HK$962.50 Tenant.\n          </p>\n        </div>\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario C: 4-Year Commercial Office Lease (HK$90,000 / Month)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> Average annual rent = HK$90,000 × 12 = HK$1,080,000 for 4-year lease.<br/>\n            <strong>Stamp Duty Rate:</strong> 1.00% of average yearly rent.<br/>\n            <strong>Calculation:</strong> HK$1,080,000 × 1.00% = HK$10,800 + HK$5 duplicate = <strong>HK$10,805</strong>.<br/>\n            <strong>Share:</strong> HK$5,402.50 Landlord / HK$5,402.50 Tenant.\n          </p>\n        </div>\n      </div>"
+  },
+  "limitations": {
+    "title": "Stamping Deadlines & Penalties",
+    "html": "<p>Failure to stamp a tenancy agreement within statutory timeframes incurs significant penalties under Section 9 of Cap. 117:</p>\n      <ul class=\"list-disc pl-5 mt-2 space-y-1 text-sm\">\n        <li><strong>Statutory Time Limit:</strong> Tenancy agreements executed in Hong Kong must be stamped within <strong>30 days</strong> of execution.</li>\n        <li><strong>Late Stamping Penalty:</strong> Late submission results in penalties ranging from 2 times (within 1 month late) up to 10 times the original stamp duty amount (over 2 months late).</li>\n        <li><strong>Legal Inadmissibility:</strong> An unstamped tenancy agreement cannot be registered at the Land Registry, nor can it be used to claim rent arrears or evict defaulting tenants in the Lands Tribunal.</li>\n      </ul>"
+  },
+  "faq": [
+    {
+      "question": "What is the statutory deadline for stamping a Hong Kong tenancy agreement?",
+      "answer": "Tenancy agreements signed in Hong Kong must be stamped within 30 days after the date of execution. If executed outside Hong Kong, stamping must take place within 30 days of arrival in the territory."
+    },
+    {
+      "question": "What are the penalties for late stamping of a tenancy agreement?",
+      "answer": "Section 9 of the Stamp Duty Ordinance imposes late penalties: 2 times the duty if stamped within 1 month late; 4 times the duty if between 1 and 2 months late; and 10 times the duty if exceeding 2 months late."
+    },
+    {
+      "question": "Who pays the rental stamp duty in Hong Kong?",
+      "answer": "By standard commercial convention in Hong Kong, the landlord and tenant divide the stamp duty and counterpart fee equally (50/50). However, the contract can specify alternative terms if agreed by both parties."
+    },
+    {
+      "question": "Can an unstamped tenancy agreement be presented in court?",
+      "answer": "No. Under Section 15 of Cap. 117, an unstamped instrument cannot be admitted into evidence in civil proceedings, nor can it be acted upon by public officers or the Lands Tribunal during dispute or eviction hearings."
+    },
+    {
+      "question": "How is stamp duty calculated if there is a rent-free period?",
+      "answer": "If a tenancy agreement contains a rent-free period, the total rent payable over the contractual term is divided by the total number of years to determine the true 'average yearly rent' for duty calculation."
+    },
+    {
+      "question": "How do you stamp a tenancy agreement online via e-Stamping?",
+      "answer": "Tenancy agreements can be submitted online via GovHK's e-Stamping service without presenting physical paper copies. Electronic Stamp Certificates are issued immediately upon online payment."
+    }
+  ],
+  "faqSchema": {
+    "What is the statutory deadline for stamping a Hong Kong tenancy agreement?": "Tenancy agreements signed in Hong Kong must be stamped within 30 days after the date of execution. If executed outside Hong Kong, stamping must take place within 30 days of arrival in the territory.",
+    "What are the penalties for late stamping of a tenancy agreement?": "Section 9 of the Stamp Duty Ordinance imposes late penalties: 2 times the duty if stamped within 1 month late; 4 times the duty if between 1 and 2 months late; and 10 times the duty if exceeding 2 months late.",
+    "Who pays the rental stamp duty in Hong Kong?": "By standard commercial convention in Hong Kong, the landlord and tenant divide the stamp duty and counterpart fee equally (50/50). However, the contract can specify alternative terms if agreed by both parties.",
+    "Can an unstamped tenancy agreement be presented in court?": "No. Under Section 15 of Cap. 117, an unstamped instrument cannot be admitted into evidence in civil proceedings, nor can it be acted upon by public officers or the Lands Tribunal during dispute or eviction hearings.",
+    "How is stamp duty calculated if there is a rent-free period?": "If a tenancy agreement contains a rent-free period, the total rent payable over the contractual term is divided by the total number of years to determine the true 'average yearly rent' for duty calculation.",
+    "How do you stamp a tenancy agreement online via e-Stamping?": "Tenancy agreements can be submitted online via GovHK's e-Stamping service without presenting physical paper copies. Electronic Stamp Certificates are issued immediately upon online payment."
+  }
+},
   "hong-kong-stamp-duty-first-registration-tax-calculator": {
   "definitionBox": "<p><strong>Hong Kong First Registration Tax (FRT):</strong> Levied by the Transport Department on the taxable value of motor vehicles upon initial registration, private cars incur progressive rates: <strong>40% on the first HK$150,000, 75% on the next HK$150,000, 100% on the next HK$200,000, and 115% on the balance</strong>, with EV concessions available.</p>",
   "overview": {
@@ -878,77 +838,67 @@ export const hkContent: Record<string, RichCalculatorContent> = {
   }
 },
   "hong-kong-property-tax-property-tax-calculator": {
-    "overview": {
-      "title": "Overview of Property Tax Calculator",
-      "html": "<p>Hong Kong 15% Property Tax is governed by statutory laws enforced by the Inland Revenue Department (IRD). This tool provides real-time, precise financial estimates using current rate schedules, thresholds, and allowances.</p><p>This tool incorporates current Hong Kong tax rules governed by the Inland Revenue Department (IRD), applying accurate tax rates, thresholds, and statutory allowances to provide an instant, reliable calculation.</p>"
-    },
-    "howToUse": {
-      "title": "How to Use the Property Tax Calculator",
-      "html": "<p>Enter your earned salary, revenue, or assessable transaction value into the Property Tax Calculator. Select your tax year and filing parameters to compute exact tax liability.</p><ol class=\"list-decimal pl-6 space-y-2\"><li>Input your total gross income, transaction value, or assessable metric in HK$.</li><li>Select your tax year, filing status, or applicable tax slab tier.</li><li>Specify eligible deductions, reliefs, or statutory exemptions.</li><li>Review the itemized tax breakdown, marginal rates, and net take-home output.</li></ol>"
-    },
-    "understandingResults": {
-      "title": "Understanding Your Calculation Results",
-      "html": "<p>The results summary highlights gross input, taxable base, calculated tax owed, effective tax percentage, and remaining net take-home earnings.</p><ul class=\"list-disc pl-6 space-y-2\"><li><strong>Gross Metric:</strong> Total unadjusted financial baseline prior to statutory calculations.</li><li><strong>Taxable Base:</strong> Net amount subject to tax after subtracting standard exemptions.</li><li><strong>Calculated Tax Owed:</strong> Total monetary liability across all applicable progressive tiers.</li><li><strong>Effective Tax Rate:</strong> Realized overall tax percentage relative to gross input.</li><li><strong>Net Output:</strong> Final post-tax retained amount or net payable obligation.</li></ul>"
-    },
-    "formula": {
-      "title": "Calculation Methodology & Formula Breakdown",
-      "html": "<p>The calculation is executed using the official statutory formula for Hong Kong:</p><p class=\"my-3 font-mono bg-slate-100 dark:bg-slate-800 p-3 rounded text-sm\">Tax Liability = Σ (Progressive Rate × Tier Income) - Exemptions</p><p>Review the primary rate and metric structure applied during computation:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-sm text-left border-collapse border border-slate-200 dark:border-slate-700\"><thead><tr><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Net Chargeable Income (HK$)</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Progressive Rate</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Standard Rate Benchmark</th></tr></thead><tbody><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">First HK$50,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">2%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">15% / 16% Standard Rate</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Next HK$50,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">6%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Applied if progressive tax exceeds standard tax</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Next HK$50,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">10%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Basic Allowance HK$132,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Next HK$50,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">14%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Married Allowance HK$264,000</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Remainder</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">17%</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Highest progressive tier</td></tr></tbody></table></div>"
-    },
-    "taxSlabs": {
-      "title": "Hong Kong Tax Brackets & Rate Structure",
-      "html": "<p>The official rates and thresholds applied by the Inland Revenue Department (IRD) for current assessment periods are detailed below:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-sm text-left border-collapse border border-slate-200 dark:border-slate-700\"><thead><tr><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Allowance Type</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">2024/2025 Amount (HK$)</th><th class=\"p-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white\">Rules</th></tr></thead><tbody><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Basic Allowance</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">HK$132,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Single taxpayers</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Married Allowance</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">HK$264,000</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Married couples</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Child Allowance</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">HK$130,000 per child</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">Up to 9 children</td></tr><tr><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">MPF Contribution Cap</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">HK$18,000 / year</td><td class=\"p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300\">5% mandatory contribution cap</td></tr></tbody></table></div>"
-    },
-    "workedExample": {
-      "title": "Step-by-Step Worked Calculation Example",
-      "html": "<p>For an assessable metric of HK$50,000 under current rules, subtracting standard statutory allowances yields your net taxable baseline. Applying progressive tiers results in an itemized breakdown of your total liability and net retained earnings.</p>"
-    },
-    "benefits": {
-      "title": "Benefits of Using This Property Tax Calculator",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Calculates exact obligations based on official statutory rate schedules.</li><li>Clear breakdown of marginal rates vs effective tax burden.</li><li>Includes standard statutory allowances and exemptions.</li></ul>"
-    },
-    "limitations": {
-      "title": "Edge Cases & Analytical Limitations",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Does not calculate specialized cross-border tax treaties.</li><li>Does not compute subjective legal exemptions without custom inputs.</li></ul>"
-    },
-    "commonMistakes": {
-      "title": "Common Pitfalls & Mistakes to Avoid",
-      "html": "<ul class=\"list-disc pl-6 space-y-2\"><li>Applying flat rates across entire income instead of progressive tiers.</li><li>Failing to account for mandatory statutory payroll contributions.</li></ul>"
-    },
-    "faq": [
-      {
-        "question": "How does the Property Tax Calculator calculate tax?",
-        "answer": "It applies official progressive rates and allowances enforced by the Inland Revenue Department (IRD) to your net assessable input."
-      },
-      {
-        "question": "Is this updated for the current tax year?",
-        "answer": "Yes, all rates, thresholds, and statutory allowances are updated for the current tax assessment period."
-      }
-    ],
-    "relatedCalculators": {
-      "title": "Related Calculators",
-      "html": "<p>Explore complementary tools: <a href=\"/countries/hong-kong/\" class=\"text-primary font-semibold hover:underline\">Hong Kong Tax Overview</a>.</p>"
-    },
-    "suggestedArticles": {
-      "title": "Educational Tax Guides",
-      "html": "<p>Read comprehensive guides: <a href=\"/countries/hong-kong/\" class=\"text-primary font-semibold hover:underline\">Hong Kong Tax Guide</a>.</p>"
-    },
-    "officialResources": {
-      "title": "Official Government Resources",
-      "html": "<ul class=\"space-y-2\"><li><a href=\"#\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary font-semibold hover:underline\">the Inland Revenue Department (IRD)</a> — Official Hong Kong Tax Authority</li></ul>"
-    },
-    "relatedCountry": {
-      "title": "International Tax Hubs",
-      "html": "<p>Compare with other global jurisdictions: <a href=\"/countries/\" class=\"text-primary font-semibold hover:underline\">All Countries Overview</a>.</p>"
-    },
-    "educationalDisclaimer": {
-      "title": "Educational & Accuracy Disclaimer",
-      "text": "This calculator provides financial estimates based on public tax rules from the Inland Revenue Department (IRD). Tax legislation is subject to change. For complex corporate or cross-border filings, consult a certified tax practitioner."
-    },
-    "faqSchema": {
-      "How does the Property Tax Calculator calculate tax?": "It applies official progressive rates and allowances enforced by the Inland Revenue Department (IRD) to your net assessable input.",
-      "Is this updated for the current tax year?": "Yes, all rates, thresholds, and statutory allowances are updated for the current tax assessment period."
-    }
+  "howToUse": {
+    "title": "How to Use the Hong Kong Property Tax Calculator",
+    "steps": [
+      "Enter your gross annual rental income received or receivable from letting your Hong Kong property.",
+      "Deduct any municipal rates agreed to be paid by the owner that were actually disbursed.",
+      "Input any irrecoverable rent incurred from defaulting tenants during the Year of Assessment.",
+      "The calculator automatically deducts the statutory 20% allowance for repairs and outgoings.",
+      "Click Calculate to review Net Assessable Value (NAV), 15% Property Tax, and potential savings under Personal Assessment."
+    ]
   },
+  "overview": {
+    "title": "Hong Kong Property Tax Framework (Section 5 IRO)",
+    "html": "<div class=\"bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-4 my-4\">\n        <p class=\"text-sm font-semibold text-emerald-800 dark:text-emerald-200\">\n          The Hong Kong Property Tax Calculator computes individual and corporate rental property tax under Section 5 of the Inland Revenue Ordinance. Applying the standard 15% statutory rate to Net Assessable Value after statutory 20% statutory repairs allowance and irrecoverable rent deductions, it benchmarks savings achievable via Personal Assessment election.\n        </p>\n      </div>\n      <p class=\"mt-3\">\n        Hong Kong levies <strong>Property Tax</strong> on owners of land and buildings situated in the territory who derive rental income from letting real estate. Governed by Part II of the Inland Revenue Ordinance, Property Tax is charged at the standard rate of <strong>15%</strong> on the property's <strong>Net Assessable Value (NAV)</strong>. Unlike salaries tax, no personal allowances (such as basic or child allowances) apply directly to property tax assessments unless the owner elects for <strong>Personal Assessment (PA)</strong>.\n      </p>\n      <div class=\"my-6 flex justify-center\">\n        <svg viewBox=\"0 0 680 230\" class=\"w-full max-w-2xl h-auto font-sans\">\n          <rect width=\"680\" height=\"230\" rx=\"12\" fill=\"#0f172a\" />\n          <text x=\"340\" y=\"30\" fill=\"#f8fafc\" font-size=\"15\" font-weight=\"bold\" text-anchor=\"middle\">Hong Kong Property Tax Computation Waterfall</text>\n          \n          <rect x=\"35\" y=\"65\" width=\"135\" height=\"125\" rx=\"8\" fill=\"#1e293b\" stroke=\"#38bdf8\" stroke-width=\"2\" />\n          <text x=\"102\" y=\"95\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Gross Rent</text>\n          <text x=\"102\" y=\"125\" fill=\"#f8fafc\" font-size=\"11\" text-anchor=\"middle\">Rental Receipts</text>\n          <text x=\"102\" y=\"145\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">+ Service Fees</text>\n\n          <path d=\"M 175 125 L 200 125\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\" />\n\n          <rect x=\"205\" y=\"65\" width=\"135\" height=\"125\" rx=\"8\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"2\" />\n          <text x=\"272\" y=\"95\" fill=\"#f59e0b\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Rates Paid</text>\n          <text x=\"272\" y=\"125\" fill=\"#f8fafc\" font-size=\"11\" text-anchor=\"middle\">Less Rates paid</text>\n          <text x=\"272\" y=\"145\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">by Landlord</text>\n\n          <path d=\"M 345 125 L 370 125\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\" />\n\n          <rect x=\"375\" y=\"65\" width=\"135\" height=\"125\" rx=\"8\" fill=\"#1e293b\" stroke=\"#10b981\" stroke-width=\"2\" />\n          <text x=\"442\" y=\"95\" fill=\"#10b981\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Statutory 20%</text>\n          <text x=\"442\" y=\"125\" fill=\"#f8fafc\" font-size=\"11\" text-anchor=\"middle\">20% Outgoings</text>\n          <text x=\"442\" y=\"145\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">Automatic Deduction</text>\n\n          <path d=\"M 515 125 L 540 125\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\" />\n\n          <rect x=\"545\" y=\"65\" width=\"105\" height=\"125\" rx=\"8\" fill=\"#1e293b\" stroke=\"#ec4899\" stroke-width=\"2\" />\n          <text x=\"597\" y=\"95\" fill=\"#ec4899\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">15% Tax</text>\n          <text x=\"597\" y=\"125\" fill=\"#f8fafc\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">15% NAV</text>\n          <text x=\"597\" y=\"145\" fill=\"#94a3b8\" font-size=\"10\" text-anchor=\"middle\">Effective: 12%</text>\n        </svg>\n      </div>"
+  },
+  "formula": {
+    "title": "Property Tax Computation Formula",
+    "html": "<p>The statutory computation of Property Tax liability under Section 5(1A) of the IRO:</p>\n      <div class=\"bg-slate-100 dark:bg-slate-800 p-4 rounded-lg my-3 font-mono text-xs\">\n        <p><strong>Gross Rental Income</strong> = Total rental receipts + service charges paid to owner</p>\n        <p><strong>Assessable Value (AV)</strong> = Gross Rental Income - Rates paid by owner - Irrecoverable Rent</p>\n        <p><strong>Net Assessable Value (NAV)</strong> = Assessable Value - (Assessable Value × 20% Statutory Outgoings Allowance)</p>\n        <p><strong>Property Tax Payable</strong> = Net Assessable Value × 15%</p>\n        <p class=\"mt-2 text-slate-500\">Note: Because of the 20% statutory outgoings allowance, the effective tax rate on Assessable Value is 12.0% (80% × 15%).</p>\n      </div>"
+  },
+  "benefits": {
+    "title": "Property Tax Benchmark Scenarios",
+    "html": "<div class=\"space-y-4\">\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario A: Residential Buy-to-Let Flat (HK$240,000 Annual Rent)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> HK$20,000/month rent, no default.<br/>\n            <strong>Assessable Value:</strong> HK$240,000.<br/>\n            <strong>Statutory 20% Deduction:</strong> HK$48,000.<br/>\n            <strong>Net Assessable Value (NAV):</strong> HK$192,000.<br/>\n            <strong>Property Tax @ 15%:</strong> HK$192,000 × 15% = <strong>HK$28,800</strong> (Effective Rate: 12.00%).\n          </p>\n        </div>\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario B: Commercial Shop with Tenant Default (HK$600,000 Rent, HK$50,000 Default)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> HK$600,000 gross rent minus HK$50,000 bad debt.<br/>\n            <strong>Assessable Value:</strong> HK$550,000.<br/>\n            <strong>Statutory 20% Deduction:</strong> HK$110,000.<br/>\n            <strong>Net Assessable Value (NAV):</strong> HK$440,000.<br/>\n            <strong>Property Tax @ 15%:</strong> HK$440,000 × 15% = <strong>HK$66,000</strong>.\n          </p>\n        </div>\n        <div class=\"border border-slate-200 dark:border-slate-700 rounded-lg p-4\">\n          <h4 class=\"font-bold text-slate-800 dark:text-slate-100 text-sm\">Scenario C: High-Value Landlord Electing Personal Assessment (HK$1,200,000 Rent)</h4>\n          <p class=\"text-xs text-slate-600 dark:text-slate-300 mt-1\">\n            <strong>Input:</strong> HK$1,200,000 rent with HK$180,000 mortgage interest.<br/>\n            <strong>Standard Property Tax:</strong> HK$1,200,000 × 80% × 15% = HK$144,000.<br/>\n            <strong>Under Personal Assessment:</strong> Landlord can deduct HK$180,000 mortgage interest and utilize personal allowances, significantly reducing total tax liability.\n          </p>\n        </div>\n      </div>"
+  },
+  "limitations": {
+    "title": "Personal Assessment & Corporate Exemption",
+    "html": "<p>Strategic elections can reduce or eliminate standard 15% property tax liabilities:</p>\n      <ul class=\"list-disc pl-5 mt-2 space-y-1 text-sm\">\n        <li><strong>Personal Assessment (PA) Election:</strong> Hong Kong permanent residents and temporary residents can elect PA to aggregate rental income with salaries/profits and deduct mortgage interest on let properties.</li>\n        <li><strong>Corporate Ownership Exemption:</strong> Corporate property owners subject to Profits Tax can apply under Section 25 of the IRO for property tax exemption or credit property tax paid against profits tax liability.</li>\n        <li><strong>Repairs Allowance Inflexibility:</strong> The 20% statutory outgoings allowance is fixed by statute; landlords cannot claim actual maintenance expenses even if they exceed 20%.</li>\n      </ul>"
+  },
+  "faq": [
+    {
+      "question": "How is Net Assessable Value (NAV) determined for Hong Kong property tax?",
+      "answer": "Net Assessable Value is calculated by taking gross rental income, deducting municipal rates paid by the owner and irrecoverable rent, and subtracting a statutory 20% allowance for repairs and outgoings."
+    },
+    {
+      "question": "What is the statutory 20% allowance for repairs and outgoings?",
+      "answer": "Section 5(1A) of the IRO automatically provides a flat 20% deduction from assessable rental income to cover maintenance, repairs, management fees, and property expenses, regardless of actual expenses incurred."
+    },
+    {
+      "question": "When should an individual property owner elect for Personal Assessment?",
+      "answer": "An individual landlord should elect for Personal Assessment if they pay mortgage interest on the rental property, earn income below personal allowance thresholds, or have business losses to offset against rental income."
+    },
+    {
+      "question": "Can corporations offset property tax against profits tax?",
+      "answer": "Yes. Under Section 25 of the IRO, corporations letting property can elect to have rental profits assessed under Profits Tax (where actual expenses are deductible) or claim a full credit for property tax paid."
+    },
+    {
+      "question": "What happens if a tenant defaults on rent in Hong Kong?",
+      "answer": "Any rent proved to be irrecoverable can be deducted from gross rental income in the Year of Assessment it becomes bad debt. If recovered subsequently, it must be reported in the year of recovery."
+    },
+    {
+      "question": "Are government rents and management fees deductible from property tax?",
+      "answer": "Government rates paid by the owner are statutory deductions. However, Government Rent (paid to the Lands Department) and building management fees are not directly deductible; they are deemed covered by the statutory 20% outgoings allowance."
+    }
+  ],
+  "faqSchema": {
+    "How is Net Assessable Value (NAV) determined for Hong Kong property tax?": "Net Assessable Value is calculated by taking gross rental income, deducting municipal rates paid by the owner and irrecoverable rent, and subtracting a statutory 20% allowance for repairs and outgoings.",
+    "What is the statutory 20% allowance for repairs and outgoings?": "Section 5(1A) of the IRO automatically provides a flat 20% deduction from assessable rental income to cover maintenance, repairs, management fees, and property expenses, regardless of actual expenses incurred.",
+    "When should an individual property owner elect for Personal Assessment?": "An individual landlord should elect for Personal Assessment if they pay mortgage interest on the rental property, earn income below personal allowance thresholds, or have business losses to offset against rental income.",
+    "Can corporations offset property tax against profits tax?": "Yes. Under Section 25 of the IRO, corporations letting property can elect to have rental profits assessed under Profits Tax (where actual expenses are deductible) or claim a full credit for property tax paid.",
+    "What happens if a tenant defaults on rent in Hong Kong?": "Any rent proved to be irrecoverable can be deducted from gross rental income in the Year of Assessment it becomes bad debt. If recovered subsequently, it must be reported in the year of recovery.",
+    "Are government rents and management fees deductible from property tax?": "Government rates paid by the owner are statutory deductions. However, Government Rent (paid to the Lands Department) and building management fees are not directly deductible; they are deemed covered by the statutory 20% outgoings allowance."
+  }
+},
   "hong-kong-property-tax-hk-rental-tax-deduction-calculator": {
   "definitionBox": "<p><strong>Hong Kong Domestic Rental Tax Deduction:</strong> Under Section 26RV of the Inland Revenue Ordinance, qualifying residential tenants in Hong Kong can deduct up to <strong>HK$100,000 in domestic rent annually</strong> from their salaries tax or personal assessment income, provided the tenancy agreement is stamped and they own no domestic property.</p>",
   "overview": {

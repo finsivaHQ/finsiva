@@ -1909,6 +1909,21 @@ const calcWebAppSchema = {
         setOutput('effectiveRate', rate, 'percentage');
       }
 
+      function calcHKRentalStampDuty() {
+        var rent = getInput('propertyPrice') || 0;
+        var term = getInput('leaseTerm') || '1year';
+        var duty = 0;
+        if (term === '1year') {
+          duty = Math.round(rent * 0.0025);
+        } else if (term === '3years') {
+          duty = Math.round(rent * 0.005);
+        } else {
+          duty = Math.round(rent * 0.01);
+        }
+        duty = Math.max(duty, 5);
+        setOutput('stampDuty', duty, 'currency');
+      }
+
       function calcHKFirstRegTax() {
         var value = getInput('vehicleValue') || 0;
         var fuel = getInput('fuelType') || 'petrol';
@@ -2281,11 +2296,12 @@ const calcWebAppSchema = {
           else if (ruleId === 'hong-kong-salaries-tax-hk-net-salary-calculator') calcHKSalariesTax();
           else if (ruleId === 'hong-kong-salaries-tax-hong-kong-tax-calculator-for-expats') calcHKSalariesTax();
           else if (ruleId === 'hong-kong-salaries-tax-hong-kong-income-tax-for-foreigners-calculator') calcHKSalariesTax();
+          else if (ruleId === 'hong-kong-profits-tax-profits-tax-calculator') calcHKProfitsTax();
           else if (ruleId === 'hong-kong-profits-tax-hk-corporate-tax-calculator') calcHKProfitsTax();
           else if (ruleId === 'hong-kong-profits-tax-profit-tax-computation') calcHKProfitsTax();
           else if (ruleId === 'hong-kong-stamp-duty-hk-property-stamp-duty-calculator') calcHKStampDuty();
           else if (ruleId === 'hong-kong-stamp-duty-stamp-duty-calculator') calcHKStampDuty();
-          else if (ruleId === 'hong-kong-stamp-duty-rental-stamp-duty-calculator') calcStampDuty();
+          else if (ruleId === 'hong-kong-stamp-duty-rental-stamp-duty-calculator') calcHKRentalStampDuty();
           else if (ruleId === 'hong-kong-stamp-duty-first-registration-tax-calculator') calcHKFirstRegTax();
           else if (ruleId === 'hong-kong-property-tax-property-tax-calculator') calcHKPropertyTax();
           else if (ruleId === 'hong-kong-property-tax-hk-rental-tax-deduction-calculator') calcHKPropertyTax();
@@ -2300,7 +2316,6 @@ const calcWebAppSchema = {
           else if (ruleId === 'pakistan-vehicle-tax-vehicle-tax-calculator') calcPKVehicleTax();
           else if (ruleId === 'pakistan-vehicle-tax-sindh-vehicle-tax-calculator') calcPKSindhVehicleTax();
           else if (ruleId === 'pakistan-vehicle-tax-islamabad-vehicle-tax-calculator') calcPKIslamabadVehicleTax();
-          else if (ruleId === 'singapore-stamp-duty-stamp-duty-calculator') calcStampDuty();
           else { hideError(); return; }
 
           showResults();
