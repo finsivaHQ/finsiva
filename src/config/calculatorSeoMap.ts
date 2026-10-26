@@ -229,8 +229,8 @@ export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
     "description": "Calculate tax on foreign-sourced income (FSI) remitted into Malaysia. Check qualifying exemptions for foreign dividends, DTA double tax relief, and LHDN slabs."
   },
   "malaysia-rental-income-rental-income-calculator": {
-    "title": "Malaysia Rental Income Tax Calculator: Property Deductions",
-    "description": "Calculate tax on rental income in Malaysia under Section 4(d). Deduct assessment tax, quit rent, loan interest, and repair expenses."
+    "title": "Malaysia Rental Income Tax Calculator 2026: Section 4(d)",
+    "description": "Calculate tax on residential & commercial rental income in Malaysia. Deduct mortgage interest, assessment tax (cukai pintu), quit rent, and repair expenses."
   },
   "malaysia-business-income-business-income-calculator": {
     "title": "Malaysia Business & SME Tax Calculator: 15% & 24% Corporate Rates",
