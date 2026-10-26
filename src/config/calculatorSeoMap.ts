@@ -225,8 +225,8 @@ export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
     "description": "Calculate total tax savings from Malaysian tax reliefs: EPF/life insurance (RM7,000), lifestyle (RM2,500), medical, and child allowances."
   },
   "malaysia-foreign-income-foreign-income-calculator": {
-    "title": "Malaysia Foreign Income Tax Calculator: FSI Dividend & Tax Rules",
-    "description": "Calculate tax on foreign-sourced income (FSI) remitted into Malaysia. Check qualifying exemptions for dividends and employment revenue."
+    "title": "Malaysia Foreign Income Tax Calculator 2026: FSI & DTA Rules",
+    "description": "Calculate tax on foreign-sourced income (FSI) remitted into Malaysia. Check qualifying exemptions for foreign dividends, DTA double tax relief, and LHDN slabs."
   },
   "malaysia-rental-income-rental-income-calculator": {
     "title": "Malaysia Rental Income Tax Calculator: Property Deductions",
