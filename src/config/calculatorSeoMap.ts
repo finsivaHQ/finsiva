@@ -181,8 +181,8 @@ export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
     "description": "Calculate tax on rental income from real estate in Pakistan under Section 15. Factor in gross rent, deductions, and individual tax slabs."
   },
   "pakistan-vehicle-tax-vehicle-tax-calculator": {
-    "title": "Pakistan Vehicle Token Tax Calculator: Punjab, Sindh & KPK",
-    "description": "Calculate vehicle token tax, registration fees, and withholding tax in Pakistan based on engine capacity (CC) and filer status."
+    "title": "Pakistan Vehicle Token Tax Calculator 2026: Rates by CC",
+    "description": "Calculate annual vehicle token tax in Pakistan for Punjab, Sindh, KPK, and ICT. Check rates by engine capacity (CC), lifetime tokens, and filer exemptions."
   },
   "pakistan-vehicle-tax-sindh-vehicle-tax-calculator": {
     "title": "Sindh Vehicle Tax Calculator: Token Tax & Lifetime Fee",

@@ -112,9 +112,9 @@ const pkGuideMap: Record<string, Array<{ title: string; slug: string }>> = {
     { title: "Pakistan Token Tax Guide", slug: "/blogs/pakistan-vehicle-tax-guide/" }
   ],
   "vehicle-tax": [
-    { title: "Pakistan Vehicle Tax Guide", slug: "/blogs/pakistan-vehicle-tax-guide/" },
-    { title: "Pakistan Token Tax Guide", slug: "/blogs/pakistan-vehicle-tax-guide/" },
-    { title: "PTA Mobile Tax Guide", slug: "/blogs/pakistan-pta-mobile-tax-guide/" }
+    { title: "Pakistan Vehicle Token Tax Complete Guide", slug: "/blogs/pakistan-vehicle-tax-guide/" },
+    { title: "Pakistan PTA Mobile Tax Guide", slug: "/blogs/pakistan-pta-mobile-tax-guide/" },
+    { title: "Pakistan FBR Tax Slabs & ATL Guide", slug: "/blogs/pakistan-fbr-tax-slabs/" }
   ]
 };
 
@@ -1820,7 +1820,29 @@ const calcWebAppSchema = {
         var province = getInput('province') || 'punjab';
         var vtype = getInput('vehicleType') || 'car';
         var tax = 0;
-        if(cc<800) tax=50; else if(cc<=1300) tax=100; else if(cc<=1500) tax=150; else if(cc<=1800) tax=200; else if(cc<=2000) tax=300; else if(cc<=2500) tax=400; else tax=500;
+        if (vtype === 'motorcycle') {
+          tax = 1500;
+        } else if (vtype === 'truck') {
+          tax = cc <= 2000 ? 5500 : cc <= 4000 ? 9500 : 15000;
+        } else {
+          if (cc < 1000) {
+            tax = 1200;
+          } else if (cc <= 1300) {
+            tax = province === 'sindh' ? 3000 : province === 'kpk' ? 2200 : 2500;
+          } else if (cc <= 1500) {
+            tax = province === 'sindh' ? 5500 : province === 'kpk' ? 4000 : 4500;
+          } else if (cc <= 1600) {
+            tax = province === 'sindh' ? 7000 : province === 'kpk' ? 5500 : 6000;
+          } else if (cc <= 1800) {
+            tax = province === 'sindh' ? 9500 : province === 'kpk' ? 7500 : 8500;
+          } else if (cc <= 2000) {
+            tax = province === 'sindh' ? 16000 : province === 'kpk' ? 12000 : 14000;
+          } else if (cc <= 2500) {
+            tax = province === 'sindh' ? 25000 : province === 'kpk' ? 18000 : 22000;
+          } else {
+            tax = province === 'sindh' ? 40000 : province === 'kpk' ? 30000 : 35000;
+          }
+        }
         setOutput('vehicleTax', tax, 'currency');
       }
 
