@@ -9,8 +9,8 @@ export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
     "description": "Calculate your 2025/2026 US federal income tax liability. See exact marginal tax brackets (10% to 37%), standard deduction amounts, and net take-home pay."
   },
   "united-states-income-tax-state-income-tax": {
-    "title": "US State Income Tax Calculator 2025: All 50 States & D.C.",
-    "description": "Calculate state income taxes across all 50 states and Washington D.C. Compare zero-tax states (TX, FL, WA) against progressive state tax brackets."
+    "title": "US State Income Tax Calculator 2026: All 50 States & D.C.",
+    "description": "Calculate state income taxes across all 50 states and Washington D.C. Compare zero-tax states (TX, FL, WA) against flat and progressive state tax brackets."
   },
   "united-states-income-tax-effective-tax-rate": {
     "title": "Effective Tax Rate Calculator 2026: Marginal vs Average Tax",
@@ -33,12 +33,12 @@ export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
     "description": "Calculate total US payroll tax contributions: 7.65% employee FICA match, 7.65% employer share, and FUTA unemployment tax liabilities."
   },
   "united-states-payroll-tax-fica-calculator": {
-    "title": "FICA Tax Calculator 2025: Social Security & Medicare Withholding",
-    "description": "Calculate 2025 FICA taxes: 6.2% Social Security (up to $176,100 wage cap), 1.45% Medicare, and 0.9% Additional Medicare tax withholding."
+    "title": "FICA Tax Calculator 2026: Social Security & Medicare Withholding",
+    "description": "Calculate 2026 FICA payroll tax withholdings for W-2 employees and employers. Computes 6.2% Social Security, 1.45% Medicare, and 0.9% Additional Medicare."
   },
   "united-states-payroll-tax-self-employment-tax": {
-    "title": "Self-Employment Tax Calculator 2025: 15.3% SE Tax Estimator",
-    "description": "Estimate 2025 self-employment tax (SECA) for freelancers and 1099 contractors. Calculate 15.3% SE tax and 50% above-the-line AGI deduction."
+    "title": "Self-Employment Tax Calculator 2026: 1099 SE Tax & Write-Off",
+    "description": "Calculate 2026 self-employment tax (Schedule SE) on 1099 income. Computes 15.3% Social Security & Medicare tax, wage base caps, and 50% IRS deduction."
   },
   "united-states-corporate-tax-corporate-tax-calculator": {
     "title": "US Corporate Tax Calculator 2025: Flat 21% Federal CIT Rate",
@@ -53,8 +53,8 @@ export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
     "description": "Calculate capital gains tax on stocks, crypto, and real estate. Compare short-term ordinary rates vs 0%, 15%, 20% long-term preferential brackets."
   },
   "united-states-capital-gains-tax-ltcg-calculator": {
-    "title": "Long-Term Capital Gains Calculator 2025: 0%, 15%, 20% Brackets",
-    "description": "Calculate long-term capital gains tax on assets held over 1 year. Factor in 2025 income thresholds, 3.8% NIIT surtax, and net profit."
+    "title": "Long-Term Capital Gains Tax Calculator 2026: IRS Brackets & NIIT",
+    "description": "Calculate federal long-term capital gains tax for 2026. Applies 0%, 15%, and 20% IRS brackets, 3.8% Net Investment Income Tax (NIIT), and loss deductions."
   },
   "united-states-estate-tax-estate-tax-calculator": {
     "title": "US Estate Tax Calculator 2025: Federal Exemption & Rates",
