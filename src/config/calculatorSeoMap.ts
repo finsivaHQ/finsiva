@@ -5,15 +5,15 @@ export interface CalculatorSeoMeta {
 
 export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
   "united-states-income-tax-federal-income-tax": {
-    "title": "US Federal Income Tax Calculator 2025: 10% to 37% Brackets",
-    "description": "Calculate your 2025 US federal income tax liability. See exact marginal tax brackets (10% to 37%), standard deduction amounts, and net take-home pay."
+    "title": "US Federal Income Tax Calculator 2026: 10% to 37% Brackets",
+    "description": "Calculate your 2025/2026 US federal income tax liability. See exact marginal tax brackets (10% to 37%), standard deduction amounts, and net take-home pay."
   },
   "united-states-income-tax-state-income-tax": {
     "title": "US State Income Tax Calculator 2025: All 50 States & D.C.",
     "description": "Calculate state income taxes across all 50 states and Washington D.C. Compare zero-tax states (TX, FL, WA) against progressive state tax brackets."
   },
   "united-states-income-tax-effective-tax-rate": {
-    "title": "Effective Tax Rate Calculator 2025: Marginal vs Average Tax",
+    "title": "Effective Tax Rate Calculator 2026: Marginal vs Average Tax",
     "description": "Calculate your true effective federal tax rate compared to your top marginal bracket. See how standard deductions and tax credits lower your tax burden."
   },
   "united-states-income-tax-tax-brackets": {
