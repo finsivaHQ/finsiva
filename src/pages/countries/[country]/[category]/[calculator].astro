@@ -1524,7 +1524,8 @@ const calcWebAppSchema = {
         setOutput('netChargeableIncome', net, 'currency');
         setOutput('salariesTax', tax, 'currency');
         setOutput('effectiveRate', income > 0 ? (tax/income*100) : 0, 'percentage');
-        setOutput('takeHomePay', income - tax, 'currency');
+        var takeHome = (ruleId === 'hong-kong-salaries-tax-hk-net-salary-calculator') ? Math.max(0, income - tax - mpf) : Math.max(0, income - tax);
+        setOutput('takeHomePay', takeHome, 'currency');
       }
 
       function calcIDIncomeTax() {

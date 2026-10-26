@@ -93,8 +93,8 @@ export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
     "description": "Official IRD methodology: compute net chargeable income, basic allowance (HK$132,000), and progressive salaries tax liability in Hong Kong."
   },
   "hong-kong-salaries-tax-hk-net-salary-calculator": {
-    "title": "Hong Kong Net Salary Calculator: Monthly Take-Home & MPF",
-    "description": "Compute your Hong Kong take-home pay after mandatory MPF contributions (5% employee match) and progressive salaries tax withholding."
+    "title": "Hong Kong Net Salary Calculator 2026: Take-Home Pay & MPF",
+    "description": "Calculate your net take-home salary in Hong Kong after 5% mandatory MPF deduction and IRD progressive salaries tax (2% to 17%) or standard 15% rate."
   },
   "hong-kong-salaries-tax-hong-kong-tax-calculator-for-expats": {
     "title": "Hong Kong Tax Calculator for Expats: 180-Day Rule & Rates",
