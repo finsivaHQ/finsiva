@@ -85,8 +85,8 @@ export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
     "description": "Simulate year-round tax reduction strategies: tax loss harvesting, charitable bunching, retirement contributions, and quarterly payments."
   },
   "hong-kong-salaries-tax-salaries-tax-calculator": {
-    "title": "Hong Kong Salaries Tax Calculator 2025/26: Net Pay & Slabs",
-    "description": "Calculate Hong Kong salaries tax under progressive rates (2% to 17%) vs 15% standard rate cap. Factor in MPF contributions and personal allowances."
+    "title": "Hong Kong Salaries Tax Calculator 2026: Progressive vs Standard",
+    "description": "Calculate Hong Kong salaries tax under progressive rates (2% to 17%) vs 15% standard rate cap. Deduct MPF, child allowances, and married relief."
   },
   "hong-kong-salaries-tax-salary-tax-computation": {
     "title": "Hong Kong Salary Tax Computation 2025/26: IRD Slabs & Rules",
@@ -145,8 +145,8 @@ export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
     "description": "Calculate annual income tax in Pakistan under current FBR progressive slabs (0% to 35%). Tax-free threshold of PKR 600,000 included."
   },
   "pakistan-income-tax-salary-tax-calculator": {
-    "title": "Pakistan Salary Tax Calculator 2024-25: FBR Monthly Slabs",
-    "description": "Calculate monthly tax on salary in Pakistan under updated FBR progressive tax slabs (0% to 35%). Active taxpayer ATL benefits included."
+    "title": "Pakistan Salary Tax Calculator 2025-26: Monthly FBR Slabs",
+    "description": "Calculate monthly income tax on salary in Pakistan under updated FBR tax slabs (0% to 35%). Check take-home pay, Section 149 withholding, and ATL benefits."
   },
   "pakistan-income-tax-business-income-tax-calculator": {
     "title": "Pakistan Business Tax Calculator: Sole Proprietor & AOP Slabs",
@@ -201,8 +201,8 @@ export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
     "description": "Calculate Singapore corporate income tax at the 17% headline rate. Compute Start-Up Tax Exemption (SUTE), Partial Tax Exemption (PTE), and 50% CIT rebates."
   },
   "singapore-gst-gst-calculator": {
-    "title": "Singapore GST Calculator 2025: 9% Inclusive & Exclusive Rates",
-    "description": "Calculate 9% Singapore Goods and Services Tax (GST). Compute gross inclusive prices, net prices, and IRAS input/output GST amounts."
+    "title": "Singapore GST Calculator 2026: 9% Inclusive & Exclusive",
+    "description": "Calculate 9% Singapore Goods and Services Tax (GST). Compute GST-inclusive prices, net amounts, and IRAS input/output tax credits."
   },
   "singapore-stamp-duty-stamp-duty-calculator": {
     "title": "Singapore Stamp Duty Calculator 2025: BSD, ABSD & SSD Rates",
