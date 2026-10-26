@@ -237,20 +237,20 @@ export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
     "description": "Calculate SME corporate income tax in Malaysia: 15% on first RM150,000 chargeable income, 17% on next RM450,000, and 24% headline rate."
   },
   "united-kingdom-income-tax-income-tax-calculator": {
-    "title": "UK Income Tax Calculator 2025/26: PAYE Salary & Take-Home Pay",
-    "description": "Calculate UK income tax and take-home pay for 2025/26 under HMRC rates: 20% basic, 40% higher, 45% additional, plus £12,570 Personal Allowance."
+    "title": "UK Income Tax Calculator 2026: PAYE Salary, HMRC Slabs & Take-Home Pay",
+    "description": "Calculate UK PAYE income tax, take-home pay, and National Insurance for 2026. Includes £12,570 Personal Allowance, 20%/40%/45% HMRC slabs, and £100k taper."
   },
   "united-kingdom-national-insurance-ni-calculator": {
-    "title": "UK National Insurance Calculator 2025/26: Class 1, 2 & 4 NICs",
-    "description": "Calculate employee and self-employed National Insurance contributions (NICs) under 2025/26 HMRC thresholds. Accurate PAYE NI deduction breakdown."
+    "title": "UK National Insurance Calculator 2026: Class 1 & Class 4 HMRC Rates",
+    "description": "Calculate UK National Insurance contributions for employees (Class 1) and self-employed (Class 4). Accurate HMRC rates: 8% main rate, 2% upper rate, and thresholds."
   },
   "united-kingdom-vat-vat-calculator": {
-    "title": "UK VAT Calculator: 20% Standard & 5% Reduced Rates",
-    "description": "Calculate UK Value Added Tax (VAT) at the standard 20% rate or 5% reduced rate. Compute net, gross, and HMRC VAT return amounts."
+    "title": "UK VAT Calculator 2026: 20% Add, Remove & Reverse Extraction",
+    "description": "Calculate UK VAT quickly with standard 20% and reduced 5% rates. Add VAT to net prices or reverse-calculate VAT inclusive amounts under HMRC rules."
   },
   "united-kingdom-vehicle-tax-ev-tax-calculator": {
-    "title": "UK EV Company Car Tax Calculator: 2025/26 Benefit-in-Kind Rates",
-    "description": "Calculate Benefit-in-Kind (BiK) tax for electric vehicles (BEVs) and hybrids (PHEVs) in the UK. Compare employee annual tax and employer Class 1A NI."
+    "title": "UK EV Company Car Tax Calculator 2026: HMRC BiK Rates & VED Surcharge",
+    "description": "Calculate UK electric vehicle company car tax, 3% BiK rate, employer Class 1A NI, and post-April 2025 VED road tax plus £40k luxury supplement."
   },
   "india-income-tax-income-tax-calculator": {
     "title": "India Income Tax Calculator FY 2024-25: New vs Old Regime Slabs",
