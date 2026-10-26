@@ -117,9 +117,9 @@ export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
     "description": "Step-by-step profit tax calculation for Hong Kong companies. Compute assessable profit, deductible business expenses, and net IRD liability."
   },
   "hong-kong-stamp-duty-hk-property-stamp-duty-calculator": {
-    "title": "Hong Kong Property Stamp Duty Calculator: Scale 2 AVD Rates",
-    "description": "Calculate residential and commercial property stamp duty in Hong Kong. Compute Scale 2 Ad Valorem Duty (AVD) and tenancy lease duty."
-  },
+  "title": "Hong Kong Property Stamp Duty Calculator: Scale 2 AVD Rates 2026",
+  "description": "Calculate residential and commercial property stamp duty in Hong Kong. Scale 2 Ad Valorem Stamp Duty (AVD) rates from HK$100 to 4.25% after cooling measure cancellation."
+},
   "hong-kong-stamp-duty-stamp-duty-calculator": {
     "title": "Hong Kong Stamp Duty Calculator 2025/26: Property & Stock",
     "description": "Calculate Hong Kong stamp duty on real estate sales, rental leases, and stock transfers (0.1% buyer & seller). Instant fee breakdown."
@@ -129,17 +129,17 @@ export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
     "description": "Calculate stamp duty on residential and commercial rental agreements in Hong Kong based on lease duration and annual rent."
   },
   "hong-kong-stamp-duty-first-registration-tax-calculator": {
-    "title": "Hong Kong First Registration Tax (FRT) Calculator: Car Tax",
-    "description": "Calculate First Registration Tax (FRT) on new private cars in Hong Kong. Includes electric vehicle (EV) concession schemes."
-  },
+  "title": "Hong Kong First Registration Tax (FRT) Calculator: Car Tax & EV 2026",
+  "description": "Calculate vehicle First Registration Tax (FRT 40% to 115%) in Hong Kong. Factors in the latest EV One-for-One Replacement Scheme concession up to HK$172,500."
+},
   "hong-kong-property-tax-property-tax-calculator": {
     "title": "Hong Kong Property Tax Calculator 2025/26: 15% Net Rental Tax",
     "description": "Calculate Hong Kong property tax on rental income: 15% standard rate on net assessable value after statutory 20% repair and outgoings deduction."
   },
   "hong-kong-property-tax-hk-rental-tax-deduction-calculator": {
-    "title": "HK Domestic Rental Deduction Calculator: Up to HK$100,000",
-    "description": "Calculate salaries tax savings under the Hong Kong domestic rental deduction scheme. Deduct up to HK$100,000 in qualifying rent annually."
-  },
+  "title": "HK Domestic Rental Tax Deduction Calculator: Up to HK$100,000 (2026)",
+  "description": "Calculate salaries tax savings under the Hong Kong domestic rental deduction scheme (Section 26RV). Save up to HK$17,000 annually with stamped residential leases."
+},
   "pakistan-income-tax-income-tax-calculator": {
     "title": "Pakistan Income Tax Calculator 2024-25: FBR Slabs & Rates",
     "description": "Calculate annual income tax in Pakistan under current FBR progressive slabs (0% to 35%). Tax-free threshold of PKR 600,000 included."
@@ -205,9 +205,9 @@ export const calculatorSeoMap: Record<string, CalculatorSeoMeta> = {
     "description": "Calculate 9% Singapore Goods and Services Tax (GST). Compute GST-inclusive prices, net amounts, and IRAS input/output tax credits."
   },
   "singapore-stamp-duty-stamp-duty-calculator": {
-    "title": "Singapore Stamp Duty Calculator 2025: BSD, ABSD & SSD Rates",
-    "description": "Calculate Singapore property stamp duty: Buyer's Stamp Duty (BSD up to 6%), Additional Buyer's Stamp Duty (ABSD), and rental lease duty."
-  },
+  "title": "Singapore Stamp Duty Calculator 2026: BSD & ABSD Rates (IRAS)",
+  "description": "Calculate Singapore property stamp duty: Buyer's Stamp Duty (BSD up to 6%), Additional Buyer's Stamp Duty (ABSD from 0% to 60%), and total acquisition outlay."
+},
   "malaysia-income-tax-income-tax-calculator": {
     "title": "Malaysia Income Tax Calculator 2025/26: LHDN Tax Rates & Slabs",
     "description": "Calculate Malaysian personal income tax under LHDN resident tax brackets (0% to 30%). Factor in individual reliefs and assessable net income."

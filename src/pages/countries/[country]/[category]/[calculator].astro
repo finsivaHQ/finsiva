@@ -258,6 +258,11 @@ const nzGuideMap: Record<string, Array<{ title: string; slug: string }>> = {
 };
 
 const sgGuideMap: Record<string, Array<{ title: string; slug: string }>> = {
+  "stamp-duty": [
+    { title: "Singapore Property Rental & Tax Guide", slug: "/blogs/singapore-rental-property-income-tax-guide/" },
+    { title: "Hong Kong vs Singapore Tax Comparison Guide", slug: "/blogs/hong-kong-vs-singapore-tax-guide/" },
+    { title: "Singapore Property & Vehicle GST Guide", slug: "/blogs/singapore-property-rental-vehicle-tourist-gst-refund-guide/" }
+  ],
   "income-tax": [
     { title: "Singapore Income Tax Rates & Brackets Guide", slug: "/blogs/singapore-income-tax-rates-brackets-2026/" },
     { title: "Hong Kong vs Singapore Tax Comparison Guide", slug: "/blogs/hong-kong-vs-singapore-tax-guide/" },
@@ -1751,40 +1756,80 @@ const calcWebAppSchema = {
         setOutput('takeHomePay', income - tax, 'currency');
       }
 
-      function calcStampDuty() {
+      function calcHKStampDuty() {
         var price = getInput('propertyPrice') || 0;
-        var buyer = getInput('buyerType') || 'citizen';
-        var propType = getInput('propertyType') || 'residential';
         var duty = 0;
-        if (propType === 'residential') {
-          duty = 0.01 * Math.min(price, 180000) +
-                 0.02 * Math.max(0, Math.min(price, 360000) - 180000) +
-                 0.03 * Math.max(0, Math.min(price, 1000000) - 360000) +
-                 0.04 * Math.max(0, Math.min(price, 1500000) - 1000000) +
-                 0.05 * Math.max(0, Math.min(price, 3000000) - 1500000) +
-                 0.06 * Math.max(0, price - 3000000);
+        if (price <= 3000000) {
+          duty = 100;
+        } else if (price <= 3528240) {
+          duty = 100 + (price - 3000000) * 0.10;
+        } else if (price <= 4500000) {
+          duty = price * 0.015;
+        } else if (price <= 4935480) {
+          duty = 67500 + (price - 4500000) * 0.10;
+        } else if (price <= 6000000) {
+          duty = price * 0.0225;
+        } else if (price <= 6642860) {
+          duty = 135000 + (price - 6000000) * 0.10;
+        } else if (price <= 9000000) {
+          duty = price * 0.03;
+        } else if (price <= 10076920) {
+          duty = 270000 + (price - 9000000) * 0.10;
+        } else if (price <= 20000000) {
+          duty = price * 0.0375;
+        } else if (price <= 21739120) {
+          duty = 750000 + (price - 20000000) * 0.10;
         } else {
-          duty = price * 0.04;
+          duty = price * 0.0425;
         }
+        var rate = price > 0 ? (duty / price * 100) : 0;
         setOutput('stampDuty', duty, 'currency');
+        setOutput('effectiveRate', rate, 'percentage');
         setOutput('totalCost', price + duty, 'currency');
       }
 
-      function calcStampDuty() {
+      function calcSGStampDuty() {
         var price = getInput('propertyPrice') || 0;
-        var buyer = getInput('buyerType') || 'citizen';
+        var buyer = getInput('buyerType') || 'citizen_first';
         var propType = getInput('propertyType') || 'residential';
-        var duty = 0;
+        var bsd = 0;
         if (propType === 'residential') {
-          if (buyer === 'citizen') duty = 0.01 * Math.min(price, 180000) + 0.02 * Math.max(0, Math.min(price, 360000) - 180000) + 0.03 * Math.max(0, price - 360000);
-          else if (buyer === 'pr') duty = 0.05 * price;
-          else duty = 0.25 * price;
+          bsd = 0.01 * Math.min(price, 180000) +
+                0.02 * Math.max(0, Math.min(price, 360000) - 180000) +
+                0.03 * Math.max(0, Math.min(price, 1000000) - 360000) +
+                0.04 * Math.max(0, Math.min(price, 1500000) - 1000000) +
+                0.05 * Math.max(0, Math.min(price, 3000000) - 1500000) +
+                0.06 * Math.max(0, price - 3000000);
         } else {
-          duty = price * 0.04;
+          bsd = 0.01 * Math.min(price, 180000) +
+                0.02 * Math.max(0, Math.min(price, 360000) - 180000) +
+                0.03 * Math.max(0, Math.min(price, 1000000) - 360000) +
+                0.04 * Math.max(0, Math.min(price, 1500000) - 1000000) +
+                0.05 * Math.max(0, price - 1500000);
         }
-        setOutput('stampDuty', duty, 'currency');
-        setOutput('totalCost', price + duty, 'currency');
+        var absdRate = 0;
+        if (propType === 'residential') {
+          if (buyer === 'citizen_second') absdRate = 0.20;
+          else if (buyer === 'citizen_subsequent') absdRate = 0.30;
+          else if (buyer === 'pr_first') absdRate = 0.05;
+          else if (buyer === 'pr_second') absdRate = 0.30;
+          else if (buyer === 'pr_subsequent') absdRate = 0.35;
+          else if (buyer === 'foreigner') absdRate = 0.60;
+          else if (buyer === 'entity') absdRate = 0.65;
+        }
+        var absd = price * absdRate;
+        var total = bsd + absd;
+        var effRate = price > 0 ? (total / price * 100) : 0;
+        setOutput('bsdAmount', bsd, 'currency');
+        setOutput('absdAmount', absd, 'currency');
+        setOutput('totalDuty', total, 'currency');
+        setOutput('effectiveRate', effRate, 'percentage');
+        setOutput('totalAcquisitionCost', price + total, 'currency');
+        setOutput('stampDuty', total, 'currency');
+        setOutput('totalCost', price + total, 'currency');
       }
+
+      
       // ============================================================
       // DISPATCH
       // ============================================================
@@ -2182,7 +2227,7 @@ const calcWebAppSchema = {
           else if (ruleId === 'hong-kong-salaries-tax-salaries-tax-calculator') calcHKSalariesTax();
           else if (ruleId === 'singapore-income-tax-income-tax-calculator') calcSGIncomeTax();
           else if (ruleId === 'singapore-gst-gst-calculator') calcGenericVATorGST(getInput('gstRate') || '0.09', getInput('calculationType') || 'exclusive');
-          else if (ruleId === 'singapore-stamp-duty-stamp-duty-calculator') calcStampDuty();
+          else if (ruleId === 'singapore-stamp-duty-stamp-duty-calculator') calcSGStampDuty();
           else if (ruleId === 'singapore-corporate-tax-income-tax-calculator') calcSGCorporateTax();
           else if (ruleId === 'united-states-tax-planning-retirement-contribution-calculator') calcUSRetirementSavings();
           else if (ruleId === 'united-states-tax-planning-tax-savings-estimator') calcUSTaxSavingsEstimator();
@@ -2202,8 +2247,8 @@ const calcWebAppSchema = {
           else if (ruleId === 'hong-kong-salaries-tax-hong-kong-income-tax-for-foreigners-calculator') calcHKSalariesTax();
           else if (ruleId === 'hong-kong-profits-tax-hk-corporate-tax-calculator') calcHKProfitsTax();
           else if (ruleId === 'hong-kong-profits-tax-profit-tax-computation') calcHKProfitsTax();
-          else if (ruleId === 'hong-kong-stamp-duty-hk-property-stamp-duty-calculator') calcStampDuty();
-          else if (ruleId === 'hong-kong-stamp-duty-stamp-duty-calculator') calcStampDuty();
+          else if (ruleId === 'hong-kong-stamp-duty-hk-property-stamp-duty-calculator') calcHKStampDuty();
+          else if (ruleId === 'hong-kong-stamp-duty-stamp-duty-calculator') calcHKStampDuty();
           else if (ruleId === 'hong-kong-stamp-duty-rental-stamp-duty-calculator') calcStampDuty();
           else if (ruleId === 'hong-kong-stamp-duty-first-registration-tax-calculator') calcHKFirstRegTax();
           else if (ruleId === 'hong-kong-property-tax-property-tax-calculator') calcHKPropertyTax();
