@@ -8,4 +8,5 @@ Disallow: /build/
 Disallow: /cache/
 
 
+Sitemap: https://finsiva.com/sitemap.xml
 Sitemap: https://finsiva.com/sitemap-index.xml
