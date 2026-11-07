@@ -1,1 +1,56 @@
-<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><rect width="1200" height="630" fill="#2563eb"/><rect x="40" y="40" width="1120" height="550" rx="24" fill="none" stroke="#ffffff" stroke-width="4"/><text x="600" y="280" font-family="Arial, sans-serif" font-size="52" font-weight="bold" fill="#ffffff" text-anchor="middle">pakistan-salary-tax-guide</text><text x="600" y="380" font-family="Arial, sans-serif" font-size="30" fill="#e0e7ff" text-anchor="middle">TaxPortal Pakistan Tax Guide</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  <rect x="40" y="40" width="1120" height="550" rx="24" fill="none" stroke="#334155" stroke-width="2"/>
+  
+  <text x="60" y="105" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#10b981" letter-spacing="2">FINSIVA PAKISTAN TAX RESEARCH</text>
+  <text x="60" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="40" font-weight="800" fill="#ffffff">Pakistan Salary Tax &amp; Take-Home Calculation Guide</text>
+  <text x="60" y="210" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" fill="#94a3b8">Monthly Payroll Deductions • Tax Exempt Allowances • Form 149 Withholding Certificate</text>
+  
+  <g transform="translate(60, 260)">
+
+    <!-- Card 1 -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="340" height="240" rx="16" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+      <rect x="24" y="24" width="8" height="24" rx="4" fill="#34d399"/>
+      <text x="40" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#34d399">CALCULATION</text>
+      <text x="24" y="85" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#ffffff">Annualized Income</text>
+      <text x="24" y="125" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Basic pay + allowances + bonuses</text>
+    <text x="24" y="155" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Medical allowance up to 10% exempt</text>
+    <text x="24" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Employer divides tax over 12 months</text>
+    <text x="24" y="215" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Tax deducted directly from payroll</text>
+    </g>
+
+    <!-- Card 2 -->
+    <g transform="translate(370, 0)">
+      <rect x="0" y="0" width="340" height="240" rx="16" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+      <rect x="24" y="24" width="8" height="24" rx="4" fill="#38bdf8"/>
+      <text x="40" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#38bdf8">TAX CREDITS</text>
+      <text x="24" y="85" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#ffffff">Rebates &amp; Deductions</text>
+      <text x="24" y="125" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Charitable donations to clause 61</text>
+    <text x="24" y="155" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Approved pension fund contributions</text>
+    <text x="24" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Full-time teacher rebate (25%)</text>
+    <text x="24" y="215" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Rebates reduce net payable tax</text>
+    </g>
+
+    <!-- Card 3 -->
+    <g transform="translate(740, 0)">
+      <rect x="0" y="0" width="340" height="240" rx="16" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+      <rect x="24" y="24" width="8" height="24" rx="4" fill="#fbbf24"/>
+      <text x="40" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#fbbf24">WITHHOLDING SLIP</text>
+      <text x="24" y="85" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#ffffff">Form 149 Certificate</text>
+      <text x="24" y="125" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Obtain annual CPR / withholding slip</text>
+    <text x="24" y="155" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Claim credit on Iris annual return</text>
+    <text x="24" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Eliminates double tax liability</text>
+    <text x="24" y="215" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Proof of statutory compliance</text>
+    </g>
+  </g>
+
+  <rect x="60" y="535" width="1080" height="35" rx="8" fill="#1e293b"/>
+  <text x="80" y="558" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#64748b">Income Tax Rules • Employer Salary Tax Withholding Guidelines</text>
+</svg>

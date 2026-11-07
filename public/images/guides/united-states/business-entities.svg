@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  <rect x="40" y="40" width="1120" height="550" rx="24" fill="none" stroke="#334155" stroke-width="2"/>
+  
+  <text x="60" y="105" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#818cf8" letter-spacing="2">FINSIVA US TAX KNOWLEDGE CENTER</text>
+  <text x="60" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="42" font-weight="800" fill="#ffffff">US Business Entity Tax Comparison: LLC vs S-Corp vs C-Corp</text>
+  <text x="60" y="210" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" fill="#94a3b8">Entity Structuring • Pass-Through Taxation • Corporate Tax Rates • Dividend Distribution</text>
+  
+  <g transform="translate(60, 260)">
+
+    <!-- Card 1 -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="340" height="240" rx="16" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+      <rect x="24" y="24" width="8" height="24" rx="4" fill="#38bdf8"/>
+      <text x="40" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#38bdf8">SOLE PROP / LLC</text>
+      <text x="24" y="85" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#ffffff">Pass-Through Default</text>
+      <text x="24" y="125" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Reported on Schedule C</text>
+    <text x="24" y="155" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• 100% of net profits pay 15.3% SE tax</text>
+    <text x="24" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Minimal corporate formalities</text>
+    <text x="24" y="215" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Default choice for early-stage ventures</text>
+    </g>
+
+    <!-- Card 2 -->
+    <g transform="translate(370, 0)">
+      <rect x="0" y="0" width="340" height="240" rx="16" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+      <rect x="24" y="24" width="8" height="24" rx="4" fill="#34d399"/>
+      <text x="40" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#34d399">S-CORPORATION</text>
+      <text x="24" y="85" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#ffffff">Salary &amp; Distributions</text>
+      <text x="24" y="125" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Pass-through via Form 1120-S</text>
+    <text x="24" y="155" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Pay reasonable W-2 salary (FICA)</text>
+    <text x="24" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Remaining profit taken as dividend</text>
+    <text x="24" y="215" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Saves self-employment tax on dividends</text>
+    </g>
+
+    <!-- Card 3 -->
+    <g transform="translate(740, 0)">
+      <rect x="0" y="0" width="340" height="240" rx="16" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+      <rect x="24" y="24" width="8" height="24" rx="4" fill="#f59e0b"/>
+      <text x="40" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#f59e0b">C-CORPORATION</text>
+      <text x="24" y="85" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#ffffff">Flat 21% Corporate Tax</text>
+      <text x="24" y="125" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Taxed at 21% federal corporate rate</text>
+    <text x="24" y="155" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Double taxation upon dividend payout</text>
+    <text x="24" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Eligible for Section 1202 QSBS exclusion</text>
+    <text x="24" y="215" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Required for venture capital investment</text>
+    </g>
+  </g>
+
+  <rect x="60" y="535" width="1080" height="35" rx="8" fill="#1e293b"/>
+  <text x="80" y="558" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#64748b">IRS Small Business &amp; Self-Employed Entity Selection Guidelines • Form 1120 / 1120-S</text>
+</svg>

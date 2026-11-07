@@ -1,1 +1,56 @@
-<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><rect width="1200" height="630" fill="#2563eb"/><rect x="40" y="40" width="1120" height="550" rx="24" fill="none" stroke="#ffffff" stroke-width="4"/><text x="600" y="280" font-family="Arial, sans-serif" font-size="52" font-weight="bold" fill="#ffffff" text-anchor="middle">pakistan-vehicle-tax-guide</text><text x="600" y="380" font-family="Arial, sans-serif" font-size="30" fill="#e0e7ff" text-anchor="middle">TaxPortal Pakistan Tax Guide</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  <rect x="40" y="40" width="1120" height="550" rx="24" fill="none" stroke="#334155" stroke-width="2"/>
+  
+  <text x="60" y="105" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#10b981" letter-spacing="2">FINSIVA PAKISTAN TAX RESEARCH</text>
+  <text x="60" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="40" font-weight="800" fill="#ffffff">Pakistan Vehicle Registration &amp; Advance Tax Guide</text>
+  <text x="60" y="210" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" fill="#94a3b8">Section 231B Advance Tax • New Car Registration • Filer vs Non-Filer Impact</text>
+  
+  <g transform="translate(60, 260)">
+
+    <!-- Card 1 -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="340" height="240" rx="16" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+      <rect x="24" y="24" width="8" height="24" rx="4" fill="#38bdf8"/>
+      <text x="40" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#38bdf8">ADVANCE TAX 231B</text>
+      <text x="24" y="85" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#ffffff">Purchase &amp; Registration</text>
+      <text x="24" y="125" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Applicable on brand new car booking</text>
+    <text x="24" y="155" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Based on engine engine displacement</text>
+    <text x="24" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Small cars: Flat withholding rate</text>
+    <text x="24" y="215" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• SUVs &amp; luxury cars: Value-based %</text>
+    </g>
+
+    <!-- Card 2 -->
+    <g transform="translate(370, 0)">
+      <rect x="0" y="0" width="340" height="240" rx="16" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+      <rect x="24" y="24" width="8" height="24" rx="4" fill="#f43f5e"/>
+      <text x="40" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#f43f5e">NON-FILER PENALTY</text>
+      <text x="24" y="85" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#ffffff">3x Punitive Tax</text>
+      <text x="24" y="125" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Non-filers pay up to triple tax</text>
+    <text x="24" y="155" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Additional advance tax on registration</text>
+    <text x="24" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Significant incentive to register NTN</text>
+    <text x="24" y="215" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Cannot transfer vehicle easily</text>
+    </g>
+
+    <!-- Card 3 -->
+    <g transform="translate(740, 0)">
+      <rect x="0" y="0" width="340" height="240" rx="16" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+      <rect x="24" y="24" width="8" height="24" rx="4" fill="#fbbf24"/>
+      <text x="40" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#fbbf24">TRANSFER CHARGES</text>
+      <text x="24" y="85" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#ffffff">Ownership Change</text>
+      <text x="24" y="125" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Transfer tax within provincial excise</text>
+    <text x="24" y="155" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Biometric verification required</text>
+    <text x="24" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Clear prior years token tax dues</text>
+    <text x="24" y="215" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Update FBR wealth statement assets</text>
+    </g>
+  </g>
+
+  <rect x="60" y="535" width="1080" height="35" rx="8" fill="#1e293b"/>
+  <text x="80" y="558" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#64748b">Income Tax Ordinance Section 231B • Provincial Motor Registration Authorities</text>
+</svg>

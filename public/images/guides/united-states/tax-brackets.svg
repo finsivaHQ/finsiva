@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  <rect x="40" y="40" width="1120" height="550" rx="24" fill="none" stroke="#334155" stroke-width="2"/>
+  
+  <text x="60" y="105" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#60a5fa" letter-spacing="2">FINSIVA US TAX KNOWLEDGE CENTER</text>
+  <text x="60" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="42" font-weight="800" fill="#ffffff">US Federal Income Tax Brackets &amp; Marginal Rates</text>
+  <text x="60" y="210" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" fill="#94a3b8">Progressive Tax Tiers • Single &amp; Joint Filers • Marginal vs Effective Tax Burden</text>
+  
+  <g transform="translate(60, 260)">
+
+    <!-- Card 1 -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="340" height="240" rx="16" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+      <rect x="24" y="24" width="8" height="24" rx="4" fill="#38bdf8"/>
+      <text x="40" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#38bdf8">TIER 1 (LOWER)</text>
+      <text x="24" y="85" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#ffffff">10% &amp; 12% Brackets</text>
+      <text x="24" y="125" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• 10%: Up to $11,925 (Single)</text>
+    <text x="24" y="155" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• 12%: $11,926 – $48,475</text>
+    <text x="24" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Covers entry-level &amp; student earnings</text>
+    <text x="24" y="215" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Lowest marginal tax threshold</text>
+    </g>
+
+    <!-- Card 2 -->
+    <g transform="translate(370, 0)">
+      <rect x="0" y="0" width="340" height="240" rx="16" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+      <rect x="24" y="24" width="8" height="24" rx="4" fill="#34d399"/>
+      <text x="40" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#34d399">TIER 2 (MIDDLE)</text>
+      <text x="24" y="85" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#ffffff">22% &amp; 24% Brackets</text>
+      <text x="24" y="125" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• 22%: $48,476 – $103,350</text>
+    <text x="24" y="155" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• 24%: $103,351 – $197,300</text>
+    <text x="24" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Broadest middle-income range</text>
+    <text x="24" y="215" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Focus on 401(k) / HSA deferrals</text>
+    </g>
+
+    <!-- Card 3 -->
+    <g transform="translate(740, 0)">
+      <rect x="0" y="0" width="340" height="240" rx="16" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+      <rect x="24" y="24" width="8" height="24" rx="4" fill="#f43f5e"/>
+      <text x="40" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#f43f5e">TIER 3 (UPPER)</text>
+      <text x="24" y="85" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#ffffff">32%, 35% &amp; 37%</text>
+      <text x="24" y="125" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• 32%: $197,301 – $250,525</text>
+    <text x="24" y="155" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• 35%: $250,526 – $626,350</text>
+    <text x="24" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• 37%: $626,351+ (Top federal rate)</text>
+    <text x="24" y="215" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Subject to 3.8% NIIT surtax</text>
+    </g>
+  </g>
+
+  <rect x="60" y="535" width="1080" height="35" rx="8" fill="#1e293b"/>
+  <text x="80" y="558" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#64748b">IRS Revenue Procedure • Standard Deduction &amp; Marginal Tax Rates 2025/2026</text>
+</svg>

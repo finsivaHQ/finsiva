@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  <rect x="40" y="40" width="1120" height="550" rx="24" fill="none" stroke="#334155" stroke-width="2"/>
+  
+  <text x="60" y="105" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#34d399" letter-spacing="2">FINSIVA US TAX KNOWLEDGE CENTER</text>
+  <text x="60" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="42" font-weight="800" fill="#ffffff">US Capital Gains Tax: Short-Term vs Long-Term Rates</text>
+  <text x="60" y="210" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" fill="#94a3b8">Holding Periods • 0%, 15%, 20% Preferential Slabs • 3.8% Net Investment Surtax</text>
+  
+  <g transform="translate(60, 260)">
+
+    <!-- Card 1 -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="340" height="240" rx="16" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+      <rect x="24" y="24" width="8" height="24" rx="4" fill="#f43f5e"/>
+      <text x="40" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#f43f5e">SHORT-TERM GAINS</text>
+      <text x="24" y="85" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#ffffff">Held ≤ 1 Year</text>
+      <text x="24" y="125" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Taxed at ordinary income rates</text>
+    <text x="24" y="155" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Marginal brackets: 10% to 37%</text>
+    <text x="24" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Applies to day trading &amp; quick flips</text>
+    <text x="24" y="215" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Offset dollar-for-dollar by losses</text>
+    </g>
+
+    <!-- Card 2 -->
+    <g transform="translate(370, 0)">
+      <rect x="0" y="0" width="340" height="240" rx="16" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+      <rect x="24" y="24" width="8" height="24" rx="4" fill="#34d399"/>
+      <text x="40" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#34d399">LONG-TERM GAINS</text>
+      <text x="24" y="85" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#ffffff">Held &gt; 1 Year</text>
+      <text x="24" y="125" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• 0% Rate: Income up to $48,350</text>
+    <text x="24" y="155" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• 15% Rate: $48,351 to $533,400</text>
+    <text x="24" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• 20% Rate: Income over $533,400</text>
+    <text x="24" y="215" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Significant tax savings vs ordinary</text>
+    </g>
+
+    <!-- Card 3 -->
+    <g transform="translate(740, 0)">
+      <rect x="0" y="0" width="340" height="240" rx="16" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+      <rect x="24" y="24" width="8" height="24" rx="4" fill="#38bdf8"/>
+      <text x="40" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#38bdf8">TAX LOSS HARVEST</text>
+      <text x="24" y="85" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#ffffff">Offset &amp; Carryover</text>
+      <text x="24" y="125" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Offset unlimited capital gains</text>
+    <text x="24" y="155" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Up to $3,000 against ordinary income</text>
+    <text x="24" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Unused losses carry forward forever</text>
+    <text x="24" y="215" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#cbd5e1">• Beware 30-day Wash Sale Rule</text>
+    </g>
+  </g>
+
+  <rect x="60" y="535" width="1080" height="35" rx="8" fill="#1e293b"/>
+  <text x="80" y="558" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#64748b">IRS Schedule D &amp; Form 8949 • Qualified Dividends &amp; Capital Gains Tax Calculation</text>
+</svg>
