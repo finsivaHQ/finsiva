@@ -471,14 +471,6 @@ const calcWebAppSchema = {
     <span class="tag">Tax Period: {country.taxYear || "2025/26"}</span>
   </div>
 
-  <FactCheckedBadge
-    reviewerName="Finsiva Research & Methodology"
-    reviewerTitle="Statutory Research"
-    sourceName={country.officialTaxAuthority}
-    sourceUrl={country.taxAuthorityUrl}
-    lastChecked={country.taxYear}
-  />
-
   <div class="mx-auto max-w-7xl mt-6">
   <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
     <div class="lg:col-span-5 xl:col-span-4 lg:sticky lg:top-24">
@@ -2541,13 +2533,6 @@ const calcWebAppSchema = {
           </div>
         </section>
       )}
-
-      <div class="mt-12">
-        <AuthorBioCard
-          name="Finsiva Financial Editorial Board"
-          lastVerified={country.taxYear}
-        />
-      </div>
 
       {mergedContent.faq && mergedContent.faq.length > 0 && (
         <script type="application/ld+json" set:html={JSON.stringify({
