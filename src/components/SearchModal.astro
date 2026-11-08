@@ -408,43 +408,62 @@ const searchItems = buildSearchItems(
       initial.classList.add('hidden');
       resultsList.innerHTML = '';
       for (var i = 0; i < items.length; i++) {
-        var item = items[i];
-        var li = document.createElement('li');
-        li.className = 'search-result-item';
-        li.setAttribute('role', 'option');
-        li.setAttribute('id', 'search-result-' + i);
-        li.setAttribute('aria-selected', i === selectedIndex ? 'true' : 'false');
-        var a = document.createElement('a');
-        a.href = item.url;
-        a.setAttribute('tabindex', '-1');
-        a.className = 'flex items-start gap-3 px-3 py-2.5 rounded-lg border border-transparent transition-colors ' + (i === selectedIndex ? 'bg-mint-50/80 dark:bg-overlay-light border-mint-200/70 dark:border-hairline' : 'hover:bg-canvas-soft dark:hover:bg-overlay-light');
-        a.innerHTML =
-          '<div class="flex-shrink-0 mt-0.5">' +
-            '<span class="inline-flex items-center justify-center h-8 w-8 rounded-lg ' + getCategoryColorClass(item.category) + '">' +
-              '<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">' + getCategoryIcon(item.category) + '</svg>' +
-            '</span>' +
-          '</div>' +
-          '<div class="flex-1 min-w-0">' +
-            '<div class="flex items-center gap-2">' +
-              '<span class="text-sm font-semibold text-ink dark:text-on-primary truncate">' + highlightText(item.title, query) + '</span>' +
-              '<span class="search-result-badge inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-semibold uppercase tracking-wider ' + getCategoryColorClass(item.category) + '">' + item.category + '</span>' +
+        (function(index, item) {
+          var li = document.createElement('li');
+          li.className = 'search-result-item cursor-pointer';
+          li.setAttribute('role', 'option');
+          li.setAttribute('id', 'search-result-' + index);
+          li.setAttribute('aria-selected', index === selectedIndex ? 'true' : 'false');
+
+          var a = document.createElement('a');
+          a.href = item.url;
+          a.setAttribute('tabindex', '-1');
+          a.className = 'flex items-start gap-3 px-3 py-2.5 rounded-lg border border-transparent transition-colors ' + (index === selectedIndex ? 'bg-mint-50/80 dark:bg-overlay-light border-mint-200/70 dark:border-hairline' : 'hover:bg-canvas-soft dark:hover:bg-overlay-light');
+          a.innerHTML =
+            '<div class="flex-shrink-0 mt-0.5">' +
+              '<span class="inline-flex items-center justify-center h-8 w-8 rounded-lg ' + getCategoryColorClass(item.category) + '">' +
+                '<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">' + getCategoryIcon(item.category) + '</svg>' +
+              '</span>' +
             '</div>' +
-            '<p class="mt-0.5 text-xs text-muted line-clamp-1">' + highlightText(item.description, query) + '</p>' +
-          '</div>' +
-          '<svg class="h-4 w-4 text-muted flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>';
-        li.appendChild(a);
-        li.addEventListener('mouseenter', function() {
-          var index = Array.from(resultsList.children).indexOf(li);
-          selectedIndex = index;
-          updateSelection(false);
-        });
-        a.addEventListener('click', function(e) {
-          e.preventDefault();
-          var index = Array.from(resultsList.children).indexOf(li);
-          selectedIndex = index;
-          selectCurrent();
-        });
-        resultsList.appendChild(li);
+            '<div class="flex-1 min-w-0">' +
+              '<div class="flex items-center gap-2">' +
+                '<span class="text-sm font-semibold text-ink dark:text-on-primary truncate">' + highlightText(item.title, query) + '</span>' +
+                '<span class="search-result-badge inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-semibold uppercase tracking-wider ' + getCategoryColorClass(item.category) + '">' + item.category + '</span>' +
+              '</div>' +
+              '<p class="mt-0.5 text-xs text-muted line-clamp-1">' + highlightText(item.description, query) + '</p>' +
+            '</div>' +
+            '<svg class="h-4 w-4 text-muted flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>';
+
+          li.appendChild(a);
+
+          li.addEventListener('mouseenter', function() {
+            selectedIndex = index;
+            updateSelection(false);
+          });
+
+          // Handle click on the link directly
+          a.addEventListener('click', function(e) {
+            if (e.metaKey || e.ctrlKey || e.shiftKey || e.which === 2 || e.button === 1) {
+              return; // Allow new tab / middle click
+            }
+            e.preventDefault();
+            if (item && item.url) {
+              window.location.href = item.url;
+            }
+          });
+
+          // Handle click anywhere on the li
+          li.addEventListener('click', function(e) {
+            if (e.metaKey || e.ctrlKey || e.shiftKey || e.which === 2 || e.button === 1) {
+              return;
+            }
+            if (item && item.url) {
+              window.location.href = item.url;
+            }
+          });
+
+          resultsList.appendChild(li);
+        })(i, items[i]);
       }
     }
 
@@ -486,7 +505,9 @@ const searchItems = buildSearchItems(
     function selectCurrent() {
       if (selectedIndex >= 0 && selectedIndex < currentResults.length) {
         var item = currentResults[selectedIndex];
-        window.location.href = item.url;
+        if (item && item.url) {
+          window.location.href = item.url;
+        }
       }
     }
 

@@ -47,14 +47,32 @@ export function buildSearchItems(
 ): SearchItem[] {
   const items: SearchItem[] = [];
 
+  const countryNameMap = new Map<string, string>();
+  for (const c of countries) {
+    countryNameMap.set(c.slug, c.name);
+  }
+
   for (const rule of taxRules) {
+    const countryName = countryNameMap.get(rule.countrySlug) || rule.countrySlug.replace(/-/g, ' ');
+    const hasCountryInName = rule.name.toLowerCase().includes(countryName.toLowerCase());
+    const displayTitle = hasCountryInName ? rule.name : `${countryName} ${rule.name}`;
+
     items.push({
       id: `calc-${rule.id}`,
-      title: rule.name,
+      title: displayTitle,
       category: "Calculator",
       description: rule.description,
       url: `/countries/${rule.countrySlug}/${rule.categorySlug}/${rule.calculatorSlug}/`,
-      keywords: [rule.countrySlug, rule.categorySlug, rule.calculatorSlug, rule.name.toLowerCase()],
+      keywords: [
+        rule.countrySlug,
+        countryName.toLowerCase(),
+        rule.categorySlug,
+        rule.calculatorSlug,
+        rule.name.toLowerCase(),
+        displayTitle.toLowerCase(),
+        `${rule.name.toLowerCase()} ${countryName.toLowerCase()}`,
+        `${rule.name.toLowerCase()} for ${countryName.toLowerCase()}`,
+      ],
     });
   }
 
