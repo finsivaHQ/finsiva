@@ -140,11 +140,11 @@ const is404 = currentPath === "/404";
       </div>
 
       <div class="flex items-center gap-1">
-        <button id="search-trigger" class="btn btn-ghost flex items-center gap-2 text-sm font-medium text-ink dark:text-on-primary" aria-label="Open search (Cmd+K)" data-i18n-title="common.search">
-          <svg id="search-icon-open" class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-          <svg id="search-icon-close" class="h-4 w-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-          <span class="hidden lg:inline" data-i18n="common.search">Search</span>
-          <kbd class="hidden xl:inline-flex items-center gap-0.5 px-1.5 py-0.5 text-[10px] font-medium text-muted bg-canvas-soft dark:bg-surface border border-hairline dark:border-overlay-light rounded ml-1"><span class="text-xs">⌘</span>K</kbd>
+        <button id="search-trigger" class="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs sm:text-sm text-muted bg-canvas-soft/80 hover:bg-canvas-soft border border-hairline hover:border-primary transition-all duration-150 shadow-sm cursor-pointer" aria-label="Open search (Cmd+K)" data-i18n-title="common.search">
+          <svg id="search-icon-open" class="h-4 w-4 text-muted group-hover:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <svg id="search-icon-close" class="h-4 w-4 hidden text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          <span class="hidden sm:inline text-muted" data-i18n="common.search">Search tools & countries...</span>
+          <kbd class="hidden md:inline-flex items-center gap-0.5 px-1.5 py-0.5 text-[10px] font-medium text-muted bg-canvas dark:bg-surface border border-hairline dark:border-overlay-light rounded"><span class="text-xs">⌘</span>K</kbd>
         </button>
 
         <button id="theme-toggle" class="btn btn-ghost p-2.5 text-ink dark:text-on-primary" aria-label="Toggle theme" title="Toggle theme">
@@ -162,6 +162,12 @@ const is404 = currentPath === "/404";
 
   <div id="mobile-menu" class="md:hidden overflow-hidden transition-all duration-300 ease-in-out" style="max-height:0;opacity:0;" role="navigation" aria-label="Mobile navigation">
     <div class="mx-auto max-w-7xl px-4 py-3 space-y-1">
+      <div class="px-2 pt-1 pb-2">
+        <button id="mobile-search-trigger" type="button" class="w-full flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm text-muted bg-canvas-soft border border-hairline hover:border-primary transition-colors text-left cursor-pointer">
+          <svg class="h-4 w-4 text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <span>Search calculators, guides, countries...</span>
+        </button>
+      </div>
       <a href="/" class="mobile-nav-link block rounded-pill px-4 py-3 text-sm font-medium text-ink dark:text-on-primary transition-colors"><span data-i18n="common.home">Home</span></a>
       <a href="/countries/" class="mobile-nav-link block rounded-pill px-4 py-3 text-sm font-medium text-ink dark:text-on-primary transition-colors"><span data-i18n="common.countries">Countries</span></a>
             <div class="px-4 py-2">
@@ -331,6 +337,17 @@ const is404 = currentPath === "/404";
       if (searchIconOpen) searchIconOpen.classList.toggle('hidden', open);
       if (searchIconClose) searchIconClose.classList.toggle('hidden', !open);
       if (searchTrigger) searchTrigger.setAttribute('aria-label', open ? 'Close search' : 'Open search');
+    }
+
+    var mobileSearchTrigger = document.getElementById('mobile-search-trigger');
+    if (mobileSearchTrigger) {
+      mobileSearchTrigger.addEventListener('click', function(e) {
+        if (e) e.preventDefault();
+        closeMobileMenu();
+        setTimeout(function() {
+          window.openSearchModal && window.openSearchModal();
+        }, 100);
+      });
     }
 
     if (searchTrigger) {

@@ -53,7 +53,7 @@ export function buildSearchItems(
       title: rule.name,
       category: "Calculator",
       description: rule.description,
-      url: `/countries/${rule.countrySlug}/${rule.categorySlug}/${rule.calculatorSlug}`,
+      url: `/countries/${rule.countrySlug}/${rule.categorySlug}/${rule.calculatorSlug}/`,
       keywords: [rule.countrySlug, rule.categorySlug, rule.calculatorSlug, rule.name.toLowerCase()],
     });
   }
@@ -73,7 +73,7 @@ export function buildSearchItems(
       title: country.name,
       category: "Country",
       description: country.overview,
-      url: `/countries/${country.slug}`,
+      url: `/countries/${country.slug}/`,
       keywords: [country.slug, country.name.toLowerCase()],
     });
   }
@@ -84,7 +84,7 @@ export function buildSearchItems(
       title: guide.data.title,
       category: "Guide",
       description: guide.data.description,
-      url: `/knowledge/${guide.id}`,
+      url: `/knowledge/${guide.id}/`,
       keywords: [guide.data.title.toLowerCase(), guide.data.category.toLowerCase(), guide.id],
     });
   }
@@ -95,7 +95,7 @@ export function buildSearchItems(
       title: term.data.term,
       category: "Glossary",
       description: term.data.definition,
-      url: `/knowledge/glossary/${term.id}`,
+      url: `/knowledge/glossary/${term.id}/`,
       keywords: [term.data.term.toLowerCase(), term.data.category.toLowerCase(), term.id],
     });
   }
@@ -116,33 +116,37 @@ export function searchItems(items: SearchItem[], query: string): SearchItem[] {
     const descLower = item.description.toLowerCase();
     const keywordsLower = (item.keywords || []).join(" ").toLowerCase();
 
-    let score = Infinity;
+    // Check full phrase match first
+    if (titleLower === q) return { item, score: 0 };
+    if (titleLower.startsWith(q)) return { item, score: 1 };
+    if (titleLower.includes(q)) return { item, score: 2 };
+
+    let allTermsMatch = true;
+    let totalScore = 0;
 
     for (const term of qTerms) {
-      let termScore = Infinity;
-
-      if (titleLower === term) {
-        termScore = 0;
-      } else if (titleLower.startsWith(term)) {
-        termScore = 1;
-      } else if (titleLower.includes(term)) {
-        termScore = 2;
+      if (titleLower.includes(term)) {
+        totalScore += 2;
       } else if (keywordsLower.includes(term)) {
-        termScore = 3;
+        totalScore += 4;
       } else if (descLower.includes(term)) {
-        termScore = 4;
+        totalScore += 6;
+      } else {
+        allTermsMatch = false;
+        totalScore += 20;
       }
-
-      score = Math.min(score, termScore);
     }
 
-    return { item, score };
-  });
+    if (!allTermsMatch) {
+      return { item, score: Infinity };
+    }
 
-  scored.sort((a, b) => a.score - b.score);
+    return { item, score: totalScore };
+  });
 
   return scored
     .filter((s) => s.score < Infinity)
+    .sort((a, b) => a.score - b.score)
     .slice(0, 20)
     .map((s) => s.item);
 }

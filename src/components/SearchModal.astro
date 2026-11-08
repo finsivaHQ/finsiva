@@ -116,35 +116,49 @@ const searchItems = buildSearchItems(
             Start typing to search across calculators, countries, guides, and
             glossary
           </p>
-          <div class="mt-4 flex flex-wrap justify-center gap-2">
-            <span class="text-xs text-muted">Popular:</span>
+          <div class="mt-4 flex flex-wrap justify-center items-center gap-2">
+            <span class="text-xs text-muted font-medium">Popular:</span>
             <button
               type="button"
-              class="search-suggestion text-xs text-link hover:underline px-1"
+              class="search-suggestion inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-full bg-mint-50 dark:bg-surface text-primary dark:text-emerald-400 border border-mint-200 dark:border-hairline hover:bg-mint-100 dark:hover:bg-overlay-light transition-colors cursor-pointer"
               data-query="income tax"
             >
-              income tax
+              Income Tax
             </button>
             <button
               type="button"
-              class="search-suggestion text-xs text-link hover:underline px-1"
+              class="search-suggestion inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-full bg-mint-50 dark:bg-surface text-primary dark:text-emerald-400 border border-mint-200 dark:border-hairline hover:bg-mint-100 dark:hover:bg-overlay-light transition-colors cursor-pointer"
+              data-query="united states"
+            >
+              United States
+            </button>
+            <button
+              type="button"
+              class="search-suggestion inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-full bg-mint-50 dark:bg-surface text-primary dark:text-emerald-400 border border-mint-200 dark:border-hairline hover:bg-mint-100 dark:hover:bg-overlay-light transition-colors cursor-pointer"
               data-query="india"
             >
-              india
+              India
             </button>
             <button
               type="button"
-              class="search-suggestion text-xs text-link hover:underline px-1"
-              data-query="tax bracket"
+              class="search-suggestion inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-full bg-mint-50 dark:bg-surface text-primary dark:text-emerald-400 border border-mint-200 dark:border-hairline hover:bg-mint-100 dark:hover:bg-overlay-light transition-colors cursor-pointer"
+              data-query="salaries tax"
             >
-              tax bracket
+              Salaries Tax
             </button>
             <button
               type="button"
-              class="search-suggestion text-xs text-link hover:underline px-1"
+              class="search-suggestion inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-full bg-mint-50 dark:bg-surface text-primary dark:text-emerald-400 border border-mint-200 dark:border-hairline hover:bg-mint-100 dark:hover:bg-overlay-light transition-colors cursor-pointer"
+              data-query="dave ramsey"
+            >
+              Dave Ramsey
+            </button>
+            <button
+              type="button"
+              class="search-suggestion inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-full bg-mint-50 dark:bg-surface text-primary dark:text-emerald-400 border border-mint-200 dark:border-hairline hover:bg-mint-100 dark:hover:bg-overlay-light transition-colors cursor-pointer"
               data-query="gst"
             >
-              gst
+              GST / VAT
             </button>
           </div>
         </div>
@@ -310,16 +324,16 @@ const searchItems = buildSearchItems(
 
     function getCategoryColorClass(category) {
       switch (category) {
-        case 'Calculator': return 'bg-primary/10 text-primary dark:text-link';
-        case 'Country': return 'bg-success/10 text-success';
-        case 'Guide': return 'bg-warning/10 text-warning';
-        case 'Glossary': return 'bg-accent/10 text-accent dark:text-link';
-        default: return 'bg-muted/10 text-muted';
+        case 'Calculator': return 'bg-mint-100 text-primary dark:bg-emerald-950/60 dark:text-emerald-400 border border-mint-200 dark:border-emerald-800';
+        case 'Country': return 'bg-lime-panel text-lime-dark dark:bg-lime-950/50 dark:text-lime-300 border border-lime-border dark:border-lime-800';
+        case 'Guide': return 'bg-amber-50 text-amber-800 dark:bg-amber-950/40 dark:text-amber-300 border border-amber-200 dark:border-amber-800';
+        case 'Glossary': return 'bg-sky-50 text-sky-800 dark:bg-sky-950/40 dark:text-sky-300 border border-sky-200 dark:border-sky-800';
+        default: return 'bg-canvas-soft text-muted border border-hairline';
       }
     }
 
     function search(query) {
-      if (!query || query.trim().length === 0) {
+      if (!query || !query.trim()) {
         currentResults = [];
         selectedIndex = -1;
         renderResults([], '');
@@ -328,26 +342,43 @@ const searchItems = buildSearchItems(
       var q = query.toLowerCase().trim();
       var qTerms = q.split(/\s+/).filter(Boolean);
       var scored = [];
+
       for (var i = 0; i < searchItems.length; i++) {
         var item = searchItems[i];
-        var titleLower = item.title.toLowerCase();
-        var descLower = item.description.toLowerCase();
-        var kwLower = (item.keywords || []).join(' ').toLowerCase();
+        var titleLower = (item.title || '').toLowerCase();
+        var descLower = (item.description || '').toLowerCase();
+        var kwList = (item.keywords || []).map(function(k) { return k.toLowerCase(); });
+        var kwLower = kwList.join(' ');
         var score = Infinity;
-        for (var t = 0; t < qTerms.length; t++) {
-          var term = qTerms[t];
-          var termScore = Infinity;
-          if (titleLower === term) termScore = 0;
-          else if (titleLower.startsWith(term)) termScore = 1;
-          else if (titleLower.indexOf(term) !== -1) termScore = 2;
-          else if (kwLower.indexOf(term) !== -1) termScore = 3;
-          else if (descLower.indexOf(term) !== -1) termScore = 4;
-          if (termScore < score) score = termScore;
-        }
+
+        // Exact full phrase match in title
+        if (titleLower === q) score = 0;
+        else if (titleLower.indexOf(q) === 0) score = 1;
+        else if (titleLower.indexOf(q) !== -1) score = 2;
+        // Exact keyword match
+        else if (kwList.indexOf(q) !== -1) score = 3;
+        // Keyword starts with
+        else if (kwList.some(function(k) { return k.indexOf(q) === 0; })) score = 4;
+        // Multi-term all in title
+        else if (qTerms.length > 1 && qTerms.every(function(t) { return titleLower.indexOf(t) !== -1; })) score = 5;
+        // Keyword includes phrase
+        else if (kwList.some(function(k) { return k.indexOf(q) !== -1; })) score = 6;
+        // Description includes phrase
+        else if (descLower.indexOf(q) !== -1) score = 7;
+        // Multi-term across all fields
+        else if (qTerms.length > 1 && qTerms.every(function(t) { return titleLower.indexOf(t) !== -1 || kwLower.indexOf(t) !== -1 || descLower.indexOf(t) !== -1; })) score = 8;
+        // Any term in title
+        else if (qTerms.some(function(t) { return titleLower.indexOf(t) !== -1; })) score = 9;
+        // Any term in keywords
+        else if (qTerms.some(function(t) { return kwLower.indexOf(t) !== -1; })) score = 10;
+        // Any term in description
+        else if (qTerms.some(function(t) { return descLower.indexOf(t) !== -1; })) score = 11;
+
         if (score < Infinity) {
           scored.push({ item: item, score: score });
         }
       }
+
       scored.sort(function(a, b) { return a.score - b.score; });
       currentResults = scored.slice(0, 20).map(function(s) { return s.item; });
       selectedIndex = currentResults.length > 0 ? 0 : -1;
@@ -358,10 +389,18 @@ const searchItems = buildSearchItems(
     }
 
     function renderResults(items, query) {
-      if (items.length === 0 && query) {
+      if (!query || !query.trim()) {
+        resultsList.classList.add('hidden');
+        empty.classList.add('hidden');
+        initial.classList.remove('hidden');
+        resultsList.innerHTML = '';
+        return;
+      }
+      if (items.length === 0) {
         resultsList.classList.add('hidden');
         empty.classList.remove('hidden');
         initial.classList.add('hidden');
+        resultsList.innerHTML = '';
         return;
       }
       resultsList.classList.remove('hidden');
@@ -378,7 +417,7 @@ const searchItems = buildSearchItems(
         var a = document.createElement('a');
         a.href = item.url;
         a.setAttribute('tabindex', '-1');
-        a.className = 'flex items-start gap-3 px-3 py-3 rounded-lg transition-colors ' + (i === selectedIndex ? 'bg-canvas-soft dark:bg-overlay-light' : 'hover:bg-canvas-soft dark:hover:bg-overlay-light');
+        a.className = 'flex items-start gap-3 px-3 py-2.5 rounded-lg border border-transparent transition-colors ' + (i === selectedIndex ? 'bg-mint-50/80 dark:bg-overlay-light border-mint-200/70 dark:border-hairline' : 'hover:bg-canvas-soft dark:hover:bg-overlay-light');
         a.innerHTML =
           '<div class="flex-shrink-0 mt-0.5">' +
             '<span class="inline-flex items-center justify-center h-8 w-8 rounded-lg ' + getCategoryColorClass(item.category) + '">' +
@@ -387,8 +426,8 @@ const searchItems = buildSearchItems(
           '</div>' +
           '<div class="flex-1 min-w-0">' +
             '<div class="flex items-center gap-2">' +
-              '<span class="text-sm font-medium text-ink dark:text-on-primary truncate">' + highlightText(item.title, query) + '</span>' +
-              '<span class="search-result-badge inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wider ' + getCategoryColorClass(item.category) + '">' + item.category + '</span>' +
+              '<span class="text-sm font-semibold text-ink dark:text-on-primary truncate">' + highlightText(item.title, query) + '</span>' +
+              '<span class="search-result-badge inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-semibold uppercase tracking-wider ' + getCategoryColorClass(item.category) + '">' + item.category + '</span>' +
             '</div>' +
             '<p class="mt-0.5 text-xs text-muted line-clamp-1">' + highlightText(item.description, query) + '</p>' +
           '</div>' +
@@ -554,6 +593,7 @@ const searchItems = buildSearchItems(
         if (q && input) {
           input.value = q;
           search(q);
+          input.focus();
         }
       });
     });
