@@ -62,11 +62,11 @@ const itemListSchema = category.calculators && category.calculators.length > 0 ?
     { label: category.name }
   ]}
 >
-  <div class="mb-6">
-    <h1 class="text-3xl sm:text-4xl font-extrabold text-ink dark:text-on-primary tracking-tight">
+  <div class="mb-8 text-center flex flex-col items-center">
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-ink dark:text-on-primary tracking-tight text-center">
       <span data-i18n="category.name">{category.name}</span>
     </h1>
-    <p class="mt-2 text-base sm:text-lg text-body dark:text-muted">
+    <p class="mt-2 text-base sm:text-lg text-body dark:text-muted text-center max-w-3xl">
       <span data-i18n="category.description">{category.description}</span>
     </p>
   </div>

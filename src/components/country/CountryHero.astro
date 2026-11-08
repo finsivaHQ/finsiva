@@ -48,7 +48,7 @@ const secondaryHref = `#tax-calculators`;
       </a>
     </div>
 
-    <div class="flex items-start gap-4 sm:gap-5">
+    <div class="flex flex-col items-center text-center gap-3 mb-2">
       <img
         src={country.flag}
         alt={`Flag of ${country.name}`}
@@ -58,12 +58,12 @@ const secondaryHref = `#tax-calculators`;
         height="48"
       />
       <div>
-        <h1 id={`${country.slug}-hero`} class="text-3xl font-extrabold tracking-tight text-ink dark:text-on-primary sm:text-5xl">{country.name}</h1>
-        <p class="text-base font-medium text-primary dark:text-primary-light mt-1">{country.continent}</p>
+        <h1 id={`${country.slug}-hero`} class="text-3xl font-extrabold tracking-tight text-ink dark:text-on-primary sm:text-5xl text-center">{country.name}</h1>
+        <p class="text-base font-medium text-primary dark:text-primary-light mt-1 text-center">{country.continent}</p>
       </div>
     </div>
     
-    <p class="mt-6 text-base sm:text-lg leading-relaxed max-w-4xl text-body dark:text-muted">
+    <p class="mt-6 text-base sm:text-lg leading-relaxed max-w-4xl text-body dark:text-muted text-center mx-auto">
       {country.taxSystemSummary}
     </p>
 
@@ -84,7 +84,7 @@ const secondaryHref = `#tax-calculators`;
     </div>
 
     <!-- Meta Info -->
-    <div class="mt-6 flex flex-wrap items-center gap-4 text-sm font-medium text-body dark:text-muted">
+    <div class="mt-6 flex flex-wrap items-center justify-center gap-4 text-sm font-medium text-body dark:text-muted">
       <div class="flex items-center gap-1.5">
         <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
         <span>Updated {country.lastUpdated}</span>
@@ -96,7 +96,7 @@ const secondaryHref = `#tax-calculators`;
     </div>
 
     <!-- Actions -->
-    <div class="mt-8 flex flex-wrap gap-4">
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
       <a href={primaryHref} class="inline-flex items-center justify-center gap-2 rounded-pill bg-primary px-6 py-3 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
         Calculate {country.slug === 'hong-kong' ? 'Salaries Tax' : 'Income Tax'} &rarr;
       </a>

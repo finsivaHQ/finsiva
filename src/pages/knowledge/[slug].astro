@@ -90,11 +90,11 @@ const guideSchema = {
         { label: guide.data.title }
       ]} />
 
-      <header class="pt-8 pb-12">
+      <header class="pt-8 pb-12 text-center flex flex-col items-center">
         <span class="inline-block rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary dark:bg-primary/20">{guide.data.category}</span>
-        <h1 class="mt-4 text-4xl font-extrabold tracking-tight text-ink dark:text-on-primary sm:text-5xl">{guide.data.title}</h1>
-        <p class="mt-4 text-xl text-body dark:text-muted">{guide.data.description}</p>
-        <div class="mt-4 flex flex-wrap items-center gap-4 text-sm text-muted dark:text-muted">
+        <h1 class="mt-4 text-4xl font-extrabold tracking-tight text-ink dark:text-on-primary sm:text-5xl text-center">{guide.data.title}</h1>
+        <p class="mt-4 text-xl text-body dark:text-muted text-center max-w-3xl">{guide.data.description}</p>
+        <div class="mt-4 flex flex-wrap items-center justify-center gap-4 text-sm text-muted dark:text-muted">
           <time datetime={guide.data.lastUpdated}>Last updated: {guide.data.lastUpdated}</time>
           <span aria-hidden="true">·</span>
           <span>{guide.data.readTime} read</span>
